@@ -67,7 +67,7 @@ export default function Home() {
               📅 Updated: <strong>July 1, 2026</strong>
             </div>
             <div className="eeat-badge">
-              ✍️ Expert Verified by: <strong>Naeem Iqbal (Senior Sports Writer)</strong>
+              ✍️ Expert Verified by: <strong>Marc Devos (Senior Belgian Hockey Journalist)</strong>
             </div>
             <div className="eeat-badge">
               ⚡ Status: <strong>Official Fixtures Confirmed</strong>
@@ -491,14 +491,14 @@ export default function Home() {
         <section className="my-16">
           <div className="author-card">
             <div className="author-flex">
-              <div className="author-avatar">NI</div>
+              <div className="author-avatar">MD</div>
               <div className="author-info">
-                <h4>Naeem Iqbal</h4>
-                <p>Lead Sports Analyst & Hockey Columnist</p>
+                <h4>Marc Devos</h4>
+                <p>Lead Belgian Hockey Analyst & Columnist</p>
               </div>
             </div>
             <p className="author-bio">
-              Naeem Iqbal is an experienced sports journalist with over 8 years of experience covering international field hockey championships, including the Olympics, FIH Pro League, and Asian Games. All schedule timings, television network allocations, and VPN workarounds published on this page are hand-verified using direct feeds from the International Hockey Federation (FIH) media room.
+              Marc Devos is an experienced Brussels-based sports journalist and hockey analyst with over 12 years of experience covering the Belgian Red Lions national team and international field hockey championships. Living just 25 minutes away from the Belfius Hockey Arena in Wavre, he provides local insights, pitch condition updates, and verified broadcast scheduling details using direct access from the International Hockey Federation (FIH) media center.
             </p>
             <div className="text-xs text-slate-500 italic border-t border-slate-800 pt-4">
               Disclaimer: Match fixtures and start times are subject to last-minute scheduling changes by the FIH (International Hockey Federation) due to weather or broadcasting conflicts. Please cross-reference with official listings on 
