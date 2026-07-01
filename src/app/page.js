@@ -1,103 +1,33 @@
-import React from "react";
-import Image from "next/image";
+"use client";
 
-export const metadata = {
-  title: "Official FIH Hockey World Cup 2026 Schedule & Live Broadcast Guide",
-  description: "Find the complete match schedule, local stadium timings (IST, PST, CET), and TV channel lists for the FIH Men's & Women's Hockey World Cup 2026 in Amstelveen & Wavre.",
-};
+import React, { useState } from "react";
 
 export default function Home() {
-  // We can include a JSON-LD structured schema for Event and FAQ
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "SportsEvent",
-        "@id": "https://hockeyworldcup2026schedule.com/#event",
-        "name": "FIH Hockey World Cup 2026",
-        "description": "The 16th edition of the Men's and Women's FIH Hockey World Cup co-hosted by Belgium and the Netherlands.",
-        "startDate": "2026-08-15",
-        "endDate": "2026-08-30",
-        "eventStatus": "https://schema.org/EventScheduled",
-        "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
-        "location": [
-          {
-            "@type": "Place",
-            "name": "Wagener Stadium",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Nieuwe Kalfjeslaan 21",
-              "addressLocality": "Amstelveen",
-              "postalCode": "1182 AM",
-              "addressCountry": "NL"
-            }
-          },
-          {
-            "@type": "Place",
-            "name": "Belfius Hockey Arena",
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Avenue de la Toison d'Or",
-              "addressLocality": "Wavre",
-              "postalCode": "1300",
-              "addressCountry": "BE"
-            }
-          }
-        ],
-        "organizer": {
-          "@type": "SportsOrganization",
-          "name": "International Hockey Federation (FIH)",
-          "url": "https://fih.hockey"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://hockeyworldcup2026schedule.com/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What are the official dates for the FIH Hockey World Cup 2026?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The FIH Men's and Women's Hockey World Cup 2026 will start on August 15, 2026, and run until the finals on August 30, 2026."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Where is the 2026 Hockey World Cup being played?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The tournament is co-hosted by Belgium and the Netherlands. Matches will be played at Wagener Stadium in Amstelveen, Netherlands (Zip: 1182 AM) and Belfius Hockey Arena in Wavre, Belgium (Zip: 1300)."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How can I watch the Hockey World Cup live stream in Pakistan and India?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "In Pakistan, tapmad is the exclusive digital broadcaster. In India, you can stream matches on the Sports18 network and JioCinema app. Global streaming is available via the official Watch.Hockey platform."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What time do the matches start in Indian Standard Time (IST)?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Matches are split between afternoon and evening sessions. Typically, the afternoon matches start around 4:30 PM IST (1:00 PM local CET) and the evening sessions start around 9:30 PM IST (6:00 PM local CET)."
-            }
-          }
-        ]
-      }
-    ]
+  // Client State for Timezone Converter
+  const [selectedTimezone, setSelectedTimezone] = useState("CET");
+
+  // Client State for Accordion FAQs
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
+
+  // Time conversion mapping for the Matches
+  // CET matches: Match 1: 13:00, Match 2: 15:30, Match 3: 18:00
+  const matchTimes = {
+    CET: ["13:00 CET", "15:30 CET", "18:00 CET"],
+    IST: ["16:30 IST", "19:00 IST", "21:30 IST"],
+    PST: ["16:00 PST", "18:30 PST", "21:00 PST"],
+    EST: ["07:00 AM EDT", "09:30 AM EDT", "12:00 PM EDT"],
+  };
+
+  const handleTimezoneChange = (e) => {
+    setSelectedTimezone(e.target.value);
+  };
+
+  const toggleFaq = (index) => {
+    setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      
       {/* HEADER SECTION */}
       <header className="sports-header">
         <div className="sports-container header-flex">
@@ -108,7 +38,7 @@ export default function Home() {
           <nav>
             <ul className="sports-nav">
               <li><a href="#schedule">Match Schedule</a></li>
-              <li><a href="#timezone">Timezone Converter</a></li>
+              <li><a href="#pools">Qualified Pools</a></li>
               <li><a href="#broadcasters">Broadcasters</a></li>
               <li><a href="#venues">Stadium Guides</a></li>
               <li><a href="#faq">FAQs</a></li>
@@ -148,38 +78,51 @@ export default function Home() {
 
       <main className="sports-container py-12">
         
-        {/* TIMEZONE CONVERTER SECTION */}
+        {/* TIMEZONE CONVERTER SECTION (INTERACTIVE) */}
         <section id="timezone" className="my-12">
           <div className="section-title-wrap">
             <h2>Convert Match Timings to Your Local Time</h2>
-            <p>Don't miss a single penalty corner. Compare local Central European Time (CET) to Indian and Pakistan timezones.</p>
+            <p>Don't miss a single penalty corner. Select your region below to update the schedule automatically.</p>
           </div>
 
           <div className="timezone-card">
             <div className="timezone-header">
-              <h3 className="text-xl font-bold">Timezone Calculator (August 15-30, 2026)</h3>
-              <span className="text-xs text-muted">Belgian/Dutch local time is Central European Time (CET / GMT+2 DST)</span>
+              <h3 className="text-xl font-bold">Interactive Timezone Selector</h3>
+              <div className="timezone-select-wrapper">
+                <span className="timezone-label-text">Viewing In:</span>
+                <select 
+                  className="timezone-select" 
+                  value={selectedTimezone} 
+                  onChange={handleTimezoneChange}
+                  aria-label="Select Timezone"
+                >
+                  <option value="CET">Central European (CET) - Local Venue</option>
+                  <option value="IST">Indian Standard Time (IST)</option>
+                  <option value="PST">Pakistan Standard Time (PST)</option>
+                  <option value="EST">US Eastern Time (EDT)</option>
+                </select>
+              </div>
             </div>
             <div className="timezone-grid">
-              <div className="timezone-item">
+              <div className={`timezone-item ${selectedTimezone === "CET" ? "active-timezone" : ""}`}>
                 <span className="tz-name">Local Time (CET)</span>
                 <span className="tz-time">13:00 / 18:00</span>
                 <span className="tz-label">Stadium Local Start</span>
               </div>
-              <div className="timezone-item">
+              <div className={`timezone-item ${selectedTimezone === "PST" ? "active-timezone" : ""}`}>
                 <span className="tz-name">Pakistan Time (PST)</span>
                 <span className="tz-time">16:00 / 21:00</span>
-                <span className="tz-label">Gmt+5 Standard</span>
+                <span className="tz-label">GMT+5 Standard</span>
               </div>
-              <div className="timezone-item">
+              <div className={`timezone-item ${selectedTimezone === "IST" ? "active-timezone" : ""}`}>
                 <span className="tz-name">Indian Time (IST)</span>
                 <span className="tz-time">16:30 / 21:30</span>
-                <span className="tz-label">Gmt+5:30 Standard</span>
+                <span className="tz-label">GMT+5:30 Standard</span>
               </div>
-              <div className="timezone-item">
-                <span className="tz-name">US Eastern (EST)</span>
+              <div className={`timezone-item ${selectedTimezone === "EST" ? "active-timezone" : ""}`}>
+                <span className="tz-name">US Eastern (EDT)</span>
                 <span className="tz-time">07:00 / 12:00</span>
-                <span className="tz-label">Gmt-4 Daylight Saving</span>
+                <span className="tz-label">GMT-4 Daylight Saving</span>
               </div>
             </div>
           </div>
@@ -198,16 +141,16 @@ export default function Home() {
             <div className="match-card">
               <div className="match-meta">
                 <span>🗓️ Saturday, August 15, 2026</span>
-                <span>⏱️ 13:00 Local CET / 16:30 IST</span>
+                <span className="text-sky-400 font-bold">⏱️ Timings: {matchTimes[selectedTimezone][0]}</span>
               </div>
               <div className="match-teams-container">
                 <div className="team-display">
-                  <span className="text-3xl">🏑</span>
+                  <div className="team-badge-wrap">🇮🇳</div>
                   <span className="team-name">India (Men)</span>
                 </div>
                 <div className="vs-badge">VS</div>
                 <div className="team-display">
-                  <span className="text-3xl">🏑</span>
+                  <div className="team-badge-wrap">🏴󠁧󠁢󠁷󠁬󠁳󠁿</div>
                   <span className="team-name">Wales (Men)</span>
                 </div>
               </div>
@@ -225,16 +168,16 @@ export default function Home() {
             <div className="match-card">
               <div className="match-meta">
                 <span>🗓️ Saturday, August 15, 2026</span>
-                <span>⏱️ 15:30 Local CET / 19:00 IST</span>
+                <span className="text-sky-400 font-bold">⏱️ Timings: {matchTimes[selectedTimezone][1]}</span>
               </div>
               <div className="match-teams-container">
                 <div className="team-display">
-                  <span className="text-3xl">🏑</span>
+                  <div className="team-badge-wrap">🇩🇪</div>
                   <span className="team-name">Germany (Men)</span>
                 </div>
                 <div className="vs-badge">VS</div>
                 <div className="team-display">
-                  <span className="text-3xl">🏑</span>
+                  <div className="team-badge-wrap">🇲🇾</div>
                   <span className="team-name">Malaysia (Men)</span>
                 </div>
               </div>
@@ -252,16 +195,16 @@ export default function Home() {
             <div className="match-card">
               <div className="match-meta">
                 <span>🗓️ Saturday, August 15, 2026</span>
-                <span>⏱️ 18:00 Local CET / 21:30 IST</span>
+                <span className="text-sky-400 font-bold">⏱️ Timings: {matchTimes[selectedTimezone][2]}</span>
               </div>
               <div className="match-teams-container">
                 <div className="team-display">
-                  <span className="text-3xl">🏑</span>
+                  <div className="team-badge-wrap">🇳🇱</div>
                   <span className="team-name">Netherlands (Women)</span>
                 </div>
                 <div className="vs-badge">VS</div>
                 <div className="team-display">
-                  <span className="text-3xl">🏑</span>
+                  <div className="team-badge-wrap">🇨🇱</div>
                   <span className="team-name">Chile (Women)</span>
                 </div>
               </div>
@@ -275,6 +218,68 @@ export default function Home() {
               </div>
             </div>
 
+          </div>
+        </section>
+
+        {/* OFFICIAL QUALIFIED POOLS */}
+        <section id="pools" className="my-12">
+          <div className="section-title-wrap">
+            <h2>Official FIH Hockey World Cup 2026 Pools</h2>
+            <p>Complete division breakdown for the 16 qualified teams competing in the group stage.</p>
+          </div>
+
+          <div className="pools-container">
+            {/* Pool A */}
+            <div className="pool-card">
+              <div className="pool-header">
+                <h3>Pool A</h3>
+              </div>
+              <ul className="pool-list">
+                <li className="pool-item"><span className="pool-flag">🇳🇱</span> Netherlands</li>
+                <li className="pool-item"><span className="pool-flag">🇩🇪</span> Germany</li>
+                <li className="pool-item"><span className="pool-flag">🇮🇳</span> India</li>
+                <li className="pool-item"><span className="pool-flag">🇪🇸</span> Spain</li>
+              </ul>
+            </div>
+
+            {/* Pool B */}
+            <div className="pool-card">
+              <div className="pool-header">
+                <h3>Pool B</h3>
+              </div>
+              <ul className="pool-list">
+                <li className="pool-item"><span className="pool-flag">🇧🇪</span> Belgium</li>
+                <li className="pool-item"><span className="pool-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span> England</li>
+                <li className="pool-item"><span className="pool-flag">🇦🇺</span> Australia</li>
+                <li className="pool-item"><span className="pool-flag">🇳🇿</span> New Zealand</li>
+              </ul>
+            </div>
+
+            {/* Pool C */}
+            <div className="pool-card">
+              <div className="pool-header">
+                <h3>Pool C</h3>
+              </div>
+              <ul className="pool-list">
+                <li className="pool-item"><span className="pool-flag">🇦🇷</span> Argentina</li>
+                <li className="pool-item"><span className="pool-flag">🇫🇷</span> France</li>
+                <li className="pool-item"><span className="pool-flag">🇿🇦</span> South Africa</li>
+                <li className="pool-item"><span className="pool-flag">🇲🇾</span> Malaysia</li>
+              </ul>
+            </div>
+
+            {/* Pool D */}
+            <div className="pool-card">
+              <div className="pool-header">
+                <h3>Pool D</h3>
+              </div>
+              <ul className="pool-list">
+                <li className="pool-item"><span className="pool-flag">🇨🇱</span> Chile</li>
+                <li className="pool-item"><span className="pool-flag">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span> Wales</li>
+                <li className="pool-item"><span className="pool-flag">🇯🇵</span> Japan</li>
+                <li className="pool-item"><span className="pool-flag">🇮🇪</span> Ireland</li>
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -345,6 +350,31 @@ export default function Home() {
                 <strong className="text-white block mb-1">To Stream tapmad from Belgium/Netherlands:</strong>
                 Connect to a Pakistan server on your VPN client, login to your tapmad account, and watch the match feed without encountering the "Not Available in Your Region" error.
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* SPORTS ANALYST ARTICLE: CLIMATE AND PITCH FACTORS */}
+        <section className="my-16 bg-slate-950 border border-slate-900 p-8 rounded-2xl">
+          <h2 className="text-2xl font-bold text-white mb-4">Tactical Deep-Dive: Pitch Conditions and Weather Factors</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-300 leading-relaxed">
+            <div>
+              <h3 className="text-sky-400 font-bold text-base mb-2">Turf Characteristics</h3>
+              <p>
+                Both Wagener Stadium and Belfius Arena utilize advanced water-based artificial turf. These pitches require continuous watering prior to matches. Wet turf drastically reduces ball friction, allowing quick, flat passes. This favors aggressive, drag-flicking teams like India and fast counter-attackers like Belgium.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-sky-400 font-bold text-base mb-2">Climate Impact</h3>
+              <p>
+                Late August in Amstelveen and Wavre brings highly unpredictable rain showers and cooler evening temperatures (averaging 15°C / 59°F). Increased relative humidity prevents the pitch water from evaporating, maintaining extremely fast play throughout late-night fixtures.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-sky-400 font-bold text-base mb-2">Star Players to Watch</h3>
+              <p>
+                Keep an eye on India's drag-flick captain <strong>Harmanpreet Singh</strong>, Dutch midfield anchor <strong>Thierry Brinkman</strong>, and German playmaker <strong>Niklas Wellen</strong>. Their execution of penalty corner routines and control under pressure will dictate their teams' fates.
+              </p>
             </div>
           </div>
         </section>
@@ -433,7 +463,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FAQ ACCORDION SECTION */}
+        {/* FAQ ACCORDION SECTION (DYNAMIC COGNITIVE TOGGLE) */}
         <section id="faq" className="my-12">
           <div className="section-title-wrap">
             <h2>Frequently Asked Questions (FAQs)</h2>
@@ -443,42 +473,50 @@ export default function Home() {
           <div className="faq-wrap">
             
             <div className="faq-item">
-              <div className="faq-question">
+              <div className="faq-question" onClick={() => toggleFaq(0)}>
                 <span>Which teams have qualified for the FIH Hockey World Cup 2026?</span>
-                <span className="text-sky-500">+</span>
+                <span className={`faq-toggle-icon ${openFaqIndex === 0 ? "open" : ""}`}>+</span>
               </div>
-              <div className="faq-answer">
-                A total of 16 men's and 16 women's national teams have qualified through continental championships (EuroHockey, Asia Cup, Pan American Cup) and the FIH Hockey World Cup Qualifiers. Major contenders include Belgium, Netherlands, India, Germany, and Australia.
+              <div className={`faq-answer-container ${openFaqIndex === 0 ? "open" : ""}`}>
+                <div className="faq-answer">
+                  A total of 16 men's and 16 women's national teams have qualified through continental championships (EuroHockey, Asia Cup, Pan American Cup) and the FIH Hockey World Cup Qualifiers. Major contenders include Belgium, Netherlands, India, Germany, and Australia.
+                </div>
               </div>
             </div>
 
             <div className="faq-item">
-              <div className="faq-question">
+              <div className="faq-question" onClick={() => toggleFaq(1)}>
                 <span>Where will the Hockey World Cup 2026 finals be played?</span>
-                <span className="text-sky-500">+</span>
+                <span className={`faq-toggle-icon ${openFaqIndex === 1 ? "open" : ""}`}>+</span>
               </div>
-              <div className="faq-answer">
-                The Men's Hockey World Cup 2026 final will take place at the Belfius Hockey Arena in Wavre, Belgium. The Women's tournament final will be hosted at the Wagener Stadium in Amstelveen, Netherlands. Both finals are scheduled for Sunday, August 30, 2026.
+              <div className={`faq-answer-container ${openFaqIndex === 1 ? "open" : ""}`}>
+                <div className="faq-answer">
+                  The Men's Hockey World Cup 2026 final will take place at the Belfius Hockey Arena in Wavre, Belgium. The Women's tournament final will be hosted at the Wagener Stadium in Amstelveen, Netherlands. Both finals are scheduled for Sunday, August 30, 2026.
+                </div>
               </div>
             </div>
 
             <div className="faq-item">
-              <div className="faq-question">
+              <div className="faq-question" onClick={() => toggleFaq(2)}>
                 <span>Is JioCinema showing the Hockey World Cup matches for free?</span>
-                <span className="text-sky-500">+</span>
+                <span className={`faq-toggle-icon ${openFaqIndex === 2 ? "open" : ""}`}>+</span>
               </div>
-              <div className="faq-answer">
-                Yes, in India, Viacom18 has the digital broadcasting rights. Therefore, JioCinema will stream all Indian team matches and major tournament fixtures completely free of cost in multiple languages.
+              <div className={`faq-answer-container ${openFaqIndex === 2 ? "open" : ""}`}>
+                <div className="faq-answer">
+                  Yes, in India, Viacom18 has the digital broadcasting rights. Therefore, JioCinema will stream all Indian team matches and major tournament fixtures completely free of cost in multiple languages.
+                </div>
               </div>
             </div>
 
             <div className="faq-item">
-              <div className="faq-question">
+              <div className="faq-question" onClick={() => toggleFaq(3)}>
                 <span>How can I buy tickets for the matches in Wagener Stadium (Amstelveen)?</span>
-                <span className="text-sky-500">+</span>
+                <span className={`faq-toggle-icon ${openFaqIndex === 3 ? "open" : ""}`}>+</span>
               </div>
-              <div className="faq-answer">
-                Official ticket sales are handled via the unified tournament portal (hockeyworldcup2026.be). Ticket prices start from €20 for group stage matches, with premium passes available for the final weekend matches in Wavre and Amstelveen.
+              <div className={`faq-answer-container ${openFaqIndex === 3 ? "open" : ""}`}>
+                <div className="faq-answer">
+                  Official ticket sales are handled via the unified tournament portal (hockeyworldcup2026.be). Ticket prices start from €20 for group stage matches, with premium passes available for the final weekend matches in Wavre and Amstelveen.
+                </div>
               </div>
             </div>
 
@@ -492,20 +530,20 @@ export default function Home() {
         <div className="sports-container">
           <div className="footer-grid">
             <div className="footer-col">
-              <h5 className="text-white">About Us</h5>
+              <h5 className="text-white font-bold">About Us</h5>
               <p>We are a dedicated, independent portal bringing you verified match fixtures, schedule updates, timezone calculations, and broadcasting guides for the upcoming FIH Hockey World Cup 2026.</p>
             </div>
             <div className="footer-col">
-              <h5 className="text-white">Quick Links</h5>
+              <h5 className="text-white font-bold">Quick Links</h5>
               <ul className="footer-links">
                 <li><a href="#schedule">Fixtures List</a></li>
-                <li><a href="#timezone">Timezone Converter</a></li>
+                <li><a href="#pools">Qualified Pools</a></li>
                 <li><a href="#broadcasters">Broadcasters Channels</a></li>
                 <li><a href="https://fih.hockey" target="_blank" rel="noopener noreferrer">Official FIH Site</a></li>
               </ul>
             </div>
             <div className="footer-col">
-              <h5 className="text-white">Contact & Support</h5>
+              <h5 className="text-white font-bold">Contact & Support</h5>
               <p>For inquiries, content updates, or sports analysis submissions, reach out to our editorial desk at: <br/><strong>editor@hockeyworldcup2026schedule.com</strong></p>
             </div>
           </div>
