@@ -1,6 +1,8 @@
 "use client";
 
 import React, { useState } from "react";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 export default function Home() {
   // Client State for Timezone Converter
@@ -28,28 +30,7 @@ export default function Home() {
   return (
     <>
       {/* HEADER SECTION */}
-      <header className="sports-header">
-        <div className="sports-container header-flex">
-          <a href="#" className="logo-text">
-            🏒 HOCKEY<span>WORLD2026</span>
-            <span className="logo-badge">Schedule</span>
-          </a>
-          <nav>
-            <ul className="sports-nav">
-              <li><a href="#schedule">Match Schedule</a></li>
-              <li><a href="#pools">Qualified Pools</a></li>
-              <li><a href="#broadcasters">Broadcasters</a></li>
-              <li><a href="#hubs">Authority Hubs</a></li>
-              <li><a href="#venues">Stadium Guides</a></li>
-              <li><a href="#faq">FAQs</a></li>
-            </ul>
-          </nav>
-          <div className="live-indicator">
-            <span className="live-dot"></span>
-            Live Updates
-          </div>
-        </div>
-      </header>
+      <Header />
 
       {/* HERO SECTION */}
       <section className="hero-section">
@@ -183,12 +164,16 @@ export default function Home() {
               </div>
               <div className="match-teams-container">
                 <div className="team-display">
-                  <div className="team-badge-wrap">🇮🇳</div>
+                  <div className="team-badge-wrap">
+                    <img src="https://flagcdn.com/w80/in.png" width="36" height="24" alt="India flag" style={{ borderRadius: "4px" }} />
+                  </div>
                   <span className="team-name">India (Men)</span>
                 </div>
                 <div className="vs-badge">VS</div>
                 <div className="team-display">
-                  <div className="team-badge-wrap">🏴󠁧󠁢󠁷󠁬󠁳󠁿</div>
+                  <div className="team-badge-wrap">
+                    <img src="https://flagcdn.com/w80/gb-wls.png" width="36" height="24" alt="Wales flag" style={{ borderRadius: "4px" }} />
+                  </div>
                   <span className="team-name">Wales (Men)</span>
                 </div>
               </div>
@@ -210,12 +195,16 @@ export default function Home() {
               </div>
               <div className="match-teams-container">
                 <div className="team-display">
-                  <div className="team-badge-wrap">🇩🇪</div>
+                  <div className="team-badge-wrap">
+                    <img src="https://flagcdn.com/w80/de.png" width="36" height="24" alt="Germany flag" style={{ borderRadius: "4px" }} />
+                  </div>
                   <span className="team-name">Germany (Men)</span>
                 </div>
                 <div className="vs-badge">VS</div>
                 <div className="team-display">
-                  <div className="team-badge-wrap">🇲🇾</div>
+                  <div className="team-badge-wrap">
+                    <img src="https://flagcdn.com/w80/my.png" width="36" height="24" alt="Malaysia flag" style={{ borderRadius: "4px" }} />
+                  </div>
                   <span className="team-name">Malaysia (Men)</span>
                 </div>
               </div>
@@ -237,12 +226,16 @@ export default function Home() {
               </div>
               <div className="match-teams-container">
                 <div className="team-display">
-                  <div className="team-badge-wrap">🇳🇱</div>
+                  <div className="team-badge-wrap">
+                    <img src="https://flagcdn.com/w80/nl.png" width="36" height="24" alt="Netherlands flag" style={{ borderRadius: "4px" }} />
+                  </div>
                   <span className="team-name">Netherlands (Women)</span>
                 </div>
                 <div className="vs-badge">VS</div>
                 <div className="team-display">
-                  <div className="team-badge-wrap">🇨🇱</div>
+                  <div className="team-badge-wrap">
+                    <img src="https://flagcdn.com/w80/cl.png" width="36" height="24" alt="Chile flag" style={{ borderRadius: "4px" }} />
+                  </div>
                   <span className="team-name">Chile (Women)</span>
                 </div>
               </div>
@@ -273,10 +266,18 @@ export default function Home() {
                 <h3>Pool A</h3>
               </div>
               <ul className="pool-list">
-                <li className="pool-item"><span className="pool-flag">🇳🇱</span> Netherlands</li>
-                <li className="pool-item"><span className="pool-flag">🇩🇪</span> Germany</li>
-                <li className="pool-item"><span className="pool-flag">🇮🇳</span> India</li>
-                <li className="pool-item"><span className="pool-flag">🇪🇸</span> Spain</li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/nl.png" width="20" height="14" alt="Netherlands flag" style={{ borderRadius: "2px" }} /> Netherlands
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/de.png" width="20" height="14" alt="Germany flag" style={{ borderRadius: "2px" }} /> Germany
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="India flag" style={{ borderRadius: "2px" }} /> India
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/es.png" width="20" height="14" alt="Spain flag" style={{ borderRadius: "2px" }} /> Spain
+                </li>
               </ul>
             </div>
 
@@ -286,10 +287,18 @@ export default function Home() {
                 <h3>Pool B</h3>
               </div>
               <ul className="pool-list">
-                <li className="pool-item"><span className="pool-flag">🇧🇪</span> Belgium</li>
-                <li className="pool-item"><span className="pool-flag">🏴󠁧󠁢󠁥󠁮󠁧󠁿</span> England</li>
-                <li className="pool-item"><span className="pool-flag">🇦🇺</span> Australia</li>
-                <li className="pool-item"><span className="pool-flag">🇳🇿</span> New Zealand</li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/be.png" width="20" height="14" alt="Belgium flag" style={{ borderRadius: "2px" }} /> Belgium
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/gb-eng.png" width="20" height="14" alt="England flag" style={{ borderRadius: "2px" }} /> England
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/au.png" width="20" height="14" alt="Australia flag" style={{ borderRadius: "2px" }} /> Australia
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/nz.png" width="20" height="14" alt="New Zealand flag" style={{ borderRadius: "2px" }} /> New Zealand
+                </li>
               </ul>
             </div>
 
@@ -299,10 +308,18 @@ export default function Home() {
                 <h3>Pool C</h3>
               </div>
               <ul className="pool-list">
-                <li className="pool-item"><span className="pool-flag">🇦🇷</span> Argentina</li>
-                <li className="pool-item"><span className="pool-flag">🇫🇷</span> France</li>
-                <li className="pool-item"><span className="pool-flag">🇿🇦</span> South Africa</li>
-                <li className="pool-item"><span className="pool-flag">🇲🇾</span> Malaysia</li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/ar.png" width="20" height="14" alt="Argentina flag" style={{ borderRadius: "2px" }} /> Argentina
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/fr.png" width="20" height="14" alt="France flag" style={{ borderRadius: "2px" }} /> France
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/za.png" width="20" height="14" alt="South Africa flag" style={{ borderRadius: "2px" }} /> South Africa
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/my.png" width="20" height="14" alt="Malaysia flag" style={{ borderRadius: "2px" }} /> Malaysia
+                </li>
               </ul>
             </div>
 
@@ -312,10 +329,18 @@ export default function Home() {
                 <h3>Pool D</h3>
               </div>
               <ul className="pool-list">
-                <li className="pool-item"><span className="pool-flag">🇨🇱</span> Chile</li>
-                <li className="pool-item"><span className="pool-flag">🏴󠁧󠁢󠁷󠁬󠁳󠁿</span> Wales</li>
-                <li className="pool-item"><span className="pool-flag">🇯🇵</span> Japan</li>
-                <li className="pool-item"><span className="pool-flag">🇮🇪</span> Ireland</li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/cl.png" width="20" height="14" alt="Chile flag" style={{ borderRadius: "2px" }} /> Chile
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/gb-wls.png" width="20" height="14" alt="Wales flag" style={{ borderRadius: "2px" }} /> Wales
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/jp.png" width="20" height="14" alt="Japan flag" style={{ borderRadius: "2px" }} /> Japan
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/ie.png" width="20" height="14" alt="Ireland flag" style={{ borderRadius: "2px" }} /> Ireland
+                </li>
               </ul>
             </div>
           </div>
@@ -340,31 +365,52 @@ export default function Home() {
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>🇵🇰 Pakistan</strong></td>
+                  <td>
+                    <img src="https://flagcdn.com/w40/pk.png" width="20" height="14" alt="Pakistan flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
+                    <strong>Pakistan</strong>
+                  </td>
                   <td>Ten Sports / PTV Sports</td>
                   <td><span className="channel-tag">tapmad</span> (Exclusive HD Digital)</td>
                   <td>Premium (Low Cost)</td>
                 </tr>
                 <tr>
-                  <td><strong>🇮🇳 India</strong></td>
+                  <td>
+                    <img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="India flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
+                    <strong>India</strong>
+                  </td>
                   <td>Sports18 Network</td>
                   <td><span className="channel-tag">JioCinema</span> App</td>
                   <td>Free (Ad-Supported)</td>
                 </tr>
                 <tr>
-                  <td><strong>🇬🇧 United Kingdom & 🇪🇺 Europe</strong></td>
+                  <td>
+                    <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                      <img src="https://flagcdn.com/w40/gb.png" width="20" height="14" alt="UK flag" style={{ borderRadius: "2px" }} />
+                      <img src="https://flagcdn.com/w40/eu.png" width="20" height="14" alt="EU flag" style={{ borderRadius: "2px" }} />
+                      <strong>United Kingdom & Europe</strong>
+                    </div>
+                  </td>
                   <td>BT Sport / Eurosport</td>
                   <td><span className="channel-tag">Watch.Hockey</span> Portal</td>
                   <td>PPV / Tournament Pass</td>
                 </tr>
                 <tr>
-                  <td><strong>🇺🇸 USA & 🇨🇦 Canada</strong></td>
+                  <td>
+                    <div style={{ display: "flex", alignItems: "center", gap: "6px" }}>
+                      <img src="https://flagcdn.com/w40/us.png" width="20" height="14" alt="USA flag" style={{ borderRadius: "2px" }} />
+                      <img src="https://flagcdn.com/w40/ca.png" width="20" height="14" alt="Canada flag" style={{ borderRadius: "2px" }} />
+                      <strong>USA & Canada</strong>
+                    </div>
+                  </td>
                   <td>Fox Sports (Selected Games)</td>
                   <td><span className="channel-tag">Watch.Hockey</span> / Fox Sports App</td>
                   <td>Subscription / Pass</td>
                 </tr>
                 <tr>
-                  <td><strong>🌐 Rest of the World</strong></td>
+                  <td>
+                    <img src="https://flagcdn.com/w40/un.png" width="20" height="14" alt="Global flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
+                    <strong>Rest of the World</strong>
+                  </td>
                   <td>FIH Media Partners</td>
                   <td><span className="channel-tag">Watch.Hockey</span></td>
                   <td>Varies by Region</td>
@@ -570,38 +616,7 @@ export default function Home() {
       </main>
 
       {/* FOOTER SECTION */}
-      <footer className="sports-footer">
-        <div className="sports-container">
-          <div className="footer-grid">
-            <div className="footer-col">
-              <h5 className="text-white font-bold">About Us</h5>
-              <p>We are a dedicated, independent portal bringing you verified match fixtures, schedule updates, timezone calculations, and broadcasting guides for the upcoming FIH Hockey World Cup 2026.</p>
-            </div>
-            <div className="footer-col">
-              <h5 className="text-white font-bold">Quick Links</h5>
-              <ul className="footer-links">
-                <li><a href="#schedule">Fixtures List</a></li>
-                <li><a href="#pools">Qualified Pools</a></li>
-                <li><a href="#broadcasters">Broadcasters Channels</a></li>
-                <li><a href="https://fih.hockey" target="_blank" rel="noopener noreferrer">Official FIH Site</a></li>
-              </ul>
-            </div>
-            <div className="footer-col">
-              <h5 className="text-white font-bold">Contact & Support</h5>
-              <p>For inquiries, content updates, or sports analysis submissions, reach out to our editorial desk at: <br/><strong>editor@hockeyworldcup2026schedule.com</strong></p>
-            </div>
-          </div>
-
-          <div className="footer-bottom">
-            <p>© 2026 HockeyWorldCup2026Schedule.com. All Rights Reserved. Not affiliated with the International Hockey Federation (FIH).</p>
-            <div className="flex gap-4">
-              <a href="#" className="text-xs text-slate-500 hover:text-sky-500">Privacy Policy</a>
-              <span className="text-slate-800">|</span>
-              <a href="#" className="text-xs text-slate-500 hover:text-sky-500">Terms of Use</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

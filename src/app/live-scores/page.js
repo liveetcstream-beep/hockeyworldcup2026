@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export const metadata = {
   title: "Live Scores & Real-Time Match Tracker - Hockey World Cup 2026",
@@ -8,22 +10,7 @@ export const metadata = {
 export default function LiveScoresPage() {
   return (
     <>
-      <header className="sports-header">
-        <div className="sports-container header-flex">
-          <a href="/" className="logo-text">
-            🏒 HOCKEY<span>WORLD2026</span>
-            <span className="logo-badge">Live Scores</span>
-          </a>
-          <nav>
-            <ul className="sports-nav">
-              <li><a href="/">← Home</a></li>
-              <li><a href="/broadcasters">Streams</a></li>
-              <li><a href="/venues">Stadiums</a></li>
-              <li><a href="/teams">Squads</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main className="sports-container py-12">
         <section className="my-8 text-center">
@@ -33,7 +20,7 @@ export default function LiveScoresPage() {
           </div>
           <h1 className="text-4xl font-extrabold text-white mt-2 mb-6">Live Match Centre</h1>
           <p className="text-slate-300 max-w-3xl mx-auto">
-            Get instant play-by-play updates, card bookings, penalty corner conversion rates, and official lineups on matchdays. 
+            Get instant play-by-play updates, card bookings, penalty corner conversion rates, and official lineups on matchdays.
           </p>
         </section>
 
@@ -44,8 +31,20 @@ export default function LiveScoresPage() {
             <p className="text-slate-400 text-sm mb-6">
               The first match starts on <strong>August 15, 2026</strong>. Real-time scores and play-by-play text feeds will activate 30 minutes before kickoff.
             </p>
-            <div className="inline-block bg-slate-950 border border-slate-800 px-6 py-3 rounded-lg text-slate-300 text-sm">
-              📢 <strong>Next Up:</strong> India vs. Wales (Men's Group Stage) — August 15, 13:00 CET
+            
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
+              <div className="bg-slate-950 border border-slate-800 px-6 py-3 rounded-lg text-slate-300 text-sm flex items-center gap-3">
+                <img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="India flag" style={{ borderRadius: "2px" }} />
+                <span>India vs Wales (Men)</span>
+                <span>—</span>
+                <strong>August 15, 13:00 CET</strong>
+              </div>
+              <div className="bg-slate-950 border border-slate-800 px-6 py-3 rounded-lg text-slate-300 text-sm flex items-center gap-3">
+                <img src="https://flagcdn.com/w40/de.png" width="20" height="14" alt="Germany flag" style={{ borderRadius: "2px" }} />
+                <span>Germany vs Malaysia (Men)</span>
+                <span>—</span>
+                <strong>August 15, 15:30 CET</strong>
+              </div>
             </div>
           </div>
         </section>
@@ -69,6 +68,8 @@ export default function LiveScoresPage() {
           </div>
         </section>
       </main>
+
+      <Footer />
     </>
   );
 }

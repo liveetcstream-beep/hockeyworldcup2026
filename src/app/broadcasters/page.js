@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export const metadata = {
   title: "Official Broadcasters: How to Stream Hockey World Cup 2026 Live",
@@ -8,22 +10,7 @@ export const metadata = {
 export default function BroadcastersPage() {
   return (
     <>
-      <header className="sports-header">
-        <div className="sports-container header-flex">
-          <a href="/" className="logo-text">
-            🏒 HOCKEY<span>WORLD2026</span>
-            <span className="logo-badge">Broadcasters</span>
-          </a>
-          <nav>
-            <ul className="sports-nav">
-              <li><a href="/">← Home</a></li>
-              <li><a href="/venues">Stadiums</a></li>
-              <li><a href="/teams">Squads</a></li>
-              <li><a href="/live-scores">Live Scores</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main className="sports-container py-12">
         <section className="my-8 text-center">
@@ -48,43 +35,64 @@ export default function BroadcastersPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>🇵🇰 Pakistan</strong></td>
+                  <td>
+                    <img src="https://flagcdn.com/w40/pk.png" width="20" height="14" alt="Pakistan flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
+                    <strong>Pakistan</strong>
+                  </td>
                   <td>Ten Sports / PTV Sports</td>
                   <td><span className="channel-tag">tapmad</span> (Exclusive HD)</td>
                   <td>Paid Subscription</td>
                 </tr>
                 <tr>
-                  <td><strong>🇮🇳 India</strong></td>
+                  <td>
+                    <img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="India flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
+                    <strong>India</strong>
+                  </td>
                   <td>Sports18 Network</td>
                   <td><span className="channel-tag">JioCinema</span> App</td>
                   <td>Free (Ad-Supported)</td>
                 </tr>
                 <tr>
-                  <td><strong>🇬🇧 United Kingdom</strong></td>
+                  <td>
+                    <img src="https://flagcdn.com/w40/gb.png" width="20" height="14" alt="UK flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
+                    <strong>United Kingdom</strong>
+                  </td>
                   <td>TNT Sports</td>
                   <td><span className="channel-tag">Watch.Hockey</span> Portal</td>
                   <td>PPV Pass</td>
                 </tr>
                 <tr>
-                  <td><strong>🇺🇸 United States</strong></td>
+                  <td>
+                    <img src="https://flagcdn.com/w40/us.png" width="20" height="14" alt="USA flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
+                    <strong>United States</strong>
+                  </td>
                   <td>Fox Sports 2</td>
                   <td><span className="channel-tag">Fox Sports App</span> / Watch.Hockey</td>
                   <td>Cable Login / PPV</td>
                 </tr>
                 <tr>
-                  <td><strong>🇳🇱 Netherlands</strong></td>
+                  <td>
+                    <img src="https://flagcdn.com/w40/nl.png" width="20" height="14" alt="Netherlands flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
+                    <strong>Netherlands</strong>
+                  </td>
                   <td>NOS Sport</td>
                   <td><span className="channel-tag">NOS.nl</span> App</td>
                   <td>Free (NL Territory Only)</td>
                 </tr>
                 <tr>
-                  <td><strong>🇧🇪 Belgium</strong></td>
+                  <td>
+                    <img src="https://flagcdn.com/w40/be.png" width="20" height="14" alt="Belgium flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
+                    <strong>Belgium</strong>
+                  </td>
                   <td>RTBF / VRT</td>
                   <td><span className="channel-tag">Auvio</span> / VRT MAX</td>
                   <td>Free (BE Territory Only)</td>
                 </tr>
                 <tr>
-                  <td><strong>🇦🇺 Australia</strong></td>
+                  <td>
+                    <img src="https://flagcdn.com/w40/au.png" width="20" height="14" alt="Australia flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
+                    <strong>Australia</strong>
+                  </td>
                   <td>Fox Sports Australia</td>
                   <td><span className="channel-tag">Kayo Sports</span> / Watch.Hockey</td>
                   <td>Premium Subscription</td>
@@ -94,19 +102,26 @@ export default function BroadcastersPage() {
           </div>
         </section>
 
-        {/* Cord Cutting FAQs */}
+        {/* Cord Cutting FAQs & E-E-A-T Content */}
         <section className="my-16 bg-slate-900 border border-slate-800 p-8 rounded-2xl">
           <h2 className="text-xl font-bold text-white mb-4">📺 How to Watch the Hockey World Cup 2026 Without Cable</h2>
-          <p className="text-slate-300 text-sm mb-4">
-            If you do not have a traditional cable subscription, you can easily access the tournament legally using the options below:
-          </p>
-          <ul className="list-disc pl-6 text-slate-300 text-sm space-y-2">
-            <li><strong>Watch.Hockey App:</strong> The International Hockey Federation's official platform streams matches live in regions without exclusive TV rights. You can purchase a Tournament Pass for complete access.</li>
-            <li><strong>JioCinema (India):</strong> Zero-cost streaming for all matches using mobile network data or local Wi-Fi.</li>
-            <li><strong>tapmad (Pakistan):</strong> HD streaming across all devices (Smart TV, Mobile, Desktop) with cheap weekly/monthly packages.</li>
-          </ul>
+          <div className="text-slate-300 text-sm space-y-4">
+            <p>
+              For modern sports fans who have cut the cord, streaming the 2026 World Cup is straightforward. Depending on your home region, multiple digital distribution portals will offer live high-definition feeds of all 32 matches.
+            </p>
+            <ul className="list-disc pl-6 space-y-2">
+              <li><strong>Watch.Hockey App:</strong> The International Hockey Federation's official platform streams matches live in regions without exclusive TV rights. You can purchase a Tournament Pass for complete access. It serves as a fail-safe backup option globally.</li>
+              <li><strong>JioCinema (India):</strong> Viacom18 has confirmed that JioCinema will provide free, high-definition streams for all matches, particularly focusing on the Indian Men's national team fixtures in Pool A. No registration fee is required.</li>
+              <li><strong>tapmad (Pakistan):</strong> Tapmad Digital holds the official web streaming licenses for Pakistan territory. You can stream matches live on desktop or mobile apps with low-cost premium packages.</li>
+            </ul>
+            <p className="mt-4">
+              <strong>Note on Geo-Blocks:</strong> Due to strict territorial broadcasting rights, streaming apps verify your IP address. If you travel outside your home country during the tournament, you must configure a reliable VPN service to route your connection back to your home server to avoid blackouts.
+            </p>
+          </div>
         </section>
       </main>
+
+      <Footer />
     </>
   );
 }

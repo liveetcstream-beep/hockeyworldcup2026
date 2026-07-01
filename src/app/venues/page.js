@@ -1,4 +1,6 @@
 import React from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 export const metadata = {
   title: "Wagener Stadium & Belfius Arena Travel Guide - Hockey World Cup 2026",
@@ -8,22 +10,7 @@ export const metadata = {
 export default function VenuesPage() {
   return (
     <>
-      <header className="sports-header">
-        <div className="sports-container header-flex">
-          <a href="/" className="logo-text">
-            🏒 HOCKEY<span>WORLD2026</span>
-            <span className="logo-badge">Venues</span>
-          </a>
-          <nav>
-            <ul className="sports-nav">
-              <li><a href="/">← Home</a></li>
-              <li><a href="/broadcasters">Streams</a></li>
-              <li><a href="/teams">Squads</a></li>
-              <li><a href="/live-scores">Live Scores</a></li>
-            </ul>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       <main className="sports-container py-12">
         <section className="my-8 text-center">
@@ -37,7 +24,9 @@ export default function VenuesPage() {
         <section className="local-grid my-12">
           {/* Amstelveen Stadium Guide */}
           <div className="local-card">
-            <div className="local-icon">🇳🇱</div>
+            <div className="local-icon">
+              <img src="https://flagcdn.com/w40/nl.png" width="30" height="20" alt="Netherlands flag" style={{ borderRadius: "2px" }} />
+            </div>
             <h2 className="text-2xl font-bold text-white mb-2">Wagener Stadium, Amstelveen</h2>
             <p className="text-slate-300 text-sm leading-relaxed mb-6">
               Located in the scenic North Holland province, the Wagener Stadium is the spiritual home of Dutch hockey. It is nestled right on the edge of the <strong>Amsterdamse Bos</strong> (Amsterdam Forest), offering beautiful greenery, hiking paths, and lake systems for visiting fans.
@@ -68,7 +57,9 @@ export default function VenuesPage() {
 
           {/* Belgium Stadium Guide */}
           <div className="local-card">
-            <div className="local-icon">🇧🇪</div>
+            <div className="local-icon">
+              <img src="https://flagcdn.com/w40/be.png" width="30" height="20" alt="Belgium flag" style={{ borderRadius: "2px" }} />
+            </div>
             <h2 className="text-2xl font-bold text-white mb-2">Belfius Hockey Arena, Wavre</h2>
             <p className="text-slate-300 text-sm leading-relaxed mb-6">
               Wavre is situated in the Walloon Brabant region of Belgium. The Belfius Arena is a brand-new, top-tier facility built specifically to host the Belgian pool matches and the Men's Hockey World Cup grand finale.
@@ -97,7 +88,25 @@ export default function VenuesPage() {
             </div>
           </div>
         </section>
+
+        {/* Detailed Traveler Information */}
+        <section className="my-16 bg-slate-900 border border-slate-800 p-8 rounded-2xl">
+          <h2 className="text-xl font-bold text-white mb-4">🗺️ Essential Traveler & Matchday Information</h2>
+          <div className="text-slate-300 text-sm space-y-4 leading-relaxed">
+            <p>
+              Co-hosting the World Cup across two countries requires traveling fans to plan ahead. If you are planning to attend matches in both <strong>Amstelveen (Zip code 1182 AM)</strong> and <strong>Wavre (Zip code 1300)</strong>, note that the distance between the two venues is approximately 230 km.
+            </p>
+            <p>
+              <strong>Interstate Transit:</strong> The fastest way to travel between Amsterdam (NL) and Brussels (BE) is the Eurostar high-speed train, which takes around 1 hour and 50 minutes. From Brussels, you can take a regional train directly to Wavre.
+            </p>
+            <p>
+              <strong>Local Accommodations:</strong> For matches in Amstelveen, staying in south Amsterdam or near the Zuidas business district provides the easiest tram access to Wagener Stadium. For matches in Wavre, local hotels fill up quickly due to the Walibi amusement park traffic; staying in Brussels and taking the daily train commute is highly recommended.
+            </p>
+          </div>
+        </section>
       </main>
+
+      <Footer />
     </>
   );
 }
