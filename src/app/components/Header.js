@@ -31,6 +31,8 @@ export default function Header() {
                 </span>
                 <ul className="dropdown-menu">
                   <li><a href="/#schedule">Opening Day Fixtures</a></li>
+                  <li><a href="/format">Tournament Crossover Rules</a></li>
+                  <li><a href="/points-table">Points Table Standing Rules</a></li>
                   <li><a href="/teams#pools">Group Stage Pools</a></li>
                 </ul>
               </li>
@@ -68,6 +70,7 @@ export default function Header() {
                 </span>
                 <ul className="dropdown-menu">
                   <li><a href="/broadcasters">Broadcaster Directory</a></li>
+                  <li><a href="/tickets">Official Tickets & Pricing</a></li>
                   <li><a href="/broadcasters#vpn">VPN Stream Guide</a></li>
                   <li><a href="/live-scores">Live Scoreboard</a></li>
                 </ul>
@@ -80,7 +83,8 @@ export default function Header() {
                   <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
                 </span>
                 <ul className="dropdown-menu">
-                  <li><a href="/past-results">2023 World Cup Results</a></li>
+                  <li><a href="/history">World Cup Winners (1971-2026)</a></li>
+                  <li><a href="/past-results">2023 World Cup Stats</a></li>
                 </ul>
               </li>
             </ul>
@@ -120,14 +124,15 @@ export default function Header() {
         <ul className="mobile-nav-links">
           <li><a href="/" onClick={() => setIsMobileOpen(false)}>Home</a></li>
           <li><a href="/#schedule" onClick={() => setIsMobileOpen(false)}>Opening Fixtures</a></li>
-          <li><a href="/teams#pools" onClick={() => setIsMobileOpen(false)}>Group Pools</a></li>
+          <li><a href="/format" onClick={() => setIsMobileOpen(false)}>Tournament Format / Crossover</a></li>
+          <li><a href="/points-table" onClick={() => setIsMobileOpen(false)}>Points Table Rules</a></li>
           <li><a href="/teams" onClick={() => setIsMobileOpen(false)}>Qualified Nations</a></li>
-          <li><a href="/teams#stars" onClick={() => setIsMobileOpen(false)}>Star Players</a></li>
           <li><a href="/h2h" onClick={() => setIsMobileOpen(false)}>Head-to-Head Records</a></li>
           <li><a href="/venues" onClick={() => setIsMobileOpen(false)}>Stadium Guides</a></li>
+          <li><a href="/tickets" onClick={() => setIsMobileOpen(false)}>Tickets & Pricing</a></li>
           <li><a href="/broadcasters" onClick={() => setIsMobileOpen(false)}>Broadcaster Directory</a></li>
-          <li><a href="/broadcasters#vpn" onClick={() => setIsMobileOpen(false)}>VPN Stream Guide</a></li>
           <li><a href="/live-scores" onClick={() => setIsMobileOpen(false)}>Live Scoreboard</a></li>
+          <li><a href="/history" onClick={() => setIsMobileOpen(false)}>Past Winners (1971-2026)</a></li>
           <li><a href="/past-results" onClick={() => setIsMobileOpen(false)}>2023 World Cup Stats</a></li>
         </ul>
       </div>

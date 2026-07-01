@@ -94,6 +94,34 @@ export default function Home() {
               <p className="text-sm text-slate-400">Real-time play-by-play updates, card statistics, goal scorers, and penalty corner summaries.</p>
               <span className="text-xs text-sky-400 font-bold block mt-4">Access Scores Hub →</span>
             </a>
+
+            <a href="/tickets" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
+              <div className="local-icon">🎟️</div>
+              <h3 className="text-white mt-4 mb-2">Tickets & Booking</h3>
+              <p className="text-sm text-slate-400">Official ticket portal links, category-wise pricing, and stadium entrance instructions.</p>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Tickets Hub →</span>
+            </a>
+
+            <a href="/format" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
+              <div className="local-icon">🔀</div>
+              <h3 className="text-white mt-4 mb-2">Knockout Format</h3>
+              <p className="text-sm text-slate-400">Crossover round matchups criteria, penalty shootout guidelines, and bracket rules.</p>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Format Hub →</span>
+            </a>
+
+            <a href="/points-table" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
+              <div className="local-icon">📊</div>
+              <h3 className="text-white mt-4 mb-2">Points Table Rules</h3>
+              <p className="text-sm text-slate-400">Points scoring criteria, group stage classification rules, and tie-breaker parameters.</p>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Rules Hub →</span>
+            </a>
+
+            <a href="/history" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
+              <div className="local-icon">🏆</div>
+              <h3 className="text-white mt-4 mb-2">Winners History</h3>
+              <p className="text-sm text-slate-400">FIH World Cup winners list since 1971, historical statistics, and titles leaderboard.</p>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access History Hub →</span>
+            </a>
           </div>
         </section>
         

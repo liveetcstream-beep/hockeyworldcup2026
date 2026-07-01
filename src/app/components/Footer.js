@@ -13,10 +13,12 @@ export default function Footer() {
             <h5 className="text-white font-bold">Quick Links</h5>
             <ul className="footer-links">
               <li><a href="/">Home</a></li>
-              <li><a href="/#schedule">Fixtures List</a></li>
-              <li><a href="/teams">Qualified Pools & Teams</a></li>
-              <li><a href="/broadcasters">Broadcasters & Streams</a></li>
+              <li><a href="/format">Tournament Format</a></li>
+              <li><a href="/points-table">Points Table Rules</a></li>
+              <li><a href="/tickets">Tickets & Pricing</a></li>
+              <li><a href="/broadcasters">Broadcasters Hub</a></li>
               <li><a href="/venues">Stadium Guides</a></li>
+              <li><a href="/history">Winners List (1971-2026)</a></li>
               <li><a href="/live-scores">Live Scores</a></li>
             </ul>
           </div>
