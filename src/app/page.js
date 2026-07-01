@@ -336,48 +336,55 @@ export default function Home() {
           </div>
 
           {/* PAIN POINT SOLUTIONS */}
-          <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl my-8">
-            <h3 className="text-xl font-bold text-orange-500 mb-4">⚠️ Traveling Abroad? How to Bypass Live Stream Geo-Blocks</h3>
-            <p className="text-slate-300 text-sm mb-4">
-              If you are traveling outside India or Pakistan during the tournament, you will face <strong>geo-restrictions</strong> on apps like <strong>tapmad</strong> and <strong>JioCinema</strong> due to strict copyright licenses. 
+          <div className="vpn-panel-card">
+            <h3 className="vpn-title">
+              <span>⚠️</span> Traveling Abroad? How to Bypass Live Stream Geo-Blocks
+            </h3>
+            <p className="vpn-description">
+              If you are traveling outside India or Pakistan during the tournament, you will face <strong>geo-restrictions</strong> on apps like <strong>tapmad</strong> and <strong>JioCinema</strong> due to strict copyright licenses. Use the verified steps below to stream matches smoothly.
             </p>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-sm text-slate-300">
-              <div>
-                <strong className="text-white block mb-1">To Stream JioCinema from Europe/US:</strong>
-                Use a premium VPN (like ExpressVPN or NordVPN), connect to an Indian server, clear your browser cookies, and access the JioCinema app or web portal to enjoy free streams in full HD.
+            <div className="vpn-grid">
+              <div className="vpn-instruction-box">
+                <span className="vpn-step-title">To Stream JioCinema from Europe/US:</span>
+                <p className="vpn-step-text">
+                  Use a premium VPN (like ExpressVPN or NordVPN), connect to an Indian server, clear your browser cookies, and access the JioCinema app or web portal to enjoy free streams in full HD.
+                </p>
               </div>
-              <div>
-                <strong className="text-white block mb-1">To Stream tapmad from Belgium/Netherlands:</strong>
-                Connect to a Pakistan server on your VPN client, login to your tapmad account, and watch the match feed without encountering the "Not Available in Your Region" error.
+              <div className="vpn-instruction-box">
+                <span className="vpn-step-title">To Stream tapmad from Belgium/Netherlands:</span>
+                <p className="vpn-step-text">
+                  Connect to a Pakistan server on your VPN client, login to your tapmad account, and watch the match feed without encountering the "Not Available in Your Region" error.
+                </p>
               </div>
             </div>
           </div>
         </section>
 
         {/* SPORTS ANALYST ARTICLE: CLIMATE AND PITCH FACTORS */}
-        <section className="my-16 bg-slate-950 border border-slate-900 p-8 rounded-2xl">
-          <h2 className="text-2xl font-bold text-white mb-4">Tactical Deep-Dive: Pitch Conditions and Weather Factors</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-300 leading-relaxed">
-            <div>
-              <h3 className="text-sky-400 font-bold text-base mb-2">Turf Characteristics</h3>
-              <p>
+        <section className="tactical-analysis-card">
+          <h2 className="tactical-title">Tactical Deep-Dive: Pitch Conditions and Weather Factors</h2>
+          <div className="tactical-grid">
+            <div className="tactical-column-card">
+              <span className="tactical-col-header">Turf Characteristics</span>
+              <p className="tactical-col-text">
                 Both Wagener Stadium and Belfius Arena utilize advanced water-based artificial turf. These pitches require continuous watering prior to matches. Wet turf drastically reduces ball friction, allowing quick, flat passes. This favors aggressive, drag-flicking teams like India and fast counter-attackers like Belgium.
               </p>
             </div>
-            <div>
-              <h3 className="text-sky-400 font-bold text-base mb-2">Climate Impact</h3>
-              <p>
+            <div className="tactical-column-card">
+              <span className="tactical-col-header">Climate Impact</span>
+              <p className="tactical-col-text">
                 Late August in Amstelveen and Wavre brings highly unpredictable rain showers and cooler evening temperatures (averaging 15°C / 59°F). Increased relative humidity prevents the pitch water from evaporating, maintaining extremely fast play throughout late-night fixtures.
               </p>
             </div>
-            <div>
-              <h3 className="text-sky-400 font-bold text-base mb-2">Star Players to Watch</h3>
-              <p>
+            <div className="tactical-column-card">
+              <span className="tactical-col-header">Star Players to Watch</span>
+              <p className="tactical-col-text">
                 Keep an eye on India's drag-flick captain <strong>Harmanpreet Singh</strong>, Dutch midfield anchor <strong>Thierry Brinkman</strong>, and German playmaker <strong>Niklas Wellen</strong>. Their execution of penalty corner routines and control under pressure will dictate their teams' fates.
               </p>
             </div>
           </div>
         </section>
+
 
         {/* VENUES & LOCAL TRAVEL FACTORS */}
         <section id="venues" className="my-12">

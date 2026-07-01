@@ -889,3 +889,120 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1.2rem;
   }
 }
+
+/* Custom premium styling for VPN instructions and Tactical analysis */
+.vpn-panel-card {
+  background: linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, rgba(15, 23, 42, 0.85) 100%);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin: 3.5rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.vpn-title {
+  color: var(--accent);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-style: italic;
+}
+
+.vpn-description {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+  max-width: 950px;
+  line-height: 1.7;
+}
+
+.vpn-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: 2rem;
+}
+
+.vpn-instruction-box {
+  background: rgba(8, 12, 20, 0.5);
+  border: 1px solid var(--border-color);
+  padding: 1.8rem;
+  border-radius: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.vpn-instruction-box:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.1);
+}
+
+.vpn-step-title {
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 800;
+  margin-bottom: 0.8rem;
+  display: block;
+  font-style: italic;
+}
+
+.vpn-step-text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* Tactical Deep Dive styling */
+.tactical-analysis-card {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(8, 12, 20, 0.85) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin: 4.5rem 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+.tactical-title {
+  font-size: 1.9rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.tactical-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+  gap: 2rem;
+}
+
+.tactical-column-card {
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 2rem;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tactical-column-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary);
+  box-shadow: 0 6px 20px rgba(14, 165, 233, 0.1);
+}
+
+.tactical-col-header {
+  color: var(--primary);
+  font-size: 1.25rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  display: block;
+  font-style: italic;
+}
+
+.tactical-col-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
