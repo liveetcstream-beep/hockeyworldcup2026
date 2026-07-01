@@ -103,20 +103,34 @@ export default function BroadcastersPage() {
         </section>
 
         {/* Cord Cutting FAQs & E-E-A-T Content */}
-        <section className="my-16 bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-          <h2 className="text-xl font-bold text-white mb-4">📺 How to Watch the Hockey World Cup 2026 Without Cable</h2>
-          <div className="text-slate-300 text-sm space-y-4">
-            <p>
-              For modern sports fans who have cut the cord, streaming the 2026 World Cup is straightforward. Depending on your home region, multiple digital distribution portals will offer live high-definition feeds of all 32 matches.
-            </p>
-            <ul className="list-disc pl-6 space-y-2">
-              <li><strong>Watch.Hockey App:</strong> The International Hockey Federation's official platform streams matches live in regions without exclusive TV rights. You can purchase a Tournament Pass for complete access. It serves as a fail-safe backup option globally.</li>
-              <li><strong>JioCinema (India):</strong> Viacom18 has confirmed that JioCinema will provide free, high-definition streams for all matches, particularly focusing on the Indian Men's national team fixtures in Pool A. No registration fee is required.</li>
-              <li><strong>tapmad (Pakistan):</strong> Tapmad Digital holds the official web streaming licenses for Pakistan territory. You can stream matches live on desktop or mobile apps with low-cost premium packages.</li>
-            </ul>
-            <p className="mt-4">
-              <strong>Note on Geo-Blocks:</strong> Due to strict territorial broadcasting rights, streaming apps verify your IP address. If you travel outside your home country during the tournament, you must configure a reliable VPN service to route your connection back to your home server to avoid blackouts.
-            </p>
+        <section className="insights-section-wrap" id="vpn">
+          <h2 className="insights-section-title">
+            <span>📺</span> How to Watch the Hockey World Cup 2026 Without Cable
+          </h2>
+          <div className="insights-grid">
+            <div className="insight-col-card">
+              <span className="insight-col-tag">Official Hub</span>
+              <span className="insight-col-header">Watch.Hockey App</span>
+              <p className="insight-col-text">
+                The International Hockey Federation's official platform streams matches live in regions without exclusive TV rights. You can purchase a Tournament Pass for complete access. It serves as a fail-safe backup option globally.
+              </p>
+            </div>
+            
+            <div className="insight-col-card accent-card">
+              <span className="insight-col-tag">Regional</span>
+              <span className="insight-col-header">JioCinema & Tapmad</span>
+              <p className="insight-col-text">
+                Viacom18 provides free, high-definition streams for all matches on JioCinema in India. Tapmad Digital holds the official web streaming licenses for Pakistan, offering low-cost premium packages.
+              </p>
+            </div>
+
+            <div className="insight-col-card">
+              <span className="insight-col-tag">VPN Bypass</span>
+              <span className="insight-col-header">Avoiding Geo-Blocks</span>
+              <p className="insight-col-text">
+                Streaming apps verify your IP address. If you travel outside your home country during the matches, configure a reliable VPN service (connecting back to India/Pakistan) to avoid blackout prompts.
+              </p>
+            </div>
           </div>
         </section>
       </main>

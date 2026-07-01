@@ -90,18 +90,34 @@ export default function VenuesPage() {
         </section>
 
         {/* Detailed Traveler Information */}
-        <section className="my-16 bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-          <h2 className="text-xl font-bold text-white mb-4">🗺️ Essential Traveler & Matchday Information</h2>
-          <div className="text-slate-300 text-sm space-y-4 leading-relaxed">
-            <p>
-              Co-hosting the World Cup across two countries requires traveling fans to plan ahead. If you are planning to attend matches in both <strong>Amstelveen (Zip code 1182 AM)</strong> and <strong>Wavre (Zip code 1300)</strong>, note that the distance between the two venues is approximately 230 km.
-            </p>
-            <p>
-              <strong>Interstate Transit:</strong> The fastest way to travel between Amsterdam (NL) and Brussels (BE) is the Eurostar high-speed train, which takes around 1 hour and 50 minutes. From Brussels, you can take a regional train directly to Wavre.
-            </p>
-            <p>
-              <strong>Local Accommodations:</strong> For matches in Amstelveen, staying in south Amsterdam or near the Zuidas business district provides the easiest tram access to Wagener Stadium. For matches in Wavre, local hotels fill up quickly due to the Walibi amusement park traffic; staying in Brussels and taking the daily train commute is highly recommended.
-            </p>
+        <section className="insights-section-wrap">
+          <h2 className="insights-section-title">
+            <span>🗺️</span> Essential Traveler & Matchday Information
+          </h2>
+          <div className="insights-grid">
+            <div className="insight-col-card">
+              <span className="insight-col-tag">Distance</span>
+              <span className="insight-col-header">Crossing Borders</span>
+              <p className="insight-col-text">
+                Co-hosting across two nations requires planning. If you attend matches in both <strong>Amstelveen (Zip 1182 AM)</strong> and <strong>Wavre (Zip 1300)</strong>, note the distance is approximately 230 km.
+              </p>
+            </div>
+            
+            <div className="insight-col-card accent-card">
+              <span className="insight-col-tag">Transit</span>
+              <span className="insight-col-header">Interstate Travel</span>
+              <p className="insight-col-text">
+                The fastest way between Amsterdam (NL) and Brussels (BE) is the Eurostar high-speed train (1 hr 50 mins). From Brussels, take a direct regional train line to Wavre.
+              </p>
+            </div>
+
+            <div className="insight-col-card">
+              <span className="insight-col-tag">Lodging</span>
+              <span className="insight-col-header">Where to Stay</span>
+              <p className="insight-col-text">
+                For Amstelveen, stay in south Amsterdam for tram access. For Wavre, hotels fill up quickly due to Walibi theme park; staying in Brussels and commuting is recommended.
+              </p>
+            </div>
           </div>
         </section>
       </main>

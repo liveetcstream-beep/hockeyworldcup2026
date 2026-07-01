@@ -149,18 +149,34 @@ export default function PastResultsPage() {
         </section>
 
         {/* Detailed Tournament Insights */}
-        <section className="my-16 bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-          <h2 className="text-xl font-bold text-white mb-4">📈 2023 Hockey World Cup Statistical Highlights</h2>
-          <div className="text-slate-300 text-sm space-y-4 leading-relaxed">
-            <p>
-              The 2023 tournament recorded a total of <strong>249 goals in 44 matches</strong>, averaging an impressive <strong>5.66 goals per match</strong>. This was one of the most high-scoring editions of the FIH Men's Hockey World Cup history.
-            </p>
-            <p>
-              <strong>The Final Clash:</strong> The final at Kalinga Stadium in Bhubaneswar will go down as a classic. Belgium took an early 2-0 lead, but Germany staged a heroic comeback to lead 3-2. A late Belgian equalizer from Florent Van Aubel sent the match to a shoot-out, where German goalkeeper Jean-Paul Danneberg made the championship-winning save.
-            </p>
-            <p>
-              <strong>E-E-A-T Tournament Summary:</strong> The stats and records published on this page are hand-compiled by Marc Devos using official FIH data sheets. For historical cross-referencing, these records confirm the shifting dominance of European hockey, which will continue into the 2026 co-hosted tournament in Amstelveen and Wavre.
-            </p>
+        <section className="insights-section-wrap">
+          <h2 className="insights-section-title">
+            <span>📈</span> 2023 Hockey World Cup Statistical Highlights
+          </h2>
+          <div className="insights-grid">
+            <div className="insight-col-card">
+              <span className="insight-col-tag">Analytics</span>
+              <span className="insight-col-header">Goal Statistics</span>
+              <p className="insight-col-text">
+                The 2023 tournament recorded a total of <strong>249 goals in 44 matches</strong>, averaging an impressive <strong>5.66 goals per match</strong>. This stands as one of the most high-scoring editions of the Men's Hockey World Cup history.
+              </p>
+            </div>
+            
+            <div className="insight-col-card accent-card">
+              <span className="insight-col-tag">Climax</span>
+              <span className="insight-col-header">The Final Clash</span>
+              <p className="insight-col-text">
+                The final at Kalinga Stadium in Bhubaneswar was a classic. Belgium took an early 2-0 lead, but Germany staged a heroic comeback to lead 3-2. A late Belgian equalizer sent the match to a shoot-out, where Danneberg made the title save.
+              </p>
+            </div>
+
+            <div className="insight-col-card">
+              <span className="insight-col-tag">E-E-A-T</span>
+              <span className="insight-col-header">Verified Records</span>
+              <p className="insight-col-text">
+                These stats are hand-compiled by Marc Devos using official FIH data sheets. For historical cross-referencing, these records confirm the shifting dominance of European hockey, which will carry into the 2026 co-hosted games.
+              </p>
+            </div>
           </div>
         </section>
       </main>
