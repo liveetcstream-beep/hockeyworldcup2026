@@ -131,6 +131,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   gap: 1.8rem;
   list-style: none;
+  align-items: center;
 }
 
 .sports-nav a {
@@ -143,6 +144,82 @@ h1, h2, h3, h4, h5, h6 {
 
 .sports-nav a:hover {
   color: var(--primary);
+}
+
+/* Dropdown Menu CSS */
+.nav-item-dropdown {
+  position: relative;
+}
+
+.dropdown-trigger {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+.dropdown-trigger:hover {
+  color: var(--primary);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  min-width: 220px;
+  padding: 0.8rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+  z-index: 1000;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.nav-item-dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(5px);
+}
+
+.dropdown-menu li {
+  width: 100%;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  transition: background-color 0.2s ease, color 0.2s ease;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  background: var(--bg-tertiary);
+  color: #fff;
+}
+
+/* Arrow indicator rotate on hover */
+.dropdown-trigger svg {
+  transition: transform 0.2s ease;
+  fill: currentColor;
+}
+
+.nav-item-dropdown:hover .dropdown-trigger svg {
+  transform: rotate(180deg);
 }
 
 .live-indicator {
