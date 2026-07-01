@@ -10,7 +10,6 @@ export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   // Time conversion mapping for the Matches
-  // CET matches: Match 1: 13:00, Match 2: 15:30, Match 3: 18:00
   const matchTimes = {
     CET: ["13:00 CET", "15:30 CET", "18:00 CET"],
     IST: ["16:30 IST", "19:00 IST", "21:30 IST"],
@@ -40,6 +39,7 @@ export default function Home() {
               <li><a href="#schedule">Match Schedule</a></li>
               <li><a href="#pools">Qualified Pools</a></li>
               <li><a href="#broadcasters">Broadcasters</a></li>
+              <li><a href="#hubs">Authority Hubs</a></li>
               <li><a href="#venues">Stadium Guides</a></li>
               <li><a href="#faq">FAQs</a></li>
             </ul>
@@ -77,8 +77,46 @@ export default function Home() {
       </section>
 
       <main className="sports-container py-12">
+
+        {/* TOPICAL AUTHORITY HUBS NAVIGATION SECTION */}
+        <section id="hubs" className="my-12">
+          <div className="section-title-wrap">
+            <h2>Hockey World Cup 2026 Coverage Directory</h2>
+            <p>Select a dedicated section below to dive deeper into team squads, transit maps, and live streaming portals.</p>
+          </div>
+          
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <a href="/broadcasters" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
+              <div className="local-icon">📺</div>
+              <h3 className="text-white mt-4 mb-2">Live Stream Guide</h3>
+              <p className="text-sm text-slate-400">Step-by-step cord-cutting guides, VPN configurations, and country-wise official channels.</p>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Broadcasters Hub →</span>
+            </a>
+            
+            <a href="/venues" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
+              <div className="local-icon">🏟️</div>
+              <h3 className="text-white mt-4 mb-2">Stadium & Travel Guide</h3>
+              <p className="text-sm text-slate-400">Weather forecasts, Zip codes, local landmarks, and transit details for Wavre and Amstelveen.</p>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Venues Hub →</span>
+            </a>
+
+            <a href="/teams" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
+              <div className="local-icon">🏃‍♂️</div>
+              <h3 className="text-white mt-4 mb-2">Squads & Players</h3>
+              <p className="text-sm text-slate-400">Detailed list of the 16 qualified teams, key players, drag-flick anchors, and predictions.</p>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Teams Hub →</span>
+            </a>
+
+            <a href="/live-scores" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
+              <div className="local-icon">⚡</div>
+              <h3 className="text-white mt-4 mb-2">Live Score Centre</h3>
+              <p className="text-sm text-slate-400">Real-time play-by-play updates, card statistics, goal scorers, and penalty corner summaries.</p>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Scores Hub →</span>
+            </a>
+          </div>
+        </section>
         
-        {/* TIMEZONE CONVERTER SECTION (INTERACTIVE) */}
+        {/* TIMEZONE CONVERTER SECTION */}
         <section id="timezone" className="my-12">
           <div className="section-title-wrap">
             <h2>Convert Match Timings to Your Local Time</h2>
@@ -302,31 +340,31 @@ export default function Home() {
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Pakistan</strong></td>
+                  <td><strong>🇵🇰 Pakistan</strong></td>
                   <td>Ten Sports / PTV Sports</td>
                   <td><span className="channel-tag">tapmad</span> (Exclusive HD Digital)</td>
                   <td>Premium (Low Cost)</td>
                 </tr>
                 <tr>
-                  <td><strong>India</strong></td>
+                  <td><strong>🇮🇳 India</strong></td>
                   <td>Sports18 Network</td>
                   <td><span className="channel-tag">JioCinema</span> App</td>
                   <td>Free (Ad-Supported)</td>
                 </tr>
                 <tr>
-                  <td><strong>United Kingdom & Europe</strong></td>
+                  <td><strong>🇬🇧 United Kingdom & 🇪🇺 Europe</strong></td>
                   <td>BT Sport / Eurosport</td>
                   <td><span className="channel-tag">Watch.Hockey</span> Portal</td>
                   <td>PPV / Tournament Pass</td>
                 </tr>
                 <tr>
-                  <td><strong>USA & Canada</strong></td>
+                  <td><strong>🇺🇸 USA & 🇨🇦 Canada</strong></td>
                   <td>Fox Sports (Selected Games)</td>
                   <td><span className="channel-tag">Watch.Hockey</span> / Fox Sports App</td>
                   <td>Subscription / Pass</td>
                 </tr>
                 <tr>
-                  <td><strong>Rest of the World</strong></td>
+                  <td><strong>🌐 Rest of the World</strong></td>
                   <td>FIH Media Partners</td>
                   <td><span className="channel-tag">Watch.Hockey</span></td>
                   <td>Varies by Region</td>
@@ -384,7 +422,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-
 
         {/* VENUES & LOCAL TRAVEL FACTORS */}
         <section id="venues" className="my-12">
@@ -470,7 +507,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* FAQ ACCORDION SECTION (DYNAMIC COGNITIVE TOGGLE) */}
+        {/* FAQ ACCORDION SECTION */}
         <section id="faq" className="my-12">
           <div className="section-title-wrap">
             <h2>Frequently Asked Questions (FAQs)</h2>
