@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
-  title: "Tournament Format & Crossover Match Rules: Hockey World Cup 2026",
+  title: "Hockey World Cup 2026 Format & Crossover Match Rules",
   description: "Complete guide on how the 16 teams qualify for the quarterfinals. Learn how crossover matches, penalty shootouts, and classification stages work.",
 };
 

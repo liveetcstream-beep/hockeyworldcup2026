@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Live Scores & Real-Time Match Tracker - Hockey World Cup 2026",
+  title: "Live Scores & Match Tracker - Hockey World Cup 2026",
   description: "Real-time live scores, goals, cards, and penalty corner stats for all matches in the FIH Hockey World Cup 2026. Follow updates live.",
 };
 

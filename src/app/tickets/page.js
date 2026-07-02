@@ -4,8 +4,8 @@ import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
-  title: "Official Ticket Pricing & Booking Guide: Hockey World Cup 2026",
-  description: "Step-by-step ticketing guide for Wagener Stadium (1182 AM) and Belfius Hockey Arena (1300). Find price categories, resale platforms, and eco-transit discounts.",
+  title: "Ticket Prices & Booking Guide - Hockey World Cup 2026",
+  description: "Ticketing guide for Wagener Stadium (1182 AM) & Belfius Arena (1300). Find ticket price categories, resale sites, and transit discounts.",
 };
 
 export default function TicketsPage() {

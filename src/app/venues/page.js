@@ -3,7 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Wagener Stadium & Belfius Arena Travel Guide - Hockey World Cup 2026",
+  title: "Belfius & Wagener Stadium Travel Guide - World Cup 2026",
   description: "Complete visitor guide for the 2026 FIH Hockey World Cup stadiums. Includes transit maps, local Zip codes, Amsterdamse Bos details, and Wavre attractions.",
 };
 
