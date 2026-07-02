@@ -319,8 +319,9 @@ export default function HistoryPage() {
           
           <FaqAccordion items={faqItems} />
 
-          <div className="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500 italic max-w-3xl mx-auto text-center">
-            "Pakistan's four championships highlight their classical field hockey dominance in the grass-surface era. However, the introduction of modern water-based artificial pitches has seen European powerhouses like Belgium and Germany take over." — <strong>Marc Devos, Senior Belgian Hockey Analyst</strong>
+          <div className="expert-quote-box">
+            "Pakistan's four championships highlight their classical field hockey dominance in the grass-surface era. However, the introduction of modern water-based artificial pitches has seen European powerhouses like Belgium and Germany take over."
+            <strong>— Marc Devos, Senior Belgian Hockey Analyst</strong>
           </div>
         </section>
       </main>

@@ -134,8 +134,9 @@ export default function PointsTablePage() {
           
           <FaqAccordion items={faqItems} />
 
-          <div className="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500 italic max-w-3xl mx-auto text-center">
-            "Understanding the tie-breaker is key during the final matchday of pool stages. Team coaches often order their players to hunt for more field goals if they anticipate a tie on points." — <strong>Marc Devos, Senior Belgian Hockey Analyst</strong>
+          <div className="expert-quote-box">
+            "Understanding the tie-breaker is key during the final matchday of pool stages. Team coaches often order their players to hunt for more field goals if they anticipate a tie on points."
+            <strong>— Marc Devos, Senior Belgian Hockey Analyst</strong>
           </div>
         </section>
       </main>

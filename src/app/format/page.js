@@ -151,8 +151,9 @@ export default function FormatPage() {
           
           <FaqAccordion items={faqItems} />
 
-          <div className="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500 italic max-w-3xl mx-auto text-center">
-            "The crossover phase is highly volatile. A single bad day on the water-based turf in Amstelveen can ruin a top team's tournament run, making it a favorite for sports betters." — <strong>Marc Devos, Senior Belgian Hockey Analyst</strong>
+          <div className="expert-quote-box">
+            "The crossover phase is highly volatile. A single bad day on the water-based turf in Amstelveen can ruin a top team's tournament run, making it a favorite for sports betters."
+            <strong>— Marc Devos, Senior Belgian Hockey Analyst</strong>
           </div>
         </section>
       </main>

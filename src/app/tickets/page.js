@@ -156,8 +156,9 @@ export default function TicketsPage() {
           
           <FaqAccordion items={faqItems} />
 
-          <div className="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500 italic max-w-3xl mx-auto text-center">
-            "We strongly urge fans to book accommodation early in Brussels (BE) and Amsterdam (NL), as central transit lines experience high tourist bookings in late August." — <strong>Marc Devos, Senior Belgian Hockey Analyst</strong>
+          <div className="expert-quote-box">
+            "We strongly urge fans to book accommodation early in Brussels (BE) and Amsterdam (NL), as central transit lines experience high tourist bookings in late August."
+            <strong>— Marc Devos, Senior Belgian Hockey Analyst</strong>
           </div>
         </section>
       </main>
