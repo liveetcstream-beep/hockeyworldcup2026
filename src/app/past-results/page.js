@@ -132,7 +132,7 @@ export default function PastResultsPage() {
                 <tr>
                   <td><strong>5th</strong></td>
                   <td>
-                    <img src="https://flagcdn.com/w40/eng.png" width="20" height="14" alt="England flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
+                    <img src="https://flagcdn.com/w40/gb-eng.png" width="20" height="14" alt="England flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
                     <strong>England</strong>
                   </td>
                   <td>Pool D</td>

@@ -236,9 +236,10 @@ export default function HistoryPage() {
                   </td>
                   <td>2 – 1</td>
                   <td>
-                    <img src="https://flagcdn.com/w40/eng.png" width="20" height="14" alt="England flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
+                    <img src="https://flagcdn.com/w40/gb-eng.png" width="20" height="14" alt="England flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
                     England
                   </td>
+
                 </tr>
                 <tr>
                   <td>1982</td>
