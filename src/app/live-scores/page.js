@@ -12,20 +12,29 @@ export default function LiveScoresPage() {
     <>
       <Header />
 
-      <main className="sports-container py-12">
-        <section className="my-8 text-center">
+      <section className="hero-section">
+        <div className="sports-container hero-content">
           <div className="live-indicator mb-4">
             <span className="live-dot"></span>
             Real-Time Feed Active
           </div>
-          <h1 className="text-4xl font-extrabold text-white mt-2 mb-6">Live Match Centre</h1>
-          <p className="text-slate-300 max-w-3xl mx-auto">
+          <h1 className="hero-title">Live Match Centre</h1>
+          <p className="hero-description">
             Get instant play-by-play updates, card bookings, penalty corner conversion rates, and official lineups on matchdays.
           </p>
-        </section>
 
-        {/* Live scores list placeholder */}
-        <section className="my-12">
+          <div className="eeat-badge-container">
+            <div className="eeat-badge">
+              📅 Updated: <strong>July 1, 2026</strong>
+            </div>
+            <div className="eeat-badge">
+              ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main className="sports-container py-12">
           <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl text-center">
             <h2 className="text-xl font-bold text-white mb-2">No Live Matches Right Now</h2>
             <p className="text-slate-400 text-sm mb-6">
@@ -47,7 +56,6 @@ export default function LiveScoresPage() {
               </div>
             </div>
           </div>
-        </section>
 
         {/* Tactical Scoreboard features info */}
         <section className="my-16">

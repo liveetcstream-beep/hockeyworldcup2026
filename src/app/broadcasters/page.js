@@ -12,15 +12,26 @@ export default function BroadcastersPage() {
     <>
       <Header />
 
-      <main className="sports-container py-12">
-        <section className="my-8 text-center">
+      <section className="hero-section">
+        <div className="sports-container hero-content">
           <p className="hero-subtitle">Official Television & Streaming Portal</p>
-          <h1 className="text-4xl font-extrabold text-white mt-2 mb-6">FIH Hockey World Cup 2026 Broadcasters</h1>
-          <p className="text-slate-300 max-w-3xl mx-auto">
+          <h1 className="hero-title">FIH Hockey World Cup 2026 Broadcasters</h1>
+          <p className="hero-description">
             Comprehensive directory of all TV networks, digital channels, and legal streaming links broadcasting the 2026 Men's and Women's World Cup from Belgium and the Netherlands.
           </p>
-        </section>
 
+          <div className="eeat-badge-container">
+            <div className="eeat-badge">
+              📅 Updated: <strong>July 1, 2026</strong>
+            </div>
+            <div className="eeat-badge">
+              ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main className="sports-container py-12">
         {/* Global Directory Grid */}
         <section className="my-12">
           <div className="table-responsive">

@@ -12,16 +12,26 @@ export default function H2HPage() {
     <>
       <Header />
 
-      <main className="sports-container py-12">
-        <section className="my-8 text-center">
+      <section className="hero-section">
+        <div className="sports-container hero-content">
           <p className="hero-subtitle">Matchup Histories & Statistics</p>
-          <h1 className="text-4xl font-extrabold text-white mt-2 mb-6">Head-to-Head (H2H) Sports Records</h1>
-          <p className="text-slate-300 max-w-3xl mx-auto">
+          <h1 className="hero-title">Head-to-Head (H2H) Sports Records</h1>
+          <p className="hero-description">
             Deep-dive into the historical matchups of opening fixtures, including full data on the last 10 encounters, goals scored, win ratios, and tournament statistics.
           </p>
-        </section>
 
-        {/* India vs Wales H2H */}
+          <div className="eeat-badge-container">
+            <div className="eeat-badge">
+              📅 Updated: <strong>July 1, 2026</strong>
+            </div>
+            <div className="eeat-badge">
+              ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main className="sports-container py-12">
         <section className="my-16">
           <div className="flex items-center gap-3 mb-6 border-l-4 border-sky-400 pl-4">
             <img src="https://flagcdn.com/w40/in.png" width="30" height="20" alt="India flag" style={{ borderRadius: "2px" }} />

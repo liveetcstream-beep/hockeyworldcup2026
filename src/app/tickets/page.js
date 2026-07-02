@@ -12,17 +12,26 @@ export default function TicketsPage() {
     <>
       <Header />
 
-      <main className="sports-container py-12">
-        {/* Hero Section */}
-        <section className="my-8 text-center">
+      <section className="hero-section">
+        <div className="sports-container hero-content">
           <p className="hero-subtitle">Matchday Entry & Seating Portals</p>
-          <h1 className="text-4xl font-extrabold text-white mt-2 mb-6">FIH Hockey World Cup 2026 Ticket Guide</h1>
-          <p className="text-slate-300 max-w-3xl mx-auto">
+          <h1 className="hero-title">FIH Hockey World Cup 2026 Ticket Guide</h1>
+          <p className="hero-description">
             Your verified guide to purchasing tickets for the Men's and Women's matches in Amstelveen (Netherlands) and Wavre (Belgium). Learn how to secure official seats and access transportation discounts.
           </p>
-        </section>
 
-        {/* Dynamic Ticket Categories & Pricing Table */}
+          <div className="eeat-badge-container">
+            <div className="eeat-badge">
+              📅 Updated: <strong>July 1, 2026</strong>
+            </div>
+            <div className="eeat-badge">
+              ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main className="sports-container py-12">
         <section className="my-12">
           <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-sky-400 pl-4 italic">Ticket Pricing & Categories</h2>
           <div className="table-responsive">

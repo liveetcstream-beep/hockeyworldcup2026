@@ -12,17 +12,26 @@ export default function PointsTablePage() {
     <>
       <Header />
 
-      <main className="sports-container py-12">
-        {/* Hero Section */}
-        <section className="my-8 text-center">
+      <section className="hero-section">
+        <div className="sports-container hero-content">
           <p className="hero-subtitle">Group Stage Standings Criteria</p>
-          <h1 className="text-4xl font-extrabold text-white mt-2 mb-6">Official Points Table & Standings Rules</h1>
-          <p className="text-slate-300 max-w-3xl mx-auto">
+          <h1 className="hero-title">Official Points Table & Standings Rules</h1>
+          <p className="hero-description">
             How do teams earn rankings during the 2026 group stages in Belgium and the Netherlands? Read the official FIH point system and tie-breaker guidelines.
           </p>
-        </section>
 
-        {/* Point System Cards */}
+          <div className="eeat-badge-container">
+            <div className="eeat-badge">
+              📅 Updated: <strong>July 1, 2026</strong>
+            </div>
+            <div className="eeat-badge">
+              ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main className="sports-container py-12">
         <section className="insights-section-wrap">
           <h2 className="insights-section-title">
             <span>⚙️</span> FIH Group Stage Point Allocation

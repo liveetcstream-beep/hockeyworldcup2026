@@ -12,16 +12,26 @@ export default function PastResultsPage() {
     <>
       <Header />
 
-      <main className="sports-container py-12">
-        <section className="my-8 text-center">
+      <section className="hero-section">
+        <div className="sports-container hero-content">
           <p className="hero-subtitle">Historical Tournament Records</p>
-          <h1 className="text-4xl font-extrabold text-white mt-2 mb-6">2023 FIH Hockey World Cup Statistics</h1>
-          <p className="text-slate-300 max-w-3xl mx-auto">
+          <h1 className="hero-title">2023 FIH Hockey World Cup Statistics</h1>
+          <p className="hero-description">
             Comprehensive database of the 15th Men's Hockey World Cup held in Odisha, India (Bhubaneswar & Rourkela) in January 2023. Review standings, awards, and goal scoring records.
           </p>
-        </section>
 
-        {/* 2023 Awards Grid */}
+          <div className="eeat-badge-container">
+            <div className="eeat-badge">
+              📅 Updated: <strong>July 1, 2026</strong>
+            </div>
+            <div className="eeat-badge">
+              ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main className="sports-container py-12">
         <section className="my-12">
           <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-sky-400 pl-4 italic">Official Tournament Awards</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

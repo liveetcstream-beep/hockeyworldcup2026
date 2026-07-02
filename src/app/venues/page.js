@@ -12,15 +12,26 @@ export default function VenuesPage() {
     <>
       <Header />
 
-      <main className="sports-container py-12">
-        <section className="my-8 text-center">
+      <section className="hero-section">
+        <div className="sports-container hero-content">
           <p className="hero-subtitle">Official Tournament Stadiums</p>
-          <h1 className="text-4xl font-extrabold text-white mt-2 mb-6">Stadium & Geographic Guides</h1>
-          <p className="text-slate-300 max-w-3xl mx-auto">
+          <h1 className="hero-title">Stadium & Geographic Guides</h1>
+          <p className="hero-description">
             The 2026 Hockey World Cup is co-hosted across two historic venues in Amstelveen, Netherlands and Wavre, Belgium. Find transit routes, weather advisories, and local landmarks below.
           </p>
-        </section>
 
+          <div className="eeat-badge-container">
+            <div className="eeat-badge">
+              📅 Updated: <strong>July 1, 2026</strong>
+            </div>
+            <div className="eeat-badge">
+              ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main className="sports-container py-12">
         <section className="local-grid my-12">
           {/* Amstelveen Stadium Guide */}
           <div className="local-card">

@@ -12,17 +12,26 @@ export default function HistoryPage() {
     <>
       <Header />
 
-      <main className="sports-container py-12">
-        {/* Hero Section */}
-        <section className="my-8 text-center">
+      <section className="hero-section">
+        <div className="sports-container hero-content">
           <p className="hero-subtitle">Tournament Hall of Fame</p>
-          <h1 className="text-4xl font-extrabold text-white mt-2 mb-6">FIH Hockey World Cup Winners List</h1>
-          <p className="text-slate-300 max-w-3xl mx-auto">
+          <h1 className="hero-title">FIH Hockey World Cup Winners List</h1>
+          <p className="hero-description">
             Field hockey has a rich championship history since the inaugural event in 1971. Read the list of all past winners and title statistics.
           </p>
-        </section>
 
-        {/* Title Count Grid */}
+          <div className="eeat-badge-container">
+            <div className="eeat-badge">
+              📅 Updated: <strong>July 1, 2026</strong>
+            </div>
+            <div className="eeat-badge">
+              ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <main className="sports-container py-12">
         <section className="insights-section-wrap">
           <h2 className="insights-section-title">
             <span>🏆</span> World Cup Title Leaderboard
