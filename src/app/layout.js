@@ -1,13 +1,33 @@
+import Script from "next/script";
 import "./globals.css";
 
 export const metadata = {
   title: "FIH Hockey World Cup 2026 Schedule & Streaming Guide",
   description: "Get the complete, verified match schedule, timezone conversions, and live streaming options for the FIH Hockey World Cup 2026.",
+  verification: {
+    google: "D00inc3t5pMk-B-QqBVxCgOLSj4dSxAvabIHxCTqGVA",
+  },
 };
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className="h-full antialiased">
+      <head>
+        {/* Google Analytics (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1SEPBKM7MR"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-1SEPBKM7MR');
+          `}
+        </Script>
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
