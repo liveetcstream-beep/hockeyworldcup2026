@@ -84,6 +84,32 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 1.5rem;
 }
 
+/* Spacing and Layout Utilities */
+.my-12 {
+  margin-top: 5rem !important;
+  margin-bottom: 5rem !important;
+}
+
+.my-16 {
+  margin-top: 6.5rem !important;
+  margin-bottom: 6.5rem !important;
+}
+
+.my-8 {
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
+}
+
+.my-4 {
+  margin-top: 1.5rem !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.py-12 {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
 /* Header & Nav */
 .sports-header {
   background: rgba(4, 7, 12, 0.95);
