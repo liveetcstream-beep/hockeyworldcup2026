@@ -1,5 +1,20 @@
+import { Outfit, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-outfit",
+  display: "swap",
+});
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700", "800"],
+  variable: "--font-plus-jakarta",
+  display: "swap",
+});
 
 export const metadata = {
   title: "FIH Hockey World Cup 2026 Schedule & Streaming Guide",
@@ -11,7 +26,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable} h-full antialiased`}>
       <head>
         {/* Google Analytics (gtag.js) */}
         <Script
@@ -32,4 +47,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-
