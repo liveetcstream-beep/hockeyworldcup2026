@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "FIH Hockey World Cup 2026 Points Table & Standing Rules",
@@ -8,6 +9,17 @@ export const metadata = {
 };
 
 export default function PointsTablePage() {
+  const faqItems = [
+    {
+      question: "Does goal difference matter more than total wins?",
+      answer: "No. Under the latest FIH guidelines, number of matches won is the primary tie-breaker. Goal difference is only considered if the number of wins is equal."
+    },
+    {
+      question: "Is there any bonus point system?",
+      answer: "No. Unlike rugby or soccer leagues, hockey tournaments do not award bonus points for scoring a certain number of goals (e.g. 4+ goals)."
+    }
+  ];
+
   return (
     <>
       <Header />
@@ -31,7 +43,27 @@ export default function PointsTablePage() {
         </div>
       </section>
 
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqItems.map((item) => ({
+              "@type": "Question",
+              "name": item.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       <main className="sports-container py-12">
+        {/* Point System Cards */}
         <section className="insights-section-wrap">
           <h2 className="insights-section-title">
             <span>⚙️</span> FIH Group Stage Point Allocation
@@ -93,25 +125,16 @@ export default function PointsTablePage() {
           </div>
         </section>
 
-        {/* Inline Content Questions & E-A-T Sourcing */}
-        <section className="my-16 bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-          <h2 className="text-xl font-bold text-white mb-6">📝 Standings & Rules FAQ</h2>
-          <div className="space-y-6 text-sm text-slate-300 leading-relaxed">
-            <div>
-              <strong className="text-white block mb-1">Q: Does goal difference matter more than total wins?</strong>
-              <p>
-                A: No. Under the latest FIH guidelines, **number of matches won** is the primary tie-breaker. Goal difference is only considered if the number of wins is equal.
-              </p>
-            </div>
-            <div>
-              <strong className="text-white block mb-1">Q: Is there any bonus point system?</strong>
-              <p>
-                A: No. Unlike rugby or soccer leagues, hockey tournaments do not award bonus points for scoring a certain number of goals (e.g. 4+ goals).
-              </p>
-            </div>
+        {/* Interactive FAQ Section */}
+        <section className="my-16">
+          <div className="section-title-wrap">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            <p>Direct responses regarding points allocation, wins criteria, and group stage tie-breakers.</p>
           </div>
+          
+          <FaqAccordion items={faqItems} />
 
-          <div className="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500 italic">
+          <div className="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500 italic max-w-3xl mx-auto text-center">
             "Understanding the tie-breaker is key during the final matchday of pool stages. Team coaches often order their players to hunt for more field goals if they anticipate a tie on points." — <strong>Marc Devos, Senior Belgian Hockey Analyst</strong>
           </div>
         </section>

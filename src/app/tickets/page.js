@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "Official Ticket Pricing & Booking Guide: Hockey World Cup 2026",
@@ -8,6 +9,21 @@ export const metadata = {
 };
 
 export default function TicketsPage() {
+  const faqItems = [
+    {
+      question: "How can I buy official tickets for the FIH Hockey World Cup 2026?",
+      answer: "Official tickets must only be purchased through the unified tournament ticketing portal at tickets.hockeyworldcup2026.com or via the co-hosts' official sites (KNHB and Royal Belgian Hockey Association). Avoid purchasing from third-party resale sites like Viagogo to prevent entry rejections."
+    },
+    {
+      question: "Are child tickets discounted?",
+      answer: "Yes, children under the age of 14 are eligible for a 50% discount on Category 2 and Category 3 tickets. Toddlers under 2 years of age enter free of charge but must sit on an adult's lap."
+    },
+    {
+      question: "Is there an official ticket resale platform?",
+      answer: "Yes, the FIH will launch an official resale platform in April 2026, allowing fans to trade tickets at face value. This keeps prices fair and eliminates scalping issues."
+    }
+  ];
+
   return (
     <>
       <Header />
@@ -31,7 +47,27 @@ export default function TicketsPage() {
         </div>
       </section>
 
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqItems.map((item) => ({
+              "@type": "Question",
+              "name": item.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       <main className="sports-container py-12">
+        {/* Dynamic Ticket Categories & Pricing Table */}
         <section className="my-12">
           <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-sky-400 pl-4 italic">Ticket Pricing & Categories</h2>
           <div className="table-responsive">
@@ -111,31 +147,16 @@ export default function TicketsPage() {
           </div>
         </section>
 
-        {/* Inline Content Questions & E-A-T Sourcing */}
-        <section className="my-16 bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-          <h2 className="text-xl font-bold text-white mb-6">📝 Frequently Asked Ticketing Questions</h2>
-          <div className="space-y-6 text-sm text-slate-300 leading-relaxed">
-            <div>
-              <strong className="text-white block mb-1">Q: How can I buy official tickets for the FIH Hockey World Cup 2026?</strong>
-              <p>
-                A: Official tickets must only be purchased through the unified tournament ticketing portal at <strong>tickets.hockeyworldcup2026.com</strong> or via the co-hosts' official sites (KNHB and Royal Belgian Hockey Association). Avoid purchasing from third-party resale sites like Viagogo to prevent entry rejections.
-              </p>
-            </div>
-            <div>
-              <strong className="text-white block mb-1">Q: Are child tickets discounted?</strong>
-              <p>
-                A: Yes, children under the age of 14 are eligible for a 50% discount on Category 2 and Category 3 tickets. Toddlers under 2 years of age enter free of charge but must sit on an adult's lap.
-              </p>
-            </div>
-            <div>
-              <strong className="text-white block mb-1">Q: Is there an official ticket resale platform?</strong>
-              <p>
-                A: Yes, the FIH will launch an official resale platform in April 2026, allowing fans to trade tickets at face value. This keeps prices fair and eliminates scalping issues.
-              </p>
-            </div>
+        {/* Interactive FAQ Section */}
+        <section className="my-16">
+          <div className="section-title-wrap">
+            <h2>Frequently Asked Questions (FAQs)</h2>
+            <p>Everything you need to know about purchasing tickets and matchday entry rules.</p>
           </div>
+          
+          <FaqAccordion items={faqItems} />
 
-          <div className="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500 italic">
+          <div className="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500 italic max-w-3xl mx-auto text-center">
             "We strongly urge fans to book accommodation early in Brussels (BE) and Amsterdam (NL), as central transit lines experience high tourist bookings in late August." — <strong>Marc Devos, Senior Belgian Hockey Analyst</strong>
           </div>
         </section>

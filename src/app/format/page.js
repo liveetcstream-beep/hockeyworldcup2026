@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "Tournament Format & Crossover Match Rules: Hockey World Cup 2026",
@@ -8,6 +9,21 @@ export const metadata = {
 };
 
 export default function FormatPage() {
+  const faqItems = [
+    {
+      question: "What happens to the teams that finish 4th in their pools?",
+      answer: "The teams finishing last (4th place) are immediately eliminated from contesting the World Cup trophy. However, they continue to play classification matches to establish final FIH world ranking positions."
+    },
+    {
+      question: "How are tie-breaker situations resolved in knockout rounds?",
+      answer: "If a crossover or knockout match ends in a draw at the end of regulation (60 minutes), the game goes directly to a penalty shootout. There is no extra time (overtime) played in FIH tournaments."
+    },
+    {
+      question: "Why does the FIH use the crossover format?",
+      answer: "The crossover format keeps the group stage highly competitive. Even if a powerhouse team loses its opening match, they can still qualify for the knockouts by securing 2nd or 3rd place, keeping television viewers and sponsors engaged."
+    }
+  ];
+
   return (
     <>
       <Header />
@@ -31,7 +47,27 @@ export default function FormatPage() {
         </div>
       </section>
 
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqItems.map((item) => ({
+              "@type": "Question",
+              "name": item.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       <main className="sports-container py-12">
+        {/* Format Explanation Steps */}
         <section className="insights-section-wrap">
           <h2 className="insights-section-title">
             <span>📊</span> Tournament Progression Stages Explained
@@ -106,31 +142,16 @@ export default function FormatPage() {
           </div>
         </section>
 
-        {/* Inline Content Questions & E-A-T Sourcing */}
-        <section className="my-16 bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-          <h2 className="text-xl font-bold text-white mb-6">📝 Tournament Structure Q&A</h2>
-          <div className="space-y-6 text-sm text-slate-300 leading-relaxed">
-            <div>
-              <strong className="text-white block mb-1">Q: What happens to the teams that finish 4th in their pools?</strong>
-              <p>
-                A: The teams finishing last (4th place) are immediately eliminated from contesting the World Cup trophy. However, they continue to play classification matches to establish final FIH world ranking positions.
-              </p>
-            </div>
-            <div>
-              <strong className="text-white block mb-1">Q: How are tie-breaker situations resolved in knockout rounds?</strong>
-              <p>
-                A: If a crossover or knockout match ends in a draw at the end of regulation (60 minutes), the game goes directly to a **penalty shootout**. There is no extra time (overtime) played in FIH tournaments.
-              </p>
-            </div>
-            <div>
-              <strong className="text-white block mb-1">Q: Why does the FIH use the crossover format?</strong>
-              <p>
-                A: The crossover format keeps the group stage highly competitive. Even if a powerhouse team loses its opening match, they can still qualify for the knockouts by securing 2nd or 3rd place, keeping television viewers and sponsors engaged.
-              </p>
-            </div>
+        {/* Interactive FAQ Section */}
+        <section className="my-16">
+          <div className="section-title-wrap">
+            <h2>Tournament Structure Q&A</h2>
+            <p>Direct responses regarding crossover rounds, shootout criteria, and advancement rules.</p>
           </div>
+          
+          <FaqAccordion items={faqItems} />
 
-          <div className="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500 italic">
+          <div className="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500 italic max-w-3xl mx-auto text-center">
             "The crossover phase is highly volatile. A single bad day on the water-based turf in Amstelveen can ruin a top team's tournament run, making it a favorite for sports betters." — <strong>Marc Devos, Senior Belgian Hockey Analyst</strong>
           </div>
         </section>

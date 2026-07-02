@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "FIH Hockey World Cup Winners List (1971 - 2026 History)",
@@ -8,6 +9,17 @@ export const metadata = {
 };
 
 export default function HistoryPage() {
+  const faqItems = [
+    {
+      question: "Which team won the very first Hockey World Cup in 1971?",
+      answer: "The inaugural World Cup in 1971 held in Barcelona, Spain, was won by Pakistan, who defeated the host country Spain 1–0 in the final."
+    },
+    {
+      question: "Has the host nation ever won the tournament?",
+      answer: "Yes, host nations have won the World Cup on three occasions: Germany won in Germany (2006), Netherlands won in the Netherlands (1998), and Netherlands also won as hosts in Amstelveen (1973)."
+    }
+  ];
+
   return (
     <>
       <Header />
@@ -31,7 +43,27 @@ export default function HistoryPage() {
         </div>
       </section>
 
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": faqItems.map((item) => ({
+              "@type": "Question",
+              "name": item.question,
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": item.answer,
+              },
+            })),
+          }),
+        }}
+      />
+
       <main className="sports-container py-12">
+        {/* Title Count Grid */}
         <section className="insights-section-wrap">
           <h2 className="insights-section-title">
             <span>🏆</span> World Cup Title Leaderboard
@@ -278,25 +310,16 @@ export default function HistoryPage() {
           </div>
         </section>
 
-        {/* Historical Q&A and E-A-T */}
-        <section className="my-16 bg-slate-900 border border-slate-800 p-8 rounded-2xl">
-          <h2 className="text-xl font-bold text-white mb-6">📝 Historical World Cup Q&A</h2>
-          <div className="space-y-6 text-sm text-slate-300 leading-relaxed">
-            <div>
-              <strong className="text-white block mb-1">Q: Which team won the very first Hockey World Cup in 1971?</strong>
-              <p>
-                A: The inaugural World Cup in 1971 held in Barcelona, Spain, was won by **Pakistan**, who defeated the host country Spain 1–0 in the final.
-              </p>
-            </div>
-            <div>
-              <strong className="text-white block mb-1">Q: Has the host nation ever won the tournament?</strong>
-              <p>
-                A: Yes, host nations have won the World Cup on three occasions: Germany won in Germany (2006), Netherlands won in the Netherlands (1998), and Netherlands also won as hosts in Amstelveen (1973).
-              </p>
-            </div>
+        {/* Interactive FAQ Section */}
+        <section className="my-16">
+          <div className="section-title-wrap">
+            <h2>Frequently Asked Historical Questions</h2>
+            <p>Direct responses regarding past champions, tournament locations, and historical statistics.</p>
           </div>
+          
+          <FaqAccordion items={faqItems} />
 
-          <div className="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500 italic">
+          <div className="mt-8 pt-6 border-t border-slate-800 text-xs text-slate-500 italic max-w-3xl mx-auto text-center">
             "Pakistan's four championships highlight their classical field hockey dominance in the grass-surface era. However, the introduction of modern water-based artificial pitches has seen European powerhouses like Belgium and Germany take over." — <strong>Marc Devos, Senior Belgian Hockey Analyst</strong>
           </div>
         </section>
