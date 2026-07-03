@@ -1122,15 +1122,18 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 2.4rem;
   }
   
-  .header-flex {
-    flex-direction: column;
-    gap: 1.2rem;
+  .logo-text {
+    font-size: 1.05rem;
   }
   
+  .logo-badge {
+    font-size: 0.52rem;
+    padding: 0.1rem 0.35rem;
+    margin-right: 0.1rem;
+  }
+
   .sports-nav {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1.2rem;
+    display: none !important;
   }
 }
 
@@ -1362,5 +1365,36 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   letter-spacing: 0.05em;
 }
+
+/* Make tables fit screen fully on mobile/tablets without horizontal scroll */
+@media (max-width: 1024px) {
+  .table-responsive {
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    overflow-x: visible !important;
+  }
+  
+  .sports-table th {
+    padding: 0.6rem 0.4rem;
+    font-size: 0.72rem;
+  }
+  
+  .sports-table td {
+    padding: 0.5rem 0.4rem;
+    font-size: 0.72rem;
+  }
+  
+  .sports-table img {
+    width: 14px !important;
+    height: 10px !important;
+    margin-right: 4px !important;
+  }
+  
+  .sports-table th, .sports-table td {
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+}
+
 
 
