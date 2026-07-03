@@ -150,6 +150,14 @@ export default function ScheduleClient() {
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
   const [activeTab, setActiveTab] = useState("official");
+  const [printGender, setPrintGender] = useState("Men");
+
+  const handlePrint = (gender) => {
+    setPrintGender(gender);
+    setTimeout(() => {
+      window.print();
+    }, 150);
+  };
 
   // Timezone Converter Logic (PST/Pakistan Time is CET + 3 hours)
   const getConvertedTime = (timeCET, tz) => {
@@ -536,37 +544,49 @@ export default function ScheduleClient() {
         marginBottom: "3rem" 
       }}>
         <span style={{ fontSize: "2rem", display: "block", marginBottom: "0.5rem" }}>📄</span>
-        <h3 className="text-xl font-bold text-white mb-2" style={{ fontStyle: "italic" }}>Save Full Hockey World Cup 2026 Schedule (PDF)</h3>
+        <h3 className="text-xl font-bold text-white mb-2" style={{ fontStyle: "italic" }}>Save Official Hockey World Cup 2026 Schedule (PDF)</h3>
         <p className="text-sm text-slate-300" style={{ maxWidth: "580px", margin: "0 auto 1.5rem auto", lineHeight: "1.6" }}>
-          Need a print-friendly copy of the 2026 match schedule? You can download, print, or save the complete fixture list (with Amstelveen and Wavre stadium codes) directly as a PDF file on your device.
+          Choose your gender category below to download, print, or save a beautifully colored, high-quality A4 PDF schedule of the matches on your device.
         </p>
-        <button 
-          onClick={() => window.print()} 
-          className="view-more-btn"
-          style={{ cursor: "pointer", border: "none", display: "inline-flex" }}
-        >
-          💾 Print & Save PDF Fixtures
-        </button>
+        <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "1.5rem" }}>
+          <button 
+            onClick={() => handlePrint("Men")} 
+            className="view-more-btn"
+            style={{ cursor: "pointer", border: "none", background: "linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%)", boxShadow: "0 4px 15px rgba(14, 165, 233, 0.3)" }}
+          >
+            🚹 Save Men's Schedule (PDF)
+          </button>
+          <button 
+            onClick={() => handlePrint("Women")} 
+            className="view-more-btn"
+            style={{ cursor: "pointer", border: "none", background: "linear-gradient(135deg, #f43f5e 0%, #e11d48 100%)", boxShadow: "0 4px 15px rgba(244, 63, 94, 0.3)" }}
+          >
+            🚺 Save Women's Schedule (PDF)
+          </button>
+        </div>
       </section>
 
       {/* PRINT-ONLY CONTAINER FOR SAVING/PRINTING BEAUTIFUL PDF */}
-      <div className="print-only-schedule">
+      <div className={`print-only-schedule print-mode-${printGender.toLowerCase()}`}>
         <div className="print-header">
-          <h1>FIH Hockey World Cup 2026</h1>
+          <div className="print-header-top">
+            <span className="print-badge-fih">FIH OFFICIAL</span>
+          </div>
+          <h1>{printGender}'s Hockey World Cup 2026</h1>
           <p>Official Tournament Fixtures & Match Schedule</p>
-          <p style={{ fontSize: "0.85rem", marginTop: "8px", opacity: 0.9 }}>
-            Co-Hosted by Belgium & Netherlands | Official Timings in CET (Central European Time)
+          <p style={{ fontSize: "0.85rem", marginTop: "10px", opacity: 0.9 }}>
+            Co-Hosted by Belgium & Netherlands | Times shown in: {selectedTimezone} Time
           </p>
         </div>
 
-        {/* Men's Section */}
-        <div className="print-section-title">Men's Tournament Matches</div>
+        {/* Selected Gender Schedule list */}
+        <div className="print-section-title">{printGender}'s Tournament Fixtures</div>
         <div className="print-grid">
-          {ALL_MATCHES.filter(m => m.gender === "Men").map(match => (
-            <div key={match.id} className="print-match-card">
+          {ALL_MATCHES.filter(m => m.gender === printGender).map(match => (
+            <div key={match.id} className={`print-match-card print-pool-${match.pool.replace(/\s+/g, '-').toLowerCase()}`}>
               <div className="print-match-meta">
                 <span>🗓️ {match.date}</span>
-                <span className="print-match-time">⏱️ {match.timeCET} CET</span>
+                <span className="print-match-time">⏱️ {getConvertedTime(match.timeCET, selectedTimezone)}</span>
               </div>
               <div className="print-match-teams">
                 <div className="print-team">
@@ -581,48 +601,20 @@ export default function ScheduleClient() {
               </div>
               <div className="print-match-footer">
                 <span className="print-venue">🏟️ {match.venue}</span>
-                <span>{match.pool}</span>
-              </div>
-            </div>
-          ))}
-        </div>
-
-        {/* Women's Section */}
-        <div className="print-section-title" style={{ pageBreakBefore: "always" }}>Women's Tournament Matches</div>
-        <div className="print-grid">
-          {ALL_MATCHES.filter(m => m.gender === "Women").map(match => (
-            <div key={match.id} className="print-match-card">
-              <div className="print-match-meta">
-                <span>🗓️ {match.date}</span>
-                <span className="print-match-time">⏱️ {match.timeCET} CET</span>
-              </div>
-              <div className="print-match-teams">
-                <div className="print-team">
-                  <img src={getFlagUrl(match.flagA)} width="20" height="13" alt="" style={{ borderRadius: "2px" }} />
-                  <span>{match.teamA}</span>
-                </div>
-                <span className="print-vs">VS</span>
-                <div className="print-team">
-                  <img src={getFlagUrl(match.flagB)} width="20" height="13" alt="" style={{ borderRadius: "2px" }} />
-                  <span>{match.teamB}</span>
-                </div>
-              </div>
-              <div className="print-match-footer">
-                <span className="print-venue">🏟️ {match.venue}</span>
-                <span>{match.pool}</span>
+                <span>Match #{match.gender === "Women" ? match.id : match.id - 50} ({match.pool})</span>
               </div>
             </div>
           ))}
         </div>
 
         {/* Warm-Up Section */}
-        <div className="print-section-title" style={{ pageBreakBefore: "always" }}>Pre-Tournament Warm-Up Matches</div>
+        <div className="print-section-title" style={{ pageBreakBefore: "always" }}>Pre-Tournament Warm-Up Matches ({printGender})</div>
         <div className="print-grid">
-          {WARMUP_MATCHES.map(match => (
-            <div key={match.id} className="print-match-card">
+          {WARMUP_MATCHES.filter(m => m.gender === printGender).map(match => (
+            <div key={match.id} className={`print-match-card print-pool-warm-up`}>
               <div className="print-match-meta">
                 <span>🗓️ {match.date}</span>
-                <span className="print-match-time">⏱️ {match.timeCET} CET</span>
+                <span className="print-match-time">⏱️ {getConvertedTime(match.timeCET, selectedTimezone)}</span>
               </div>
               <div className="print-match-teams">
                 <div className="print-team">
@@ -637,7 +629,7 @@ export default function ScheduleClient() {
               </div>
               <div className="print-match-footer">
                 <span className="print-venue">🏟️ {match.venue}</span>
-                <span>{match.pool}</span>
+                <span>Warm-Up Match</span>
               </div>
             </div>
           ))}

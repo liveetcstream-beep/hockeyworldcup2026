@@ -75,60 +75,122 @@ export default function LiveScoresPage() {
                 animation: "spin 1s linear infinite",
                 margin: "0 auto 1rem auto"
               }}></div>
-              <p className="text-slate-400 text-sm">Connecting to live scores APIs...</p>
+              <p className="text-slate-400 text-sm">Connecting to live scores...</p>
             </div>
           ) : liveMatches.length === 0 ? (
-            <div className="timezone-card text-center" style={{ padding: "3rem 2rem", margin: "2rem 0" }}>
-              <span style={{ fontSize: "3rem", display: "block", marginBottom: "1rem" }}>🏑</span>
-              <h2 className="text-xl font-bold text-white mb-2">No Live Matches Right Now</h2>
-              <p className="text-slate-400 text-sm max-w-xl mx-auto mb-6" style={{ lineHeight: "1.6" }}>
+            <div className="timezone-card text-center" style={{ padding: "3rem 1.5rem", margin: "2rem auto", maxWidth: "800px" }}>
+              <div style={{ display: "flex", justifyContent: "center", marginBottom: "1rem" }}>
+                <span style={{ fontSize: "3rem" }}>🏑</span>
+              </div>
+              <h2 className="text-2xl font-bold text-white mb-3" style={{ textAlign: "center" }}>No Live Matches Right Now</h2>
+              
+              <p className="text-slate-400 text-sm max-w-xl" style={{ lineHeight: "1.7", margin: "0 auto 2.5rem auto", textAlign: "center", fontSize: "0.9rem" }}>
                 The tournament kicks off on <strong>August 15, 2026</strong>. Real-time scores, tactical statistics, ball possession, card allocations, and play-by-play text commentary will activate 30 minutes before the pushback of the opening day matches.
               </p>
               
-              <h3 className="text-sm font-bold text-sky-400 uppercase tracking-wider mb-4">Opening Day Highlight Fixtures (August 15)</h3>
-              <div style={{ display: "grid", gap: "1rem", maxWidth: "600px", margin: "0 auto" }}>
-                <div className="local-card" style={{ padding: "1rem 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                    <img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
-                    <strong className="text-white">India</strong>
-                    <span className="text-slate-500">vs</span>
-                    <img src="https://flagcdn.com/w40/gb-wls.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
-                    <strong className="text-white">Wales</strong>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", marginTop: "2rem", textAlign: "left" }}>
+                {/* Men's Opening Fixtures Column */}
+                <div>
+                  <h3 className="text-xs font-bold text-sky-400 uppercase tracking-wider mb-4" style={{ borderBottom: "1px solid var(--border-color)", paddingBottom: "0.5rem" }}>
+                    Men's Opening Fixtures (August 15)
+                  </h3>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                        <img src="https://flagcdn.com/w40/in.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">India</span>
+                        <span className="text-slate-500 text-xs">vs</span>
+                        <img src="https://flagcdn.com/w40/gb-wls.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">Wales</span>
+                      </div>
+                      <span className="text-xs text-sky-400" style={{ fontWeight: "700" }}>13:00 PST</span>
+                    </div>
+
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                        <img src="https://flagcdn.com/w40/de.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">Germany</span>
+                        <span className="text-slate-500 text-xs">vs</span>
+                        <img src="https://flagcdn.com/w40/my.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">Malaysia</span>
+                      </div>
+                      <span className="text-xs text-sky-400" style={{ fontWeight: "700" }}>14:30 PST</span>
+                    </div>
+
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                        <img src="https://flagcdn.com/w40/gb-eng.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">England</span>
+                        <span className="text-slate-500 text-xs">vs</span>
+                        <img src="https://flagcdn.com/w40/pk.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">Pakistan</span>
+                      </div>
+                      <span className="text-xs text-sky-400" style={{ fontWeight: "700" }}>19:00 PST</span>
+                    </div>
+
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                        <img src="https://flagcdn.com/w40/be.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">Belgium</span>
+                        <span className="text-slate-500 text-xs">vs</span>
+                        <img src="https://flagcdn.com/w40/fr.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">France</span>
+                      </div>
+                      <span className="text-xs text-sky-400" style={{ fontWeight: "700" }}>21:00 PST</span>
+                    </div>
                   </div>
-                  <span className="text-xs text-slate-400" style={{ fontWeight: "700" }}>11:30 CET</span>
-                </div>
-                
-                <div className="local-card" style={{ padding: "1rem 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                    <img src="https://flagcdn.com/w40/de.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
-                    <strong className="text-white">Germany</strong>
-                    <span className="text-slate-500">vs</span>
-                    <img src="https://flagcdn.com/w40/my.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
-                    <strong className="text-white">Malaysia</strong>
-                  </div>
-                  <span className="text-xs text-slate-400" style={{ fontWeight: "700" }}>13:00 CET</span>
                 </div>
 
-                <div className="local-card" style={{ padding: "1rem 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                    <img src="https://flagcdn.com/w40/nl.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
-                    <strong className="text-white">Netherlands</strong>
-                    <span className="text-slate-500">vs</span>
-                    <img src="https://flagcdn.com/w40/cl.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
-                    <strong className="text-white">Chile</strong>
-                  </div>
-                  <span className="text-xs text-slate-400" style={{ fontWeight: "700" }}>13:00 CET</span>
-                </div>
+                {/* Women's Opening Fixtures Column */}
+                <div>
+                  <h3 className="text-xs font-bold text-rose-400 uppercase tracking-wider mb-4" style={{ borderBottom: "1px solid var(--border-color)", paddingBottom: "0.5rem" }}>
+                    Women's Opening Fixtures (August 15)
+                  </h3>
+                  <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                        <img src="https://flagcdn.com/w40/au.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">Australia</span>
+                        <span className="text-slate-500 text-xs">vs</span>
+                        <img src="https://flagcdn.com/w40/jp.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">Japan</span>
+                      </div>
+                      <span className="text-xs text-rose-400" style={{ fontWeight: "700" }}>10:00 PST</span>
+                    </div>
 
-                <div className="local-card" style={{ padding: "1rem 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                    <img src="https://flagcdn.com/w40/gb-eng.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
-                    <strong className="text-white">England</strong>
-                    <span className="text-slate-500">vs</span>
-                    <img src="https://flagcdn.com/w40/pk.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
-                    <strong className="text-white">Pakistan</strong>
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                        <img src="https://flagcdn.com/w40/de.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">Germany</span>
+                        <span className="text-slate-500 text-xs">vs</span>
+                        <img src="https://flagcdn.com/w40/gb-sct.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">Scotland</span>
+                      </div>
+                      <span className="text-xs text-rose-400" style={{ fontWeight: "700" }}>11:30 PST</span>
+                    </div>
+
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                        <img src="https://flagcdn.com/w40/nl.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">Netherlands</span>
+                        <span className="text-slate-500 text-xs">vs</span>
+                        <img src="https://flagcdn.com/w40/cl.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">Chile</span>
+                      </div>
+                      <span className="text-xs text-rose-400" style={{ fontWeight: "700" }}>16:00 PST</span>
+                    </div>
+
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                        <img src="https://flagcdn.com/w40/ar.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">Argentina</span>
+                        <span className="text-slate-500 text-xs">vs</span>
+                        <img src="https://flagcdn.com/w40/us.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
+                        <span className="text-xs text-white font-bold">USA</span>
+                      </div>
+                      <span className="text-xs text-rose-400" style={{ fontWeight: "700" }}>17:30 PST</span>
+                    </div>
                   </div>
-                  <span className="text-xs text-slate-400" style={{ fontWeight: "700" }}>15:30 CET</span>
                 </div>
               </div>
             </div>

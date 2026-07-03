@@ -1646,8 +1646,8 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   body {
-    background: #020617 !important;
-    color: #f8fafc !important;
+    background: #030712 !important;
+    color: #f3f4f6 !important;
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
     font-family: 'Outfit', sans-serif !important;
@@ -1656,43 +1656,61 @@ h1, h2, h3, h4, h5, h6 {
   .print-only-schedule {
     display: block !important;
     width: 100% !important;
-    padding: 20px !important;
+    padding: 15px !important;
   }
 
   .print-header {
-    background: linear-gradient(135deg, #f43f5e 0%, #0ea5e9 100%) !important;
-    padding: 30px !important;
-    border-radius: 16px !important;
+    background: linear-gradient(135deg, #ff6b00 0%, #ff0055 50%, #00bfff 100%) !important;
+    padding: 35px 20px !important;
+    border-radius: 20px !important;
     text-align: center !important;
-    margin-bottom: 30px !important;
+    margin-bottom: 25px !important;
     color: #ffffff !important;
-    box-shadow: 0 4px 15px rgba(244, 63, 94, 0.2) !important;
+    box-shadow: 0 10px 30px rgba(255, 107, 0, 0.25) !important;
+    border-bottom: 6px double rgba(255, 255, 255, 0.4) !important;
+    position: relative !important;
+  }
+
+  .print-badge-fih {
+    background: #ffffff !important;
+    color: #ff0055 !important;
+    padding: 6px 16px !important;
+    border-radius: 9999px !important;
+    font-size: 0.75rem !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    display: inline-block !important;
+    margin-bottom: 12px !important;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15) !important;
   }
 
   .print-header h1 {
-    font-size: 2.4rem !important;
+    font-size: 2.2rem !important;
     font-weight: 900 !important;
-    margin: 0 0 8px 0 !important;
+    margin: 0 0 6px 0 !important;
     text-transform: uppercase !important;
-    letter-spacing: 0.05em !important;
+    letter-spacing: 0.04em !important;
     color: #ffffff !important;
     font-style: italic !important;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3) !important;
   }
 
   .print-header p {
-    font-size: 1rem !important;
+    font-size: 0.95rem !important;
     margin: 0 !important;
     color: #ffffff !important;
     opacity: 0.95 !important;
+    font-weight: 500 !important;
   }
 
   .print-section-title {
-    font-size: 1.5rem !important;
-    font-weight: 800 !important;
-    color: #0ea5e9 !important;
-    border-left: 5px solid #f43f5e !important;
-    padding-left: 15px !important;
-    margin: 35px 0 20px 0 !important;
+    font-size: 1.35rem !important;
+    font-weight: 900 !important;
+    color: #00bfff !important;
+    border-left: 5px solid #ff6b00 !important;
+    padding-left: 12px !important;
+    margin: 30px 0 15px 0 !important;
     text-transform: uppercase !important;
     font-style: italic !important;
     page-break-after: avoid !important;
@@ -1701,48 +1719,56 @@ h1, h2, h3, h4, h5, h6 {
   .print-grid {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important;
-    gap: 15px !important;
+    gap: 12px !important;
   }
 
   .print-match-card {
     background: #0f172a !important;
-    border: 1px solid #334155 !important;
+    border: 1px solid #1e293b !important;
     border-radius: 12px !important;
-    padding: 18px !important;
+    padding: 14px 16px !important;
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
     page-break-inside: avoid !important;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12) !important;
   }
+
+  /* Dynamic Pool Border Accents */
+  .print-pool-pool-a { border-left: 5px solid #ff7a00 !important; }
+  .print-pool-pool-b { border-left: 5px solid #00f0ff !important; }
+  .print-pool-pool-c { border-left: 5px solid #39ff14 !important; }
+  .print-pool-pool-d { border-left: 5px solid #bc13fe !important; }
+  .print-pool-knockouts { border-left: 5px solid #ff007f !important; }
+  .print-pool-warm-up { border-left: 5px solid #94a3b8 !important; }
 
   .print-match-meta {
     display: flex !important;
     justify-content: space-between !important;
-    font-size: 0.8rem !important;
+    font-size: 0.75rem !important;
     color: #94a3b8 !important;
-    border-bottom: 1px dashed #334155 !important;
-    padding-bottom: 10px !important;
-    margin-bottom: 12px !important;
+    border-bottom: 1px dotted #334155 !important;
+    padding-bottom: 6px !important;
+    margin-bottom: 8px !important;
   }
 
   .print-match-time {
-    color: #38bdf8 !important;
-    font-weight: 700 !important;
+    color: #00bfff !important;
+    font-weight: 800 !important;
   }
 
   .print-match-teams {
     display: flex !important;
     align-items: center !important;
     justify-content: space-between !important;
-    margin: 12px 0 !important;
+    margin: 8px 0 !important;
   }
 
   .print-team {
     display: flex !important;
     align-items: center !important;
-    gap: 8px !important;
-    font-size: 0.95rem !important;
+    gap: 6px !important;
+    font-size: 0.85rem !important;
     font-weight: 700 !important;
     color: #ffffff !important;
   }
@@ -1752,21 +1778,21 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .print-vs {
-    font-size: 0.75rem !important;
+    font-size: 0.7rem !important;
     font-weight: 900 !important;
-    color: #f43f5e !important;
-    background: rgba(244, 63, 94, 0.1) !important;
-    padding: 3px 8px !important;
-    border-radius: 6px !important;
+    color: #ff0055 !important;
+    background: rgba(255, 0, 85, 0.1) !important;
+    padding: 2px 6px !important;
+    border-radius: 4px !important;
   }
 
   .print-match-footer {
     display: flex !important;
     justify-content: space-between !important;
-    font-size: 0.75rem !important;
-    color: #38bdf8 !important;
+    font-size: 0.7rem !important;
+    color: #00bfff !important;
     font-weight: 600 !important;
-    margin-top: 10px !important;
+    margin-top: 6px !important;
   }
 
   .print-venue {
