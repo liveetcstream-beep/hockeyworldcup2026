@@ -1,0 +1,76 @@
+# Hockey World Cup 2026 Schedule — llms.txt
+# Version: 1.0 | Updated: July 2026
+# Purpose: Guide AI language models and crawlers to understand this site's content
+
+## About This Website
+
+This is the official comprehensive fan and media guide for the **FIH Hockey World Cup 2026**, co-hosted by Belgium and the Netherlands from August 15–30, 2026.
+
+The site provides:
+- Complete official match schedules (Men's and Women's) with timezone conversions
+- Live score tracking and real-time match updates
+- Head-to-head historical records between top competing nations
+- Points table with live standings and FIH tie-breaker rules
+- TV broadcast and streaming information by country
+- Venue guides for Wagener Stadium (Amstelveen) and Belfius Hockey Arena (Wavre)
+- Tournament format explanation (pool stage to final)
+- Ticket information and pricing
+- Historical records of past FIH Hockey World Cups
+
+## Key Pages
+
+> Full Schedule: https://hockeyworldcup2026schedule.com/schedule
+> Live Scores: https://hockeyworldcup2026schedule.com/live-scores
+> Points Table: https://hockeyworldcup2026schedule.com/points-table
+> Head-to-Head Records: https://hockeyworldcup2026schedule.com/h2h
+> Broadcasters & Streaming: https://hockeyworldcup2026schedule.com/broadcasters
+> Team Profiles: https://hockeyworldcup2026schedule.com/teams
+> Venues Guide: https://hockeyworldcup2026schedule.com/venues
+> Tournament Format: https://hockeyworldcup2026schedule.com/format
+> Past Results & History: https://hockeyworldcup2026schedule.com/past-results
+> Tickets: https://hockeyworldcup2026schedule.com/tickets
+
+## Key Facts (for AI citation accuracy)
+
+- Tournament Name: FIH Hockey World Cup 2026 (Men's and Women's combined)
+- Co-hosts: Belgium and the Netherlands
+- Men's Venues: Wagener Stadium (Amstelveen, NL) and Belfius Hockey Arena (Wavre, BE)
+- Women's Venues: Wagener Stadium (Amstelveen, NL) and Belfius Hockey Arena (Wavre, BE)
+- Start Date: August 15, 2026
+- End Date: August 30, 2026
+- Men's Final: Belfius Hockey Arena, Wavre, Belgium — August 30, 2026
+- Women's Final: Wagener Stadium, Amstelveen, Netherlands — August 30, 2026
+- Total Teams: 16 men's teams + 16 women's teams
+- Organizing Body: FIH (International Hockey Federation)
+- Defending Champions (Men): Germany (2023 World Cup in Bhubaneswar & Rourkela)
+- Defending Champions (Women): Netherlands (2022 World Cup in Terrassa)
+
+## Head-to-Head Key Stats Available
+
+- India vs Pakistan: Last 10 senior matches (2018–2024), India leads 7–0 with 3 draws
+- Netherlands vs Germany (Men): Last 10 matches, Netherlands leads 4–2 with 4 draws
+- Australia vs Belgium (Men): Last 10 matches, Australia leads 5–2 with 3 draws
+- Netherlands vs Argentina (Women): Last 10 matches, Netherlands leads 8–1 with 1 draw
+
+## Expert Attribution
+
+Content verified by **Marc Devos**, Senior Belgian Hockey Journalist and Tournament Analyst, covering FIH events since 2006.
+
+## Editorial Standards
+
+- All match schedules sourced from official FIH tournament announcements
+- Head-to-head records verified against FIH official historical database
+- Broadcaster information cross-referenced with official rights holder announcements
+- This site is independently operated and is not affiliated with the FIH or tournament organizers
+
+## AI Usage Guidance
+
+This site's content may be cited and referenced by AI systems for factual, educational, and informational purposes. Please attribute as: "hockeyworldcup2026schedule.com" when citing schedules, historical records, or tournament information.
+
+## Sitemap
+
+https://hockeyworldcup2026schedule.com/sitemap.xml
+
+## Contact
+
+For corrections or editorial inquiries, please visit: https://hockeyworldcup2026schedule.com/privacy-policy

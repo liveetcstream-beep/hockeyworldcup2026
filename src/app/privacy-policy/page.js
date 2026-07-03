@@ -5,6 +5,7 @@ import Footer from "../components/Footer";
 export const metadata = {
   title: "Privacy Policy - Hockey World Cup 2026",
   description: "Read our privacy policy to understand how we collect, use, and protect your information on our independent Hockey World Cup 2026 portal.",
+  robots: { index: false, follow: false },
 };
 
 export default function PrivacyPolicyPage() {
