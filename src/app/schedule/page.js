@@ -5,27 +5,27 @@ import ScheduleClient from "./ScheduleClient";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
-  title: "FIH Hockey World Cup 2026 Full Match Schedule & Fixture Dates",
-  description: "Check the complete 44-match schedule for the 2026 FIH Hockey World Cup. Filter by team, gender, or venue and convert match timings to your local timezone.",
+  title: "FIH Hockey World Cup 2026 Schedule, PDF & Match Timings",
+  description: "Official 44-match schedule for the 2026 FIH Hockey World Cup in Netherlands & Belgium. Download PDF fixture list, check USA match timings, and convert to IST/PST.",
 };
 
 export default function SchedulePage() {
   const faqItems = [
     {
-      question: "How many total matches will be played in the Hockey World Cup 2026?",
-      answer: "A total of 44 matches will be played across both the Men's and Women's tournaments combined. This includes 24 pool stage matches, 8 crossovers, 8 quarterfinals, 2 semifinals, and 2 classification/final matches."
+      question: "When does the FIH Hockey World Cup 2026 start and end?",
+      answer: "The tournament officially begins on Saturday, August 15, 2026, and concludes with the Men's Grand Final on Sunday, August 30, 2026. Pool stage matches run from August 15 to August 24, followed by knockouts."
     },
     {
-      question: "Which stadiums are hosting the matches?",
-      answer: "Matches are co-hosted at two historic venues: the Wagener Stadium in Amstelveen (Netherlands), which holds 9,000 spectators, and the newly renovated Belfius Hockey Arena in Wavre (Belgium), with a capacity of 10,000."
+      question: "Where can I download the Hockey World Cup 2026 schedule PDF?",
+      answer: "You can download a print-friendly version of the complete 44-match fixture list as a PDF directly from our website. Just use the 'Print & Save PDF Fixtures' button inside our interactive schedule tool above."
     },
     {
-      question: "How do teams qualify from the group stage?",
-      answer: "The top team in each pool advances directly to the quarterfinals. The 2nd and 3rd placed teams enter crossover matches (single elimination) to secure the remaining four quarterfinal spots. The 4th placed teams play classification matches for world rankings."
+      question: "What is the USA (USWNT) match schedule and kick-off times?",
+      answer: "The United States Women's National Team (USWNT) begins in Pool C. Key highlights include: Argentina vs USA on August 15 at 12:30 PM ET, USA vs Scotland on August 17 at 6:00 AM ET, and USA vs Germany on August 19 at 9:00 AM ET."
     },
     {
-      question: "Will match timings be updated for different timezones?",
-      answer: "Yes, our interactive schedule tool allows you to convert all official CET start times into IST (India), PST (Pakistan), or EDT (US Eastern Time) at the click of a button."
+      question: "How can I purchase official tickets for the 2026 matches?",
+      answer: "Official tickets are managed via the unified tournament booking portal at tickets.hockeyworldcup2026.com. Avoid third-party scalpers or unauthorized resale platforms to ensure valid entry at Wagener Stadium and Belfius Hockey Arena."
     }
   ];
 
@@ -36,12 +36,12 @@ export default function SchedulePage() {
       {/* HERO SECTION */}
       <section className="hero-section">
         <div className="sports-container hero-content">
-          <p className="hero-subtitle">Official FIH Match Fixtures & Timings</p>
+          <p className="hero-subtitle">Official FIH Tournament Bracket & Fixtures</p>
           <h1 className="hero-title">
-            FIH Hockey World Cup 2026 Full Match Schedule
+            FIH Hockey World Cup 2026 Schedule & Match Timings
           </h1>
           <p className="hero-description">
-            Access the complete, verified list of all 44 matches for the Men's and Women's tournaments. Use our interactive filters to track your favorite teams, view venue details, and convert match schedules to your local timezone in real-time.
+            Get the complete, verified 44-match tournament schedule for the Men's and Women's FIH Hockey World Cups in Belgium & Netherlands. Filter by team, track USA time zones (EDT/ET), view group stages, and download the print-friendly PDF guide.
           </p>
 
           <div className="eeat-badge-container">
@@ -80,6 +80,44 @@ export default function SchedulePage() {
       <main className="sports-container py-12">
         {/* Client Schedule Filter & Pagination Section */}
         <ScheduleClient />
+
+        {/* Dynamic Key Dates & Silo Block */}
+        <section className="my-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="local-card" style={{ padding: "2rem" }}>
+              <div className="local-icon">📅</div>
+              <h3 className="text-white mt-4 mb-2">Key Dates & Stages</h3>
+              <ul className="pool-list" style={{ marginTop: "1rem" }}>
+                <li style={{ padding: "0.5rem 0", borderBottom: "1px solid rgba(255,255,255,0.03)", color: "var(--text-muted)" }}>
+                  <strong className="text-white">Pool Matches:</strong> August 15 – August 24, 2026
+                </li>
+                <li style={{ padding: "0.5rem 0", borderBottom: "1px solid rgba(255,255,255,0.03)", color: "var(--text-muted)" }}>
+                  <strong className="text-white">Crossover Rounds:</strong> August 21 – August 25, 2026
+                </li>
+                <li style={{ padding: "0.5rem 0", borderBottom: "1px solid rgba(255,255,255,0.03)", color: "var(--text-muted)" }}>
+                  <strong className="text-white">Quarterfinals:</strong> August 23 – August 28, 2026
+                </li>
+                <li style={{ padding: "0.5rem 0", borderBottom: "1px solid rgba(255,255,255,0.03)", color: "var(--text-muted)" }}>
+                  <strong className="text-white">Semifinals:</strong> Aug 27 (Women) & Aug 28 (Men)
+                </li>
+                <li style={{ padding: "0.5rem 0", color: "var(--text-muted)" }}>
+                  <strong className="text-white">Grand Finals:</strong> Aug 29 (Women, NED) & Aug 30 (Men, BEL)
+                </li>
+              </ul>
+            </div>
+
+            <div className="local-card" style={{ padding: "2rem" }}>
+              <div className="local-icon">🇺🇸</div>
+              <h3 className="text-white mt-4 mb-2">USA Broadcast & ET Schedule</h3>
+              <p className="text-sm text-slate-400" style={{ marginTop: "1rem", lineHeight: "1.6" }}>
+                For fans in the United States tracking the USWNT (United States Women's National Team), match schedules are broadcasted live on Fox Sports channels and streamed online via Watch.Hockey.
+              </p>
+              <p className="text-sm text-slate-400" style={{ marginTop: "0.5rem", lineHeight: "1.6" }}>
+                To make viewing easy, we have pre-configured match times in ET (US Eastern Time) inside our interactive timezone selector. Select <strong>US Eastern Time (EDT)</strong> above to automatically convert CET times.
+              </p>
+            </div>
+          </div>
+        </section>
 
         {/* Informational Rich Content Section */}
         <section className="guidelines-card">

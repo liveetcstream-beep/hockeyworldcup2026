@@ -30,7 +30,7 @@ export default function Header() {
                   <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
                 </span>
                 <ul className="dropdown-menu">
-                  <li><a href="/#schedule">Opening Day Fixtures</a></li>
+                  <li><a href="/schedule">Full Match Schedule & Timings</a></li>
                   <li><a href="/format">Tournament Crossover Rules</a></li>
                   <li><a href="/points-table">Points Table Standing Rules</a></li>
                   <li><a href="/teams#pools">Group Stage Pools</a></li>
@@ -123,7 +123,7 @@ export default function Header() {
         </div>
         <ul className="mobile-nav-links">
           <li><a href="/" onClick={() => setIsMobileOpen(false)}>Home</a></li>
-          <li><a href="/#schedule" onClick={() => setIsMobileOpen(false)}>Opening Fixtures</a></li>
+          <li><a href="/schedule" onClick={() => setIsMobileOpen(false)}>Full Match Schedule & Timings</a></li>
           <li><a href="/format" onClick={() => setIsMobileOpen(false)}>Tournament Format / Crossover</a></li>
           <li><a href="/points-table" onClick={() => setIsMobileOpen(false)}>Points Table Rules</a></li>
           <li><a href="/teams" onClick={() => setIsMobileOpen(false)}>Qualified Nations</a></li>

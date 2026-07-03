@@ -13,6 +13,7 @@ export default function Footer() {
             <h4 className="text-white font-bold">Quick Links</h4>
             <ul className="footer-links">
               <li><a href="/">Home</a></li>
+              <li><a href="/schedule">Match Schedule & Timings</a></li>
               <li><a href="/format">Tournament Format</a></li>
               <li><a href="/points-table">Points Table Rules</a></li>
               <li><a href="/tickets">Tickets & Pricing</a></li>
