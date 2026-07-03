@@ -5,7 +5,7 @@ import ScheduleClient from "./ScheduleClient";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
-  title: "FIH Hockey World Cup 2026 Schedule, PDF & Match Timings",
+  title: "Match Schedule, PDF & Timings",
   description: "Official 100-match schedule for the 2026 FIH Hockey World Cup in Netherlands & Belgium. Download PDF fixture list, check USA match timings, and convert to IST/PST.",
 };
 

@@ -5,7 +5,7 @@ import ScheduleAndConverter from "./components/ScheduleAndConverter";
 import FaqAccordion from "./components/FaqAccordion";
 
 export const metadata = {
-  title: "FIH Hockey World Cup 2026 Schedule & Streaming Guide",
+  title: { absolute: "FIH Hockey World Cup 2026: Schedule, Teams & Live Updates" },
   description: "Get the complete, verified match schedule, timezone conversions, and live streaming options for the FIH Hockey World Cup 2026.",
 };
 
