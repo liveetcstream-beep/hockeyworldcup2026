@@ -1375,12 +1375,12 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .sports-table th {
-    padding: 0.6rem 0.4rem;
+    padding: 0.5rem 0.3rem;
     font-size: 0.72rem;
   }
   
   .sports-table td {
-    padding: 0.5rem 0.4rem;
+    padding: 0.5rem 0.3rem;
     font-size: 0.72rem;
   }
   
@@ -1388,11 +1388,58 @@ h1, h2, h3, h4, h5, h6 {
     width: 14px !important;
     height: 10px !important;
     margin-right: 4px !important;
+    display: inline-block;
+    vertical-align: middle;
   }
   
   .sports-table th, .sports-table td {
     white-space: normal !important;
-    word-break: break-word !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* Don't break columns like Year and Score */
+  .sports-table th:first-child, .sports-table td:first-child {
+    white-space: nowrap !important;
+  }
+  .sports-table th:nth-child(4), .sports-table td:nth-child(4) {
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .sports-table th {
+    padding: 0.4rem 0.25rem;
+    font-size: 0.65rem;
+  }
+  
+  .sports-table td {
+    padding: 0.4rem 0.25rem;
+    font-size: 0.65rem;
+  }
+}
+
+/* Timezone Select Box mobile overflow fix */
+@media (max-width: 768px) {
+  .timezone-card {
+    padding: 1.2rem;
+  }
+  
+  .timezone-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+  
+  .timezone-select-wrapper {
+    width: 100%;
+  }
+  
+  .timezone-select {
+    width: 100%;
+    max-width: 100%;
+    font-size: 0.8rem;
+    padding: 0.5rem 1.8rem 0.5rem 0.8rem;
   }
 }
 
