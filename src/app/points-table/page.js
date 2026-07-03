@@ -272,37 +272,92 @@ export default function PointsTablePage() {
           </div>
         </section>
 
-        {/* Tie-Breaker Priority Rules List (Fully styled for Light Mode) */}
-        <section className="my-16 p-8 rounded-2xl" style={{
+        {/* Tie-Breaker Priority Rules List */}
+        <section className="my-16" style={{
           background: "linear-gradient(135deg, rgba(192, 0, 48, 0.03) 0%, #ffffff 100%)",
           border: "1px solid rgba(15, 23, 42, 0.08)",
+          borderRadius: "20px",
+          padding: "2.5rem",
           boxShadow: "0 8px 30px rgba(15, 23, 42, 0.03)"
         }}>
-          <h2 className="text-xl font-bold mb-6 border-l-4 border-rose-600 pl-4 italic" style={{ color: "var(--text-main)" }}>Official FIH Group stage Tie-Breaker Rules</h2>
-          <p className="text-sm mb-6 leading-relaxed" style={{ color: "var(--text-muted)" }}>
-            If two or more teams finish the pool matches with equal points, their final standings position is determined by the following priority rules:
+          {/* Section Header */}
+          <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "0.75rem" }}>
+            <span style={{ fontSize: "1.3rem" }}>⚖️</span>
+            <h2 style={{ fontSize: "1.15rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", margin: 0 }}>
+              Official FIH Group Stage Tie-Breaker Rules
+            </h2>
+          </div>
+          <p style={{ fontSize: "0.82rem", color: "var(--text-muted)", lineHeight: "1.6", marginBottom: "1.8rem", maxWidth: "680px" }}>
+            If two or more teams finish pool matches with equal points, their final standings are determined by the following priority rules (applied in order):
           </p>
-          <div className="space-y-4 text-sm" style={{ color: "var(--text-muted)" }}>
-            <div className="border-b border-slate-100 pb-3">
-              <strong style={{ color: "var(--text-main)", display: "block", marginBottom: "0.2rem" }}>1. Total Matches Won</strong>
-              The team with the higher number of wins in the pool is ranked higher.
-            </div>
-            <div className="border-b border-slate-100 pb-3">
-              <strong style={{ color: "var(--text-main)", display: "block", marginBottom: "0.2rem" }}>2. Goal Difference (GD)</strong>
-              Calculated as total goals scored minus total goals conceded. The team with the higher positive difference is ranked higher.
-            </div>
-            <div className="border-b border-slate-100 pb-3">
-              <strong style={{ color: "var(--text-main)", display: "block", marginBottom: "0.2rem" }}>3. Goals For (GF)</strong>
-              The team that has scored the highest total number of goals in all pool matches is ranked higher.
-            </div>
-            <div className="border-b border-slate-100 pb-3">
-              <strong style={{ color: "var(--text-main)", display: "block", marginBottom: "0.2rem" }}>4. Head-to-Head Match Result</strong>
-              The result of the match played between the tied teams determines who ranks higher.
-            </div>
-            <div>
-              <strong style={{ color: "var(--text-main)", display: "block", marginBottom: "0.2rem" }}>5. Shootout (If still tied)</strong>
-              If all the above parameters remain equal and the teams are still tied, a series of penalty shoot-outs will be scheduled to determine qualification.
-            </div>
+
+          {/* Rules Grid */}
+          <div style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+            gap: "1rem"
+          }}>
+            {[
+              { num: "01", icon: "🏆", title: "Total Matches Won", desc: "The team with the higher number of wins in the pool is ranked higher." },
+              { num: "02", icon: "⚽", title: "Goal Difference (GD)", desc: "Goals scored minus goals conceded. Higher positive difference ranks higher." },
+              { num: "03", icon: "🎯", title: "Goals For (GF)", desc: "The team that has scored the highest total goals in all pool matches ranks higher." },
+              { num: "04", icon: "🤝", title: "Head-to-Head Result", desc: "The result of the direct match played between the tied teams decides ranking." },
+              { num: "05", icon: "🥅", title: "Penalty Shootout", desc: "If all above parameters are equal, a penalty shoot-out series determines qualification." },
+            ].map((rule) => (
+              <div key={rule.num} style={{
+                background: "#ffffff",
+                border: "1px solid rgba(15, 23, 42, 0.07)",
+                borderRadius: "12px",
+                padding: "1.1rem 1.25rem",
+                display: "flex",
+                gap: "0.9rem",
+                alignItems: "flex-start",
+                transition: "box-shadow 0.2s ease, border-color 0.2s ease",
+                boxShadow: "0 2px 8px rgba(15, 23, 42, 0.03)"
+              }}>
+                {/* Number Badge */}
+                <div style={{
+                  minWidth: "32px",
+                  height: "32px",
+                  background: "linear-gradient(135deg, var(--primary) 0%, #e11d48 100%)",
+                  borderRadius: "8px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "0.65rem",
+                  fontWeight: "900",
+                  color: "#fff",
+                  letterSpacing: "0.03em"
+                }}>
+                  {rule.num}
+                </div>
+                {/* Content */}
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.4rem", marginBottom: "0.3rem" }}>
+                    <span style={{ fontSize: "0.85rem" }}>{rule.icon}</span>
+                    <strong style={{ fontSize: "0.82rem", fontWeight: "700", color: "var(--text-main)" }}>{rule.title}</strong>
+                  </div>
+                  <p style={{ fontSize: "0.77rem", color: "var(--text-muted)", lineHeight: "1.55", margin: 0 }}>{rule.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Priority Note */}
+          <div style={{
+            marginTop: "1.4rem",
+            padding: "0.75rem 1rem",
+            background: "rgba(192, 0, 48, 0.04)",
+            border: "1px solid rgba(192, 0, 48, 0.1)",
+            borderRadius: "10px",
+            fontSize: "0.78rem",
+            color: "var(--text-muted)",
+            display: "flex",
+            alignItems: "center",
+            gap: "0.5rem"
+          }}>
+            <span>ℹ️</span>
+            <span>Rules are applied sequentially — Rule 2 is only used if Rule 1 cannot separate the teams, and so on.</span>
           </div>
         </section>
 
