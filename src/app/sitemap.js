@@ -18,6 +18,10 @@ export default function sitemap() {
     { route: "/format",      priority: 0.75, freq: "monthly" },
     { route: "/history",     priority: 0.75, freq: "monthly" },
     { route: "/tickets",     priority: 0.7,  freq: "weekly" },
+    // Tier 3B — High-traffic team/group pages (traffic multipliers)
+    { route: "/india-hockey-world-cup-2026",    priority: 0.9, freq: "daily" },
+    { route: "/pakistan-hockey-world-cup-2026", priority: 0.9, freq: "daily" },
+    { route: "/hockey-world-cup-2026-groups",   priority: 0.9, freq: "daily" },
     // Tier 4 — Utility pages (low priority)
     { route: "/privacy-policy", priority: 0.3, freq: "yearly" },
     { route: "/terms-of-use",   priority: 0.3, freq: "yearly" },
