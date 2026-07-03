@@ -112,12 +112,12 @@ export default function LiveScoresPage() {
         </section>
 
         {/* Additional Rich SEO Context (E-E-A-T & AEO) */}
-        <section className="my-16 bg-slate-900 border border-slate-800 p-8 rounded-2xl text-sm text-slate-300 leading-relaxed">
-          <h2 className="text-xl font-bold text-white mb-4 border-l-4 border-sky-400 pl-4">Live Score Centre Editorial Standards</h2>
-          <p className="mb-4">
-            During the 2026 Men's and Women's tournament, this page will host 44 individual match centres. Each match centre automatically updates with official lineups, starting eleven, team captain selections, and match official identities 60 minutes before the scheduled pushback.
+        <section className="guidelines-card">
+          <h2>Live Score Centre Editorial Standards</h2>
+          <p>
+            During the 2026 Men's and Women's tournament, this page will host 69 individual match centres. Each match centre automatically updates with official lineups, starting eleven, team captain selections, and match official identities 60 minutes before the scheduled pushback.
           </p>
-          <p className="mb-4">
+          <p>
             We follow strict editorial criteria to verify player goal scorers. Credit for penalty corner deflections and field goals is matched against the referee's official final match report before permanent database storage. If a goal credit is corrected post-match by the FIH technical committee, our records update immediately.
           </p>
           <div className="expert-quote-box">

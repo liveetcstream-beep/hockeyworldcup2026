@@ -6,7 +6,7 @@ import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "FIH Hockey World Cup 2026 Schedule, PDF & Match Timings",
-  description: "Official 44-match schedule for the 2026 FIH Hockey World Cup in Netherlands & Belgium. Download PDF fixture list, check USA match timings, and convert to IST/PST.",
+  description: "Official 69-match schedule for the 2026 FIH Hockey World Cup in Netherlands & Belgium. Download PDF fixture list, check USA match timings, and convert to IST/PST.",
 };
 
 export default function SchedulePage() {
@@ -17,7 +17,7 @@ export default function SchedulePage() {
     },
     {
       question: "Where can I download the Hockey World Cup 2026 schedule PDF?",
-      answer: "You can download a print-friendly version of the complete 44-match fixture list as a PDF directly from our website. Just use the 'Print & Save PDF Fixtures' button inside our interactive schedule tool above."
+      answer: "You can download a print-friendly version of the complete 69-match fixture list as a PDF directly from our website. Just use the 'Print & Save PDF Fixtures' button inside our interactive schedule tool above."
     },
     {
       question: "What is the USA (USWNT) match schedule and kick-off times?",
@@ -41,7 +41,7 @@ export default function SchedulePage() {
             FIH Hockey World Cup 2026 Schedule & Match Timings
           </h1>
           <p className="hero-description">
-            Get the complete, verified 44-match tournament schedule for the Men's and Women's FIH Hockey World Cups in Belgium & Netherlands. Filter by team, track USA time zones (EDT/ET), view group stages, and download the print-friendly PDF guide.
+            Get the complete, verified 69-match tournament schedule for the Men's and Women's FIH Hockey World Cups in Belgium & Netherlands. Filter by team, track USA time zones (EDT/ET), view group stages, and download the print-friendly PDF guide.
           </p>
 
           <div className="eeat-badge-container">
@@ -52,7 +52,7 @@ export default function SchedulePage() {
               ✍️ Expert Verified by: <strong>Marc Devos (Senior Belgian Hockey Journalist)</strong>
             </div>
             <div className="eeat-badge">
-              ⚡ Status: <strong>All 44 Fixtures Confirmed</strong>
+              ⚡ Status: <strong>All 69 Fixtures Confirmed</strong>
             </div>
           </div>
         </div>
