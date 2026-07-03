@@ -3,105 +3,68 @@
 import React, { useState, useMemo } from "react";
 
 const ALL_MATCHES = [
-  // ==================== AUGUST 15, 2026 (Day 1) ====================
-  { id: 1, date: "August 15, 2026", timeCET: "11:30", teamA: "India", flagA: "in", teamB: "Wales", flagB: "gb-wls", gender: "Men", pool: "Pool D", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 2, date: "August 15, 2026", timeCET: "13:00", teamA: "Germany", flagA: "de", teamB: "Malaysia", flagB: "my", gender: "Men", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 3, date: "August 15, 2026", timeCET: "13:00", teamA: "Netherlands", flagA: "nl", teamB: "Chile", flagB: "cl", gender: "Women", pool: "Pool A", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 4, date: "August 15, 2026", timeCET: "15:30", teamA: "England", flagA: "gb-eng", teamB: "Pakistan", flagB: "pk", gender: "Men", pool: "Pool D", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 5, date: "August 15, 2026", timeCET: "15:30", teamA: "Argentina", flagA: "ar", teamB: "England", flagB: "gb-eng", gender: "Women", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 6, date: "August 15, 2026", timeCET: "18:00", teamA: "Belgium", flagA: "be", teamB: "France", flagB: "fr", gender: "Men", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 7, date: "August 15, 2026", timeCET: "18:00", teamA: "Belgium", flagA: "be", teamB: "China", flagB: "cn", gender: "Women", pool: "Pool A", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 8, date: "August 15, 2026", timeCET: "20:30", teamA: "Germany", flagA: "de", teamB: "Japan", flagB: "jp", gender: "Women", pool: "Pool B", venue: "Wagener Stadium, Amstelveen (NL)" },
+  // ==================== WOMEN'S TOURNAMENT FIXTURES ====================
+  { id: 1, date: "August 15, 2026", timeCET: "07:00", teamA: "Australia", flagA: "au", teamB: "Japan", flagB: "jp", gender: "Women", pool: "Pool A", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 2, date: "August 15, 2026", timeCET: "08:30", teamA: "Germany", flagA: "de", teamB: "Scotland", flagB: "gb-sct", gender: "Women", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 3, date: "August 15, 2026", timeCET: "13:00", teamA: "Netherlands", flagA: "nl", teamB: "Chile", flagB: "cl", gender: "Women", pool: "Pool A", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 4, date: "August 15, 2026", timeCET: "14:30", teamA: "Argentina", flagA: "ar", teamB: "United States", flagB: "us", gender: "Women", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BEL)" },
 
-  // ==================== AUGUST 16, 2026 (Day 2) ====================
-  { id: 9, date: "August 16, 2026", timeCET: "11:30", teamA: "Australia", flagA: "au", teamB: "Ireland", flagB: "ie", gender: "Men", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 10, date: "August 16, 2026", timeCET: "13:00", teamA: "Netherlands", flagA: "nl", teamB: "New Zealand", flagB: "nz", gender: "Men", pool: "Pool A", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 11, date: "August 16, 2026", timeCET: "13:00", teamA: "United States", flagA: "us", teamB: "Spain", flagB: "es", gender: "Women", pool: "Pool C", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 12, date: "August 16, 2026", timeCET: "15:30", teamA: "Spain", flagA: "es", teamB: "South Africa", flagB: "za", gender: "Men", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 13, date: "August 16, 2026", timeCET: "15:30", teamA: "New Zealand", flagA: "nz", teamB: "Ireland", flagB: "ie", gender: "Women", pool: "Pool D", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 14, date: "August 16, 2026", timeCET: "18:00", teamA: "Argentina", flagA: "ar", teamB: "Japan", flagB: "jp", gender: "Men", pool: "Pool A", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 15, date: "August 16, 2026", timeCET: "18:00", teamA: "Australia", flagA: "au", teamB: "South Africa", flagB: "za", gender: "Women", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 16, date: "August 16, 2026", timeCET: "20:30", teamA: "South Korea", flagA: "kr", teamB: "Scotland", flagB: "gb-sct", gender: "Women", pool: "Pool D", venue: "Belfius Hockey Arena, Wavre (BE)" },
+  { id: 5, date: "August 16, 2026", timeCET: "07:00", teamA: "England", flagA: "gb-eng", teamB: "South Africa", flagB: "za", gender: "Women", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 6, date: "August 16, 2026", timeCET: "10:00", teamA: "China", flagA: "cn", teamB: "India", flagB: "in", gender: "Women", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 7, date: "August 16, 2026", timeCET: "14:30", teamA: "Belgium", flagA: "be", teamB: "New Zealand", flagB: "nz", gender: "Women", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 8, date: "August 16, 2026", timeCET: "17:30", teamA: "Spain", flagA: "es", teamB: "Ireland", flagB: "ie", gender: "Women", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BEL)" },
 
-  // ==================== AUGUST 17, 2026 (Day 3) ====================
-  { id: 17, date: "August 17, 2026", timeCET: "11:30", teamA: "France", flagA: "fr", teamB: "Malaysia", flagB: "my", gender: "Men", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 18, date: "August 17, 2026", timeCET: "13:00", teamA: "Germany", flagA: "de", teamB: "Belgium", flagB: "be", gender: "Men", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 19, date: "August 17, 2026", timeCET: "13:00", teamA: "China", flagA: "cn", teamB: "Chile", flagB: "cl", gender: "Women", pool: "Pool A", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 20, date: "August 17, 2026", timeCET: "15:30", teamA: "Pakistan", flagA: "pk", teamB: "Wales", flagB: "gb-wls", gender: "Men", pool: "Pool D", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 21, date: "August 17, 2026", timeCET: "15:30", teamA: "Netherlands", flagA: "nl", teamB: "Belgium", flagB: "be", gender: "Women", pool: "Pool A", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 22, date: "August 17, 2026", timeCET: "18:00", teamA: "Australia", flagA: "au", teamB: "South Africa", flagB: "za", gender: "Men", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 23, date: "August 17, 2026", timeCET: "18:00", teamA: "England", flagA: "gb-eng", teamB: "Japan", flagB: "jp", gender: "Women", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 24, date: "August 17, 2026", timeCET: "20:30", teamA: "Argentina", flagA: "ar", teamB: "Germany", flagB: "de", gender: "Women", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BE)" },
+  { id: 9, date: "August 17, 2026", timeCET: "06:30", teamA: "Chile", flagA: "cl", teamB: "Japan", flagB: "jp", gender: "Women", pool: "Pool A", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 10, date: "August 17, 2026", timeCET: "08:00", teamA: "United States", flagA: "us", teamB: "Scotland", flagB: "gb-sct", gender: "Women", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 11, date: "August 17, 2026", timeCET: "14:00", teamA: "Germany", flagA: "de", teamB: "Argentina", flagB: "ar", gender: "Women", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 12, date: "August 17, 2026", timeCET: "15:00", teamA: "Australia", flagA: "au", teamB: "Netherlands", flagB: "nl", gender: "Women", pool: "Pool A", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
 
-  // ==================== AUGUST 18, 2026 (Day 4) ====================
-  { id: 25, date: "August 18, 2026", timeCET: "11:30", teamA: "New Zealand", flagA: "nz", teamB: "Japan", flagB: "jp", gender: "Men", pool: "Pool A", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 26, date: "August 18, 2026", timeCET: "13:00", teamA: "Netherlands", flagA: "nl", teamB: "Argentina", flagB: "ar", gender: "Men", pool: "Pool A", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 27, date: "August 18, 2026", timeCET: "13:00", teamA: "United States", flagA: "us", teamB: "South Africa", flagB: "za", gender: "Women", pool: "Pool C", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 28, date: "August 18, 2026", timeCET: "15:30", teamA: "India", flagA: "in", teamB: "England", flagB: "gb-eng", gender: "Men", pool: "Pool D", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 29, date: "August 18, 2026", timeCET: "15:30", teamA: "New Zealand", flagA: "nz", teamB: "Scotland", flagB: "gb-sct", gender: "Women", pool: "Pool D", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 30, date: "August 18, 2026", timeCET: "18:00", teamA: "England", flagA: "gb-eng", teamB: "Wales", flagB: "gb-wls", gender: "Men", pool: "Pool D", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 31, date: "August 18, 2026", timeCET: "18:00", teamA: "Australia", flagA: "au", teamB: "Spain", flagB: "es", gender: "Women", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 32, date: "August 18, 2026", timeCET: "20:30", teamA: "Ireland", flagA: "ie", teamB: "South Korea", flagB: "kr", gender: "Women", pool: "Pool D", venue: "Belfius Hockey Arena, Wavre (BE)" },
+  { id: 13, date: "August 18, 2026", timeCET: "08:00", teamA: "New Zealand", flagA: "nz", teamB: "Ireland", flagB: "ie", gender: "Women", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 14, date: "August 18, 2026", timeCET: "09:30", teamA: "England", flagA: "gb-eng", teamB: "China", flagB: "cn", gender: "Women", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 15, date: "August 18, 2026", timeCET: "12:00", teamA: "India", flagA: "in", teamB: "South Africa", flagB: "za", gender: "Women", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 16, date: "August 18, 2026", timeCET: "17:30", teamA: "Spain", flagA: "es", teamB: "Belgium", flagB: "be", gender: "Women", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BEL)" },
 
-  // ==================== AUGUST 19, 2026 (Day 5) ====================
-  { id: 33, date: "August 19, 2026", timeCET: "11:30", teamA: "Belgium", flagA: "be", teamB: "Malaysia", flagB: "my", gender: "Men", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 34, date: "August 19, 2026", timeCET: "13:00", teamA: "Germany", flagA: "de", teamB: "France", flagB: "fr", gender: "Men", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 35, date: "August 19, 2026", timeCET: "13:00", teamA: "Belgium", flagA: "be", teamB: "Chile", flagB: "cl", gender: "Women", pool: "Pool A", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 36, date: "August 19, 2026", timeCET: "15:30", teamA: "India", flagA: "in", teamB: "Pakistan", flagB: "pk", gender: "Men", pool: "Pool D", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 37, date: "August 19, 2026", timeCET: "15:30", teamA: "Netherlands", flagA: "nl", teamB: "China", flagB: "cn", gender: "Women", pool: "Pool A", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 38, date: "August 19, 2026", timeCET: "18:00", teamA: "Ireland", flagA: "ie", teamB: "South Africa", flagB: "za", gender: "Men", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 39, date: "August 19, 2026", timeCET: "18:00", teamA: "Germany", flagA: "de", teamB: "England", flagB: "gb-eng", gender: "Women", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 40, date: "August 19, 2026", timeCET: "20:30", teamA: "Argentina", flagA: "ar", teamB: "Japan", flagB: "jp", gender: "Women", pool: "Pool B", venue: "Wagener Stadium, Amstelveen (NL)" },
+  { id: 17, date: "August 19, 2026", timeCET: "06:30", teamA: "Chile", flagA: "cl", teamB: "Australia", flagB: "au", gender: "Women", pool: "Pool A", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 18, date: "August 19, 2026", timeCET: "08:00", teamA: "Argentina", flagA: "ar", teamB: "Scotland", flagB: "gb-sct", gender: "Women", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 19, date: "August 19, 2026", timeCET: "11:00", teamA: "United States", flagA: "us", teamB: "Germany", flagB: "de", gender: "Women", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 20, date: "August 19, 2026", timeCET: "15:00", teamA: "Netherlands", flagA: "nl", teamB: "Japan", flagB: "jp", gender: "Women", pool: "Pool A", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
 
-  // ==================== AUGUST 20, 2026 (Day 6) ====================
-  { id: 41, date: "August 20, 2026", timeCET: "11:30", teamA: "Argentina", flagA: "ar", teamB: "New Zealand", flagB: "nz", gender: "Men", pool: "Pool A", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 42, date: "August 20, 2026", timeCET: "13:00", teamA: "Netherlands", flagA: "nl", teamB: "Japan", flagB: "jp", gender: "Men", pool: "Pool A", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 43, date: "August 20, 2026", timeCET: "13:00", teamA: "Spain", flagA: "es", teamB: "South Africa", flagB: "za", gender: "Women", pool: "Pool C", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 44, date: "August 20, 2026", timeCET: "15:30", teamA: "Australia", flagA: "au", teamB: "Spain", flagB: "es", gender: "Men", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 45, date: "August 20, 2026", timeCET: "15:30", teamA: "New Zealand", flagA: "nz", teamB: "South Korea", flagB: "kr", gender: "Women", pool: "Pool D", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 46, date: "August 20, 2026", timeCET: "18:00", teamA: "England", flagA: "gb-eng", teamB: "Wales", flagB: "gb-wls", gender: "Men", pool: "Pool D", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 47, date: "August 20, 2026", timeCET: "18:00", teamA: "Australia", flagA: "au", teamB: "United States", flagB: "us", gender: "Women", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 48, date: "August 20, 2026", timeCET: "20:30", teamA: "Ireland", flagA: "ie", teamB: "Scotland", flagB: "gb-sct", gender: "Women", pool: "Pool D", venue: "Belfius Hockey Arena, Wavre (BE)" },
+  { id: 21, date: "August 20, 2026", timeCET: "06:30", teamA: "China", flagA: "cn", teamB: "South Africa", flagB: "za", gender: "Women", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 22, date: "August 20, 2026", timeCET: "11:00", teamA: "New Zealand", flagA: "nz", teamB: "Spain", flagB: "es", gender: "Women", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 23, date: "August 20, 2026", timeCET: "12:00", teamA: "India", flagA: "in", teamB: "England", flagB: "gb-eng", gender: "Women", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 24, date: "August 20, 2026", timeCET: "17:30", teamA: "Belgium", flagA: "be", teamB: "Ireland", flagB: "ie", gender: "Women", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BEL)" },
 
-  // ==================== AUGUST 21, 2026 (Day 7 - Knockouts & Classifications) ====================
-  { id: 49, date: "August 21, 2026", timeCET: "11:30", teamA: "2nd Pool A", flagA: "un", teamB: "3rd Pool B", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 50, date: "August 21, 2026", timeCET: "13:00", teamA: "2nd Pool B", flagA: "un", teamB: "3rd Pool A", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 51, date: "August 21, 2026", timeCET: "13:00", teamA: "4th Pool A", flagA: "un", teamB: "4th Pool B", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 52, date: "August 21, 2026", timeCET: "15:30", teamA: "2nd Pool A", flagA: "un", teamB: "3rd Pool B", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 53, date: "August 21, 2026", timeCET: "15:30", teamA: "4th Pool C", flagA: "un", teamB: "4th Pool D", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 54, date: "August 21, 2026", timeCET: "18:00", teamA: "2nd Pool B", flagA: "un", teamB: "3rd Pool A", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 55, date: "August 21, 2026", timeCET: "18:00", teamA: "4th Pool A", flagA: "un", teamB: "4th Pool B", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 56, date: "August 21, 2026", timeCET: "20:30", teamA: "4th Pool C", flagA: "un", teamB: "4th Pool D", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" },
+  { id: 25, date: "August 21, 2026", timeCET: "06:30", teamA: "3rd Pool D", flagA: "un", teamB: "4th Pool A", flagB: "un", gender: "Women", pool: "Pool G", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 26, date: "August 21, 2026", timeCET: "09:30", teamA: "3rd Pool A", flagA: "un", teamB: "4th Pool D", flagB: "un", gender: "Women", pool: "Pool G", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 27, date: "August 21, 2026", timeCET: "12:00", teamA: "1st Pool D", flagA: "un", teamB: "2nd Pool A", flagB: "un", gender: "Women", pool: "Pool E", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 28, date: "August 21, 2026", timeCET: "15:00", teamA: "1st Pool A", flagA: "un", teamB: "2nd Pool D", flagB: "un", gender: "Women", pool: "Pool E", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
 
-  // ==================== AUGUST 22, 2026 (Day 8) ====================
-  { id: 57, date: "August 22, 2026", timeCET: "11:30", teamA: "2nd Pool C", flagA: "un", teamB: "3rd Pool D", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 58, date: "August 22, 2026", timeCET: "13:00", teamA: "2nd Pool D", flagA: "un", teamB: "3rd Pool C", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 59, date: "August 22, 2026", timeCET: "13:00", teamA: "1st Pool A", flagA: "un", teamB: "Winner Crossover 3", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 60, date: "August 22, 2026", timeCET: "15:30", teamA: "2nd Pool C", flagA: "un", teamB: "3rd Pool D", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 61, date: "August 22, 2026", timeCET: "15:30", teamA: "1st Pool B", flagA: "un", teamB: "Winner Crossover 4", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 62, date: "August 22, 2026", timeCET: "18:00", teamA: "2nd Pool D", flagA: "un", teamB: "3rd Pool C", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 63, date: "August 22, 2026", timeCET: "18:00", teamA: "1st Pool A", flagA: "un", teamB: "Winner Crossover 3", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 64, date: "August 22, 2026", timeCET: "20:30", teamA: "1st Pool B", flagA: "un", teamB: "Winner Crossover 4", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" },
+  { id: 29, date: "August 22, 2026", timeCET: "08:30", teamA: "3rd Pool C", flagA: "un", teamB: "4th Pool B", flagB: "un", gender: "Women", pool: "Pool H", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 30, date: "August 22, 2026", timeCET: "11:30", teamA: "3rd Pool B", flagA: "un", teamB: "4th Pool C", flagB: "un", gender: "Women", pool: "Pool H", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 31, date: "August 22, 2026", timeCET: "14:30", teamA: "1st Pool C", flagA: "un", teamB: "2nd Pool B", flagB: "un", gender: "Women", pool: "Pool F", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 32, date: "August 22, 2026", timeCET: "17:30", teamA: "1st Pool B", flagA: "un", teamB: "2nd Pool C", flagB: "un", gender: "Women", pool: "Pool F", venue: "Belfius Hockey Arena, Wavre (BEL)" },
 
-  // ==================== AUGUST 23, 2026 (Day 9) ====================
-  { id: 65, date: "August 23, 2026", timeCET: "13:00", teamA: "Winner Pool C", flagA: "un", teamB: "Winner Crossover 1", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 66, date: "August 23, 2026", timeCET: "15:30", teamA: "Winner Pool D", flagA: "un", teamB: "Winner Crossover 2", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 67, date: "August 23, 2026", timeCET: "18:00", teamA: "Winner Pool C", flagA: "un", teamB: "Winner Crossover 1", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 68, date: "August 23, 2026", timeCET: "20:30", teamA: "Winner Pool D", flagA: "un", teamB: "Winner Crossover 2", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" },
+  { id: 33, date: "August 23, 2026", timeCET: "07:00", teamA: "4th Pool A", flagA: "un", teamB: "4th Pool D", flagB: "un", gender: "Women", pool: "Pool G", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 34, date: "August 23, 2026", timeCET: "10:00", teamA: "3rd Pool A", flagA: "un", teamB: "3rd Pool D", flagB: "un", gender: "Women", pool: "Pool G", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 35, date: "August 23, 2026", timeCET: "13:00", teamA: "1st Pool A", flagA: "un", teamB: "1st Pool D", flagB: "un", gender: "Women", pool: "Pool E", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 36, date: "August 23, 2026", timeCET: "16:00", teamA: "2nd Pool A", flagA: "un", teamB: "2nd Pool D", flagB: "un", gender: "Women", pool: "Pool E", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
 
-  // ==================== AUGUST 27, 2026 (Day 10 - Semifinals) ====================
-  { id: 69, date: "August 27, 2026", timeCET: "15:30", teamA: "Winner QF 1", flagA: "un", teamB: "Winner QF 2", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 70, date: "August 27, 2026", timeCET: "18:00", teamA: "Winner QF 3", flagA: "un", teamB: "Winner QF 4", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 71, date: "August 27, 2026", timeCET: "18:00", teamA: "Winner QF 1", flagA: "un", teamB: "Winner QF 2", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 72, date: "August 27, 2026", timeCET: "20:30", teamA: "Winner QF 3", flagA: "un", teamB: "Winner QF 4", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
+  { id: 37, date: "August 24, 2026", timeCET: "08:00", teamA: "4th Pool C", flagA: "un", teamB: "4th Pool B", flagB: "un", gender: "Women", pool: "Pool H", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 38, date: "August 24, 2026", timeCET: "11:00", teamA: "3rd Pool C", flagA: "un", teamB: "3rd Pool B", flagB: "un", gender: "Women", pool: "Pool H", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 39, date: "August 24, 2026", timeCET: "14:00", teamA: "2nd Pool C", flagA: "un", teamB: "2nd Pool B", flagB: "un", gender: "Women", pool: "Pool F", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 40, date: "August 24, 2026", timeCET: "17:30", teamA: "1st Pool C", flagA: "un", teamB: "1st Pool B", flagB: "un", gender: "Women", pool: "Pool F", venue: "Belfius Hockey Arena, Wavre (BEL)" },
 
-  // ==================== AUGUST 29, 2026 (Day 11) ====================
-  { id: 73, date: "August 29, 2026", timeCET: "16:00", teamA: "Loser SF 1", flagA: "un", teamB: "Loser SF 2", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
-  { id: 74, date: "August 29, 2026", timeCET: "19:00", teamA: "Winner SF 1", flagA: "un", teamB: "Winner SF 2", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Stadium, Amstelveen (NL)" },
+  { id: 41, date: "August 27, 2026", timeCET: "06:30", teamA: "3rd Pool G", flagA: "un", teamB: "3rd Pool H", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 42, date: "August 27, 2026", timeCET: "08:00", teamA: "4th Pool G", flagA: "un", teamB: "4th Pool H", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 43, date: "August 27, 2026", timeCET: "09:30", teamA: "2nd Pool G", flagA: "un", teamB: "2nd Pool H", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 44, date: "August 27, 2026", timeCET: "11:00", teamA: "1st Pool G", flagA: "un", teamB: "1st Pool H", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 45, date: "August 27, 2026", timeCET: "12:00", teamA: "3rd Pool E", flagA: "un", teamB: "3rd Pool F", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 46, date: "August 27, 2026", timeCET: "14:00", teamA: "4th Pool E", flagA: "un", teamB: "4th Pool F", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 47, date: "August 27, 2026", timeCET: "15:00", teamA: "1st Pool E", flagA: "un", teamB: "2nd Pool F", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 48, date: "August 27, 2026", timeCET: "17:30", teamA: "1st Pool F", flagA: "un", teamB: "2nd Pool E", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BEL)" },
 
-  // ==================== AUGUST 30, 2026 (Day 12) ====================
-  { id: 75, date: "August 30, 2026", timeCET: "16:00", teamA: "Loser SF 1", flagA: "un", teamB: "Loser SF 2", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" },
-  { id: 76, date: "August 30, 2026", timeCET: "19:00", teamA: "Winner SF 1", flagA: "un", teamB: "Winner SF 2", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" }
+  { id: 49, date: "August 29, 2026", timeCET: "10:00", teamA: "Loser Match 47", flagA: "un", teamB: "Loser Match 48", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 50, date: "August 29, 2026", timeCET: "13:00", teamA: "Winner Match 47", flagA: "un", teamB: "Winner Match 48", flagB: "un", gender: "Women", pool: "Knockouts", venue: "Wagener Hockey Stadium, Amstelveen (NED)" }
 ];
 
 const WARMUP_MATCHES = [
@@ -125,7 +88,7 @@ export default function ScheduleClient() {
   const [currentPage, setCurrentPage] = useState(1);
   const [activeTab, setActiveTab] = useState("official");
 
-  // Timezone Converter Logic
+  // Timezone Converter Logic (PST/Pakistan Time is CET + 3 hours)
   const getConvertedTime = (timeCET, tz) => {
     if (tz === "CET") return `${timeCET} CET`;
     const [h, m] = timeCET.split(":").map(Number);
