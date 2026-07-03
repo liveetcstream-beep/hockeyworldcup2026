@@ -32,9 +32,9 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>© 2026 HockeyWorldCup2026Schedule.com. All Rights Reserved. Not affiliated with the International Hockey Federation (FIH).</p>
           <div className="flex gap-4">
-            <a href="#" className="text-xs">Privacy Policy</a>
+            <a href="/privacy-policy" className="text-xs">Privacy Policy</a>
             <span className="text-slate-800">|</span>
-            <a href="#" className="text-xs">Terms of Use</a>
+            <a href="/terms-of-use" className="text-xs">Terms of Use</a>
           </div>
         </div>
       </div>
