@@ -109,6 +109,25 @@ export default function TeamsPage() {
               </ul>
             </div>
           </div>
+
+          {/* CTA — India/Pakistan dedicated guides */}
+          <div style={{ background: "linear-gradient(135deg, rgba(255,153,51,0.06) 0%, rgba(0,153,0,0.06) 100%)", border: "1px solid rgba(192,0,48,0.12)", borderRadius: "20px", padding: "1.8rem 2rem", marginTop: "1.5rem", display: "flex", flexWrap: "wrap", alignItems: "center", gap: "1rem", justifyContent: "space-between" }}>
+            <div>
+              <div style={{ fontWeight: "800", color: "var(--text-main)", fontSize: "1.05rem", marginBottom: "0.3rem" }}>⚔️ India vs Pakistan are in Pool D together!</div>
+              <div style={{ color: "var(--text-muted)", fontSize: "0.9rem" }}>Get dedicated team guides with IST/PKT timings, squad analysis &amp; derby preview.</div>
+            </div>
+            <div style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap" }}>
+              <a href="/india-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#FF9933", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>
+                🇮🇳 India Guide →
+              </a>
+              <a href="/pakistan-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#009900", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>
+                🇵🇰 Pakistan Guide →
+              </a>
+              <a href="/hockey-world-cup-2026-groups" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "var(--bg-tertiary)", color: "var(--text-main)", border: "1px solid var(--border-color)", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>
+                🏑 All Groups →
+              </a>
+            </div>
+          </div>
         </section>
 
         {/* Women's Pools */}

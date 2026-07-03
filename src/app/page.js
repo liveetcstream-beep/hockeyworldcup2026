@@ -181,6 +181,27 @@ export default function Home() {
               <p className="text-sm text-slate-400">FIH World Cup winners list since 1971, historical statistics, and titles leaderboard.</p>
               <span className="text-xs text-sky-400 font-bold block mt-4">Access History Hub →</span>
             </a>
+
+            <a href="/india-hockey-world-cup-2026" className="local-card block text-decoration-none transition-transform hover:-translate-y-2" style={{ borderTop: "3px solid #FF9933" }}>
+              <div className="local-icon">🇮🇳</div>
+              <h3 className="text-white mt-4 mb-2">India at HWC 2026</h3>
+              <p className="text-sm text-slate-400">Complete India men's & women's schedule, IST timings, Pool D fixtures, squad & key players guide.</p>
+              <span className="text-xs font-bold block mt-4" style={{ color: "#FF9933" }}>India Team Guide →</span>
+            </a>
+
+            <a href="/pakistan-hockey-world-cup-2026" className="local-card block text-decoration-none transition-transform hover:-translate-y-2" style={{ borderTop: "3px solid #009900" }}>
+              <div className="local-icon">🇵🇰</div>
+              <h3 className="text-white mt-4 mb-2">Pakistan at HWC 2026</h3>
+              <p className="text-sm text-slate-400">Pakistan men's schedule with PKT timings, India vs Pakistan derby spotlight, squad & player analysis.</p>
+              <span className="text-xs font-bold block mt-4" style={{ color: "#009900" }}>Pakistan Team Guide →</span>
+            </a>
+
+            <a href="/hockey-world-cup-2026-groups" className="local-card block text-decoration-none transition-transform hover:-translate-y-2" style={{ borderTop: "3px solid #c00030" }}>
+              <div className="local-icon">🏑</div>
+              <h3 className="text-white mt-4 mb-2">Pool Groups Draw</h3>
+              <p className="text-sm text-slate-400">All Men's & Women's pool groups (A–D), team rankings, key pool clashes and Second Stage format explained.</p>
+              <span className="text-xs text-sky-400 font-bold block mt-4">See All Groups →</span>
+            </a>
           </div>
         </section>
         

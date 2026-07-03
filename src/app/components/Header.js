@@ -31,9 +31,9 @@ export default function Header() {
                 </span>
                 <ul className="dropdown-menu">
                   <li><a href="/schedule">Full Match Schedule & Timings</a></li>
+                  <li><a href="/hockey-world-cup-2026-groups">All Pool Groups (Men's & Women's)</a></li>
                   <li><a href="/format">Tournament Crossover Rules</a></li>
                   <li><a href="/points-table">Points Table Standing Rules</a></li>
-                  <li><a href="/teams#pools">Group Stage Pools</a></li>
                 </ul>
               </li>
 
@@ -44,7 +44,9 @@ export default function Header() {
                   <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
                 </span>
                 <ul className="dropdown-menu">
-                  <li><a href="/teams">Qualified Nations</a></li>
+                  <li><a href="/teams">All 16 Qualified Nations</a></li>
+                  <li><a href="/india-hockey-world-cup-2026">🇮🇳 India Team Guide & Schedule</a></li>
+                  <li><a href="/pakistan-hockey-world-cup-2026">🇵🇰 Pakistan Team Guide & Schedule</a></li>
                   <li><a href="/teams#stars">Star Players to Watch</a></li>
                   <li><a href="/h2h">Head-to-Head (H2H) Records</a></li>
                 </ul>
@@ -124,9 +126,12 @@ export default function Header() {
         <ul className="mobile-nav-links">
           <li><a href="/" onClick={() => setIsMobileOpen(false)}>Home</a></li>
           <li><a href="/schedule" onClick={() => setIsMobileOpen(false)}>Full Match Schedule & Timings</a></li>
+          <li><a href="/hockey-world-cup-2026-groups" onClick={() => setIsMobileOpen(false)}>🏑 All Pool Groups</a></li>
+          <li><a href="/india-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>🇮🇳 India Team Guide</a></li>
+          <li><a href="/pakistan-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>🇵🇰 Pakistan Team Guide</a></li>
           <li><a href="/format" onClick={() => setIsMobileOpen(false)}>Tournament Format / Crossover</a></li>
           <li><a href="/points-table" onClick={() => setIsMobileOpen(false)}>Points Table Rules</a></li>
-          <li><a href="/teams" onClick={() => setIsMobileOpen(false)}>Qualified Nations</a></li>
+          <li><a href="/teams" onClick={() => setIsMobileOpen(false)}>All Qualified Nations</a></li>
           <li><a href="/h2h" onClick={() => setIsMobileOpen(false)}>Head-to-Head Records</a></li>
           <li><a href="/venues" onClick={() => setIsMobileOpen(false)}>Stadium Guides</a></li>
           <li><a href="/tickets" onClick={() => setIsMobileOpen(false)}>Tickets & Pricing</a></li>
