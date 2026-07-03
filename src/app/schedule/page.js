@@ -46,9 +46,6 @@ export default function SchedulePage() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              📅 Updated: <strong>July 1, 2026</strong>
-            </div>
-            <div className="eeat-badge">
               ✍️ Expert Verified by: <strong>Marc Devos (Senior Belgian Hockey Journalist)</strong>
             </div>
             <div className="eeat-badge">

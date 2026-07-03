@@ -47,9 +47,6 @@ export default function Home() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              📅 Updated: <strong>July 1, 2026</strong>
-            </div>
-            <div className="eeat-badge">
               ✍️ Expert Verified by: <strong>Marc Devos (Senior Belgian Hockey Journalist)</strong>
             </div>
             <div className="eeat-badge">
@@ -191,90 +188,156 @@ export default function Home() {
         <section id="pools" className="my-12">
           <div className="section-title-wrap">
             <h2>Official FIH Hockey World Cup 2026 Pools</h2>
-            <p>Complete division breakdown for the 16 qualified teams competing in the group stage.</p>
+            <p>Complete division breakdown for the Men's and Women's teams competing in the group stage.</p>
           </div>
 
-          <div className="pools-container">
+          <h3 className="text-xl font-bold text-white mb-6 border-l-4 border-sky-400 pl-4 italic">Men's Tournament Pools</h3>
+          <div className="pools-container" style={{ marginBottom: "3rem" }}>
             {/* Pool A */}
             <div className="pool-card">
-              <div className="pool-header">
-                <h3>Pool A</h3>
-              </div>
+              <div className="pool-header"><h3>Pool A</h3></div>
               <ul className="pool-list">
                 <li className="pool-item">
                   <img src="https://flagcdn.com/w40/nl.png" width="20" height="14" alt="Netherlands flag" style={{ borderRadius: "2px" }} /> Netherlands
                 </li>
                 <li className="pool-item">
-                  <img src="https://flagcdn.com/w40/be.png" width="20" height="14" alt="Belgium flag" style={{ borderRadius: "2px" }} /> Belgium
+                  <img src="https://flagcdn.com/w40/ar.png" width="20" height="14" alt="Argentina flag" style={{ borderRadius: "2px" }} /> Argentina
                 </li>
                 <li className="pool-item">
-                  <img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="India flag" style={{ borderRadius: "2px" }} /> India
+                  <img src="https://flagcdn.com/w40/cl.png" width="20" height="14" alt="Chile flag" style={{ borderRadius: "2px" }} /> Chile
                 </li>
                 <li className="pool-item">
-                  <img src="https://flagcdn.com/w40/gb-wls.png" width="20" height="14" alt="Wales flag" style={{ borderRadius: "2px" }} /> Wales
+                  <img src="https://flagcdn.com/w40/nz.png" width="20" height="14" alt="New Zealand flag" style={{ borderRadius: "2px" }} /> New Zealand
                 </li>
               </ul>
             </div>
-
             {/* Pool B */}
             <div className="pool-card">
-              <div className="pool-header">
-                <h3>Pool B</h3>
-              </div>
+              <div className="pool-header"><h3>Pool B</h3></div>
               <ul className="pool-list">
                 <li className="pool-item">
                   <img src="https://flagcdn.com/w40/de.png" width="20" height="14" alt="Germany flag" style={{ borderRadius: "2px" }} /> Germany
                 </li>
                 <li className="pool-item">
-                  <img src="https://flagcdn.com/w40/gb-eng.png" width="20" height="14" alt="England flag" style={{ borderRadius: "2px" }} /> England
-                </li>
-                <li className="pool-item">
                   <img src="https://flagcdn.com/w40/my.png" width="20" height="14" alt="Malaysia flag" style={{ borderRadius: "2px" }} /> Malaysia
                 </li>
                 <li className="pool-item">
-                  <img src="https://flagcdn.com/w40/cl.png" width="20" height="14" alt="Chile flag" style={{ borderRadius: "2px" }} /> Chile
-                </li>
-              </ul>
-            </div>
-
-            {/* Pool C */}
-            <div className="pool-card">
-              <div className="pool-header">
-                <h3>Pool C</h3>
-              </div>
-              <ul className="pool-list">
-                <li className="pool-item">
-                  <img src="https://flagcdn.com/w40/au.png" width="20" height="14" alt="Australia flag" style={{ borderRadius: "2px" }} /> Australia
-                </li>
-                <li className="pool-item">
-                  <img src="https://flagcdn.com/w40/nz.png" width="20" height="14" alt="New Zealand flag" style={{ borderRadius: "2px" }} /> New Zealand
-                </li>
-                <li className="pool-item">
-                  <img src="https://flagcdn.com/w40/es.png" width="20" height="14" alt="Spain flag" style={{ borderRadius: "2px" }} /> Spain
+                  <img src="https://flagcdn.com/w40/be.png" width="20" height="14" alt="Belgium flag" style={{ borderRadius: "2px" }} /> Belgium
                 </li>
                 <li className="pool-item">
                   <img src="https://flagcdn.com/w40/fr.png" width="20" height="14" alt="France flag" style={{ borderRadius: "2px" }} /> France
                 </li>
               </ul>
             </div>
-
+            {/* Pool C */}
+            <div className="pool-card">
+              <div className="pool-header"><h3>Pool C</h3></div>
+              <ul className="pool-list">
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/au.png" width="20" height="14" alt="Australia flag" style={{ borderRadius: "2px" }} /> Australia
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/ie.png" width="20" height="14" alt="Ireland flag" style={{ borderRadius: "2px" }} /> Ireland
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/es.png" width="20" height="14" alt="Spain flag" style={{ borderRadius: "2px" }} /> Spain
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/za.png" width="20" height="14" alt="South Africa flag" style={{ borderRadius: "2px" }} /> South Africa
+                </li>
+              </ul>
+            </div>
             {/* Pool D */}
             <div className="pool-card">
-              <div className="pool-header">
-                <h3>Pool D</h3>
-              </div>
+              <div className="pool-header"><h3>Pool D</h3></div>
+              <ul className="pool-list">
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="India flag" style={{ borderRadius: "2px" }} /> India
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/gb-wls.png" width="20" height="14" alt="Wales flag" style={{ borderRadius: "2px" }} /> Wales
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/gb-eng.png" width="20" height="14" alt="England flag" style={{ borderRadius: "2px" }} /> England
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/pk.png" width="20" height="14" alt="Pakistan flag" style={{ borderRadius: "2px" }} /> Pakistan
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <h3 className="text-xl font-bold text-white mb-6 border-l-4 border-rose-400 pl-4 italic" style={{ marginTop: "2.5rem" }}>Women's Tournament Pools</h3>
+          <div className="pools-container">
+            {/* Pool A */}
+            <div className="pool-card" style={{ borderTop: "3px solid #f43f5e" }}>
+              <div className="pool-header" style={{ background: "rgba(244, 63, 94, 0.1)" }}><h3 style={{ color: "#f43f5e" }}>Pool A</h3></div>
+              <ul className="pool-list">
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/nl.png" width="20" height="14" alt="Netherlands flag" style={{ borderRadius: "2px" }} /> Netherlands
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/au.png" width="20" height="14" alt="Australia flag" style={{ borderRadius: "2px" }} /> Australia
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/jp.png" width="20" height="14" alt="Japan flag" style={{ borderRadius: "2px" }} /> Japan
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/cl.png" width="20" height="14" alt="Chile flag" style={{ borderRadius: "2px" }} /> Chile
+                </li>
+              </ul>
+            </div>
+            {/* Pool B */}
+            <div className="pool-card" style={{ borderTop: "3px solid #f43f5e" }}>
+              <div className="pool-header" style={{ background: "rgba(244, 63, 94, 0.1)" }}><h3 style={{ color: "#f43f5e" }}>Pool B</h3></div>
               <ul className="pool-list">
                 <li className="pool-item">
                   <img src="https://flagcdn.com/w40/ar.png" width="20" height="14" alt="Argentina flag" style={{ borderRadius: "2px" }} /> Argentina
                 </li>
                 <li className="pool-item">
-                  <img src="https://flagcdn.com/w40/kr.png" width="20" height="14" alt="Korea flag" style={{ borderRadius: "2px" }} /> South Korea
+                  <img src="https://flagcdn.com/w40/de.png" width="20" height="14" alt="Germany flag" style={{ borderRadius: "2px" }} /> Germany
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/gb-sct.png" width="20" height="14" alt="Scotland flag" style={{ borderRadius: "2px" }} /> Scotland
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/us.png" width="20" height="14" alt="USA flag" style={{ borderRadius: "2px" }} /> United States
+                </li>
+              </ul>
+            </div>
+            {/* Pool C */}
+            <div className="pool-card" style={{ borderTop: "3px solid #f43f5e" }}>
+              <div className="pool-header" style={{ background: "rgba(244, 63, 94, 0.1)" }}><h3 style={{ color: "#f43f5e" }}>Pool C</h3></div>
+              <ul className="pool-list">
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/be.png" width="20" height="14" alt="Belgium flag" style={{ borderRadius: "2px" }} /> Belgium
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/es.png" width="20" height="14" alt="Spain flag" style={{ borderRadius: "2px" }} /> Spain
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/nz.png" width="20" height="14" alt="New Zealand flag" style={{ borderRadius: "2px" }} /> New Zealand
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/fr.png" width="20" height="14" alt="France flag" style={{ borderRadius: "2px" }} /> France
+                </li>
+              </ul>
+            </div>
+            {/* Pool D */}
+            <div className="pool-card" style={{ borderTop: "3px solid #f43f5e" }}>
+              <div className="pool-header" style={{ background: "rgba(244, 63, 94, 0.1)" }}><h3 style={{ color: "#f43f5e" }}>Pool D</h3></div>
+              <ul className="pool-list">
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/cn.png" width="20" height="14" alt="China flag" style={{ borderRadius: "2px" }} /> China
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="India flag" style={{ borderRadius: "2px" }} /> India
+                </li>
+                <li className="pool-item">
+                  <img src="https://flagcdn.com/w40/gb-eng.png" width="20" height="14" alt="England flag" style={{ borderRadius: "2px" }} /> England
                 </li>
                 <li className="pool-item">
                   <img src="https://flagcdn.com/w40/za.png" width="20" height="14" alt="South Africa flag" style={{ borderRadius: "2px" }} /> South Africa
-                </li>
-                <li className="pool-item">
-                  <img src="https://flagcdn.com/w40/jp.png" width="20" height="14" alt="Japan flag" style={{ borderRadius: "2px" }} /> Japan
                 </li>
               </ul>
             </div>

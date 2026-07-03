@@ -34,9 +34,6 @@ export default function HistoryPage() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              📅 Updated: <strong>July 1, 2026</strong>
-            </div>
-            <div className="eeat-badge">
               ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
             </div>
           </div>
