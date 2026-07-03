@@ -37,7 +37,10 @@ const MOCK_LIVE_MATCHES = [
   }
 ];
 
-export async function GET() {
+export async function GET(request) {
+  const { searchParams } = new URL(request.url);
+  const showSim = searchParams.get("sim") === "true";
+
   const providers = [
     {
       name: "FIH Official Data Feed",
@@ -96,11 +99,11 @@ export async function GET() {
     }
   }
 
-  // Return live matches data with failover logs
+  // Return empty live matches array if no real matches exist, unless sim=true is explicitly requested
   return NextResponse.json({
     status: "success",
-    source: activeProvider || "Failover Simulation Engine (External feeds offline/returned 0 matches)",
-    liveMatches: MOCK_LIVE_MATCHES,
+    source: activeProvider || "Failover Simulation Engine",
+    liveMatches: showSim ? MOCK_LIVE_MATCHES : [],
     apiErrors: errors
   });
 }

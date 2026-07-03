@@ -6,9 +6,7 @@ import Footer from "../components/Footer";
 
 export default function LiveScoresPage() {
   const [liveMatches, setLiveMatches] = useState([]);
-  const [source, setSource] = useState("Loading feed...");
   const [loading, setLoading] = useState(true);
-  const [lastUpdated, setLastUpdated] = useState("");
 
   const fetchScores = async () => {
     try {
@@ -17,20 +15,18 @@ export default function LiveScoresPage() {
         const json = await res.json();
         if (json.liveMatches) {
           setLiveMatches(json.liveMatches);
-          setSource(json.source);
         }
       }
     } catch (e) {
       console.error("Failed to fetch live scores:", e);
     } finally {
       setLoading(false);
-      setLastUpdated(new Date().toLocaleTimeString());
     }
   };
 
   useEffect(() => {
     fetchScores();
-    const interval = setInterval(fetchScores, 30000); // Update every 30s
+    const interval = setInterval(fetchScores, 30000); // Sync every 30s
     return () => clearInterval(interval);
   }, []);
 
@@ -66,48 +62,6 @@ export default function LiveScoresPage() {
       </section>
 
       <main className="sports-container py-12">
-        {/* API Failover Status Indicator */}
-        <section className="mb-8">
-          <div style={{
-            background: "rgba(14, 165, 233, 0.08)",
-            border: "1px solid var(--border-color)",
-            borderRadius: "12px",
-            padding: "1rem 1.5rem",
-            display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            alignItems: "center",
-            gap: "1rem"
-          }}>
-            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-              <span style={{ fontSize: "1.2rem" }}>📡</span>
-              <span className="text-sm text-slate-300">
-                Active Score Source: <strong className="text-sky-400">{source}</strong>
-              </span>
-            </div>
-            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-              <span className="text-xs text-slate-400">
-                Last Sync: {lastUpdated || "Pending..."}
-              </span>
-              <button 
-                onClick={fetchScores}
-                style={{
-                  background: "var(--bg-tertiary)",
-                  border: "1px solid var(--border-color)",
-                  color: "#fff",
-                  padding: "0.4rem 1rem",
-                  borderRadius: "6px",
-                  fontSize: "0.8rem",
-                  fontWeight: "bold",
-                  cursor: "pointer"
-                }}
-              >
-                🔄 Refresh
-              </button>
-            </div>
-          </div>
-        </section>
-
         {/* Live Match Tracker Status Section */}
         <section className="my-12">
           {loading ? (
@@ -124,11 +78,59 @@ export default function LiveScoresPage() {
               <p className="text-slate-400 text-sm">Connecting to live scores APIs...</p>
             </div>
           ) : liveMatches.length === 0 ? (
-            <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl text-center">
+            <div className="timezone-card text-center" style={{ padding: "3rem 2rem", margin: "2rem 0" }}>
+              <span style={{ fontSize: "3rem", display: "block", marginBottom: "1rem" }}>🏑</span>
               <h2 className="text-xl font-bold text-white mb-2">No Live Matches Right Now</h2>
-              <p className="text-slate-400 text-sm mb-6">
-                The first match starts on <strong>August 15, 2026</strong>. Real-time scores and play-by-play text feeds will activate 30 minutes before kickoff.
+              <p className="text-slate-400 text-sm max-w-xl mx-auto mb-6" style={{ lineHeight: "1.6" }}>
+                The tournament kicks off on <strong>August 15, 2026</strong>. Real-time scores, tactical statistics, ball possession, card allocations, and play-by-play text commentary will activate 30 minutes before the pushback of the opening day matches.
               </p>
+              
+              <h3 className="text-sm font-bold text-sky-400 uppercase tracking-wider mb-4">Opening Day Highlight Fixtures (August 15)</h3>
+              <div style={{ display: "grid", gap: "1rem", maxWidth: "600px", margin: "0 auto" }}>
+                <div className="local-card" style={{ padding: "1rem 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                    <img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
+                    <strong className="text-white">India</strong>
+                    <span className="text-slate-500">vs</span>
+                    <img src="https://flagcdn.com/w40/gb-wls.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
+                    <strong className="text-white">Wales</strong>
+                  </div>
+                  <span className="text-xs text-slate-400" style={{ fontWeight: "700" }}>11:30 CET</span>
+                </div>
+                
+                <div className="local-card" style={{ padding: "1rem 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                    <img src="https://flagcdn.com/w40/de.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
+                    <strong className="text-white">Germany</strong>
+                    <span className="text-slate-500">vs</span>
+                    <img src="https://flagcdn.com/w40/my.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
+                    <strong className="text-white">Malaysia</strong>
+                  </div>
+                  <span className="text-xs text-slate-400" style={{ fontWeight: "700" }}>13:00 CET</span>
+                </div>
+
+                <div className="local-card" style={{ padding: "1rem 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                    <img src="https://flagcdn.com/w40/nl.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
+                    <strong className="text-white">Netherlands</strong>
+                    <span className="text-slate-500">vs</span>
+                    <img src="https://flagcdn.com/w40/cl.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
+                    <strong className="text-white">Chile</strong>
+                  </div>
+                  <span className="text-xs text-slate-400" style={{ fontWeight: "700" }}>13:00 CET</span>
+                </div>
+
+                <div className="local-card" style={{ padding: "1rem 1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                    <img src="https://flagcdn.com/w40/gb-eng.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
+                    <strong className="text-white">England</strong>
+                    <span className="text-slate-500">vs</span>
+                    <img src="https://flagcdn.com/w40/pk.png" width="20" height="14" alt="" style={{ borderRadius: "2px" }} />
+                    <strong className="text-white">Pakistan</strong>
+                  </div>
+                  <span className="text-xs text-slate-400" style={{ fontWeight: "700" }}>15:30 CET</span>
+                </div>
+              </div>
             </div>
           ) : (
             <div style={{ display: "grid", gap: "2rem" }}>
