@@ -79,9 +79,9 @@ export default function LiveScoresPage() {
               <div style={{ display: "flex", justifyContent: "center", marginBottom: "1rem" }}>
                 <span style={{ fontSize: "3rem" }}>🏑</span>
               </div>
-              <h2 className="text-2xl font-bold text-white mb-3" style={{ textAlign: "center" }}>No Live Matches Right Now</h2>
+              <h2 className="text-2xl font-bold mb-3" style={{ textAlign: "center", color: "var(--text-main)" }}>No Live Matches Right Now</h2>
               
-              <p className="text-slate-400 text-sm max-w-xl" style={{ lineHeight: "1.7", margin: "0 auto 2.5rem auto", textAlign: "center", fontSize: "0.9rem" }}>
+              <p className="text-sm max-w-xl" style={{ lineHeight: "1.7", margin: "0 auto 2.5rem auto", textAlign: "center", fontSize: "0.9rem", color: "var(--text-muted)" }}>
                 The tournament kicks off on <strong>August 15, 2026</strong>. Real-time scores, tactical statistics, ball possession, card allocations, and play-by-play text commentary will activate 30 minutes before the pushback of the opening day matches.
               </p>
               
@@ -92,46 +92,46 @@ export default function LiveScoresPage() {
                     Men's Opening Fixtures (August 15)
                   </h3>
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                         <img src="https://flagcdn.com/w40/in.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">India</span>
-                        <span className="text-slate-500 text-xs">vs</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>India</span>
+                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
                         <img src="https://flagcdn.com/w40/gb-wls.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">Wales</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Wales</span>
                       </div>
                       <span className="text-xs text-sky-400" style={{ fontWeight: "700" }}>13:00 PST</span>
                     </div>
 
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                         <img src="https://flagcdn.com/w40/de.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">Germany</span>
-                        <span className="text-slate-500 text-xs">vs</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Germany</span>
+                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
                         <img src="https://flagcdn.com/w40/my.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">Malaysia</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Malaysia</span>
                       </div>
                       <span className="text-xs text-sky-400" style={{ fontWeight: "700" }}>14:30 PST</span>
                     </div>
 
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                         <img src="https://flagcdn.com/w40/gb-eng.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">England</span>
-                        <span className="text-slate-500 text-xs">vs</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>England</span>
+                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
                         <img src="https://flagcdn.com/w40/pk.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">Pakistan</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Pakistan</span>
                       </div>
                       <span className="text-xs text-sky-400" style={{ fontWeight: "700" }}>19:00 PST</span>
                     </div>
 
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                         <img src="https://flagcdn.com/w40/be.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">Belgium</span>
-                        <span className="text-slate-500 text-xs">vs</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Belgium</span>
+                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
                         <img src="https://flagcdn.com/w40/fr.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">France</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>France</span>
                       </div>
                       <span className="text-xs text-sky-400" style={{ fontWeight: "700" }}>21:00 PST</span>
                     </div>
@@ -144,50 +144,51 @@ export default function LiveScoresPage() {
                     Women's Opening Fixtures (August 15)
                   </h3>
                   <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                         <img src="https://flagcdn.com/w40/au.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">Australia</span>
-                        <span className="text-slate-500 text-xs">vs</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Australia</span>
+                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
                         <img src="https://flagcdn.com/w40/jp.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">Japan</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Japan</span>
                       </div>
                       <span className="text-xs text-rose-400" style={{ fontWeight: "700" }}>10:00 PST</span>
                     </div>
 
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                         <img src="https://flagcdn.com/w40/de.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">Germany</span>
-                        <span className="text-slate-500 text-xs">vs</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Germany</span>
+                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
                         <img src="https://flagcdn.com/w40/gb-sct.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">Scotland</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Scotland</span>
                       </div>
                       <span className="text-xs text-rose-400" style={{ fontWeight: "700" }}>11:30 PST</span>
                     </div>
 
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                         <img src="https://flagcdn.com/w40/nl.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">Netherlands</span>
-                        <span className="text-slate-500 text-xs">vs</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Netherlands</span>
+                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
                         <img src="https://flagcdn.com/w40/cl.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">Chile</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Chile</span>
                       </div>
                       <span className="text-xs text-rose-400" style={{ fontWeight: "700" }}>16:00 PST</span>
                     </div>
 
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-tertiary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
+                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
                       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                         <img src="https://flagcdn.com/w40/ar.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">Argentina</span>
-                        <span className="text-slate-500 text-xs">vs</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Argentina</span>
+                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
                         <img src="https://flagcdn.com/w40/us.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs text-white font-bold">USA</span>
+                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>USA</span>
                       </div>
                       <span className="text-xs text-rose-400" style={{ fontWeight: "700" }}>17:30 PST</span>
                     </div>
                   </div>
+
                 </div>
               </div>
             </div>
