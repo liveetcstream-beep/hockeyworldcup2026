@@ -1619,3 +1619,160 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Print-Only Layout & Stylesheet */
+.print-only-schedule {
+  display: none; /* Hide on regular screen view */
+}
+
+@media print {
+  /* Hide all generic page layouts */
+  .sports-header,
+  .sports-footer,
+  .hero-section,
+  .timezone-card,
+  .view-more-btn,
+  .expert-quote-box,
+  .guidelines-card,
+  button,
+  footer,
+  nav,
+  header,
+  .my-12,
+  .my-16,
+  .section-title-wrap,
+  .faq-accordion-wrap,
+  main > *:not(.print-only-schedule) {
+    display: none !important;
+  }
+
+  body {
+    background: #020617 !important;
+    color: #f8fafc !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    font-family: 'Outfit', sans-serif !important;
+  }
+
+  .print-only-schedule {
+    display: block !important;
+    width: 100% !important;
+    padding: 20px !important;
+  }
+
+  .print-header {
+    background: linear-gradient(135deg, #f43f5e 0%, #0ea5e9 100%) !important;
+    padding: 30px !important;
+    border-radius: 16px !important;
+    text-align: center !important;
+    margin-bottom: 30px !important;
+    color: #ffffff !important;
+    box-shadow: 0 4px 15px rgba(244, 63, 94, 0.2) !important;
+  }
+
+  .print-header h1 {
+    font-size: 2.4rem !important;
+    font-weight: 900 !important;
+    margin: 0 0 8px 0 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: #ffffff !important;
+    font-style: italic !important;
+  }
+
+  .print-header p {
+    font-size: 1rem !important;
+    margin: 0 !important;
+    color: #ffffff !important;
+    opacity: 0.95 !important;
+  }
+
+  .print-section-title {
+    font-size: 1.5rem !important;
+    font-weight: 800 !important;
+    color: #0ea5e9 !important;
+    border-left: 5px solid #f43f5e !important;
+    padding-left: 15px !important;
+    margin: 35px 0 20px 0 !important;
+    text-transform: uppercase !important;
+    font-style: italic !important;
+    page-break-after: avoid !important;
+  }
+
+  .print-grid {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 15px !important;
+  }
+
+  .print-match-card {
+    background: #0f172a !important;
+    border: 1px solid #334155 !important;
+    border-radius: 12px !important;
+    padding: 18px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    page-break-inside: avoid !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15) !important;
+  }
+
+  .print-match-meta {
+    display: flex !important;
+    justify-content: space-between !important;
+    font-size: 0.8rem !important;
+    color: #94a3b8 !important;
+    border-bottom: 1px dashed #334155 !important;
+    padding-bottom: 10px !important;
+    margin-bottom: 12px !important;
+  }
+
+  .print-match-time {
+    color: #38bdf8 !important;
+    font-weight: 700 !important;
+  }
+
+  .print-match-teams {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    margin: 12px 0 !important;
+  }
+
+  .print-team {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    font-size: 0.95rem !important;
+    font-weight: 700 !important;
+    color: #ffffff !important;
+  }
+
+  .print-team img {
+    border-radius: 2px !important;
+  }
+
+  .print-vs {
+    font-size: 0.75rem !important;
+    font-weight: 900 !important;
+    color: #f43f5e !important;
+    background: rgba(244, 63, 94, 0.1) !important;
+    padding: 3px 8px !important;
+    border-radius: 6px !important;
+  }
+
+  .print-match-footer {
+    display: flex !important;
+    justify-content: space-between !important;
+    font-size: 0.75rem !important;
+    color: #38bdf8 !important;
+    font-weight: 600 !important;
+    margin-top: 10px !important;
+  }
+
+  .print-venue {
+    color: #64748b !important;
+    font-weight: normal !important;
+  }
+}
+
+

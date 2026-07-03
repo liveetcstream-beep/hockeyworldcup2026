@@ -322,6 +322,73 @@ export default function ScheduleClient() {
           💾 Print & Save PDF Fixtures
         </button>
       </section>
+
+      {/* PRINT-ONLY CONTAINER FOR SAVING/PRINTING BEAUTIFUL PDF */}
+      <div className="print-only-schedule">
+        <div className="print-header">
+          <h1>FIH Hockey World Cup 2026</h1>
+          <p>Official Tournament Fixtures & Match Schedule</p>
+          <p style={{ fontSize: "0.85rem", marginTop: "8px", opacity: 0.9 }}>
+            Co-Hosted by Belgium & Netherlands | Official Timings in CET (Central European Time)
+          </p>
+        </div>
+
+        {/* Men's Section */}
+        <div className="print-section-title">Men's Tournament Matches</div>
+        <div className="print-grid">
+          {ALL_MATCHES.filter(m => m.gender === "Men").map(match => (
+            <div key={match.id} className="print-match-card">
+              <div className="print-match-meta">
+                <span>🗓️ {match.date}</span>
+                <span className="print-match-time">⏱️ {match.timeCET} CET</span>
+              </div>
+              <div className="print-match-teams">
+                <div className="print-team">
+                  <img src={getFlagUrl(match.flagA)} width="20" height="13" alt="" style={{ borderRadius: "2px" }} />
+                  <span>{match.teamA}</span>
+                </div>
+                <span className="print-vs">VS</span>
+                <div className="print-team">
+                  <img src={getFlagUrl(match.flagB)} width="20" height="13" alt="" style={{ borderRadius: "2px" }} />
+                  <span>{match.teamB}</span>
+                </div>
+              </div>
+              <div className="print-match-footer">
+                <span className="print-venue">🏟️ {match.venue}</span>
+                <span>{match.pool}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Women's Section */}
+        <div className="print-section-title" style={{ pageBreakBefore: "always" }}>Women's Tournament Matches</div>
+        <div className="print-grid">
+          {ALL_MATCHES.filter(m => m.gender === "Women").map(match => (
+            <div key={match.id} className="print-match-card">
+              <div className="print-match-meta">
+                <span>🗓️ {match.date}</span>
+                <span className="print-match-time">⏱️ {match.timeCET} CET</span>
+              </div>
+              <div className="print-match-teams">
+                <div className="print-team">
+                  <img src={getFlagUrl(match.flagA)} width="20" height="13" alt="" style={{ borderRadius: "2px" }} />
+                  <span>{match.teamA}</span>
+                </div>
+                <span className="print-vs">VS</span>
+                <div className="print-team">
+                  <img src={getFlagUrl(match.flagB)} width="20" height="13" alt="" style={{ borderRadius: "2px" }} />
+                  <span>{match.teamB}</span>
+                </div>
+              </div>
+              <div className="print-match-footer">
+                <span className="print-venue">🏟️ {match.venue}</span>
+                <span>{match.pool}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
     </>
   );
 }
