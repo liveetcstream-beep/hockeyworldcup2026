@@ -337,13 +337,13 @@ export default function ScheduleClient() {
             flex: "1",
             padding: "1rem",
             borderRadius: "12px",
-            background: activeTab === "official" ? "linear-gradient(135deg, var(--primary) 0%, #0ea5e9 100%)" : "var(--bg-secondary)",
+            background: activeTab === "official" ? "linear-gradient(135deg, var(--primary) 0%, #0284c7 100%)" : "var(--bg-secondary)",
             border: activeTab === "official" ? "none" : "1px solid var(--border-color)",
-            color: "#fff",
+            color: activeTab === "official" ? "#ffffff" : "var(--text-main)",
             fontWeight: "800",
             fontSize: "0.95rem",
             cursor: "pointer",
-            boxShadow: activeTab === "official" ? "0 4px 15px rgba(244, 63, 94, 0.25)" : "none",
+            boxShadow: activeTab === "official" ? "0 4px 15px rgba(192, 0, 48, 0.25)" : "none",
             transition: "all 0.3s ease",
             textTransform: "uppercase",
             letterSpacing: "0.03em"
@@ -357,13 +357,13 @@ export default function ScheduleClient() {
             flex: "1",
             padding: "1rem",
             borderRadius: "12px",
-            background: activeTab === "warmup" ? "linear-gradient(135deg, var(--primary) 0%, #0ea5e9 100%)" : "var(--bg-secondary)",
+            background: activeTab === "warmup" ? "linear-gradient(135deg, var(--primary) 0%, #0284c7 100%)" : "var(--bg-secondary)",
             border: activeTab === "warmup" ? "none" : "1px solid var(--border-color)",
-            color: "#fff",
+            color: activeTab === "warmup" ? "#ffffff" : "var(--text-main)",
             fontWeight: "800",
             fontSize: "0.95rem",
             cursor: "pointer",
-            boxShadow: activeTab === "warmup" ? "0 4px 15px rgba(244, 63, 94, 0.25)" : "none",
+            boxShadow: activeTab === "warmup" ? "0 4px 15px rgba(192, 0, 48, 0.25)" : "none",
             transition: "all 0.3s ease",
             textTransform: "uppercase",
             letterSpacing: "0.03em"
@@ -433,9 +433,9 @@ export default function ScheduleClient() {
                 onClick={handlePrevPage}
                 disabled={currentPage === 1}
                 style={{
-                  background: currentPage === 1 ? "rgba(255,255,255,0.02)" : "var(--bg-secondary)",
+                  background: currentPage === 1 ? "rgba(15, 23, 42, 0.02)" : "var(--bg-secondary)",
                   border: "1px solid var(--border-color)",
-                  color: currentPage === 1 ? "var(--text-muted)" : "#fff",
+                  color: currentPage === 1 ? "var(--text-muted)" : "var(--text-main)",
                   padding: "0.6rem 1.5rem",
                   borderRadius: "8px",
                   fontWeight: "bold",
@@ -446,7 +446,7 @@ export default function ScheduleClient() {
                 ← Previous
               </button>
               
-              <span style={{ fontSize: "0.9rem", color: "#fff", fontWeight: "600" }}>
+              <span style={{ fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>
                 Page {currentPage} of {totalPages}
               </span>
 
@@ -454,9 +454,9 @@ export default function ScheduleClient() {
                 onClick={handleNextPage}
                 disabled={currentPage === totalPages}
                 style={{
-                  background: currentPage === totalPages ? "rgba(255,255,255,0.02)" : "var(--bg-secondary)",
+                  background: currentPage === totalPages ? "rgba(15, 23, 42, 0.02)" : "var(--bg-secondary)",
                   border: "1px solid var(--border-color)",
-                  color: currentPage === totalPages ? "var(--text-muted)" : "#fff",
+                  color: currentPage === totalPages ? "var(--text-muted)" : "var(--text-main)",
                   padding: "0.6rem 1.5rem",
                   borderRadius: "8px",
                   fontWeight: "bold",
@@ -516,7 +516,7 @@ export default function ScheduleClient() {
 
       {/* PDF Schedule Download Section for SEO */}
       <section style={{ 
-        background: "rgba(14, 165, 233, 0.05)", 
+        background: "rgba(192, 0, 48, 0.03)", 
         border: "1px dashed var(--primary)", 
         borderRadius: "16px", 
         padding: "2.2rem 1.5rem", 
@@ -525,8 +525,8 @@ export default function ScheduleClient() {
         marginBottom: "3rem" 
       }}>
         <span style={{ fontSize: "2rem", display: "block", marginBottom: "0.5rem" }}>📄</span>
-        <h3 className="text-xl font-bold text-white mb-2" style={{ fontStyle: "italic" }}>Save Official Hockey World Cup 2026 Schedule (PDF)</h3>
-        <p className="text-sm text-slate-300" style={{ maxWidth: "580px", margin: "0 auto 1.5rem auto", lineHeight: "1.6" }}>
+        <h3 className="text-xl font-bold mb-2" style={{ fontStyle: "italic", color: "var(--text-main)" }}>Save Official Hockey World Cup 2026 Schedule (PDF)</h3>
+        <p className="text-sm" style={{ maxWidth: "580px", margin: "0 auto 1.5rem auto", lineHeight: "1.6", color: "var(--text-muted)" }}>
           Choose your gender category below to download, print, or save a beautifully colored, high-quality A4 PDF schedule of the matches on your device.
         </p>
         <div style={{ display: "flex", justifyContent: "center", flexWrap: "wrap", gap: "1.5rem" }}>

@@ -51,10 +51,10 @@ h1, h2, h3, h4, h5, h6 {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--bg-primary);
+  background: #f1f5f9;
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--bg-tertiary);
+  background: #cbd5e1;
   border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -1160,12 +1160,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom premium styling for VPN instructions and Tactical analysis */
 .vpn-panel-card {
-  background: linear-gradient(135deg, rgba(249, 115, 22, 0.05) 0%, rgba(15, 23, 42, 0.85) 100%);
-  border: 1px solid rgba(249, 115, 22, 0.2);
+  background: linear-gradient(135deg, rgba(226, 164, 0, 0.04) 0%, #ffffff 100%);
+  border: 1px solid rgba(226, 164, 0, 0.2);
   border-radius: 20px;
   padding: 2.5rem;
   margin: 3.5rem 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
 }
 
 .vpn-title {
@@ -1222,17 +1222,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Tactical Deep Dive styling */
 .tactical-analysis-card {
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(8, 12, 20, 0.85) 100%);
+  background: linear-gradient(135deg, rgba(192, 0, 48, 0.03) 0%, #ffffff 100%);
   border: 1px solid var(--border-color);
   border-radius: 20px;
   padding: 2.5rem;
   margin: 4.5rem 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.03);
 }
 
 .tactical-title {
   font-size: 1.9rem;
-  color: #ffffff;
+  color: var(--text-main);
   margin-bottom: 2rem;
   border-left: 4px solid var(--primary);
   padding-left: 1rem;
@@ -1246,8 +1246,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .tactical-column-card {
-  background: rgba(255, 255, 255, 0.015);
-  border: 1px solid var(--border-color);
+  background: var(--bg-primary);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-radius: 16px;
   padding: 2rem;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
@@ -1281,7 +1281,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .insights-section-title {
   font-size: 1.8rem;
-  color: #ffffff;
+  color: var(--text-main);
   margin-bottom: 2rem;
   border-left: 4px solid var(--accent);
   padding-left: 1rem;
@@ -1298,8 +1298,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .insight-col-card {
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(8, 12, 20, 0.85) 100%);
-  border: 1px solid var(--border-color);
+  background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   border-top: 3px solid var(--primary); /* Accent border top */
   border-radius: 16px;
   padding: 2rem;
@@ -1325,8 +1325,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .insight-col-tag {
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+  border: 1px solid rgba(15, 23, 42, 0.08);
   color: var(--text-muted);
   font-size: 0.75rem;
   font-weight: 700;
@@ -1337,7 +1337,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .insight-col-header {
-  color: #ffffff;
+  color: var(--text-main);
   font-size: 1.25rem;
   font-weight: 800;
   font-style: italic;
