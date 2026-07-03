@@ -265,19 +265,19 @@ export default function LiveScoresPage() {
 
         {/* Tactical Scoreboard features info */}
         <section className="my-16">
-          <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-sky-400 pl-4 italic">What to Expect in Our Live Tracker</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm text-slate-300 leading-relaxed">
+          <h2 className="text-2xl font-bold mb-6 border-l-4 border-sky-400 pl-4 italic" style={{ color: "var(--text-main)" }}>What to Expect in Our Live Tracker</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm leading-relaxed">
             <div className="vpn-instruction-box">
-              <strong className="text-white block mb-2">⚡ Penalty Corner Stats</strong>
-              Our system tracks penalty corner count and conversion rates in real-time, which is key for forecasting winner outcomes during the game.
+              <strong className="block mb-2" style={{ color: "var(--text-main)" }}>⚡ Penalty Corner Stats</strong>
+              <span style={{ color: "var(--text-muted)" }}>Our system tracks penalty corner count and conversion rates in real-time, which is key for forecasting winner outcomes during the game.</span>
             </div>
             <div className="vpn-instruction-box">
-              <strong className="text-white block mb-2">🎴 Card Allocations</strong>
-              Live tracking of green cards, yellow cards (temporary suspensions), and red cards, showing which team is playing with fewer players on the turf.
+              <strong className="block mb-2" style={{ color: "var(--text-main)" }}>🎴 Card Allocations</strong>
+              <span style={{ color: "var(--text-muted)" }}>Live tracking of green cards, yellow cards (temporary suspensions), and red cards, showing which team is playing with fewer players on the turf.</span>
             </div>
             <div className="vpn-instruction-box">
-              <strong className="text-white block mb-2">📈 Ball Possession</strong>
-              Circle penetration counts and possession percentages updated session-by-session.
+              <strong className="block mb-2" style={{ color: "var(--text-main)" }}>📈 Ball Possession</strong>
+              <span style={{ color: "var(--text-muted)" }}>Circle penetration counts and possession percentages updated session-by-session.</span>
             </div>
           </div>
         </section>

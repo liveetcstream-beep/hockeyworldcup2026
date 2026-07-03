@@ -34,11 +34,11 @@ export default function H2HPage() {
           <div className="h2h-matchup-header mb-6">
             <div className="flex items-center gap-3 mb-3 flex-wrap">
               <img src="https://flagcdn.com/w40/in.png" width="30" height="20" alt="India flag" style={{ borderRadius: "2px" }} />
-              <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">India vs Pakistan</h2>
+              <h2 className="text-xl md:text-2xl font-bold italic m-0" style={{ color: "var(--text-main)" }}>India vs Pakistan</h2>
               <img src="https://flagcdn.com/w40/pk.png" width="30" height="20" alt="Pakistan flag" style={{ borderRadius: "2px" }} />
               <span className="h2h-badge ml-auto" style={{ background: "linear-gradient(135deg, #f97316 0%, #e11d48 100%)" }}>🔥 Hockey El Clásico</span>
             </div>
-            <p className="text-slate-300 text-sm leading-relaxed m-0">
+            <p className="text-sm leading-relaxed m-0" style={{ color: "var(--text-muted)" }}>
               The subcontinental rivalry between India and Pakistan is the most storied matchup in field hockey history. With a combined 11 Olympic gold medals and 4 World Cup trophies, every encounter is a high-octane battle of skill and passion. Below is the official record of their last 10 head-to-head senior international encounters:
             </p>
           </div>
@@ -142,8 +142,8 @@ export default function H2HPage() {
 
           {/* Last 10 Matches Summary Bar */}
           <div className="h2h-summary-bar" style={{
-            background: "rgba(249, 115, 22, 0.1)",
-            border: "1px solid rgba(249, 115, 22, 0.2)",
+            background: "rgba(249, 115, 22, 0.06)",
+            border: "1px solid rgba(249, 115, 22, 0.18)",
             padding: "1rem 1.5rem",
             borderRadius: "10px",
             display: "flex",
@@ -151,15 +151,15 @@ export default function H2HPage() {
             alignItems: "center",
             marginTop: "1.2rem",
             fontWeight: "bold",
-            color: "#fff",
+            color: "var(--text-main)",
             fontSize: "0.95rem"
           }}>
             <span>📊 Last 10 Encounters Summary:</span>
-            <span style={{ color: "#ff823a" }}>India 7 – 0 Pakistan (3 Draws / Joint Title)</span>
+            <span style={{ color: "#d97706", fontWeight: "800" }}>India 7 – 0 Pakistan (3 Draws / Joint Title)</span>
           </div>
 
-          <p className="text-slate-400 text-xs mt-3 italic" style={{ lineHeight: "1.8", textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
-            <strong>Tactical Analysis:</strong> India has maintained a clear upper hand in the head-to-head records over the last six years, buoyed by their Olympic bronze medal runs and superior structure. Pakistan's transition phase has kept them searching for a win, though their counter-attacking speed remains highly dangerous as shown in their tight 2-1 and 4-3 games. Harmanpreet Singh's drag-flicking and India's solid structural defense generally decide the outcome.
+          <p className="text-xs mt-4 italic" style={{ lineHeight: "1.9", color: "var(--text-muted)", fontSize: "0.9rem", fontFamily: "var(--font-body)" }}>
+            <strong style={{ color: "var(--primary)", fontStyle: "normal" }}>Tactical Analysis:</strong> India has maintained a clear upper hand in the head-to-head records over the last six years, buoyed by their Olympic bronze medal runs and superior structure. Pakistan's transition phase has kept them searching for a win, though their counter-attacking speed remains highly dangerous as shown in their tight 2-1 and 4-3 games. Harmanpreet Singh's drag-flicking and India's solid structural defense generally decide the outcome.
           </p>
         </section>
 
@@ -168,11 +168,11 @@ export default function H2HPage() {
           <div className="h2h-matchup-header mb-6">
             <div className="flex items-center gap-3 mb-3 flex-wrap">
               <img src="https://flagcdn.com/w40/nl.png" width="30" height="20" alt="Netherlands flag" style={{ borderRadius: "2px" }} />
-              <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">Netherlands vs Germany</h2>
+              <h2 className="text-xl md:text-2xl font-bold italic m-0" style={{ color: "var(--text-main)" }}>Netherlands vs Germany</h2>
               <img src="https://flagcdn.com/w40/de.png" width="30" height="20" alt="Germany flag" style={{ borderRadius: "2px" }} />
               <span className="h2h-badge ml-auto" style={{ background: "linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)" }}>🇪🇺 European Classic</span>
             </div>
-            <p className="text-slate-300 text-sm leading-relaxed m-0">
+            <p className="text-sm leading-relaxed m-0" style={{ color: "var(--text-muted)" }}>
               The European Classic. Netherlands (Oranje) and Germany (Honamas) have locked horns since the early 1970s. Tactically sophisticated and intensely competitive, this derby represents elite hockey standard. Below is the official record of their last 10 head-to-head encounters:
             </p>
           </div>
@@ -276,8 +276,8 @@ export default function H2HPage() {
 
           {/* Last 10 Matches Summary Bar */}
           <div className="h2h-summary-bar" style={{
-            background: "rgba(14, 165, 233, 0.1)",
-            border: "1px solid rgba(14, 165, 233, 0.2)",
+            background: "rgba(14, 165, 233, 0.06)",
+            border: "1px solid rgba(14, 165, 233, 0.18)",
             padding: "1rem 1.5rem",
             borderRadius: "10px",
             display: "flex",
@@ -285,15 +285,15 @@ export default function H2HPage() {
             alignItems: "center",
             marginTop: "1.2rem",
             fontWeight: "bold",
-            color: "#fff",
+            color: "var(--text-main)",
             fontSize: "0.95rem"
           }}>
             <span>📊 Last 10 Encounters Summary:</span>
-            <span style={{ color: "#38bdf8" }}>Netherlands 4 – 2 Germany (4 Draws)</span>
+            <span style={{ color: "#0284c7", fontWeight: "800" }}>Netherlands 4 – 2 Germany (4 Draws)</span>
           </div>
 
-          <p className="text-slate-400 text-xs mt-3 italic" style={{ lineHeight: "1.8", textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
-            <strong>Tactical Analysis:</strong> Matches between the Dutch Oranje and German Honamas are highly structured. Over their last 10 games, 4 resulted in draws, showcasing the extreme tactical parity. Netherlands relies on quick wing transitions and midfield playmaking via Brinkman, whereas Germany specializes in circle defenses and clinical penalty corner conversions (via Wellen). 
+          <p className="text-xs mt-4 italic" style={{ lineHeight: "1.9", color: "var(--text-muted)", fontSize: "0.9rem", fontFamily: "var(--font-body)" }}>
+            <strong style={{ color: "var(--primary)", fontStyle: "normal" }}>Tactical Analysis:</strong> Matches between the Dutch Oranje and German Honamas are highly structured. Over their last 10 games, 4 resulted in draws, showcasing the extreme tactical parity. Netherlands relies on quick wing transitions and midfield playmaking via Brinkman, whereas Germany specializes in circle defenses and clinical penalty corner conversions (via Wellen). 
           </p>
         </section>
 
@@ -302,11 +302,11 @@ export default function H2HPage() {
           <div className="h2h-matchup-header mb-6">
             <div className="flex items-center gap-3 mb-3 flex-wrap">
               <img src="https://flagcdn.com/w40/au.png" width="30" height="20" alt="Australia flag" style={{ borderRadius: "2px" }} />
-              <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">Australia vs Belgium</h2>
+              <h2 className="text-xl md:text-2xl font-bold italic m-0" style={{ color: "var(--text-main)" }}>Australia vs Belgium</h2>
               <img src="https://flagcdn.com/w40/be.png" width="30" height="20" alt="Belgium flag" style={{ borderRadius: "2px" }} />
               <span className="h2h-badge ml-auto" style={{ background: "linear-gradient(135deg, #22c55e 0%, #15803d 100%)" }}>⚡ World Class Powerhouses</span>
             </div>
-            <p className="text-slate-300 text-sm leading-relaxed m-0">
+            <p className="text-sm leading-relaxed m-0" style={{ color: "var(--text-muted)" }}>
               The Kookaburras (Australia) and Red Lions (Belgium) represent the ultimate modern hockey speed. Having contested the Olympic final in Tokyo, their games are high-scoring, physical affairs played at a breakneck pace. Below is the official record of their last 10 head-to-head encounters:
             </p>
           </div>
@@ -410,8 +410,8 @@ export default function H2HPage() {
 
           {/* Last 10 Matches Summary Bar */}
           <div className="h2h-summary-bar" style={{
-            background: "rgba(34, 197, 94, 0.1)",
-            border: "1px solid rgba(34, 197, 94, 0.2)",
+            background: "rgba(34, 197, 94, 0.06)",
+            border: "1px solid rgba(34, 197, 94, 0.18)",
             padding: "1rem 1.5rem",
             borderRadius: "10px",
             display: "flex",
@@ -419,15 +419,15 @@ export default function H2HPage() {
             alignItems: "center",
             marginTop: "1.2rem",
             fontWeight: "bold",
-            color: "#fff",
+            color: "var(--text-main)",
             fontSize: "0.95rem"
           }}>
             <span>📊 Last 10 Encounters Summary:</span>
-            <span style={{ color: "#4ade80" }}>Australia 5 – 2 Belgium (3 Draws)</span>
+            <span style={{ color: "#16a34a", fontWeight: "800" }}>Australia 5 – 2 Belgium (3 Draws)</span>
           </div>
 
-          <p className="text-slate-400 text-xs mt-3 italic" style={{ lineHeight: "1.8", textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
-            <strong>Tactical Analysis:</strong> Modern hockey's highest octane rivalry. Australia leads the wins margin 5-2 over the last 10 encounters, though Belgium won the two most critical games—the Tokyo Olympic Gold Medal Match (on penalties) and the 2023 World Cup Semi-Final. Australia utilizes extreme counter-pressing and physical conditioning, while Belgium replies with mature possessional structures led by Arthur Van Doren and Victor Wegnez.
+          <p className="text-xs mt-4 italic" style={{ lineHeight: "1.9", color: "var(--text-muted)", fontSize: "0.9rem", fontFamily: "var(--font-body)" }}>
+            <strong style={{ color: "var(--primary)", fontStyle: "normal" }}>Tactical Analysis:</strong> Modern hockey's highest octane rivalry. Australia leads the wins margin 5-2 over the last 10 encounters, though Belgium won the two most critical games—the Tokyo Olympic Gold Medal Match (on penalties) and the 2023 World Cup Semi-Final. Australia utilizes extreme counter-pressing and physical conditioning, while Belgium replies with mature possessional structures led by Arthur Van Doren and Victor Wegnez.
           </p>
         </section>
 
@@ -436,11 +436,11 @@ export default function H2HPage() {
           <div className="h2h-matchup-header mb-6">
             <div className="flex items-center gap-3 mb-3 flex-wrap">
               <img src="https://flagcdn.com/w40/nl.png" width="30" height="20" alt="Netherlands flag" style={{ borderRadius: "2px" }} />
-              <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">Netherlands vs Argentina</h2>
+              <h2 className="text-xl md:text-2xl font-bold italic m-0" style={{ color: "var(--text-main)" }}>Netherlands vs Argentina</h2>
               <img src="https://flagcdn.com/w40/ar.png" width="30" height="20" alt="Argentina flag" style={{ borderRadius: "2px" }} />
               <span className="h2h-badge ml-auto" style={{ background: "linear-gradient(135deg, #f43f5e 0%, #be123c 100%)" }}>🚺 Women's El Clásico</span>
             </div>
-            <p className="text-slate-300 text-sm leading-relaxed m-0">
+            <p className="text-sm leading-relaxed m-0" style={{ color: "var(--text-muted)" }}>
               The pinnacle of women's field hockey. The Oranje Dames (Netherlands) and Las Leonas (Argentina) have dominated the global landscape for decades. High emotional stakes, exceptional speed, and tactical flair define their meetings. Below is the official record of their last 10 head-to-head senior encounters:
             </p>
           </div>
@@ -544,8 +544,8 @@ export default function H2HPage() {
 
           {/* Last 10 Matches Summary Bar */}
           <div className="h2h-summary-bar" style={{
-            background: "rgba(244, 63, 94, 0.1)",
-            border: "1px solid rgba(244, 63, 94, 0.2)",
+            background: "rgba(244, 63, 94, 0.06)",
+            border: "1px solid rgba(244, 63, 94, 0.18)",
             padding: "1rem 1.5rem",
             borderRadius: "10px",
             display: "flex",
@@ -553,15 +553,15 @@ export default function H2HPage() {
             alignItems: "center",
             marginTop: "1.2rem",
             fontWeight: "bold",
-            color: "#fff",
+            color: "var(--text-main)",
             fontSize: "0.95rem"
           }}>
             <span>📊 Last 10 Encounters Summary:</span>
-            <span style={{ color: "#fb7185" }}>Netherlands 8 – 1 Argentina (1 Draw)</span>
+            <span style={{ color: "#e11d48", fontWeight: "800" }}>Netherlands 8 – 1 Argentina (1 Draw)</span>
           </div>
 
-          <p className="text-slate-400 text-xs mt-3 italic" style={{ lineHeight: "1.8", textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
-            <strong>Tactical Analysis:</strong> Netherlands women's team has maintained absolute dominance over Las Leonas, winning 8 of the last 10 meetings, including gold medal clashes at the Tokyo Olympics and 2022 World Cup. Argentina relies on a passionate defensive effort and fast counter-plays led by Maria Granatto, but the Dutch side's incredible pass accuracy, structural discipline, and deep bench depth make them almost unbeatable.
+          <p className="text-xs mt-4 italic" style={{ lineHeight: "1.9", color: "var(--text-muted)", fontSize: "0.9rem", fontFamily: "var(--font-body)" }}>
+            <strong style={{ color: "var(--primary)", fontStyle: "normal" }}>Tactical Analysis:</strong> Netherlands women's team has maintained absolute dominance over Las Leonas, winning 8 of the last 10 meetings, including gold medal clashes at the Tokyo Olympics and 2022 World Cup. Argentina relies on a passionate defensive effort and fast counter-plays led by Maria Granatto, but the Dutch side's incredible pass accuracy, structural discipline, and deep bench depth make them almost unbeatable.
           </p>
         </section>
       </main>

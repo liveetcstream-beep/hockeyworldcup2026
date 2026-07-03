@@ -223,22 +223,22 @@ export default function TeamsPage() {
 
         {/* Detailed Tactical Predictions */}
         <section className="my-16" style={{
-          background: "linear-gradient(135deg, rgba(14, 165, 233, 0.08) 0%, rgba(244, 63, 94, 0.03) 100%)",
-          border: "1px solid rgba(255, 255, 255, 0.08)",
+          background: "linear-gradient(135deg, rgba(192, 0, 48, 0.03) 0%, #f8fafc 100%)",
+          border: "1px solid rgba(15, 23, 42, 0.08)",
           padding: "3rem 2.5rem",
           borderRadius: "24px",
-          boxShadow: "0 10px 30px rgba(0,0,0,0.3)"
+          boxShadow: "0 8px 30px rgba(15, 23, 42, 0.03)"
         }}>
           <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", marginBottom: "1.8rem" }}>
             <span style={{ fontSize: "2rem" }}>🏆</span>
-            <h2 className="text-2xl font-bold text-white m-0" style={{ fontStyle: "italic", letterSpacing: "0.02em" }}>Tournament Analyst Outlook</h2>
+            <h2 className="text-2xl font-bold m-0" style={{ fontStyle: "italic", letterSpacing: "0.02em", color: "var(--text-main)" }}>Tournament Analyst Outlook</h2>
           </div>
-          <div className="text-slate-300 space-y-6" style={{ fontSize: "1.05rem", lineHeight: "2.0", letterSpacing: "0.02em" }}>
+          <div style={{ fontSize: "1.05rem", lineHeight: "2.0", letterSpacing: "0.01em", color: "var(--text-muted)" }}>
             <p style={{ margin: "0 0 1.5rem 0" }}>
-              The co-hosts, <strong className="text-white">Belgium</strong> (World No. 2) and the <strong className="text-white">Netherlands</strong> (World No. 1), enter the 2026 tournament as heavy favorites. Belgium’s Golden Generation, led by Arthur Van Doren, will enjoy massive local backing at the Belfius Arena in Wavre.
+              The co-hosts, <strong style={{ color: "var(--text-main)" }}>Belgium</strong> (World No. 2) and the <strong style={{ color: "var(--text-main)" }}>Netherlands</strong> (World No. 1), enter the 2026 tournament as heavy favorites. Belgium's Golden Generation, led by Arthur Van Doren, will enjoy massive local backing at the Belfius Arena in Wavre.
             </p>
             <p style={{ margin: "0" }}>
-              Meanwhile, <strong className="text-white">Germany</strong> (reigning champions) and a resurgent <strong className="text-white">India</strong> (Pool A contenders) will provide fierce competition. The matches between Netherlands and Germany in the group stage are expected to record the highest TV viewership. Underdogs like Wales and Chile will look to exploit physical counter-attack opportunities on the high-speed water-based turfs.
+              Meanwhile, <strong style={{ color: "var(--text-main)" }}>Germany</strong> (reigning champions) and a resurgent <strong style={{ color: "var(--text-main)" }}>India</strong> (Pool A contenders) will provide fierce competition. The matches between Netherlands and Germany in the group stage are expected to record the highest TV viewership. Underdogs like Wales and Chile will look to exploit physical counter-attack opportunities on the high-speed water-based turfs.
             </p>
           </div>
         </section>
