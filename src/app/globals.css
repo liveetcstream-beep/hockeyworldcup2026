@@ -1573,3 +1573,49 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 8px 25px rgba(244, 63, 94, 0.5);
   background: linear-gradient(135deg, #0ea5e9 0%, var(--primary) 100%);
 }
+
+/* Guidelines section styling */
+.guidelines-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin: 3rem 0;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+}
+
+.guidelines-card h2 {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid var(--primary);
+  padding-left: 1rem;
+  font-style: italic;
+}
+
+.guidelines-card p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 1.5rem !important;
+}
+
+.guidelines-card p:last-of-type {
+  margin-bottom: 2rem !important;
+}
+
+@media (max-width: 768px) {
+  .guidelines-card {
+    padding: 1.5rem;
+    margin: 2rem 0;
+  }
+  .guidelines-card h2 {
+    font-size: 1.2rem;
+  }
+  .guidelines-card p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}
+

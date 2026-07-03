@@ -82,12 +82,12 @@ export default function SchedulePage() {
         <ScheduleClient />
 
         {/* Informational Rich Content Section */}
-        <section className="my-16 bg-slate-900 border border-slate-800 p-8 rounded-2xl text-sm text-slate-300 leading-relaxed">
-          <h2 className="text-xl font-bold text-white mb-4 border-l-4 border-sky-400 pl-4">Important Matchday Attendance Guidelines</h2>
-          <p className="mb-4">
+        <section className="guidelines-card">
+          <h2>Important Matchday Attendance Guidelines</h2>
+          <p>
             If you are traveling to Wagener Stadium (Amstelveen) or Belfius Hockey Arena (Wavre), please note that gates open exactly 90 minutes before the scheduled pushback. Standard security searches are performed at all gates, and bags larger than A4 size are not allowed inside the spectator stands.
           </p>
-          <p className="mb-4">
+          <p>
             For local timezone adjustments: the official tournament clock runs on Central European Time (CET / GMT+2 during summer). If you are viewing streams from India, Pakistan, or the Americas, please use the interactive timezone selector on this page to prevent confusion, as broadcasting partners will commence live coverage exactly 15 minutes before the pushback.
           </p>
           <div className="expert-quote-box">

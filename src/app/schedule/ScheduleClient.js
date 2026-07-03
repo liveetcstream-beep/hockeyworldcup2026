@@ -30,7 +30,7 @@ const ALL_MATCHES = [
   { id: 25, date: "August 30, 2026", timeCET: "19:00", teamA: "Winner SF 1", flagA: "un", teamB: "Winner SF 2", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" }
 ];
 
-const ITEMS_PER_PAGE = 5;
+const ITEMS_PER_PAGE = 13;
 
 export default function ScheduleClient() {
   const [selectedTimezone, setSelectedTimezone] = useState("CET");
