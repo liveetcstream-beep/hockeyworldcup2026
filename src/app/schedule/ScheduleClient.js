@@ -119,7 +119,7 @@ const WARMUP_MATCHES = [
   { id: 108, date: "August 13, 2026", timeCET: "18:00", teamA: "England", flagA: "gb-eng", teamB: "United States", flagB: "us", gender: "Women", pool: "Warm-Up", venue: "Belfius Hockey Arena, Wavre (BE)" }
 ];
 
-const ITEMS_PER_PAGE = 35; // Setting to 35 keeps the 69 total matches under exactly 2 pages!
+const ITEMS_PER_PAGE = 15;
 
 export default function ScheduleClient() {
   const [selectedTimezone, setSelectedTimezone] = useState("CET");
@@ -164,7 +164,7 @@ export default function ScheduleClient() {
 
   // Filter & Search matches
   const filteredMatches = useMemo(() => {
-    return ALL_MATCHES.filter((match) => {
+    const list = ALL_MATCHES.filter((match) => {
       const matchesGender = genderFilter === "All" || match.gender === genderFilter;
       const matchesPool = poolFilter === "All" || match.pool === poolFilter;
       const matchesSearch = 
@@ -173,6 +173,17 @@ export default function ScheduleClient() {
         match.venue.toLowerCase().includes(searchTerm.toLowerCase());
       
       return matchesGender && matchesPool && matchesSearch;
+    });
+
+    // Chronological date & time sorting
+    return list.sort((a, b) => {
+      const dayA = parseInt(a.date.match(/\d+/)[0]);
+      const dayB = parseInt(b.date.match(/\d+/)[0]);
+      if (dayA !== dayB) return dayA - dayB;
+      
+      const [hA, mA] = a.timeCET.split(":").map(Number);
+      const [hB, mB] = b.timeCET.split(":").map(Number);
+      return (hA * 60 + mA) - (hB * 60 + mB);
     });
   }, [genderFilter, poolFilter, searchTerm]);
 
