@@ -4,6 +4,7 @@ export default function sitemap() {
   // List of all 11 routes establishing our topical authority silo
   const routes = [
     "",
+    "/schedule",
     "/broadcasters",
     "/venues",
     "/teams",

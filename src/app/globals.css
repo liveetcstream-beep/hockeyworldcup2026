@@ -1552,3 +1552,24 @@ h1, h2, h3, h4, h5, h6 {
   .format-table-container td:nth-of-type(4)::before { content: "Loser Status" !important; }
 }
 
+.view-more-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary) 0%, #0ea5e9 100%);
+  color: #fff !important;
+  font-weight: 700;
+  padding: 0.9rem 2.2rem;
+  border-radius: 9999px;
+  text-decoration: none !important;
+  font-size: 0.95rem;
+  box-shadow: 0 4px 15px rgba(244, 63, 94, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-top: 1rem;
+}
+
+.view-more-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(244, 63, 94, 0.5);
+  background: linear-gradient(135deg, #0ea5e9 0%, var(--primary) 100%);
+}
