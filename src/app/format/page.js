@@ -102,7 +102,7 @@ export default function FormatPage() {
         {/* Crossover Math Mapping Table */}
         <section className="my-16">
           <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-sky-400 pl-4 italic">Crossover Matchups Mapping</h2>
-          <div className="table-responsive">
+          <div className="table-responsive format-table-container">
             <table className="sports-table">
               <thead>
                 <tr>
@@ -110,6 +110,7 @@ export default function FormatPage() {
                   <th>Matchup Formula</th>
                   <th>Winner Progression</th>
                   <th>Loser Status</th>
+
                 </tr>
               </thead>
               <tbody>
