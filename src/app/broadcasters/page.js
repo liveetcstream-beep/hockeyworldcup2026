@@ -46,67 +46,67 @@ export default function BroadcastersPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td>
+                  <td data-label="Country">
                     <img src="https://flagcdn.com/w40/pk.png" width="20" height="14" alt="Pakistan flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
                     <strong>Pakistan</strong>
                   </td>
-                  <td>Ten Sports / PTV Sports</td>
-                  <td><span className="channel-tag">tapmad</span> (Exclusive HD)</td>
-                  <td>Paid Subscription</td>
+                  <td data-label="Partner">Ten Sports / PTV Sports</td>
+                  <td data-label="App / Portal"><span className="channel-tag">tapmad</span> (Exclusive HD)</td>
+                  <td data-label="Access">Paid Subscription</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td data-label="Country">
                     <img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="India flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
                     <strong>India</strong>
                   </td>
-                  <td>Sports18 Network</td>
-                  <td><span className="channel-tag">JioCinema</span> App</td>
-                  <td>Free (Ad-Supported)</td>
+                  <td data-label="Partner">Sports18 Network</td>
+                  <td data-label="App / Portal"><span className="channel-tag">JioCinema</span> App</td>
+                  <td data-label="Access">Free (Ad-Supported)</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td data-label="Country">
                     <img src="https://flagcdn.com/w40/gb.png" width="20" height="14" alt="UK flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
                     <strong>United Kingdom</strong>
                   </td>
-                  <td>TNT Sports</td>
-                  <td><span className="channel-tag">Watch.Hockey</span> Portal</td>
-                  <td>PPV Pass</td>
+                  <td data-label="Partner">TNT Sports</td>
+                  <td data-label="App / Portal"><span className="channel-tag">Watch.Hockey</span> Portal</td>
+                  <td data-label="Access">PPV Pass</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td data-label="Country">
                     <img src="https://flagcdn.com/w40/us.png" width="20" height="14" alt="USA flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
                     <strong>United States</strong>
                   </td>
-                  <td>Fox Sports 2</td>
-                  <td><span className="channel-tag">Fox Sports App</span> / Watch.Hockey</td>
-                  <td>Cable Login / PPV</td>
+                  <td data-label="Partner">Fox Sports 2</td>
+                  <td data-label="App / Portal"><span className="channel-tag">Fox Sports App</span> / Watch.Hockey</td>
+                  <td data-label="Access">Cable Login / PPV</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td data-label="Country">
                     <img src="https://flagcdn.com/w40/nl.png" width="20" height="14" alt="Netherlands flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
                     <strong>Netherlands</strong>
                   </td>
-                  <td>NOS Sport</td>
-                  <td><span className="channel-tag">NOS.nl</span> App</td>
-                  <td>Free (NL Territory Only)</td>
+                  <td data-label="Partner">NOS Sport</td>
+                  <td data-label="App / Portal"><span className="channel-tag">NOS.nl</span> App</td>
+                  <td data-label="Access">Free (NL Territory Only)</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td data-label="Country">
                     <img src="https://flagcdn.com/w40/be.png" width="20" height="14" alt="Belgium flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
                     <strong>Belgium</strong>
                   </td>
-                  <td>RTBF / VRT</td>
-                  <td><span className="channel-tag">Auvio</span> / VRT MAX</td>
-                  <td>Free (BE Territory Only)</td>
+                  <td data-label="Partner">RTBF / VRT</td>
+                  <td data-label="App / Portal"><span className="channel-tag">Auvio</span> / VRT MAX</td>
+                  <td data-label="Access">Free (BE Territory Only)</td>
                 </tr>
                 <tr>
-                  <td>
+                  <td data-label="Country">
                     <img src="https://flagcdn.com/w40/au.png" width="20" height="14" alt="Australia flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} /> 
                     <strong>Australia</strong>
                   </td>
-                  <td>Fox Sports Australia</td>
-                  <td><span className="channel-tag">Kayo Sports</span> / Watch.Hockey</td>
-                  <td>Premium Subscription</td>
+                  <td data-label="Partner">Fox Sports Australia</td>
+                  <td data-label="App / Portal"><span className="channel-tag">Kayo Sports</span> / Watch.Hockey</td>
+                  <td data-label="Access">Premium Subscription</td>
                 </tr>
               </tbody>
             </table>

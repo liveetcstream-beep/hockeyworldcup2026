@@ -67,7 +67,7 @@ export default function PastResultsPage() {
         {/* Final Standings Table */}
         <section className="my-16">
           <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-sky-400 pl-4 italic">Final Standings & Rankings</h2>
-          <div className="table-responsive">
+          <div className="table-responsive results-table-container">
             <table className="sports-table">
               <thead>
                 <tr>

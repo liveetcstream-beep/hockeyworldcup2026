@@ -98,10 +98,11 @@ export default function HistoryPage() {
         {/* Full Winners Table Since 1971 */}
         <section className="my-16">
           <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-sky-400 pl-4 italic">World Cup Champions List (1971 - 2023)</h2>
-          <div className="table-responsive">
+          <div className="table-responsive history-table-container">
             <table className="sports-table">
               <thead>
                 <tr>
+
                   <th>Year</th>
                   <th>Host Country</th>
                   <th>Winner / Champion</th>

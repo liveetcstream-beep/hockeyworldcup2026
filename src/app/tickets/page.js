@@ -83,32 +83,32 @@ export default function TicketsPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Category 1 (Grandstand Premium)</strong></td>
-                  <td>Central covered seats, player tunnel view, hospitality lounge access</td>
-                  <td>€85.00</td>
-                  <td>€90.00</td>
-                  <td>✅ €5 Train Rebate</td>
+                  <td data-label="Category"><strong>Category 1 (Grandstand Premium)</strong></td>
+                  <td data-label="Access Type">Central covered seats, player tunnel view, hospitality lounge access</td>
+                  <td data-label="Amstelveen Price">€85.00</td>
+                  <td data-label="Wavre Price">€90.00</td>
+                  <td data-label="Eco-Discount">✅ €5 Train Rebate</td>
                 </tr>
                 <tr>
-                  <td><strong>Category 2 (Mid-Tier Stands)</strong></td>
-                  <td>Side pitch line views, elevated standard seating</td>
-                  <td>€55.00</td>
-                  <td>€60.00</td>
-                  <td>✅ €5 Train Rebate</td>
+                  <td data-label="Category"><strong>Category 2 (Mid-Tier Stands)</strong></td>
+                  <td data-label="Access Type">Side pitch line views, elevated standard seating</td>
+                  <td data-label="Amstelveen Price">€55.00</td>
+                  <td data-label="Wavre Price">€60.00</td>
+                  <td data-label="Eco-Discount">✅ €5 Train Rebate</td>
                 </tr>
                 <tr>
-                  <td><strong>Category 3 (General Admission)</strong></td>
-                  <td>Behind-the-goal stands, unreserved open seating</td>
-                  <td>€30.00</td>
-                  <td>€35.00</td>
-                  <td>❌ Not Applicable</td>
+                  <td data-label="Category"><strong>Category 3 (General Admission)</strong></td>
+                  <td data-label="Access Type">Behind-the-goal stands, unreserved open seating</td>
+                  <td data-label="Amstelveen Price">€30.00</td>
+                  <td data-label="Wavre Price">€35.00</td>
+                  <td data-label="Eco-Discount">❌ Not Applicable</td>
                 </tr>
                 <tr>
-                  <td><strong>Family Pass (2 Adults + 2 Kids)</strong></td>
-                  <td>Reserved family sector behind benches</td>
-                  <td>€140.00</td>
-                  <td>€150.00</td>
-                  <td>✅ Free Kid Rail Pass</td>
+                  <td data-label="Category"><strong>Family Pass (2 Adults + 2 Kids)</strong></td>
+                  <td data-label="Access Type">Reserved family sector behind benches</td>
+                  <td data-label="Amstelveen Price">€140.00</td>
+                  <td data-label="Wavre Price">€150.00</td>
+                  <td data-label="Eco-Discount">✅ Free Kid Rail Pass</td>
                 </tr>
               </tbody>
             </table>
