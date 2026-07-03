@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 export const metadata = {
   title: "H2H Records & Last 10 Matches - Hockey World Cup 2026",
-  description: "Detailed H2H stats, goals, and history for World Cup 2026 opening day matches: India vs Wales, Germany vs Malaysia, and Netherlands vs Chile.",
+  description: "Detailed H2H stats, last 10 match summaries, win ratios, and tactical descriptions for the top qualified teams in the FIH Hockey World Cup 2026.",
 };
 
 export default function H2HPage() {
@@ -15,9 +15,9 @@ export default function H2HPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Matchup Histories & Statistics</p>
-          <h1 className="hero-title">Head-to-Head (H2H) Sports Records</h1>
+          <h1 className="hero-title">Head-to-Head (H2H) Records</h1>
           <p className="hero-description">
-            Deep-dive into the historical matchups of opening fixtures, including full data on the last 10 encounters, goals scored, win ratios, and tournament statistics.
+            Deep-dive into the historical matchups of the top-ranked teams competing in the 2026 World Cup, including full data on the last 10 encounters, goals scored, win ratios, and tactical explanations.
           </p>
 
           <div className="eeat-badge-container">
@@ -32,14 +32,14 @@ export default function H2HPage() {
       </section>
 
       <main className="sports-container py-12">
-        {/* Matchup: India vs Pakistan - Historic Clásico */}
-        <section className="my-16" style={{ border: "1px solid rgba(249, 115, 22, 0.25)", padding: "1.8rem", borderRadius: "20px", background: "rgba(249, 115, 22, 0.02)" }}>
+        {/* Matchup 1: India vs Pakistan - Historic Clásico */}
+        <section className="my-16" style={{ border: "1px solid rgba(249, 115, 22, 0.25)", padding: "2rem", borderRadius: "20px", background: "rgba(249, 115, 22, 0.02)" }}>
           <div className="h2h-matchup-header mb-6">
             <div className="flex items-center gap-3 mb-3 flex-wrap">
               <img src="https://flagcdn.com/w40/in.png" width="30" height="20" alt="India flag" style={{ borderRadius: "2px" }} />
               <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">India vs Pakistan</h2>
               <img src="https://flagcdn.com/w40/pk.png" width="30" height="20" alt="Pakistan flag" style={{ borderRadius: "2px" }} />
-              <span className="h2h-badge ml-auto" style={{ background: "linear-gradient(135deg, #f97316 0%, #e11d48 100%)" }}>🔥 Hockey El Clásico H2H</span>
+              <span className="h2h-badge ml-auto" style={{ background: "linear-gradient(135deg, #f97316 0%, #e11d48 100%)" }}>🔥 Hockey El Clásico</span>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed m-0">
               The subcontinental rivalry between India and Pakistan is the most storied matchup in field hockey history. With a combined 11 Olympic gold medals and 4 World Cup trophies, every encounter is a high-octane battle of skill and passion. Below is the official record of their last 10 head-to-head senior international encounters:
@@ -142,539 +142,41 @@ export default function H2HPage() {
               </tbody>
             </table>
           </div>
+
+          {/* Last 10 Matches Summary Bar */}
+          <div className="h2h-summary-bar" style={{
+            background: "rgba(249, 115, 22, 0.1)",
+            border: "1px solid rgba(249, 115, 22, 0.2)",
+            padding: "1rem 1.5rem",
+            borderRadius: "10px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginTop: "1.2rem",
+            fontWeight: "bold",
+            color: "#fff",
+            fontSize: "0.95rem"
+          }}>
+            <span>📊 Last 10 Encounters Summary:</span>
+            <span style={{ color: "#ff823a" }}>India 7 – 0 Pakistan (3 Draws / Joint Title)</span>
+          </div>
+
+          <p className="text-slate-400 text-xs mt-3 italic" style={{ lineHeight: "1.8", textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
+            <strong>Tactical Analysis:</strong> India has maintained a clear upper hand in the head-to-head records over the last six years, buoyed by their Olympic bronze medal runs and superior structure. Pakistan's transition phase has kept them searching for a win, though their counter-attacking speed remains highly dangerous as shown in their tight 2-1 and 4-3 games. Harmanpreet Singh's drag-flicking and India's solid structural defense generally decide the outcome.
+          </p>
         </section>
 
-        {/* Matchup 1: India vs Wales */}
-        <section className="my-16">
+        {/* Matchup 2: Netherlands vs Germany - European Classic */}
+        <section className="my-16" style={{ border: "1px solid rgba(14, 165, 233, 0.25)", padding: "2rem", borderRadius: "20px", background: "rgba(14, 165, 233, 0.02)" }}>
           <div className="h2h-matchup-header mb-6">
-            <div className="flex items-center gap-3 mb-3">
-              <img src="https://flagcdn.com/w40/in.png" width="30" height="20" alt="India flag" style={{ borderRadius: "2px" }} />
-              <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">India vs Wales</h2>
-              <img src="https://flagcdn.com/w40/gb-wls.png" width="30" height="20" alt="Wales flag" style={{ borderRadius: "2px" }} />
-              <span className="h2h-badge ml-auto">Men's H2H Record</span>
-            </div>
-            <p className="text-slate-300 text-sm leading-relaxed m-0">
-              India has maintained absolute dominance over Wales in international hockey. Across their history, India has won the majority of their fixtures, while Wales is still searching for their first win against the subcontinental giants. Below is the record of their last encounters:
-            </p>
-          </div>
-          
-          <div className="table-responsive">
-            <table className="sports-table">
-              <thead>
-                <tr>
-                  <th>No.</th>
-                  <th>Date</th>
-                  <th>Tournament</th>
-                  <th>Venue</th>
-                  <th>Result (Score)</th>
-                  <th>Outcome</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Jan 19, 2023</td>
-                  <td>FIH Men's World Cup</td>
-                  <td>Bhubaneswar, India</td>
-                  <td>India 4 – 2 Wales</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Aug 4, 2022</td>
-                  <td>Commonwealth Games</td>
-                  <td>Birmingham, UK</td>
-                  <td>India 4 – 1 Wales</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>May 12, 2018</td>
-                  <td>Friendly Series</td>
-                  <td>Cardiff, Wales</td>
-                  <td>India 3 – 0 Wales</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Apr 8, 2018</td>
-                  <td>Commonwealth Games</td>
-                  <td>Gold Coast, Australia</td>
-                  <td>India 4 – 3 Wales</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Oct 12, 2014</td>
-                  <td>Lander Test Cup</td>
-                  <td>New Delhi, India</td>
-                  <td>India 2 – 0 Wales</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Oct 5, 2010</td>
-                  <td>Commonwealth Games</td>
-                  <td>New Delhi, India</td>
-                  <td>India 7 – 4 Wales</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>Jul 18, 2008</td>
-                  <td>Warmup Test</td>
-                  <td>Wavre, Belgium</td>
-                  <td>India 2 – 1 Wales</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>Jun 12, 2006</td>
-                  <td>Invitational Cup</td>
-                  <td>Amstelveen, Netherlands</td>
-                  <td>India 5 – 1 Wales</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>Mar 15, 2004</td>
-                  <td>Test Match</td>
-                  <td>Cardiff, Wales</td>
-                  <td>India 1 – 1 Wales</td>
-                  <td>🤝 Draw</td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>Sep 2, 2002</td>
-                  <td>Friendly Tour</td>
-                  <td>Wavre, Belgium</td>
-                  <td>India 2 – 2 Wales</td>
-                  <td>🤝 Draw</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Matchup 2: Germany vs Malaysia */}
-        <section className="my-16">
-          <div className="h2h-matchup-header mb-6">
-            <div className="flex items-center gap-3 mb-3">
-              <img src="https://flagcdn.com/w40/de.png" width="30" height="20" alt="Germany flag" style={{ borderRadius: "2px" }} />
-              <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">Germany vs Malaysia</h2>
-              <img src="https://flagcdn.com/w40/my.png" width="30" height="20" alt="Malaysia flag" style={{ borderRadius: "2px" }} />
-              <span className="h2h-badge ml-auto">Men's H2H Record</span>
-            </div>
-            <p className="text-slate-300 text-sm leading-relaxed m-0">
-              Germany has historically held the upper hand against Malaysia. However, the Speedy Tigers (Malaysia) have registered notable draws and upset victories in friendly international series. Here is the breakdown of their last 10 head-to-head fixtures:
-            </p>
-          </div>
-
-          <div className="table-responsive">
-            <table className="sports-table">
-              <thead>
-                <tr>
-                  <th>No.</th>
-                  <th>Date</th>
-                  <th>Tournament</th>
-                  <th>Venue</th>
-                  <th>Result (Score)</th>
-                  <th>Outcome</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Jan 22, 2023</td>
-                  <td>FIH Men's World Cup</td>
-                  <td>Rourkela, India</td>
-                  <td>Germany 3 – 0 Malaysia</td>
-                  <td>🇩🇪 Germany Win</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Nov 14, 2021</td>
-                  <td>Friendly Series</td>
-                  <td>Düsseldorf, Germany</td>
-                  <td>Germany 5 – 1 Malaysia</td>
-                  <td>🇩🇪 Germany Win</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Nov 12, 2021</td>
-                  <td>Friendly Series</td>
-                  <td>Düsseldorf, Germany</td>
-                  <td>Germany 3 – 1 Malaysia</td>
-                  <td>🇩🇪 Germany Win</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Apr 20, 2019</td>
-                  <td>FIH Pro League Prep</td>
-                  <td>Kuala Lumpur, Malaysia</td>
-                  <td>Germany 4 – 4 Malaysia</td>
-                  <td>🤝 Draw</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Mar 12, 2018</td>
-                  <td>Azlan Shah Cup</td>
-                  <td>Ipoh, Malaysia</td>
-                  <td>Germany 3 – 1 Malaysia</td>
-                  <td>🇩🇪 Germany Win</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Mar 8, 2017</td>
-                  <td>Azlan Shah Cup</td>
-                  <td>Ipoh, Malaysia</td>
-                  <td>Germany 0 – 1 Malaysia</td>
-                  <td>🇲🇾 Malaysia Win</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>Sep 10, 2016</td>
-                  <td>Test Match</td>
-                  <td>Düsseldorf, Germany</td>
-                  <td>Germany 4 – 2 Malaysia</td>
-                  <td>🇩🇪 Germany Win</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>Jul 28, 2014</td>
-                  <td>Commonwealth Games</td>
-                  <td>Glasgow, Scotland</td>
-                  <td>Germany 6 – 1 Malaysia</td>
-                  <td>🇩🇪 Germany Win</td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>Mar 18, 2012</td>
-                  <td>Olympic Qualifier</td>
-                  <td>Dublin, Ireland</td>
-                  <td>Germany 3 – 2 Malaysia</td>
-                  <td>🇩🇪 Germany Win</td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>Oct 10, 2010</td>
-                  <td>Friendly Cup</td>
-                  <td>Amstelveen, Netherlands</td>
-                  <td>Germany 2 – 2 Malaysia</td>
-                  <td>🤝 Draw</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Matchup 3: Netherlands vs Chile */}
-        <section className="my-16">
-          <div className="h2h-matchup-header mb-6">
-            <div className="flex items-center gap-3 mb-3">
-              <img src="https://flagcdn.com/w40/nl.png" width="30" height="20" alt="Netherlands flag" style={{ borderRadius: "2px" }} />
-              <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">Netherlands vs Chile</h2>
-              <img src="https://flagcdn.com/w40/cl.png" width="30" height="20" alt="Chile flag" style={{ borderRadius: "2px" }} />
-              <span className="h2h-badge ml-auto">Women's H2H Record</span>
-            </div>
-            <p className="text-slate-300 text-sm leading-relaxed m-0">
-              The Netherlands women's national hockey team (Oranje Dames) is currently ranked No. 1 in the world and has never lost a match to Chile. Chile's "Las Diablas" have been showing steady growth, but the Dutch side remains the strongest team in female field hockey. Here is the historical match listing:
-            </p>
-          </div>
-
-          <div className="table-responsive">
-            <table className="sports-table">
-              <thead>
-                <tr>
-                  <th>No.</th>
-                  <th>Date</th>
-                  <th>Tournament</th>
-                  <th>Venue</th>
-                  <th>Result (Score)</th>
-                  <th>Outcome</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Jul 6, 2022</td>
-                  <td>Women's Hockey World Cup</td>
-                  <td>Amstelveen, Netherlands</td>
-                  <td>Netherlands 3 – 1 Chile</td>
-                  <td>🇳🇱 Netherlands Win</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Jan 24, 2020</td>
-                  <td>Friendly Series</td>
-                  <td>Santiago, Chile</td>
-                  <td>Netherlands 4 – 0 Chile</td>
-                  <td>🇳🇱 Netherlands Win</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Jan 22, 2020</td>
-                  <td>Friendly Series</td>
-                  <td>Santiago, Chile</td>
-                  <td>Netherlands 5 – 1 Chile</td>
-                  <td>🇳🇱 Netherlands Win</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Jan 19, 2020</td>
-                  <td>Friendly Series</td>
-                  <td>Santiago, Chile</td>
-                  <td>Netherlands 6 – 0 Chile</td>
-                  <td>🇳🇱 Netherlands Win</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Jun 12, 2018</td>
-                  <td>Practice Cup</td>
-                  <td>Amstelveen, Netherlands</td>
-                  <td>Netherlands 3 – 0 Chile</td>
-                  <td>🇳🇱 Netherlands Win</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Matchup 4: Australia vs Belgium */}
-        <section className="my-16">
-          <div className="h2h-matchup-header mb-6">
-            <div className="flex items-center gap-3 mb-3">
-              <img src="https://flagcdn.com/w40/au.png" width="30" height="20" alt="Australia flag" style={{ borderRadius: "2px" }} />
-              <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">Australia vs Belgium</h2>
-              <img src="https://flagcdn.com/w40/be.png" width="30" height="20" alt="Belgium flag" style={{ borderRadius: "2px" }} />
-              <span className="h2h-badge ml-auto">Men's H2H Record</span>
-            </div>
-            <p className="text-slate-300 text-sm leading-relaxed m-0">
-              The Kookaburras (Australia) and Red Lions (Belgium) represent the ultimate modern hockey rivalry. Having contested the Olympic final in Tokyo, their games are high-scoring, physical affairs played on the highest speed.
-            </p>
-          </div>
-
-          <div className="table-responsive">
-            <table className="sports-table">
-              <thead>
-                <tr>
-                  <th>No.</th>
-                  <th>Date</th>
-                  <th>Tournament</th>
-                  <th>Venue</th>
-                  <th>Result (Score)</th>
-                  <th>Outcome</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>May 26, 2024</td>
-                  <td>FIH Pro League</td>
-                  <td>Antwerp, Belgium</td>
-                  <td>Belgium 2 – 2 Australia</td>
-                  <td>🤝 Draw (5-3 Pen BE)</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>June 2, 2024</td>
-                  <td>FIH Pro League</td>
-                  <td>London, UK</td>
-                  <td>Belgium 1 – 4 Australia</td>
-                  <td>🇦🇺 Australia Win</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>June 18, 2023</td>
-                  <td>FIH Pro League</td>
-                  <td>Antwerp, Belgium</td>
-                  <td>Belgium 1 – 3 Australia</td>
-                  <td>🇦🇺 Australia Win</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>June 16, 2023</td>
-                  <td>FIH Pro League</td>
-                  <td>Antwerp, Belgium</td>
-                  <td>Belgium 2 – 1 Australia</td>
-                  <td>🇧🇪 Belgium Win</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Jan 24, 2023</td>
-                  <td>FIH Men's World Cup</td>
-                  <td>Bhubaneswar, India</td>
-                  <td>Belgium 2 – 0 Australia</td>
-                  <td>🇧🇪 Belgium Win</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>June 26, 2022</td>
-                  <td>FIH Pro League</td>
-                  <td>Terrassa, Spain</td>
-                  <td>Belgium 3 – 3 Australia</td>
-                  <td>🤝 Draw (1-3 Pen AU)</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>June 25, 2022</td>
-                  <td>FIH Pro League</td>
-                  <td>Terrassa, Spain</td>
-                  <td>Belgium 2 – 4 Australia</td>
-                  <td>🇦🇺 Australia Win</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>Aug 5, 2021</td>
-                  <td>Olympic Games Tokyo</td>
-                  <td>Tokyo, Japan</td>
-                  <td>Belgium 1 – 1 Australia</td>
-                  <td>🤝 Draw (3-2 Pen BE)</td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>June 15, 2019</td>
-                  <td>FIH Pro League</td>
-                  <td>Antwerp, Belgium</td>
-                  <td>Australia 2 – 0 Belgium</td>
-                  <td>🇦🇺 Australia Win</td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>Feb 3, 2018</td>
-                  <td>Test Match</td>
-                  <td>Melbourne, Australia</td>
-                  <td>Australia 3 – 2 Belgium</td>
-                  <td>🇦🇺 Australia Win</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Matchup 5: India vs Spain */}
-        <section className="my-16">
-          <div className="h2h-matchup-header mb-6">
-            <div className="flex items-center gap-3 mb-3">
-              <img src="https://flagcdn.com/w40/in.png" width="30" height="20" alt="India flag" style={{ borderRadius: "2px" }} />
-              <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">India vs Spain</h2>
-              <img src="https://flagcdn.com/w40/es.png" width="30" height="20" alt="Spain flag" style={{ borderRadius: "2px" }} />
-              <span className="h2h-badge ml-auto">Men's H2H Record</span>
-            </div>
-            <p className="text-slate-300 text-sm leading-relaxed m-0">
-              Matches between India and the Red Sticks (Spain) are always tightly contested. While India has traditionally found success at major events, Spain is renowned for their structural defense and clinical counter-attacks on European soil.
-            </p>
-          </div>
-
-          <div className="table-responsive">
-            <table className="sports-table">
-              <thead>
-                <tr>
-                  <th>No.</th>
-                  <th>Date</th>
-                  <th>Tournament</th>
-                  <th>Venue</th>
-                  <th>Result (Score)</th>
-                  <th>Outcome</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>June 22, 2024</td>
-                  <td>FIH Pro League</td>
-                  <td>London, UK</td>
-                  <td>India 1 – 2 Spain</td>
-                  <td>🇪🇸 Spain Win</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>June 8, 2024</td>
-                  <td>FIH Pro League</td>
-                  <td>Antwerp, Belgium</td>
-                  <td>India 2 – 3 Spain</td>
-                  <td>🇪🇸 Spain Win</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Feb 19, 2024</td>
-                  <td>FIH Pro League</td>
-                  <td>Rourkela, India</td>
-                  <td>India 2 – 2 Spain</td>
-                  <td>🤝 Draw (8-7 Pen IN)</td>
-                </tr>
-                <tr>
-                  <td>4</td>
-                  <td>Feb 10, 2024</td>
-                  <td>FIH Pro League</td>
-                  <td>Bhubaneswar, India</td>
-                  <td>India 4 – 1 Spain</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-                <tr>
-                  <td>5</td>
-                  <td>Jan 26, 2023</td>
-                  <td>FIH Men's World Cup</td>
-                  <td>Rourkela, India</td>
-                  <td>India 5 – 2 Spain</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-                <tr>
-                  <td>6</td>
-                  <td>Jan 13, 2023</td>
-                  <td>FIH Men's World Cup</td>
-                  <td>Bhubaneswar, India</td>
-                  <td>India 2 – 0 Spain</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-                <tr>
-                  <td>7</td>
-                  <td>Oct 30, 2022</td>
-                  <td>FIH Pro League</td>
-                  <td>Bhubaneswar, India</td>
-                  <td>India 2 – 3 Spain</td>
-                  <td>🇪🇸 Spain Win</td>
-                </tr>
-                <tr>
-                  <td>8</td>
-                  <td>Oct 28, 2022</td>
-                  <td>FIH Pro League</td>
-                  <td>Bhubaneswar, India</td>
-                  <td>India 3 – 2 Spain</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-                <tr>
-                  <td>9</td>
-                  <td>Feb 26, 2022</td>
-                  <td>FIH Pro League</td>
-                  <td>Bhubaneswar, India</td>
-                  <td>India 5 – 4 Spain</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-                <tr>
-                  <td>10</td>
-                  <td>July 27, 2021</td>
-                  <td>Olympic Games Tokyo</td>
-                  <td>Tokyo, Japan</td>
-                  <td>India 3 – 0 Spain</td>
-                  <td>🇮🇳 India Win</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        {/* Matchup 6: Netherlands vs Germany */}
-        <section className="my-16">
-          <div className="h2h-matchup-header mb-6">
-            <div className="flex items-center gap-3 mb-3">
+            <div className="flex items-center gap-3 mb-3 flex-wrap">
               <img src="https://flagcdn.com/w40/nl.png" width="30" height="20" alt="Netherlands flag" style={{ borderRadius: "2px" }} />
               <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">Netherlands vs Germany</h2>
               <img src="https://flagcdn.com/w40/de.png" width="30" height="20" alt="Germany flag" style={{ borderRadius: "2px" }} />
-              <span className="h2h-badge ml-auto">Men's H2H Record</span>
+              <span className="h2h-badge ml-auto" style={{ background: "linear-gradient(135deg, #0ea5e9 0%, #2563eb 100%)" }}>🇪🇺 European Classic</span>
             </div>
             <p className="text-slate-300 text-sm leading-relaxed m-0">
-              The European Classic. Netherlands (Oranje) and Germany (Honamas) have locked horns since the early 1970s. Tactically sophisticated and intensely competitive, this derby represents elite hockey standard.
+              The European Classic. Netherlands (Oranje) and Germany (Honamas) have locked horns since the early 1970s. Tactically sophisticated and intensely competitive, this derby represents elite hockey standard. Below is the official record of their last 10 head-to-head encounters:
             </p>
           </div>
 
@@ -692,88 +194,378 @@ export default function H2HPage() {
               </thead>
               <tbody>
                 <tr>
-                  <td>1</td>
-                  <td>June 24, 2024</td>
-                  <td>FIH Pro League</td>
-                  <td>Utrecht, Netherlands</td>
-                  <td>Netherlands 1 – 1 Germany</td>
-                  <td>🤝 Draw (1-3 Pen DE)</td>
+                  <td data-label="No.">1</td>
+                  <td data-label="Date">June 24, 2024</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Utrecht, Netherlands</td>
+                  <td data-label="Result (Score)">Netherlands 1 – 1 Germany</td>
+                  <td data-label="Outcome">🤝 Draw (1-3 Pen DE)</td>
                 </tr>
                 <tr>
-                  <td>2</td>
-                  <td>June 23, 2024</td>
-                  <td>FIH Pro League</td>
-                  <td>Utrecht, Netherlands</td>
-                  <td>Netherlands 3 – 2 Germany</td>
-                  <td>🇳🇱 Netherlands Win</td>
+                  <td data-label="No.">2</td>
+                  <td data-label="Date">June 23, 2024</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Utrecht, Netherlands</td>
+                  <td data-label="Result (Score)">Netherlands 3 – 2 Germany</td>
+                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
                 </tr>
                 <tr>
-                  <td>3</td>
-                  <td>June 20, 2023</td>
-                  <td>FIH Pro League</td>
-                  <td>Amsterdam, Netherlands</td>
-                  <td>Netherlands 2 – 2 Germany</td>
-                  <td>🤝 Draw (1-4 Pen DE)</td>
+                  <td data-label="No.">3</td>
+                  <td data-label="Date">June 20, 2023</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Amsterdam, Netherlands</td>
+                  <td data-label="Result (Score)">Netherlands 2 – 2 Germany</td>
+                  <td data-label="Outcome">🤝 Draw (1-4 Pen DE)</td>
                 </tr>
                 <tr>
-                  <td>4</td>
-                  <td>June 16, 2023</td>
-                  <td>FIH Pro League</td>
-                  <td>Amsterdam, Netherlands</td>
-                  <td>Netherlands 4 – 1 Germany</td>
-                  <td>🇳🇱 Netherlands Win</td>
+                  <td data-label="No.">4</td>
+                  <td data-label="Date">June 16, 2023</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Amsterdam, Netherlands</td>
+                  <td data-label="Result (Score)">Netherlands 4 – 1 Germany</td>
+                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
                 </tr>
                 <tr>
-                  <td>5</td>
-                  <td>Jan 27, 2023</td>
-                  <td>FIH Men's World Cup</td>
-                  <td>Bhubaneswar, India</td>
-                  <td>Germany 4 – 3 Netherlands</td>
-                  <td>🇩🇪 Germany Win</td>
+                  <td data-label="No.">5</td>
+                  <td data-label="Date">Jan 27, 2023</td>
+                  <td data-label="Tournament">FIH Men's World Cup</td>
+                  <td data-label="Venue">Bhubaneswar, India</td>
+                  <td data-label="Result (Score)">Germany 4 – 3 Netherlands</td>
+                  <td data-label="Outcome">🇩🇪 Germany Win</td>
                 </tr>
                 <tr>
-                  <td>6</td>
-                  <td>June 12, 2022</td>
-                  <td>FIH Pro League</td>
-                  <td>Hamburg, Germany</td>
-                  <td>Netherlands 3 – 2 Germany</td>
-                  <td>🇳🇱 Netherlands Win</td>
+                  <td data-label="No.">6</td>
+                  <td data-label="Date">June 12, 2022</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Hamburg, Germany</td>
+                  <td data-label="Result (Score)">Netherlands 3 – 2 Germany</td>
+                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
                 </tr>
                 <tr>
-                  <td>7</td>
-                  <td>June 11, 2022</td>
-                  <td>FIH Pro League</td>
-                  <td>Hamburg, Germany</td>
-                  <td>Netherlands 2 – 1 Germany</td>
-                  <td>🇳🇱 Netherlands Win</td>
+                  <td data-label="No.">7</td>
+                  <td data-label="Date">June 11, 2022</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Hamburg, Germany</td>
+                  <td data-label="Result (Score)">Netherlands 2 – 1 Germany</td>
+                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
                 </tr>
                 <tr>
-                  <td>8</td>
-                  <td>July 30, 2021</td>
-                  <td>Olympic Games Tokyo</td>
-                  <td>Tokyo, Japan</td>
-                  <td>Germany 3 – 1 Netherlands</td>
-                  <td>🇩🇪 Germany Win</td>
+                  <td data-label="No.">8</td>
+                  <td data-label="Date">July 30, 2021</td>
+                  <td data-label="Tournament">Olympic Games Tokyo</td>
+                  <td data-label="Venue">Tokyo, Japan</td>
+                  <td data-label="Result (Score)">Germany 3 – 1 Netherlands</td>
+                  <td data-label="Outcome">🇩🇪 Germany Win</td>
                 </tr>
                 <tr>
-                  <td>9</td>
-                  <td>June 13, 2021</td>
-                  <td>EuroHockey Final</td>
-                  <td>Amstelveen, Netherlands</td>
-                  <td>Germany 2 – 2 Netherlands</td>
-                  <td>🤝 Draw (1-4 Pen NL)</td>
+                  <td data-label="No.">9</td>
+                  <td data-label="Date">June 13, 2021</td>
+                  <td data-label="Tournament">EuroHockey Final</td>
+                  <td data-label="Venue">Amstelveen, Netherlands</td>
+                  <td data-label="Result (Score)">Germany 2 – 2 Netherlands</td>
+                  <td data-label="Outcome">🤝 Draw (1-4 Pen NL)</td>
                 </tr>
                 <tr>
-                  <td>10</td>
-                  <td>June 4, 2021</td>
-                  <td>EuroHockey Pool Stage</td>
-                  <td>Amstelveen, Netherlands</td>
-                  <td>Germany 2 – 2 Netherlands</td>
-                  <td>🤝 Draw (3-0 Pen DE)</td>
+                  <td data-label="No.">10</td>
+                  <td data-label="Date">June 4, 2021</td>
+                  <td data-label="Tournament">EuroHockey Pool Stage</td>
+                  <td data-label="Venue">Amstelveen, Netherlands</td>
+                  <td data-label="Result (Score)">Germany 2 – 2 Netherlands</td>
+                  <td data-label="Outcome">🤝 Draw (3-0 Pen DE)</td>
                 </tr>
               </tbody>
             </table>
           </div>
+
+          {/* Last 10 Matches Summary Bar */}
+          <div className="h2h-summary-bar" style={{
+            background: "rgba(14, 165, 233, 0.1)",
+            border: "1px solid rgba(14, 165, 233, 0.2)",
+            padding: "1rem 1.5rem",
+            borderRadius: "10px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginTop: "1.2rem",
+            fontWeight: "bold",
+            color: "#fff",
+            fontSize: "0.95rem"
+          }}>
+            <span>📊 Last 10 Encounters Summary:</span>
+            <span style={{ color: "#38bdf8" }}>Netherlands 4 – 2 Germany (4 Draws)</span>
+          </div>
+
+          <p className="text-slate-400 text-xs mt-3 italic" style={{ lineHeight: "1.8", textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
+            <strong>Tactical Analysis:</strong> Matches between the Dutch Oranje and German Honamas are highly structured. Over their last 10 games, 4 resulted in draws, showcasing the extreme tactical parity. Netherlands relies on quick wing transitions and midfield playmaking via Brinkman, whereas Germany specializes in circle defenses and clinical penalty corner conversions (via Wellen). 
+          </p>
+        </section>
+
+        {/* Matchup 3: Australia vs Belgium - World Class Battle */}
+        <section className="my-16" style={{ border: "1px solid rgba(34, 197, 94, 0.25)", padding: "2rem", borderRadius: "20px", background: "rgba(34, 197, 94, 0.02)" }}>
+          <div className="h2h-matchup-header mb-6">
+            <div className="flex items-center gap-3 mb-3 flex-wrap">
+              <img src="https://flagcdn.com/w40/au.png" width="30" height="20" alt="Australia flag" style={{ borderRadius: "2px" }} />
+              <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">Australia vs Belgium</h2>
+              <img src="https://flagcdn.com/w40/be.png" width="30" height="20" alt="Belgium flag" style={{ borderRadius: "2px" }} />
+              <span className="h2h-badge ml-auto" style={{ background: "linear-gradient(135deg, #22c55e 0%, #15803d 100%)" }}>⚡ World Class Powerhouses</span>
+            </div>
+            <p className="text-slate-300 text-sm leading-relaxed m-0">
+              The Kookaburras (Australia) and Red Lions (Belgium) represent the ultimate modern hockey speed. Having contested the Olympic final in Tokyo, their games are high-scoring, physical affairs played at a breakneck pace. Below is the official record of their last 10 head-to-head encounters:
+            </p>
+          </div>
+
+          <div className="table-responsive">
+            <table className="sports-table">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Date</th>
+                  <th>Tournament</th>
+                  <th>Venue</th>
+                  <th>Result (Score)</th>
+                  <th>Outcome</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="No.">1</td>
+                  <td data-label="Date">May 26, 2024</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Antwerp, Belgium</td>
+                  <td data-label="Result (Score)">Belgium 2 – 2 Australia</td>
+                  <td data-label="Outcome">🤝 Draw (5-3 Pen BE)</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">2</td>
+                  <td data-label="Date">June 2, 2024</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">London, UK</td>
+                  <td data-label="Result (Score)">Belgium 1 – 4 Australia</td>
+                  <td data-label="Outcome">🇦🇺 Australia Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">3</td>
+                  <td data-label="Date">June 18, 2023</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Antwerp, Belgium</td>
+                  <td data-label="Result (Score)">Belgium 1 – 3 Australia</td>
+                  <td data-label="Outcome">🇦🇺 Australia Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">4</td>
+                  <td data-label="Date">June 16, 2023</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Antwerp, Belgium</td>
+                  <td data-label="Result (Score)">Belgium 2 – 1 Australia</td>
+                  <td data-label="Outcome">🇧🇪 Belgium Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">5</td>
+                  <td data-label="Date">Jan 24, 2023</td>
+                  <td data-label="Tournament">FIH Men's World Cup</td>
+                  <td data-label="Venue">Bhubaneswar, India</td>
+                  <td data-label="Result (Score)">Belgium 2 – 0 Australia</td>
+                  <td data-label="Outcome">🇧🇪 Belgium Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">6</td>
+                  <td data-label="Date">June 26, 2022</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Terrassa, Spain</td>
+                  <td data-label="Result (Score)">Belgium 3 – 3 Australia</td>
+                  <td data-label="Outcome">🤝 Draw (1-3 Pen AU)</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">7</td>
+                  <td data-label="Date">June 25, 2022</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Terrassa, Spain</td>
+                  <td data-label="Result (Score)">Belgium 2 – 4 Australia</td>
+                  <td data-label="Outcome">🇦🇺 Australia Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">8</td>
+                  <td data-label="Date">Aug 5, 2021</td>
+                  <td data-label="Tournament">Olympic Games Tokyo Final</td>
+                  <td data-label="Venue">Tokyo, Japan</td>
+                  <td data-label="Result (Score)">Belgium 1 – 1 Australia</td>
+                  <td data-label="Outcome">🤝 Draw (3-2 Pen BE)</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">9</td>
+                  <td data-label="Date">June 15, 2019</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Antwerp, Belgium</td>
+                  <td data-label="Result (Score)">Australia 2 – 0 Belgium</td>
+                  <td data-label="Outcome">🇦🇺 Australia Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">10</td>
+                  <td data-label="Date">Feb 3, 2018</td>
+                  <td data-label="Tournament">Test Match</td>
+                  <td data-label="Venue">Melbourne, Australia</td>
+                  <td data-label="Result (Score)">Australia 3 – 2 Belgium</td>
+                  <td data-label="Outcome">🇦🇺 Australia Win</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Last 10 Matches Summary Bar */}
+          <div className="h2h-summary-bar" style={{
+            background: "rgba(34, 197, 94, 0.1)",
+            border: "1px solid rgba(34, 197, 94, 0.2)",
+            padding: "1rem 1.5rem",
+            borderRadius: "10px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginTop: "1.2rem",
+            fontWeight: "bold",
+            color: "#fff",
+            fontSize: "0.95rem"
+          }}>
+            <span>📊 Last 10 Encounters Summary:</span>
+            <span style={{ color: "#4ade80" }}>Australia 5 – 2 Belgium (3 Draws)</span>
+          </div>
+
+          <p className="text-slate-400 text-xs mt-3 italic" style={{ lineHeight: "1.8", textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
+            <strong>Tactical Analysis:</strong> Modern hockey's highest octane rivalry. Australia leads the wins margin 5-2 over the last 10 encounters, though Belgium won the two most critical games—the Tokyo Olympic Gold Medal Match (on penalties) and the 2023 World Cup Semi-Final. Australia utilizes extreme counter-pressing and physical conditioning, while Belgium replies with mature possessional structures led by Arthur Van Doren and Victor Wegnez.
+          </p>
+        </section>
+
+        {/* Matchup 4: Netherlands vs Argentina - Women's El Clásico */}
+        <section className="my-16" style={{ border: "1px solid rgba(244, 63, 94, 0.25)", padding: "2rem", borderRadius: "20px", background: "rgba(244, 63, 94, 0.02)" }}>
+          <div className="h2h-matchup-header mb-6">
+            <div className="flex items-center gap-3 mb-3 flex-wrap">
+              <img src="https://flagcdn.com/w40/nl.png" width="30" height="20" alt="Netherlands flag" style={{ borderRadius: "2px" }} />
+              <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">Netherlands vs Argentina</h2>
+              <img src="https://flagcdn.com/w40/ar.png" width="30" height="20" alt="Argentina flag" style={{ borderRadius: "2px" }} />
+              <span className="h2h-badge ml-auto" style={{ background: "linear-gradient(135deg, #f43f5e 0%, #be123c 100%)" }}>🚺 Women's El Clásico</span>
+            </div>
+            <p className="text-slate-300 text-sm leading-relaxed m-0">
+              The pinnacle of women's field hockey. The Oranje Dames (Netherlands) and Las Leonas (Argentina) have dominated the global landscape for decades. High emotional stakes, exceptional speed, and tactical flair define their meetings. Below is the official record of their last 10 head-to-head senior encounters:
+            </p>
+          </div>
+
+          <div className="table-responsive">
+            <table className="sports-table">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Date</th>
+                  <th>Tournament</th>
+                  <th>Venue</th>
+                  <th>Result (Score)</th>
+                  <th>Outcome</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="No.">1</td>
+                  <td data-label="Date">Aug 9, 2024</td>
+                  <td data-label="Tournament">Olympic Games Paris (Semi-Final)</td>
+                  <td data-label="Venue">Paris, France</td>
+                  <td data-label="Result (Score)">Netherlands 3 – 0 Argentina</td>
+                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">2</td>
+                  <td data-label="Date">Dec 10, 2023</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Santiago del Estero, Argentina</td>
+                  <td data-label="Result (Score)">Netherlands 2 – 1 Argentina</td>
+                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">3</td>
+                  <td data-label="Date">Dec 8, 2023</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Santiago del Estero, Argentina</td>
+                  <td data-label="Result (Score)">Netherlands 4 – 1 Argentina</td>
+                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">4</td>
+                  <td data-label="Date">Jun 10, 2023</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Eindhoven, Netherlands</td>
+                  <td data-label="Result (Score)">Netherlands 7 – 2 Argentina</td>
+                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">5</td>
+                  <td data-label="Date">Jun 9, 2023</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Eindhoven, Netherlands</td>
+                  <td data-label="Result (Score)">Netherlands 2 – 0 Argentina</td>
+                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">6</td>
+                  <td data-label="Date">Jul 17, 2022</td>
+                  <td data-label="Tournament">Women's World Cup Final</td>
+                  <td data-label="Venue">Terrassa, Spain</td>
+                  <td data-label="Result (Score)">Netherlands 3 – 1 Argentina</td>
+                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">7</td>
+                  <td data-label="Date">Aug 6, 2021</td>
+                  <td data-label="Tournament">Olympic Games Tokyo Final</td>
+                  <td data-label="Venue">Tokyo, Japan</td>
+                  <td data-label="Result (Score)">Netherlands 3 – 1 Argentina</td>
+                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">8</td>
+                  <td data-label="Date">Feb 16, 2020</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Buenos Aires, Argentina</td>
+                  <td data-label="Result (Score)">Netherlands 0 – 2 Argentina</td>
+                  <td data-label="Outcome">🇦🇷 Argentina Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">9</td>
+                  <td data-label="Date">Feb 15, 2020</td>
+                  <td data-label="Tournament">FIH Pro League</td>
+                  <td data-label="Venue">Buenos Aires, Argentina</td>
+                  <td data-label="Result (Score)">Netherlands 3 – 1 Argentina</td>
+                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">10</td>
+                  <td data-label="Date">Jun 29, 2019</td>
+                  <td data-label="Tournament">FIH Pro League Grand Final</td>
+                  <td data-label="Venue">Amstelveen, Netherlands</td>
+                  <td data-label="Result (Score)">Netherlands 2 – 2 Argentina</td>
+                  <td data-label="Outcome">🤝 Draw (4-3 Pen NL)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          {/* Last 10 Matches Summary Bar */}
+          <div className="h2h-summary-bar" style={{
+            background: "rgba(244, 63, 94, 0.1)",
+            border: "1px solid rgba(244, 63, 94, 0.2)",
+            padding: "1rem 1.5rem",
+            borderRadius: "10px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginTop: "1.2rem",
+            fontWeight: "bold",
+            color: "#fff",
+            fontSize: "0.95rem"
+          }}>
+            <span>📊 Last 10 Encounters Summary:</span>
+            <span style={{ color: "#fb7185" }}>Netherlands 8 – 1 Argentina (1 Draw)</span>
+          </div>
+
+          <p className="text-slate-400 text-xs mt-3 italic" style={{ lineHeight: "1.8", textShadow: "0 1px 2px rgba(0,0,0,0.5)" }}>
+            <strong>Tactical Analysis:</strong> Netherlands women's team has maintained absolute dominance over Las Leonas, winning 8 of the last 10 meetings, including gold medal clashes at the Tokyo Olympics and 2022 World Cup. Argentina relies on a passionate defensive effort and fast counter-plays led by Maria Granatto, but the Dutch side's incredible pass accuracy, structural discipline, and deep bench depth make them almost unbeatable.
+          </p>
         </section>
       </main>
 
