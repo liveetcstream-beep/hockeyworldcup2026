@@ -4,23 +4,23 @@
   --font-heading: var(--font-outfit), 'Outfit', sans-serif;
   --font-body: var(--font-plus-jakarta), 'Plus Jakarta Sans', sans-serif;
   
-  /* Deep Ice Hockey Dark Theme Color Palette */
-  --bg-primary: #080c14;       /* Ultra deep navy */
-  --bg-secondary: #0f172a;     /* Slate navy for cards */
-  --bg-tertiary: #1e293b;      /* Lighter navy for borders & hovers */
+  /* Sports Light Mode Color Palette */
+  --bg-primary: #f8fafc;       /* Light slate-50 */
+  --bg-secondary: #ffffff;     /* Pure white for cards */
+  --bg-tertiary: #f1f5f9;      /* Slate-100 for borders & hovers */
   
-  --primary: #0ea5e9;          /* Ice Cyan */
-  --primary-glow: rgba(14, 165, 233, 0.2);
-  --secondary: #38bdf8;        /* Light Ice Blue */
-  --accent: #f97316;           /* Neon/Puck Orange for highlights and Live badges */
-  --accent-glow: rgba(249, 115, 22, 0.25);
+  --primary: #c00030;          /* Official FIH Crimson Red */
+  --primary-glow: rgba(192, 0, 48, 0.08);
+  --secondary: #0284c7;        /* Athletic Sky Blue */
+  --accent: #e2a400;           /* Official FIH Amber Gold */
+  --accent-glow: rgba(226, 164, 0, 0.12);
   
-  --text-main: #f8fafc;        /* Off-white */
-  --text-muted: #94a3b8;       /* Cool gray */
-  --text-dark: #94a3b8;        /* Lightened from slate-500 to slate-400 for contrast */
-  --border-color: rgba(255, 255, 255, 0.08);
-  --glass-bg: rgba(15, 23, 42, 0.75);
-  --glass-border: rgba(255, 255, 255, 0.05);
+  --text-main: #0f172a;        /* Dark slate-900 */
+  --text-muted: #475569;       /* Slate-600 */
+  --text-dark: #0f172a;        /* Dark slate-900 */
+  --border-color: rgba(15, 23, 42, 0.08);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(15, 23, 42, 0.05);
 }
 
 * {
@@ -1800,5 +1800,282 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: normal !important;
   }
 }
+
+/* ==========================================
+   OFFICIAL FIH SPORTS LIGHT-MODE OVERRIDES
+   ========================================== */
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-main) !important;
+}
+
+/* Nav Header Overrides */
+.sports-header {
+  background: #ffffff !important;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03) !important;
+}
+
+.logo-text {
+  color: var(--text-main) !important;
+}
+
+.logo-text span {
+  color: var(--primary) !important;
+}
+
+.sports-nav a {
+  color: var(--text-muted) !important;
+}
+
+.sports-nav a:hover,
+.sports-nav a.active-link {
+  color: var(--primary) !important;
+}
+
+.dropdown-trigger {
+  color: var(--text-muted) !important;
+}
+
+.dropdown-trigger:hover {
+  color: var(--primary) !important;
+}
+
+.dropdown-menu {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08) !important;
+}
+
+.dropdown-menu a {
+  color: var(--text-muted) !important;
+}
+
+.dropdown-menu a:hover {
+  background: var(--bg-tertiary) !important;
+  color: var(--primary) !important;
+}
+
+.menu-toggle-btn {
+  color: var(--text-main) !important;
+}
+
+/* Mobile Menu Overrides */
+.mobile-nav-overlay {
+  background: #ffffff !important;
+  border-left: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+.mobile-nav-close {
+  color: var(--text-main) !important;
+}
+
+.mobile-nav-links a {
+  color: var(--text-muted) !important;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04) !important;
+}
+
+.mobile-nav-links a:hover {
+  color: var(--primary) !important;
+}
+
+.mobile-nav-header {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Hero Section Overrides */
+.hero-title {
+  background: linear-gradient(135deg, #0f172a 40%, var(--primary) 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.eeat-badge {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+.eeat-badge strong {
+  color: var(--text-main) !important;
+}
+
+/* Timezone Card Overrides */
+.timezone-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04) !important;
+}
+
+.timezone-select {
+  background: #ffffff !important;
+  color: var(--text-main) !important;
+  border: 1px solid rgba(15, 23, 42, 0.15) !important;
+  background-image: url("data:image/svg+xml;utf8,<svg fill='%230f172a' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>") !important;
+}
+
+.timezone-item {
+  background: var(--bg-primary) !important;
+  border: 1px solid rgba(15, 23, 42, 0.06) !important;
+}
+
+.timezone-item:hover {
+  border-color: rgba(15, 23, 42, 0.15) !important;
+  box-shadow: 0 5px 15px rgba(15, 23, 42, 0.03) !important;
+}
+
+.timezone-item.active-timezone {
+  background: var(--primary-glow) !important;
+  border-color: var(--primary) !important;
+  box-shadow: 0 5px 15px rgba(192, 0, 48, 0.08) !important;
+}
+
+.tz-time {
+  color: var(--text-main) !important;
+}
+
+/* Match Card & Grid Overrides */
+.match-card {
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.02) !important;
+}
+
+.match-card:hover {
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06) !important;
+}
+
+.team-badge-wrap {
+  background: var(--bg-tertiary) !important;
+  box-shadow: 0 4px 10px rgba(15, 23, 42, 0.05) !important;
+}
+
+.team-name {
+  color: var(--text-main) !important;
+}
+
+.match-details-row {
+  background: var(--bg-tertiary) !important;
+}
+
+/* Sports Tables Overrides */
+.sports-table th {
+  background-color: var(--primary) !important;
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  font-size: 0.82rem !important;
+  letter-spacing: 0.04em !important;
+  border: none !important;
+}
+
+.sports-table td {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06) !important;
+  color: var(--text-main) !important;
+}
+
+.sports-table tr:hover td {
+  background-color: rgba(15, 23, 42, 0.01) !important;
+}
+
+/* Page Components specific overrides */
+.venue-detail h4,
+.broadcaster-card h3,
+.ticket-category h3,
+.rule-card h3,
+.points-card h3,
+.history-intro h3,
+.history-card h3 {
+  color: var(--text-main) !important;
+}
+
+.venue-card,
+.broadcaster-card,
+.ticket-card,
+.points-card,
+.rule-card,
+.history-card,
+.h2h-summary-bar {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.02) !important;
+}
+
+.venue-card:hover,
+.broadcaster-card:hover,
+.ticket-card:hover,
+.points-card:hover,
+.rule-card:hover,
+.history-card:hover {
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06) !important;
+}
+
+.venue-info p,
+.broadcaster-details p,
+.ticket-body p,
+.rule-body p,
+.history-body p {
+  color: var(--text-muted) !important;
+}
+
+.pool-card {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.02) !important;
+}
+
+.pool-header {
+  background: rgba(15, 23, 42, 0.02) !important;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06) !important;
+}
+
+.pool-header h3 {
+  color: var(--text-main) !important;
+}
+
+.pool-item {
+  border-bottom: 1px solid rgba(15, 23, 42, 0.04) !important;
+  color: var(--text-main) !important;
+}
+
+/* Footer Section Overrides */
+.sports-footer {
+  background: #ffffff !important;
+  border-top: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(15, 23, 42, 0.06) !important;
+}
+
+.footer-link-group a {
+  color: var(--text-muted) !important;
+}
+
+.footer-link-group a:hover {
+  color: var(--primary) !important;
+}
+
+.footer-about p {
+  color: var(--text-muted) !important;
+}
+
+/* Live score matches overrides */
+.live-scores-wrapper {
+  background: #ffffff !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+.live-match-indicator {
+  background: rgba(220, 38, 38, 0.1) !important;
+  color: #dc2626 !important;
+}
+
+.live-indicator-dot {
+  background-color: #dc2626 !important;
+}
+
 
 
