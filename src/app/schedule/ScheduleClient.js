@@ -208,11 +208,26 @@ export default function ScheduleClient() {
       return (hA * 60 + mA) - (hB * 60 + mB);
     });
   }, [genderFilter, poolFilter, searchTerm]);
+  const [isMounted, setIsMounted] = useState(false);
+
+  React.useEffect(() => {
+    setIsMounted(true);
+  }, []);
 
   // Reset page when filters change
   React.useEffect(() => {
     setCurrentPage(1);
   }, [genderFilter, poolFilter, searchTerm]);
+
+  // Scroll to tabs top when page changes
+  React.useEffect(() => {
+    if (isMounted) {
+      const element = document.getElementById("fixtures-tabs");
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [currentPage, isMounted]);
 
   // Pagination bounds
   const totalPages = Math.ceil(filteredMatches.length / ITEMS_PER_PAGE) || 1;
@@ -326,7 +341,7 @@ export default function ScheduleClient() {
       </section>
 
       {/* Tabs Switcher for Official vs Warm-Up Matches */}
-      <div style={{ display: "flex", gap: "1rem", marginBottom: "2rem" }}>
+      <div id="fixtures-tabs" style={{ display: "flex", gap: "1rem", marginBottom: "2rem" }}>
         <button
           onClick={() => setActiveTab("official")}
           style={{
