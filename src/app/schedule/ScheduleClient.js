@@ -31,6 +31,17 @@ const ALL_MATCHES = [
   { id: 26, date: "August 30, 2026", timeCET: "19:00", teamA: "Winner SF 1", flagA: "un", teamB: "Winner SF 2", flagB: "un", gender: "Men", pool: "Knockouts", venue: "Belfius Hockey Arena, Wavre (BE)" }
 ];
 
+const WARMUP_MATCHES = [
+  { id: 101, date: "August 10, 2026", timeCET: "14:00", teamA: "India", flagA: "in", teamB: "Germany", flagB: "de", gender: "Men", pool: "Warm-Up", venue: "Wagener Stadium, Amstelveen (NL)" },
+  { id: 102, date: "August 10, 2026", timeCET: "17:00", teamA: "Netherlands", flagA: "nl", teamB: "Argentina", flagB: "ar", gender: "Women", pool: "Warm-Up", venue: "Wagener Stadium, Amstelveen (NL)" },
+  { id: 103, date: "August 11, 2026", timeCET: "15:00", teamA: "Belgium", flagA: "be", teamB: "Australia", flagB: "au", gender: "Men", pool: "Warm-Up", venue: "Belfius Hockey Arena, Wavre (BE)" },
+  { id: 104, date: "August 11, 2026", timeCET: "18:00", teamA: "England", flagA: "gb-eng", teamB: "Spain", flagB: "es", gender: "Men", pool: "Warm-Up", venue: "Belfius Hockey Arena, Wavre (BE)" },
+  { id: 105, date: "August 12, 2026", timeCET: "14:00", teamA: "India", flagA: "in", teamB: "Australia", flagB: "au", gender: "Women", pool: "Warm-Up", venue: "Wagener Stadium, Amstelveen (NL)" },
+  { id: 106, date: "August 12, 2026", timeCET: "17:00", teamA: "Netherlands", flagA: "nl", teamB: "Belgium", flagB: "be", gender: "Men", pool: "Warm-Up", venue: "Wagener Stadium, Amstelveen (NL)" },
+  { id: 107, date: "August 13, 2026", timeCET: "15:00", teamA: "Germany", flagA: "de", teamB: "Argentina", flagB: "ar", gender: "Men", pool: "Warm-Up", venue: "Belfius Hockey Arena, Wavre (BE)" },
+  { id: 108, date: "August 13, 2026", timeCET: "18:00", teamA: "England", flagA: "gb-eng", teamB: "United States", flagB: "us", gender: "Women", pool: "Warm-Up", venue: "Belfius Hockey Arena, Wavre (BE)" }
+];
+
 const ITEMS_PER_PAGE = 13;
 
 export default function ScheduleClient() {
@@ -39,6 +50,7 @@ export default function ScheduleClient() {
   const [poolFilter, setPoolFilter] = useState("All");
   const [searchTerm, setSearchTerm] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
+  const [activeTab, setActiveTab] = useState("official");
 
   // Timezone Converter Logic
   const getConvertedTime = (timeCET, tz) => {
@@ -203,25 +215,157 @@ export default function ScheduleClient() {
         </div>
       </section>
 
-      {/* Fixtures List Section */}
-      <section style={{ marginBottom: "2rem" }}>
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
-          <h2 className="text-xl font-bold text-white">Match Fixtures</h2>
-          <span style={{ fontSize: "0.85rem", color: "var(--text-muted)", fontWeight: "600" }}>
-            Showing {filteredMatches.length > 0 ? (currentPage - 1) * ITEMS_PER_PAGE + 1 : 0}-
-            {Math.min(currentPage * ITEMS_PER_PAGE, filteredMatches.length)} of {filteredMatches.length} matches
-          </span>
-        </div>
+      {/* Tabs Switcher for Official vs Warm-Up Matches */}
+      <div style={{ display: "flex", gap: "1rem", marginBottom: "2rem" }}>
+        <button
+          onClick={() => setActiveTab("official")}
+          style={{
+            flex: "1",
+            padding: "1rem",
+            borderRadius: "12px",
+            background: activeTab === "official" ? "linear-gradient(135deg, var(--primary) 0%, #0ea5e9 100%)" : "var(--bg-secondary)",
+            border: activeTab === "official" ? "none" : "1px solid var(--border-color)",
+            color: "#fff",
+            fontWeight: "800",
+            fontSize: "0.95rem",
+            cursor: "pointer",
+            boxShadow: activeTab === "official" ? "0 4px 15px rgba(244, 63, 94, 0.25)" : "none",
+            transition: "all 0.3s ease",
+            textTransform: "uppercase",
+            letterSpacing: "0.03em"
+          }}
+        >
+          🏆 Official Tournament Fixtures
+        </button>
+        <button
+          onClick={() => setActiveTab("warmup")}
+          style={{
+            flex: "1",
+            padding: "1rem",
+            borderRadius: "12px",
+            background: activeTab === "warmup" ? "linear-gradient(135deg, var(--primary) 0%, #0ea5e9 100%)" : "var(--bg-secondary)",
+            border: activeTab === "warmup" ? "none" : "1px solid var(--border-color)",
+            color: "#fff",
+            fontWeight: "800",
+            fontSize: "0.95rem",
+            cursor: "pointer",
+            boxShadow: activeTab === "warmup" ? "0 4px 15px rgba(244, 63, 94, 0.25)" : "none",
+            transition: "all 0.3s ease",
+            textTransform: "uppercase",
+            letterSpacing: "0.03em"
+          }}
+        >
+          🏒 Pre-Tournament Warm-Up Matches
+        </button>
+      </div>
 
-        {paginatedMatches.length === 0 ? (
-          <div className="text-center py-12" style={{ background: "var(--bg-secondary)", borderRadius: "16px", border: "1px solid var(--border-color)", padding: "3rem 1rem" }}>
-            <span style={{ fontSize: "2.5rem", display: "block", marginBottom: "1rem" }}>🏑</span>
-            <h3 className="text-lg font-bold text-white mb-2">No Matches Found</h3>
-            <p className="text-sm text-slate-400">We couldn't find any matches matching your search or filters. Try adjusting your search query.</p>
+      {/* Fixtures List Section */}
+      {activeTab === "official" ? (
+        <section style={{ marginBottom: "2rem" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
+            <h2 className="text-xl font-bold text-white">Official Tournament Fixtures</h2>
+            <span style={{ fontSize: "0.85rem", color: "var(--text-muted)", fontWeight: "600" }}>
+              Showing {filteredMatches.length > 0 ? (currentPage - 1) * ITEMS_PER_PAGE + 1 : 0}-
+              {Math.min(currentPage * ITEMS_PER_PAGE, filteredMatches.length)} of {filteredMatches.length} matches
+            </span>
           </div>
-        ) : (
+
+          {paginatedMatches.length === 0 ? (
+            <div className="text-center py-12" style={{ background: "var(--bg-secondary)", borderRadius: "16px", border: "1px solid var(--border-color)", padding: "3rem 1rem" }}>
+              <span style={{ fontSize: "2.5rem", display: "block", marginBottom: "1rem" }}>🏑</span>
+              <h3 className="text-lg font-bold text-white mb-2">No Matches Found</h3>
+              <p className="text-sm text-slate-400">We couldn't find any matches matching your search or filters. Try adjusting your search query.</p>
+            </div>
+          ) : (
+            <div className="schedule-grid" style={{ display: "grid", gap: "1.5rem" }}>
+              {paginatedMatches.map((match) => (
+                <div key={match.id} className="match-card">
+                  <div className="match-meta">
+                    <span>🗓️ {match.date}</span>
+                    <span className="text-sky-400 font-bold">⏱️ Timings: {getConvertedTime(match.timeCET, selectedTimezone)}</span>
+                  </div>
+                  <div className="match-teams-container">
+                    <div className="team-display">
+                      <div className="team-badge-wrap">
+                        <img src={getFlagUrl(match.flagA)} width="36" height="24" alt={`${match.teamA} flag`} style={{ borderRadius: "4px" }} />
+                      </div>
+                      <span className="team-name">{match.teamA} ({match.gender})</span>
+                    </div>
+                    <div className="vs-badge">VS</div>
+                    <div className="team-display">
+                      <div className="team-badge-wrap">
+                        <img src={getFlagUrl(match.flagB)} width="36" height="24" alt={`${match.teamB} flag`} style={{ borderRadius: "4px" }} />
+                      </div>
+                      <span className="team-name">{match.teamB} ({match.gender})</span>
+                    </div>
+                  </div>
+                  <div className="match-details-row">
+                    <span className="match-venue">🏟️ {match.venue}</span>
+                    <span className="channel-tag">{match.pool}</span>
+                  </div>
+                  <div className="match-actions">
+                    <a href="/broadcasters" className="match-btn match-btn-primary">Watch Live</a>
+                    <a href="https://fih.hockey" target="_blank" rel="noopener noreferrer" className="match-btn match-btn-secondary">Official Stats</a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Pagination Controls */}
+          {filteredMatches.length > ITEMS_PER_PAGE && (
+            <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "1.5rem", marginTop: "2rem", marginBottom: "3rem" }}>
+              <button
+                onClick={handlePrevPage}
+                disabled={currentPage === 1}
+                style={{
+                  background: currentPage === 1 ? "rgba(255,255,255,0.02)" : "var(--bg-secondary)",
+                  border: "1px solid var(--border-color)",
+                  color: currentPage === 1 ? "var(--text-muted)" : "#fff",
+                  padding: "0.6rem 1.5rem",
+                  borderRadius: "8px",
+                  fontWeight: "bold",
+                  cursor: currentPage === 1 ? "not-allowed" : "pointer",
+                  transition: "all 0.2s ease",
+                }}
+              >
+                ← Previous
+              </button>
+              
+              <span style={{ fontSize: "0.9rem", color: "#fff", fontWeight: "600" }}>
+                Page {currentPage} of {totalPages}
+              </span>
+
+              <button
+                onClick={handleNextPage}
+                disabled={currentPage === totalPages}
+                style={{
+                  background: currentPage === totalPages ? "rgba(255,255,255,0.02)" : "var(--bg-secondary)",
+                  border: "1px solid var(--border-color)",
+                  color: currentPage === totalPages ? "var(--text-muted)" : "#fff",
+                  padding: "0.6rem 1.5rem",
+                  borderRadius: "8px",
+                  fontWeight: "bold",
+                  cursor: currentPage === totalPages ? "not-allowed" : "pointer",
+                  transition: "all 0.2s ease",
+                }}
+              >
+                Next →
+              </button>
+            </div>
+          )}
+        </section>
+      ) : (
+        <section style={{ marginBottom: "2rem" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
+            <h2 className="text-xl font-bold text-white">Pre-Tournament Warm-Up Matches</h2>
+            <span style={{ fontSize: "0.85rem", color: "var(--text-muted)", fontWeight: "600" }}>
+              Showing {WARMUP_MATCHES.length} matches
+            </span>
+          </div>
+
           <div className="schedule-grid" style={{ display: "grid", gap: "1.5rem" }}>
-            {paginatedMatches.map((match) => (
+            {WARMUP_MATCHES.map((match) => (
               <div key={match.id} className="match-card">
                 <div className="match-meta">
                   <span>🗓️ {match.date}</span>
@@ -253,50 +397,7 @@ export default function ScheduleClient() {
               </div>
             ))}
           </div>
-        )}
-      </section>
-
-      {/* Pagination Controls */}
-      {filteredMatches.length > ITEMS_PER_PAGE && (
-        <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "1.5rem", marginTop: "2rem", marginBottom: "3rem" }}>
-          <button
-            onClick={handlePrevPage}
-            disabled={currentPage === 1}
-            style={{
-              background: currentPage === 1 ? "rgba(255,255,255,0.02)" : "var(--bg-secondary)",
-              border: "1px solid var(--border-color)",
-              color: currentPage === 1 ? "var(--text-muted)" : "#fff",
-              padding: "0.6rem 1.5rem",
-              borderRadius: "8px",
-              fontWeight: "bold",
-              cursor: currentPage === 1 ? "not-allowed" : "pointer",
-              transition: "all 0.2s ease",
-            }}
-          >
-            ← Previous
-          </button>
-          
-          <span style={{ fontSize: "0.9rem", color: "#fff", fontWeight: "600" }}>
-            Page {currentPage} of {totalPages}
-          </span>
-
-          <button
-            onClick={handleNextPage}
-            disabled={currentPage === totalPages}
-            style={{
-              background: currentPage === totalPages ? "rgba(255,255,255,0.02)" : "var(--bg-secondary)",
-              border: "1px solid var(--border-color)",
-              color: currentPage === totalPages ? "var(--text-muted)" : "#fff",
-              padding: "0.6rem 1.5rem",
-              borderRadius: "8px",
-              fontWeight: "bold",
-              cursor: currentPage === totalPages ? "not-allowed" : "pointer",
-              transition: "all 0.2s ease",
-            }}
-          >
-            Next →
-          </button>
-        </div>
+        </section>
       )}
 
       {/* PDF Schedule Download Section for SEO */}
@@ -365,6 +466,34 @@ export default function ScheduleClient() {
         <div className="print-section-title" style={{ pageBreakBefore: "always" }}>Women's Tournament Matches</div>
         <div className="print-grid">
           {ALL_MATCHES.filter(m => m.gender === "Women").map(match => (
+            <div key={match.id} className="print-match-card">
+              <div className="print-match-meta">
+                <span>🗓️ {match.date}</span>
+                <span className="print-match-time">⏱️ {match.timeCET} CET</span>
+              </div>
+              <div className="print-match-teams">
+                <div className="print-team">
+                  <img src={getFlagUrl(match.flagA)} width="20" height="13" alt="" style={{ borderRadius: "2px" }} />
+                  <span>{match.teamA}</span>
+                </div>
+                <span className="print-vs">VS</span>
+                <div className="print-team">
+                  <img src={getFlagUrl(match.flagB)} width="20" height="13" alt="" style={{ borderRadius: "2px" }} />
+                  <span>{match.teamB}</span>
+                </div>
+              </div>
+              <div className="print-match-footer">
+                <span className="print-venue">🏟️ {match.venue}</span>
+                <span>{match.pool}</span>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* Warm-Up Section */}
+        <div className="print-section-title" style={{ pageBreakBefore: "always" }}>Pre-Tournament Warm-Up Matches</div>
+        <div className="print-grid">
+          {WARMUP_MATCHES.map(match => (
             <div key={match.id} className="print-match-card">
               <div className="print-match-meta">
                 <span>🗓️ {match.date}</span>
