@@ -752,7 +752,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .match-btn-primary {
   background: var(--primary);
-  color: #000000;
+  color: #ffffff;
   border: none;
 }
 
@@ -965,7 +965,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-size: 1.2rem;
   font-weight: 800;
-  color: #fff;
+  color: var(--text-main);
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -1008,14 +1008,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* EEAT Author Area */
 .author-card {
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(30, 41, 66, 0.3) 100%);
-  border: 1px solid var(--border-color);
-  border-radius: 18px;
-  padding: 2.5rem;
+  background: linear-gradient(135deg, rgba(192, 0, 48, 0.03) 0%, rgba(2, 132, 199, 0.03) 100%);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-left: 5px solid var(--primary);
+  border-radius: 16px;
+  padding: 2rem 2.5rem;
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.2rem;
   margin-bottom: 5rem;
+  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.03);
 }
 
 .author-flex {
@@ -1041,8 +1043,9 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   font-size: 2rem;
   font-weight: 900;
-  color: #000;
+  color: #ffffff;
   font-style: italic;
+  box-shadow: 0 4px 12px rgba(192, 0, 48, 0.2);
 }
 
 .author-info h4 {
