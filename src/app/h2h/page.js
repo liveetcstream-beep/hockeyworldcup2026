@@ -18,7 +18,7 @@ export default function H2HPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Matchup Histories & Statistics</p>
-          <h1 className="hero-title">Head-to-Head (H2H) Records</h1>
+          <h1 className="hero-title">Head-to-Head Stats & Records – Hockey World Cup 2026</h1>
           <p className="hero-description">
             Deep-dive into the historical matchups of the top-ranked teams competing in the 2026 World Cup, including full data on the last 10 encounters, goals scored, win ratios, and tactical explanations.
           </p>

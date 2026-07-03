@@ -42,7 +42,7 @@ export default function Home() {
         <div className="sports-container hero-content">
           <p className="hero-subtitle">FIH Men's & Women's World Cup 2026</p>
           <h1 className="hero-title">
-            FIH Hockey World Cup 2026 Schedule, Live Streaming & Broadcast Guides
+            FIH Hockey World Cup 2026: Schedule, Teams & Live Updates
           </h1>
           <p className="hero-description">
             Get the comprehensive, verified 2026 FIH Hockey World Cup fixtures, local stadium start times, and TV channel allocations. We solve your timezone confusion and streaming blackout restrictions for the mega tournament in Belgium and the Netherlands.

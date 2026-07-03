@@ -18,7 +18,7 @@ export default function BroadcastersPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Official Television & Streaming Portal</p>
-          <h1 className="hero-title">FIH Hockey World Cup 2026 Broadcasters</h1>
+          <h1 className="hero-title">How to Watch Hockey World Cup 2026: TV & Streaming</h1>
           <p className="hero-description">
             Comprehensive directory of all TV networks, digital channels, and legal streaming links broadcasting the 2026 Men's and Women's World Cup from Belgium and the Netherlands.
           </p>

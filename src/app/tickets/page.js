@@ -34,7 +34,7 @@ export default function TicketsPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Matchday Entry & Seating Portals</p>
-          <h1 className="hero-title">FIH Hockey World Cup 2026 Ticket Guide</h1>
+          <h1 className="hero-title">Buy Hockey World Cup 2026 Tickets: Prices & Guide</h1>
           <p className="hero-description">
             Your verified guide to purchasing tickets for the Men's and Women's matches in Amstelveen (Netherlands) and Wavre (Belgium). Learn how to secure official seats and access transportation discounts.
           </p>

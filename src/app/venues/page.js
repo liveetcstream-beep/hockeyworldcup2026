@@ -18,7 +18,7 @@ export default function VenuesPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Official Tournament Stadiums</p>
-          <h1 className="hero-title">Stadium & Geographic Guides</h1>
+          <h1 className="hero-title">Wagener & Belfius Stadium Visitor Guide 2026</h1>
           <p className="hero-description">
             The 2026 Hockey World Cup is co-hosted across two historic venues in Amstelveen, Netherlands and Wavre, Belgium. Find transit routes, weather advisories, and local landmarks below.
           </p>

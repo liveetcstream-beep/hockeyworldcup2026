@@ -82,7 +82,7 @@ export default function PointsTablePage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Group Stage Standings & Pools</p>
-          <h1 className="hero-title">Official Points Table & Standings Rules</h1>
+          <h1 className="hero-title">Hockey World Cup 2026 Points Table & Pool Standings</h1>
           <p className="hero-description">
             How do teams earn rankings during the 2026 group stages in Belgium and the Netherlands? Read the official FIH point system and tie-breaker guidelines.
           </p>

@@ -34,7 +34,7 @@ export default function FormatPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Knockout Progression & Rules</p>
-          <h1 className="hero-title">FIH Hockey World Cup 2026 Tournament Format</h1>
+          <h1 className="hero-title">Hockey World Cup 2026 Format: Pool, Second Stage & Rules</h1>
           <p className="hero-description">
             Understanding the progression structure is vital. Only 16 countries compete, but the road to the final in Wavre involves group stages, crossover matches, and straight knockouts.
           </p>

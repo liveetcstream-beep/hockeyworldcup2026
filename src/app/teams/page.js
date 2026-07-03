@@ -18,7 +18,7 @@ export default function TeamsPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Qualified Nations & Standings</p>
-          <h1 className="hero-title">Teams & Star Players Profiles</h1>
+          <h1 className="hero-title">Hockey World Cup 2026 Teams & Squads: All 16 Nations</h1>
           <p className="hero-description">
             Review the 16 national hockey squads qualified for the group stages and read analyst reports on the key tactical players who will decide the outcome of the tournament.
           </p>

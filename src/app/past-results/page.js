@@ -18,7 +18,7 @@ export default function PastResultsPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Historical Tournament Records</p>
-          <h1 className="hero-title">2023 FIH Hockey World Cup Statistics</h1>
+          <h1 className="hero-title">Hockey World Cup Past Winners & 2023 Results (All Time)</h1>
           <p className="hero-description">
             Comprehensive database of the 15th Men's Hockey World Cup held in Odisha, India (Bhubaneswar & Rourkela) in January 2023. Review standings, awards, and goal scoring records.
           </p>

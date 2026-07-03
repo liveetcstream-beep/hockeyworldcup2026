@@ -41,7 +41,7 @@ export default function SchedulePage() {
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Official FIH Tournament Bracket & Fixtures</p>
           <h1 className="hero-title">
-            FIH Hockey World Cup 2026 Schedule & Match Timings
+            Hockey World Cup 2026 Fixtures & Match Schedule
           </h1>
           <p className="hero-description">
             Get the complete, verified 100-match tournament schedule for the Men's and Women's FIH Hockey World Cups in Belgium & Netherlands. Filter by team, track USA time zones (EDT/ET), view group stages, and download the print-friendly PDF guide.
