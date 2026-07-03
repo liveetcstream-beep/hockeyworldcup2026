@@ -293,16 +293,7 @@ export default function ScheduleClient() {
                 placeholder="🔍 Search by team name or venue..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                style={{
-                  width: "100%",
-                  background: "var(--bg-tertiary)",
-                  border: "1px solid var(--border-color)",
-                  color: "#fff",
-                  padding: "0.75rem 1rem",
-                  borderRadius: "8px",
-                  fontSize: "0.9rem",
-                  outline: "none",
-                }}
+                className="sports-input"
               />
             </div>
 
@@ -311,17 +302,7 @@ export default function ScheduleClient() {
               <select
                 value={genderFilter}
                 onChange={(e) => setGenderFilter(e.target.value)}
-                style={{
-                  width: "100%",
-                  background: "var(--bg-tertiary)",
-                  border: "1px solid var(--border-color)",
-                  color: "#fff",
-                  padding: "0.75rem 1rem",
-                  borderRadius: "8px",
-                  fontSize: "0.9rem",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                }}
+                className="sports-select"
               >
                 <option value="All">All Genders</option>
                 <option value="Men">Men's Tournament</option>
@@ -334,17 +315,7 @@ export default function ScheduleClient() {
               <select
                 value={poolFilter}
                 onChange={(e) => setPoolFilter(e.target.value)}
-                style={{
-                  width: "100%",
-                  background: "var(--bg-tertiary)",
-                  border: "1px solid var(--border-color)",
-                  color: "#fff",
-                  padding: "0.75rem 1rem",
-                  borderRadius: "8px",
-                  fontSize: "0.9rem",
-                  fontWeight: "bold",
-                  cursor: "pointer",
-                }}
+                className="sports-select"
               >
                 <option value="All">All Stages / Pools</option>
                 <option value="Pool A">Pool A</option>
