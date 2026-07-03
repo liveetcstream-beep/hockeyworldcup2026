@@ -6,6 +6,9 @@ import FaqAccordion from "../components/FaqAccordion";
 export const metadata = {
   title: "FIH Hockey World Cup Winners List (1971 - 2026 History)",
   description: "Complete list of past Hockey World Cup winners, runners-up, host countries, and title counts. Find records for Pakistan, Netherlands, India, and Germany.",
+  alternates: {
+    canonical: "https://hockeyworldcup2026schedule.com/history",
+  },
 };
 
 export default function HistoryPage() {

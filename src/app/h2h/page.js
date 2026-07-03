@@ -3,8 +3,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "H2H Records & Last 10 Matches - Hockey World Cup 2026",
+  title: "Head-to-Head Stats & Records – Hockey World Cup 2026",
   description: "Detailed H2H stats, last 10 match summaries, win ratios, and tactical descriptions for the top qualified teams in the FIH Hockey World Cup 2026.",
+  alternates: {
+    canonical: "https://hockeyworldcup2026schedule.com/h2h",
+  },
 };
 
 export default function H2HPage() {

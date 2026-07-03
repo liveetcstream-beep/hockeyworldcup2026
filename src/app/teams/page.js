@@ -3,8 +3,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Qualified Teams & Star Players - Hockey World Cup 2026",
+  title: "Hockey World Cup 2026 Teams & Squads: All 16 Nations",
   description: "Rosters and analysis for the 16 qualified teams in the FIH Hockey World Cup 2026. Profiles of Harmanpreet Singh, Thierry Brinkman, and Niklas Wellen.",
+  alternates: {
+    canonical: "https://hockeyworldcup2026schedule.com/teams",
+  },
 };
 
 export default function TeamsPage() {

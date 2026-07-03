@@ -3,8 +3,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "How to Stream Hockey World Cup 2026: Live TV Channels",
+  title: "How to Watch Hockey World Cup 2026: TV & Streaming",
   description: "Country-wise list of official TV networks and live streaming applications broadcasting the FIH Hockey World Cup 2026 without cable.",
+  alternates: {
+    canonical: "https://hockeyworldcup2026schedule.com/broadcasters",
+  },
 };
 
 export default function BroadcastersPage() {

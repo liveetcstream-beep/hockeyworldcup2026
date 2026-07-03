@@ -61,9 +61,7 @@ export const metadata = {
       "Complete match schedule, timezone conversions, live scores, and streaming guides for the FIH Hockey World Cup 2026.",
     images: ["/og-image.jpg"],
   },
-  alternates: {
-    canonical: "https://hockeyworldcup2026schedule.com",
-  },
+  // NOTE: canonical is NOT set globally — each page sets its own via alternates.canonical
   robots: {
     index: true,
     follow: true,

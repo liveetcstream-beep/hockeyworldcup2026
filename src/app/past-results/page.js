@@ -3,8 +3,11 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "2023 FIH Men's Hockey World Cup Results & Statistics",
+  title: "Hockey World Cup Past Winners & 2023 Results (All Time)",
   description: "Complete stats, final standings, top goalscorers, awards, and match results from the 2023 Hockey World Cup in Odisha, India.",
+  alternates: {
+    canonical: "https://hockeyworldcup2026schedule.com/past-results",
+  },
 };
 
 export default function PastResultsPage() {

@@ -7,6 +7,9 @@ import FaqAccordion from "./components/FaqAccordion";
 export const metadata = {
   title: { absolute: "FIH Hockey World Cup 2026: Schedule, Teams & Live Updates" },
   description: "Get the complete, verified match schedule, timezone conversions, and live streaming options for the FIH Hockey World Cup 2026.",
+  alternates: {
+    canonical: "https://hockeyworldcup2026schedule.com",
+  },
 };
 
 export default function Home() {
