@@ -1,13 +1,44 @@
-import React from "react";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
-export const metadata = {
-  title: "Live Scores & Match Tracker - Hockey World Cup 2026",
-  description: "Real-time live scores, goals, cards, and penalty corner stats for all matches in the FIH Hockey World Cup 2026. Follow updates live.",
-};
-
 export default function LiveScoresPage() {
+  const [liveMatches, setLiveMatches] = useState([]);
+  const [source, setSource] = useState("Loading feed...");
+  const [loading, setLoading] = useState(true);
+  const [lastUpdated, setLastUpdated] = useState("");
+
+  const fetchScores = async () => {
+    try {
+      const res = await fetch("/api/live-scores");
+      if (res.ok) {
+        const json = await res.json();
+        if (json.liveMatches) {
+          setLiveMatches(json.liveMatches);
+          setSource(json.source);
+        }
+      }
+    } catch (e) {
+      console.error("Failed to fetch live scores:", e);
+    } finally {
+      setLoading(false);
+      setLastUpdated(new Date().toLocaleTimeString());
+    }
+  };
+
+  useEffect(() => {
+    fetchScores();
+    const interval = setInterval(fetchScores, 30000); // Update every 30s
+    return () => clearInterval(interval);
+  }, []);
+
+  const getFlagUrl = (flagCode) => {
+    if (flagCode === "un") return "https://flagcdn.com/w40/un.png";
+    return `https://flagcdn.com/w40/${flagCode}.png`;
+  };
+
   return (
     <>
       <Header />
@@ -35,29 +66,140 @@ export default function LiveScoresPage() {
       </section>
 
       <main className="sports-container py-12">
-        {/* Live Match Tracker Status Section */}
-        <section className="my-12">
-          <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl text-center">
-            <h2 className="text-xl font-bold text-white mb-2">No Live Matches Right Now</h2>
-            <p className="text-slate-400 text-sm mb-6">
-              The first match starts on <strong>August 15, 2026</strong>. Real-time scores and play-by-play text feeds will activate 30 minutes before kickoff.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6">
-              <div className="bg-slate-950 border border-slate-800 px-6 py-3 rounded-lg text-slate-300 text-sm flex items-center gap-3">
-                <img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="India flag" style={{ borderRadius: "2px" }} />
-                <span>India vs Wales (Men)</span>
-                <span>—</span>
-                <strong>August 15, 13:00 CET</strong>
-              </div>
-              <div className="bg-slate-950 border border-slate-800 px-6 py-3 rounded-lg text-slate-300 text-sm flex items-center gap-3">
-                <img src="https://flagcdn.com/w40/de.png" width="20" height="14" alt="Germany flag" style={{ borderRadius: "2px" }} />
-                <span>Germany vs Malaysia (Men)</span>
-                <span>—</span>
-                <strong>August 15, 15:30 CET</strong>
-              </div>
+        {/* API Failover Status Indicator */}
+        <section className="mb-8">
+          <div style={{
+            background: "rgba(14, 165, 233, 0.08)",
+            border: "1px solid var(--border-color)",
+            borderRadius: "12px",
+            padding: "1rem 1.5rem",
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            alignItems: "center",
+            gap: "1rem"
+          }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              <span style={{ fontSize: "1.2rem" }}>📡</span>
+              <span className="text-sm text-slate-300">
+                Active Score Source: <strong className="text-sky-400">{source}</strong>
+              </span>
+            </div>
+            <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+              <span className="text-xs text-slate-400">
+                Last Sync: {lastUpdated || "Pending..."}
+              </span>
+              <button 
+                onClick={fetchScores}
+                style={{
+                  background: "var(--bg-tertiary)",
+                  border: "1px solid var(--border-color)",
+                  color: "#fff",
+                  padding: "0.4rem 1rem",
+                  borderRadius: "6px",
+                  fontSize: "0.8rem",
+                  fontWeight: "bold",
+                  cursor: "pointer"
+                }}
+              >
+                🔄 Refresh
+              </button>
             </div>
           </div>
+        </section>
+
+        {/* Live Match Tracker Status Section */}
+        <section className="my-12">
+          {loading ? (
+            <div className="text-center py-12">
+              <div className="loading-spinner" style={{
+                border: "4px solid rgba(255,255,255,0.1)",
+                borderLeftColor: "var(--primary)",
+                borderRadius: "50%",
+                width: "40px",
+                height: "40px",
+                animation: "spin 1s linear infinite",
+                margin: "0 auto 1rem auto"
+              }}></div>
+              <p className="text-slate-400 text-sm">Connecting to live scores APIs...</p>
+            </div>
+          ) : liveMatches.length === 0 ? (
+            <div className="bg-slate-900 border border-slate-800 p-8 rounded-2xl text-center">
+              <h2 className="text-xl font-bold text-white mb-2">No Live Matches Right Now</h2>
+              <p className="text-slate-400 text-sm mb-6">
+                The first match starts on <strong>August 15, 2026</strong>. Real-time scores and play-by-play text feeds will activate 30 minutes before kickoff.
+              </p>
+            </div>
+          ) : (
+            <div style={{ display: "grid", gap: "2rem" }}>
+              {liveMatches.map((match) => (
+                <div key={match.id} style={{
+                  background: "var(--bg-secondary)",
+                  border: "1px solid var(--border-color)",
+                  borderRadius: "16px",
+                  padding: "2rem",
+                  position: "relative",
+                  boxShadow: "0 10px 30px rgba(0,0,0,0.25)"
+                }}>
+                  {/* Card Header Status */}
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", borderBottom: "1px solid var(--border-color)", paddingBottom: "1rem" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                      <span className="live-dot" style={{ background: "#22c55e" }}></span>
+                      <strong className="text-xs uppercase" style={{ color: "#22c55e", letterSpacing: "0.05em" }}>
+                        {match.period} — {match.minute}
+                      </strong>
+                    </div>
+                    <span className="channel-tag" style={{ margin: 0 }}>{match.pool}</span>
+                  </div>
+
+                  {/* Scoreboard layout */}
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem" }}>
+                    <div className="team-display" style={{ flex: "1 1 200px" }}>
+                      <div className="team-badge-wrap" style={{ width: "50px", height: "35px" }}>
+                        <img src={getFlagUrl(match.flagA)} width="50" height="33" alt={`${match.teamA} flag`} style={{ borderRadius: "4px" }} />
+                      </div>
+                      <span className="team-name" style={{ fontSize: "1.2rem", fontWeight: "800", color: "#fff", marginTop: "0.5rem" }}>{match.teamA}</span>
+                    </div>
+
+                    <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+                      <span style={{ fontSize: "2.5rem", fontWeight: "900", color: "#fff" }}>{match.scoreA}</span>
+                      <span style={{ fontSize: "1rem", fontWeight: "800", color: "var(--text-muted)", padding: "0.4rem 0.8rem", background: "var(--bg-tertiary)", borderRadius: "8px" }}>VS</span>
+                      <span style={{ fontSize: "2.5rem", fontWeight: "900", color: "#fff" }}>{match.scoreB}</span>
+                    </div>
+
+                    <div className="team-display" style={{ flex: "1 1 200px", alignItems: "flex-end", textAlign: "right" }}>
+                      <div className="team-badge-wrap" style={{ width: "50px", height: "35px" }}>
+                        <img src={getFlagUrl(match.flagB)} width="50" height="33" alt={`${match.teamB} flag`} style={{ borderRadius: "4px" }} />
+                      </div>
+                      <span className="team-name" style={{ fontSize: "1.2rem", fontWeight: "800", color: "#fff", marginTop: "0.5rem" }}>{match.teamB}</span>
+                    </div>
+                  </div>
+
+                  {/* Match Live Events timeline */}
+                  {match.events && match.events.length > 0 && (
+                    <div style={{ marginTop: "2rem", background: "var(--bg-tertiary)", padding: "1.5rem", borderRadius: "12px", border: "1px solid var(--border-color)" }}>
+                      <h4 className="text-sm font-bold text-white mb-3" style={{ textTransform: "uppercase", letterSpacing: "0.03em" }}>Match Timeline & Goals</h4>
+                      <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
+                        {match.events.map((evt, idx) => (
+                          <div key={idx} style={{ display: "flex", alignItems: "center", gap: "1rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
+                            <span style={{ color: "var(--primary)", fontWeight: "bold" }}>{evt.minute}</span>
+                            <span style={{ color: "#fff", fontWeight: "600" }}>{evt.player}</span>
+                            <span>({evt.type})</span>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Match Footer */}
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1.5rem", borderTop: "1px solid var(--border-color)", paddingTop: "1rem", fontSize: "0.8rem", color: "var(--text-muted)" }}>
+                    <span>🏟️ Venue: {match.venue}</span>
+                    <a href="/broadcasters" className="match-btn match-btn-primary" style={{ padding: "0.5rem 1.2rem", fontSize: "0.75rem" }}>Stream Live →</a>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
         </section>
 
         {/* Tactical Scoreboard features info */}
@@ -79,7 +221,7 @@ export default function LiveScoresPage() {
           </div>
         </section>
 
-        {/* Technical Data Integration & Commentary Guidelines (Resolves Low Content Warning) */}
+        {/* Technical Data Integration & Commentary Guidelines */}
         <section className="insights-section-wrap">
           <h2 className="insights-section-title">
             <span>⚙️</span> Real-Time Technical Feed Integration Details
@@ -128,6 +270,14 @@ export default function LiveScoresPage() {
       </main>
 
       <Footer />
+
+      {/* Inline styles for spinner rotation */}
+      <style jsx global>{`
+        @keyframes spin {
+          0% { transform: rotate(0deg); }
+          100% { transform: rotate(360deg); }
+        }
+      `}</style>
     </>
   );
 }
