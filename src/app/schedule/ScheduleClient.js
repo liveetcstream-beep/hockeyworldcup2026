@@ -152,6 +152,16 @@ export default function ScheduleClient() {
   const [activeTab, setActiveTab] = useState("official");
   const [printGender, setPrintGender] = useState("Men");
 
+  React.useEffect(() => {
+    if (typeof window !== "undefined") {
+      const params = new URLSearchParams(window.location.search);
+      const tab = params.get("tab");
+      if (tab === "warmup") {
+        setActiveTab("warmup");
+      }
+    }
+  }, []);
+
   const handlePrint = (gender) => {
     setPrintGender(gender);
     setTimeout(() => {
