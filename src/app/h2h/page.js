@@ -32,6 +32,118 @@ export default function H2HPage() {
       </section>
 
       <main className="sports-container py-12">
+        {/* Matchup: India vs Pakistan - Historic Clásico */}
+        <section className="my-16" style={{ border: "1px solid rgba(249, 115, 22, 0.25)", padding: "1.8rem", borderRadius: "20px", background: "rgba(249, 115, 22, 0.02)" }}>
+          <div className="h2h-matchup-header mb-6">
+            <div className="flex items-center gap-3 mb-3 flex-wrap">
+              <img src="https://flagcdn.com/w40/in.png" width="30" height="20" alt="India flag" style={{ borderRadius: "2px" }} />
+              <h2 className="text-xl md:text-2xl font-bold text-white italic m-0">India vs Pakistan</h2>
+              <img src="https://flagcdn.com/w40/pk.png" width="30" height="20" alt="Pakistan flag" style={{ borderRadius: "2px" }} />
+              <span className="h2h-badge ml-auto" style={{ background: "linear-gradient(135deg, #f97316 0%, #e11d48 100%)" }}>🔥 Hockey El Clásico H2H</span>
+            </div>
+            <p className="text-slate-300 text-sm leading-relaxed m-0">
+              The subcontinental rivalry between India and Pakistan is the most storied matchup in field hockey history. With a combined 11 Olympic gold medals and 4 World Cup trophies, every encounter is a high-octane battle of skill and passion. Below is the official record of their last 10 head-to-head senior international encounters:
+            </p>
+          </div>
+          
+          <div className="table-responsive">
+            <table className="sports-table">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Date</th>
+                  <th>Tournament</th>
+                  <th>Venue</th>
+                  <th>Result (Score)</th>
+                  <th>Outcome</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td data-label="No.">1</td>
+                  <td data-label="Date">Sep 14, 2024</td>
+                  <td data-label="Tournament">Asian Champions Trophy</td>
+                  <td data-label="Venue">Hulunbuir, China</td>
+                  <td data-label="Result (Score)">India 2 – 1 Pakistan</td>
+                  <td data-label="Outcome">🇮🇳 India Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">2</td>
+                  <td data-label="Date">Sep 30, 2023</td>
+                  <td data-label="Tournament">Asian Games Group Stage</td>
+                  <td data-label="Venue">Hangzhou, China</td>
+                  <td data-label="Result (Score)">India 10 – 2 Pakistan</td>
+                  <td data-label="Outcome">🇮🇳 India Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">3</td>
+                  <td data-label="Date">Aug 9, 2023</td>
+                  <td data-label="Tournament">Asian Champions Trophy</td>
+                  <td data-label="Venue">Chennai, India</td>
+                  <td data-label="Result (Score)">India 4 – 0 Pakistan</td>
+                  <td data-label="Outcome">🇮🇳 India Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">4</td>
+                  <td data-label="Date">Jun 1, 2022</td>
+                  <td data-label="Tournament">Asia Cup Super 4s</td>
+                  <td data-label="Venue">Jakarta, Indonesia</td>
+                  <td data-label="Result (Score)">India 2 – 1 Pakistan</td>
+                  <td data-label="Outcome">🇮🇳 India Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">5</td>
+                  <td data-label="Date">May 23, 2022</td>
+                  <td data-label="Tournament">Asia Cup Pool Stage</td>
+                  <td data-label="Venue">Jakarta, Indonesia</td>
+                  <td data-label="Result (Score)">India 1 – 1 Pakistan</td>
+                  <td data-label="Outcome">🤝 Draw</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">6</td>
+                  <td data-label="Date">Dec 22, 2021</td>
+                  <td data-label="Tournament">Asian Champions Trophy (Bronze)</td>
+                  <td data-label="Venue">Dhaka, Bangladesh</td>
+                  <td data-label="Result (Score)">India 4 – 3 Pakistan</td>
+                  <td data-label="Outcome">🇮🇳 India Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">7</td>
+                  <td data-label="Date">Dec 17, 2021</td>
+                  <td data-label="Tournament">Asian Champions Trophy Pool Stage</td>
+                  <td data-label="Venue">Dhaka, Bangladesh</td>
+                  <td data-label="Result (Score)">India 3 – 1 Pakistan</td>
+                  <td data-label="Outcome">🇮🇳 India Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">8</td>
+                  <td data-label="Date">Oct 28, 2018</td>
+                  <td data-label="Tournament">Asian Champions Trophy Final</td>
+                  <td data-label="Venue">Muscat, Oman</td>
+                  <td data-label="Result (Score)">India 0 – 0 Pakistan (Abandoned)</td>
+                  <td data-label="Outcome">🏆 Joint Winners</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">9</td>
+                  <td data-label="Date">Oct 20, 2018</td>
+                  <td data-label="Tournament">Asian Champions Trophy Pool Stage</td>
+                  <td data-label="Venue">Muscat, Oman</td>
+                  <td data-label="Result (Score)">India 3 – 1 Pakistan</td>
+                  <td data-label="Outcome">🇮🇳 India Win</td>
+                </tr>
+                <tr>
+                  <td data-label="No.">10</td>
+                  <td data-label="Date">Sep 1, 2018</td>
+                  <td data-label="Tournament">Asian Games (Bronze Medal)</td>
+                  <td data-label="Venue">Jakarta, Indonesia</td>
+                  <td data-label="Result (Score)">India 2 – 1 Pakistan</td>
+                  <td data-label="Outcome">🇮🇳 India Win</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         {/* Matchup 1: India vs Wales */}
         <section className="my-16">
           <div className="h2h-matchup-header mb-6">
