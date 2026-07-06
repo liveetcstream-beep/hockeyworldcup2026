@@ -24,6 +24,11 @@ export const metadata = {
   },
   description:
     "Get the complete, verified match schedule, timezone conversions, live scores, and streaming options for the FIH Hockey World Cup 2026 in Belgium & Netherlands.",
+  icons: {
+    icon: '/icon.png',
+    shortcut: '/icon.png',
+    apple: '/icon.png',
+  },
   keywords: [
     "Hockey World Cup 2026",
     "FIH World Cup 2026",

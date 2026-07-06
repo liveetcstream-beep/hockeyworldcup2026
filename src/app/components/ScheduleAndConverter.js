@@ -109,7 +109,7 @@ export default function ScheduleAndConverter() {
       </section>
 
       {/* DETAILED SCHEDULE SECTION */}
-      <section id="schedule" className="my-12">
+      <section id="fixtures" className="my-16" data-nosnippet>
         <div className="section-title-wrap">
           <h2>Opening Matchday Schedule (August 15, 2026)</h2>
           <p>Official fixtures for the initial matchday of both Men's and Women's tournaments.</p>

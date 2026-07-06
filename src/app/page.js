@@ -118,6 +118,9 @@ export default function Home() {
       />
 
       <main className="sports-container py-12">
+        {/* INTERACTIVE SCHEDULE AND TIMEZONE CONVERTER CLIENT CONTAINER */}
+        <ScheduleAndConverter />
+        
         {/* TOPICAL AUTHORITY HUBS NAVIGATION SECTION */}
         <section id="hubs" className="my-12">
           <div className="section-title-wrap">
@@ -204,9 +207,6 @@ export default function Home() {
             </a>
           </div>
         </section>
-        
-        {/* INTERACTIVE SCHEDULE AND TIMEZONE CONVERTER CLIENT CONTAINER */}
-        <ScheduleAndConverter />
 
         {/* OFFICIAL QUALIFIED POOLS */}
         <section id="pools" className="my-12">
