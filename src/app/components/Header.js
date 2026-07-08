@@ -521,14 +521,14 @@ export default function Header() {
         }
 
         .mega-column h4 {
-          font-size: 0.75rem;
-          text-transform: uppercase;
-          color: var(--text-muted);
-          letter-spacing: 0.1em;
-          margin-bottom: 0.8rem;
-          font-weight: 800;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-          padding-bottom: 0.4rem;
+          font-size: 0.8rem !important;
+          text-transform: uppercase !important;
+          color: #38bdf8 !important;
+          letter-spacing: 0.08em !important;
+          margin-bottom: 0.8rem !important;
+          font-weight: 800 !important;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+          padding-bottom: 0.5rem !important;
         }
 
         .mega-column ul {
@@ -541,17 +541,20 @@ export default function Header() {
         }
 
         .mega-column a {
-          display: block;
-          font-size: 0.85rem;
-          color: #e2e8f0;
-          text-decoration: none;
-          padding: 0.3rem 0;
-          transition: color 0.2s ease, transform 0.2s ease;
+          display: block !important;
+          font-size: 0.82rem !important;
+          color: #f1f5f9 !important;
+          text-transform: none !important;
+          letter-spacing: normal !important;
+          font-weight: 500 !important;
+          text-decoration: none !important;
+          padding: 0.3rem 0 !important;
+          transition: color 0.2s ease, transform 0.2s ease !important;
         }
 
         .mega-column a:hover {
-          color: var(--primary);
-          transform: translateX(3px);
+          color: #38bdf8 !important;
+          transform: translateX(3px) !important;
         }
 
         .highlighted-col {
