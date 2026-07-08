@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React, { useState } from "react";
 
@@ -57,7 +57,11 @@ export default function Header() {
                   <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
                 </span>
                 <ul className="dropdown-menu">
-                  <li><a href="/hockey-world-cup-2026-groups">All Pool Groups (Men's & Women's)</a></li>
+                  <li><a href="/hockey-world-cup-2026-groups">All Pool Groups (Men & Women)</a></li>
+                  <li><a href="/pool-a">📊 Pool A Standings</a></li>
+                  <li><a href="/pool-b">📊 Pool B Standings</a></li>
+                  <li><a href="/pool-c">📊 Pool C Standings</a></li>
+                  <li><a href="/pool-d">📊 Pool D Standings</a></li>
                   <li><a href="/format">Tournament Crossover Rules</a></li>
                   <li><a href="/points-table">Points Table Standing Rules</a></li>
                   <li><a href="/h2h">Head-to-Head (H2H) Records</a></li>
@@ -83,8 +87,9 @@ export default function Header() {
                   <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
                 </span>
                 <ul className="dropdown-menu">
-                  <li><a href="/venues#wagener">Wagener Stadium (NL)</a></li>
-                  <li><a href="/venues#belfius">Belfius Arena (BE)</a></li>
+                  <li><a href="/venues/wagener-stadium-guide">🇳🇱 Wagener Stadium Guide</a></li>
+                  <li><a href="/venues/belfius-arena-guide">🇧🇪 Belfius Arena Guide</a></li>
+                  <li><a href="/venues">🗺️ All Stadium Venues</a></li>
                 </ul>
               </li>
 
@@ -165,12 +170,13 @@ export default function Header() {
           <li><a href="/hockey-world-cup-2026-schedule-ireland" onClick={() => setIsMobileOpen(false)}>🇮🇪 Ireland Schedule</a></li>
           <li><a href="/hockey-world-cup-2026-schedule-south-africa" onClick={() => setIsMobileOpen(false)}>🇿🇦 South Africa Schedule</a></li>
           <li><a href="/hockey-world-cup-2026-schedule-new-zealand" onClick={() => setIsMobileOpen(false)}>🇳🇿 New Zealand Schedule</a></li>
-          <li><a href="/hockey-world-cup-2026-schedule-chile" onClick={() => setIsMobileOpen(false)}>🇨🇱 Chile Schedule</a></li>
-          <li><a href="/hockey-world-cup-2026-schedule-wales" onClick={() => setIsMobileOpen(false)}>🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales Schedule</a></li>
-
-          <li style={{ color: "var(--text-muted)", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.1em", padding: "0.8rem 1.5rem 0.3rem", fontWeight: "700", pointerEvents: "none" }}>Tournament</li>
+                   <li style={{ color: "var(--text-muted)", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.1em", padding: "0.8rem 1.5rem 0.3rem", fontWeight: "700", pointerEvents: "none" }}>Tournament</li>
           <li><a href="/schedule" onClick={() => setIsMobileOpen(false)}>📅 Full Match Schedule</a></li>
           <li><a href="/hockey-world-cup-2026-groups" onClick={() => setIsMobileOpen(false)}>🏆 All Pool Groups</a></li>
+          <li><a href="/pool-a" onClick={() => setIsMobileOpen(false)}>📊 Pool A Standings</a></li>
+          <li><a href="/pool-b" onClick={() => setIsMobileOpen(false)}>📊 Pool B Standings</a></li>
+          <li><a href="/pool-c" onClick={() => setIsMobileOpen(false)}>📊 Pool C Standings</a></li>
+          <li><a href="/pool-d" onClick={() => setIsMobileOpen(false)}>📊 Pool D Standings</a></li>
           <li><a href="/format" onClick={() => setIsMobileOpen(false)}>Tournament Format</a></li>
           <li><a href="/points-table" onClick={() => setIsMobileOpen(false)}>Points Table Rules</a></li>
           <li><a href="/teams" onClick={() => setIsMobileOpen(false)}>All Qualified Nations</a></li>
@@ -178,7 +184,9 @@ export default function Header() {
           
           <li style={{ color: "var(--text-muted)", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.1em", padding: "0.8rem 1.5rem 0.3rem", fontWeight: "700", pointerEvents: "none" }}>Live & Info</li>
           <li><a href="/live-scores" onClick={() => setIsMobileOpen(false)} dangerouslySetInnerHTML={{ __html: "&#x1F534; Live Scoreboard" }} /></li>
-          <li><a href="/venues" onClick={() => setIsMobileOpen(false)}>Stadium Guides</a></li>
+          <li><a href="/venues/wagener-stadium-guide" onClick={() => setIsMobileOpen(false)}>🇳🇱 Wagener Stadium Guide</a></li>
+          <li><a href="/venues/belfius-arena-guide" onClick={() => setIsMobileOpen(false)}>🇧🇪 Belfius Arena Guide</a></li>
+          <li><a href="/venues" onClick={() => setIsMobileOpen(false)}>🗺️ All Stadium Venues</a></li>
           <li><a href="/tickets" onClick={() => setIsMobileOpen(false)}>Tickets & Pricing</a></li>
           <li><a href="/broadcasters" onClick={() => setIsMobileOpen(false)}>Broadcaster Directory</a></li>
           <li><a href="/history" onClick={() => setIsMobileOpen(false)}>Past Winners (1971-2026)</a></li>
