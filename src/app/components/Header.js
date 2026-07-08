@@ -47,6 +47,10 @@ export default function Header() {
                   <li><a href="/teams">All 16 Qualified Nations</a></li>
                   <li><a href="/india-hockey-world-cup-2026">🇮🇳 India Team Guide & Schedule</a></li>
                   <li><a href="/pakistan-hockey-world-cup-2026">🇵🇰 Pakistan Team Guide & Schedule</a></li>
+                  <li><a href="/belgium-hockey-world-cup-2026">🇧🇪 Belgium (Red Lions) Guide</a></li>
+                  <li><a href="/germany-hockey-world-cup-2026">🇩🇪 Germany Guide</a></li>
+                  <li><a href="/netherlands-hockey-world-cup-2026">🇳🇱 Netherlands Guide</a></li>
+                  <li><a href="/australia-hockey-world-cup-2026">🇦🇺 Australia Guide</a></li>
                   <li><a href="/teams#stars">Star Players to Watch</a></li>
                   <li><a href="/h2h">Head-to-Head (H2H) Records</a></li>
                 </ul>
@@ -129,6 +133,10 @@ export default function Header() {
           <li><a href="/hockey-world-cup-2026-groups" onClick={() => setIsMobileOpen(false)}>🏑 All Pool Groups</a></li>
           <li><a href="/india-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>🇮🇳 India Team Guide</a></li>
           <li><a href="/pakistan-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>🇵🇰 Pakistan Team Guide</a></li>
+          <li><a href="/belgium-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>🇧🇪 Belgium Guide</a></li>
+          <li><a href="/germany-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>🇩🇪 Germany Guide</a></li>
+          <li><a href="/netherlands-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>🇳🇱 Netherlands Guide</a></li>
+          <li><a href="/australia-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>🇦🇺 Australia Guide</a></li>
           <li><a href="/format" onClick={() => setIsMobileOpen(false)}>Tournament Format / Crossover</a></li>
           <li><a href="/points-table" onClick={() => setIsMobileOpen(false)}>Points Table Rules</a></li>
           <li><a href="/teams" onClick={() => setIsMobileOpen(false)}>All Qualified Nations</a></li>
