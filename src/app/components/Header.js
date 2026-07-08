@@ -23,114 +23,71 @@ export default function Header() {
             <ul className="sports-nav">
               <li><a href="/">Home</a></li>
               
-                            {/* Schedule Dropdown */}
+              {/* Schedule & Standings Dropdown */}
               <li className="nav-item-dropdown">
                 <span className="dropdown-trigger">
-                  Team Schedules 
+                  Schedule & Standings
                   <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
                 </span>
                 <ul className="dropdown-menu">
-                  <li><a href="/hockey-world-cup-2026-schedule-india">🇮🇳 India Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-pakistan">🇵🇰 Pakistan Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-belgium">🇧🇪 Belgium Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-germany">🇩🇪 Germany Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-netherlands">🇳🇱 Netherlands Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-australia">🇦🇺 Australia Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-argentina">🇦🇷 Argentina Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-spain">🇪🇸 Spain Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-malaysia">🇲🇾 Malaysia Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-france">🇫🇷 France Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-ireland">🇮🇪 Ireland Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-south-africa">🇿🇦 South Africa Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-new-zealand">🇳🇿 New Zealand Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-chile">🇨🇱 Chile Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales Schedule</a></li>
-                  <li><a href="/schedule">📅 Full Tournament Schedule</a></li>
+                  <li><a href="/schedule">📅 Full Match Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-groups">🏆 All Pool Groups</a></li>
+                  <li><a href="/format">⚙️ Tournament Format</a></li>
+                  <li><a href="/points-table">📈 Points Table Rules</a></li>
+                  <li><a href="/h2h">⚔️ Head-to-Head (H2H) Records</a></li>
                 </ul>
               </li>
 
-              {/* Tournament Dropdown */}
+              {/* Teams & Hubs Dropdown */}
               <li className="nav-item-dropdown">
                 <span className="dropdown-trigger">
-                  Tournament 
+                  Teams & Hubs
                   <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
                 </span>
                 <ul className="dropdown-menu">
-                  <li><a href="/hockey-world-cup-2026-groups">All Pool Groups (Men & Women)</a></li>
-                  <li><a href="/pool-a">📊 Pool A Standings</a></li>
-                  <li><a href="/pool-b">📊 Pool B Standings</a></li>
-                  <li><a href="/pool-c">📊 Pool C Standings</a></li>
-                  <li><a href="/pool-d">📊 Pool D Standings</a></li>
-                  <li><a href="/format">Tournament Crossover Rules</a></li>
-                  <li><a href="/points-table">Points Table Standing Rules</a></li>
-                  <li><a href="/h2h">Head-to-Head (H2H) Records</a></li>
+                  <li><a href="/teams" style={{ fontWeight: "700" }}>🏃‍♂️ All Qualified Teams Hub</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-india">🇮🇳 India Schedule & Squad</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-pakistan">🇵🇰 Pakistan Schedule & Squad</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-belgium">🇧🇪 Belgium Schedule & Squad</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-germany">🇩🇪 Germany Schedule & Squad</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-netherlands">🇳🇱 Netherlands Schedule & Squad</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-australia">🇦🇺 Australia Schedule & Squad</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England Schedule & Squad</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-argentina">🇦🇷 Argentina Schedule & Squad</a></li>
+                  <li><a href="/teams#stars" style={{ borderTop: "1px solid var(--border-color)", paddingTop: "0.5rem" }}>⭐ Star Players to Watch</a></li>
                 </ul>
               </li>
 
-              {/* Teams Dropdown */}
+              {/* Live Centre Dropdown */}
               <li className="nav-item-dropdown">
                 <span className="dropdown-trigger">
-                  Teams 
-                  <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
-                </span>
-                <ul className="dropdown-menu">
-                  <li><a href="/teams">All 16 Qualified Nations</a></li>
-                  <li><a href="/teams#stars">Star Players to Watch</a></li>
-                </ul>
-              </li>
-
-              {/* Venues Dropdown */}
-              <li className="nav-item-dropdown">
-                <span className="dropdown-trigger">
-                  Stadiums 
-                  <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
-                </span>
-                <ul className="dropdown-menu">
-                  <li><a href="/venues/wagener-stadium-guide">🇳🇱 Wagener Stadium Guide</a></li>
-                  <li><a href="/venues/belfius-arena-guide">🇧🇪 Belfius Arena Guide</a></li>
-                  <li><a href="/venues">🗺️ All Stadium Venues</a></li>
-                </ul>
-              </li>
-
-              {/* Broadcasting Dropdown */}
-              <li className="nav-item-dropdown">
-                <span className="dropdown-trigger">
-                  Live Centre 
+                  Live Centre
                   <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
                 </span>
                 <ul className="dropdown-menu">
                   <li><a href="/live-scores"><span dangerouslySetInnerHTML={{ __html: "&#x1F534;" }} /> Live Scoreboard</a></li>
                   <li><a href="/hockey-live-streaming">📺 Hockey Live Streaming</a></li>
-                  <li><a href="/tickets">Official Tickets & Pricing</a></li>
-                  <li><a href="/hockey-live-streaming#vpn">VPN Stream Guide</a></li>
-                </ul>
-              </li>
-
-              {/* Match Previews Dropdown */}
-              <li className="nav-item-dropdown">
-                <span className="dropdown-trigger">
-                  Blockbuster Previews 
-                  <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
-                </span>
-                <ul className="dropdown-menu">
+                  <li><a href="/tickets">🎟️ Tickets & Seating Pricing</a></li>
+                  <li><a href="/venues">🗺️ Stadium Venues Hub</a></li>
+                  <li style={{ borderTop: "1px solid var(--border-color)", margin: "0.5rem 0", height: 0 }}></li>
+                  <li style={{ padding: "0.2rem 1rem", fontSize: "0.75rem", textTransform: "uppercase", color: "var(--text-muted)", fontWeight: "bold", pointerEvents: "none" }}>Blockbusters:</li>
                   <li><a href="/matches/india-vs-pakistan">🇮🇳 India vs Pakistan 🇵🇰</a></li>
                   <li><a href="/matches/germany-vs-belgium">🇩🇪 Germany vs Belgium 🇧🇪</a></li>
-                  <li><a href="/matches/netherlands-vs-australia-women">🇳🇱 Netherlands vs Australia 🇦🇺</a></li>
+                  <li><a href="/matches/netherlands-vs-australia-women">🇳🇱 Netherlands vs Australia (W)</a></li>
                   <li><a href="/matches/india-vs-england">🇮🇳 India vs England 🏴󠁧󠁢󠁥󠁮󠁧󠁿</a></li>
                   <li><a href="/matches/netherlands-vs-argentina">🇳🇱 Netherlands vs Argentina 🇦🇷</a></li>
                 </ul>
               </li>
 
-              {/* Stats Dropdown */}
+              {/* History & Stats Dropdown */}
               <li className="nav-item-dropdown">
                 <span className="dropdown-trigger">
-                  History & Stats 
+                  History & Stats
                   <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
                 </span>
                 <ul className="dropdown-menu">
-                  <li><a href="/history">World Cup Winners (1971-2026)</a></li>
-                  <li><a href="/past-results">2023 World Cup Stats</a></li>
+                  <li><a href="/history">🏆 World Cup Winners (1971-2026)</a></li>
+                  <li><a href="/past-results">📊 2023 World Cup Stats</a></li>
                 </ul>
               </li>
             </ul>
