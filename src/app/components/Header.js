@@ -107,6 +107,21 @@ export default function Header() {
                 </ul>
               </li>
 
+              {/* Match Previews Dropdown */}
+              <li className="nav-item-dropdown">
+                <span className="dropdown-trigger">
+                  Blockbuster Previews 
+                  <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
+                </span>
+                <ul className="dropdown-menu">
+                  <li><a href="/matches/india-vs-pakistan">🇮🇳 India vs Pakistan 🇵🇰</a></li>
+                  <li><a href="/matches/germany-vs-belgium">🇩🇪 Germany vs Belgium 🇧🇪</a></li>
+                  <li><a href="/matches/netherlands-vs-australia-women">🇳🇱 Netherlands vs Australia 🇦🇺</a></li>
+                  <li><a href="/matches/india-vs-england">🇮🇳 India vs England 🏴󠁧󠁢󠁥󠁮󠁧󠁿</a></li>
+                  <li><a href="/matches/netherlands-vs-argentina">🇳🇱 Netherlands vs Argentina 🇦🇷</a></li>
+                </ul>
+              </li>
+
               {/* Stats Dropdown */}
               <li className="nav-item-dropdown">
                 <span className="dropdown-trigger">
@@ -189,6 +204,15 @@ export default function Header() {
           <li><a href="/venues" onClick={() => setIsMobileOpen(false)}>🗺️ All Stadium Venues</a></li>
           <li><a href="/tickets" onClick={() => setIsMobileOpen(false)}>Tickets & Pricing</a></li>
           <li><a href="/hockey-live-streaming" onClick={() => setIsMobileOpen(false)}>📺 Hockey Live Streaming</a></li>
+
+          <li style={{ color: "var(--text-muted)", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.1em", padding: "0.8rem 1.5rem 0.3rem", fontWeight: "700", pointerEvents: "none" }}>Blockbuster Previews</li>
+          <li><a href="/matches/india-vs-pakistan" onClick={() => setIsMobileOpen(false)}>🇮🇳 India vs Pakistan 🇵🇰</a></li>
+          <li><a href="/matches/germany-vs-belgium" onClick={() => setIsMobileOpen(false)}>🇩🇪 Germany vs Belgium 🇧🇪</a></li>
+          <li><a href="/matches/netherlands-vs-australia-women" onClick={() => setIsMobileOpen(false)}>🇳🇱 Netherlands vs Australia 🇦🇺</a></li>
+          <li><a href="/matches/india-vs-england" onClick={() => setIsMobileOpen(false)}>🇮🇳 India vs England 🏴󠁧󠁢󠁥󠁮󠁧󠁿</a></li>
+          <li><a href="/matches/netherlands-vs-argentina" onClick={() => setIsMobileOpen(false)}>🇳🇱 Netherlands vs Argentina 🇦🇷</a></li>
+
+          <li style={{ color: "var(--text-muted)", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.1em", padding: "0.8rem 1.5rem 0.3rem", fontWeight: "700", pointerEvents: "none" }}>History & Stats</li>
           <li><a href="/history" onClick={() => setIsMobileOpen(false)}>Past Winners (1971-2026)</a></li>
           <li><a href="/past-results" onClick={() => setIsMobileOpen(false)}>2023 World Cup Stats</a></li>
         </ul>

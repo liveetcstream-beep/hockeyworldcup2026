@@ -64,15 +64,54 @@ export default function SchedulePage() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": faqItems.map((item) => ({
-              "@type": "Question",
-              "name": item.question,
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": item.answer,
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hockeyworldcup2026schedule.com" },
+                  { "@type": "ListItem", "position": 2, "name": "Schedule", "item": "https://hockeyworldcup2026schedule.com/schedule" }
+                ]
               },
-            })),
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqItems.map((item) => ({
+                  "@type": "Question",
+                  "name": item.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": item.answer,
+                  },
+                })),
+              },
+              {
+                "@type": "SportsEvent",
+                "name": "FIH Hockey World Cup 2026 Tournament Schedule",
+                "startDate": "2026-08-15T10:00:00+02:00",
+                "endDate": "2026-08-30T21:00:00+02:00",
+                "eventAttendanceMode": "https://schema.org/MixedEventAttendanceMode",
+                "eventStatus": "https://schema.org/EventScheduled",
+                "location": [
+                  {
+                    "@type": "Place",
+                    "name": "Wagener Stadium",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "addressLocality": "Amstelveen",
+                      "addressCountry": "NL"
+                    }
+                  },
+                  {
+                    "@type": "Place",
+                    "name": "Belfius Hockey Arena",
+                    "address": {
+                      "@type": "PostalAddress",
+                      "addressLocality": "Wavre",
+                      "addressCountry": "BE"
+                    }
+                  }
+                ]
+              }
+            ]
           }),
         }}
       />

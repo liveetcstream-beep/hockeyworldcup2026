@@ -17,85 +17,85 @@ export default function VenuesPage() {
 
       <section className="hero-section">
         <div className="sports-container hero-content">
-          <p className="hero-subtitle">Official Tournament Stadiums</p>
-          <h1 className="hero-title">Wagener & Belfius Stadium Visitor Guide 2026</h1>
+          <p className="hero-subtitle">Official Tournament Stadiums & Travel Guides</p>
+          <h1 className="hero-title">Wagener & Belfius Stadium Visitor Guides 2026</h1>
           <p className="hero-description">
-            The 2026 Hockey World Cup is co-hosted across two historic venues in Amstelveen, Netherlands and Wavre, Belgium. Find transit routes, weather advisories, and local landmarks below.
+            The 2026 Hockey World Cup is co-hosted across two world-class stadiums in Amstelveen, Netherlands and Wavre, Belgium. Find transit routes, weather advisories, local landmarks, and access our dedicated stadium visitor guides.
           </p>
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
               ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
             </div>
+            <div className="eeat-badge">
+              ⚡ Status: <strong>Both Venues Verified</strong>
+            </div>
           </div>
         </div>
       </section>
 
       <main className="sports-container py-12">
-        <section className="local-grid my-12">
-          {/* Amstelveen Stadium Guide */}
-          <div className="local-card">
-            <div className="local-icon">
-              <img src="https://flagcdn.com/w40/nl.png" width="30" height="20" alt="Netherlands flag" style={{ borderRadius: "2px" }} />
+        {/* Breadcrumb */}
+        <nav aria-label="breadcrumb" style={{ marginBottom: "2rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
+          <a href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Home</a>
+          <span style={{ margin: "0 0.5rem" }}>&gt;</span>
+          <span style={{ color: "var(--text-main)", fontWeight: "600" }}>Venues Hub</span>
+        </nav>
+
+        <section className="local-grid my-12" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "2rem" }}>
+          {/* Amstelveen Stadium Guide Card */}
+          <div className="local-card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <div>
+              <div className="local-icon" style={{ marginBottom: "1rem" }}>
+                <img src="https://flagcdn.com/w40/nl.png" width="30" height="20" alt="Netherlands flag" style={{ borderRadius: "2px" }} />
+              </div>
+              <h2 className="text-2xl font-bold text-white mb-2">Wagener Stadium, Amstelveen</h2>
+              <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                Located in the scenic North Holland province, the Wagener Stadium is the spiritual home of Dutch hockey. It is nestled right on the edge of the <strong>Amsterdamse Bos</strong> (Amsterdam Forest), offering beautiful greenery, hiking paths, and lake systems for visiting fans.
+              </p>
+              <div className="local-meta" style={{ marginBottom: "2rem" }}>
+                <div className="local-meta-item">
+                  <span>📍 Address:</span>
+                  <strong>Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, Netherlands</strong>
+                </div>
+                <div className="local-meta-item">
+                  <span>🏟️ Capacity:</span>
+                  <strong>9,000 Spectators</strong>
+                </div>
+              </div>
             </div>
-            <h2 className="text-2xl font-bold text-white mb-2">Wagener Stadium, Amstelveen</h2>
-            <p className="text-slate-300 text-sm leading-relaxed mb-6">
-              Located in the scenic North Holland province, the Wagener Stadium is the spiritual home of Dutch hockey. It is nestled right on the edge of the <strong>Amsterdamse Bos</strong> (Amsterdam Forest), offering beautiful greenery, hiking paths, and lake systems for visiting fans.
-            </p>
-            <div className="local-meta">
-              <div className="local-meta-item">
-                <span>📍 Full Address:</span>
-                <strong>Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, Netherlands</strong>
-              </div>
-              <div className="local-meta-item">
-                <span>🚇 Public Transit:</span>
-                <strong>Metro 25 from Amsterdam Centraal to Amstelveen, followed by a short walk</strong>
-              </div>
-              <div className="local-meta-item">
-                <span>🏛️ Nearby Landmark:</span>
-                <strong>Cobra Museum of Modern Art / Amsterdamse Bos Lake</strong>
-              </div>
-              <div className="local-meta-item">
-                <span>🌦️ Expected Climate:</span>
-                <strong>Varies between 16°C to 23°C in late August. Heavy rains are common.</strong>
-              </div>
-              <div className="local-meta-item">
-                <span>⚠️ Local Issue:</span>
-                <strong>High congestion during peak matchdays; travel via bicycles or public transport.</strong>
-              </div>
+            <div>
+              <a href="/venues/wagener-stadium-guide" className="cta-button primary-cta" style={{ display: "block", textClassName: "none", textAlign: "center", textDecoration: "none" }}>
+                🏟️ Read Full Wagener Stadium Guide →
+              </a>
             </div>
           </div>
 
-          {/* Belgium Stadium Guide */}
-          <div className="local-card">
-            <div className="local-icon">
-              <img src="https://flagcdn.com/w40/be.png" width="30" height="20" alt="Belgium flag" style={{ borderRadius: "2px" }} />
+          {/* Belgium Stadium Guide Card */}
+          <div className="local-card" style={{ display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+            <div>
+              <div className="local-icon" style={{ marginBottom: "1rem" }}>
+                <img src="https://flagcdn.com/w40/be.png" width="30" height="20" alt="Belgium flag" style={{ borderRadius: "2px" }} />
+              </div>
+              <h2 className="text-2xl font-bold text-white mb-2">Belfius Hockey Arena, Wavre</h2>
+              <p className="text-slate-300 text-sm leading-relaxed mb-6">
+                Wavre is situated in the Walloon Brabant region of Belgium. The Belfius Arena is a brand-new, top-tier facility built specifically to host the Belgian pool matches and the Men's Hockey World Cup grand finale.
+              </p>
+              <div className="local-meta" style={{ marginBottom: "2rem" }}>
+                <div className="local-meta-item">
+                  <span>📍 Address:</span>
+                  <strong>Avenue de la Toison d'Or, 1300 Wavre, Belgium</strong>
+                </div>
+                <div className="local-meta-item">
+                  <span>🏟️ Capacity:</span>
+                  <strong>10,000 Spectators</strong>
+                </div>
+              </div>
             </div>
-            <h2 className="text-2xl font-bold text-white mb-2">Belfius Hockey Arena, Wavre</h2>
-            <p className="text-slate-300 text-sm leading-relaxed mb-6">
-              Wavre is situated in the Walloon Brabant region of Belgium. The Belfius Arena is a brand-new, top-tier facility built specifically to host the Belgian pool matches and the Men's Hockey World Cup grand finale.
-            </p>
-            <div className="local-meta">
-              <div className="local-meta-item">
-                <span>📍 Full Address:</span>
-                <strong>Avenue de la Toison d'Or, 1300 Wavre, Belgium</strong>
-              </div>
-              <div className="local-meta-item">
-                <span>🚆 Public Transit:</span>
-                <strong>Direct train lines from Brussels-Luxembourg or Brussels-Schuman station</strong>
-              </div>
-              <div className="local-meta-item">
-                <span>🎢 Nearby Landmark:</span>
-                <strong>Walibi Belgium Amusement Park (adjacent to the stadium area)</strong>
-              </div>
-              <div className="local-meta-item">
-                <span>🌦️ Expected Climate:</span>
-                <strong>Average 15°C to 22°C. Cool drafts from surrounding fields during evening matches.</strong>
-              </div>
-              <div className="local-meta-item">
-                <span>⚠️ Local Issue:</span>
-                <strong>Limited car parking near the arena; shuttle buses run from Wavre train station.</strong>
-              </div>
+            <div>
+              <a href="/venues/belfius-arena-guide" className="cta-button primary-cta" style={{ display: "block", textClassName: "none", textAlign: "center", textDecoration: "none" }}>
+                🏟️ Read Full Belfius Arena Guide →
+              </a>
             </div>
           </div>
         </section>

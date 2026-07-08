@@ -24,6 +24,16 @@ export default function Footer() {
             </ul>
           </div>
           <div className="footer-col">
+            <h4 className="text-white font-bold">Blockbuster Previews</h4>
+            <ul className="footer-links">
+              <li><a href="/matches/india-vs-pakistan">India vs Pakistan (M)</a></li>
+              <li><a href="/matches/germany-vs-belgium">Germany vs Belgium (M)</a></li>
+              <li><a href="/matches/netherlands-vs-australia-women">Netherlands vs Australia (W)</a></li>
+              <li><a href="/matches/india-vs-england">India vs England (M)</a></li>
+              <li><a href="/matches/netherlands-vs-argentina">Netherlands vs Argentina (M)</a></li>
+            </ul>
+          </div>
+          <div className="footer-col">
             <h4 className="text-white font-bold">Contact & Support</h4>
             <p>For inquiries, content updates, or sports analysis submissions, reach out to our editorial desk at: <br/><strong>editor@hockeyworldcup2026schedule.com</strong></p>
           </div>
