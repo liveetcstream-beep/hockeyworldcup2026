@@ -128,7 +128,7 @@ export default function IndiaHockeyPage() {
             { icon: "👩", label: "FIH Ranking (Women)", value: "#9" },
             { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
-            { icon: "⚔️", label: "Pool D Rivals", value: "Wales, England, Pakistan, China, South Africa" },
+            { icon: "⚔️", label: "Pool D Rivals", value: "Wales, England, Pakistan" },
           ].map((stat) => (
             <div
               key={stat.label}

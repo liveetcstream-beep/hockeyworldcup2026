@@ -80,7 +80,7 @@ export default function IrelandHockeyPage() {
             { icon: "👩", label: "FIH Ranking (Women)", value: "#12" },
             { icon: "🏟️", label: "Venue", value: "Belfius Hockey Arena, Wavre" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 16–21, 2026" },
-            { icon: "⚔️", label: "Pool C Rivals", value: "Australia, South Africa, Spain, New Zealand, Belgium" },
+            { icon: "⚔️", label: "Pool C Rivals", value: "Australia, South Africa, Spain" },
           ].map((stat) => (
             <div
               key={stat.label}

@@ -80,7 +80,7 @@ export default function AustraliaHockeyPage() {
             { icon: "👩", label: "FIH Ranking (Women)", value: "#5" },
             { icon: "🏟️", label: "Venue", value: "Belfius Hockey Arena, Wavre" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 16–21, 2026" },
-            { icon: "⚔️", label: "Pool C Rivals", value: "Ireland, Spain, South Africa, Japan, Netherlands, Chile" },
+            { icon: "⚔️", label: "Pool C Rivals", value: "Ireland, Spain, South Africa" },
           ].map((stat) => (
             <div
               key={stat.label}

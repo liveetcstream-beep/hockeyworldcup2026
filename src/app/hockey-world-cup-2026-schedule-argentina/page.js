@@ -80,7 +80,7 @@ export default function ArgentinaHockeyPage() {
             { icon: "👩", label: "FIH Ranking (Women)", value: "#2" },
             { icon: "🏟️", label: "Venue", value: "Wagener & Belfius" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
-            { icon: "⚔️", label: "Pool A Rivals", value: "Japan, Netherlands, New Zealand, United States, Germany, Scotland" },
+            { icon: "⚔️", label: "Pool A Rivals", value: "Japan, Netherlands, New Zealand" },
           ].map((stat) => (
             <div
               key={stat.label}

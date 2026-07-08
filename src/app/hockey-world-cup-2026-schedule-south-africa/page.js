@@ -80,7 +80,7 @@ export default function SouthAfricaHockeyPage() {
             { icon: "👩", label: "FIH Ranking (Women)", value: "#20" },
             { icon: "🏟️", label: "Venue", value: "Belfius Hockey Arena, Wavre" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 16–21, 2026" },
-            { icon: "⚔️", label: "Pool C Rivals", value: "Spain, Ireland, Australia, England, India, China" },
+            { icon: "⚔️", label: "Pool C Rivals", value: "Spain, Ireland, Australia" },
           ].map((stat) => (
             <div
               key={stat.label}

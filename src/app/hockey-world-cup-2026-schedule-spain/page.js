@@ -80,7 +80,7 @@ export default function SpainHockeyPage() {
             { icon: "👩", label: "FIH Ranking (Women)", value: "#8" },
             { icon: "🏟️", label: "Venue", value: "Belfius Hockey Arena, Wavre" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 16–21, 2026" },
-            { icon: "⚔️", label: "Pool C Rivals", value: "South Africa, Australia, Ireland, Belgium, New Zealand" },
+            { icon: "⚔️", label: "Pool C Rivals", value: "South Africa, Australia, Ireland" },
           ].map((stat) => (
             <div
               key={stat.label}

@@ -80,7 +80,7 @@ export default function NetherlandsHockeyPage() {
             { icon: "👩", label: "FIH Ranking (Women)", value: "#1" },
             { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
-            { icon: "⚔️", label: "Pool A Rivals", value: "New Zealand, Argentina, Japan, Chile, Australia" },
+            { icon: "⚔️", label: "Pool A Rivals", value: "New Zealand, Argentina, Japan" },
           ].map((stat) => (
             <div
               key={stat.label}

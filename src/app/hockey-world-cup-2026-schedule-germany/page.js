@@ -80,7 +80,7 @@ export default function GermanyHockeyPage() {
             { icon: "👩", label: "FIH Ranking (Women)", value: "#3" },
             { icon: "🏟️", label: "Venue", value: "Belfius Hockey Arena, Wavre" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
-            { icon: "⚔️", label: "Pool B Rivals", value: "Malaysia, Belgium, France, Scotland, Argentina, United States" },
+            { icon: "⚔️", label: "Pool B Rivals", value: "Malaysia, Belgium, France" },
           ].map((stat) => (
             <div
               key={stat.label}

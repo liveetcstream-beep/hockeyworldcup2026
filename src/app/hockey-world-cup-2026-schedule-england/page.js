@@ -80,7 +80,7 @@ export default function EnglandHockeyPage() {
             { icon: "👩", label: "FIH Ranking (Women)", value: "#7" },
             { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
-            { icon: "⚔️", label: "Pool D Rivals", value: "Pakistan, India, Wales, South Africa, China" },
+            { icon: "⚔️", label: "Pool D Rivals", value: "Pakistan, India, Wales" },
           ].map((stat) => (
             <div
               key={stat.label}
