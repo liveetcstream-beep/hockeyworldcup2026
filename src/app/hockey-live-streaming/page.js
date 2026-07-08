@@ -3,8 +3,8 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Official Broadcasting & Online Live Streaming Hockey World Cup 2026",
-  description: "Complete list of official TV channels, mobile apps, and online live-streaming platforms broadcasting the 2026 FIH Hockey World Cup globally.",
+  title: "Hockey World Cup 2026 Live Stream & Live Score: Watch Online & TV List",
+  description: "Looking for Hockey World Cup 2026 live stream and live score channels? Get the complete FIH Hockey World Cup qualifiers & tournament apps and TV list.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/hockey-live-streaming",
   },
@@ -13,28 +13,28 @@ export const metadata = {
 export default function BroadcastersPage() {
   const faqItems = [
     {
-      q: "What is the Hockey World Cup 2026 Live Streaming?",
-      a: "It refers to the real-time digital telecast of all 2026 FIH Hockey World Cup matches. Fans can stream the matches live on platforms like JioCinema (India), Tapmad (Pakistan), VRT MAX (Belgium), and Watch.Hockey (internationally)."
+      q: "How to watch the Hockey World Cup 2026 live stream online?",
+      a: "You can watch the Hockey World Cup 2026 live stream on regional platforms depending on your location. JioCinema streams it free in India, Tapmad streams HD coverage in Pakistan, VRT MAX and RTBF Auvio cover it in Belgium, and the Watch.Hockey app streams it globally for regions without exclusive television rights."
     },
     {
-      q: "Who is the official broadcaster of the Hockey World Cup 2026 in India?",
-      a: "Viacom18 holds the official broadcasting rights. Linear TV coverage will be available on the Sports18 network channels, while online live streaming is completely free on the JioCinema app."
+      q: "Where can I check the hockey live score for the World Cup?",
+      a: "You can track the hockey live score of all matches on our official scoreboard section (hockeyworldcup2026schedule.com/live-scores) or check the official real-time updates via FIH's match center portal."
     },
     {
-      q: "How can I watch the Hockey World Cup 2026 live on mobile in Pakistan?",
-      a: "Fans in Pakistan can watch HD live streaming on the Tapmad mobile app and web portal. Regular updates and linear broadcasts are also available via PTV Sports and Ten Sports."
+      q: "How to watch the junior hockey world cup 2026 live stream?",
+      a: "Matches for the Junior Hockey World Cup 2026 are streamed live on the official Watch.Hockey platform. Certain matches involving local teams are also picked up by regional broadcasters like Star Sports/Sports18 in India and PTV Sports in Pakistan."
     },
     {
-      q: "Where to watch the Hockey World Cup 2026 in the United Kingdom?",
-      a: "UK hockey fans can watch live match coverage on TNT Sports. Online streaming is also accessible via the Discovery+ app with an active subscription."
+      q: "Can I watch the fih hockey world cup qualifiers 2026 live streaming?",
+      a: "Yes, the FIH Hockey World Cup Qualifiers 2026 are streamed live on Watch.Hockey. Live scores and detailed qualifiers match cards can also be monitored via the FIH official website or regional sports networks."
     },
     {
-      q: "How can I watch the Hockey World Cup 2026 live in North America (USA & Canada)?",
-      a: "In the United States, Fox Sports 2 will broadcast selected matches on TV. The entire tournament, including matches of the US Women's squad, is streamed online via Willow TV and the Watch.Hockey portal."
+      q: "Is there an ice hockey world cup 2026 live stream available here?",
+      a: "No, this guide is exclusively for the FIH Field Hockey World Cup. For the IIHF Ice Hockey World Championship, official streams are hosted on IIHF.TV or via regional broadcasters like ESPN and TSN."
     },
     {
-      q: "What streaming options are available in Belgium and the Netherlands?",
-      a: "In Belgium, free live streaming is provided by VRT MAX (Flemish) and RTBF Auvio (French). In the Netherlands, NOS Sport will stream all Netherlands team games free on NOS.nl and the NOS app."
+      q: "How can I access junior hockey world cup 2026 scores today live?",
+      a: "You can check junior hockey world cup 2026 scores today live by visiting our dedicated scoreboard tab, or checking the live match widgets on the FIH official app."
     }
   ];
 
@@ -50,7 +50,7 @@ export default function BroadcastersPage() {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
                   { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hockeyworldcup2026schedule.com" },
-                  { "@type": "ListItem", "position": 2, "name": "Broadcasters", "item": "https://hockeyworldcup2026schedule.com/hockey-live-streaming" }
+                  { "@type": "ListItem", "position": 2, "name": "Hockey Live Streaming", "item": "https://hockeyworldcup2026schedule.com/hockey-live-streaming" }
                 ]
               },
               {
@@ -73,17 +73,17 @@ export default function BroadcastersPage() {
 
       <section className="hero-section">
         <div className="sports-container hero-content">
-          <p className="hero-subtitle">📺 TV Channels & Digital Streaming Directory</p>
-          <h1 className="hero-title">Broadcasting & Online Live Streaming Hockey World Cup 2026</h1>
+          <p className="hero-subtitle">📺 TV Channels, Streaming Apps & Live Scores Guide</p>
+          <h1 className="hero-title">Hockey World Cup 2026 Live Stream, TV Broadcast & Live Score Guide</h1>
           <p className="hero-description">
-            The 16th edition of the FIH Hockey World Cup (Amstelveen & Wavre 2026) is set to be the most thrilling chapter in field hockey history. Get the complete global list of TV networks, mobile apps, and streaming platforms to watch the matches live.
+            Looking for the official <strong>hockey world cup 2026 live stream</strong>, TV channel guides, or real-time <strong>hockey world cup 2026 live score</strong> statistics? We compile the verified streaming applications, TV listings, and VPN workarounds for both Men's and Women's matches in Amstelveen and Wavre.
           </p>
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Analyst: <strong>Marc Devos (Belgian Hockey Journalist)</strong>
+              ✍️ Editor-in-Chief: <strong>Marc Devos (Senior Belgian Hockey Journalist)</strong>
             </div>
             <div className="eeat-badge">
-              ⚡ Verified: <strong>Official Broadcast Partners List</strong>
+              ⚡ Status: <strong>Verified Streaming & Score Directories</strong>
             </div>
           </div>
         </div>
@@ -95,11 +95,12 @@ export default function BroadcastersPage() {
           <h3 style={{ fontSize: "1.1rem", color: "var(--text-main)", marginBottom: "1rem" }}>📖 Table of Contents</h3>
           <ul style={{ color: "#38bdf8", paddingLeft: "1.2rem", fontSize: "0.95rem", lineHeight: "1.8", margin: 0 }}>
             <li><a href="#tv-list" style={{ color: "#38bdf8", textDecoration: "none" }}>1. Hockey World Cup 2026 Broadcasting Channel List</a></li>
-            <li><a href="#app-list" style={{ color: "#38bdf8", textDecoration: "none" }}>2. Watch Online Live Streaming HWC on Mobile Apps</a></li>
-            <li><a href="#tv-overview" style={{ color: "#38bdf8", textDecoration: "none" }}>3. Detailed Overview of Broadcasting Channels</a></li>
-            <li><a href="#app-overview" style={{ color: "#38bdf8", textDecoration: "none" }}>4. Detailed Overview of Live Streaming Apps</a></li>
-            <li><a href="#vpn-guide" style={{ color: "#38bdf8", textDecoration: "none" }}>5. Avoiding Geo-Blocks: VPN Streaming Guide</a></li>
-            <li><a href="#faqs" style={{ color: "#38bdf8", textDecoration: "none" }}>6. Frequently Asked Questions (FAQs)</a></li>
+            <li><a href="#app-list" style={{ color: "#38bdf8", textDecoration: "none" }}>2. Watch Online Live Streaming on Mobile Apps</a></li>
+            <li><a href="#qualifiers-juniors" style={{ color: "#38bdf8", textDecoration: "none" }}>3. FIH Qualifiers & Junior World Cup Streaming & Live Scores</a></li>
+            <li><a href="#tv-overview" style={{ color: "#38bdf8", textDecoration: "none" }}>4. Detailed Overview of Broadcasting Channels</a></li>
+            <li><a href="#app-overview" style={{ color: "#38bdf8", textDecoration: "none" }}>5. Detailed Overview of Live Streaming Apps</a></li>
+            <li><a href="#vpn-guide" style={{ color: "#38bdf8", textDecoration: "none" }}>6. Avoiding Geo-Blocks: VPN Streaming Guide</a></li>
+            <li><a href="#faqs" style={{ color: "#38bdf8", textDecoration: "none" }}>7. Frequently Asked Questions (FAQs)</a></li>
           </ul>
         </section>
 
@@ -107,7 +108,7 @@ export default function BroadcastersPage() {
         <div style={{ marginBottom: "3rem", borderRadius: "16px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
           <img 
             src="/images/hockey_broadcasting_banner.png" 
-            alt="Hockey World Cup 2026 Live Streaming and TV Broadcast Banner" 
+            alt="Field Hockey World Cup Live Streaming and TV Broadcast Banner" 
             style={{ width: "100%", height: "auto", display: "block" }}
           />
         </div>
@@ -118,7 +119,7 @@ export default function BroadcastersPage() {
             1. Hockey World Cup 2026 Broadcasting Channel List
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem", lineHeight: "1.7" }}>
-            The thrilling action of the 2026 World Cup will be broadcast live across various television networks globally. Below is the verified country-wise TV channel list:
+            The 2026 World Cup matches will feature extensive live coverage across global television networks. Find the official country-wise television broadcast partners below:
           </p>
 
           <div style={{ overflowX: "auto" }}>
@@ -157,10 +158,10 @@ export default function BroadcastersPage() {
         {/* Section 2: Live Streaming Apps Table */}
         <section id="app-list" style={{ marginBottom: "3rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            2. Watch Online Live Streaming HWC on Mobile Apps
+            2. Watch Online Live Streaming on Mobile Apps
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem", lineHeight: "1.7" }}>
-            If you prefer watching matches on the go via smartphone, tablet, or smart TV, use these official digital streaming applications:
+            Access the action on your phone, tablet, or smart TV using the official streaming apps. No cable subscription is required for several free streaming platforms:
           </p>
 
           <div style={{ overflowX: "auto" }}>
@@ -193,17 +194,36 @@ export default function BroadcastersPage() {
           </div>
         </section>
 
-        {/* Section 3: Overview of Broadcasting Channels */}
+        {/* Section 3: Qualifiers & Junior World Cup Matches */}
+        <section id="qualifiers-juniors" style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            3. FIH Qualifiers & Junior World Cup Streaming & Live Scores
+          </h2>
+          <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
+            If you are looking to watch the road to the main event, the <strong>fih hockey world cup qualifiers 2026 live streaming</strong> is accessible globally on the Watch.Hockey portal. Live match scorecards and results for these qualification phases are updated instantly in our live stats center.
+          </p>
+          <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
+            For junior division fans, the <strong>junior hockey world cup 2026 live stream</strong> covers the upcoming generation of stars. You can follow <strong>junior hockey world cup 2026 scores today live</strong> on our dedicated scoreboard widgets, tracking team updates, shootout goals, and penalty corner metrics.
+          </p>
+          <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+            <h4 style={{ color: "var(--text-main)", fontWeight: "700", margin: "0 0 0.5rem 0", fontSize: "1rem" }}>🏑 Note on Ice Hockey World Cup Streaming</h4>
+            <p style={{ color: "var(--text-muted)", margin: 0, fontSize: "0.95rem" }}>
+              Please note: This guide is dedicated specifically to the FIH Field Hockey World Cup, qualifiers, and junior tournaments. For the <strong>ice hockey world cup 2026 live stream</strong> (IIHF World Championship), streaming passes are hosted on IIHF.TV or broadcast via TSN/ESPN.
+            </p>
+          </div>
+        </section>
+
+        {/* Section 4: Detailed Overview of Broadcasting Channels */}
         <section id="tv-overview" style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            3. Detailed Overview of Broadcasting Channels
+            4. Detailed Overview of Broadcasting Channels
           </h2>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
             <div>
               <h3 style={{ fontSize: "1.2rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "0.5rem" }}>📺 Sports18 HD (India & Subcontinent)</h3>
               <p style={{ color: "var(--text-muted)", margin: 0 }}>
-                Sports18 is the home of international hockey in India. The network will broadcast all Indian Men's and Women's matches live in multiple audio options (English and Hindi feeds), along with full coverage of the knockout stages from Wavre and Amstelveen.
+                Sports18 is the official home of international hockey in India. The network will broadcast all Indian Men's and Women's matches live in multiple audio options (English and Hindi feeds), along with full coverage of the knockout stages from Wavre and Amstelveen.
               </p>
             </div>
 
@@ -239,10 +259,10 @@ export default function BroadcastersPage() {
           />
         </div>
 
-        {/* Section 4: Overview of Live Streaming Apps */}
+        {/* Section 5: Overview of Live Streaming Apps */}
         <section id="app-overview" style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            4. Detailed Overview of Live Streaming Apps
+            5. Detailed Overview of Live Streaming Apps
           </h2>
 
           <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
@@ -276,7 +296,7 @@ export default function BroadcastersPage() {
           </div>
         </section>
 
-        {/* Section 5: VPN Bypass Guide */}
+        {/* Section 6: VPN Bypass Guide */}
         <section id="vpn-guide" style={{ background: "rgba(192,0,48,0.03)", border: "1px solid rgba(192,0,48,0.1)", borderRadius: "20px", padding: "2rem", marginBottom: "3rem" }}>
           <h2 style={{ fontSize: "1.4rem", fontWeight: "800", color: "var(--text-main)", marginBottom: "1rem" }}>
             🛡️ Travel Tip: Avoid Blackouts with a VPN
@@ -287,7 +307,7 @@ export default function BroadcastersPage() {
           </p>
         </section>
 
-        {/* Section 6: FAQs */}
+        {/* Section 7: FAQs */}
         <section id="faqs" style={{ marginBottom: "3rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
             Frequently Asked Questions (FAQs)
