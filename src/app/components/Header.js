@@ -14,7 +14,7 @@ export default function Header() {
       <header className="sports-header">
         <div className="sports-container header-flex">
           <a href="/" className="logo-text">
-            <span>ðŸ’</span> HOCKEY<span>WORLD2026</span>
+            <span>🏑</span> HOCKEY<span>WORLD2026</span>
             <span className="logo-badge">Hub</span>
           </a>
           
@@ -137,7 +137,7 @@ export default function Header() {
       <div className={`mobile-nav-overlay ${isMobileOpen ? "open" : ""}`}>
         <div className="mobile-nav-header">
           <a href="/" className="logo-text" onClick={() => setIsMobileOpen(false)}>
-            <span>ðŸ’</span> HOCKEY<span>WORLD2026</span>
+            <span>🏑</span> HOCKEY<span>WORLD2026</span>
           </a>
           <button 
             className="mobile-nav-close" 
