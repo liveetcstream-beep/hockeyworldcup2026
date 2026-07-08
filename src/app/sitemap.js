@@ -13,7 +13,7 @@ export default function sitemap() {
     { route: "/h2h",         priority: 0.85, freq: "weekly" },
     { route: "/teams",       priority: 0.85, freq: "weekly" },
     { route: "/past-results",priority: 0.85, freq: "weekly" },
-    { route: "/broadcasters",priority: 0.8,  freq: "weekly" },
+    { route: "/hockey-live-streaming",priority: 0.8,  freq: "weekly" },
     { route: "/venues",      priority: 0.8,  freq: "weekly" },
     { route: "/format",      priority: 0.75, freq: "monthly" },
     { route: "/history",     priority: 0.75, freq: "monthly" },

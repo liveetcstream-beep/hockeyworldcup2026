@@ -101,9 +101,9 @@ export default function Header() {
                 </span>
                 <ul className="dropdown-menu">
                   <li><a href="/live-scores"><span dangerouslySetInnerHTML={{ __html: "&#x1F534;" }} /> Live Scoreboard</a></li>
-                  <li><a href="/broadcasters">Broadcaster Directory</a></li>
+                  <li><a href="/hockey-live-streaming">Broadcaster Directory</a></li>
                   <li><a href="/tickets">Official Tickets & Pricing</a></li>
-                  <li><a href="/broadcasters#vpn">VPN Stream Guide</a></li>
+                  <li><a href="/hockey-live-streaming#vpn">VPN Stream Guide</a></li>
                 </ul>
               </li>
 
@@ -188,7 +188,7 @@ export default function Header() {
           <li><a href="/venues/belfius-arena-guide" onClick={() => setIsMobileOpen(false)}>🇧🇪 Belfius Arena Guide</a></li>
           <li><a href="/venues" onClick={() => setIsMobileOpen(false)}>🗺️ All Stadium Venues</a></li>
           <li><a href="/tickets" onClick={() => setIsMobileOpen(false)}>Tickets & Pricing</a></li>
-          <li><a href="/broadcasters" onClick={() => setIsMobileOpen(false)}>Broadcaster Directory</a></li>
+          <li><a href="/hockey-live-streaming" onClick={() => setIsMobileOpen(false)}>Broadcaster Directory</a></li>
           <li><a href="/history" onClick={() => setIsMobileOpen(false)}>Past Winners (1971-2026)</a></li>
           <li><a href="/past-results" onClick={() => setIsMobileOpen(false)}>2023 World Cup Stats</a></li>
         </ul>

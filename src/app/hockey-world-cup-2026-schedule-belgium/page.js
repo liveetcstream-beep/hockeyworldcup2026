@@ -500,7 +500,7 @@ export default function BelgiumHockeyPage() {
               { href: "/live-scores", label: "🔴 Live Scores" },
               { href: "/points-table", label: "📊 Points Table" },
               { href: "/venues", label: "🏟️ Belfius Arena Guide" },
-              { href: "/broadcasters", label: "📺 Watch in Belgium (VRT Sport)" },
+              { href: "/hockey-live-streaming", label: "📺 Watch in Belgium (VRT Sport)" },
               { href: "/hockey-world-cup-2026-groups", label: "🏑 Pool B Full Draw" },
               { href: "/teams", label: "👥 All 16 Teams" },
               { href: "/hockey-world-cup-2026-schedule-india", label: "🇮🇳 India's Page" },

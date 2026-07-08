@@ -129,7 +129,7 @@ export default function Home() {
           </div>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <a href="/broadcasters" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
+            <a href="/hockey-live-streaming" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
               <div className="local-icon">📺</div>
               <h3 className="text-white mt-4 mb-2">Live Stream Guide</h3>
               <p className="text-sm text-slate-400">Step-by-step cord-cutting guides, VPN configurations, and country-wise official channels.</p>

@@ -256,7 +256,7 @@ export default function LiveScoresPage() {
                   {/* Match Footer */}
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1.5rem", borderTop: "1px solid var(--border-color)", paddingTop: "1rem", fontSize: "0.8rem", color: "var(--text-muted)" }}>
                     <span>🏟️ Venue: {match.venue}</span>
-                    <a href="/broadcasters" className="match-btn match-btn-primary" style={{ padding: "0.5rem 1.2rem", fontSize: "0.75rem" }}>Stream Live →</a>
+                    <a href="/hockey-live-streaming" className="match-btn match-btn-primary" style={{ padding: "0.5rem 1.2rem", fontSize: "0.75rem" }}>Stream Live →</a>
                   </div>
                 </div>
               ))}

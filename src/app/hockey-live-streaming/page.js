@@ -6,7 +6,7 @@ export const metadata = {
   title: "Official Broadcasting & Online Live Streaming Hockey World Cup 2026",
   description: "Complete list of official TV channels, mobile apps, and online live-streaming platforms broadcasting the 2026 FIH Hockey World Cup globally.",
   alternates: {
-    canonical: "https://hockeyworldcup2026schedule.com/broadcasters",
+    canonical: "https://hockeyworldcup2026schedule.com/hockey-live-streaming",
   },
 };
 
@@ -50,7 +50,7 @@ export default function BroadcastersPage() {
                 "@type": "BreadcrumbList",
                 "itemListElement": [
                   { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hockeyworldcup2026schedule.com" },
-                  { "@type": "ListItem", "position": 2, "name": "Broadcasters", "item": "https://hockeyworldcup2026schedule.com/broadcasters" }
+                  { "@type": "ListItem", "position": 2, "name": "Broadcasters", "item": "https://hockeyworldcup2026schedule.com/hockey-live-streaming" }
                 ]
               },
               {

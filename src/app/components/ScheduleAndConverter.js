@@ -144,7 +144,7 @@ export default function ScheduleAndConverter() {
                 </span>
               </div>
               <div className="match-actions">
-                <a href="/broadcasters" className="match-btn match-btn-primary">Watch Live</a>
+                <a href="/hockey-live-streaming" className="match-btn match-btn-primary">Watch Live</a>
                 <a href="https://fih.hockey" target="_blank" rel="noopener noreferrer" className="match-btn match-btn-secondary">Official Stats</a>
               </div>
             </div>
@@ -194,7 +194,7 @@ export default function ScheduleAndConverter() {
                 </span>
               </div>
               <div className="match-actions">
-                <a href="/broadcasters" className="match-btn match-btn-primary">Watch Live</a>
+                <a href="/hockey-live-streaming" className="match-btn match-btn-primary">Watch Live</a>
                 <a href="https://fih.hockey" target="_blank" rel="noopener noreferrer" className="match-btn match-btn-secondary">Official Stats</a>
               </div>
             </div>

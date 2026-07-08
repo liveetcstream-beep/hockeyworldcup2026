@@ -17,7 +17,7 @@ export default function Footer() {
               <li><a href="/format">Tournament Format</a></li>
               <li><a href="/points-table">Points Table Rules</a></li>
               <li><a href="/tickets">Tickets & Pricing</a></li>
-              <li><a href="/broadcasters">Broadcasters Hub</a></li>
+              <li><a href="/hockey-live-streaming">Broadcasters Hub</a></li>
               <li><a href="/venues">Stadium Guides</a></li>
               <li><a href="/history">Winners List (1971-2026)</a></li>
               <li><a href="/live-scores">Live Scores</a></li>

@@ -390,7 +390,7 @@ export default function PakistanHockeyPage() {
               { href: "/live-scores", label: "🔴 Live Scores" },
               { href: "/points-table", label: "📊 Points Table" },
               { href: "/h2h", label: "⚔️ Pakistan vs India H2H" },
-              { href: "/broadcasters", label: "📺 Watch in Pakistan (PTV Sports)" },
+              { href: "/hockey-live-streaming", label: "📺 Watch in Pakistan (PTV Sports)" },
               { href: "/hockey-world-cup-2026-schedule-india", label: "🇮🇳 India Page" },
               { href: "/hockey-world-cup-2026-groups", label: "🏑 All Pool Groups" },
             ].map((link) => (
