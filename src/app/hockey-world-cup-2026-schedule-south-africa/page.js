@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Complete Hockey World Cup 2026 Schedule for South Africa. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
   alternates: {
-    canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    canonical: `${BASE}/hockey-world-cup-2026-schedule-south-africa`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule South Africa: Time Table, Fixtures & PDF",
     description:
       "Complete Hockey World Cup 2026 Schedule for South Africa. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list.",
-    url: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    url: `${BASE}/hockey-world-cup-2026-schedule-south-africa`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
@@ -75,10 +75,10 @@ export default function SouthAfricaHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "🏆", label: "World Cup Titles", value: "1 (1975)" },
-            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#15" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
-            { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
+            { icon: "🏆", label: "World Cup Titles", value: "0" },
+            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#14" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "#20" },
+            { icon: "🏟️", label: "Venue", value: "Belfius Hockey Arena, Wavre" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 16–21, 2026" },
             { icon: "⚔️", label: "Pool C Rivals", value: "Spain, Ireland, Australia, England, India, China" },
           ].map((stat) => (
@@ -192,13 +192,13 @@ export default function SouthAfricaHockeyPage() {
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              <strong style={{ color: "var(--text-main)" }}>Pool D is South Africa's toughest-ever World Cup group draw.</strong> Facing Pakistan, England, and Wales means all three games are pressure matches with no easy points. South Africa's strength lies in their structured penalty corner execution led by Harmanpreet Singh and fast counter-attack transitions.
+              <strong style={{ color: "var(--text-main)" }}>South Africa brings unpredictable flair and individual brilliance to Pool C. They are capable of scoring spectacular goals but often struggle with defensive consistency.</strong>
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The key match is <strong style={{ color: "#c00030" }}>South Africa vs Pakistan</strong> — a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. South Africa holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
+              The clash against Ireland is their best chance for 3 points. They must tighten their defense to compete with Spain and Australia.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> South Africa qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. South Africa Women have the squad to surprise — watch for an upset against China.
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Prediction: Qualifying for the crossover stage would be a successful campaign. They are dangerous giant-killers.
             </p>
           </div>
         </section>

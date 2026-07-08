@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Complete Hockey World Cup 2026 Schedule for Wales. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
   alternates: {
-    canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    canonical: `${BASE}/hockey-world-cup-2026-schedule-wales`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule Wales: Time Table, Fixtures & PDF",
     description:
       "Complete Hockey World Cup 2026 Schedule for Wales. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list.",
-    url: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    url: `${BASE}/hockey-world-cup-2026-schedule-wales`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
@@ -71,9 +71,9 @@ export default function WalesHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "🏆", label: "World Cup Titles", value: "1 (1975)" },
-            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#14" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
+            { icon: "🏆", label: "World Cup Titles", value: "0" },
+            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#16" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "#25" },
             { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
             { icon: "⚔️", label: "Pool D Rivals", value: "India, Pakistan, England" },
@@ -188,13 +188,13 @@ export default function WalesHockeyPage() {
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              <strong style={{ color: "var(--text-main)" }}>Pool D is Wales's toughest-ever World Cup group draw.</strong> Facing Pakistan, England, and Wales means all three games are pressure matches with no easy points. Wales's strength lies in their structured penalty corner execution led by Harmanpreet Singh and fast counter-attack transitions.
+              <strong style={{ color: "var(--text-main)" }}>Wales is ready to showcase their fighting spirit in a brutal Pool D. Competing against India, England, and Pakistan requires immense resilience.</strong>
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The key match is <strong style={{ color: "#c00030" }}>Wales vs Pakistan</strong> — a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. Wales holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
+              The Home Nations clash against England will be fiercely contested. Wales will rely on strict defensive discipline.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Wales qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. Wales Women have the squad to surprise — watch for an upset against China.
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Prediction: Surviving Pool D is a massive challenge. Earning points in this group would be considered a major achievement.
             </p>
           </div>
         </section>

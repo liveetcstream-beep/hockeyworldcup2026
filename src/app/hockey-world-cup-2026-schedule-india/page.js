@@ -125,7 +125,7 @@ export default function IndiaHockeyPage() {
           {[
             { icon: "🏆", label: "World Cup Titles", value: "1 (1975)" },
             { icon: "🌍", label: "FIH World Ranking (Men)", value: "#5" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "#9" },
             { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
             { icon: "⚔️", label: "Pool D Rivals", value: "Wales, England, Pakistan, China, South Africa" },
@@ -240,13 +240,13 @@ export default function IndiaHockeyPage() {
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              <strong style={{ color: "var(--text-main)" }}>Pool D is India's toughest-ever World Cup group draw.</strong> Facing Pakistan, England, and Wales means all three games are pressure matches with no easy points. India's strength lies in their structured penalty corner execution led by Harmanpreet Singh and fast counter-attack transitions.
+              <strong style={{ color: "var(--text-main)" }}>Pool D brings massive expectations for India. Facing rivals like Pakistan and England, every match is a pressure cooker. India's strength is their world-class drag-flicking and solid defensive structure.</strong>
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The key match is <strong style={{ color: "#c00030" }}>India vs Pakistan</strong> — a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. India holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
+              The blockbuster clash is undoubtedly India vs Pakistan. This iconic Asian rivalry guarantees fireworks. India has held the upper hand recently, but World Cup pressure changes everything.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> India qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. India Women have the squad to surprise — watch for an upset against China.
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Prediction: India is highly favored to advance to the knockouts. A podium finish is well within reach if their penalty corner conversion remains high.
             </p>
           </div>
         </section>

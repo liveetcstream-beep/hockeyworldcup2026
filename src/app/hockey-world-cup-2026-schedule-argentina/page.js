@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Complete Hockey World Cup 2026 Schedule for Argentina. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
   alternates: {
-    canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    canonical: `${BASE}/hockey-world-cup-2026-schedule-argentina`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule Argentina: Time Table, Fixtures & PDF",
     description:
       "Complete Hockey World Cup 2026 Schedule for Argentina. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list.",
-    url: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    url: `${BASE}/hockey-world-cup-2026-schedule-argentina`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
@@ -75,10 +75,10 @@ export default function ArgentinaHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "🏆", label: "World Cup Titles", value: "1 (1975)" },
-            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#2 (Women) / #7 (Men)" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
-            { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
+            { icon: "🏆", label: "World Cup Titles", value: "0 (Best: Bronze 2014)" },
+            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#7" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "#2" },
+            { icon: "🏟️", label: "Venue", value: "Wagener & Belfius" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
             { icon: "⚔️", label: "Pool A Rivals", value: "Japan, Netherlands, New Zealand, United States, Germany, Scotland" },
           ].map((stat) => (
@@ -192,13 +192,13 @@ export default function ArgentinaHockeyPage() {
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              <strong style={{ color: "var(--text-main)" }}>Pool D is Argentina's toughest-ever World Cup group draw.</strong> Facing Pakistan, England, and Wales means all three games are pressure matches with no easy points. Argentina's strength lies in their structured penalty corner execution led by Harmanpreet Singh and fast counter-attack transitions.
+              <strong style={{ color: "var(--text-main)" }}>Argentina brings Latin flair and immense passion to Pool A. The 'Los Leones' (Men) and 'Las Leonas' (Women) are both highly competitive and incredibly physical.</strong>
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The key match is <strong style={{ color: "#c00030" }}>Argentina vs Pakistan</strong> — a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. Argentina holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
+              Argentina vs Netherlands will be a fantastic spectacle. Argentina's robust defense must withstand the Dutch attacking waves.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Argentina qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. Argentina Women have the squad to surprise — watch for an upset against China.
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Prediction: The Women's team is a strong title contender. The Men's team should comfortably reach the knockouts but will face tough European resistance.
             </p>
           </div>
         </section>

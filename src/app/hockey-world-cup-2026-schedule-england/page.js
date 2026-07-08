@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Complete Hockey World Cup 2026 Schedule for England. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
   alternates: {
-    canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    canonical: `${BASE}/hockey-world-cup-2026-schedule-england`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule England: Time Table, Fixtures & PDF",
     description:
       "Complete Hockey World Cup 2026 Schedule for England. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list.",
-    url: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    url: `${BASE}/hockey-world-cup-2026-schedule-england`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
@@ -75,9 +75,9 @@ export default function EnglandHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "🏆", label: "World Cup Titles", value: "1 (1975)" },
+            { icon: "🏆", label: "World Cup Titles", value: "0 (Best: Silver 1986)" },
             { icon: "🌍", label: "FIH World Ranking (Men)", value: "#6" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "#7" },
             { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
             { icon: "⚔️", label: "Pool D Rivals", value: "Pakistan, India, Wales, South Africa, China" },
@@ -192,13 +192,13 @@ export default function EnglandHockeyPage() {
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              <strong style={{ color: "var(--text-main)" }}>Pool D is England's toughest-ever World Cup group draw.</strong> Facing Pakistan, England, and Wales means all three games are pressure matches with no easy points. England's strength lies in their structured penalty corner execution led by Harmanpreet Singh and fast counter-attack transitions.
+              <strong style={{ color: "var(--text-main)" }}>England faces a tough challenge in Pool D alongside India and Pakistan. Their organized defense and set-piece variations are their strongest assets.</strong>
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The key match is <strong style={{ color: "#c00030" }}>England vs Pakistan</strong> — a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. England holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
+              England vs India will be crucial for determining the pool standings. England has consistently performed well in Europe but needs to turn draws into wins.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> England qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. England Women have the squad to surprise — watch for an upset against China.
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Prediction: Advancing from the 'Group of Death' (Pool D) is the first hurdle. They are capable of reaching the Quarter-Finals.
             </p>
           </div>
         </section>

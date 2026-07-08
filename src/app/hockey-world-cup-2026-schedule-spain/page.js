@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Complete Hockey World Cup 2026 Schedule for Spain. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
   alternates: {
-    canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    canonical: `${BASE}/hockey-world-cup-2026-schedule-spain`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule Spain: Time Table, Fixtures & PDF",
     description:
       "Complete Hockey World Cup 2026 Schedule for Spain. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list.",
-    url: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    url: `${BASE}/hockey-world-cup-2026-schedule-spain`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
@@ -75,10 +75,10 @@ export default function SpainHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "🏆", label: "World Cup Titles", value: "1 (1975)" },
-            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#7" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
-            { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
+            { icon: "🏆", label: "World Cup Titles", value: "0 (Best: Silver 1971)" },
+            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#8" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "#8" },
+            { icon: "🏟️", label: "Venue", value: "Belfius Hockey Arena, Wavre" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 16–21, 2026" },
             { icon: "⚔️", label: "Pool C Rivals", value: "South Africa, Australia, Ireland, Belgium, New Zealand" },
           ].map((stat) => (
@@ -192,13 +192,13 @@ export default function SpainHockeyPage() {
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              <strong style={{ color: "var(--text-main)" }}>Pool D is Spain's toughest-ever World Cup group draw.</strong> Facing Pakistan, England, and Wales means all three games are pressure matches with no easy points. Spain's strength lies in their structured penalty corner execution led by Harmanpreet Singh and fast counter-attack transitions.
+              <strong style={{ color: "var(--text-main)" }}>Spain is a dark horse in Pool C. They play an expressive, possession-based game with excellent technical skills in the midfield.</strong>
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The key match is <strong style={{ color: "#c00030" }}>Spain vs Pakistan</strong> — a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. Spain holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
+              Spain vs Australia will be a massive test of their defensive resilience. Spain can cause major upsets on their day.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Spain qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. Spain Women have the squad to surprise — watch for an upset against China.
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Prediction: Spain is expected to advance past the group stage. A Quarter-Final run is realistic if they capitalize on scoring chances.
             </p>
           </div>
         </section>

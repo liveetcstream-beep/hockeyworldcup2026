@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Complete Hockey World Cup 2026 Schedule for New Zealand. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
   alternates: {
-    canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    canonical: `${BASE}/hockey-world-cup-2026-schedule-new-zealand`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule New Zealand: Time Table, Fixtures & PDF",
     description:
       "Complete Hockey World Cup 2026 Schedule for New Zealand. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list.",
-    url: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    url: `${BASE}/hockey-world-cup-2026-schedule-new-zealand`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
@@ -75,9 +75,9 @@ export default function NewZealandHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "🏆", label: "World Cup Titles", value: "1 (1975)" },
-            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#9" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
+            { icon: "🏆", label: "World Cup Titles", value: "0" },
+            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#10" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "#11" },
             { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
             { icon: "⚔️", label: "Pool A Rivals", value: "Netherlands, Japan, Argentina, Belgium, Ireland, Spain" },
@@ -192,13 +192,13 @@ export default function NewZealandHockeyPage() {
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              <strong style={{ color: "var(--text-main)" }}>Pool D is New Zealand's toughest-ever World Cup group draw.</strong> Facing Pakistan, England, and Wales means all three games are pressure matches with no easy points. New Zealand's strength lies in their structured penalty corner execution led by Harmanpreet Singh and fast counter-attack transitions.
+              <strong style={{ color: "var(--text-main)" }}>The 'Black Sticks' are known for their physical and direct style of play. Drawn in Pool A, they face a tough task against the host nation, the Netherlands.</strong>
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The key match is <strong style={{ color: "#c00030" }}>New Zealand vs Pakistan</strong> — a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. New Zealand holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
+              New Zealand vs Argentina will be a deeply physical battle. Converting penalty corners is essential for their success.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> New Zealand qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. New Zealand Women have the squad to surprise — watch for an upset against China.
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Prediction: They have the quality to reach the Quarter-Finals, but consistency against top-tier opponents remains their biggest hurdle.
             </p>
           </div>
         </section>

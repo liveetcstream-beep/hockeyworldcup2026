@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Complete Hockey World Cup 2026 Schedule for France. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
   alternates: {
-    canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    canonical: `${BASE}/hockey-world-cup-2026-schedule-france`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule France: Time Table, Fixtures & PDF",
     description:
       "Complete Hockey World Cup 2026 Schedule for France. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list.",
-    url: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    url: `${BASE}/hockey-world-cup-2026-schedule-france`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
@@ -71,10 +71,10 @@ export default function FranceHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "🏆", label: "World Cup Titles", value: "1 (1975)" },
-            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#11" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
-            { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
+            { icon: "🏆", label: "World Cup Titles", value: "0 (Best: 7th)" },
+            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#9" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "#20" },
+            { icon: "🏟️", label: "Venue", value: "Belfius Hockey Arena, Wavre" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
             { icon: "⚔️", label: "Pool B Rivals", value: "Belgium, Malaysia, Germany" },
           ].map((stat) => (
@@ -188,13 +188,13 @@ export default function FranceHockeyPage() {
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              <strong style={{ color: "var(--text-main)" }}>Pool D is France's toughest-ever World Cup group draw.</strong> Facing Pakistan, England, and Wales means all three games are pressure matches with no easy points. France's strength lies in their structured penalty corner execution led by Harmanpreet Singh and fast counter-attack transitions.
+              <strong style={{ color: "var(--text-main)" }}>France is a rapidly improving nation in world hockey. Playing close to home in Belgium will boost their confidence in Pool B.</strong>
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The key match is <strong style={{ color: "#c00030" }}>France vs Pakistan</strong> — a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. France holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
+              France vs Malaysia is the crucial fixture for their survival. They have shown they can compete with top teams for significant periods.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> France qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. France Women have the squad to surprise — watch for an upset against China.
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Prediction: Reaching the crossover stage is a realistic target. Upsetting Belgium or Germany would be historic.
             </p>
           </div>
         </section>

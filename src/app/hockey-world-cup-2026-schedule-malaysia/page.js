@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Complete Hockey World Cup 2026 Schedule for Malaysia. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
   alternates: {
-    canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    canonical: `${BASE}/hockey-world-cup-2026-schedule-malaysia`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule Malaysia: Time Table, Fixtures & PDF",
     description:
       "Complete Hockey World Cup 2026 Schedule for Malaysia. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list.",
-    url: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    url: `${BASE}/hockey-world-cup-2026-schedule-malaysia`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
@@ -71,10 +71,10 @@ export default function MalaysiaHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "🏆", label: "World Cup Titles", value: "1 (1975)" },
-            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#10" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
-            { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
+            { icon: "🏆", label: "World Cup Titles", value: "0 (Best: 4th)" },
+            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#13" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "N/A" },
+            { icon: "🏟️", label: "Venue", value: "Belfius Hockey Arena, Wavre" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
             { icon: "⚔️", label: "Pool B Rivals", value: "Germany, France, Belgium" },
           ].map((stat) => (
@@ -188,13 +188,13 @@ export default function MalaysiaHockeyPage() {
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              <strong style={{ color: "var(--text-main)" }}>Pool D is Malaysia's toughest-ever World Cup group draw.</strong> Facing Pakistan, England, and Wales means all three games are pressure matches with no easy points. Malaysia's strength lies in their structured penalty corner execution led by Harmanpreet Singh and fast counter-attack transitions.
+              <strong style={{ color: "var(--text-main)" }}>Malaysia ('Speedy Tigers') aims to make an impact in Pool B. Their speed on the wings and penalty corner routines are critical to their strategy.</strong>
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The key match is <strong style={{ color: "#c00030" }}>Malaysia vs Pakistan</strong> — a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. Malaysia holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
+              Facing Germany and Belgium is a daunting task. Malaysia's key focus will be securing points against France to ensure progression.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Malaysia qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. Malaysia Women have the squad to surprise — watch for an upset against China.
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Prediction: Surpassing the pool stage will be extremely challenging. They will likely fight for crossover qualification.
             </p>
           </div>
         </section>

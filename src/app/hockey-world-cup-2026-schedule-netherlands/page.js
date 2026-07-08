@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Complete Hockey World Cup 2026 Schedule for Netherlands. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
   alternates: {
-    canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    canonical: `${BASE}/hockey-world-cup-2026-schedule-netherlands`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule Netherlands: Time Table, Fixtures & PDF",
     description:
       "Complete Hockey World Cup 2026 Schedule for Netherlands. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list.",
-    url: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    url: `${BASE}/hockey-world-cup-2026-schedule-netherlands`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
@@ -75,9 +75,9 @@ export default function NetherlandsHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "🏆", label: "World Cup Titles", value: "1 (1975)" },
+            { icon: "🏆", label: "World Cup Titles", value: "3 (1973, 1990, 1998)" },
             { icon: "🌍", label: "FIH World Ranking (Men)", value: "#1" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "#1" },
             { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
             { icon: "⚔️", label: "Pool A Rivals", value: "New Zealand, Argentina, Japan, Chile, Australia" },
@@ -192,13 +192,13 @@ export default function NetherlandsHockeyPage() {
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              <strong style={{ color: "var(--text-main)" }}>Pool D is Netherlands's toughest-ever World Cup group draw.</strong> Facing Pakistan, England, and Wales means all three games are pressure matches with no easy points. Netherlands's strength lies in their structured penalty corner execution led by Harmanpreet Singh and fast counter-attack transitions.
+              <strong style={{ color: "var(--text-main)" }}>Playing at home in Wagener Stadium, the Netherlands are desperate for World Cup glory. The Men's and Women's teams are both ranked #1 and boast lethal attacking talent.</strong>
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The key match is <strong style={{ color: "#c00030" }}>Netherlands vs Pakistan</strong> — a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. Netherlands holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
+              The Netherlands vs New Zealand match in Pool A will test their offensive fluidity. The Dutch crowd will provide a massive advantage, acting as the 12th player.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Netherlands qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. Netherlands Women have the squad to surprise — watch for an upset against China.
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Prediction: The Dutch Women are heavy favorites to win it all. The Men are expected to reach the Semi-Finals, with a strong chance of winning gold.
             </p>
           </div>
         </section>

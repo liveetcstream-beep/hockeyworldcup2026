@@ -131,7 +131,7 @@ export default function BelgiumHockeyPage() {
           {[
             { icon: "🏆", label: "World Cup Titles (Men)", value: "1 (2018)" },
             { icon: "🌍", label: "FIH Ranking (Men)", value: "World #1" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "World #7" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "#4" },
             { icon: "🏟️", label: "Home Venue", value: "Belfius Arena, Wavre" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–19, 2026" },
             { icon: "⚔️", label: "Pool B Rivals (Men)", value: "Germany, France, Malaysia" },
@@ -276,20 +276,20 @@ export default function BelgiumHockeyPage() {
         </section>
 
         {/* Analyst Prediction */}
-        <section style={{ background: "linear-gradient(135deg, rgba(0,0,0,0.03) 0%, rgba(212,175,55,0.04) 100%)", border: "1px solid rgba(212,175,55,0.2)", padding: "2.5rem", borderRadius: "24px", marginBottom: "4rem", boxShadow: "0 8px 30px rgba(15,23,42,0.04)" }}>
+        <section style={{ background: "linear-gradient(135deg, rgba(192,0,48,0.04) 0%, #f8fafc 100%)", border: "1px solid rgba(192,0,48,0.12)", padding: "2.5rem", borderRadius: "24px", marginBottom: "4rem", boxShadow: "0 8px 30px rgba(15,23,42,0.04)" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", marginBottom: "1.5rem" }}>
             <span style={{ fontSize: "2rem" }}>🏑</span>
-            <h2 style={{ fontSize: "1.4rem", fontWeight: "800", fontStyle: "italic", color: "var(--text-main)", margin: 0 }}>Expert Analyst's Belgium 2026 Preview</h2>
+            <h2 style={{ fontSize: "1.4rem", fontWeight: "800", fontStyle: "italic", color: "var(--text-main)", margin: 0 }}>Analyst's Belgium Preview</h2>
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              <strong style={{ color: "var(--text-main)" }}>Belgium are the most complete team in world hockey right now.</strong> Their combination of the world's best drag-flicker (Hendrickx), the greatest defender of his generation (Van Doren), and a tactically elite coaching staff under Michel van den Heuvel creates a system that is almost impossible to break down. Home advantage elevates this even further.
+              <strong style={{ color: "var(--text-main)" }}>As recent World Cup and Olympic champions, Belgium is the team to beat in Pool B. Their deeply experienced squad plays a highly structured, patient, and clinical style of hockey.</strong>
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The critical match in Pool B is <strong style={{ color: "#d4af37" }}>Belgium vs Germany</strong> — a tactical masterclass between the current World #1 (Belgium) and the current World Champions (Germany). Both teams use a high-press, structured penalty corner system. Whichever team wins this pool stage match will likely top Pool B and get a more favorable Second Stage crossover draw.
+              The key match is Belgium vs Germany. This clash of European titans will likely decide the pool winner. Belgium's golden generation is still delivering at the highest level.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Belgium win Pool B, navigate the Second Stage without dropping a game, and reach the Final. Their biggest threat is the Netherlands in a potential semi-final — a match that would be the most-watched field hockey game in European TV history. <strong style={{ color: "#d4af37" }}>Belgium are the tournament favourites to lift the 2026 World Cup on home soil.</strong>
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Prediction: Anything less than the Semi-Finals is a failure for Belgium. They are prime contenders to lift the trophy once again.
             </p>
           </div>
         </section>

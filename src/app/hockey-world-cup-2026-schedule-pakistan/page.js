@@ -112,7 +112,7 @@ export default function PakistanHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "🏆", label: "World Cup Titles", value: "4 (Most Ever)" },
+            { icon: "🏆", label: "World Cup Titles", value: "4 (1971, 1978, 1982, 1994)" },
             { icon: "🌍", label: "FIH Ranking (Men)", value: "#18" },
             { icon: "🏟️", label: "Men's Venue", value: "Wagener Stadium" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 16–20, 2026" },

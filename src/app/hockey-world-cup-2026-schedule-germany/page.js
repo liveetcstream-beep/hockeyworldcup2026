@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Complete Hockey World Cup 2026 Schedule for Germany. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
   alternates: {
-    canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    canonical: `${BASE}/hockey-world-cup-2026-schedule-germany`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule Germany: Time Table, Fixtures & PDF",
     description:
       "Complete Hockey World Cup 2026 Schedule for Germany. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list.",
-    url: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    url: `${BASE}/hockey-world-cup-2026-schedule-germany`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
@@ -75,10 +75,10 @@ export default function GermanyHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "🏆", label: "World Cup Titles", value: "1 (1975)" },
-            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#2" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
-            { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
+            { icon: "🏆", label: "World Cup Titles", value: "3 (2002, 2006, 2023)" },
+            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#4" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "#3" },
+            { icon: "🏟️", label: "Venue", value: "Belfius Hockey Arena, Wavre" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
             { icon: "⚔️", label: "Pool B Rivals", value: "Malaysia, Belgium, France, Scotland, Argentina, United States" },
           ].map((stat) => (
@@ -192,13 +192,13 @@ export default function GermanyHockeyPage() {
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              <strong style={{ color: "var(--text-main)" }}>Pool D is Germany's toughest-ever World Cup group draw.</strong> Facing Pakistan, England, and Wales means all three games are pressure matches with no easy points. Germany's strength lies in their structured penalty corner execution led by Harmanpreet Singh and fast counter-attack transitions.
+              <strong style={{ color: "var(--text-main)" }}>Germany, the reigning 2023 World Champions, enters Pool B with immense confidence. Their tactical discipline, late-game heroics, and set-piece efficiency make them incredibly dangerous.</strong>
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The key match is <strong style={{ color: "#c00030" }}>Germany vs Pakistan</strong> — a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. Germany holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
+              The pivotal match is Germany vs Belgium. This is a rematch of the 2023 World Cup Final. Germany thrives under pressure and rarely makes unforced errors.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Germany qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. Germany Women have the squad to surprise — watch for an upset against China.
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Prediction: Germany is a lock for the knockouts. They are heavy favorites to reach the Grand Final and potentially defend their title.
             </p>
           </div>
         </section>

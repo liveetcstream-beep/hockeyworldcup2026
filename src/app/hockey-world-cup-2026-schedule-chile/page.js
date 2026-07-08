@@ -10,13 +10,13 @@ export const metadata = {
   description:
     "Complete Hockey World Cup 2026 Schedule for Chile. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
   alternates: {
-    canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    canonical: `${BASE}/hockey-world-cup-2026-schedule-chile`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule Chile: Time Table, Fixtures & PDF",
     description:
       "Complete Hockey World Cup 2026 Schedule for Chile. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list.",
-    url: `${BASE}/hockey-world-cup-2026-schedule-india`,
+    url: `${BASE}/hockey-world-cup-2026-schedule-chile`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
@@ -70,9 +70,9 @@ export default function ChileHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "🏆", label: "World Cup Titles", value: "1 (1975)" },
+            { icon: "🏆", label: "World Cup Titles", value: "0" },
             { icon: "🌍", label: "FIH World Ranking (Men)", value: "#22" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "#14" },
             { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
             { icon: "⚔️", label: "Pool A Rivals", value: "Netherlands, Japan, Australia" },
@@ -187,13 +187,13 @@ export default function ChileHockeyPage() {
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              <strong style={{ color: "var(--text-main)" }}>Pool D is Chile's toughest-ever World Cup group draw.</strong> Facing Pakistan, England, and Wales means all three games are pressure matches with no easy points. Chile's strength lies in their structured penalty corner execution led by Harmanpreet Singh and fast counter-attack transitions.
+              <strong style={{ color: "var(--text-main)" }}>Chile's presence in the World Cup is a testament to their growing hockey program. They face a monumental challenge against elite nations.</strong>
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The key match is <strong style={{ color: "#c00030" }}>Chile vs Pakistan</strong> — a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. Chile holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
+              Every match is a learning experience. Their focus will be on defensive shape and executing effective counter-attacks.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Chile qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. Chile Women have the squad to surprise — watch for an upset against China.
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Prediction: Advancing is highly unlikely, but scoring goals and competing fiercely will be a victory for Chilean hockey.
             </p>
           </div>
         </section>
