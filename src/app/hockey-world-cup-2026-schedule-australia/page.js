@@ -213,140 +213,170 @@ export default function AustraliaHockeyPage() {
             🇦🇺 Australia Hockey World Cup 2026 Squads
           </h2>
           
-            <div style={{ marginBottom: "2.5rem" }}>
-              <h3 style={{ fontSize: "1.2rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem" }}>
-                🇦🇺 Australia Men's Hockey Squad List
-              </h3>
-              <div style={{ overflowX: "auto" }}>
-                <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "12px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
-                  <thead>
-                    <tr style={{ background: "var(--bg-tertiary)", borderBottom: "2px solid var(--border-color)" }}>
-                      <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>Player Name</th>
-                      <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>Position</th>
-                      <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>Role / Status</th>
+          {/* Men's Kookaburras Squad */}
+          <div style={{ marginBottom: "3rem" }}>
+            <h3 style={{ fontSize: "1.3rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "0.5rem" }}>
+              🇦🇺 Australia Men's Squad (Kookaburras)
+            </h3>
+            <p style={{ fontSize: "0.95rem", color: "var(--text-muted)", marginBottom: "1rem" }}>
+              Official 20-member travelling team announced by Hockey Australia for the 2026 World Cup.
+            </p>
+            <div style={{ overflowX: "auto", marginBottom: "1.5rem" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "12px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
+                <thead>
+                  <tr style={{ background: "var(--bg-tertiary)", borderBottom: "2px solid var(--border-color)" }}>
+                    <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>Player Name</th>
+                    <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>State Association</th>
+                    <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { name: "Jayden Atkinson", state: "Queensland (QLD)" },
+                    { name: "Tim Brand", state: "New South Wales (NSW)" },
+                    { name: "Joshua Beltz", state: "Tasmania (TAS)" },
+                    { name: "Hayden Beltz", state: "Tasmania (TAS)" },
+                    { name: "James Collins", state: "Western Australia (WA)" },
+                    { name: "Tom Craig", state: "New South Wales (NSW)" },
+                    { name: "Nathan Ephraums", state: "Victoria (VIC)" },
+                    { name: "Campbell Geddes", state: "Western Australia (WA)" },
+                    { name: "Blake Govers", state: "New South Wales (NSW)" },
+                    { name: "Jeremy Hayward", state: "Northern Territory (NT)" },
+                    { name: "Liam Henderson", state: "Victoria (VIC)" },
+                    { name: "Tim Howard", state: "Queensland (QLD)" },
+                    { name: "Craig Marais", state: "Victoria (VIC)" },
+                    { name: "Connar Otterbach", state: "Victoria (VIC)" },
+                    { name: "Joel Rintala", state: "Queensland (QLD)" },
+                    { name: "Lachlan Sharp", state: "New South Wales (NSW)" },
+                    { name: "Jed Snowden", state: "Victoria (VIC)" },
+                    { name: "Ash Thomas", state: "New South Wales (NSW)" },
+                    { name: "Jack Welch", state: "Tasmania (TAS)" },
+                    { name: "Ky Willott", state: "New South Wales (NSW)" }
+                  ].map(p => (
+                    <tr key={p.name} style={{ borderBottom: "1px solid var(--border-color)" }}>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>{p.name}</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>{p.state}</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Selected Squad Player</td>
                     </tr>
-                  </thead>
-                  <tbody>
-                    
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Aran Zalewski</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Senior Leader</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Andrew Charter</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Goalkeeper</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Veteran Goalkeeper</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Blake Govers</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward / Drag-Flicker</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>World-Class Drag-Flick Goal Machine</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Jeremy Hayward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender / Drag-Flicker</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defensive Leader & Drag-Flicker</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Eddie Ockenden</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender / Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Legendary Veteran & Multi-Olympian</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Jake Harvie</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Speedy Wingback</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Flynn Ogilvie</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Dynamic Box-to-Box Midfielder</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Tim Brand</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Agile Striker</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Tom Wickham</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Physical Center Forward</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Johan Durst</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Goalkeeper</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Backup Goalkeeper</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                  ))}
+                </tbody>
+              </table>
             </div>
+
+            {/* Men's Reserves */}
+            <h4 style={{ fontSize: "1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "0.5rem" }}>
+              Non-Travelling Reserves (Men)
+            </h4>
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "12px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
+                <thead>
+                  <tr style={{ background: "var(--bg-tertiary)", borderBottom: "2px solid var(--border-color)" }}>
+                    <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>Player Name</th>
+                    <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>State Association</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { name: "Davis Atkin", state: "Australian Capital Territory (ACT)" },
+                    { name: "Cooper Burns", state: "Victoria (VIC)" },
+                    { name: "Nathan Czinner", state: "New South Wales (NSW)" },
+                    { name: "Dylan Downey", state: "New South Wales (NSW)" },
+                    { name: "Ian Grobbelaar", state: "Western Australia (WA)" },
+                    { name: "Anand Gupte", state: "Australian Capital Territory (ACT)" },
+                    { name: "Magnus McCausland", state: "Tasmania (TAS)" },
+                    { name: "Lachlan Rogers", state: "Tasmania (TAS)" }
+                  ].map(p => (
+                    <tr key={p.name} style={{ borderBottom: "1px solid var(--border-color)" }}>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)" }}>{p.name}</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>{p.state}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
           
-            <div>
-              <h3 style={{ fontSize: "1.2rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem" }}>
-                🇦🇺 Australia Women's Hockey Squad List
-              </h3>
-              <div style={{ overflowX: "auto" }}>
-                <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "12px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
-                  <thead>
-                    <tr style={{ background: "var(--bg-tertiary)", borderBottom: "2px solid var(--border-color)" }}>
-                      <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>Player Name</th>
-                      <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>Position</th>
-                      <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>Role / Status</th>
+          {/* Women's Hockeyroos Squad */}
+          <div>
+            <h3 style={{ fontSize: "1.3rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "0.5rem" }}>
+              🇦🇺 Australia Women's Squad (Hockeyroos)
+            </h3>
+            <p style={{ fontSize: "0.95rem", color: "var(--text-muted)", marginBottom: "1rem" }}>
+              Official 20-member travelling team announced by Hockey Australia for the 2026 World Cup.
+            </p>
+            <div style={{ overflowX: "auto", marginBottom: "1.5rem" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "12px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
+                <thead>
+                  <tr style={{ background: "var(--bg-tertiary)", borderBottom: "2px solid var(--border-color)" }}>
+                    <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>Player Name</th>
+                    <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>State Association</th>
+                    <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { name: "Alice Arnott", state: "New South Wales (NSW)" },
+                    { name: "Jocelyn Bartram", state: "New South Wales (NSW)" },
+                    { name: "Sarah Byrnes", state: "Western Australia (WA)" },
+                    { name: "Claire Colwill", state: "Queensland (QLD)" },
+                    { name: "Olivia Downes", state: "Victoria (VIC)" },
+                    { name: "Neasa Flynn", state: "Western Australia (WA)" },
+                    { name: "Alana Kavanagh", state: "New South Wales (NSW)" },
+                    { name: "Stephanie Kershaw", state: "Queensland (QLD)" },
+                    { name: "Amy Lawton", state: "Victoria (VIC)" },
+                    { name: "Morgan Mathison", state: "Queensland (QLD)" },
+                    { name: "Kaitlin Nobbs", state: "Western Australia (WA)" },
+                    { name: "Aleisha Power", state: "Western Australia (WA)" },
+                    { name: "Courtney Schonell", state: "Western Australia (WA)" },
+                    { name: "Lucy Sharman", state: "South Australia (SA)" },
+                    { name: "Karri Somerville", state: "Western Australia (WA)" },
+                    { name: "Grace Stewart", state: "New South Wales (NSW)" },
+                    { name: "Tatum Stewart", state: "Queensland (QLD)" },
+                    { name: "Mariah Williams", state: "New South Wales (NSW)" },
+                    { name: "Abigail Wilson", state: "New South Wales (NSW)" },
+                    { name: "Grace Young", state: "New South Wales (NSW)" }
+                  ].map(p => (
+                    <tr key={p.name} style={{ borderBottom: "1px solid var(--border-color)" }}>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>{p.name}</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>{p.state}</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Selected Squad Player</td>
                     </tr>
-                  </thead>
-                  <tbody>
-                    
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Jane Claxton</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Veteran Midfielder</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Jocelyn Bartram</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Goalkeeper</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Elite Goalkeeper</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Mariah Williams</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Dynamic Attacking Star</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Steph Kershaw</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Creative Midfield Engine</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Grace Stewart</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Clinical Finisher</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Penny Squibb</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Drag-flick Specialist</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Karri Somerville</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Reliable Backline Guard</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Kaitlin Nobbs</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender / Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Versatile Utility Player</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Zoe Newman</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Goalkeeper</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Backup Goalkeeper</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                  ))}
+                </tbody>
+              </table>
             </div>
+
+            {/* Women's Reserves */}
+            <h4 style={{ fontSize: "1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "0.5rem" }}>
+              Non-Travelling Reserves (Women)
+            </h4>
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "12px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
+                <thead>
+                  <tr style={{ background: "var(--bg-tertiary)", borderBottom: "2px solid var(--border-color)" }}>
+                    <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>Player Name</th>
+                    <th style={{ padding: "0.8rem", textAlign: "left", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>State Association</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { name: "Hannah Cullum-Sanders", state: "Queensland (QLD)" },
+                    { name: "Casey Dolkens", state: "Queensland (QLD)" },
+                    { name: "Mihaylia Howell", state: "Queensland / Victoria (QLD/VIC)" },
+                    { name: "Makayla Jones", state: "New South Wales (NSW)" },
+                    { name: "Sophie Murphy", state: "Victoria (VIC)" },
+                    { name: "Zoe Newman", state: "New South Wales (NSW)" },
+                    { name: "Jolie Sertorio", state: "Western Australia (WA)" }
+                  ].map(p => (
+                    <tr key={p.name} style={{ borderBottom: "1px solid var(--border-color)" }}>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)" }}>{p.name}</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>{p.state}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </section>
   
   
