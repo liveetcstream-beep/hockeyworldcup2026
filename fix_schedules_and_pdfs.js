@@ -31,7 +31,7 @@ const ALL_MATCHES = [
   { id: 22, date: "August 20, 2026", timeCET: "11:00", teamA: "New Zealand", flagA: "nz", teamB: "Spain", flagB: "es", gender: "Women", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BEL)" },
   { id: 23, date: "August 20, 2026", timeCET: "12:00", teamA: "India", flagA: "in", teamB: "England", flagB: "gb-eng", gender: "Women", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
   { id: 24, date: "August 20, 2026", timeCET: "17:30", teamA: "Belgium", flagA: "be", teamB: "Ireland", flagB: "ie", gender: "Women", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BEL)" },
-  
+
   // ==================== MEN'S TOURNAMENT FIXTURES (Matches 51 to 100) ====================
   { id: 51, date: "August 15, 2026", timeCET: "10:00", teamA: "India", flagA: "in", teamB: "Wales", flagB: "gb-wls", gender: "Men", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
   { id: 52, date: "August 15, 2026", timeCET: "11:30", teamA: "Germany", flagA: "de", teamB: "Malaysia", flagB: "my", gender: "Men", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BEL)" },
@@ -100,19 +100,19 @@ if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
 teamsData.forEach(team => {
   const pagePath = path.join(srcDir, `hockey-world-cup-2026-schedule-${team.slug}`, 'page.js');
   if (!fs.existsSync(pagePath)) return;
-  
+
   let content = fs.readFileSync(pagePath, 'utf8');
 
   // Filter Men matches
   const menFixtures = ALL_MATCHES.filter(m => m.gender === 'Men' && (m.teamA === team.name || m.teamB === team.name));
   const menPool = menFixtures.length > 0 ? menFixtures[0].pool : "Not Participating";
-  
+
   let menArrayStr = "[\n";
   const mRivals = new Set();
   menFixtures.forEach(m => {
     const opp = m.teamA === team.name ? m.teamB : m.teamA;
     mRivals.add(opp);
-    menArrayStr += `    { date: "${m.date}", time: "${timeCETtoIST(m.timeCET)}", opponent: "${getEmoji(opp)} ${opp}", pool: "${m.pool}", venue: "${m.venue.replace(', Amstelveen (NED)','').replace(', Wavre (BEL)','')}", type: "Pool Stage" },\n`;
+    menArrayStr += `    { date: "${m.date}", time: "${timeCETtoIST(m.timeCET)}", opponent: "${getEmoji(opp)} ${opp}", pool: "${m.pool}", venue: "${m.venue.replace(', Amstelveen (NED)', '').replace(', Wavre (BEL)', '')}", type: "Pool Stage" },\n`;
   });
   if (menFixtures.length > 0) {
     menArrayStr += `    { date: "Aug 22-24, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },\n`;
@@ -129,7 +129,7 @@ teamsData.forEach(team => {
   womenFixtures.forEach(m => {
     const opp = m.teamA === team.name ? m.teamB : m.teamA;
     wRivals.add(opp);
-    womenArrayStr += `    { date: "${m.date}", time: "${timeCETtoIST(m.timeCET)}", opponent: "${getEmoji(opp)} ${opp}", pool: "${m.pool}", venue: "${m.venue.replace(', Amstelveen (NED)','').replace(', Wavre (BEL)','')}", type: "Pool Stage" },\n`;
+    womenArrayStr += `    { date: "${m.date}", time: "${timeCETtoIST(m.timeCET)}", opponent: "${getEmoji(opp)} ${opp}", pool: "${m.pool}", venue: "${m.venue.replace(', Amstelveen (NED)', '').replace(', Wavre (BEL)', '')}", type: "Pool Stage" },\n`;
   });
   if (womenFixtures.length > 0) {
     womenArrayStr += `    { date: "Aug 21-23, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },\n`;
@@ -142,7 +142,7 @@ teamsData.forEach(team => {
 
   // Fix Men's <h2>
   content = content.replace(/<h2([^>]*)>[^<]*Men's Schedule [—\-][^<]*<\/h2>/, `<h2$1>\n            ${team.emoji} ${team.name} Men's Schedule — ${menPool}\n          </h2>`);
-  
+
   // Fix Women's <h2>
   content = content.replace(/<h2([^>]*)>[^<]*Women's Schedule [—\-][^<]*<\/h2>/, `<h2$1>\n            ${team.emoji} ${team.name} Women's Schedule — ${womenPool}\n          </h2>`);
 
@@ -191,7 +191,7 @@ teamsData.forEach(team => {
 
   doc.moveDown(3);
   doc.fontSize(10).fillColor('#888888').text('Downloaded from HockeyWorldCup2026Schedule.com', { align: 'center' });
-  
+
   doc.end();
 
   console.log(`Successfully updated arrays & PDF for ${team.name}`);
