@@ -21,6 +21,7 @@ export default function sitemap() {
     // Tier 3B — High-traffic team/group pages (traffic multipliers)
     { route: "/india-hockey-world-cup-2026",    priority: 0.9, freq: "daily" },
     { route: "/pakistan-hockey-world-cup-2026", priority: 0.9, freq: "daily" },
+    { route: "/belgium-hockey-world-cup-2026",  priority: 0.9, freq: "daily" },
     { route: "/hockey-world-cup-2026-groups",   priority: 0.9, freq: "daily" },
     // Tier 4 — Utility pages (low priority)
     { route: "/privacy-policy", priority: 0.3, freq: "yearly" },
