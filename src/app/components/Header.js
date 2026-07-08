@@ -23,7 +23,7 @@ export default function Header() {
             <ul className="sports-nav">
               <li><a href="/">Home</a></li>
               
-              {/* Schedule Dropdown "” like PSL "PZ Schedule / MS Schedule" pattern */}
+                            {/* Schedule Dropdown */}
               <li className="nav-item-dropdown">
                 <span className="dropdown-trigger">
                   Team Schedules 
@@ -33,11 +33,19 @@ export default function Header() {
                   <li><a href="/hockey-world-cup-2026-schedule-india">🇮🇳 India Schedule</a></li>
                   <li><a href="/hockey-world-cup-2026-schedule-pakistan">🇵🇰 Pakistan Schedule</a></li>
                   <li><a href="/hockey-world-cup-2026-schedule-belgium">🇧🇪 Belgium Schedule</a></li>
-                  <li><a href="/germany-hockey-world-cup-2026">🇩🇪 Germany Schedule</a></li>
-                  <li><a href="/netherlands-hockey-world-cup-2026">🇳🇱 Netherlands Schedule</a></li>
-                  <li><a href="/australia-hockey-world-cup-2026">🇦🇺 Australia Schedule</a></li>
-                  <li><a href="/england-hockey-world-cup-2026">ðŸ´ó §ó ¢ó ¥ó ®ó §ó ¿ England Schedule</a></li>
-                  <li><a href="/argentina-hockey-world-cup-2026">🇦🇷 Argentina Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-germany">🇩🇪 Germany Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-netherlands">🇳🇱 Netherlands Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-australia">🇦🇺 Australia Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-argentina">🇦🇷 Argentina Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-spain">🇪🇸 Spain Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-malaysia">🇲🇾 Malaysia Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-france">🇫🇷 France Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-ireland">🇮🇪 Ireland Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-south-africa">🇿🇦 South Africa Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-new-zealand">🇳🇿 New Zealand Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-chile">🇨🇱 Chile Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales Schedule</a></li>
                   <li><a href="/schedule">📅 Full Tournament Schedule</a></li>
                 </ul>
               </li>

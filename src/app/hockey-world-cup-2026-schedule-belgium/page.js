@@ -108,7 +108,7 @@ export default function BelgiumHockeyPage() {
       <Header />
 
       {/* Hero */}
-      <section className="hero-section" style={{ background: "linear-gradient(rgba(10, 20, 40, 0.8), rgba(10, 20, 40, 0.9)), url('/belgium_hockey_banner_1783506072705.png') center/cover" }}>
+      <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">🏑 Pool B — Host Nation</p>
           <h1 className="hero-title">Hockey World Cup 2026 Schedule Belgium</h1>
