@@ -204,6 +204,7 @@ export default function NewZealandHockeyPage() {
 
         
         
+        
         {/* Full Team Squad */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
@@ -228,7 +229,7 @@ export default function NewZealandHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Nic Woods</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender / Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Penalty Corner Leader</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Drag-Flick Leader (June 2026 Roster)</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Leon Hayward</td>
@@ -248,12 +249,12 @@ export default function NewZealandHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Hugo Inglis</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Highly Experienced Striker</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Veteran Attacker</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Simon Child</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Veteran Legend & Playmaker</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Legendary Veteran & Playmaker</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Kane Russell</td>
@@ -263,12 +264,7 @@ export default function NewZealandHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Blair Tarrant</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Experienced Defensive Guard</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Sean Findlay</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Playmaking Midfielder</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defensive Guard</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Dominic Dixon</td>
@@ -298,7 +294,7 @@ export default function NewZealandHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Olivia Merry</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & New Zealand's All-Time Top Goalscorer</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Leading Goalscorer</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Grace O'Hanlon</td>
@@ -318,22 +314,7 @@ export default function NewZealandHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Rose Keddell</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Veteran Workhorse Midfielder</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Stacey Michelsen</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Legendary Playmaker</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Tarryn Davey</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender / Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Versatile Defender</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Samantha Charlton</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Experienced Midfielder</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Veteran Midfielder</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Hope Ralph</td>
@@ -350,6 +331,7 @@ export default function NewZealandHockeyPage() {
               </div>
             </div>
         </section>
+  
   
   
         {/* FAQ */}

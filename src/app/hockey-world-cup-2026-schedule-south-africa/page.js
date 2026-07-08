@@ -204,6 +204,7 @@ export default function SouthAfricaHockeyPage() {
 
         
         
+        
         {/* Full Team Squad */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
@@ -228,7 +229,7 @@ export default function SouthAfricaHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Dayaan Cassiem</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Fast Attacking Striker</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Fast Attacker (June 2026 Nations Cup)</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Gowan Jones</td>
@@ -238,37 +239,32 @@ export default function SouthAfricaHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Keenan Horne</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Senior Midfielder</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Core Midfielder</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Mustapha Cassiem</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Lethal Young Goal Scorer</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Key Striker</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Nqobile Ntuli</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Dynamic Winger</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Speedy Winger</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Connor Beauchamp</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender / Drag-Flicker</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Penalty Corner Taker</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Penalty Corner Specialist</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Matt Guise-Brown</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender / Drag-Flicker</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Veteran Drag-flick Specialist</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Veteran Set-piece Taker</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Jethro Eustice</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Veteran Defender</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Bradley Sherwood</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Striker</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Veteran Center Back</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Estiaan Kriek</td>
@@ -298,7 +294,7 @@ export default function SouthAfricaHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Erin Hunter</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Solid Defender</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Solid Core Defender</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Phumelela Mbande</td>
@@ -307,7 +303,7 @@ export default function SouthAfricaHockeyPage() {
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Quanita Bobbs</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder / Defender</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfield Controller</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
@@ -318,27 +314,12 @@ export default function SouthAfricaHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Tarryn Lombard</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Goal Scorer</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Striker</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Jean-Leigh du Toit</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender / Drag-Flicker</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Penalty Corner Specialist</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Bernadette Coston</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Experienced Winger</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Celia Seerane</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Key Backline Guard</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Kayla de Waal</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Dynamic Midfielder</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Drag-Flick Taker</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Anelle van Deventer</td>
@@ -350,6 +331,7 @@ export default function SouthAfricaHockeyPage() {
               </div>
             </div>
         </section>
+  
   
   
         {/* FAQ */}

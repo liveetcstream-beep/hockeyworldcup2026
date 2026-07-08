@@ -200,6 +200,7 @@ export default function FranceHockeyPage() {
 
         
         
+        
         {/* Full Team Squad */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
@@ -224,7 +225,7 @@ export default function FranceHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Victor Charlet</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender / Drag-Flicker</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Core Goalscorer</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Core Goalscorer (June 2026 Pro League)</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Arthur Thieffry</td>
@@ -239,17 +240,17 @@ export default function FranceHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Charles Masson</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Core Playmaker</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfield Distributor</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Timothée Clément</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Star Young Striker</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Star Striker</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Eliot Curty</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Transition Midfielder</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Core Playmaker</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Amaury Bellenger</td>
@@ -259,12 +260,7 @@ export default function FranceHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>François Goyet</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defensive Midfield Pivot</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Etienne Tynevez</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Dangerous Goal scorer</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defensive Midfielder</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Edgar Reynaud</td>
@@ -285,6 +281,7 @@ export default function FranceHockeyPage() {
               </p>
             </div>
         </section>
+  
   
   
         {/* FAQ */}

@@ -207,6 +207,7 @@ export default function GermanyHockeyPage() {
 
         
         
+        
         {/* Full Team Squad */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
@@ -231,52 +232,52 @@ export default function GermanyHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Mats Grambusch</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Midfield Leader</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Midfield Leader (June 2026 Pro League)</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Alexander Stadler</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Goalkeeper</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>World-Class Penalty Shootout Specialist</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Primary Goalkeeper</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Niklas Wellen</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>2023 World Cup MVP & Star Attacker</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Star Attacker & 2023 MVP</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Gonzalo Peillat</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender / Drag-Flicker</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Olympic Gold Medalist & Drag-Flicker</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Legendary Set-piece Specialist</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Lukas Windfeder</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender / Drag-Flicker</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Solid Sweeper & Penalty Corner Taker</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Penalty Corner Leader</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Christopher Rühr</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Dynamic Attacker & Penalty Stroke Specialist</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Dynamic Forward</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Martin Zwicker</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Experienced Veteran</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Veteran Core Midfielder</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Teo Hinrichs</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender / Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Versatile Utility Player</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Linus Müller</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Solid Fullback</td>
+                    </tr>
+                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Raphael Hartkopf</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Dynamic Attacker</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Jean-Paul Danneberg</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Goalkeeper</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Key Shootout Goalkeeper</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Marco Miltkau</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Forward</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Experienced Finisher</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Backup Goalkeeper</td>
                     </tr>
                   </tbody>
                 </table>
@@ -301,7 +302,7 @@ export default function GermanyHockeyPage() {
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Nike Lorenz</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder / Defender</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Penalty Corner Taker</td>
+                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Captain & Penalty Corner Leader</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Julia Sonntag</td>
@@ -334,25 +335,16 @@ export default function GermanyHockeyPage() {
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Speedy Winger</td>
                     </tr>
                     <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Cecile Pieper</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Midfielder</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Experienced Midfielder</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Nathalie Kubalski</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Goalkeeper</td>
                       <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Backup Goalkeeper</td>
-                    </tr>
-                    <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-main)", fontWeight: "600" }}>Viktoria Huse</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Defender</td>
-                      <td style={{ padding: "0.8rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>Solid Defender</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
             </div>
         </section>
+  
   
   
         {/* FAQ */}
