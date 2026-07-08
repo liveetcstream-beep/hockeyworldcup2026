@@ -48,6 +48,8 @@ export default function IndiaHockeyPage() {
       answer:
         "India ne Men's Hockey World Cup 1 baar jeeta hai — 1975 mein Kuala Lumpur mein, Pakistan ko final mein 2-1 se hara ke. India Women's team ne World Cup kabhi nahi jeeta lekin 2022 mein achi performance di.",
     },
+    { question: "Where can I watch India's matches live?", answer: "All India matches will be broadcasted live on Star Sports channels on TV and streamed live on Disney+ Hotstar." },
+    { question: "Who is the captain of the Indian hockey team for HWC 2026?", answer: "Harmanpreet Singh, the star defender and legendary drag-flicker, captain's the Indian squad." }
   ];
 
   const menMatches = [
@@ -251,6 +253,56 @@ export default function IndiaHockeyPage() {
           </div>
         </section>
 
+        
+        {/* Full Team Squad */}
+        <section style={{ marginBottom: "4rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            🇮🇳 India Probable Squad — Hockey World Cup 2026
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Goalkeepers</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Krishan Bahadur Pathak</li>
+                <li>Suraj Karkera</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Defenders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Harmanpreet Singh (C)</li>
+                <li>Jarmanpreet Singh</li>
+                <li>Amit Rohidas</li>
+                <li>Jugraj Singh</li>
+                <li>Sanjay</li>
+                <li>Sumit</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Midfielders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Manpreet Singh</li>
+                <li>Hardik Singh (VC)</li>
+                <li>Vivek Sagar Prasad</li>
+                <li>Shamsher Singh</li>
+                <li>Nilakanta Sharma</li>
+                <li>Rajkumar Pal</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Forwards</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Abhishek</li>
+                <li>Sukhjeet Singh</li>
+                <li>Lalit Kumar Upadhyay</li>
+                <li>Gurjant Singh</li>
+                <li>Mandeep Singh</li>
+                <li>Araijeet Singh Hundal</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+  
         {/* FAQ */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>

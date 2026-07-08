@@ -54,6 +54,8 @@ export default function BelgiumHockeyPage() {
       answer:
         "In Belgium, VRT Sport and Sporza will broadcast all Red Lions and Red Panthers matches on national TV and streaming. Pan-European coverage is provided via Eurosport and Discovery+. For a full country-by-country broadcaster list, check our dedicated Broadcasting Guide.",
     },
+    { question: "Where is the Belgium venue located?", answer: "Belgium matches will be played at the newly built Belfius Hockey Arena in Wavre, Belgium." },
+    { question: "Where to watch Belgium matches live?", answer: "Matches will be broadcast live on RTBF and VRT in Belgium, and Watch.Hockey internationally." }
   ];
 
   const menMatches = [
@@ -294,6 +296,53 @@ export default function BelgiumHockeyPage() {
           </div>
         </section>
 
+        
+        {/* Full Team Squad */}
+        <section style={{ marginBottom: "4rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            🇧🇪 Belgium Probable Squad — Hockey World Cup 2026
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Goalkeepers</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Vincent Vanasch</li>
+                <li>Loic Van Doren</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Defenders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Arthur Van Doren</li>
+                <li>Arthur De Sloover</li>
+                <li>Alexander Hendrickx</li>
+                <li>Loïck Luypaert</li>
+                <li>Gauthier Boccard</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Midfielders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Felix Denayer (C)</li>
+                <li>Victor Wegnez</li>
+                <li>Antoine Kina</li>
+                <li>John-John Dohmen</li>
+                <li>Simon Gougnard</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Forwards</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Tom Boon</li>
+                <li>Florent Van Aubel</li>
+                <li>Cédric Charlier</li>
+                <li>Nicolas De Kerpel</li>
+                <li>Tanguy Cosyns</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+  
         {/* FAQ */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #000", paddingLeft: "1rem", marginBottom: "1.5rem" }}>

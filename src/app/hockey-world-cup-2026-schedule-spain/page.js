@@ -24,8 +24,7 @@ export const metadata = {
 export default function SpainHockeyPage() {
   const faqItems = [
     { question: "Can Spain win the World Cup?", answer: "Spain is a traditional hockey powerhouse with incredible flair. Under coach Max Caldas, they are a strong dark horse." },
-    
-    
+    { question: "Where to watch Spain matches live?", answer: "RTVE and Teledeporte will broadcast matches live in Spain." }
   ];
 
   const menMatches = [
@@ -203,6 +202,48 @@ export default function SpainHockeyPage() {
           </div>
         </section>
 
+        
+        {/* Full Team Squad */}
+        <section style={{ marginBottom: "4rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            🇪🇸 Spain Probable Squad — Hockey World Cup 2026
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Goalkeepers</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Adrian Rafi</li>
+                <li>Luis Calzado</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Defenders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Marc Recasens</li>
+                <li>Ignasi de Abadal</li>
+                <li>Jordi Bonastre</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Midfielders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Marc Miralles (C)</li>
+                <li>Pepe Cunill</li>
+                <li>Joaquin Menini</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Forwards</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Alvaro Iglesias</li>
+                <li>Pau Cunill</li>
+                <li>Borja Lacalle</li>
+                <li>Gerard Clapes</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+  
         {/* FAQ */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>

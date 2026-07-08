@@ -24,8 +24,7 @@ export const metadata = {
 export default function IrelandHockeyPage() {
   const faqItems = [
     { question: "What are the chances for the Green Machine?", answer: "Ireland's men have consistently punched above their weight. Qualifying from Pool C is a realistic target." },
-    
-    
+    { question: "Where to stream Ireland matches live?", answer: "RTE will stream matches live in Ireland, alongside Watch.Hockey." }
   ];
 
   const menMatches = [
@@ -203,6 +202,49 @@ export default function IrelandHockeyPage() {
           </div>
         </section>
 
+        
+        {/* Full Team Squad */}
+        <section style={{ marginBottom: "4rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            🇮🇪 Ireland Probable Squad — Hockey World Cup 2026
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Goalkeepers</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>David Harte</li>
+                <li>Jamie Carr</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Defenders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Lee Cole</li>
+                <li>Luke Madeley</li>
+                <li>Kyle Marshall</li>
+                <li>Shane O'Donoghue</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Midfielders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Sean Murray (C)</li>
+                <li>Daragh Walsh</li>
+                <li>Michael Robson</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Forwards</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Benjamin Walker</li>
+                <li>Jeremy Duncan</li>
+                <li>Matthew Nelson</li>
+                <li>John McKee</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+  
         {/* FAQ */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>

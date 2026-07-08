@@ -24,8 +24,7 @@ export const metadata = {
 export default function FranceHockeyPage() {
   const faqItems = [
     { question: "Is France improving?", answer: "Yes, following heavy investment for the Paris 2024 Olympics, the French team is stronger than ever and capable of upsetting top teams." },
-    
-    
+    { question: "Where to watch France matches live?", answer: "L'Équipe will stream matches live in France." }
   ];
 
   const menMatches = [
@@ -199,6 +198,48 @@ export default function FranceHockeyPage() {
           </div>
         </section>
 
+        
+        {/* Full Team Squad */}
+        <section style={{ marginBottom: "4rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            🇫🇷 France Probable Squad — Hockey World Cup 2026
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Goalkeepers</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Arthur Thieffry</li>
+                <li>Edgar Reynaud</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Defenders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Victor Charlet (C)</li>
+                <li>Gaspard Baumgarten</li>
+                <li>Amaury Bellenger</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Midfielders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>François Goyet</li>
+                <li>Charles Masson</li>
+                <li>Eliot Curty</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Forwards</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Etienne Tynevez</li>
+                <li>Timothée Clément</li>
+                <li>Blaise Rogeau</li>
+                <li>Antonin Igau</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+  
         {/* FAQ */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>

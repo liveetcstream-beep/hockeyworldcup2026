@@ -26,6 +26,8 @@ export default function GermanyHockeyPage() {
     { question: "Is Germany defending the Hockey World Cup in 2026?", answer: "Yes, Germany (Die Honamas) won the 2023 FIH Hockey World Cup in India, defeating Belgium in the final. They enter 2026 as the defending champions." },
     { question: "Who is the captain of the German hockey team?", answer: "Mats Grambusch leads the German squad, known for their incredible resilience and late comebacks." },
     { question: "When is the Germany vs Belgium match?", answer: "The highly anticipated rematch of the 2023 final between Germany and Belgium will take place on August 17, 2026 in Pool B." },
+    { question: "Where to watch Germany matches live?", answer: "Matches will be streamed live on DAZN in Germany, and on Star Sports/Hotstar in India." },
+    { question: "Who won the last Hockey World Cup in 2023?", answer: "Germany won the 2023 World Cup in India, defeating Belgium in a thrilling penalty shootout." }
   ];
 
   const menMatches = [
@@ -203,6 +205,53 @@ export default function GermanyHockeyPage() {
           </div>
         </section>
 
+        
+        {/* Full Team Squad */}
+        <section style={{ marginBottom: "4rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            🇩🇪 Germany Probable Squad — Hockey World Cup 2026
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Goalkeepers</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Alexander Stadler</li>
+                <li>Jean-Paul Danneberg</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Defenders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Mathias Müller</li>
+                <li>Lukas Windfeder</li>
+                <li>Gonzalo Peillat</li>
+                <li>Tom Grambusch</li>
+                <li>Teo Hinrichs</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Midfielders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Mats Grambusch (C)</li>
+                <li>Martin Zwicker</li>
+                <li>Hannes Müller</li>
+                <li>Moritz Trompertz</li>
+                <li>Paul-Philipp Kaufmann</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Forwards</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Niklas Wellen</li>
+                <li>Justus Weigand</li>
+                <li>Christopher Rühr</li>
+                <li>Marco Miltkau</li>
+                <li>Malte Hellwig</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+  
         {/* FAQ */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>

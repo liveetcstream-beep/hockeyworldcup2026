@@ -26,6 +26,8 @@ export default function AustraliaHockeyPage() {
     { question: "What is the Australian hockey team called?", answer: "The Australian Men's team is known as the Kookaburras, and the Women's team is called the Hockeyroos." },
     { question: "Will Australia play in Belgium or Netherlands?", answer: "Australia's Pool C matches will predominantly take place at the Belfius Arena in Wavre, Belgium." },
     { question: "Who is Australia's biggest threat in Pool C?", answer: "Spain presents the biggest challenge in the group stage for the Kookaburras." },
+    { question: "Where to watch Australia hockey matches live?", answer: "Matches will be broadcast live in Australia on Fox Sports and streamed via Kayo Sports." },
+    { question: "How many titles has Australia won?", answer: "Australia has won 3 Hockey World Cup titles (1986, 2010, 2014)." }
   ];
 
   const menMatches = [
@@ -203,6 +205,52 @@ export default function AustraliaHockeyPage() {
           </div>
         </section>
 
+        
+        {/* Full Team Squad */}
+        <section style={{ marginBottom: "4rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            🇦🇺 Australia Probable Squad — Hockey World Cup 2026
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Goalkeepers</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Andrew Charter</li>
+                <li>Johan Durst</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Defenders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Jeremy Hayward</li>
+                <li>Jake Harvie</li>
+                <li>Matt Dawson</li>
+                <li>Joshua Beltz</li>
+                <li>Tim Howard</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Midfielders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Aran Zalewski (C)</li>
+                <li>Flynn Ogilvie</li>
+                <li>Eddie Ockenden</li>
+                <li>Lachlan Sharp</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Forwards</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Blake Govers</li>
+                <li>Tom Wickham</li>
+                <li>Jacob Anderson</li>
+                <li>Nathan Ephraums</li>
+                <li>Tim Brand</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+  
         {/* FAQ */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>

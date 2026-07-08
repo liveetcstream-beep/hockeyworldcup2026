@@ -26,6 +26,8 @@ export default function NetherlandsHockeyPage() {
     { question: "Are the Netherlands hosting the 2026 Hockey World Cup?", answer: "Yes, the Netherlands is co-hosting the tournament alongside Belgium. Matches will be played at the Wagener Stadium in Amstelveen." },
     { question: "Who are the favorites to win the Women's World Cup?", answer: "The Netherlands Women's team (Oranje) are the heavy favorites. They are the defending champions and the undisputed #1 team globally." },
     { question: "How many times have the Dutch won?", answer: "The Men have won 3 times, while the Women have a record 9 World Cup titles." },
+    { question: "Where are the Netherlands matches being played?", answer: "The primary venue in the Netherlands is the historic Wagener Hockey Stadium in Amstelveen." },
+    { question: "Where to watch Netherlands live streams?", answer: "Fans in the Netherlands can watch live on NOS and stream online via Watch.Hockey." }
   ];
 
   const menMatches = [
@@ -203,6 +205,52 @@ export default function NetherlandsHockeyPage() {
           </div>
         </section>
 
+        
+        {/* Full Team Squad */}
+        <section style={{ marginBottom: "4rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            🇳🇱 Netherlands Probable Squad — Hockey World Cup 2026
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Goalkeepers</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Pirmin Blaak</li>
+                <li>Derk Meijer</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Defenders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Lars Balk</li>
+                <li>Jonas de Geus</li>
+                <li>Joep de Mol</li>
+                <li>Jip Janssen</li>
+                <li>Justen Blok</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Midfielders</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Thierry Brinkman (C)</li>
+                <li>Jorrit Croon</li>
+                <li>Steijn van Heijningen</li>
+                <li>Derck de Vilder</li>
+              </ul>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem" }}>
+              <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem", borderBottom: "2px solid #c00030", paddingBottom: "0.4rem" }}>Forwards</h3>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0, lineHeight: "1.8", color: "var(--text-muted)", fontSize: "0.95rem" }}>
+                <li>Koen Bijen</li>
+                <li>Tjep Hoedemakers</li>
+                <li>Terrance Pieters</li>
+                <li>Duco Telgenkamp</li>
+                <li>Floris Wortelboer</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+  
         {/* FAQ */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
