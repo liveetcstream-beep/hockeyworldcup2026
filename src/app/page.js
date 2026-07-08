@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScheduleAndConverter from "./components/ScheduleAndConverter";
@@ -28,7 +28,7 @@ export default function Home() {
     },
     {
       question: "How can I buy tickets for the matches in Wagener Stadium (Amstelveen)?",
-      answer: "Official ticket sales are handled via the unified tournament portal (hockeyworldcup2026.be). Ticket prices start from €20 for group stage matches, with premium passes available for the final weekend matches in Wavre and Amstelveen."
+      answer: "Official ticket sales are handled via the unified tournament portal (hockeyworldcup2026.be). Ticket prices start from â‚¬20 for group stage matches, with premium passes available for the final weekend matches in Wavre and Amstelveen."
     }
   ];
 
@@ -50,10 +50,10 @@ export default function Home() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Expert Verified by: <strong>Marc Devos (Senior Belgian Hockey Journalist)</strong>
+              âœï¸ Expert Verified by: <strong>Marc Devos (Senior Belgian Hockey Journalist)</strong>
             </div>
             <div className="eeat-badge">
-              ⚡ Status: <strong>Official Fixtures Confirmed</strong>
+              âš¡ Status: <strong>Official Fixtures Confirmed</strong>
             </div>
           </div>
         </div>
@@ -130,80 +130,80 @@ export default function Home() {
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <a href="/broadcasters" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
-              <div className="local-icon">📺</div>
+              <div className="local-icon">ðŸ“º</div>
               <h3 className="text-white mt-4 mb-2">Live Stream Guide</h3>
               <p className="text-sm text-slate-400">Step-by-step cord-cutting guides, VPN configurations, and country-wise official channels.</p>
-              <span className="text-xs text-sky-400 font-bold block mt-4">Access Broadcasters Hub →</span>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Broadcasters Hub â†’</span>
             </a>
             
             <a href="/venues" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
-              <div className="local-icon">🏟️</div>
+              <div className="local-icon">ðŸŸï¸</div>
               <h3 className="text-white mt-4 mb-2">Stadium & Travel Guide</h3>
               <p className="text-sm text-slate-400">Weather forecasts, Zip codes, local landmarks, and transit details for Wavre and Amstelveen.</p>
-              <span className="text-xs text-sky-400 font-bold block mt-4">Access Venues Hub →</span>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Venues Hub â†’</span>
             </a>
 
             <a href="/teams" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
-              <div className="local-icon">🏃‍♂️</div>
+              <div className="local-icon">ðŸƒâ€â™‚ï¸</div>
               <h3 className="text-white mt-4 mb-2">Squads & Players</h3>
               <p className="text-sm text-slate-400">Detailed list of the 16 qualified teams, key players, drag-flick anchors, and predictions.</p>
-              <span className="text-xs text-sky-400 font-bold block mt-4">Access Teams Hub →</span>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Teams Hub â†’</span>
             </a>
 
             <a href="/live-scores" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
-              <div className="local-icon">⚡</div>
+              <div className="local-icon">âš¡</div>
               <h3 className="text-white mt-4 mb-2">Live Score Centre</h3>
               <p className="text-sm text-slate-400">Real-time play-by-play updates, card statistics, goal scorers, and penalty corner summaries.</p>
-              <span className="text-xs text-sky-400 font-bold block mt-4">Access Scores Hub →</span>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Scores Hub â†’</span>
             </a>
 
             <a href="/tickets" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
-              <div className="local-icon">🎟️</div>
+              <div className="local-icon">ðŸŽŸï¸</div>
               <h3 className="text-white mt-4 mb-2">Tickets & Booking</h3>
               <p className="text-sm text-slate-400">Official ticket portal links, category-wise pricing, and stadium entrance instructions.</p>
-              <span className="text-xs text-sky-400 font-bold block mt-4">Access Tickets Hub →</span>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Tickets Hub â†’</span>
             </a>
 
             <a href="/format" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
-              <div className="local-icon">🔀</div>
+              <div className="local-icon">ðŸ”€</div>
               <h3 className="text-white mt-4 mb-2">Knockout Format</h3>
               <p className="text-sm text-slate-400">Crossover round matchups criteria, penalty shootout guidelines, and bracket rules.</p>
-              <span className="text-xs text-sky-400 font-bold block mt-4">Access Format Hub →</span>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Format Hub â†’</span>
             </a>
 
             <a href="/points-table" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
-              <div className="local-icon">📊</div>
+              <div className="local-icon">ðŸ“Š</div>
               <h3 className="text-white mt-4 mb-2">Points Table Rules</h3>
               <p className="text-sm text-slate-400">Points scoring criteria, group stage classification rules, and tie-breaker parameters.</p>
-              <span className="text-xs text-sky-400 font-bold block mt-4">Access Rules Hub →</span>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access Rules Hub â†’</span>
             </a>
 
             <a href="/history" className="local-card block text-decoration-none transition-transform hover:-translate-y-2">
-              <div className="local-icon">🏆</div>
+              <div className="local-icon">ðŸ†</div>
               <h3 className="text-white mt-4 mb-2">Winners History</h3>
               <p className="text-sm text-slate-400">FIH World Cup winners list since 1971, historical statistics, and titles leaderboard.</p>
-              <span className="text-xs text-sky-400 font-bold block mt-4">Access History Hub →</span>
+              <span className="text-xs text-sky-400 font-bold block mt-4">Access History Hub â†’</span>
             </a>
 
-            <a href="/india-hockey-world-cup-2026" className="local-card block text-decoration-none transition-transform hover:-translate-y-2" style={{ borderTop: "3px solid #FF9933" }}>
-              <div className="local-icon">🇮🇳</div>
+            <a href="/hockey-world-cup-2026-schedule-india" className="local-card block text-decoration-none transition-transform hover:-translate-y-2" style={{ borderTop: "3px solid #FF9933" }}>
+              <div className="local-icon">ðŸ‡®ðŸ‡³</div>
               <h3 className="text-white mt-4 mb-2">India at HWC 2026</h3>
               <p className="text-sm text-slate-400">Complete India men's & women's schedule, IST timings, Pool D fixtures, squad & key players guide.</p>
-              <span className="text-xs font-bold block mt-4" style={{ color: "#FF9933" }}>India Team Guide →</span>
+              <span className="text-xs font-bold block mt-4" style={{ color: "#FF9933" }}>India Team Guide â†’</span>
             </a>
 
-            <a href="/pakistan-hockey-world-cup-2026" className="local-card block text-decoration-none transition-transform hover:-translate-y-2" style={{ borderTop: "3px solid #009900" }}>
-              <div className="local-icon">🇵🇰</div>
+            <a href="/hockey-world-cup-2026-schedule-pakistan" className="local-card block text-decoration-none transition-transform hover:-translate-y-2" style={{ borderTop: "3px solid #009900" }}>
+              <div className="local-icon">ðŸ‡µðŸ‡°</div>
               <h3 className="text-white mt-4 mb-2">Pakistan at HWC 2026</h3>
               <p className="text-sm text-slate-400">Pakistan men's schedule with PKT timings, India vs Pakistan derby spotlight, squad & player analysis.</p>
-              <span className="text-xs font-bold block mt-4" style={{ color: "#009900" }}>Pakistan Team Guide →</span>
+              <span className="text-xs font-bold block mt-4" style={{ color: "#009900" }}>Pakistan Team Guide â†’</span>
             </a>
 
             <a href="/hockey-world-cup-2026-groups" className="local-card block text-decoration-none transition-transform hover:-translate-y-2" style={{ borderTop: "3px solid #c00030" }}>
-              <div className="local-icon">🏑</div>
+              <div className="local-icon">ðŸ‘</div>
               <h3 className="text-white mt-4 mb-2">Pool Groups Draw</h3>
-              <p className="text-sm text-slate-400">All Men's & Women's pool groups (A–D), team rankings, key pool clashes and Second Stage format explained.</p>
-              <span className="text-xs text-sky-400 font-bold block mt-4">See All Groups →</span>
+              <p className="text-sm text-slate-400">All Men's & Women's pool groups (Aâ€“D), team rankings, key pool clashes and Second Stage format explained.</p>
+              <span className="text-xs text-sky-400 font-bold block mt-4">See All Groups â†’</span>
             </a>
           </div>
         </section>
@@ -379,8 +379,8 @@ export default function Home() {
             
             {/* Wagener Stadium */}
             <div className="local-card">
-              <div className="local-icon">🏟️</div>
-              <h3 className="text-white font-bold italic">🇳🇱 Wagener Stadium, Amstelveen</h3>
+              <div className="local-icon">ðŸŸï¸</div>
+              <h3 className="text-white font-bold italic">ðŸ‡³ðŸ‡± Wagener Stadium, Amstelveen</h3>
               <p>Located in the beautiful North Holland province, Amstelveen operates under a temperate oceanic climate. The stadium turf features modern water-based synthetic grass, which requires high humidity management. Fans should expect quick transitions and potential rain delay procedures.</p>
               
               <div className="local-meta">
@@ -405,8 +405,8 @@ export default function Home() {
 
             {/* Belfius Hockey Arena */}
             <div className="local-card">
-              <div className="local-icon">🏟️</div>
-              <h3 className="text-white font-bold italic">🇧🇪 Belfius Hockey Arena, Wavre</h3>
+              <div className="local-icon">ðŸŸï¸</div>
+              <h3 className="text-white font-bold italic">ðŸ‡§ðŸ‡ª Belfius Hockey Arena, Wavre</h3>
               <p>Situated in the Walloon Brabant province of Belgium, Wavre is prone to sudden summer showers. The newly built stadium has integrated eco-drainage channels to comply with the Royal Belgian Hockey Association's carbon-neutral standard.</p>
               
               <div className="local-meta">

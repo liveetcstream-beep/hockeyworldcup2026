@@ -6,17 +6,17 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "India Hockey World Cup 2026: Schedule, Squad & Pool D Fixtures",
+  title: "Hockey World Cup 2026 Schedule India: Time Table, Fixtures & PDF",
   description:
-    "Complete India men's and women's hockey team schedule for FIH Hockey World Cup 2026. Pool D fixtures, IST timings, squad list, key players, and live score updates.",
+    "Complete Hockey World Cup 2026 Schedule for India. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
   alternates: {
-    canonical: `${BASE}/india-hockey-world-cup-2026`,
+    canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
   },
   openGraph: {
-    title: "India Hockey World Cup 2026: Schedule, Squad & Pool D Fixtures",
+    title: "Hockey World Cup 2026 Schedule India: Time Table, Fixtures & PDF",
     description:
-      "Complete India men's and women's hockey team schedule for FIH Hockey World Cup 2026. Pool D fixtures, IST timings, squad list, and key players.",
-    url: `${BASE}/india-hockey-world-cup-2026`,
+      "Complete Hockey World Cup 2026 Schedule for India. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list.",
+    url: `${BASE}/hockey-world-cup-2026-schedule-india`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
 };
@@ -36,7 +36,7 @@ export default function IndiaHockeyPage() {
     {
       question: "India vs Pakistan Hockey World Cup 2026 kab hai?",
       answer:
-        "India vs Pakistan Men's Pool D match August 2026 mein hoga. Yeh match Hockey World Cup ka sabse bada rivalry match hai — dono teams ek hi pool (Pool D) mein hain, jo direct group stage clash guaranteed karta hai.",
+        "India vs Pakistan Men's Pool D match August 2026 mein hoga. Yeh match Hockey World Cup ka sabse bada rivalry match hai â€” dono teams ek hi pool (Pool D) mein hain, jo direct group stage clash guaranteed karta hai.",
     },
     {
       question: "Hockey World Cup 2026 India ke matches Star Sports pe aayenge?",
@@ -46,22 +46,22 @@ export default function IndiaHockeyPage() {
     {
       question: "India Hockey World Cup 2026 mein kitni baar title jeet chuki hai?",
       answer:
-        "India ne Men's Hockey World Cup 1 baar jeeta hai — 1975 mein Kuala Lumpur mein, Pakistan ko final mein 2-1 se hara ke. India Women's team ne World Cup kabhi nahi jeeta lekin 2022 mein achi performance di.",
+        "India ne Men's Hockey World Cup 1 baar jeeta hai â€” 1975 mein Kuala Lumpur mein, Pakistan ko final mein 2-1 se hara ke. India Women's team ne World Cup kabhi nahi jeeta lekin 2022 mein achi performance di.",
     },
   ];
 
   const menMatches = [
-    { date: "Aug 16, 2026", time: "~6:30 PM IST", opponent: "🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 18, 2026", time: "~6:30 PM IST", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 20, 2026", time: "~6:30 PM IST", opponent: "🇵🇰 Pakistan", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "Aug 16, 2026", time: "~6:30 PM IST", opponent: "ðŸ´ó §ó ¢ó ·ó ¬ó ³ó ¿ Wales", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "Aug 18, 2026", time: "~6:30 PM IST", opponent: "ðŸ´ó §ó ¢ó ¥ó ®ó §ó ¿ England", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "Aug 20, 2026", time: "~6:30 PM IST", opponent: "ðŸ‡µðŸ‡° Pakistan", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
     { date: "Aug 22-24, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
-    { date: "Aug 27-28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
+    { date: "Aug 27-28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "â€“", venue: "TBD", type: "Knockout" },
   ];
 
   const womenMatches = [
-    { date: "Aug 15, 2026", time: "~3:30 PM IST", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 17, 2026", time: "~3:30 PM IST", opponent: "🇨🇳 China", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 19, 2026", time: "~3:30 PM IST", opponent: "🇿🇦 South Africa", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "Aug 15, 2026", time: "~3:30 PM IST", opponent: "ðŸ´ó §ó ¢ó ¥ó ®ó §ó ¿ England", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "Aug 17, 2026", time: "~3:30 PM IST", opponent: "ðŸ‡¨ðŸ‡³ China", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "Aug 19, 2026", time: "~3:30 PM IST", opponent: "ðŸ‡¿ðŸ‡¦ South Africa", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
     { date: "Aug 21-23, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
   ];
 
@@ -103,13 +103,17 @@ export default function IndiaHockeyPage() {
       {/* Hero */}
       <section className="hero-section">
         <div className="sports-container hero-content">
-          <p className="hero-subtitle">🇮🇳 Pool D · Belgium &amp; Netherlands</p>
-          <h1 className="hero-title">India at Hockey World Cup 2026</h1>
+          <p className="hero-subtitle">🏑 Pool D — Belgium & Netherlands</p>
+          <h1 className="hero-title">Hockey World Cup 2026 Schedule India</h1>
           <p className="hero-description">
-            Complete India men's &amp; women's fixture guide, IST match timings, squad analysis and live updates for the FIH Hockey World Cup 2026.
+            Complete India men's & women's fixture guide, full time table, IST / USA / Canada match timings, results, and squad analysis. Download the complete <strong>Hockey World Cup 2026 Schedule PDF</strong> for India's matches.
           </p>
           <div className="eeat-badge-container">
-            <div className="eeat-badge">✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong></div>
+            <div className="eeat-badge">✔️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong></div>
+          </div>
+          <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <a href="#fixtures" className="cta-button primary-cta">View Time Table & Results</a>
+            <a href="#" className="cta-button secondary-cta" style={{ backgroundColor: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)' }}>📄 Download Schedule PDF</a>
           </div>
         </div>
       </section>
@@ -119,12 +123,12 @@ export default function IndiaHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "🏆", label: "World Cup Titles", value: "1 (1975)" },
-            { icon: "🌍", label: "FIH World Ranking (Men)", value: "#5" },
-            { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
-            { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
-            { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
-            { icon: "⚔️", label: "Pool D Rivals", value: "Pakistan, England, Wales" },
+            { icon: "ðŸ†", label: "World Cup Titles", value: "1 (1975)" },
+            { icon: "ðŸŒ", label: "FIH World Ranking (Men)", value: "#5" },
+            { icon: "ðŸ‘©", label: "FIH Ranking (Women)", value: "#6" },
+            { icon: "ðŸŸï¸", label: "Venue", value: "Wagener Stadium, Amstelveen" },
+            { icon: "ðŸ“…", label: "Pool Stage Dates", value: "Aug 15â€“20, 2026" },
+            { icon: "âš”ï¸", label: "Pool D Rivals", value: "Pakistan, England, Wales" },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -147,7 +151,7 @@ export default function IndiaHockeyPage() {
         {/* Men's Schedule */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            🇮🇳 India Men's Schedule — Pool D
+            ðŸ‡®ðŸ‡³ India Men's Schedule â€” Pool D
           </h2>
           <div style={{ overflowX: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
@@ -178,7 +182,7 @@ export default function IndiaHockeyPage() {
         {/* Women's Schedule */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #f43f5e", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            🇮🇳 India Women's Schedule — Pool D
+            ðŸ‡®ðŸ‡³ India Women's Schedule â€” Pool D
           </h2>
           <div style={{ overflowX: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
@@ -209,7 +213,7 @@ export default function IndiaHockeyPage() {
         {/* Key Players */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #0284c7", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            🌟 Key Players to Watch
+            ðŸŒŸ Key Players to Watch
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
             {keyPlayers.map((p) => (
@@ -231,7 +235,7 @@ export default function IndiaHockeyPage() {
         {/* Analyst Prediction */}
         <section style={{ background: "linear-gradient(135deg, rgba(192,0,48,0.04) 0%, #f8fafc 100%)", border: "1px solid rgba(192,0,48,0.12)", padding: "2.5rem", borderRadius: "24px", marginBottom: "4rem", boxShadow: "0 8px 30px rgba(15,23,42,0.04)" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", marginBottom: "1.5rem" }}>
-            <span style={{ fontSize: "2rem" }}>🏑</span>
+            <span style={{ fontSize: "2rem" }}>ðŸ‘</span>
             <h2 style={{ fontSize: "1.4rem", fontWeight: "800", fontStyle: "italic", color: "var(--text-main)", margin: 0 }}>Analyst's India Preview</h2>
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
@@ -239,10 +243,10 @@ export default function IndiaHockeyPage() {
               <strong style={{ color: "var(--text-main)" }}>Pool D is India's toughest-ever World Cup group draw.</strong> Facing Pakistan, England, and Wales means all three games are pressure matches with no easy points. India's strength lies in their structured penalty corner execution led by Harmanpreet Singh and fast counter-attack transitions.
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The key match is <strong style={{ color: "#c00030" }}>India vs Pakistan</strong> — a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. India holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
+              The key match is <strong style={{ color: "#c00030" }}>India vs Pakistan</strong> â€” a rivalry that transcends sport. With both teams in the same pool, a direct Pool D clash is guaranteed. India holds a strong recent head-to-head record, winning 7 of the last 10 senior matches.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> India qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. India Women have the squad to surprise — watch for an upset against China.
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> India qualifies for the Second Stage from Pool D, likely finishing 2nd behind England. Quarter-final qualification is realistic; a semi-final run depends on form against top European opposition. India Women have the squad to surprise â€” watch for an upset against China.
             </p>
           </div>
         </section>
@@ -250,22 +254,22 @@ export default function IndiaHockeyPage() {
         {/* FAQ */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            Frequently Asked Questions — India at HWC 2026
+            Frequently Asked Questions â€” India at HWC 2026
           </h2>
           <FaqAccordion items={faqItems} />
         </section>
 
         {/* Internal Links */}
         <section style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "20px", padding: "2rem", marginBottom: "2rem" }}>
-          <h2 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", marginBottom: "1.2rem" }}>📌 Related Pages</h2>
+          <h2 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", marginBottom: "1.2rem" }}>ðŸ“Œ Related Pages</h2>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.8rem" }}>
             {[
-              { href: "/schedule", label: "📅 Full Tournament Schedule" },
-              { href: "/live-scores", label: "🔴 Live Scores" },
-              { href: "/points-table", label: "📊 Points Table" },
-              { href: "/h2h", label: "⚔️ India vs Pakistan H2H" },
-              { href: "/broadcasters", label: "📺 Watch in India (Star Sports)" },
-              { href: "/pakistan-hockey-world-cup-2026", label: "🇵🇰 Pakistan Page" },
+              { href: "/schedule", label: "ðŸ“… Full Tournament Schedule" },
+              { href: "/live-scores", label: "ðŸ”´ Live Scores" },
+              { href: "/points-table", label: "ðŸ“Š Points Table" },
+              { href: "/h2h", label: "âš”ï¸ India vs Pakistan H2H" },
+              { href: "/broadcasters", label: "ðŸ“º Watch in India (Star Sports)" },
+              { href: "/hockey-world-cup-2026-schedule-pakistan", label: "ðŸ‡µðŸ‡° Pakistan Page" },
             ].map((link) => (
               <a key={link.href} href={link.href} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: "var(--bg-tertiary)", color: "var(--text-main)", border: "1px solid var(--border-color)", borderRadius: "10px", padding: "0.5rem 1rem", fontSize: "0.9rem", fontWeight: "600", textDecoration: "none", transition: "all 0.2s" }}>
                 {link.label}

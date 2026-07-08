@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
@@ -15,7 +15,7 @@ export const metadata = {
   openGraph: {
     title: "Hockey World Cup 2026 Groups: All Pools Men's & Women's",
     description:
-      "All pool groups for FIH Hockey World Cup 2026 — Men's Pool A/B/C/D and Women's Pool A/B/C/D with teams, fixtures and qualification rules explained.",
+      "All pool groups for FIH Hockey World Cup 2026 â€” Men's Pool A/B/C/D and Women's Pool A/B/C/D with teams, fixtures and qualification rules explained.",
     url: `${BASE}/hockey-world-cup-2026-groups`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
   },
@@ -30,7 +30,7 @@ const mensPools = [
       { code: "cl", name: "Chile", rank: "#12" },
       { code: "nz", name: "New Zealand", rank: "#9" },
     ],
-    danger: "Netherlands — World No.1 favorites",
+    danger: "Netherlands â€” World No.1 favorites",
   },
   {
     pool: "B", color: "#7c3aed",
@@ -40,7 +40,7 @@ const mensPools = [
       { code: "be", name: "Belgium", rank: "#3" },
       { code: "fr", name: "France", rank: "#11" },
     ],
-    danger: "Germany vs Belgium — Pool of Death",
+    danger: "Germany vs Belgium â€” Pool of Death",
   },
   {
     pool: "C", color: "#d97706",
@@ -50,7 +50,7 @@ const mensPools = [
       { code: "es", name: "Spain", rank: "#7" },
       { code: "za", name: "South Africa", rank: "#15" },
     ],
-    danger: "Australia — Perennial contenders",
+    danger: "Australia â€” Perennial contenders",
   },
   {
     pool: "D", color: "#c00030",
@@ -60,7 +60,7 @@ const mensPools = [
       { code: "gb-eng", name: "England", rank: "#6" },
       { code: "pk", name: "Pakistan", rank: "#18" },
     ],
-    danger: "India vs Pakistan Derby — Biggest Rivalry",
+    danger: "India vs Pakistan Derby â€” Biggest Rivalry",
   },
 ];
 
@@ -73,7 +73,7 @@ const womensPools = [
       { code: "jp", name: "Japan", rank: "#8" },
       { code: "cl", name: "Chile", rank: "#16" },
     ],
-    danger: "Netherlands vs Australia — World's Best",
+    danger: "Netherlands vs Australia â€” World's Best",
   },
   {
     pool: "B", color: "#7c3aed",
@@ -83,7 +83,7 @@ const womensPools = [
       { code: "gb-sct", name: "Scotland", rank: "#10" },
       { code: "us", name: "United States", rank: "#7" },
     ],
-    danger: "Argentina — Strong South American squad",
+    danger: "Argentina â€” Strong South American squad",
   },
   {
     pool: "C", color: "#d97706",
@@ -93,7 +93,7 @@ const womensPools = [
       { code: "nz", name: "New Zealand", rank: "#9" },
       { code: "fr", name: "France", rank: "#11" },
     ],
-    danger: "Belgium — Home advantage at Wavre",
+    danger: "Belgium â€” Home advantage at Wavre",
   },
   {
     pool: "D", color: "#c00030",
@@ -103,7 +103,7 @@ const womensPools = [
       { code: "gb-eng", name: "England", rank: "#12" },
       { code: "za", name: "South Africa", rank: "#14" },
     ],
-    danger: "China vs India — Asian Clash",
+    danger: "China vs India â€” Asian Clash",
   },
 ];
 
@@ -112,7 +112,7 @@ export default function GroupsPage() {
     {
       question: "Hockey World Cup 2026 mein kitne pools hain?",
       answer:
-        "FIH Hockey World Cup 2026 mein 4 pools hain (A, B, C, D) — Men's aur Women's dono tournaments ke liye. Har pool mein 4 teams hain. Total 16 men's teams aur 16 women's teams participate kar rahi hain.",
+        "FIH Hockey World Cup 2026 mein 4 pools hain (A, B, C, D) â€” Men's aur Women's dono tournaments ke liye. Har pool mein 4 teams hain. Total 16 men's teams aur 16 women's teams participate kar rahi hain.",
     },
     {
       question: "Pool se kaise teams qualify karti hain next stage ke liye?",
@@ -122,17 +122,17 @@ export default function GroupsPage() {
     {
       question: "India aur Pakistan ek hi pool mein hain?",
       answer:
-        "Haan! India aur Pakistan dono Men's Pool D mein hain — jinke saath Wales aur England bhi hain. Yeh ek historic draw hai — India vs Pakistan Pool D derby iss tournament ka biggest match hoga.",
+        "Haan! India aur Pakistan dono Men's Pool D mein hain â€” jinke saath Wales aur England bhi hain. Yeh ek historic draw hai â€” India vs Pakistan Pool D derby iss tournament ka biggest match hoga.",
     },
     {
-      question: "Germany Pool B mein Belgium ke saath hai — yeh kyon khatra hai?",
+      question: "Germany Pool B mein Belgium ke saath hai â€” yeh kyon khatra hai?",
       answer:
         "Germany (reigning World Champions, Rank #2) aur Belgium (World Rank #3, co-host) Pool B mein hain. Germany vs Belgium Pool B match iss World Cup ka most-watched European match hoga. Dono teams semi-final favorites hain.",
     },
     {
       question: "Worst pool draw kiska hai Hockey World Cup 2026 mein?",
       answer:
-        "Men's Pool B — Germany, Belgium, Malaysia, France — sabse tough pool hai. Germany aur Belgium dono potential champions hain. Pool D bhi kafi mushkil hai — India, Pakistan, England sab competitive teams hain.",
+        "Men's Pool B â€” Germany, Belgium, Malaysia, France â€” sabse tough pool hai. Germany aur Belgium dono potential champions hain. Pool D bhi kafi mushkil hai â€” India, Pakistan, England sab competitive teams hain.",
     },
   ];
 
@@ -143,13 +143,13 @@ export default function GroupsPage() {
       {/* Hero */}
       <section className="hero-section">
         <div className="sports-container hero-content">
-          <p className="hero-subtitle">🏑 Pool Draw · Belgium &amp; Netherlands 2026</p>
-          <h1 className="hero-title">Hockey World Cup 2026 — All Groups &amp; Pools</h1>
+          <p className="hero-subtitle">ðŸ‘ Pool Draw Â· Belgium &amp; Netherlands 2026</p>
+          <h1 className="hero-title">Hockey World Cup 2026 â€” All Groups &amp; Pools</h1>
           <p className="hero-description">
             Complete pool groups for FIH Hockey World Cup 2026. Men's and Women's Pool A, B, C, D with all 16 qualified nations, rankings, key rivalries, and Second Stage qualification rules.
           </p>
           <div className="eeat-badge-container">
-            <div className="eeat-badge">✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong></div>
+            <div className="eeat-badge">âœï¸ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong></div>
           </div>
         </div>
       </section>
@@ -158,11 +158,11 @@ export default function GroupsPage() {
 
         {/* Tournament Format Quick Explainer */}
         <section style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "20px", padding: "2rem", marginBottom: "4rem" }}>
-          <h2 style={{ fontSize: "1.3rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", marginBottom: "1.2rem" }}>📋 How Qualification Works</h2>
+          <h2 style={{ fontSize: "1.3rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", marginBottom: "1.2rem" }}>ðŸ“‹ How Qualification Works</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1rem" }}>
             {[
-              { step: "1", label: "Pool Stage (Aug 15–20)", desc: "4 pools × 4 teams. Round-robin within pool. Top 2 from each pool qualify for Second Stage.", color: "#0284c7" },
-              { step: "2", label: "Second Stage (Aug 22–24)", desc: "Pool A+D → Group E. Pool B+C → Group F. Each team plays 2 matches. Top 2 from E & F reach semis.", color: "#7c3aed" },
+              { step: "1", label: "Pool Stage (Aug 15â€“20)", desc: "4 pools Ã— 4 teams. Round-robin within pool. Top 2 from each pool qualify for Second Stage.", color: "#0284c7" },
+              { step: "2", label: "Second Stage (Aug 22â€“24)", desc: "Pool A+D â†’ Group E. Pool B+C â†’ Group F. Each team plays 2 matches. Top 2 from E & F reach semis.", color: "#7c3aed" },
               { step: "3", label: "Semi-Finals (Aug 27)", desc: "E1 vs F2 and F1 vs E2. Winners go to the Final. Losers play Bronze medal match.", color: "#d97706" },
               { step: "4", label: "Grand Final (Aug 30)", desc: "Men's Final at Belfius Arena, Wavre. Women's Final at Wagener Stadium, Amstelveen.", color: "#c00030" },
             ].map((s) => (
@@ -180,14 +180,14 @@ export default function GroupsPage() {
         {/* Men's Pools */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.8rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #0284c7", paddingLeft: "1rem", marginBottom: "2rem" }}>
-            🏑 Men's Tournament — All 4 Pools
+            ðŸ‘ Men's Tournament â€” All 4 Pools
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
             {mensPools.map((pool) => (
               <div key={pool.pool} style={{ background: "var(--bg-secondary)", border: `2px solid ${pool.color}22`, borderTop: `4px solid ${pool.color}`, borderRadius: "20px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
                 <div style={{ background: `${pool.color}15`, padding: "1rem 1.4rem", borderBottom: `1px solid ${pool.color}22` }}>
                   <div style={{ fontWeight: "900", fontSize: "1.3rem", color: pool.color, fontStyle: "italic" }}>Pool {pool.pool}</div>
-                  <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginTop: "0.2rem" }}>⚡ {pool.danger}</div>
+                  <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginTop: "0.2rem" }}>âš¡ {pool.danger}</div>
                 </div>
                 <div style={{ padding: "0" }}>
                   {pool.teams.map((t, i) => (
@@ -210,14 +210,14 @@ export default function GroupsPage() {
         {/* Women's Pools */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.8rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #f43f5e", paddingLeft: "1rem", marginBottom: "2rem" }}>
-            🏑 Women's Tournament — All 4 Pools
+            ðŸ‘ Women's Tournament â€” All 4 Pools
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
             {womensPools.map((pool) => (
               <div key={pool.pool} style={{ background: "var(--bg-secondary)", border: `2px solid #f43f5e22`, borderTop: `4px solid #f43f5e`, borderRadius: "20px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
                 <div style={{ background: `#f43f5e15`, padding: "1rem 1.4rem", borderBottom: `1px solid #f43f5e22` }}>
                   <div style={{ fontWeight: "900", fontSize: "1.3rem", color: "#f43f5e", fontStyle: "italic" }}>Pool {pool.pool}</div>
-                  <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginTop: "0.2rem" }}>⚡ {pool.danger}</div>
+                  <div style={{ fontSize: "0.78rem", color: "var(--text-muted)", marginTop: "0.2rem" }}>âš¡ {pool.danger}</div>
                 </div>
                 <div>
                   {pool.teams.map((t, i) => (
@@ -240,16 +240,16 @@ export default function GroupsPage() {
         {/* Key Clashes */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            🔥 Must-Watch Pool Stage Clashes
+            ðŸ”¥ Must-Watch Pool Stage Clashes
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.2rem" }}>
             {[
-              { match: "🇮🇳 India vs 🇵🇰 Pakistan", pool: "Men's Pool D", why: "The sub-continental derby. World Cup's most-watched rivalry. India leads recent H2H 7-0.", heat: "🔥🔥🔥🔥🔥" },
-              { match: "🇩🇪 Germany vs 🇧🇪 Belgium", pool: "Men's Pool B", why: "Reigning champions vs co-host nation. European grudge match.", heat: "🔥🔥🔥🔥" },
-              { match: "🇳🇱 Netherlands vs 🇦🇺 Australia", pool: "Women's Pool A", why: "World's two best women's teams. No. 1 vs No. 2 — all-time classic.", heat: "🔥🔥🔥🔥🔥" },
-              { match: "🇦🇺 Australia vs 🇮🇪 Ireland", pool: "Men's Pool C", why: "Australia always favorites — but Ireland known for upsets.", heat: "🔥🔥🔥" },
-              { match: "🇨🇳 China vs 🇮🇳 India", pool: "Women's Pool D", why: "Asian rivals. Both teams have World Cup upset potential.", heat: "🔥🔥🔥🔥" },
-              { match: "🇦🇷 Argentina vs 🇩🇪 Germany", pool: "Women's Pool B", why: "Two traditionally strong women's hockey nations in direct clash.", heat: "🔥🔥🔥🔥" },
+              { match: "ðŸ‡®ðŸ‡³ India vs ðŸ‡µðŸ‡° Pakistan", pool: "Men's Pool D", why: "The sub-continental derby. World Cup's most-watched rivalry. India leads recent H2H 7-0.", heat: "ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥" },
+              { match: "ðŸ‡©ðŸ‡ª Germany vs ðŸ‡§ðŸ‡ª Belgium", pool: "Men's Pool B", why: "Reigning champions vs co-host nation. European grudge match.", heat: "ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥" },
+              { match: "ðŸ‡³ðŸ‡± Netherlands vs ðŸ‡¦ðŸ‡º Australia", pool: "Women's Pool A", why: "World's two best women's teams. No. 1 vs No. 2 â€” all-time classic.", heat: "ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥" },
+              { match: "ðŸ‡¦ðŸ‡º Australia vs ðŸ‡®ðŸ‡ª Ireland", pool: "Men's Pool C", why: "Australia always favorites â€” but Ireland known for upsets.", heat: "ðŸ”¥ðŸ”¥ðŸ”¥" },
+              { match: "ðŸ‡¨ðŸ‡³ China vs ðŸ‡®ðŸ‡³ India", pool: "Women's Pool D", why: "Asian rivals. Both teams have World Cup upset potential.", heat: "ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥" },
+              { match: "ðŸ‡¦ðŸ‡· Argentina vs ðŸ‡©ðŸ‡ª Germany", pool: "Women's Pool B", why: "Two traditionally strong women's hockey nations in direct clash.", heat: "ðŸ”¥ðŸ”¥ðŸ”¥ðŸ”¥" },
             ].map((clash) => (
               <div key={clash.match} style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.4rem", boxShadow: "0 4px 16px rgba(15,23,42,0.05)" }}>
                 <div style={{ fontWeight: "800", fontSize: "1rem", color: "var(--text-main)", marginBottom: "0.4rem" }}>{clash.match}</div>
@@ -264,23 +264,23 @@ export default function GroupsPage() {
         {/* FAQ */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            Frequently Asked Questions — HWC 2026 Groups
+            Frequently Asked Questions â€” HWC 2026 Groups
           </h2>
           <FaqAccordion items={faqItems} />
         </section>
 
         {/* Internal Links */}
         <section style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "20px", padding: "2rem" }}>
-          <h2 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", marginBottom: "1.2rem" }}>📌 Explore More</h2>
+          <h2 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", marginBottom: "1.2rem" }}>ðŸ“Œ Explore More</h2>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.8rem" }}>
             {[
-              { href: "/schedule", label: "📅 Full Match Schedule" },
-              { href: "/live-scores", label: "🔴 Live Scores" },
-              { href: "/points-table", label: "📊 Points Table & Standings" },
-              { href: "/h2h", label: "⚔️ Head-to-Head Records" },
-              { href: "/format", label: "🏆 Tournament Format Explained" },
-              { href: "/india-hockey-world-cup-2026", label: "🇮🇳 India Team Guide" },
-              { href: "/pakistan-hockey-world-cup-2026", label: "🇵🇰 Pakistan Team Guide" },
+              { href: "/schedule", label: "ðŸ“… Full Match Schedule" },
+              { href: "/live-scores", label: "ðŸ”´ Live Scores" },
+              { href: "/points-table", label: "ðŸ“Š Points Table & Standings" },
+              { href: "/h2h", label: "âš”ï¸ Head-to-Head Records" },
+              { href: "/format", label: "ðŸ† Tournament Format Explained" },
+              { href: "/hockey-world-cup-2026-schedule-india", label: "ðŸ‡®ðŸ‡³ India Team Guide" },
+              { href: "/hockey-world-cup-2026-schedule-pakistan", label: "ðŸ‡µðŸ‡° Pakistan Team Guide" },
             ].map((link) => (
               <a key={link.href} href={link.href} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: "var(--bg-tertiary)", color: "var(--text-main)", border: "1px solid var(--border-color)", borderRadius: "10px", padding: "0.5rem 1rem", fontSize: "0.9rem", fontWeight: "600", textDecoration: "none" }}>
                 {link.label}

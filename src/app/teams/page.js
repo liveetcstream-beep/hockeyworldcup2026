@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -25,7 +25,7 @@ export default function TeamsPage() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
+              âœï¸ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
             </div>
           </div>
         </div>
@@ -40,8 +40,8 @@ export default function TeamsPage() {
             <div className="pool-card">
               <div className="pool-header"><h3>Pool A</h3></div>
               <ul className="pool-list">
-                <li className="pool-item"><img src="https://flagcdn.com/w40/nl.png" width="20" height="14" alt="Netherlands flag" style={{ borderRadius: "2px" }} /> <a href="/netherlands-hockey-world-cup-2026" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>Netherlands</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide →</span></li>
-                <li className="pool-item"><img src="https://flagcdn.com/w40/ar.png" width="20" height="14" alt="Argentina flag" style={{ borderRadius: "2px" }} /> <a href="/argentina-hockey-world-cup-2026" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>Argentina</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide →</span></li>
+                <li className="pool-item"><img src="https://flagcdn.com/w40/nl.png" width="20" height="14" alt="Netherlands flag" style={{ borderRadius: "2px" }} /> <a href="/netherlands-hockey-world-cup-2026" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>Netherlands</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide â†’</span></li>
+                <li className="pool-item"><img src="https://flagcdn.com/w40/ar.png" width="20" height="14" alt="Argentina flag" style={{ borderRadius: "2px" }} /> <a href="/argentina-hockey-world-cup-2026" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>Argentina</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide â†’</span></li>
                 <li className="pool-item"><img src="https://flagcdn.com/w40/cl.png" width="20" height="14" alt="Chile flag" style={{ borderRadius: "2px" }} /> Chile</li>
                 <li className="pool-item"><img src="https://flagcdn.com/w40/nz.png" width="20" height="14" alt="New Zealand flag" style={{ borderRadius: "2px" }} /> New Zealand</li>
               </ul>
@@ -50,9 +50,9 @@ export default function TeamsPage() {
             <div className="pool-card">
               <div className="pool-header"><h3>Pool B</h3></div>
               <ul className="pool-list">
-                <li className="pool-item"><img src="https://flagcdn.com/w40/de.png" width="20" height="14" alt="Germany flag" style={{ borderRadius: "2px" }} /> <a href="/germany-hockey-world-cup-2026" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>Germany</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide →</span></li>
+                <li className="pool-item"><img src="https://flagcdn.com/w40/de.png" width="20" height="14" alt="Germany flag" style={{ borderRadius: "2px" }} /> <a href="/germany-hockey-world-cup-2026" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>Germany</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide â†’</span></li>
                 <li className="pool-item"><img src="https://flagcdn.com/w40/my.png" width="20" height="14" alt="Malaysia flag" style={{ borderRadius: "2px" }} /> Malaysia</li>
-                <li className="pool-item"><img src="https://flagcdn.com/w40/be.png" width="20" height="14" alt="Belgium flag" style={{ borderRadius: "2px" }} /> <a href="/belgium-hockey-world-cup-2026" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>Belgium</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide →</span></li>
+                <li className="pool-item"><img src="https://flagcdn.com/w40/be.png" width="20" height="14" alt="Belgium flag" style={{ borderRadius: "2px" }} /> <a href="/hockey-world-cup-2026-schedule-belgium" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>Belgium</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide â†’</span></li>
                 <li className="pool-item"><img src="https://flagcdn.com/w40/fr.png" width="20" height="14" alt="France flag" style={{ borderRadius: "2px" }} /> France</li>
               </ul>
             </div>
@@ -60,7 +60,7 @@ export default function TeamsPage() {
             <div className="pool-card">
               <div className="pool-header"><h3>Pool C</h3></div>
               <ul className="pool-list">
-                <li className="pool-item"><img src="https://flagcdn.com/w40/au.png" width="20" height="14" alt="Australia flag" style={{ borderRadius: "2px" }} /> <a href="/australia-hockey-world-cup-2026" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>Australia</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide →</span></li>
+                <li className="pool-item"><img src="https://flagcdn.com/w40/au.png" width="20" height="14" alt="Australia flag" style={{ borderRadius: "2px" }} /> <a href="/australia-hockey-world-cup-2026" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>Australia</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide â†’</span></li>
                 <li className="pool-item"><img src="https://flagcdn.com/w40/ie.png" width="20" height="14" alt="Ireland flag" style={{ borderRadius: "2px" }} /> Ireland</li>
                 <li className="pool-item"><img src="https://flagcdn.com/w40/es.png" width="20" height="14" alt="Spain flag" style={{ borderRadius: "2px" }} /> Spain</li>
                 <li className="pool-item"><img src="https://flagcdn.com/w40/za.png" width="20" height="14" alt="South Africa flag" style={{ borderRadius: "2px" }} /> South Africa</li>
@@ -70,27 +70,27 @@ export default function TeamsPage() {
             <div className="pool-card">
               <div className="pool-header"><h3>Pool D</h3></div>
               <ul className="pool-list">
-                <li className="pool-item"><img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="India flag" style={{ borderRadius: "2px" }} /> <a href="/india-hockey-world-cup-2026" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>India</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide →</span></li>
+                <li className="pool-item"><img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="India flag" style={{ borderRadius: "2px" }} /> <a href="/hockey-world-cup-2026-schedule-india" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>India</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide â†’</span></li>
                 <li className="pool-item"><img src="https://flagcdn.com/w40/gb-wls.png" width="20" height="14" alt="Wales flag" style={{ borderRadius: "2px" }} /> Wales</li>
-                <li className="pool-item"><img src="https://flagcdn.com/w40/gb-eng.png" width="20" height="14" alt="England flag" style={{ borderRadius: "2px" }} /> <a href="/england-hockey-world-cup-2026" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>England</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide →</span></li>
-                <li className="pool-item"><img src="https://flagcdn.com/w40/pk.png" width="20" height="14" alt="Pakistan flag" style={{ borderRadius: "2px" }} /> <a href="/pakistan-hockey-world-cup-2026" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>Pakistan</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide →</span></li>
+                <li className="pool-item"><img src="https://flagcdn.com/w40/gb-eng.png" width="20" height="14" alt="England flag" style={{ borderRadius: "2px" }} /> <a href="/england-hockey-world-cup-2026" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>England</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide â†’</span></li>
+                <li className="pool-item"><img src="https://flagcdn.com/w40/pk.png" width="20" height="14" alt="Pakistan flag" style={{ borderRadius: "2px" }} /> <a href="/hockey-world-cup-2026-schedule-pakistan" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none" }}>Pakistan</a> <span style={{ fontSize: "0.7rem", background: "rgba(2,132,199,0.1)", color: "#0284c7", borderRadius: "6px", padding: "0.1rem 0.4rem", marginLeft: "4px" }}>Guide â†’</span></li>
               </ul>
             </div>
           </div>
 
-          {/* CTA — All dedicated team guides */}
+          {/* CTA â€” All dedicated team guides */}
           <div style={{ background: "linear-gradient(135deg, rgba(255,153,51,0.06) 0%, rgba(0,153,0,0.06) 100%)", border: "1px solid rgba(192,0,48,0.12)", borderRadius: "20px", padding: "1.8rem 2rem", marginTop: "1.5rem" }}>
-            <div style={{ fontWeight: "800", color: "var(--text-main)", fontSize: "1.05rem", marginBottom: "0.8rem" }}>🏑 Dedicated Team Guides — Full Schedule, Squad & Predictions</div>
+            <div style={{ fontWeight: "800", color: "var(--text-main)", fontSize: "1.05rem", marginBottom: "0.8rem" }}>ðŸ‘ Dedicated Team Guides â€” Full Schedule, Squad & Predictions</div>
             <div style={{ display: "flex", gap: "0.8rem", flexWrap: "wrap" }}>
-              <a href="/india-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#FF9933", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>🇮🇳 India Guide →</a>
-              <a href="/pakistan-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#009900", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>🇵🇰 Pakistan Guide →</a>
-              <a href="/belgium-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#000000", color: "#FFD700", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>🇧🇪 Belgium Guide →</a>
-              <a href="/germany-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#333", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>🇩🇪 Germany Guide →</a>
-              <a href="/netherlands-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#E07000", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>🇳🇱 Netherlands Guide →</a>
-              <a href="/australia-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#00008B", color: "#FFBF00", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>🇦🇺 Australia Guide →</a>
-              <a href="/argentina-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#74ACDF", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>🇦🇷 Argentina Guide →</a>
-              <a href="/england-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#CF101A", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>🏴󠁧󠁢󠁥󠁮󠁧󠁿 England Guide →</a>
-              <a href="/hockey-world-cup-2026-groups" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "var(--bg-tertiary)", color: "var(--text-main)", border: "1px solid var(--border-color)", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>🏑 All Pool Groups →</a>
+              <a href="/hockey-world-cup-2026-schedule-india" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#FF9933", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>ðŸ‡®ðŸ‡³ India Guide â†’</a>
+              <a href="/hockey-world-cup-2026-schedule-pakistan" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#009900", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>ðŸ‡µðŸ‡° Pakistan Guide â†’</a>
+              <a href="/hockey-world-cup-2026-schedule-belgium" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#000000", color: "#FFD700", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>ðŸ‡§ðŸ‡ª Belgium Guide â†’</a>
+              <a href="/germany-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#333", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>ðŸ‡©ðŸ‡ª Germany Guide â†’</a>
+              <a href="/netherlands-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#E07000", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>ðŸ‡³ðŸ‡± Netherlands Guide â†’</a>
+              <a href="/australia-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#00008B", color: "#FFBF00", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>ðŸ‡¦ðŸ‡º Australia Guide â†’</a>
+              <a href="/argentina-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#74ACDF", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>ðŸ‡¦ðŸ‡· Argentina Guide â†’</a>
+              <a href="/england-hockey-world-cup-2026" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "#CF101A", color: "white", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>ðŸ´ó §ó ¢ó ¥ó ®ó §ó ¿ England Guide â†’</a>
+              <a href="/hockey-world-cup-2026-groups" style={{ display: "inline-flex", alignItems: "center", gap: "0.5rem", background: "var(--bg-tertiary)", color: "var(--text-main)", border: "1px solid var(--border-color)", borderRadius: "10px", padding: "0.6rem 1.2rem", fontWeight: "700", fontSize: "0.9rem", textDecoration: "none" }}>ðŸ‘ All Pool Groups â†’</a>
             </div>
           </div>
         </section>
@@ -217,7 +217,7 @@ export default function TeamsPage() {
           boxShadow: "0 8px 30px rgba(15, 23, 42, 0.03)"
         }}>
           <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", marginBottom: "1.8rem" }}>
-            <span style={{ fontSize: "2rem" }}>🏆</span>
+            <span style={{ fontSize: "2rem" }}>ðŸ†</span>
             <h2 className="text-2xl font-bold m-0" style={{ fontStyle: "italic", letterSpacing: "0.02em", color: "var(--text-main)" }}>Tournament Analyst Outlook</h2>
           </div>
           <div style={{ fontSize: "1.05rem", lineHeight: "2.0", letterSpacing: "0.01em", color: "var(--text-muted)" }}>
