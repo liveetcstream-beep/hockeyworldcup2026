@@ -23,22 +23,22 @@ export default function Header() {
             <ul className="sports-nav">
               <li><a href="/">Home</a></li>
               
-              {/* Schedule Dropdown â€” like PSL "PZ Schedule / MS Schedule" pattern */}
+              {/* Schedule Dropdown "” like PSL "PZ Schedule / MS Schedule" pattern */}
               <li className="nav-item-dropdown">
                 <span className="dropdown-trigger">
                   Team Schedules 
                   <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
                 </span>
                 <ul className="dropdown-menu">
-                  <li><a href="/hockey-world-cup-2026-schedule-india">ðŸ‡®ðŸ‡³ India Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-pakistan">ðŸ‡µðŸ‡° Pakistan Schedule</a></li>
-                  <li><a href="/hockey-world-cup-2026-schedule-belgium">ðŸ‡§ðŸ‡ª Belgium Schedule</a></li>
-                  <li><a href="/germany-hockey-world-cup-2026">ðŸ‡©ðŸ‡ª Germany Schedule</a></li>
-                  <li><a href="/netherlands-hockey-world-cup-2026">ðŸ‡³ðŸ‡± Netherlands Schedule</a></li>
-                  <li><a href="/australia-hockey-world-cup-2026">ðŸ‡¦ðŸ‡º Australia Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-india">🇮🇳 India Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-pakistan">🇵🇰 Pakistan Schedule</a></li>
+                  <li><a href="/hockey-world-cup-2026-schedule-belgium">🇧🇪 Belgium Schedule</a></li>
+                  <li><a href="/germany-hockey-world-cup-2026">🇩🇪 Germany Schedule</a></li>
+                  <li><a href="/netherlands-hockey-world-cup-2026">🇳🇱 Netherlands Schedule</a></li>
+                  <li><a href="/australia-hockey-world-cup-2026">🇦🇺 Australia Schedule</a></li>
                   <li><a href="/england-hockey-world-cup-2026">ðŸ´ó §ó ¢ó ¥ó ®ó §ó ¿ England Schedule</a></li>
-                  <li><a href="/argentina-hockey-world-cup-2026">ðŸ‡¦ðŸ‡· Argentina Schedule</a></li>
-                  <li><a href="/schedule">ðŸ“… Full Tournament Schedule</a></li>
+                  <li><a href="/argentina-hockey-world-cup-2026">🇦🇷 Argentina Schedule</a></li>
+                  <li><a href="/schedule">📅 Full Tournament Schedule</a></li>
                 </ul>
               </li>
 
@@ -143,17 +143,17 @@ export default function Header() {
           <li><a href="/" onClick={() => setIsMobileOpen(false)}>ðŸ  Home</a></li>
           {/* Team Schedules */}
           <li style={{ color: "var(--text-muted)", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.1em", padding: "0.8rem 1.5rem 0.3rem", fontWeight: "700", pointerEvents: "none" }}>Team Schedules</li>
-          <li><a href="/hockey-world-cup-2026-schedule-india" onClick={() => setIsMobileOpen(false)}>ðŸ‡®ðŸ‡³ India Schedule</a></li>
-          <li><a href="/hockey-world-cup-2026-schedule-pakistan" onClick={() => setIsMobileOpen(false)}>ðŸ‡µðŸ‡° Pakistan Schedule</a></li>
-          <li><a href="/hockey-world-cup-2026-schedule-belgium" onClick={() => setIsMobileOpen(false)}>ðŸ‡§ðŸ‡ª Belgium Schedule</a></li>
-          <li><a href="/germany-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>ðŸ‡©ðŸ‡ª Germany Schedule</a></li>
-          <li><a href="/netherlands-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>ðŸ‡³ðŸ‡± Netherlands Schedule</a></li>
-          <li><a href="/australia-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>ðŸ‡¦ðŸ‡º Australia Schedule</a></li>
+          <li><a href="/hockey-world-cup-2026-schedule-india" onClick={() => setIsMobileOpen(false)}>🇮🇳 India Schedule</a></li>
+          <li><a href="/hockey-world-cup-2026-schedule-pakistan" onClick={() => setIsMobileOpen(false)}>🇵🇰 Pakistan Schedule</a></li>
+          <li><a href="/hockey-world-cup-2026-schedule-belgium" onClick={() => setIsMobileOpen(false)}>🇧🇪 Belgium Schedule</a></li>
+          <li><a href="/germany-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>🇩🇪 Germany Schedule</a></li>
+          <li><a href="/netherlands-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>🇳🇱 Netherlands Schedule</a></li>
+          <li><a href="/australia-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>🇦🇺 Australia Schedule</a></li>
           <li><a href="/england-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>ðŸ´ó §ó ¢ó ¥ó ®ó §ó ¿ England Schedule</a></li>
-          <li><a href="/argentina-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>ðŸ‡¦ðŸ‡· Argentina Schedule</a></li>
+          <li><a href="/argentina-hockey-world-cup-2026" onClick={() => setIsMobileOpen(false)}>🇦🇷 Argentina Schedule</a></li>
           {/* Tournament */}
           <li style={{ color: "var(--text-muted)", fontSize: "0.7rem", textTransform: "uppercase", letterSpacing: "0.1em", padding: "0.8rem 1.5rem 0.3rem", fontWeight: "700", pointerEvents: "none" }}>Tournament</li>
-          <li><a href="/schedule" onClick={() => setIsMobileOpen(false)}>ðŸ“… Full Match Schedule</a></li>
+          <li><a href="/schedule" onClick={() => setIsMobileOpen(false)}>📅 Full Match Schedule</a></li>
           <li><a href="/hockey-world-cup-2026-groups" onClick={() => setIsMobileOpen(false)}>ðŸ‘ All Pool Groups</a></li>
           <li><a href="/format" onClick={() => setIsMobileOpen(false)}>Tournament Format</a></li>
           <li><a href="/points-table" onClick={() => setIsMobileOpen(false)}>Points Table Rules</a></li>

@@ -47,7 +47,7 @@ export default function BelgiumHockeyPage() {
     {
       question: "Who are Belgium's biggest rivals in Hockey World Cup 2026?",
       answer:
-        "Belgium's main Pool B rivals are Germany (2024 Olympic Bronze) and Argentina (perennial title contenders). In the knockout stages, they are expected to face the Netherlands and India â€” all former or current world champions. The Belgium vs Netherlands clash, if it happens, would be an all-time classic European hockey derby.",
+        "Belgium's main Pool B rivals are Germany (2024 Olympic Bronze) and Argentina (perennial title contenders). In the knockout stages, they are expected to face the Netherlands and India — all former or current world champions. The Belgium vs Netherlands clash, if it happens, would be an all-time classic European hockey derby.",
     },
     {
       question: "What channel is showing Belgium Hockey World Cup 2026 matches?",
@@ -57,19 +57,19 @@ export default function BelgiumHockeyPage() {
   ];
 
   const menMatches = [
-    { date: "Aug 15, 2026", time: "18:00 CET", opponent: "ðŸ‡«ðŸ‡· France", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
-    { date: "Aug 17, 2026", time: "~16:00 CET", opponent: "ðŸ‡©ðŸ‡ª Germany", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
-    { date: "Aug 19, 2026", time: "~14:00 CET", opponent: "ðŸ‡²ðŸ‡¾ Malaysia", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
-    { date: "Aug 22â€“24, 2026", time: "TBD", opponent: "Second Stage crossover", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
-    { date: "Aug 27â€“28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "â€“", venue: "TBD", type: "Knockout" },
-    { date: "Aug 30, 2026", time: "TBD", opponent: "Final / Bronze Medal", pool: "â€“", venue: "Belfius Arena, Wavre", type: "Final" },
+    { date: "Aug 15, 2026", time: "18:00 CET", opponent: "🇫🇷 France", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
+    { date: "Aug 17, 2026", time: "~16:00 CET", opponent: "🇩🇪 Germany", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
+    { date: "Aug 19, 2026", time: "~14:00 CET", opponent: "🇲🇾 Malaysia", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
+    { date: "Aug 22–24, 2026", time: "TBD", opponent: "Second Stage crossover", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
+    { date: "Aug 27–28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
+    { date: "Aug 30, 2026", time: "TBD", opponent: "Final / Bronze Medal", pool: "–", venue: "Belfius Arena, Wavre", type: "Final" },
   ];
 
   const womenMatches = [
-    { date: "Aug 15, 2026", time: "~10:00 CET", opponent: "ðŸ‡ºðŸ‡¸ United States", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
-    { date: "Aug 17, 2026", time: "~10:00 CET", opponent: "ðŸ‡¦ðŸ‡· Argentina", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
-    { date: "Aug 19, 2026", time: "~10:00 CET", opponent: "ðŸ‡°ðŸ‡· South Korea", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
-    { date: "Aug 22â€“24, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
+    { date: "Aug 15, 2026", time: "~10:00 CET", opponent: "🇺🇸 United States", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
+    { date: "Aug 17, 2026", time: "~10:00 CET", opponent: "🇦🇷 Argentina", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
+    { date: "Aug 19, 2026", time: "~10:00 CET", opponent: "🇰🇷 South Korea", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
+    { date: "Aug 22–24, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
   ];
 
   const keyPlayers = [
@@ -84,15 +84,15 @@ export default function BelgiumHockeyPage() {
       flag: "https://flagcdn.com/w40/be.png",
       name: "Arthur Van Doren",
       role: "Defender",
-      rank: "3Ã— FIH Player of the Year",
+      rank: "3× FIH Player of the Year",
       desc: "The greatest defender of his generation and the only player to win FIH Player of the Year three consecutive times. Van Doren reads the game at a level unmatched globally. His ability to break counter-attacks and initiate build-up play from defense makes him irreplaceable in Belgium's system.",
     },
     {
       flag: "https://flagcdn.com/w40/be.png",
-      name: "LoÃ¯ck Luypaert",
+      name: "Loïck Luypaert",
       role: "Midfielder",
       rank: "Olympic Champion 2020",
-      desc: "An engine in Belgium's midfield, combining defensive discipline with incisive forward runs. Luypaert is the fulcrum of Belgium's transition play â€” winning the ball deep and immediately launching fast breaks. His stamina and positioning make him one of the most complete midfielders at the tournament.",
+      desc: "An engine in Belgium's midfield, combining defensive discipline with incisive forward runs. Luypaert is the fulcrum of Belgium's transition play — winning the ball deep and immediately launching fast breaks. His stamina and positioning make him one of the most complete midfielders at the tournament.",
     },
     {
       flag: "https://flagcdn.com/w40/be.png",
@@ -120,7 +120,7 @@ export default function BelgiumHockeyPage() {
           </div>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#fixtures" className="cta-button primary-cta">View Time Table & Results</a>
-            <a href="#" className="cta-button secondary-cta" style={{ backgroundColor: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)' }}>📄 Download Schedule PDF</a>
+            <a href="/schedule.pdf" download className="cta-button secondary-cta" style={{ backgroundColor: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)' }}>📄 Download Schedule PDF</a>
           </div>
         </div>
       </section>
@@ -130,12 +130,12 @@ export default function BelgiumHockeyPage() {
         {/* Quick Stats */}
         <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(180px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
           {[
-            { icon: "ðŸ†", label: "World Cup Titles (Men)", value: "1 (2018)" },
-            { icon: "ðŸŒ", label: "FIH Ranking (Men)", value: "World #1" },
-            { icon: "ðŸ‘©", label: "FIH Ranking (Women)", value: "World #7" },
-            { icon: "ðŸŸï¸", label: "Home Venue", value: "Belfius Arena, Wavre" },
-            { icon: "ðŸ“…", label: "Pool Stage Dates", value: "Aug 15â€“19, 2026" },
-            { icon: "âš”ï¸", label: "Pool B Rivals (Men)", value: "Germany, France, Malaysia" },
+            { icon: "🏆", label: "World Cup Titles (Men)", value: "1 (2018)" },
+            { icon: "🌍", label: "FIH Ranking (Men)", value: "World #1" },
+            { icon: "👩", label: "FIH Ranking (Women)", value: "World #7" },
+            { icon: "🏟️", label: "Home Venue", value: "Belfius Arena, Wavre" },
+            { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–19, 2026" },
+            { icon: "⚔️", label: "Pool B Rivals (Men)", value: "Germany, France, Malaysia" },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -170,20 +170,20 @@ export default function BelgiumHockeyPage() {
         {/* Context Article Section */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #000", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            ðŸ‡§ðŸ‡ª Belgium at the FIH Hockey World Cup 2026: The Home Favourite
+            🇧🇪 Belgium at the FIH Hockey World Cup 2026: The Home Favourite
           </h2>
           <div style={{ color: "var(--text-muted)", lineHeight: "1.95", fontSize: "1rem" }}>
             <p style={{ marginBottom: "1.2rem" }}>
-              For Belgian hockey fans, 2026 is the year they have been waiting for. The <strong style={{ color: "var(--text-main)" }}>FIH Hockey World Cup 2026</strong> is being co-hosted by Belgium and the Netherlands â€” and Belgium's <strong style={{ color: "var(--text-main)" }}>Red Lions</strong> will play their entire pool stage at the newly upgraded <strong style={{ color: "var(--text-main)" }}>Belfius Hockey Arena in Wavre</strong>. Playing in front of a sold-out home crowd, with the entire nation watching, is a pressure and privilege unlike anything else in sport.
+              For Belgian hockey fans, 2026 is the year they have been waiting for. The <strong style={{ color: "var(--text-main)" }}>FIH Hockey World Cup 2026</strong> is being co-hosted by Belgium and the Netherlands — and Belgium's <strong style={{ color: "var(--text-main)" }}>Red Lions</strong> will play their entire pool stage at the newly upgraded <strong style={{ color: "var(--text-main)" }}>Belfius Hockey Arena in Wavre</strong>. Playing in front of a sold-out home crowd, with the entire nation watching, is a pressure and privilege unlike anything else in sport.
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The stakes are enormous. Belgium won the World Cup in 2018, but since then Germany (2023 World Champions) and the Netherlands have risen to challenge their dominance. The <strong style={{ color: "var(--text-main)" }}>2026 World Cup on home soil is Belgium's best chance to reclaim the title</strong> â€” with home-crowd noise, familiar surfaces, and local logistical advantages all working in their favour.
+              The stakes are enormous. Belgium won the World Cup in 2018, but since then Germany (2023 World Champions) and the Netherlands have risen to challenge their dominance. The <strong style={{ color: "var(--text-main)" }}>2026 World Cup on home soil is Belgium's best chance to reclaim the title</strong> — with home-crowd noise, familiar surfaces, and local logistical advantages all working in their favour.
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              Pool B is deceptively tough. <strong style={{ color: "var(--text-main)" }}>Germany</strong>, the 2023 World Champions, are the primary obstacle to a clean pool stage run. France has improved dramatically under their new coaching setup, and Malaysia â€” while ranked lower â€” are historically capable of producing giant-killing results in World Cups. Belgium cannot afford complacency in any of their three pool matches.
+              Pool B is deceptively tough. <strong style={{ color: "var(--text-main)" }}>Germany</strong>, the 2023 World Champions, are the primary obstacle to a clean pool stage run. France has improved dramatically under their new coaching setup, and Malaysia — while ranked lower — are historically capable of producing giant-killing results in World Cups. Belgium cannot afford complacency in any of their three pool matches.
             </p>
             <p style={{ margin: 0 }}>
-              On the Women's side, the <strong style={{ color: "var(--text-main)" }}>Red Panthers</strong> have been consistently improving their world ranking. A home World Cup provides the emotional lift needed to compete against the top-ranked Netherlands and Argentina. For Belgium Women, reaching the semi-final would already be considered a historic achievement â€” but nothing is off the table with the crowd behind them.
+              On the Women's side, the <strong style={{ color: "var(--text-main)" }}>Red Panthers</strong> have been consistently improving their world ranking. A home World Cup provides the emotional lift needed to compete against the top-ranked Netherlands and Argentina. For Belgium Women, reaching the semi-final would already be considered a historic achievement — but nothing is off the table with the crowd behind them.
             </p>
           </div>
         </section>
@@ -191,7 +191,7 @@ export default function BelgiumHockeyPage() {
         {/* Men's Schedule */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #000", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            ðŸ‡§ðŸ‡ª Belgium Men's (Red Lions) Schedule â€” Pool B
+            🇧🇪 Belgium Men's (Red Lions) Schedule — Pool B
           </h2>
           <div style={{ overflowX: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
@@ -226,7 +226,7 @@ export default function BelgiumHockeyPage() {
         {/* Women's Schedule */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #f43f5e", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            ðŸ‡§ðŸ‡ª Belgium Women's (Red Panthers) Schedule â€” Pool B
+            🇧🇪 Belgium Women's (Red Panthers) Schedule — Pool B
           </h2>
           <div style={{ overflowX: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
@@ -257,7 +257,7 @@ export default function BelgiumHockeyPage() {
         {/* Key Players */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #0284c7", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            ðŸŒŸ Belgium Key Players to Watch at HWC 2026
+            🌟 Belgium Key Players to Watch at HWC 2026
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1.5rem" }}>
             {keyPlayers.map((p) => (
@@ -279,7 +279,7 @@ export default function BelgiumHockeyPage() {
         {/* Analyst Prediction */}
         <section style={{ background: "linear-gradient(135deg, rgba(0,0,0,0.03) 0%, rgba(212,175,55,0.04) 100%)", border: "1px solid rgba(212,175,55,0.2)", padding: "2.5rem", borderRadius: "24px", marginBottom: "4rem", boxShadow: "0 8px 30px rgba(15,23,42,0.04)" }}>
           <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", marginBottom: "1.5rem" }}>
-            <span style={{ fontSize: "2rem" }}>ðŸ‘</span>
+            <span style={{ fontSize: "2rem" }}>🏑</span>
             <h2 style={{ fontSize: "1.4rem", fontWeight: "800", fontStyle: "italic", color: "var(--text-main)", margin: 0 }}>Expert Analyst's Belgium 2026 Preview</h2>
           </div>
           <div style={{ fontSize: "1rem", lineHeight: "1.9", color: "var(--text-muted)" }}>
@@ -287,10 +287,10 @@ export default function BelgiumHockeyPage() {
               <strong style={{ color: "var(--text-main)" }}>Belgium are the most complete team in world hockey right now.</strong> Their combination of the world's best drag-flicker (Hendrickx), the greatest defender of his generation (Van Doren), and a tactically elite coaching staff under Michel van den Heuvel creates a system that is almost impossible to break down. Home advantage elevates this even further.
             </p>
             <p style={{ marginBottom: "1.2rem" }}>
-              The critical match in Pool B is <strong style={{ color: "#d4af37" }}>Belgium vs Germany</strong> â€” a tactical masterclass between the current World #1 (Belgium) and the current World Champions (Germany). Both teams use a high-press, structured penalty corner system. Whichever team wins this pool stage match will likely top Pool B and get a more favorable Second Stage crossover draw.
+              The critical match in Pool B is <strong style={{ color: "#d4af37" }}>Belgium vs Germany</strong> — a tactical masterclass between the current World #1 (Belgium) and the current World Champions (Germany). Both teams use a high-press, structured penalty corner system. Whichever team wins this pool stage match will likely top Pool B and get a more favorable Second Stage crossover draw.
             </p>
             <p style={{ margin: 0 }}>
-              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Belgium win Pool B, navigate the Second Stage without dropping a game, and reach the Final. Their biggest threat is the Netherlands in a potential semi-final â€” a match that would be the most-watched field hockey game in European TV history. <strong style={{ color: "#d4af37" }}>Belgium are the tournament favourites to lift the 2026 World Cup on home soil.</strong>
+              <strong style={{ color: "var(--text-main)" }}>Prediction:</strong> Belgium win Pool B, navigate the Second Stage without dropping a game, and reach the Final. Their biggest threat is the Netherlands in a potential semi-final — a match that would be the most-watched field hockey game in European TV history. <strong style={{ color: "#d4af37" }}>Belgium are the tournament favourites to lift the 2026 World Cup on home soil.</strong>
             </p>
           </div>
         </section>
@@ -298,25 +298,25 @@ export default function BelgiumHockeyPage() {
         {/* FAQ */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.5rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #000", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            Frequently Asked Questions â€” Belgium at Hockey World Cup 2026
+            Frequently Asked Questions — Belgium at Hockey World Cup 2026
           </h2>
           <FaqAccordion items={faqItems} />
         </section>
 
         {/* Internal Links */}
         <section style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "20px", padding: "2rem", marginBottom: "2rem" }}>
-          <h2 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", marginBottom: "1.2rem" }}>ðŸ“Œ Related Pages</h2>
+          <h2 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", marginBottom: "1.2rem" }}>📌 Related Pages</h2>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.8rem" }}>
             {[
-              { href: "/schedule", label: "ðŸ“… Full Tournament Schedule" },
-              { href: "/live-scores", label: "ðŸ”´ Live Scores" },
-              { href: "/points-table", label: "ðŸ“Š Points Table" },
-              { href: "/venues", label: "ðŸŸï¸ Belfius Arena Guide" },
-              { href: "/broadcasters", label: "ðŸ“º Watch in Belgium (VRT Sport)" },
-              { href: "/hockey-world-cup-2026-groups", label: "ðŸ‘ Pool B Full Draw" },
-              { href: "/teams", label: "ðŸ‘¥ All 16 Teams" },
-              { href: "/hockey-world-cup-2026-schedule-india", label: "ðŸ‡®ðŸ‡³ India's Page" },
-              { href: "/hockey-world-cup-2026-schedule-pakistan", label: "ðŸ‡µðŸ‡° Pakistan's Page" },
+              { href: "/schedule", label: "📅 Full Tournament Schedule" },
+              { href: "/live-scores", label: "🔴 Live Scores" },
+              { href: "/points-table", label: "📊 Points Table" },
+              { href: "/venues", label: "🏟️ Belfius Arena Guide" },
+              { href: "/broadcasters", label: "📺 Watch in Belgium (VRT Sport)" },
+              { href: "/hockey-world-cup-2026-groups", label: "🏑 Pool B Full Draw" },
+              { href: "/teams", label: "👥 All 16 Teams" },
+              { href: "/hockey-world-cup-2026-schedule-india", label: "🇮🇳 India's Page" },
+              { href: "/hockey-world-cup-2026-schedule-pakistan", label: "🇵🇰 Pakistan's Page" },
             ].map((link) => (
               <a key={link.href} href={link.href} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: "var(--bg-tertiary)", color: "var(--text-main)", border: "1px solid var(--border-color)", borderRadius: "10px", padding: "0.5rem 1rem", fontSize: "0.9rem", fontWeight: "600", textDecoration: "none", transition: "all 0.2s" }}>
                 {link.label}
