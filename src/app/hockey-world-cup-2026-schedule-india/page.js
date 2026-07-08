@@ -51,17 +51,17 @@ export default function IndiaHockeyPage() {
   ];
 
   const menMatches = [
-    { date: "Aug 16, 2026", time: "~6:30 PM IST", opponent: "🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 18, 2026", time: "~6:30 PM IST", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 20, 2026", time: "~6:30 PM IST", opponent: "🇵🇰 Pakistan", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "August 15, 2026", time: "~2:30 PM IST", opponent: "🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 17, 2026", time: "~4:30 PM IST", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 19, 2026", time: "~4:30 PM IST", opponent: "🇵🇰 Pakistan", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
     { date: "Aug 22-24, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
     { date: "Aug 27-28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
   ];
 
   const womenMatches = [
-    { date: "Aug 15, 2026", time: "~3:30 PM IST", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 17, 2026", time: "~3:30 PM IST", opponent: "🇨🇳 China", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 19, 2026", time: "~3:30 PM IST", opponent: "🇿🇦 South Africa", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "August 16, 2026", time: "~2:30 PM IST", opponent: "🏳️ China", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 18, 2026", time: "~4:30 PM IST", opponent: "🇿🇦 South Africa", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 20, 2026", time: "~4:30 PM IST", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
     { date: "Aug 21-23, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
   ];
 
@@ -103,7 +103,7 @@ export default function IndiaHockeyPage() {
       {/* Hero */}
       <section className="hero-section">
         <div className="sports-container hero-content">
-          <p className="hero-subtitle">🏑 Pool D — Belgium & Netherlands</p>
+          <p className="hero-subtitle">🏑 Pool D — Official Schedule</p>
           <h1 className="hero-title">Hockey World Cup 2026 Schedule India</h1>
           <p className="hero-description">
             Complete India men's & women's fixture guide, full time table, IST / USA / Canada match timings, results, and squad analysis. Download the complete <strong>Hockey World Cup 2026 Schedule PDF</strong> for India's matches.
@@ -113,7 +113,7 @@ export default function IndiaHockeyPage() {
           </div>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#fixtures" className="cta-button primary-cta">View Time Table & Results</a>
-            <a href="/schedule.pdf" download className="cta-button secondary-cta" style={{ backgroundColor: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)' }}>📄 Download Schedule PDF</a>
+            <a href="/schedule-india.pdf" download className="cta-button secondary-cta" style={{ backgroundColor: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)' }}>📄 Download Schedule PDF</a>
           </div>
         </div>
       </section>
@@ -128,7 +128,7 @@ export default function IndiaHockeyPage() {
             { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
             { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
-            { icon: "⚔️", label: "Pool D Rivals", value: "Pakistan, England, Wales" },
+            { icon: "⚔️", label: "Pool D Rivals", value: "Wales, England, Pakistan, China, South Africa" },
           ].map((stat) => (
             <div
               key={stat.label}

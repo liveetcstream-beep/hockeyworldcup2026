@@ -29,18 +29,14 @@ export default function WalesHockeyPage() {
   ];
 
   const menMatches = [
-    { date: "Aug 16, 2026", time: "~6:30 PM IST", opponent: "🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales", pool: "Pool D", venue: "Wagener Stadium", type: "Pool Stage" },
-    { date: "Aug 18, 2026", time: "~6:30 PM IST", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 20, 2026", time: "~6:30 PM IST", opponent: "🇵🇰 Pakistan", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "August 15, 2026", time: "~2:30 PM IST", opponent: "🇮🇳 India", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 17, 2026", time: "~2:00 PM IST", opponent: "🇵🇰 Pakistan", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 19, 2026", time: "~2:00 PM IST", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
     { date: "Aug 22-24, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
     { date: "Aug 27-28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
   ];
 
   const womenMatches = [
-    { date: "Aug 15, 2026", time: "~3:30 PM IST", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 17, 2026", time: "~3:30 PM IST", opponent: "🇨🇳 China", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 19, 2026", time: "~3:30 PM IST", opponent: "🇿🇦 South Africa", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 21-23, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
   ];
 
   const keyPlayers = [
@@ -55,7 +51,7 @@ export default function WalesHockeyPage() {
       {/* Hero */}
       <section className="hero-section">
         <div className="sports-container hero-content">
-          <p className="hero-subtitle">🏑 Pool D — Wagener/Belfius</p>
+          <p className="hero-subtitle">🏑 Pool D — Official Schedule</p>
           <h1 className="hero-title">Hockey World Cup 2026 Schedule Wales</h1>
           <p className="hero-description">
             Complete Wales men's & women's fixture guide, full time table, IST / USA / Canada match timings, results, and squad analysis. Download the complete <strong>Hockey World Cup 2026 Schedule PDF</strong> for Wales's matches.
@@ -65,7 +61,7 @@ export default function WalesHockeyPage() {
           </div>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#fixtures" className="cta-button primary-cta">View Time Table & Results</a>
-            <a href="/schedule.pdf" download className="cta-button secondary-cta" style={{ backgroundColor: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)' }}>📄 Download Schedule PDF</a>
+            <a href="/schedule-wales.pdf" download className="cta-button secondary-cta" style={{ backgroundColor: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)' }}>📄 Download Schedule PDF</a>
           </div>
         </div>
       </section>
@@ -80,7 +76,7 @@ export default function WalesHockeyPage() {
             { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
             { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 15–20, 2026" },
-            { icon: "⚔️", label: "Pool D Rivals", value: "England" },
+            { icon: "⚔️", label: "Pool D Rivals", value: "India, Pakistan, England" },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -103,7 +99,7 @@ export default function WalesHockeyPage() {
         {/* Men's Schedule */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            🇮🇳 Wales Men's Schedule — Pool D
+            🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales Men's Schedule — Pool D
           </h2>
           <div style={{ overflowX: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
@@ -134,7 +130,7 @@ export default function WalesHockeyPage() {
         {/* Women's Schedule */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #f43f5e", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            🇮🇳 Wales Women's Schedule — Pool D
+            🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales Women's Schedule — Not Participating
           </h2>
           <div style={{ overflowX: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>

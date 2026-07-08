@@ -57,19 +57,18 @@ export default function BelgiumHockeyPage() {
   ];
 
   const menMatches = [
-    { date: "Aug 15, 2026", time: "18:00 CET", opponent: "🇫🇷 France", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
-    { date: "Aug 17, 2026", time: "~16:00 CET", opponent: "🇩🇪 Germany", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
-    { date: "Aug 19, 2026", time: "~14:00 CET", opponent: "🇲🇾 Malaysia", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
-    { date: "Aug 22–24, 2026", time: "TBD", opponent: "Second Stage crossover", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
-    { date: "Aug 27–28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
-    { date: "Aug 30, 2026", time: "TBD", opponent: "Final / Bronze Medal", pool: "–", venue: "Belfius Arena, Wavre", type: "Final" },
+    { date: "August 15, 2026", time: "~10:30 PM IST", opponent: "🇫🇷 France", pool: "Pool B", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 17, 2026", time: "~10:00 PM IST", opponent: "🇩🇪 Germany", pool: "Pool B", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 19, 2026", time: "~10:00 PM IST", opponent: "🇲🇾 Malaysia", pool: "Pool B", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "Aug 22-24, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
+    { date: "Aug 27-28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
   ];
 
   const womenMatches = [
-    { date: "Aug 15, 2026", time: "~10:00 CET", opponent: "🇺🇸 United States", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
-    { date: "Aug 17, 2026", time: "~10:00 CET", opponent: "🇦🇷 Argentina", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
-    { date: "Aug 19, 2026", time: "~10:00 CET", opponent: "🇰🇷 South Korea", pool: "Pool B", venue: "Belfius Arena, Wavre", type: "Pool Stage" },
-    { date: "Aug 22–24, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
+    { date: "August 16, 2026", time: "~7:00 PM IST", opponent: "🇳🇿 New Zealand", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 18, 2026", time: "~10:00 PM IST", opponent: "🇪🇸 Spain", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 20, 2026", time: "~10:00 PM IST", opponent: "🇮🇪 Ireland", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "Aug 21-23, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
   ];
 
   const keyPlayers = [
@@ -110,7 +109,7 @@ export default function BelgiumHockeyPage() {
       {/* Hero */}
       <section className="hero-section">
         <div className="sports-container hero-content">
-          <p className="hero-subtitle">🏑 Pool B — Host Nation</p>
+          <p className="hero-subtitle">🏑 Pool B — Official Schedule</p>
           <h1 className="hero-title">Hockey World Cup 2026 Schedule Belgium</h1>
           <p className="hero-description">
             Complete Belgium men's & women's hockey fixture guide, full time table, CET / USA / Canada match timings, results, and squad analysis. Download the complete <strong>Hockey World Cup 2026 Schedule PDF</strong> for Belgium's matches.
@@ -120,7 +119,7 @@ export default function BelgiumHockeyPage() {
           </div>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#fixtures" className="cta-button primary-cta">View Time Table & Results</a>
-            <a href="/schedule.pdf" download className="cta-button secondary-cta" style={{ backgroundColor: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)' }}>📄 Download Schedule PDF</a>
+            <a href="/schedule-belgium.pdf" download className="cta-button secondary-cta" style={{ backgroundColor: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)' }}>📄 Download Schedule PDF</a>
           </div>
         </div>
       </section>

@@ -29,17 +29,17 @@ export default function SpainHockeyPage() {
   ];
 
   const menMatches = [
-    { date: "Aug 16, 2026", time: "~6:30 PM IST", opponent: "🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales", pool: "Pool D", venue: "Belfius Arena", type: "Pool Stage" },
-    { date: "Aug 18, 2026", time: "~6:30 PM IST", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 20, 2026", time: "~6:30 PM IST", opponent: "🇵🇰 Pakistan", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "August 16, 2026", time: "~4:00 PM IST", opponent: "🇿🇦 South Africa", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 18, 2026", time: "~3:30 PM IST", opponent: "🇦🇺 Australia", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 20, 2026", time: "~6:30 PM IST", opponent: "🇮🇪 Ireland", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
     { date: "Aug 22-24, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
     { date: "Aug 27-28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
   ];
 
   const womenMatches = [
-    { date: "Aug 15, 2026", time: "~3:30 PM IST", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 17, 2026", time: "~3:30 PM IST", opponent: "🇨🇳 China", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "Aug 19, 2026", time: "~3:30 PM IST", opponent: "🇿🇦 South Africa", pool: "Pool D", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "August 16, 2026", time: "~10:00 PM IST", opponent: "🇮🇪 Ireland", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 18, 2026", time: "~10:00 PM IST", opponent: "🇧🇪 Belgium", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 20, 2026", time: "~3:30 PM IST", opponent: "🇳🇿 New Zealand", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
     { date: "Aug 21-23, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
   ];
 
@@ -55,7 +55,7 @@ export default function SpainHockeyPage() {
       {/* Hero */}
       <section className="hero-section">
         <div className="sports-container hero-content">
-          <p className="hero-subtitle">🏑 Pool C — Wagener/Belfius</p>
+          <p className="hero-subtitle">🏑 Pool C — Official Schedule</p>
           <h1 className="hero-title">Hockey World Cup 2026 Schedule Spain</h1>
           <p className="hero-description">
             Complete Spain men's & women's fixture guide, full time table, IST / USA / Canada match timings, results, and squad analysis. Download the complete <strong>Hockey World Cup 2026 Schedule PDF</strong> for Spain's matches.
@@ -65,7 +65,7 @@ export default function SpainHockeyPage() {
           </div>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#fixtures" className="cta-button primary-cta">View Time Table & Results</a>
-            <a href="/schedule.pdf" download className="cta-button secondary-cta" style={{ backgroundColor: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)' }}>📄 Download Schedule PDF</a>
+            <a href="/schedule-spain.pdf" download className="cta-button secondary-cta" style={{ backgroundColor: 'transparent', border: '1px solid var(--accent)', color: 'var(--accent)' }}>📄 Download Schedule PDF</a>
           </div>
         </div>
       </section>
@@ -80,7 +80,7 @@ export default function SpainHockeyPage() {
             { icon: "👩", label: "FIH Ranking (Women)", value: "#6" },
             { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
             { icon: "📅", label: "Pool Stage Dates", value: "Aug 16–21, 2026" },
-            { icon: "⚔️", label: "Pool D Rivals", value: "Australia" },
+            { icon: "⚔️", label: "Pool C Rivals", value: "South Africa, Australia, Ireland, Belgium, New Zealand" },
           ].map((stat) => (
             <div
               key={stat.label}
@@ -103,7 +103,7 @@ export default function SpainHockeyPage() {
         {/* Men's Schedule */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            🇮🇳 Spain Men's Schedule — Pool D
+            🇪🇸 Spain Men's Schedule — Pool C
           </h2>
           <div style={{ overflowX: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
@@ -134,7 +134,7 @@ export default function SpainHockeyPage() {
         {/* Women's Schedule */}
         <section style={{ marginBottom: "4rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #f43f5e", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            🇮🇳 Spain Women's Schedule — Pool D
+            🇪🇸 Spain Women's Schedule — Pool C
           </h2>
           <div style={{ overflowX: "auto" }}>
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
