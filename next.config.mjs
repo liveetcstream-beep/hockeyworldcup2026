@@ -1,6 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: '/broadcasters',
+        destination: '/hockey-live-streaming',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
