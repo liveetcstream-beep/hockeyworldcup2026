@@ -45,6 +45,46 @@ export default function FranceHockeyPage() {
 
   return (
     <>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hockeyworldcup2026schedule.com" },
+                  { "@type": "ListItem", "position": 2, "name": "Teams", "item": "https://hockeyworldcup2026schedule.com/teams" },
+                  { "@type": "ListItem", "position": 3, "name": "France Match Schedule", "item": "https://hockeyworldcup2026schedule.com/hockey-world-cup-2026-schedule-france" }
+                ]
+              },
+              {
+                "@type": "SportsTeam",
+                "name": "France National Field Hockey Team",
+                "sport": "Field Hockey",
+                "memberOf": {
+                  "@type": "SportsOrganization",
+                  "name": "International Hockey Federation",
+                  "url": "https://fih.hockey"
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqItems.map((item) => ({
+                  "@type": "Question",
+                  "name": item.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": item.answer
+                  }
+                }))
+              }
+            ]
+          })
+        }}
+      />
       <Header />
 
       {/* Hero */}

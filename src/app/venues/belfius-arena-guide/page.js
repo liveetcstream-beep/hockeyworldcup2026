@@ -20,6 +20,36 @@ export default function BelfiusArenaGuide() {
 
   return (
     <>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hockeyworldcup2026schedule.com" },
+                  { "@type": "ListItem", "position": 2, "name": "Venues", "item": "https://hockeyworldcup2026schedule.com/venues" },
+                  { "@type": "ListItem", "position": 3, "name": "Belfius Arena Guide", "item": "https://hockeyworldcup2026schedule.com/venues/belfius-arena-guide" }
+                ]
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqItems.map((item) => ({
+                  "@type": "Question",
+                  "name": item.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": item.answer
+                  }
+                }))
+              }
+            ]
+          })
+        }}
+      />
       <Header />
 
       <section className="hero-section">

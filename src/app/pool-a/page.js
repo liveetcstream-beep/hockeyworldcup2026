@@ -37,6 +37,35 @@ export default function PoolAPage() {
 
   return (
     <>
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hockeyworldcup2026schedule.com" },
+                  { "@type": "ListItem", "position": 2, "name": "Pool A Standings", "item": "https://hockeyworldcup2026schedule.com/pool-a" }
+                ]
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqItems.map((item) => ({
+                  "@type": "Question",
+                  "name": item.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": item.answer
+                  }
+                }))
+              }
+            ]
+          })
+        }}
+      />
       <Header />
 
       <section className="hero-section">
