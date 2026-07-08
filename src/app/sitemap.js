@@ -18,6 +18,7 @@ export default function sitemap() {
     { route: "/format",      priority: 0.75, freq: "monthly" },
     { route: "/history",     priority: 0.75, freq: "monthly" },
     { route: "/tickets",     priority: 0.7,  freq: "weekly" },
+    
     // Tier 3B — High-traffic team/group pages (traffic multipliers)
     { route: "/hockey-world-cup-2026-groups",   priority: 0.9, freq: "daily" },
     { route: "/hockey-world-cup-2026-schedule-india", priority: 0.9, freq: "daily" },
@@ -36,6 +37,29 @@ export default function sitemap() {
     { route: "/hockey-world-cup-2026-schedule-new-zealand", priority: 0.9, freq: "daily" },
     { route: "/hockey-world-cup-2026-schedule-chile", priority: 0.9, freq: "daily" },
     { route: "/hockey-world-cup-2026-schedule-wales", priority: 0.9, freq: "daily" },
+
+    // Pool standings pages
+    { route: "/pool-a", priority: 0.8, freq: "daily" },
+    { route: "/pool-b", priority: 0.8, freq: "daily" },
+    { route: "/pool-c", priority: 0.8, freq: "daily" },
+    { route: "/pool-d", priority: 0.8, freq: "daily" },
+
+    // Venue guides subpages
+    { route: "/venues/wagener-stadium-guide", priority: 0.85, freq: "weekly" },
+    { route: "/venues/belfius-arena-guide", priority: 0.85, freq: "weekly" },
+
+    // Blockbuster match preview pages
+    { route: "/matches/australia-vs-spain", priority: 0.85, freq: "daily" },
+    { route: "/matches/belgium-vs-france", priority: 0.85, freq: "daily" },
+    { route: "/matches/england-vs-pakistan", priority: 0.85, freq: "daily" },
+    { route: "/matches/germany-vs-belgium", priority: 0.85, freq: "daily" },
+    { route: "/matches/india-vs-england", priority: 0.85, freq: "daily" },
+    { route: "/matches/india-vs-england-women", priority: 0.85, freq: "daily" },
+    { route: "/matches/india-vs-pakistan", priority: 0.85, freq: "daily" },
+    { route: "/matches/netherlands-vs-argentina", priority: 0.85, freq: "daily" },
+    { route: "/matches/netherlands-vs-australia-women", priority: 0.85, freq: "daily" },
+    { route: "/matches/netherlands-vs-germany-women", priority: 0.85, freq: "daily" },
+
     // Tier 4 — Utility pages (low priority)
     { route: "/privacy-policy", priority: 0.3, freq: "yearly" },
     { route: "/terms-of-use",   priority: 0.3, freq: "yearly" },
