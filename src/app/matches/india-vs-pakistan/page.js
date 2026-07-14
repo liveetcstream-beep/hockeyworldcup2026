@@ -29,18 +29,17 @@ export const metadata = {
   },
 };
 
-
 export default function MatchPreviewPage() {
   const faqItems = [
-  {
-    "q": "What time does India vs Pakistan match start?",
-    "a": "The match starts at 14:00 CET, which translates to 17:30 IST (Indian Standard Time) and 17:00 PST (Pakistan Standard Time)."
-  },
-  {
-    "q": "Where is the match being played?",
-    "a": "The match will take place at the Wagener Hockey Stadium in Amstelveen, Netherlands."
-  }
-];
+    {
+      "q": "What time does India vs Pakistan match start?",
+      "a": "The match starts at 14:00 CET, which translates to 17:30 IST (Indian Standard Time) and 17:00 PST (Pakistan Standard Time)."
+    },
+    {
+      "q": "Where is the match being played?",
+      "a": "The match will take place at the Wagener Hockey Stadium in Amstelveen, Netherlands."
+    }
+  ];
 
   return (
     <>
@@ -111,74 +110,170 @@ export default function MatchPreviewPage() {
       </section>
 
       <main className="sports-container py-12">
-        {/* Breadcrumb */}
+        {/* 1. Breadcrumbs */}
         <nav aria-label="breadcrumb" style={{ marginBottom: "2rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
-          <a href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Home</a>
+          <a href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Hockey World Cup 2026 Home</a>
           <span style={{ margin: "0 0.5rem" }}>&gt;</span>
-          <span style={{ color: "var(--text-main)", fontWeight: "600" }}>India vs Pakistan Guide</span>
+          <a href="/schedule" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Schedule</a>
+          <span style={{ margin: "0 0.5rem" }}>&gt;</span>
+          <span style={{ color: "var(--text-main)", fontWeight: "600" }}>India vs Pakistan</span>
         </nav>
 
-        {/* Quick Details Grid */}
-        <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
+        {/* 2. Date, Time & Venue Block */}
+        <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.2rem", marginBottom: "3rem" }}>
           {[
-            { icon: "📅", label: "Date", value: "August 19, 2026" },
-            { icon: "🕒", label: "Start Time", value: "14:00 CET / 17:30 IST / 17:00 PST" },
-            { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
-            { icon: "📺", label: "Live Stream", value: "Available on Watch.Hockey" }
+            { icon: "📅", label: "Date & Timing", value: "August 19, 2026 - 14:00 CET" },
+            { icon: "🕒", label: "Local Kickoff Times", value: "17:30 IST (India) / 17:00 PST (Pakistan)" },
+            { icon: "🏟️", label: "Stadium & Venue", value: "Wagener Stadium, Amstelveen (NED)" },
+            { icon: "📺", label: "Official Broadcast", value: "Star Sports, PTV Sports, Watch.Hockey" }
           ].map((stat) => (
-            <div key={stat.label} style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.2rem", textAlign: "center" }}>
-              <span style={{ fontSize: "1.8rem", display: "block", marginBottom: "0.5rem" }}>{stat.icon}</span>
-              <span style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "var(--text-muted)", letterSpacing: "0.05em", display: "block", marginBottom: "0.2rem" }}>{stat.label}</span>
-              <strong style={{ color: "var(--text-main)", fontSize: "0.95rem" }}>{stat.value}</strong>
+            <div key={stat.label} style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem", textAlign: "center" }}>
+              <span style={{ fontSize: "2rem", display: "block", marginBottom: "0.5rem" }}>{stat.icon}</span>
+              <span style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "var(--text-muted)", letterSpacing: "0.05em", display: "block", marginBottom: "0.3rem" }}>{stat.label}</span>
+              <strong style={{ color: "var(--text-main)", fontSize: "0.95rem", lineHeight: "1.4", display: "block" }}>{stat.value}</strong>
             </div>
           ))}
         </section>
 
-        {/* Tactical Preview */}
+        {/* 3. Match Overview */}
         <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            Match Preview & Team News
+            Match Overview
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            This is the match everyone has been waiting for. When India and Pakistan face off on the hockey turf, rankings go completely out the window. India enters this match with the confidence of their recent Olympic performances, relying on Harmanpreet Singh's drag-flick efficiency. On the other hand, Pakistan is riding a wave of young talent led by Hannan Shahid. The main battle will be in the midfield, where India's experience will try to contain Pakistan's rapid counter-attacks.
+            The most anticipated clash in field hockey is scheduled for August 19, 2026, as subcontinental rivals India and Pakistan go head-to-head at the Wagener Stadium in Amstelveen. Both teams are fighting for crucial group points in Pool D, which is widely considered the tournament's toughest pool. With both history and momentum on the line, this match will be critical for direct qualification stages.
           </p>
         </section>
 
-        {/* Head-to-Head */}
+        {/* 4. Team Form */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Team Form
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "1rem", fontSize: "1.1rem" }}>🇮🇳 India (Recent Form)</h4>
+              <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
+                {['W', 'W', 'W', 'L', 'W'].map((r, i) => (
+                  <span key={i} style={{ width: "30px", height: "30px", borderRadius: "50%", background: r === 'W' ? '#22c55e' : '#ef4444', color: '#fff', display: "inline-flex", alignItems: "center", justifyContent: "center", fontWeight: "bold", fontSize: "0.85rem" }}>{r}</span>
+                ))}
+              </div>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                India enters this fixture in rich form, highlighted by their solid campaigns in Europe and two back-to-back Pro League wins in London (June 2026) where they defeated Pakistan 4-3 and 7-1.
+              </p>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "1rem", fontSize: "1.1rem" }}>🇵🇰 Pakistan (Recent Form)</h4>
+              <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
+                {['L', 'L', 'W', 'D', 'W'].map((r, i) => (
+                  <span key={i} style={{ width: "30px", height: "30px", borderRadius: "50%", background: r === 'W' ? '#22c55e' : r === 'D' ? '#64748b' : '#ef4444', color: '#fff', display: "inline-flex", alignItems: "center", justifyContent: "center", fontWeight: "bold", fontSize: "0.85rem" }}>{r}</span>
+                ))}
+              </div>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                Pakistan is rebuilding under a wave of promising youth. Despite defensive struggles against India's high press in recent Pro League outings, their wins against lower-ranked squads show progressive momentum.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 5. Head-to-Head Summary */}
         <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
             Head-to-Head Records
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            India won 4 of the last 6 encounters, but Pakistan's recent Pro League resurgence makes this a highly unpredictable match.
+            Historically, Pakistan leads the international head-to-head record with <strong>82 wins</strong> compared to India's <strong>69 wins</strong> (with 32 draws). However, India remains unbeaten in recent senior international matchups:
           </p>
+          <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "12px", overflow: "hidden" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", fontSize: "0.9rem" }}>
+              <thead>
+                <tr style={{ background: "rgba(255,255,255,0.02)", borderBottom: "1px solid var(--border-color)" }}>
+                  <th style={{ padding: "0.75rem 1rem", color: "var(--text-main)" }}>Date</th>
+                  <th style={{ padding: "0.75rem 1rem", color: "var(--text-main)" }}>Tournament</th>
+                  <th style={{ padding: "0.75rem 1rem", color: "var(--text-main)" }}>Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>June 26, 2026</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>FIH Pro League (London)</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-main)", fontWeight: "bold" }}>India won 7 - 1</td>
+                </tr>
+                <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>June 23, 2026</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>FIH Pro League (London)</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-main)", fontWeight: "bold" }}>India won 4 - 3</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>September 2023</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>Asian Games</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-main)", fontWeight: "bold" }}>India won 10 - 2</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
-        {/* Matchday Challenges & Pain Points */}
-        <section style={{ background: "rgba(192,0,48,0.03)", border: "1px solid rgba(192,0,48,0.1)", borderRadius: "20px", padding: "2rem", marginBottom: "3rem" }}>
-          <h3 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", marginBottom: "1rem" }}>
-            ⚠️ Tactical Challenges & Key Areas
-          </h3>
-          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.8", margin: 0 }}>
-            Both teams struggle with card discipline under high emotional pressure. In matches like this, a single yellow card can completely change the momentum. Additionally, converting penalty corners under intense pressure will decide the outcome.
-          </p>
+        {/* 6. Key Players */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Key Players to Watch
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "0.5rem" }}>🇮🇳 Harmanpreet Singh (India)</h4>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                The Indian captain and world-class drag-flicker is lethal during penalty corners. His defensive presence in the backline and deep distributions key India's tactical transition.
+              </p>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "0.5rem" }}>🇵🇰 Hannan Shahid (Pakistan)</h4>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                Pakistan's bright young forward. Known for his blistering pace, stickwork, and capability to breach deep defenses on solo runs, making him a major thread on counter-attacks.
+              </p>
+            </div>
+          </div>
         </section>
 
-        {/* Broadcasters Info */}
+        {/* 7. Tactical Preview */}
         <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            Where to Watch: TV Channels & Live Streams
+            Tactical Preview
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            You can watch this blockbuster match live on the following channels:
+            India relies on a high-pressing game combined with midfield possession. Harmanpreet and the experienced backline focus on controlling the tempo, attempting to draw fouls inside the circle to secure penalty corners, where India holds a statistically superior conversion rate.
           </p>
-          <ul style={{ color: "var(--text-muted)", paddingLeft: "1.2rem" }}>
-            <li><strong>Official Broadcast Networks:</strong> Star Sports & Disney+ Hotstar in India; PTV Sports & Watch.Hockey in Pakistan; TNT Sports in the UK; Fox Sports in Australia.</li>
-            <li style={{ marginTop: "0.5rem" }}><strong>Digital Streams:</strong> Stream live internationally on the FIH official platform <em>Watch.Hockey</em> (subject to geo-blocking restrictions in certain territories).</li>
-          </ul>
+          <p style={{ color: "var(--text-muted)", margin: 0 }}>
+            Pakistan, under their tactical rebuilding program, utilizes a low block defense to absorb pressure, relying on rapid wing progressions. If Pakistan can isolate India's defensive midfielders and utilize the speed of Hannan Shahid, they can threaten on quick counter-attacks. However, card discipline and avoiding turnover errors inside their own 23-meter line remain major challenges.
+          </p>
         </section>
 
-        {/* FAQ Section */}
+        {/* 8. Pool Impact */}
+        <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Pool Impact & Standings Implications
+          </h2>
+          <p style={{ color: "var(--text-muted)", margin: 0 }}>
+            With England and Wales completing Pool D, the team finishing 1st qualifies directly for the Quarter-Finals. The 2nd and 3rd placed teams must contest the crossover matches. A win in this match practically guarantees a crossover spot and sets the stage for a pool-winning matchup against England. The losing team faces immense pressure to win their final pool fixture to avoid dropping to the classification stages.
+          </p>
+        </section>
+
+        {/* 9. Prediction (Opinion) */}
+        <section style={{ background: "rgba(192,0,48,0.03)", border: "1px solid rgba(192,0,48,0.1)", borderRadius: "20px", padding: "2rem", marginBottom: "3rem" }}>
+          <h3 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", marginBottom: "1rem" }}>
+            📢 Analyst Opinion & Prediction
+          </h3>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.8", marginBottom: "1rem" }}>
+            <strong>Note:</strong> The following prediction represents the editorial opinion of our senior hockey analysts and should not be used as official tournament projection.
+          </p>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.8", margin: 0 }}>
+            Given India's depth, tactical stability, and superior penalty corner execution (especially highlighted by their recent 7-1 and 4-3 Pro League victories in June 2026), India enters the contest as heavy favorites. While Pakistan's young lineup has the tools to break the defensive block and score, India's experience should see them carry the match.
+            <br /><br />
+            <strong>Predicted Score:</strong> India 5 - 2 Pakistan
+          </p>
+        </section>
+
+        {/* 10. FAQs */}
         <section style={{ marginBottom: "3rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
             Frequently Asked Questions
@@ -190,6 +285,27 @@ export default function MatchPreviewPage() {
                 <p style={{ color: "var(--text-muted)", margin: 0, fontSize: "0.95rem", lineHeight: "1.6" }}>{item.a || item.answer}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 11. Related Pages */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Related Pages
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
+            <a href="/pool-d" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>📈 Pool D Standings</span>
+              <span>→</span>
+            </a>
+            <a href="/schedule" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>📅 Complete Match Schedule</span>
+              <span>→</span>
+            </a>
+            <a href="/venues/wagener-stadium-guide" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>🏟️ Wagener Stadium Visitor Guide</span>
+              <span>→</span>
+            </a>
           </div>
         </section>
       </main>
