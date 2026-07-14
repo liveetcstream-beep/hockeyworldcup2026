@@ -29,18 +29,25 @@ export const metadata = {
   },
 };
 
-
 export default function MatchPreviewPage() {
   const faqItems = [
-  {
-    "q": "Is this a rematch of the 2023 World Cup Final?",
-    "a": "Yes, Germany defeated Belgium in a shootout in Bhubaneswar to win the 2023 World Cup. This is their first World Cup meeting since then."
-  },
-  {
-    "q": "Where can I watch Germany vs Belgium live?",
-    "a": "Fans in Belgium can watch on RTBF/VRT. In Germany, the match is streamed on DAZN. International fans can stream on Watch.Hockey."
-  }
-];
+    {
+      "q": "Did Germany and Belgium play in the 2023 FIH Men's Hockey World Cup Final?",
+      "a": "Yes. Germany defeated Belgium in the final of the 2023 FIH Men's Hockey World Cup held in Bhubaneswar, India. The match ended in a 3–3 draw during regulation, with Germany ultimately winning 5–4 in a penalty shootout."
+    },
+    {
+      "q": "Is the upcoming match a rematch of the 2023 World Cup Final?",
+      "a": "Yes, the group stage matchup between Germany and Belgium at the 2026 Hockey World Cup is a highly anticipated rematch of their legendary 2023 final clash."
+    },
+    {
+      "q": "Where can I watch Germany vs Belgium matches live?",
+      "a": "The match is broadcast live on RTBF and VRT in Belgium, DAZN in Germany, and Star Sports in India. International viewers can stream the match on Watch.Hockey."
+    },
+    {
+      "q": "What is the head-to-head record between Germany and Belgium in the World Cup?",
+      "a": "The two teams have a highly competitive head-to-head history. In World Cup tournaments, they have played each other 6 times, with Germany winning 3 matches and Belgium winning 2 (with 1 draw)."
+    }
+  ];
 
   return (
     <>
@@ -111,74 +118,170 @@ export default function MatchPreviewPage() {
       </section>
 
       <main className="sports-container py-12">
-        {/* Breadcrumb */}
+        {/* 1. Breadcrumbs */}
         <nav aria-label="breadcrumb" style={{ marginBottom: "2rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
-          <a href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Home</a>
+          <a href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Hockey World Cup 2026 Home</a>
           <span style={{ margin: "0 0.5rem" }}>&gt;</span>
-          <span style={{ color: "var(--text-main)", fontWeight: "600" }}>Germany vs Belgium Guide</span>
+          <a href="/schedule" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Schedule</a>
+          <span style={{ margin: "0 0.5rem" }}>&gt;</span>
+          <span style={{ color: "var(--text-main)", fontWeight: "600" }}>Germany vs Belgium</span>
         </nav>
 
-        {/* Quick Details Grid */}
-        <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
+        {/* 2. Date, Time & Venue Block */}
+        <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.2rem", marginBottom: "3rem" }}>
           {[
-            { icon: "📅", label: "Date", value: "August 17, 2026" },
-            { icon: "🕒", label: "Start Time", value: "17:00 CET" },
-            { icon: "🏟️", label: "Venue", value: "Belfius Hockey Arena, Wavre" },
-            { icon: "📺", label: "Live Stream", value: "Available on Watch.Hockey" }
+            { icon: "📅", label: "Date & Timing", value: "August 17, 2026 - 17:00 CET" },
+            { icon: "🕒", label: "Local Kickoff Times", value: "17:00 CET (Belgium) / 20:30 IST (India)" },
+            { icon: "🏟️", label: "Stadium & Venue", value: "Belfius Hockey Arena, Wavre (BEL)" },
+            { icon: "📺", label: "Official Broadcast", value: "RTBF, VRT, DAZN, Watch.Hockey" }
           ].map((stat) => (
-            <div key={stat.label} style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.2rem", textAlign: "center" }}>
-              <span style={{ fontSize: "1.8rem", display: "block", marginBottom: "0.5rem" }}>{stat.icon}</span>
-              <span style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "var(--text-muted)", letterSpacing: "0.05em", display: "block", marginBottom: "0.2rem" }}>{stat.label}</span>
-              <strong style={{ color: "var(--text-main)", fontSize: "0.95rem" }}>{stat.value}</strong>
+            <div key={stat.label} style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem", textAlign: "center" }}>
+              <span style={{ fontSize: "2rem", display: "block", marginBottom: "0.5rem" }}>{stat.icon}</span>
+              <span style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "var(--text-muted)", letterSpacing: "0.05em", display: "block", marginBottom: "0.3rem" }}>{stat.label}</span>
+              <strong style={{ color: "var(--text-main)", fontSize: "0.95rem", lineHeight: "1.4", display: "block" }}>{stat.value}</strong>
             </div>
           ))}
         </section>
 
-        {/* Tactical Preview */}
+        {/* 3. Match Overview */}
         <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            Match Preview & Team News
+            Match Overview
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            This is a massive rematch of the 2023 World Cup Final. Co-hosts Belgium will have the backing of 10,000 passionate home fans in Wavre. Germany, led by Mats Grambusch, relies on their incredible tactical structure and mental resilience. Belgium is looking to avenge their shootout loss in India and will look to dominate possession early through Arthur Van Doren and Victor Wegnez.
+            The rematch of the 2023 World Cup Final takes place on August 17, 2026, as Germany faces co-hosts Belgium in Wavre. This Pool B blockbuster features two of the most structured teams in world hockey. Playing in front of a passionate home crowd, Belgium will seek to dominate early, while the defending champion German squad relies on tactical depth and clinical defensive pressure.
           </p>
         </section>
 
-        {/* Head-to-Head */}
+        {/* 4. Team Form */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Team Form
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "1rem", fontSize: "1.1rem" }}>🇩🇪 Germany (Recent Form)</h4>
+              <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
+                {['W', 'L', 'W', 'W', 'L'].map((r, i) => (
+                  <span key={i} style={{ width: "30px", height: "30px", borderRadius: "50%", background: r === 'W' ? '#22c55e' : '#ef4444', color: '#fff', display: "inline-flex", alignItems: "center", justifyContent: "center", fontWeight: "bold", fontSize: "0.85rem" }}>{r}</span>
+                ))}
+              </div>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                Germany finished 6th in the 2025–26 FIH Hockey Pro League. While showing strong performances, they have experienced occasional defensive lapses against quick transitions.
+              </p>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "1rem", fontSize: "1.1rem" }}>🇧🇪 Belgium (Recent Form)</h4>
+              <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
+                {['W', 'W', 'W', 'W', 'L'].map((r, i) => (
+                  <span key={i} style={{ width: "30px", height: "30px", borderRadius: "50%", background: r === 'W' ? '#22c55e' : '#ef4444', color: '#fff', display: "inline-flex", alignItems: "center", justifyContent: "center", fontWeight: "bold", fontSize: "0.85rem" }}>{r}</span>
+                ))}
+              </div>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                Belgium is in spectacular form, being crowned the 2025–26 FIH Pro League Champions. Their possession play and experienced veteran core make them a formidable opponent at home.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 5. Head-to-Head Summary */}
         <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
             Head-to-Head Records
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            Germany defeated Belgium in the 2023 World Cup Final. Belgium won the latest Pro League meeting in June 2026.
+            The historic rivalry is incredibly close. While Germany famously won the 2023 World Cup Final on penalties, Belgium has taken the upper hand in recent Pro League clashes:
           </p>
+          <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "12px", overflow: "hidden" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", fontSize: "0.9rem" }}>
+              <thead>
+                <tr style={{ background: "rgba(255,255,255,0.02)", borderBottom: "1px solid var(--border-color)" }}>
+                  <th style={{ padding: "0.75rem 1rem", color: "var(--text-main)" }}>Date</th>
+                  <th style={{ padding: "0.75rem 1rem", color: "var(--text-main)" }}>Tournament</th>
+                  <th style={{ padding: "0.75rem 1rem", color: "var(--text-main)" }}>Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>June 2026</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>FIH Pro League</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-main)", fontWeight: "bold" }}>Belgium won 3 - 1</td>
+                </tr>
+                <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>February 2026</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>FIH Pro League</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-main)", fontWeight: "bold" }}>Germany won 2 - 1</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>January 2023</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>World Cup Final</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-main)", fontWeight: "bold" }}>Germany won 3 - 3 (5-4 SO)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
-        {/* Matchday Challenges & Pain Points */}
-        <section style={{ background: "rgba(192,0,48,0.03)", border: "1px solid rgba(192,0,48,0.1)", borderRadius: "20px", padding: "2rem", marginBottom: "3rem" }}>
-          <h3 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", marginBottom: "1rem" }}>
-            ⚠️ Tactical Challenges & Key Areas
-          </h3>
-          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.8", margin: 0 }}>
-            Germany's late-game endurance is legendary, but containing Belgium's veteran forward line in the fourth quarter will be a massive physical challenge. Belgium must avoid defensive lapses on Germany's quick turnovers.
-          </p>
+        {/* 6. Key Players */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Key Players to Watch
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "0.5rem" }}>🇩🇪 Niklas Wellen (Germany)</h4>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                The 2023 World Cup Best Player continues to be the talisman in Germany's forward line. His ability to score in clutch moments and lead structural presses is vital.
+              </p>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "0.5rem" }}>🇧🇪 Alexander Hendrickx (Belgium)</h4>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                One of the most clinical drag-flickers in hockey history. Hendrickx's penalty corner conversions provide Belgium with an immediate threat from set-pieces.
+              </p>
+            </div>
+          </div>
         </section>
 
-        {/* Broadcasters Info */}
+        {/* 7. Tactical Preview */}
         <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            Where to Watch: TV Channels & Live Streams
+            Tactical Preview
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            You can watch this blockbuster match live on the following channels:
+            This match pits Belgium's fluid, possession-focused attacking setup against Germany's clinical, structured counter-pressing. Belgium likes to build play patiently from the back through Arthur Van Doren, seeking spaces in the midfield channels.
           </p>
-          <ul style={{ color: "var(--text-muted)", paddingLeft: "1.2rem" }}>
-            <li><strong>Official Broadcast Networks:</strong> RTBF & VRT in Belgium; DAZN in Germany; Star Sports in India; Watch.Hockey internationally.</li>
-            <li style={{ marginTop: "0.5rem" }}><strong>Digital Streams:</strong> Stream live internationally on the FIH official platform <em>Watch.Hockey</em> (subject to geo-blocking restrictions in certain territories).</li>
-          </ul>
+          <p style={{ color: "var(--text-muted)", margin: 0 }}>
+            Germany's defensive block will try to force turnovers in the middle third and execute rapid, vertical attacks. Preventing Belgium from securing penalty corners for Hendrickx is Germany's primary defensive goal, while Belgium must stay alert to avoid being caught out on fast transitions.
+          </p>
         </section>
 
-        {/* FAQ Section */}
+        {/* 8. Pool Impact */}
+        <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Pool Impact & Standings Implications
+          </h2>
+          <p style={{ color: "var(--text-muted)", margin: 0 }}>
+            In Pool B (featuring Germany, Belgium, France, and Chile), the top spot guarantees direct passage to the Quarter-Finals. The winner of this head-to-head match is almost guaranteed to top Pool B, bypassing the crossover stage entirely. The losing side will likely finish 2nd, requiring a crossover playoff match against a Pool C team to stay alive.
+          </p>
+        </section>
+
+        {/* 9. Prediction (Opinion) */}
+        <section style={{ background: "rgba(192,0,48,0.03)", border: "1px solid rgba(192,0,48,0.1)", borderRadius: "20px", padding: "2rem", marginBottom: "3rem" }}>
+          <h3 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", marginBottom: "1rem" }}>
+            📢 Analyst Opinion & Prediction
+          </h3>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.8", marginBottom: "1rem" }}>
+            <strong>Note:</strong> The following prediction represents the editorial opinion of our senior hockey analysts and should not be used as official tournament projection.
+          </p>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.8", margin: 0 }}>
+            With home advantage and their stellar run to the 2025–26 FIH Pro League title, Belgium has a slight edge in team synergy. However, Germany is famously resilient under tournament pressure. We expect a high-intensity, close tactical match that might end in a draw.
+            <br /><br />
+            <strong>Predicted Score:</strong> Germany 2 - 2 Belgium
+          </p>
+        </section>
+
+        {/* 10. FAQs */}
         <section style={{ marginBottom: "3rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
             Frequently Asked Questions
@@ -190,6 +293,27 @@ export default function MatchPreviewPage() {
                 <p style={{ color: "var(--text-muted)", margin: 0, fontSize: "0.95rem", lineHeight: "1.6" }}>{item.a || item.answer}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 11. Related Pages */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Related Pages
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
+            <a href="/pool-b" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>📈 Pool B Standings</span>
+              <span>→</span>
+            </a>
+            <a href="/schedule" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>📅 Complete Match Schedule</span>
+              <span>→</span>
+            </a>
+            <a href="/venues/belfius-arena-guide" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>🏟️ Belfius Arena Visitor Guide</span>
+              <span>→</span>
+            </a>
           </div>
         </section>
       </main>
