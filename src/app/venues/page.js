@@ -4,13 +4,13 @@ import Footer from "../components/Footer";
 
 export const metadata = {
   title: "Wagener & Belfius Stadium Visitor Guide 2026",
-  description: "Complete visitor guide for the 2026 FIH Hockey World Cup stadiums. Includes transit maps, local Zip codes, Amsterdamse Bos details, and Wavre attractions.",
+  description: "Visitor guide for the 2026 FIH Hockey World Cup stadiums. Includes transit maps, local landmark guides, and Amstelveen/Wavre travel tips.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/venues",
   },
   openGraph: {
     title: "Wagener & Belfius Stadium Visitor Guide 2026",
-    description: "Complete visitor guide for the 2026 FIH Hockey World Cup stadiums. Includes transit maps, local Zip codes, Amsterdamse Bos details, and Wavre attractions.",
+    description: "Visitor guide for the 2026 FIH Hockey World Cup stadiums. Includes transit maps, local landmark guides, and Amstelveen/Wavre travel tips.",
     url: "https://hockeyworldcup2026schedule.com/venues",
     images: [
       {
@@ -24,7 +24,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Wagener & Belfius Stadium Visitor Guide 2026",
-    description: "Complete visitor guide for the 2026 FIH Hockey World Cup stadiums. Includes transit maps, local Zip codes, Amsterdamse Bos details, and Wavre attractions.",
+    description: "Visitor guide for the 2026 FIH Hockey World Cup stadiums. Includes transit maps, local landmark guides, and Amstelveen/Wavre travel tips.",
     images: ["/og-image.jpg"],
   },
 };

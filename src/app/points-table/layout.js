@@ -1,12 +1,12 @@
 export const metadata = {
   title: "Hockey World Cup 2026 Points Table & Pool Standings",
-  description: "Check the latest FIH Hockey World Cup 2026 points table, group standings, pool rankings, and tie-breaker rules for Men's and Women's tournaments.",
+  description: "Get the official Hockey World Cup 2026 points table. Track pool standings, group rankings, wins, losses, goal differences, and qualification rules.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/points-table",
   },
   openGraph: {
     title: "Hockey World Cup 2026 Points Table & Pool Standings",
-    description: "Check the latest FIH Hockey World Cup 2026 points table, group standings, pool rankings, and tie-breaker rules for Men's and Women's tournaments.",
+    description: "Get the official Hockey World Cup 2026 points table. Track pool standings, group rankings, wins, losses, goal differences, and qualification rules.",
     url: "https://hockeyworldcup2026schedule.com/points-table",
     images: [
       {
@@ -20,7 +20,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hockey World Cup 2026 Points Table & Pool Standings",
-    description: "Check the latest FIH Hockey World Cup 2026 points table, group standings, pool rankings, and tie-breaker rules for Men's and Women's tournaments.",
+    description: "Get the official Hockey World Cup 2026 points table. Track pool standings, group rankings, wins, losses, goal differences, and qualification rules.",
     images: ["/og-image.jpg"],
   },
 };

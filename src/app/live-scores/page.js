@@ -45,7 +45,7 @@ export default function LiveScoresPage() {
             <span className="live-dot"></span>
             Real-Time Feed Active
           </div>
-          <h1 className="hero-title">Hockey World Cup 2026 Live Score Today</h1>
+          <h1 className="hero-title">Hockey World Cup 2026 Live Scores & Match Results</h1>
           <p className="hero-description">
             Get instant play-by-play updates, card bookings, penalty corner conversion rates, and official lineups on matchdays.
           </p>

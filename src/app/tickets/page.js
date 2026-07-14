@@ -4,28 +4,28 @@ import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Tickets: Online Booking, Prices & Outlets",
-  description: "Want to buy Hockey World Cup 2026 tickets? Get the complete online booking guide, official ticket price categories, and outlet locations.",
+  title: "Hockey World Cup 2026 Tickets: Prices & Booking Online",
+  description: "Buy official Hockey World Cup 2026 tickets. Check ticket prices, step-by-step online booking guides, stadium entry policies, and refund rules.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/tickets",
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Tickets: Online Booking, Prices & Outlets",
-    description: "Want to buy Hockey World Cup 2026 tickets? Get the complete online booking guide, official ticket price categories, and outlet locations.",
+    title: "Hockey World Cup 2026 Tickets: Prices & Booking Online",
+    description: "Buy official Hockey World Cup 2026 tickets. Check ticket prices, step-by-step online booking guides, stadium entry policies, and refund rules.",
     url: "https://hockeyworldcup2026schedule.com/tickets",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Hockey World Cup 2026 Tickets: Online Booking, Prices & Outlets",
+        alt: "Hockey World Cup 2026 Tickets: Prices & Booking Online",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Tickets: Online Booking, Prices & Outlets",
-    description: "Want to buy Hockey World Cup 2026 tickets? Get the complete online booking guide, official ticket price categories, and outlet locations.",
+    title: "Hockey World Cup 2026 Tickets: Prices & Booking Online",
+    description: "Buy official Hockey World Cup 2026 tickets. Check ticket prices, step-by-step online booking guides, stadium entry policies, and refund rules.",
     images: ["/og-image.jpg"],
   },
 };
@@ -87,7 +87,7 @@ export default function TicketsPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">🎟️ Official Ticketing & Matchday Entry Guide</p>
-          <h1 className="hero-title">Hockey World Cup 2026 Tickets: Online Booking, Prices & Outlets</h1>
+          <h1 className="hero-title">Hockey World Cup 2026 Tickets: Booking & Price Guide</h1>
           <p className="hero-description">
             The highly anticipated 2026 FIH Hockey World Cup matches in Amstelveen and Wavre are set to start on August 15, 2026. Get complete details on ticket pricing, step-by-step online booking requirements, stadium entry rules, and official refund policies.
           </p>

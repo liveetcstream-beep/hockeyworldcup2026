@@ -7,13 +7,13 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Groups: All Pools Men's & Women's",
-  description: "Complete FIH Hockey World Cup 2026 pool groups for Men's and Women's tournaments. See Pool A, B, C, D teams, fixtures, second stage format and qualification rules.",
+  description: "Complete FIH Hockey World Cup 2026 pool groups for Men's & Women's. See Pools A, B, C, D teams, match fixtures, and qualification rules.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-groups`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Groups: All Pools Men's & Women's",
-    description: "Complete FIH Hockey World Cup 2026 pool groups for Men's and Women's tournaments. See Pool A, B, C, D teams, fixtures, second stage format and qualification rules.",
+    description: "Complete FIH Hockey World Cup 2026 pool groups for Men's & Women's. See Pools A, B, C, D teams, match fixtures, and qualification rules.",
     url: `${BASE}/hockey-world-cup-2026-groups`,
     images: [
       {
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hockey World Cup 2026 Groups: All Pools Men's & Women's",
-    description: "Complete FIH Hockey World Cup 2026 pool groups for Men's and Women's tournaments. See Pool A, B, C, D teams, fixtures, second stage format and qualification rules.",
+    description: "Complete FIH Hockey World Cup 2026 pool groups for Men's & Women's. See Pools A, B, C, D teams, match fixtures, and qualification rules.",
     images: ["/og-image.jpg"],
   },
 };

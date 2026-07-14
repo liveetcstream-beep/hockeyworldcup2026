@@ -3,28 +3,28 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Live Stream & Live Score: Watch Online & TV List",
-  description: "Looking for Hockey World Cup 2026 live stream and live score channels? Get the complete FIH Hockey World Cup qualifiers & tournament apps and TV list.",
+  title: "Hockey World Cup 2026 Live Stream & TV Channels",
+  description: "Find out where to watch the Hockey World Cup 2026 live stream. Get official TV broadcast channel lists, streaming apps, and regional VPN guides.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/hockey-live-streaming",
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Live Stream & Live Score: Watch Online & TV List",
-    description: "Looking for Hockey World Cup 2026 live stream and live score channels? Get the complete FIH Hockey World Cup qualifiers & tournament apps and TV list.",
+    title: "Hockey World Cup 2026 Live Stream & TV Channels",
+    description: "Find out where to watch the Hockey World Cup 2026 live stream. Get official TV broadcast channel lists, streaming apps, and regional VPN guides.",
     url: "https://hockeyworldcup2026schedule.com/hockey-live-streaming",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Hockey World Cup 2026 Live Stream & Live Score: Watch Online & TV List",
+        alt: "Hockey World Cup 2026 Live Stream & TV Channels",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Live Stream & Live Score: Watch Online & TV List",
-    description: "Looking for Hockey World Cup 2026 live stream and live score channels? Get the complete FIH Hockey World Cup qualifiers & tournament apps and TV list.",
+    title: "Hockey World Cup 2026 Live Stream & TV Channels",
+    description: "Find out where to watch the Hockey World Cup 2026 live stream. Get official TV broadcast channel lists, streaming apps, and regional VPN guides.",
     images: ["/og-image.jpg"],
   },
 };
@@ -94,7 +94,7 @@ export default function BroadcastersPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">📺 TV Channels, Streaming Apps & Live Scores Guide</p>
-          <h1 className="hero-title">Hockey World Cup 2026 Live Stream, TV Broadcast & Live Score Guide</h1>
+          <h1 className="hero-title">Hockey World Cup 2026 Live Stream & TV Broadcast Channels</h1>
           <p className="hero-description">
             Looking for the official <strong>hockey world cup 2026 live stream</strong>, TV channel guides, or real-time <strong>hockey world cup 2026 live score</strong> statistics? We compile the verified streaming applications, TV listings, and VPN workarounds for both Men's and Women's matches in Amstelveen and Wavre.
           </p>
