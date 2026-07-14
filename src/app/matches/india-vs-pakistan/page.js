@@ -32,12 +32,20 @@ export const metadata = {
 export default function MatchPreviewPage() {
   const faqItems = [
     {
-      "q": "What time does India vs Pakistan match start?",
-      "a": "The match starts at 14:00 CET, which translates to 17:30 IST (Indian Standard Time) and 17:00 PST (Pakistan Standard Time)."
+      "q": "Did Pakistan qualify for the World Cup 2026 in hockey?",
+      "a": "Yes, Pakistan qualified for the FIH Men's Hockey World Cup 2026 by securing a spot through the FIH Hockey World Cup Qualifier tournament held in Ismailia, Egypt, where they defeated Japan 4-3 in a crucial match."
     },
     {
-      "q": "Where is the match being played?",
-      "a": "The match will take place at the Wagener Hockey Stadium in Amstelveen, Netherlands."
+      "q": "What time is India vs Pakistan hockey game?",
+      "a": "The India vs Pakistan match at the Hockey World Cup 2026 is scheduled for August 19, 2026, at 14:00 CET (local Dutch time). This translates to 17:30 IST in India and 17:00 PST in Pakistan."
+    },
+    {
+      "q": "Is Pakistan better than India in hockey?",
+      "a": "Historically, Pakistan leads the head-to-head record with 82 wins to India's 69 wins. However, in modern hockey, India is currently ranked higher internationally (ranked inside the top 6 globally) and has won all recent major encounters against Pakistan, including the 7-1 and 4-3 Pro League victories in June 2026."
+    },
+    {
+      "q": "Is India qualified for the hockey world cup 2026?",
+      "a": "Yes, India qualified automatically for the FIH Men's Hockey World Cup 2026 by winning the 2025 Men's Hockey Asia Cup tournament in Rajgir, India."
     }
   ];
 
