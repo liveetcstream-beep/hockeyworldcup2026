@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/india-vs-england-women",
   },
+  openGraph: {
+    title: "India vs England Women Hockey World Cup 2026 Preview & Timings",
+    description: "Preview of the India vs England Women's match at the 2026 Hockey World Cup. Timings, head-to-head records, and streaming channels.",
+    url: "https://hockeyworldcup2026schedule.com/matches/india-vs-england-women",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "India vs England Women Hockey World Cup 2026 Preview & Timings",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "India vs England Women Hockey World Cup 2026 Preview & Timings",
+    description: "Preview of the India vs England Women's match at the 2026 Hockey World Cup. Timings, head-to-head records, and streaming channels.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function MatchPreviewPage() {
   const faqItems = [

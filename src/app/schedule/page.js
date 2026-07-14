@@ -10,7 +10,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/schedule",
   },
+  openGraph: {
+    title: "Hockey World Cup 2026 Fixtures & Match Schedule",
+    description: "Official 100-match schedule for the 2026 FIH Hockey World Cup in Netherlands & Belgium. Download PDF fixture list, check USA match timings, and convert to IST/PST.",
+    url: "https://hockeyworldcup2026schedule.com/schedule",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hockey World Cup 2026 Fixtures & Match Schedule",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hockey World Cup 2026 Fixtures & Match Schedule",
+    description: "Official 100-match schedule for the 2026 FIH Hockey World Cup in Netherlands & Belgium. Download PDF fixture list, check USA match timings, and convert to IST/PST.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function SchedulePage() {
   const faqItems = [

@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/hockey-live-streaming",
   },
+  openGraph: {
+    title: "Hockey World Cup 2026 Live Stream & Live Score: Watch Online & TV List",
+    description: "Looking for Hockey World Cup 2026 live stream and live score channels? Get the complete FIH Hockey World Cup qualifiers & tournament apps and TV list.",
+    url: "https://hockeyworldcup2026schedule.com/hockey-live-streaming",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hockey World Cup 2026 Live Stream & Live Score: Watch Online & TV List",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hockey World Cup 2026 Live Stream & Live Score: Watch Online & TV List",
+    description: "Looking for Hockey World Cup 2026 live stream and live score channels? Get the complete FIH Hockey World Cup qualifiers & tournament apps and TV list.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function BroadcastersPage() {
   const faqItems = [

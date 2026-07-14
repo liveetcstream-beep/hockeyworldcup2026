@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/past-results",
   },
+  openGraph: {
+    title: "Hockey World Cup Past Winners & 2023 Results (All Time)",
+    description: "Complete stats, final standings, top goalscorers, awards, and match results from the 2023 Hockey World Cup in Odisha, India.",
+    url: "https://hockeyworldcup2026schedule.com/past-results",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hockey World Cup Past Winners & 2023 Results (All Time)",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hockey World Cup Past Winners & 2023 Results (All Time)",
+    description: "Complete stats, final standings, top goalscorers, awards, and match results from the 2023 Hockey World Cup in Odisha, India.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function PastResultsPage() {
   return (

@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/h2h",
   },
+  openGraph: {
+    title: "Head-to-Head Stats & Records – Hockey World Cup 2026",
+    description: "Detailed H2H stats, last 10 match summaries, win ratios, and tactical descriptions for the top qualified teams in the FIH Hockey World Cup 2026.",
+    url: "https://hockeyworldcup2026schedule.com/h2h",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Head-to-Head Stats & Records – Hockey World Cup 2026",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Head-to-Head Stats & Records – Hockey World Cup 2026",
+    description: "Detailed H2H stats, last 10 match summaries, win ratios, and tactical descriptions for the top qualified teams in the FIH Hockey World Cup 2026.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function H2HPage() {
   return (

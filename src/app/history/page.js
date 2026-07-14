@@ -9,7 +9,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/history",
   },
+  openGraph: {
+    title: "FIH Hockey World Cup Winners List (1971 - 2026 History)",
+    description: "Complete list of past Hockey World Cup winners, runners-up, host countries, and title counts. Find records for Pakistan, Netherlands, India, and Germany.",
+    url: "https://hockeyworldcup2026schedule.com/history",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "FIH Hockey World Cup Winners List (1971 - 2026 History)",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "FIH Hockey World Cup Winners List (1971 - 2026 History)",
+    description: "Complete list of past Hockey World Cup winners, runners-up, host countries, and title counts. Find records for Pakistan, Netherlands, India, and Germany.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function HistoryPage() {
   const faqItems = [

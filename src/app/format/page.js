@@ -9,7 +9,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/format",
   },
+  openGraph: {
+    title: "Hockey World Cup 2026 Format: Pool, Second Stage & Rules",
+    description: "Complete guide on how the 16 teams qualify for the quarterfinals. Learn how crossover matches, penalty shootouts, and classification stages work.",
+    url: "https://hockeyworldcup2026schedule.com/format",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hockey World Cup 2026 Format: Pool, Second Stage & Rules",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hockey World Cup 2026 Format: Pool, Second Stage & Rules",
+    description: "Complete guide on how the 16 teams qualify for the quarterfinals. Learn how crossover matches, penalty shootouts, and classification stages work.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function FormatPage() {
   const faqItems = [

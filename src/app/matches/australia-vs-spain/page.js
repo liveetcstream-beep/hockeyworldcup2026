@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/australia-vs-spain",
   },
+  openGraph: {
+    title: "Australia vs Spain Hockey World Cup 2026: Pre-Match Preview & Timings",
+    description: "Preview of the Australia vs Spain Men's match at the 2026 Hockey World Cup. Timings, head-to-head, and streaming channels.",
+    url: "https://hockeyworldcup2026schedule.com/matches/australia-vs-spain",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Australia vs Spain Hockey World Cup 2026: Pre-Match Preview & Timings",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Australia vs Spain Hockey World Cup 2026: Pre-Match Preview & Timings",
+    description: "Preview of the Australia vs Spain Men's match at the 2026 Hockey World Cup. Timings, head-to-head, and streaming channels.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function MatchPreviewPage() {
   const faqItems = [

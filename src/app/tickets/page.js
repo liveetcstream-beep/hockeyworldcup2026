@@ -9,7 +9,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/tickets",
   },
+  openGraph: {
+    title: "Hockey World Cup 2026 Tickets: Online Booking, Prices & Outlets",
+    description: "Want to buy Hockey World Cup 2026 tickets? Get the complete online booking guide, official ticket price categories, and outlet locations.",
+    url: "https://hockeyworldcup2026schedule.com/tickets",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hockey World Cup 2026 Tickets: Online Booking, Prices & Outlets",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hockey World Cup 2026 Tickets: Online Booking, Prices & Outlets",
+    description: "Want to buy Hockey World Cup 2026 tickets? Get the complete online booking guide, official ticket price categories, and outlet locations.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function TicketsPage() {
   const faqItems = [

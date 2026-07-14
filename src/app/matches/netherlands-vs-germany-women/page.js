@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/netherlands-vs-germany-women",
   },
+  openGraph: {
+    title: "Netherlands vs Germany Women Hockey World Cup 2026 Preview",
+    description: "Catch the Netherlands vs Germany Women's match at HWC 2026. Previews, match times, head-to-head records, and streaming channels.",
+    url: "https://hockeyworldcup2026schedule.com/matches/netherlands-vs-germany-women",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Netherlands vs Germany Women Hockey World Cup 2026 Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Netherlands vs Germany Women Hockey World Cup 2026 Preview",
+    description: "Catch the Netherlands vs Germany Women's match at HWC 2026. Previews, match times, head-to-head records, and streaming channels.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function MatchPreviewPage() {
   const faqItems = [

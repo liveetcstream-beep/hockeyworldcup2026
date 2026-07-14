@@ -6,6 +6,7 @@ export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
+  const [isTeamsMobileOpen, setIsTeamsMobileOpen] = useState(false);
 
   const teamsList = [
     { name: "India", slug: "india", flag: "🇮🇳" },
@@ -350,14 +351,70 @@ export default function Header() {
 
           <li className="mobile-section-header">🏃‍♂️ Team Profiles</li>
           <li><a href="/teams" onClick={() => setIsMobileOpen(false)}>🏃‍♂️ All Qualified Teams Hub</a></li>
-          <li><a href="/hockey-world-cup-2026-schedule-india" onClick={() => setIsMobileOpen(false)}>🇮🇳 India Hub</a></li>
-          <li><a href="/hockey-world-cup-2026-schedule-pakistan" onClick={() => setIsMobileOpen(false)}>🇵🇰 Pakistan Hub</a></li>
-          <li><a href="/hockey-world-cup-2026-schedule-belgium" onClick={() => setIsMobileOpen(false)}>🇧🇪 Belgium Hub</a></li>
-          <li><a href="/hockey-world-cup-2026-schedule-germany" onClick={() => setIsMobileOpen(false)}>🇩🇪 Germany Hub</a></li>
-          <li><a href="/hockey-world-cup-2026-schedule-netherlands" onClick={() => setIsMobileOpen(false)}>🇳🇱 Netherlands Hub</a></li>
-          <li><a href="/hockey-world-cup-2026-schedule-australia" onClick={() => setIsMobileOpen(false)}>🇦🇺 Australia Hub</a></li>
-          <li><a href="/hockey-world-cup-2026-schedule-england" onClick={() => setIsMobileOpen(false)}>🏴󠁧󠁢󠁥󠁮󠁧󠁿 England Hub</a></li>
-          <li><a href="/hockey-world-cup-2026-schedule-argentina" onClick={() => setIsMobileOpen(false)}>🇦🇷 Argentina Hub</a></li>
+          
+          <li style={{ padding: "0 1.5rem" }}>
+            <button 
+              onClick={() => setIsTeamsMobileOpen(!isTeamsMobileOpen)} 
+              className="mobile-collapsible-trigger"
+              style={{
+                background: "rgba(255, 255, 255, 0.03)",
+                border: "1px solid rgba(255, 255, 255, 0.08)",
+                color: "#fff",
+                font: "inherit",
+                cursor: "pointer",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                width: "100%",
+                padding: "10px 14px",
+                borderRadius: "8px",
+                fontWeight: "600",
+                fontSize: "14px",
+                marginBottom: "8px"
+              }}
+            >
+              <span>🏑 View All 16 Schedules</span>
+              <span style={{ fontSize: "10px", transition: "transform 0.2s", transform: isTeamsMobileOpen ? "rotate(180deg)" : "rotate(0deg)" }}>▼</span>
+            </button>
+          </li>
+          
+          {isTeamsMobileOpen && (
+            <li>
+              <div className="mobile-teams-grid" style={{
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "8px",
+                padding: "0.5rem 1.5rem 1.2rem 1.5rem"
+              }}>
+                {teamsList.map((team) => (
+                  <a
+                    key={team.slug}
+                    href={`/hockey-world-cup-2026-schedule-${team.slug}`}
+                    onClick={() => {
+                      setIsMobileOpen(false);
+                      setIsTeamsMobileOpen(false);
+                    }}
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "6px",
+                      padding: "8px 12px",
+                      background: "rgba(255, 255, 255, 0.05)",
+                      border: "1px solid rgba(255, 255, 255, 0.05)",
+                      borderRadius: "6px",
+                      fontSize: "12px",
+                      color: "#fff",
+                      textDecoration: "none",
+                      fontWeight: "500"
+                    }}
+                  >
+                    <span>{team.flag}</span>
+                    <span>{team.name}</span>
+                  </a>
+                ))}
+              </div>
+            </li>
+          )}
 
           <li className="mobile-section-header">⚡ Live Centre</li>
           <li><a href="/live-scores" onClick={() => setIsMobileOpen(false)}>🔴 Live Scoreboard</a></li>

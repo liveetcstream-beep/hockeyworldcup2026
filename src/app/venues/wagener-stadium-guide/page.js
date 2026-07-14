@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/venues/wagener-stadium-guide",
   },
+  openGraph: {
+    title: "Wagener Stadium Amstelveen Visitor Guide: Hotels, Parking & Transit",
+    description: "Heading to Wagener Stadium for the 2026 Hockey World Cup? Read our expert visitor guide on hotels near Amsterdamse Bos, parking tips, metro routes, and local weather.",
+    url: "https://hockeyworldcup2026schedule.com/venues/wagener-stadium-guide",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Wagener Stadium Amstelveen Visitor Guide: Hotels, Parking & Transit",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wagener Stadium Amstelveen Visitor Guide: Hotels, Parking & Transit",
+    description: "Heading to Wagener Stadium for the 2026 Hockey World Cup? Read our expert visitor guide on hotels near Amsterdamse Bos, parking tips, metro routes, and local weather.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function WagenerStadiumGuide() {
   const faqItems = [

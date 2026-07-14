@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/netherlands-vs-australia-women",
   },
+  openGraph: {
+    title: "Netherlands vs Australia Women Hockey World Cup 2026 Preview",
+    description: "Get ready for the Netherlands vs Australia Women's clash at the 2026 Hockey World Cup. Previews, timings, and streaming details.",
+    url: "https://hockeyworldcup2026schedule.com/matches/netherlands-vs-australia-women",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Netherlands vs Australia Women Hockey World Cup 2026 Preview",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Netherlands vs Australia Women Hockey World Cup 2026 Preview",
+    description: "Get ready for the Netherlands vs Australia Women's clash at the 2026 Hockey World Cup. Previews, timings, and streaming details.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function MatchPreviewPage() {
   const faqItems = [

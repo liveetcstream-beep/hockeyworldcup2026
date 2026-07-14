@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/venues/belfius-arena-guide",
   },
+  openGraph: {
+    title: "Belfius Hockey Arena Wavre Visitor Guide: Tickets, Parking & Hotels",
+    description: "Heading to Belfius Hockey Arena in Wavre, Belgium for HWC 2026? Read our expert visitor guide on parking, train routes from Brussels, and hotels nearby.",
+    url: "https://hockeyworldcup2026schedule.com/venues/belfius-arena-guide",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Belfius Hockey Arena Wavre Visitor Guide: Tickets, Parking & Hotels",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Belfius Hockey Arena Wavre Visitor Guide: Tickets, Parking & Hotels",
+    description: "Heading to Belfius Hockey Arena in Wavre, Belgium for HWC 2026? Read our expert visitor guide on parking, train routes from Brussels, and hotels nearby.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function BelfiusArenaGuide() {
   const faqItems = [

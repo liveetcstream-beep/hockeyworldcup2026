@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/india-vs-england",
   },
+  openGraph: {
+    title: "India vs England Hockey World Cup 2026: Timing, Timings & Previews",
+    description: "Previewing India vs England men's match at the 2026 Hockey World Cup. Match time, head-to-head records, predictions, and streaming.",
+    url: "https://hockeyworldcup2026schedule.com/matches/india-vs-england",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "India vs England Hockey World Cup 2026: Timing, Timings & Previews",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "India vs England Hockey World Cup 2026: Timing, Timings & Previews",
+    description: "Previewing India vs England men's match at the 2026 Hockey World Cup. Match time, head-to-head records, predictions, and streaming.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function MatchPreviewPage() {
   const faqItems = [

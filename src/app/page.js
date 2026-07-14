@@ -5,13 +5,31 @@ import ScheduleAndConverter from "./components/ScheduleAndConverter";
 import FaqAccordion from "./components/FaqAccordion";
 
 export const metadata = {
-  title: { absolute: "FIH Hockey World Cup 2026: Schedule, Teams & Live Updates" },
-  description: "Get the complete, verified match schedule, timezone conversions, and live streaming options for the FIH Hockey World Cup 2026.",
+  title: { absolute: "Hockey World Cup 2026 Schedule: Fixtures & Live Updates" },
+  description: "Get the official Hockey World Cup 2026 Schedule, verified match fixtures, timezone conversions, and live streaming updates.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com",
   },
+  openGraph: {
+    title: "Hockey World Cup 2026 Schedule: Fixtures & Live Updates",
+    description: "Get the official Hockey World Cup 2026 Schedule, verified match fixtures, timezone conversions, and live streaming updates.",
+    url: "https://hockeyworldcup2026schedule.com",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hockey World Cup 2026 Schedule: Fixtures & Live Updates",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hockey World Cup 2026 Schedule: Fixtures & Live Updates",
+    description: "Get the official Hockey World Cup 2026 Schedule, verified match fixtures, timezone conversions, and live streaming updates.",
+    images: ["/og-image.jpg"],
+  },
 };
-
 export default function Home() {
   const faqItems = [
     {
@@ -42,7 +60,7 @@ export default function Home() {
         <div className="sports-container hero-content">
           <p className="hero-subtitle">FIH Men's & Women's World Cup 2026</p>
           <h1 className="hero-title">
-            FIH Hockey World Cup 2026: Schedule, Teams & Live Updates
+            Hockey World Cup 2026 Schedule & Match Fixtures
           </h1>
           <p className="hero-description">
             Get the comprehensive, verified 2026 FIH Hockey World Cup fixtures, local stadium start times, and TV channel allocations. We solve your timezone confusion and streaming blackout restrictions for the mega tournament in Belgium and the Netherlands.

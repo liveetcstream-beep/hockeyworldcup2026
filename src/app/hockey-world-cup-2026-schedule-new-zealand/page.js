@@ -7,19 +7,31 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule New Zealand: Time Table, Fixtures & PDF",
-  description:
-    "Complete Hockey World Cup 2026 Schedule for New Zealand. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
+  description: "Complete Hockey World Cup 2026 Schedule for New Zealand. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-new-zealand`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule New Zealand: Time Table, Fixtures & PDF",
-    description:
-      "Complete Hockey World Cup 2026 Schedule for New Zealand. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list.",
+    description: "Complete Hockey World Cup 2026 Schedule for New Zealand. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
     url: `${BASE}/hockey-world-cup-2026-schedule-new-zealand`,
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630 }],
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hockey World Cup 2026 Schedule New Zealand: Time Table, Fixtures & PDF",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hockey World Cup 2026 Schedule New Zealand: Time Table, Fixtures & PDF",
+    description: "Complete Hockey World Cup 2026 Schedule for New Zealand. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
+    images: ["/og-image.jpg"],
   },
 };
+
 
 export default function NewZealandHockeyPage() {
   const faqItems = [

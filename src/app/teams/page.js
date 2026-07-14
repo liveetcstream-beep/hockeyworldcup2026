@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/teams",
   },
+  openGraph: {
+    title: "Hockey World Cup 2026 Teams & Squads: All 16 Nations",
+    description: "Rosters and analysis for the 16 qualified teams in the FIH Hockey World Cup 2026. Profiles of Harmanpreet Singh, Thierry Brinkman, and Niklas Wellen.",
+    url: "https://hockeyworldcup2026schedule.com/teams",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hockey World Cup 2026 Teams & Squads: All 16 Nations",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hockey World Cup 2026 Teams & Squads: All 16 Nations",
+    description: "Rosters and analysis for the 16 qualified teams in the FIH Hockey World Cup 2026. Profiles of Harmanpreet Singh, Thierry Brinkman, and Niklas Wellen.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function TeamsPage() {
   return (

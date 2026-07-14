@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/india-vs-pakistan",
   },
+  openGraph: {
+    title: "India vs Pakistan Hockey World Cup 2026: Time, Timings & Previews",
+    description: "Heading to India vs Pakistan hockey clash at HWC 2026? Get the exact match timings, live streaming info, head-to-head records, and predictions.",
+    url: "https://hockeyworldcup2026schedule.com/matches/india-vs-pakistan",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "India vs Pakistan Hockey World Cup 2026: Time, Timings & Previews",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "India vs Pakistan Hockey World Cup 2026: Time, Timings & Previews",
+    description: "Heading to India vs Pakistan hockey clash at HWC 2026? Get the exact match timings, live streaming info, head-to-head records, and predictions.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function MatchPreviewPage() {
   const faqItems = [

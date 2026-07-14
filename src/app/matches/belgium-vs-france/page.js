@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/belgium-vs-france",
   },
+  openGraph: {
+    title: "Belgium vs France Hockey World Cup 2026: Opening Match Preview & Timings",
+    description: "Preview of Belgium vs France Men's match at the 2026 Hockey World Cup. Timings, head-to-head, and live stream channels.",
+    url: "https://hockeyworldcup2026schedule.com/matches/belgium-vs-france",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Belgium vs France Hockey World Cup 2026: Opening Match Preview & Timings",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Belgium vs France Hockey World Cup 2026: Opening Match Preview & Timings",
+    description: "Preview of Belgium vs France Men's match at the 2026 Hockey World Cup. Timings, head-to-head, and live stream channels.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function MatchPreviewPage() {
   const faqItems = [

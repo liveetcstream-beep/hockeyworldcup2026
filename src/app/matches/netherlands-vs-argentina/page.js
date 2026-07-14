@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/netherlands-vs-argentina",
   },
+  openGraph: {
+    title: "Netherlands vs Argentina Hockey World Cup 2026: Preview & Timing",
+    description: "Preview of the Netherlands vs Argentina Men's match at the 2026 Hockey World Cup. Head-to-head records, predictions, and streaming details.",
+    url: "https://hockeyworldcup2026schedule.com/matches/netherlands-vs-argentina",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Netherlands vs Argentina Hockey World Cup 2026: Preview & Timing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Netherlands vs Argentina Hockey World Cup 2026: Preview & Timing",
+    description: "Preview of the Netherlands vs Argentina Men's match at the 2026 Hockey World Cup. Head-to-head records, predictions, and streaming details.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function MatchPreviewPage() {
   const faqItems = [

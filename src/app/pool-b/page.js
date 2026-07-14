@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/pool-b",
   },
+  openGraph: {
+    title: "Hockey World Cup 2026 Pool B: Standings, Fixtures & Predictions",
+    description: "Get the complete outlook for Pool B at the 2026 FIH Hockey World Cup. Includes Men's and Women's team standings, live match schedules, and predictions.",
+    url: "https://hockeyworldcup2026schedule.com/pool-b",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Hockey World Cup 2026 Pool B: Standings, Fixtures & Predictions",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Hockey World Cup 2026 Pool B: Standings, Fixtures & Predictions",
+    description: "Get the complete outlook for Pool B at the 2026 FIH Hockey World Cup. Includes Men's and Women's team standings, live match schedules, and predictions.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function PoolBPage() {
   const menFixtures = [

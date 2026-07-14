@@ -8,7 +8,27 @@ export const metadata = {
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/venues",
   },
+  openGraph: {
+    title: "Wagener & Belfius Stadium Visitor Guide 2026",
+    description: "Complete visitor guide for the 2026 FIH Hockey World Cup stadiums. Includes transit maps, local Zip codes, Amsterdamse Bos details, and Wavre attractions.",
+    url: "https://hockeyworldcup2026schedule.com/venues",
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Wagener & Belfius Stadium Visitor Guide 2026",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wagener & Belfius Stadium Visitor Guide 2026",
+    description: "Complete visitor guide for the 2026 FIH Hockey World Cup stadiums. Includes transit maps, local Zip codes, Amsterdamse Bos details, and Wavre attractions.",
+    images: ["/og-image.jpg"],
+  },
 };
+
 
 export default function VenuesPage() {
   return (
