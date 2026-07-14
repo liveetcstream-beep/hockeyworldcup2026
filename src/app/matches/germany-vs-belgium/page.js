@@ -3,28 +3,28 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Germany vs Belgium Hockey World Cup 2026: Rematch Preview & Timings",
-  description: "Can Germany defend their title against co-hosts Belgium at the 2026 Hockey World Cup? Read our preview, timings, and streaming channels.",
+  title: "Germany vs Belgium Hockey World Cup 2026: Match Preview",
+  description: "Defending champions Germany face co-hosts Belgium at HWC 2026. View complete head-to-head history, match timings, lineups, and predictions.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/germany-vs-belgium",
   },
   openGraph: {
-    title: "Germany vs Belgium Hockey World Cup 2026: Rematch Preview & Timings",
-    description: "Can Germany defend their title against co-hosts Belgium at the 2026 Hockey World Cup? Read our preview, timings, and streaming channels.",
+    title: "Germany vs Belgium Hockey World Cup 2026: Match Preview",
+    description: "Defending champions Germany face co-hosts Belgium at HWC 2026. View complete head-to-head history, match timings, lineups, and predictions.",
     url: "https://hockeyworldcup2026schedule.com/matches/germany-vs-belgium",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Germany vs Belgium Hockey World Cup 2026: Rematch Preview & Timings",
+        alt: "Germany vs Belgium Hockey World Cup 2026: Match Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Germany vs Belgium Hockey World Cup 2026: Rematch Preview & Timings",
-    description: "Can Germany defend their title against co-hosts Belgium at the 2026 Hockey World Cup? Read our preview, timings, and streaming channels.",
+    title: "Germany vs Belgium Hockey World Cup 2026: Match Preview",
+    description: "Defending champions Germany face co-hosts Belgium at HWC 2026. View complete head-to-head history, match timings, lineups, and predictions.",
     images: ["/og-image.jpg"],
   },
 };
@@ -95,7 +95,7 @@ export default function MatchPreviewPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">🏑 Blockbuster Match Previews</p>
-          <h1 className="hero-title">Germany vs Belgium (Men) Pre-Match Guide</h1>
+          <h1 className="hero-title">Germany vs Belgium Hockey World Cup 2026 Pre-Match Guide</h1>
           <p className="hero-description">
             Your detailed tactical guide to the massive Germany vs Belgium (Men) showdown at the 2026 Hockey World Cup. Get timings, head-to-head records, predictions, and streaming channels.
           </p>

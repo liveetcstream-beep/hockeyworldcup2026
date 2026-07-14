@@ -3,28 +3,28 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Netherlands vs Australia Women Hockey World Cup 2026 Preview",
-  description: "Get ready for the Netherlands vs Australia Women's clash at the 2026 Hockey World Cup. Previews, timings, and streaming details.",
+  title: "Netherlands vs Australia Women Hockey World Cup 2026",
+  description: "Preview the marquee Netherlands vs Australia Women match at HWC 2026. Check head-to-head records, squad sheets, match timings, and predictions.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/netherlands-vs-australia-women",
   },
   openGraph: {
-    title: "Netherlands vs Australia Women Hockey World Cup 2026 Preview",
-    description: "Get ready for the Netherlands vs Australia Women's clash at the 2026 Hockey World Cup. Previews, timings, and streaming details.",
+    title: "Netherlands vs Australia Women Hockey World Cup 2026",
+    description: "Preview the marquee Netherlands vs Australia Women match at HWC 2026. Check head-to-head records, squad sheets, match timings, and predictions.",
     url: "https://hockeyworldcup2026schedule.com/matches/netherlands-vs-australia-women",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Netherlands vs Australia Women Hockey World Cup 2026 Preview",
+        alt: "Netherlands vs Australia Women Hockey World Cup 2026",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Netherlands vs Australia Women Hockey World Cup 2026 Preview",
-    description: "Get ready for the Netherlands vs Australia Women's clash at the 2026 Hockey World Cup. Previews, timings, and streaming details.",
+    title: "Netherlands vs Australia Women Hockey World Cup 2026",
+    description: "Preview the marquee Netherlands vs Australia Women match at HWC 2026. Check head-to-head records, squad sheets, match timings, and predictions.",
     images: ["/og-image.jpg"],
   },
 };
@@ -91,7 +91,7 @@ export default function MatchPreviewPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">🏑 Blockbuster Match Previews</p>
-          <h1 className="hero-title">Netherlands vs Australia (Women) Pre-Match Guide</h1>
+          <h1 className="hero-title">Netherlands vs Australia Women World Cup 2026 Pre-Match Guide</h1>
           <p className="hero-description">
             Your detailed tactical guide to the massive Netherlands vs Australia (Women) showdown at the 2026 Hockey World Cup. Get timings, head-to-head records, predictions, and streaming channels.
           </p>
