@@ -50,7 +50,7 @@ export default function HistoryPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Tournament Hall of Fame</p>
-          <h1 className="hero-title">FIH Hockey World Cup Winners List</h1>
+          <h1 className="hero-title">FIH Hockey World Cup Winners List (1971–2026)</h1>
           <p className="hero-description">
             Field hockey has a rich championship history since the inaugural event in 1971. Read the list of all past winners and title statistics.
           </p>
