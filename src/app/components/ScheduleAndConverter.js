@@ -153,7 +153,7 @@ export default function ScheduleAndConverter() {
 
         <div style={{ display: "flex", justifyContent: "center", marginTop: "2.5rem" }}>
           <a href="/schedule" className="view-more-btn">
-            View Full 100-Match Schedule & Fixtures →
+            View Full 100-Match Schedule PDF
           </a>
         </div>
       </section>

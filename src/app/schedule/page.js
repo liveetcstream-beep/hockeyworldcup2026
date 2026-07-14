@@ -5,28 +5,28 @@ import ScheduleClient from "./ScheduleClient";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Fixtures & Match Schedule",
-  description: "Official 100-match schedule for the 2026 FIH Hockey World Cup in Netherlands & Belgium. Download PDF fixture list, check USA match timings, and convert to IST/PST.",
+  title: "Hockey World Cup 2026 Full Schedule: Match Timetable PDF",
+  description: "Download the complete 100-match Hockey World Cup 2026 schedule PDF. Access the full tournament timetable, group fixtures, and local match timings.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/schedule",
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Fixtures & Match Schedule",
-    description: "Official 100-match schedule for the 2026 FIH Hockey World Cup in Netherlands & Belgium. Download PDF fixture list, check USA match timings, and convert to IST/PST.",
+    title: "Hockey World Cup 2026 Full Schedule: Match Timetable PDF",
+    description: "Download the complete 100-match Hockey World Cup 2026 schedule PDF. Access the full tournament timetable, group fixtures, and local match timings.",
     url: "https://hockeyworldcup2026schedule.com/schedule",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Hockey World Cup 2026 Fixtures & Match Schedule",
+        alt: "Hockey World Cup 2026 Full Schedule: Match Timetable PDF",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Fixtures & Match Schedule",
-    description: "Official 100-match schedule for the 2026 FIH Hockey World Cup in Netherlands & Belgium. Download PDF fixture list, check USA match timings, and convert to IST/PST.",
+    title: "Hockey World Cup 2026 Full Schedule: Match Timetable PDF",
+    description: "Download the complete 100-match Hockey World Cup 2026 schedule PDF. Access the full tournament timetable, group fixtures, and local match timings.",
     images: ["/og-image.jpg"],
   },
 };
@@ -61,7 +61,7 @@ export default function SchedulePage() {
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Official FIH Tournament Bracket & Fixtures</p>
           <h1 className="hero-title">
-            Hockey World Cup 2026 Fixtures & Match Schedule
+            Hockey World Cup 2026 Full Match Schedule & Timetable
           </h1>
           <p className="hero-description">
             Get the complete, verified 100-match tournament schedule for the Men's and Women's FIH Hockey World Cups in Belgium & Netherlands. Filter by team, track USA time zones (EDT/ET), view group stages, and download the print-friendly PDF guide.
@@ -137,6 +137,13 @@ export default function SchedulePage() {
       />
 
       <main className="sports-container py-12">
+        {/* Breadcrumb */}
+        <nav aria-label="breadcrumb" style={{ marginBottom: "2rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
+          <a href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Hockey World Cup 2026 Home</a>
+          <span style={{ margin: "0 0.5rem" }}>&gt;</span>
+          <span style={{ color: "var(--text-main)", fontWeight: "600" }}>Match Schedule</span>
+        </nav>
+
         {/* Client Schedule Filter & Pagination Section */}
         <ScheduleClient />
 
