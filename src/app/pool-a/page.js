@@ -3,28 +3,28 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Pool A: Standings, Fixtures & Predictions",
-  description: "Get the complete outlook for Pool A at the 2026 FIH Hockey World Cup. Includes Men's and Women's team standings, live match schedules, and predictions.",
+  title: "Hockey World Cup 2026 Pool A: Standings & Matches",
+  description: "Get the complete Pool A standings and match fixtures for the 2026 FIH Hockey World Cup. Track teams, rankings, results, and expert predictions.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/pool-a",
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Pool A: Standings, Fixtures & Predictions",
-    description: "Get the complete outlook for Pool A at the 2026 FIH Hockey World Cup. Includes Men's and Women's team standings, live match schedules, and predictions.",
+    title: "Hockey World Cup 2026 Pool A: Standings & Matches",
+    description: "Get the complete Pool A standings and match fixtures for the 2026 FIH Hockey World Cup. Track teams, rankings, results, and expert predictions.",
     url: "https://hockeyworldcup2026schedule.com/pool-a",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Hockey World Cup 2026 Pool A: Standings, Fixtures & Predictions",
+        alt: "Hockey World Cup 2026 Pool A: Standings & Matches",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Pool A: Standings, Fixtures & Predictions",
-    description: "Get the complete outlook for Pool A at the 2026 FIH Hockey World Cup. Includes Men's and Women's team standings, live match schedules, and predictions.",
+    title: "Hockey World Cup 2026 Pool A: Standings & Matches",
+    description: "Get the complete Pool A standings and match fixtures for the 2026 FIH Hockey World Cup. Track teams, rankings, results, and expert predictions.",
     images: ["/og-image.jpg"],
   },
 };
@@ -91,7 +91,7 @@ export default function PoolAPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">🏆 Tournament Pools & Standings</p>
-          <h1 className="hero-title">Hockey World Cup 2026 Pool A Analysis</h1>
+          <h1 className="hero-title">Hockey World Cup 2026 Pool A Standings & Matches</h1>
           <p className="hero-description">
             Your hub for Pool A standings, match fixtures, tactical previews, and predictions for both Men's and Women's tournaments.
           </p>
