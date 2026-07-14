@@ -29,14 +29,25 @@ export const metadata = {
   },
 };
 
-
 export default function MatchPreviewPage() {
   const faqItems = [
-  {
-    "q": "Where is the opening match played?",
-    "a": "The match will be played at the Belfius Hockey Arena in Wavre, Belgium, on August 15, 2026."
-  }
-];
+    {
+      "q": "What is the head-to-head record between Belgium and France in men's hockey?",
+      "a": "Belgium holds a dominant record against France in international matches, including a 3-1 and 2-1 victory in their latest Pro League encounters, and a 5-0 win in their recent test matches."
+    },
+    {
+      "q": "When is the next Belgium vs. France hockey match?",
+      "a": "Their next official match is confirmed for the opening matchday of the FIH Hockey World Cup on August 15, 2026, at 17:30 CET, hosted at the Belfius Hockey Arena in Wavre, Belgium."
+    },
+    {
+      "q": "Where can I watch Belgium vs. France hockey live?",
+      "a": "The match will air live on RTBF and VRT in Belgium, L'Equipe in France, and stream internationally on EuroHockey TV or Watch.Hockey."
+    },
+    {
+      "q": "Have France and Belgium played each other in the Hockey World Cup?",
+      "a": "Yes, they have faced each other in previous World Cup cycles, with Belgium's Red Lions consistently holding the upper hand in official tournaments."
+    }
+  ];
 
   return (
     <>
@@ -107,74 +118,170 @@ export default function MatchPreviewPage() {
       </section>
 
       <main className="sports-container py-12">
-        {/* Breadcrumb */}
+        {/* 1. Breadcrumbs */}
         <nav aria-label="breadcrumb" style={{ marginBottom: "2rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
-          <a href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Home</a>
+          <a href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Hockey World Cup 2026 Home</a>
           <span style={{ margin: "0 0.5rem" }}>&gt;</span>
-          <span style={{ color: "var(--text-main)", fontWeight: "600" }}>Belgium vs France Guide</span>
+          <a href="/schedule" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Schedule</a>
+          <span style={{ margin: "0 0.5rem" }}>&gt;</span>
+          <span style={{ color: "var(--text-main)", fontWeight: "600" }}>Belgium vs France</span>
         </nav>
 
-        {/* Quick Details Grid */}
-        <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
+        {/* 2. Date, Time & Venue Block */}
+        <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.2rem", marginBottom: "3rem" }}>
           {[
-            { icon: "📅", label: "Date", value: "August 15, 2026" },
-            { icon: "🕒", label: "Start Time", value: "17:30 CET" },
-            { icon: "🏟️", label: "Venue", value: "Belfius Hockey Arena, Wavre" },
-            { icon: "📺", label: "Live Stream", value: "Available on Watch.Hockey" }
+            { icon: "📅", label: "Date & Timing", value: "August 15, 2026 - 17:30 CET" },
+            { icon: "🕒", label: "Local Kickoff Times", value: "17:30 CET (Belgium / France) / 21:00 IST (India)" },
+            { icon: "🏟️", label: "Stadium & Venue", value: "Belfius Hockey Arena, Wavre (BEL)" },
+            { icon: "📺", label: "Official Broadcast", value: "RTBF, VRT, L'Equipe, Watch.Hockey" }
           ].map((stat) => (
-            <div key={stat.label} style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.2rem", textAlign: "center" }}>
-              <span style={{ fontSize: "1.8rem", display: "block", marginBottom: "0.5rem" }}>{stat.icon}</span>
-              <span style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "var(--text-muted)", letterSpacing: "0.05em", display: "block", marginBottom: "0.2rem" }}>{stat.label}</span>
-              <strong style={{ color: "var(--text-main)", fontSize: "0.95rem" }}>{stat.value}</strong>
+            <div key={stat.label} style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem", textAlign: "center" }}>
+              <span style={{ fontSize: "2rem", display: "block", marginBottom: "0.5rem" }}>{stat.icon}</span>
+              <span style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "var(--text-muted)", letterSpacing: "0.05em", display: "block", marginBottom: "0.3rem" }}>{stat.label}</span>
+              <strong style={{ color: "var(--text-main)", fontSize: "0.95rem", lineHeight: "1.4", display: "block" }}>{stat.value}</strong>
             </div>
           ))}
         </section>
 
-        {/* Tactical Preview */}
+        {/* 3. Match Overview */}
         <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            Match Preview & Team News
+            Match Overview
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            The opening match for the co-hosts Belgium in Wavre. The Red Lions will look to start their World Cup campaign in style in front of a sold-out home crowd. France, under Victor Charlet, is a highly physical team that can surprise opponents with their set-pieces. Belgium's experience and depth should give them the control.
+            The opening match of the 2026 Hockey World Cup for co-hosts Belgium takes place on August 15, 2026, against neighbors France. Playing in Wavre at the brand-new Belfius Hockey Arena, the Red Lions will seek to secure a victory in front of their home crowd. France enters the tournament with a growing reputation, aiming to challenge their highly decorated neighbors.
           </p>
         </section>
 
-        {/* Head-to-Head */}
+        {/* 4. Team Form */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Team Form
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "1rem", fontSize: "1.1rem" }}>🇧🇪 Belgium (Recent Form)</h4>
+              <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
+                {['W', 'W', 'W', 'W', 'L'].map((r, i) => (
+                  <span key={i} style={{ width: "30px", height: "30px", borderRadius: "50%", background: r === 'W' ? '#22c55e' : '#ef4444', color: '#fff', display: "inline-flex", alignItems: "center", justifyContent: "center", fontWeight: "bold", fontSize: "0.85rem" }}>{r}</span>
+                ))}
+              </div>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                Belgium is in spectacular form, being crowned the 2025–26 FIH Pro League Champions in June 2026. Their depth and experienced core make them top contenders.
+              </p>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "1rem", fontSize: "1.1rem" }}>🇫🇷 France (Recent Form)</h4>
+              <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
+                {['W', 'L', 'W', 'L', 'W'].map((r, i) => (
+                  <span key={i} style={{ width: "30px", height: "30px", borderRadius: "50%", background: r === 'W' ? '#22c55e' : '#ef4444', color: '#fff', display: "inline-flex", alignItems: "center", justifyContent: "center", fontWeight: "bold", fontSize: "0.85rem" }}>{r}</span>
+                ))}
+              </div>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                France is showing steady growth under Victor Charlet, having finished a respectable 4th in the EuroHockey Championship 2025 (ahead of Belgium in 5th).
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 5. Head-to-Head Summary */}
         <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
             Head-to-Head Records
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            Belgium has won all their last 4 meetings against France, entering as strong favorites.
+            While France defeated Belgium in the EuroHockey 2025 standings, Belgium has dominated head-to-head matches in the Pro League and official test series:
           </p>
+          <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "12px", overflow: "hidden" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", fontSize: "0.9rem" }}>
+              <thead>
+                <tr style={{ background: "rgba(255,255,255,0.02)", borderBottom: "1px solid var(--border-color)" }}>
+                  <th style={{ padding: "0.75rem 1rem", color: "var(--text-main)" }}>Date</th>
+                  <th style={{ padding: "0.75rem 1rem", color: "var(--text-main)" }}>Tournament</th>
+                  <th style={{ padding: "0.75rem 1rem", color: "var(--text-main)" }}>Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>May 29, 2022</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>FIH Pro League</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-main)", fontWeight: "bold" }}>Belgium won 3 - 1</td>
+                </tr>
+                <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>May 28, 2022</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>FIH Pro League</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-main)", fontWeight: "bold" }}>Belgium won 2 - 1</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>April 2021</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>International Test</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-main)", fontWeight: "bold" }}>Belgium won 5 - 0</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
-        {/* Matchday Challenges & Pain Points */}
-        <section style={{ background: "rgba(192,0,48,0.03)", border: "1px solid rgba(192,0,48,0.1)", borderRadius: "20px", padding: "2rem", marginBottom: "3rem" }}>
-          <h3 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", marginBottom: "1rem" }}>
-            ⚠️ Tactical Challenges & Key Areas
-          </h3>
-          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.8", margin: 0 }}>
-            France must avoid conceding early goals to prevent the Belgian crowd from taking over the atmosphere. Belgium needs to manage opening-day pressure and build team rhythm.
-          </p>
+        {/* 6. Key Players */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Key Players to Watch
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "0.5rem" }}>🇧🇪 Arthur Van Doren (Belgium)</h4>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                The veteran defender serves as the heartbeat of the Red Lions' build-up play. His interceptive skills and distribution are unmatched globally.
+              </p>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "0.5rem" }}>🇫🇷 Victor Charlet (France)</h4>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                France's captain and premier drag-flicker. Charlet's penalty corner execution is France's primary scoring threat, and his leadership organizes the French defense.
+              </p>
+            </div>
+          </div>
         </section>
 
-        {/* Broadcasters Info */}
+        {/* 7. Tactical Preview */}
         <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            Where to Watch: TV Channels & Live Streams
+            Tactical Preview
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            You can watch this blockbuster match live on the following channels:
+            Belgium will seek to dominate the midfield channels, utilizing Arthur Van Doren and Victor Wegnez to run patient possession circles. The Red Lions' main objective is to stretch France's backline early and win early penalty corners.
           </p>
-          <ul style={{ color: "var(--text-muted)", paddingLeft: "1.2rem" }}>
-            <li><strong>Official Broadcast Networks:</strong> RTBF & VRT in Belgium; L'Equipe in France; Watch.Hockey internationally.</li>
-            <li style={{ marginTop: "0.5rem" }}><strong>Digital Streams:</strong> Stream live internationally on the FIH official platform <em>Watch.Hockey</em> (subject to geo-blocking restrictions in certain territories).</li>
-          </ul>
+          <p style={{ color: "var(--text-muted)", margin: 0 }}>
+            France will look to run a compact, low defensive block. They will try to frustrate Belgium's build-up and capitalize on counter-pressing opportunities. Preventing Charlet from conceding cards is a high priority, as Belgium is highly structured at exploiting player advantages.
+          </p>
         </section>
 
-        {/* FAQ Section */}
+        {/* 8. Pool Impact */}
+        <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Pool Impact & Standings Implications
+          </h2>
+          <p style={{ color: "var(--text-muted)", margin: 0 }}>
+            In Pool B (featuring Belgium, Germany, France, and Chile), securing points in the opening matchup is critical. The winner will put themselves in a prime position to challenge Germany for the direct Quarter-Final spot. The loser will likely have to navigate the crossover playoff matches.
+          </p>
+        </section>
+
+        {/* 9. Prediction (Opinion) */}
+        <section style={{ background: "rgba(192,0,48,0.03)", border: "1px solid rgba(192,0,48,0.1)", borderRadius: "20px", padding: "2rem", marginBottom: "3rem" }}>
+          <h3 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", marginBottom: "1rem" }}>
+            📢 Analyst Opinion & Prediction
+          </h3>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.8", marginBottom: "1rem" }}>
+            <strong>Note:</strong> The following prediction represents the editorial opinion of our senior hockey analysts and should not be used as official tournament projection.
+          </p>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.8", margin: 0 }}>
+            While France has shown significant progress in recent tournaments (including EuroHockey 2025), Belgium's experience, home turf advantage in Wavre, and their Pro League Championship run in June 2026 make them heavy favorites. We predict a comfortable win for the Red Lions.
+            <br /><br />
+            <strong>Predicted Score:</strong> Belgium 4 - 1 France
+          </p>
+        </section>
+
+        {/* 10. FAQs */}
         <section style={{ marginBottom: "3rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
             Frequently Asked Questions
@@ -186,6 +293,27 @@ export default function MatchPreviewPage() {
                 <p style={{ color: "var(--text-muted)", margin: 0, fontSize: "0.95rem", lineHeight: "1.6" }}>{item.a || item.answer}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 11. Related Pages */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Related Pages
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
+            <a href="/pool-b" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>📈 Pool B Standings</span>
+              <span>→</span>
+            </a>
+            <a href="/schedule" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>📅 Complete Match Schedule</span>
+              <span>→</span>
+            </a>
+            <a href="/venues/belfius-arena-guide" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>🏟️ Belfius Arena Visitor Guide</span>
+              <span>→</span>
+            </a>
           </div>
         </section>
       </main>
