@@ -3,28 +3,28 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "India vs England Women Hockey World Cup 2026 Preview & Timings",
-  description: "Preview of the India vs England Women's match at the 2026 Hockey World Cup. Timings, head-to-head records, and streaming channels.",
+  title: "India vs England Women Hockey World Cup 2026 Preview",
+  description: "Preview the India vs England women's match at the 2026 Hockey World Cup. Check head-to-head records, match timings, and expert predictions.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/india-vs-england-women",
   },
   openGraph: {
-    title: "India vs England Women Hockey World Cup 2026 Preview & Timings",
-    description: "Preview of the India vs England Women's match at the 2026 Hockey World Cup. Timings, head-to-head records, and streaming channels.",
+    title: "India vs England Women Hockey World Cup 2026 Preview",
+    description: "Preview the India vs England women's match at the 2026 Hockey World Cup. Check head-to-head records, match timings, and expert predictions.",
     url: "https://hockeyworldcup2026schedule.com/matches/india-vs-england-women",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "India vs England Women Hockey World Cup 2026 Preview & Timings",
+        alt: "India vs England Women Hockey World Cup 2026 Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "India vs England Women Hockey World Cup 2026 Preview & Timings",
-    description: "Preview of the India vs England Women's match at the 2026 Hockey World Cup. Timings, head-to-head records, and streaming channels.",
+    title: "India vs England Women Hockey World Cup 2026 Preview",
+    description: "Preview the India vs England women's match at the 2026 Hockey World Cup. Check head-to-head records, match timings, and expert predictions.",
     images: ["/og-image.jpg"],
   },
 };
@@ -91,7 +91,7 @@ export default function MatchPreviewPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">🏑 Blockbuster Match Previews</p>
-          <h1 className="hero-title">India vs England (Women) Pre-Match Guide</h1>
+          <h1 className="hero-title">India vs England Women World Cup 2026 Pre-Match Guide</h1>
           <p className="hero-description">
             Your detailed tactical guide to the massive India vs England (Women) showdown at the 2026 Hockey World Cup. Get timings, head-to-head records, predictions, and streaming channels.
           </p>

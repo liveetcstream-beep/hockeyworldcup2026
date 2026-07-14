@@ -3,28 +3,28 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Belgium vs France Hockey World Cup 2026: Opening Match Preview & Timings",
-  description: "Preview of Belgium vs France Men's match at the 2026 Hockey World Cup. Timings, head-to-head, and live stream channels.",
+  title: "Belgium vs France Hockey World Cup 2026 Match Preview",
+  description: "Co-hosts Belgium face France in their HWC 2026 opening match. Get detailed match previews, head-to-head records, timings, and predictions.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/belgium-vs-france",
   },
   openGraph: {
-    title: "Belgium vs France Hockey World Cup 2026: Opening Match Preview & Timings",
-    description: "Preview of Belgium vs France Men's match at the 2026 Hockey World Cup. Timings, head-to-head, and live stream channels.",
+    title: "Belgium vs France Hockey World Cup 2026 Match Preview",
+    description: "Co-hosts Belgium face France in their HWC 2026 opening match. Get detailed match previews, head-to-head records, timings, and predictions.",
     url: "https://hockeyworldcup2026schedule.com/matches/belgium-vs-france",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Belgium vs France Hockey World Cup 2026: Opening Match Preview & Timings",
+        alt: "Belgium vs France Hockey World Cup 2026 Match Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Belgium vs France Hockey World Cup 2026: Opening Match Preview & Timings",
-    description: "Preview of Belgium vs France Men's match at the 2026 Hockey World Cup. Timings, head-to-head, and live stream channels.",
+    title: "Belgium vs France Hockey World Cup 2026 Match Preview",
+    description: "Co-hosts Belgium face France in their HWC 2026 opening match. Get detailed match previews, head-to-head records, timings, and predictions.",
     images: ["/og-image.jpg"],
   },
 };
@@ -91,7 +91,7 @@ export default function MatchPreviewPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">🏑 Blockbuster Match Previews</p>
-          <h1 className="hero-title">Belgium vs France (Men) Pre-Match Guide</h1>
+          <h1 className="hero-title">Belgium vs France Hockey World Cup 2026 Pre-Match Guide</h1>
           <p className="hero-description">
             Your detailed tactical guide to the massive Belgium vs France (Men) showdown at the 2026 Hockey World Cup. Get timings, head-to-head records, predictions, and streaming channels.
           </p>

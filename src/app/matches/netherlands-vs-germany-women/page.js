@@ -3,28 +3,28 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Netherlands vs Germany Women Hockey World Cup 2026 Preview",
-  description: "Catch the Netherlands vs Germany Women's match at HWC 2026. Previews, match times, head-to-head records, and streaming channels.",
+  title: "Netherlands vs Germany Women Hockey World Cup 2026",
+  description: "Preview the Netherlands vs Germany women's match at HWC 2026. Access complete head-to-head history, squad sheets, match timings, and predictions.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/netherlands-vs-germany-women",
   },
   openGraph: {
-    title: "Netherlands vs Germany Women Hockey World Cup 2026 Preview",
-    description: "Catch the Netherlands vs Germany Women's match at HWC 2026. Previews, match times, head-to-head records, and streaming channels.",
+    title: "Netherlands vs Germany Women Hockey World Cup 2026",
+    description: "Preview the Netherlands vs Germany women's match at HWC 2026. Access complete head-to-head history, squad sheets, match timings, and predictions.",
     url: "https://hockeyworldcup2026schedule.com/matches/netherlands-vs-germany-women",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Netherlands vs Germany Women Hockey World Cup 2026 Preview",
+        alt: "Netherlands vs Germany Women Hockey World Cup 2026",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Netherlands vs Germany Women Hockey World Cup 2026 Preview",
-    description: "Catch the Netherlands vs Germany Women's match at HWC 2026. Previews, match times, head-to-head records, and streaming channels.",
+    title: "Netherlands vs Germany Women Hockey World Cup 2026",
+    description: "Preview the Netherlands vs Germany women's match at HWC 2026. Access complete head-to-head history, squad sheets, match timings, and predictions.",
     images: ["/og-image.jpg"],
   },
 };
@@ -91,7 +91,7 @@ export default function MatchPreviewPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">🏑 Blockbuster Match Previews</p>
-          <h1 className="hero-title">Netherlands vs Germany (Women) Pre-Match Guide</h1>
+          <h1 className="hero-title">Netherlands vs Germany Women World Cup 2026 Pre-Match Guide</h1>
           <p className="hero-description">
             Your detailed tactical guide to the massive Netherlands vs Germany (Women) showdown at the 2026 Hockey World Cup. Get timings, head-to-head records, predictions, and streaming channels.
           </p>

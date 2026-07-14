@@ -3,28 +3,28 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Australia vs Spain Hockey World Cup 2026: Pre-Match Preview & Timings",
-  description: "Preview of the Australia vs Spain Men's match at the 2026 Hockey World Cup. Timings, head-to-head, and streaming channels.",
+  title: "Australia vs Spain Hockey World Cup 2026 Match Preview",
+  description: "Preview the Australia vs Spain men's match at HWC 2026. Check head-to-head records, squad lineups, match timings, and predictions.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/australia-vs-spain",
   },
   openGraph: {
-    title: "Australia vs Spain Hockey World Cup 2026: Pre-Match Preview & Timings",
-    description: "Preview of the Australia vs Spain Men's match at the 2026 Hockey World Cup. Timings, head-to-head, and streaming channels.",
+    title: "Australia vs Spain Hockey World Cup 2026 Match Preview",
+    description: "Preview the Australia vs Spain men's match at HWC 2026. Check head-to-head records, squad lineups, match timings, and predictions.",
     url: "https://hockeyworldcup2026schedule.com/matches/australia-vs-spain",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Australia vs Spain Hockey World Cup 2026: Pre-Match Preview & Timings",
+        alt: "Australia vs Spain Hockey World Cup 2026 Match Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Australia vs Spain Hockey World Cup 2026: Pre-Match Preview & Timings",
-    description: "Preview of the Australia vs Spain Men's match at the 2026 Hockey World Cup. Timings, head-to-head, and streaming channels.",
+    title: "Australia vs Spain Hockey World Cup 2026 Match Preview",
+    description: "Preview the Australia vs Spain men's match at HWC 2026. Check head-to-head records, squad lineups, match timings, and predictions.",
     images: ["/og-image.jpg"],
   },
 };
@@ -91,7 +91,7 @@ export default function MatchPreviewPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">🏑 Blockbuster Match Previews</p>
-          <h1 className="hero-title">Australia vs Spain (Men) Pre-Match Guide</h1>
+          <h1 className="hero-title">Australia vs Spain Hockey World Cup 2026 Pre-Match Guide</h1>
           <p className="hero-description">
             Your detailed tactical guide to the massive Australia vs Spain (Men) showdown at the 2026 Hockey World Cup. Get timings, head-to-head records, predictions, and streaming channels.
           </p>

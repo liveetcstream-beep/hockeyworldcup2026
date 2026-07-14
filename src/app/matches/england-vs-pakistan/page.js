@@ -3,28 +3,28 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "England vs Pakistan Hockey World Cup 2026: Match Preview & Timings",
-  description: "Preview of the England vs Pakistan Men's match at the 2026 Hockey World Cup. Head-to-head stats, match times, and live stream channels.",
+  title: "England vs Pakistan Hockey World Cup 2026 Match Preview",
+  description: "Complete preview of the England vs Pakistan men's match at HWC 2026. Get live stream details, match timings, starting lineups, and predictions.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/england-vs-pakistan",
   },
   openGraph: {
-    title: "England vs Pakistan Hockey World Cup 2026: Match Preview & Timings",
-    description: "Preview of the England vs Pakistan Men's match at the 2026 Hockey World Cup. Head-to-head stats, match times, and live stream channels.",
+    title: "England vs Pakistan Hockey World Cup 2026 Match Preview",
+    description: "Complete preview of the England vs Pakistan men's match at HWC 2026. Get live stream details, match timings, starting lineups, and predictions.",
     url: "https://hockeyworldcup2026schedule.com/matches/england-vs-pakistan",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "England vs Pakistan Hockey World Cup 2026: Match Preview & Timings",
+        alt: "England vs Pakistan Hockey World Cup 2026 Match Preview",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "England vs Pakistan Hockey World Cup 2026: Match Preview & Timings",
-    description: "Preview of the England vs Pakistan Men's match at the 2026 Hockey World Cup. Head-to-head stats, match times, and live stream channels.",
+    title: "England vs Pakistan Hockey World Cup 2026 Match Preview",
+    description: "Complete preview of the England vs Pakistan men's match at HWC 2026. Get live stream details, match timings, starting lineups, and predictions.",
     images: ["/og-image.jpg"],
   },
 };
@@ -91,7 +91,7 @@ export default function MatchPreviewPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">🏑 Blockbuster Match Previews</p>
-          <h1 className="hero-title">England vs Pakistan (Men) Pre-Match Guide</h1>
+          <h1 className="hero-title">England vs Pakistan Hockey World Cup 2026 Pre-Match Guide</h1>
           <p className="hero-description">
             Your detailed tactical guide to the massive England vs Pakistan (Men) showdown at the 2026 Hockey World Cup. Get timings, head-to-head records, predictions, and streaming channels.
           </p>
