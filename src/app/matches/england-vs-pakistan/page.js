@@ -29,14 +29,25 @@ export const metadata = {
   },
 };
 
-
 export default function MatchPreviewPage() {
   const faqItems = [
-  {
-    "q": "Where will England vs Pakistan be played?",
-    "a": "The match will take place at the Wagener Hockey Stadium in Amstelveen, Netherlands, on the opening day of the tournament."
-  }
-];
+    {
+      "q": "What is the recent head-to-head record between England and Pakistan in men's hockey?",
+      "a": "England has dominated recent 2026 encounters, defeating Pakistan 7-0 and 2-1 in the FIH Pro League in June, and 4-1 in the World Cup Qualifiers Final in Egypt in March."
+    },
+    {
+      "q": "Did Pakistan qualify for the FIH Hockey World Cup 2026?",
+      "a": "Yes, despite losing the qualifiers final 4-1 to England, Pakistan successfully secured their ticket to the 2026 World Cup by reaching the semi-finals of the qualifying event in Egypt."
+    },
+    {
+      "q": "When and where is the England vs. Pakistan World Cup match?",
+      "a": "The teams face each other in their opening Pool D campaign on Saturday, August 15, 2026, at the Wagener Hockey Stadium in Amstelveen, Netherlands."
+    },
+    {
+      "q": "Where can I watch the England vs. Pakistan match live?",
+      "a": "The match will air live on TNT Sports in the UK, PTV Sports in Pakistan, and stream internationally on the Watch.Hockey platform."
+    }
+  ];
 
   return (
     <>
@@ -107,74 +118,170 @@ export default function MatchPreviewPage() {
       </section>
 
       <main className="sports-container py-12">
-        {/* Breadcrumb */}
+        {/* 1. Breadcrumbs */}
         <nav aria-label="breadcrumb" style={{ marginBottom: "2rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
-          <a href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Home</a>
+          <a href="/" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Hockey World Cup 2026 Home</a>
           <span style={{ margin: "0 0.5rem" }}>&gt;</span>
-          <span style={{ color: "var(--text-main)", fontWeight: "600" }}>England vs Pakistan Guide</span>
+          <a href="/schedule" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Schedule</a>
+          <span style={{ margin: "0 0.5rem" }}>&gt;</span>
+          <span style={{ color: "var(--text-main)", fontWeight: "600" }}>England vs Pakistan</span>
         </nav>
 
-        {/* Quick Details Grid */}
-        <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1.2rem", marginBottom: "4rem" }}>
+        {/* 2. Date, Time & Venue Block */}
+        <section style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1.2rem", marginBottom: "3rem" }}>
           {[
-            { icon: "📅", label: "Date", value: "August 15, 2026" },
-            { icon: "🕒", label: "Start Time", value: "16:00 CET / 19:30 IST" },
-            { icon: "🏟️", label: "Venue", value: "Wagener Stadium, Amstelveen" },
-            { icon: "📺", label: "Live Stream", value: "Available on Watch.Hockey" }
+            { icon: "📅", label: "Date & Timing", value: "August 15, 2026 - 16:00 CET" },
+            { icon: "🕒", label: "Local Kickoff Times", value: "16:00 CET (Netherlands) / 19:30 PST (Pakistan)" },
+            { icon: "🏟️", label: "Stadium & Venue", value: "Wagener Stadium, Amstelveen (NED)" },
+            { icon: "📺", label: "Official Broadcast", value: "TNT Sports, PTV Sports, Watch.Hockey" }
           ].map((stat) => (
-            <div key={stat.label} style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.2rem", textAlign: "center" }}>
-              <span style={{ fontSize: "1.8rem", display: "block", marginBottom: "0.5rem" }}>{stat.icon}</span>
-              <span style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "var(--text-muted)", letterSpacing: "0.05em", display: "block", marginBottom: "0.2rem" }}>{stat.label}</span>
-              <strong style={{ color: "var(--text-main)", fontSize: "0.95rem" }}>{stat.value}</strong>
+            <div key={stat.label} style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem", textAlign: "center" }}>
+              <span style={{ fontSize: "2rem", display: "block", marginBottom: "0.5rem" }}>{stat.icon}</span>
+              <span style={{ fontSize: "0.75rem", textTransform: "uppercase", color: "var(--text-muted)", letterSpacing: "0.05em", display: "block", marginBottom: "0.3rem" }}>{stat.label}</span>
+              <strong style={{ color: "var(--text-main)", fontSize: "0.95rem", lineHeight: "1.4", display: "block" }}>{stat.value}</strong>
             </div>
           ))}
         </section>
 
-        {/* Tactical Preview */}
+        {/* 3. Match Overview */}
         <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            Match Preview & Team News
+            Match Overview
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            An opening day thriller in Pool D. England enters as the tactically favored side, but Pakistan's unpredictable pace can cause issues. Pakistan's striker Hannan Shahid will look to exploit any gaps in England's backline. England will look to control the tempo through possession and limit Pakistan's fast transitions.
+            England and Pakistan resume their international rivalry on August 15, 2026, at the Wagener Stadium in Amstelveen. This opening Pool D fixture matches England's structured, set-piece heavy tactical organization against Pakistan's vertical transition speed and counter-attacking prowess. Both teams are looking to secure three points early.
           </p>
         </section>
 
-        {/* Head-to-Head */}
+        {/* 4. Team Form */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Team Form
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "1rem", fontSize: "1.1rem" }}>🏴󠁧󠁢󠁥󠁮󠁧󠁿 England (Recent Form)</h4>
+              <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
+                {['W', 'W', 'W', 'L', 'W'].map((r, i) => (
+                  <span key={i} style={{ width: "30px", height: "30px", borderRadius: "50%", background: r === 'W' ? '#22c55e' : '#ef4444', color: '#fff', display: "inline-flex", alignItems: "center", justifyContent: "center", fontWeight: "bold", fontSize: "0.85rem" }}>{r}</span>
+                ))}
+              </div>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                England enters in excellent form, having registered consecutive wins in the Pro League (7-0 and 2-1) in June 2026, showcasing high tactical discipline.
+              </p>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "1rem", fontSize: "1.1rem" }}>🇵🇰 Pakistan (Recent Form)</h4>
+              <div style={{ display: "flex", gap: "0.5rem", marginBottom: "1rem" }}>
+                {['L', 'L', 'L', 'W', 'L'].map((r, i) => (
+                  <span key={i} style={{ width: "30px", height: "30px", borderRadius: "50%", background: r === 'W' ? '#22c55e' : '#ef4444', color: '#fff', display: "inline-flex", alignItems: "center", justifyContent: "center", fontWeight: "bold", fontSize: "0.85rem" }}>{r}</span>
+                ))}
+              </div>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                Pakistan has struggled with consistency in the Pro League but remains dangerous in tournament play, boasting a fast, young attacking forward line.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* 5. Head-to-Head Summary */}
         <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
             Head-to-Head Records
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            England won the last encounter 3-1, but Pakistan's young attackers have improved significantly since then.
+            England holds a distinct advantage in recent head-to-head fixtures during the 2026 campaign, winning qualifiers and Pro League encounters:
           </p>
+          <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "12px", overflow: "hidden" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", textAlign: "left", fontSize: "0.9rem" }}>
+              <thead>
+                <tr style={{ background: "rgba(255,255,255,0.02)", borderBottom: "1px solid var(--border-color)" }}>
+                  <th style={{ padding: "0.75rem 1rem", color: "var(--text-main)" }}>Date</th>
+                  <th style={{ padding: "0.75rem 1rem", color: "var(--text-main)" }}>Tournament</th>
+                  <th style={{ padding: "0.75rem 1rem", color: "var(--text-main)" }}>Result</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>June 27, 2026</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>FIH Pro League</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-main)", fontWeight: "bold" }}>England won 7 - 0</td>
+                </tr>
+                <tr style={{ borderBottom: "1px solid var(--border-color)" }}>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>June 24, 2026</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>FIH Pro League</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-main)", fontWeight: "bold" }}>England won 2 - 1</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>March 7, 2026</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-muted)" }}>World Cup Qualifiers (Final)</td>
+                  <td style={{ padding: "0.75rem 1rem", color: "var(--text-main)", fontWeight: "bold" }}>England won 4 - 1</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </section>
 
-        {/* Matchday Challenges & Pain Points */}
-        <section style={{ background: "rgba(192,0,48,0.03)", border: "1px solid rgba(192,0,48,0.1)", borderRadius: "20px", padding: "2rem", marginBottom: "3rem" }}>
-          <h3 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", marginBottom: "1rem" }}>
-            ⚠️ Tactical Challenges & Key Areas
-          </h3>
-          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.8", margin: 0 }}>
-            Pakistan's defense has historically struggled in the final quarter under heavy pressure. England must maintain structure and avoid getting drawn into a chaotic, end-to-end match.
-          </p>
+        {/* 6. Key Players */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Key Players to Watch
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem" }}>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "0.5rem" }}>🏴󠁧󠁢󠁥󠁮󠁧󠁿 Phil Roper (England)</h4>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                Roper's tactical awareness in midfield and clinical circles entries make him a key playmaker. His ability to draw defenders and deliver quick passes is vital.
+              </p>
+            </div>
+            <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", padding: "1.5rem", borderRadius: "12px" }}>
+              <h4 style={{ color: "var(--text-main)", marginBottom: "0.5rem" }}>🇵🇰 Hannan Shahid (Pakistan)</h4>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: 0, lineHeight: "1.6" }}>
+                The young forward has been the shining light in Pakistan's attack. His explosive speed and high-dribble rates make him a constant threat on counter-transitions.
+              </p>
+            </div>
+          </div>
         </section>
 
-        {/* Broadcasters Info */}
+        {/* 7. Tactical Preview */}
         <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            Where to Watch: TV Channels & Live Streams
+            Tactical Preview
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            You can watch this blockbuster match live on the following channels:
+            England will look to control the tempo through a structured mid-court press, seeking to win possession in the middle third. Their offensive pattern relies on overlapping wing progressions to isolate defenders and draw set-pieces.
           </p>
-          <ul style={{ color: "var(--text-muted)", paddingLeft: "1.2rem" }}>
-            <li><strong>Official Broadcast Networks:</strong> TNT Sports in the UK; PTV Sports in Pakistan; Watch.Hockey internationally.</li>
-            <li style={{ marginTop: "0.5rem" }}><strong>Digital Streams:</strong> Stream live internationally on the FIH official platform <em>Watch.Hockey</em> (subject to geo-blocking restrictions in certain territories).</li>
-          </ul>
+          <p style={{ color: "var(--text-muted)", margin: 0 }}>
+            Pakistan must maintain defensive discipline in the final quarter, an area where they have historically conceded late goals. They will look to absorb the English press and utilize the speed of Hannan Shahid to attack on the counter.
+          </p>
         </section>
 
-        {/* FAQ Section */}
+        {/* 8. Pool Impact */}
+        <section style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Pool Impact & Standings Implications
+          </h2>
+          <p style={{ color: "var(--text-muted)", margin: 0 }}>
+            In Pool D (featuring England, Pakistan, India, and Wales), securing an opening day victory is essential. With India also in the group, the winner will put themselves in a prime position to challenge for the top seed. The loser will face high pressure to qualify via the crossovers.
+          </p>
+        </section>
+
+        {/* 9. Prediction (Opinion) */}
+        <section style={{ background: "rgba(192,0,48,0.03)", border: "1px solid rgba(192,0,48,0.1)", borderRadius: "20px", padding: "2rem", marginBottom: "3rem" }}>
+          <h3 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", marginBottom: "1rem" }}>
+            📢 Analyst Opinion & Prediction
+          </h3>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.8", marginBottom: "1rem" }}>
+            <strong>Note:</strong> The following prediction represents the editorial opinion of our senior hockey analysts and should not be used as official tournament projection.
+          </p>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.8", margin: 0 }}>
+            England enter as favorites given their dominant 2026 record, including the 7-0 Pro League win in June. However, Pakistan is capable of playing high-intensity tournament hockey. We expect a hard-fought match that England should win.
+            <br /><br />
+            <strong>Predicted Score:</strong> England 3 - 1 Pakistan
+          </p>
+        </section>
+
+        {/* 10. FAQs */}
         <section style={{ marginBottom: "3rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
             Frequently Asked Questions
@@ -186,6 +293,27 @@ export default function MatchPreviewPage() {
                 <p style={{ color: "var(--text-muted)", margin: 0, fontSize: "0.95rem", lineHeight: "1.6" }}>{item.a || item.answer}</p>
               </div>
             ))}
+          </div>
+        </section>
+
+        {/* 11. Related Pages */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            Related Pages
+          </h2>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
+            <a href="/pool-d" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>📈 Pool D Standings</span>
+              <span>→</span>
+            </a>
+            <a href="/schedule" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>📅 Complete Match Schedule</span>
+              <span>→</span>
+            </a>
+            <a href="/venues/wagener-stadium-guide" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>🏟️ Wagener Stadium Visitor Guide</span>
+              <span>→</span>
+            </a>
           </div>
         </section>
       </main>
