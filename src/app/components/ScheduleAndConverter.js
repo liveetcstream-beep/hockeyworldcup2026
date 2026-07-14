@@ -166,12 +166,12 @@ export default function ScheduleAndConverter() {
         </div>
 
         <div style={{
-          background: "linear-gradient(135deg, rgba(15, 23, 42, 0.6) 0%, rgba(30, 41, 59, 0.8) 100%)",
-          border: "1px solid rgba(255, 255, 255, 0.08)",
+          background: "var(--bg-secondary)",
+          border: "1px solid var(--border-color)",
           borderRadius: "24px",
           padding: "2.5rem",
           textAlign: "center",
-          boxShadow: "0 10px 30px rgba(0, 0, 0, 0.3)",
+          boxShadow: "0 10px 30px rgba(15, 23, 42, 0.04)",
           position: "relative",
           overflow: "hidden"
         }}>
@@ -179,9 +179,9 @@ export default function ScheduleAndConverter() {
             position: "absolute",
             top: "1rem",
             right: "1.5rem",
-            background: "rgba(239, 68, 68, 0.15)",
-            border: "1px solid rgba(239, 68, 68, 0.3)",
-            color: "#ef4444",
+            background: "rgba(192, 0, 48, 0.06)",
+            border: "1px solid rgba(192, 0, 48, 0.15)",
+            color: "var(--primary)",
             fontSize: "0.75rem",
             fontWeight: "800",
             padding: "0.25rem 0.75rem",
@@ -192,11 +192,11 @@ export default function ScheduleAndConverter() {
             textTransform: "uppercase",
             letterSpacing: "0.05em"
           }}>
-            <span className="pulse-dot" style={{ backgroundColor: "#ef4444" }}></span> Live Coverage Ready
+            <span className="pulse-dot" style={{ backgroundColor: "var(--primary)" }}></span> Live Coverage Ready
           </div>
 
           <div style={{ fontSize: "3rem", marginBottom: "1rem" }}>🏑</div>
-          <h3 className="text-2xl font-bold text-white mb-3" style={{ fontStyle: "italic" }}>
+          <h3 className="text-2xl font-bold mb-3" style={{ fontStyle: "italic", color: "var(--text-main)" }}>
             Real-Time Scores & Ball-by-Ball Updates
           </h3>
           <p style={{ color: "var(--text-muted)", maxWidth: "600px", margin: "0 auto 2rem auto", fontSize: "0.95rem", lineHeight: "1.7" }}>
@@ -206,7 +206,7 @@ export default function ScheduleAndConverter() {
           <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
             <a href="/live-scores" className="cta-button primary-cta" style={{
               background: "linear-gradient(135deg, var(--primary) 0%, #7a001a 100%)",
-              boxShadow: "0 4px 15px rgba(192, 0, 48, 0.3)",
+              boxShadow: "0 4px 15px rgba(192, 0, 48, 0.2)",
               color: "#fff",
               padding: "0.8rem 1.6rem",
               borderRadius: "10px",
@@ -217,9 +217,9 @@ export default function ScheduleAndConverter() {
               ⚡ Access Live Scoreboard
             </a>
             <a href="/hockey-live-streaming" className="cta-button secondary-cta" style={{
-              background: "rgba(255, 255, 255, 0.05)",
-              border: "1px solid rgba(255, 255, 255, 0.15)",
-              color: "#fff",
+              background: "var(--bg-tertiary)",
+              border: "1px solid var(--border-color)",
+              color: "var(--text-main)",
               padding: "0.8rem 1.6rem",
               borderRadius: "10px",
               fontWeight: "700",
