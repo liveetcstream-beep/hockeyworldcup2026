@@ -142,6 +142,7 @@ h1, h2, h3, h4, h5, h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2rem; /* Add breathing room between logo, menu, and search widgets */
 }
 
 .logo-text {
