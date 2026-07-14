@@ -134,25 +134,54 @@ export default function Header() {
                   Schedules & Pools
                   <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
                 </span>
-                <div className="mega-dropdown">
-                  <div className="mega-grid">
+                <div className="mega-dropdown width-xl">
+                  <div className="mega-grid cols-4">
                     <div className="mega-column">
-                      <h4>📅 Tournament Calendar</h4>
+                      <h4>📅 Calendar & Format</h4>
                       <ul>
                         <li><a href="/schedule">Match Schedule & Timings</a></li>
                         <li><a href="/format">⚙️ Tournament Format & Bracket</a></li>
                         <li><a href="/points-table">📈 Points Standing Rules</a></li>
                         <li><a href="/h2h">⚔️ Head-to-Head (H2H) History</a></li>
                       </ul>
-                    </div>
-                    <div className="mega-column">
-                      <h4>📊 Standings by Pool</h4>
+                      <h4 style={{ marginTop: "1.2rem" }}>📊 Standings by Pool</h4>
                       <ul>
                         <li><a href="/hockey-world-cup-2026-groups">All Pool Standings Hub</a></li>
                         <li><a href="/pool-a">🔴 Pool A Standings</a></li>
                         <li><a href="/pool-b">🔵 Pool B Standings</a></li>
                         <li><a href="/pool-c">🟢 Pool C Standings</a></li>
                         <li><a href="/pool-d">🟡 Pool D Standings</a></li>
+                      </ul>
+                    </div>
+                    <div className="mega-column">
+                      <h4>🏑 Schedules (Pools A & B)</h4>
+                      <ul>
+                        <li><a href="/hockey-world-cup-2026-schedule-netherlands">🇳🇱 Netherlands Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-argentina">🇦🇷 Argentina Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-chile">🇨🇱 Chile Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-new-zealand">🇳🇿 New Zealand Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-germany">🇩🇪 Germany Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-belgium">🇧🇪 Belgium Schedule</a></li>
+                      </ul>
+                    </div>
+                    <div className="mega-column">
+                      <h4>🏑 Schedules (Pools C & D)</h4>
+                      <ul>
+                        <li><a href="/hockey-world-cup-2026-schedule-australia">🇦🇺 Australia Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-india">🇮🇳 India Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-pakistan">🇵🇰 Pakistan Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-spain">🇪🇸 Spain Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales Schedule</a></li>
+                      </ul>
+                    </div>
+                    <div className="mega-column highlighted-col">
+                      <h4>⭐ Quick Schedules</h4>
+                      <ul>
+                        <li><a href="/hockey-world-cup-2026-schedule-malaysia">🇲🇾 Malaysia Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-france">🇫🇷 France Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-ireland">🇮🇪 Ireland Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-south-africa">🇿🇦 South Africa Schedule</a></li>
                       </ul>
                     </div>
                   </div>
@@ -168,35 +197,35 @@ export default function Header() {
                 <div className="mega-dropdown width-md">
                   <div className="mega-grid cols-3">
                     <div className="mega-column">
-                      <h4>🏃‍♂️ Pools A & B</h4>
+                      <h4>🏃‍♂️ Pools A & B Squads</h4>
                       <ul>
-                        <li><a href="/hockey-world-cup-2026-schedule-netherlands">🇳🇱 Netherlands</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-argentina">🇦🇷 Argentina</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-chile">🇨🇱 Chile</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-new-zealand">🇳🇿 New Zealand</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-germany">🇩🇪 Germany</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-belgium">🇧🇪 Belgium</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-netherlands">🇳🇱 Netherlands Squad</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-argentina">🇦🇷 Argentina Squad</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-chile">🇨🇱 Chile Squad</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-new-zealand">🇳🇿 New Zealand Squad</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-germany">🇩🇪 Germany Squad</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-belgium">🇧🇪 Belgium Squad</a></li>
                       </ul>
                     </div>
                     <div className="mega-column">
-                      <h4>🏃‍♂️ Pools C & D</h4>
+                      <h4>🏃‍♂️ Pools C & D Squads</h4>
                       <ul>
-                        <li><a href="/hockey-world-cup-2026-schedule-australia">🇦🇺 Australia</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-india">🇮🇳 India</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-pakistan">🇵🇰 Pakistan</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-spain">🇪🇸 Spain</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-australia">🇦🇺 Australia Squad</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-india">🇮🇳 India Squad</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England Squad</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-pakistan">🇵🇰 Pakistan Squad</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-spain">🇪🇸 Spain Squad</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales Squad</a></li>
                       </ul>
                     </div>
                     <div className="mega-column highlighted-col">
-                      <h4>⭐ Quick Links</h4>
+                      <h4>⭐ Squad Directory</h4>
                       <ul>
                         <li><a href="/teams" className="accent-link">All 16 Squads Directory →</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-malaysia">🇲🇾 Malaysia schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-france">🇫🇷 France schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-ireland">🇮🇪 Ireland schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-south-africa">🇿🇦 South Africa schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-malaysia">🇲🇾 Malaysia Squad</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-france">🇫🇷 France Squad</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-ireland">🇮🇪 Ireland Squad</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-south-africa">🇿🇦 South Africa Squad</a></li>
                       </ul>
                     </div>
                   </div>

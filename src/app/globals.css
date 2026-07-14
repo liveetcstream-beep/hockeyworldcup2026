@@ -2285,6 +2285,10 @@ h1, h2, h3, h4, h5, h6 {
   min-width: 620px;
 }
 
+.mega-dropdown.width-xl {
+  min-width: 820px;
+}
+
 .mega-menu-trigger:hover .mega-dropdown {
   opacity: 1;
   visibility: visible;
@@ -2299,6 +2303,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .mega-grid.cols-3 {
   grid-template-columns: repeat(3, 1fr);
+}
+
+.mega-grid.cols-4 {
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .mega-column h4 {
