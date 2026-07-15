@@ -291,16 +291,6 @@ export default async function PlayerProfilePage({ params }) {
                 dangerouslySetInnerHTML={{ __html: p.careerMilestones?.replace(/\n\n/g, "<br/><br/>") ?? "" }} />
             </section>
 
-            <hr style={{ borderColor: "var(--border-color)", margin: "2rem 0" }} />
-
-            {/* FAQs */}
-            <section style={{ marginBottom: "2rem" }}>
-              <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--text-main)", marginBottom: "1.2rem" }}>
-                Frequently Asked Questions About {p.name}
-              </h2>
-              <FaqAccordion items={p.faqs} />
-            </section>
-
           </article>
 
           {/* ── SIDEBAR ── */}
@@ -406,6 +396,14 @@ export default async function PlayerProfilePage({ params }) {
           </aside>
 
         </div>
+
+        {/* FAQs */}
+        <section style={{ marginBottom: "2rem", marginTop: "3rem" }}>
+          <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--text-main)", marginBottom: "1.2rem" }}>
+            Frequently Asked Questions About {p.name}
+          </h2>
+          <FaqAccordion items={p.faqs} />
+        </section>
       </main>
 
       <Footer />

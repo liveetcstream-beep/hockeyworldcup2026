@@ -338,16 +338,6 @@ export default async function TeamResultsPage({ params }) {
                 </div>
               </section>
             )}
-
-            {/* FAQs */}
-            {t.faqs?.length > 0 && (
-              <section style={{ marginBottom: "2rem" }}>
-                <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "var(--text-main)", marginBottom: "1rem" }}>
-                  Frequently Asked Questions
-                </h2>
-                <FaqAccordion items={t.faqs} />
-              </section>
-            )}
           </div>
 
           {/* Sidebar */}
@@ -392,6 +382,16 @@ export default async function TeamResultsPage({ params }) {
             </a>
           </aside>
         </div>
+
+        {/* FAQs */}
+        {t.faqs?.length > 0 && (
+          <section style={{ marginBottom: "2rem", marginTop: "3rem" }}>
+            <h2 style={{ fontSize: "1.3rem", fontWeight: 800, color: "var(--text-main)", marginBottom: "1.2rem" }}>
+              Frequently Asked Questions
+            </h2>
+            <FaqAccordion items={t.faqs} />
+          </section>
+        )}
       </main>
 
       <Footer />
