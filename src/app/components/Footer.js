@@ -15,7 +15,9 @@ export default function Footer() {
             <h4 className="text-white font-bold" style={{ color: "#fff", fontSize: "1rem", fontWeight: "800", marginBottom: "0.8rem" }}>Contact & Support</h4>
             <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: "1.6" }}>
               Reach out to our editorial desk at:<br/>
-              <strong style={{ color: "var(--text-main)" }}>editor@hockeyworldcup2026schedule.com</strong>
+              <a href="mailto:editor@hockeyworldcup2026schedule.com" style={{ color: "var(--text-main)", fontWeight: "700", wordBreak: "break-all", display: "block", marginTop: "0.4rem", textDecoration: "none" }}>
+                editor@hockeyworldcup2026schedule.com
+              </a>
             </p>
           </div>
 
