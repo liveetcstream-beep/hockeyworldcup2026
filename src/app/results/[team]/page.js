@@ -12,7 +12,7 @@ const teamsData = {
     name: "India", flag: "🇮🇳", pool: "Pool D",
     coach: "Craig Fulton", ranking: 5,
     metaTitle: "India Hockey World Cup 2026 Results — All Match Scores & Goal Scorers",
-    metaDesc: "Complete India results at Hockey World Cup 2026. All Pool D match scores, goal scorers, match statistics and knockout stage progress. Updated after each match.",
+    metaDesc: "Complete India results at Hockey World Cup 2026. All Pool D match scores, goal scorers, match statistics and knockout stage progress. Updated after...",
     poolOpponents: ["Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿", "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿", "Pakistan 🇵🇰"],
     results: [
       { date: "Aug 15", opponent: "Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿", score: "TBD", status: "upcoming", scorers: [] },
@@ -80,7 +80,7 @@ const teamsData = {
     name: "Belgium", flag: "🇧🇪", pool: "Pool B",
     coach: "Michel Van den Heuvel", ranking: 3,
     metaTitle: "Belgium Hockey World Cup 2026 Results — All Match Scores on Home Turf",
-    metaDesc: "Belgium's complete results at Hockey World Cup 2026 on home turf at Belfius Arena, Wavre. Pool B match scores, goal scorers and knockout progress. Updated live.",
+    metaDesc: "Belgium's complete results at Hockey World Cup 2026 on home turf at Belfius Arena, Wavre. Pool B match scores, goal scorers and knockout progress...",
     poolOpponents: ["Germany 🇩🇪", "France 🇫🇷", "Malaysia 🇲🇾"],
     results: [
       { date: "Aug 15", opponent: "Malaysia 🇲🇾", score: "TBD", status: "upcoming", scorers: [] },
