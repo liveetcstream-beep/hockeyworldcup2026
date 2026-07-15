@@ -125,8 +125,8 @@ export default async function NewsArticlePage({ params }) {
                 "image": [
                   `https://hockeyworldcup2026schedule.com${article.image}`
                 ],
-                "datePublished": "2026-07-15T09:00:00+02:00",
-                "dateModified": "2026-07-15T12:00:00+02:00",
+                "datePublished": new Date(article.date).toISOString().split('T')[0] + "T09:00:00+02:00",
+                "dateModified": new Date(article.date).toISOString().split('T')[0] + "T09:00:00+02:00",
                 "author": {
                   "@type": "Person",
                   "name": article.author,
