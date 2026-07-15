@@ -8,7 +8,7 @@ export const newsArticles = [
     authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
     date: "July 15, 2026",
     readTime: "5 min read",
-    image: "/news/india-squad-news.png",
+    image: "/news/india-squad-news.webp",
     excerpt: "Harmanpreet Singh will captain India's 18-member squad at the FIH Hockey World Cup 2026. Coach Craig Fulton opts for high-flexibility transitions and veteran mentoring.",
     content: `
       <p>Hockey India has officially confirmed the 18-member men's squad representing the nation at the upcoming <strong>FIH Hockey World Cup 2026</strong>. The roster was finalized following a demanding three-week national camp in Bengaluru under head coach Craig Fulton. This squad represents a delicate balance of youthful energy and battle-tested experience as India aims to break its podium drought at the joint-hosted event in Amstelveen and Wavre.</p>
@@ -72,7 +72,7 @@ export const newsArticles = [
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 14, 2026",
     readTime: "4 min read",
-    image: "/news/germany-injury-news.png",
+    image: "/news/germany-injury-news.webp",
     excerpt: "German defender Mathias Müller has been ruled out of the Hockey World Cup 2026 due to an ACL ligament tear. Head coach André Henning calls up reserve Tom Grambusch.",
     content: `
       <p>The German men's national hockey squad has suffered a devastating blow just weeks before pushback. Experienced defender <strong>Mathias Müller</strong> has been ruled out of the <strong>FIH Hockey World Cup 2026</strong> due to a knee injury sustained during a high-intensity training camp in Cologne. This loss is a significant tactical setback for the reigning World Champions as they prepare to navigate their Pool B group matches in Wavre.</p>
@@ -125,7 +125,7 @@ export const newsArticles = [
     authorDesc: "Stadium logician and event writer specializing in European sports venue safety and ticketing systems.",
     date: "July 13, 2026",
     readTime: "4 min read",
-    image: "/news/world-cup-ticket-news.png",
+    image: "/news/world-cup-ticket-news.webp",
     excerpt: "The final ticket phase for the FIH Hockey World Cup 2026 is officially live. Learn how to secure valid seating and avoid secondary ticketing platforms.",
     content: `
       <p>The International Hockey Federation (FIH) has officially launched the final ticket booking phase for the <strong>Hockey World Cup 2026</strong>. With over 85% of general admission tickets for primary matchdays already sold out, fans are urged to act quickly to secure valid entry. The co-hosted event in Amstelveen and Wavre is drawing unprecedented global ticket demand.</p>
@@ -175,7 +175,7 @@ export const newsArticles = [
     authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
     date: "July 15, 2026",
     readTime: "5 min read",
-    image: "/news/germany-injury-news.png",
+    image: "/news/germany-injury-news.webp",
     excerpt: "The Dutch Women's national team has officially opened their final preparation camp in Utrecht. Coach Paul van Ass focuses on refining penalty corner defensive setups.",
     content: `
       <p>The defending World Champions, the Netherlands Women's team (Oranje Dames), have launched their final phase of preparation in Utrecht ahead of the co-hosted <strong>FIH Hockey World Cup 2026</strong>. With matches scheduled at the historic <strong>Wagener Stadium in Amstelveen</strong>, the squad is under high pressure from local media and fans to deliver a flawless performance. Head coach Paul van Ass has structured the Utrecht camp specifically to target defensive tactical issues observed in their recent FIH Pro League matches.</p>
@@ -219,7 +219,7 @@ export const newsArticles = [
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 15, 2026",
     readTime: "4 min read",
-    image: "/news/india-squad-news.png",
+    image: "/news/india-squad-news.webp",
     excerpt: "Belgium's Red Lions have scheduled a three-match warm-up series against England and Spain in Antwerp to finalize their starting XI before the World Cup begins.",
     content: `
       <p>The Royal Belgian Hockey Association (KBHB) has officially confirmed a three-match test series in Antwerp as the final warm-up phase for the Men's national team (Red Lions) before the co-hosted <strong>FIH Hockey World Cup 2026</strong>. With group fixtures scheduled at the <strong>Belfius Hockey Arena in Wavre</strong>, this warm-up series represents the final opportunity for the coaching staff to evaluate player form and resolve starting lineup debates.</p>
@@ -263,7 +263,7 @@ export const newsArticles = [
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 15, 2026",
     readTime: "4 min read",
-    image: "/news/world-cup-ticket-news.png",
+    image: "/news/world-cup-ticket-news.webp",
     excerpt: "The International Hockey Federation (FIH) has confirmed modifications to the video referral system to streamline match play and reduce review delays.",
     content: `
       <p>The International Hockey Federation (FIH) has announced updated guidelines for the video referral system to be implemented at the co-hosted <strong>FIH Hockey World Cup 2026</strong> in Amstelveen and Wavre. The changes are designed to address a major spectator pain point: excessive match downtime and long review delays that disrupt the flow of play for fans and television broadcasters alike.</p>
