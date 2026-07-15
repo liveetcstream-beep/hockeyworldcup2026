@@ -127,6 +127,7 @@ export default function Header() {
           <nav className="desktop-only">
             <ul className="sports-nav">
               <li><a href="/">Home</a></li>
+              <li><a href="/news">News</a></li>
 
               {/* Schedules Dropdown */}
               <li className="mega-menu-trigger">
@@ -341,6 +342,7 @@ export default function Header() {
 
         <ul className="mobile-nav-links">
           <li><a href="/" onClick={() => setIsMobileOpen(false)}>🏠 Home</a></li>
+          <li><a href="/news" onClick={() => setIsMobileOpen(false)}>📰 Latest News</a></li>
           
           <li className="mobile-section-header">📅 Schedules & Pools</li>
           <li><a href="/schedule" onClick={() => setIsMobileOpen(false)}>📅 Full Match Schedule</a></li>

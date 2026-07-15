@@ -1,3 +1,5 @@
+import { newsArticles } from "../data/news";
+
 export default function sitemap() {
   const baseUrl = "https://hockeyworldcup2026schedule.com";
   const now = new Date();
@@ -64,6 +66,12 @@ export default function sitemap() {
     { route: "/privacy-policy", priority: 0.3, freq: "yearly" },
     { route: "/terms-of-use",   priority: 0.3, freq: "yearly" },
   ];
+
+  // Append news routes dynamically
+  pages.push({ route: "/news", priority: 0.9, freq: "daily" });
+  newsArticles.forEach((art) => {
+    pages.push({ route: `/news/${art.slug}`, priority: 0.85, freq: "daily" });
+  });
 
   return pages.map(({ route, priority, freq }) => ({
     url: `${baseUrl}${route}`,
