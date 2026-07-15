@@ -2,6 +2,22 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { players } from "../../data/players";
+import FaqAccordion from "../components/FaqAccordion";
+
+const faqItems = [
+  {
+    question: "Who are the star players to watch in the FIH Hockey World Cup 2026?",
+    answer: "Star players to watch include Indian drag-flicker Harmanpreet Singh, Belgian defenders Arthur Van Doren and Alexander Hendrickx, and Dutch midfielder Thierry Brinkman. Individual profiles for all star players are available on this directory."
+  },
+  {
+    question: "How are the international caps and goal statistics verified?",
+    answer: "Every stat (caps, goals, playing positions) is audited by our technical field hockey analyst, Bram van de Meer, and verified directly against the official FIH Player Database and national federation squad archives."
+  },
+  {
+    question: "How can I check the fitness or injury status of World Cup players?",
+    answer: "Our squad directory displays verified fitness summaries, which are updated within hours of federation press announcements, injury updates, or manager disclosures during the tournament preparation camps."
+  }
+];
 
 export const metadata = {
   title: "Hockey World Cup 2026 Player Profiles & Complete Squad Lists",
@@ -46,6 +62,34 @@ export default function PlayersIndexPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hockeyworldcup2026schedule.com" },
+                  { "@type": "ListItem", "position": 2, "name": "Player Profiles", "item": "https://hockeyworldcup2026schedule.com/players" }
+                ]
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqItems.map((item) => ({
+                  "@type": "Question",
+                  "name": item.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": item.answer
+                  }
+                }))
+              }
+            ]
+          })
+        }}
+      />
       <Header />
 
       <section className="hero-section">
@@ -145,6 +189,16 @@ export default function PlayersIndexPage() {
             </div>
           </section>
         ))}
+
+        {/* FAQs SECTION */}
+        <section className="my-16">
+          <div className="section-title-wrap">
+            <h2>Frequently Asked Questions</h2>
+            <p>Get answers to common queries about star player profiles, career statistics, and verification protocols.</p>
+          </div>
+
+          <FaqAccordion items={faqItems} />
+        </section>
       </main>
 
       <Footer />

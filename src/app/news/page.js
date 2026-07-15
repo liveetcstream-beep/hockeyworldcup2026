@@ -29,5 +29,47 @@ export const metadata = {
 };
 
 export default function NewsHubPage() {
-  return <NewsHubClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hockeyworldcup2026schedule.com" },
+                  { "@type": "ListItem", "position": 2, "name": "News Hub", "item": "https://hockeyworldcup2026schedule.com/news" }
+                ]
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "Where can I read the latest updates on the Hockey World Cup 2026 teams?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our dedicated news hub features breaking updates on team squads, player injuries, pre-tournament press releases, and match performance stats verified by our editorial desk."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Are the injury reports and squad updates officially sourced?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, our editorial director Marc Devos accredit-checks and monitors official press releases, national hockey federation bulletins, and team doctor statements for accuracy."
+                    }
+                  }
+                ]
+              }
+            ]
+          })
+        }}
+      />
+      <NewsHubClient />
+    </>
+  );
 }

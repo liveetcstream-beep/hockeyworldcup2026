@@ -1,6 +1,22 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FaqAccordion from "../components/FaqAccordion";
+
+const faqItems = [
+  {
+    question: "Where can I find match results for specific teams in the Hockey World Cup 2026?",
+    answer: "You can find team-specific results on our results hub by clicking on any of the 16 qualified countries' cards. This displays their full match results, list of goal scorers, cards received, and pool standings."
+  },
+  {
+    question: "How quickly are the match results updated on the portal?",
+    answer: "All match results, goal tallies, and points table adjustments are updated within minutes of the official match pushback completion in Amstelveen and Wavre."
+  },
+  {
+    question: "How are the points in group standings calculated?",
+    answer: "In the group stages, teams receive 3 points for a win, 1 point for a draw, and 0 points for a loss. Shootout wins in crossover or knockout matches determine qualification progress but do not change pool standings points."
+  }
+];
 
 export const metadata = {
   title: "Hockey World Cup 2026 Results: All Match Scores & Group Standings",
@@ -51,6 +67,34 @@ export default function ResultsIndexPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hockeyworldcup2026schedule.com" },
+                  { "@type": "ListItem", "position": 2, "name": "Match Results", "item": "https://hockeyworldcup2026schedule.com/results" }
+                ]
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqItems.map((item) => ({
+                  "@type": "Question",
+                  "name": item.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": item.answer
+                  }
+                }))
+              }
+            ]
+          })
+        }}
+      />
       <Header />
 
       <section className="hero-section">
@@ -119,6 +163,16 @@ export default function ResultsIndexPage() {
               </a>
             ))}
           </div>
+        </section>
+
+        {/* FAQs SECTION */}
+        <section className="my-16">
+          <div className="section-title-wrap">
+            <h2>Frequently Asked Questions</h2>
+            <p>Get answers to common questions about match results, update frequency, and standings calculations.</p>
+          </div>
+
+          <FaqAccordion items={faqItems} />
         </section>
       </main>
 

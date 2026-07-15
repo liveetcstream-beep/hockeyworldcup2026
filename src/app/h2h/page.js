@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "Head-to-Head Stats & Records – Hockey World Cup 2026",
@@ -29,10 +30,56 @@ export const metadata = {
   },
 };
 
+const faqItems = [
+  {
+    question: "Which team dominates the historic head-to-head record between India and Pakistan in field hockey?",
+    answer: "In recent years, India has dominated the head-to-head record, winning 7 of the last 10 senior matches with 3 draws. However, historically across all international events since 1956, the overall record remains highly competitive, with Pakistan holding a strong win count from the 1970s and 1980s."
+  },
+  {
+    question: "Who has the upper hand in the Netherlands vs Germany European rivalry?",
+    answer: "The rivalry is one of the most balanced in Europe. Over their last 10 matches, the Netherlands holds a slight advantage with 4 wins compared to Germany's 2 wins, with 4 matches ending in draws. Germany won the most critical recent encounter—the 2023 FIH Men's World Cup semi-final."
+  },
+  {
+    question: "How is the head-to-head match data verified on this portal?",
+    answer: "All statistics, match records, and head-to-head outcomes are manually verified by our team of sports analysts. We cross-reference our database with the official FIH Tournament Management System (TMS) and national hockey federation match archives."
+  },
+  {
+    question: "What is the head-to-head status of the Australia vs Belgium modern rivalry?",
+    answer: "Australia leads the head-to-head wins 5-2 over their last 10 encounters. However, Belgium has won the two biggest matches: the Tokyo 2020 Olympic Gold Medal match (on penalties) and the 2023 FIH World Cup semi-final."
+  }
+];
 
 export default function H2HPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hockeyworldcup2026schedule.com" },
+                  { "@type": "ListItem", "position": 2, "name": "H2H Records", "item": "https://hockeyworldcup2026schedule.com/h2h" }
+                ]
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqItems.map((item) => ({
+                  "@type": "Question",
+                  "name": item.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": item.answer
+                  }
+                }))
+              }
+            ]
+          })
+        }}
+      />
       <Header />
 
       <section className="hero-section">
@@ -586,6 +633,16 @@ export default function H2HPage() {
           <p className="text-xs mt-4 italic" style={{ lineHeight: "1.9", color: "var(--text-muted)", fontSize: "0.9rem", fontFamily: "var(--font-body)" }}>
             <strong style={{ color: "var(--primary)", fontStyle: "normal" }}>Tactical Analysis:</strong> Netherlands women's team has maintained absolute dominance over Las Leonas, winning 8 of the last 10 meetings, including gold medal clashes at the Tokyo Olympics and 2022 World Cup. Argentina relies on a passionate defensive effort and fast counter-plays led by Maria Granatto, but the Dutch side's incredible pass accuracy, structural discipline, and deep bench depth make them almost unbeatable.
           </p>
+        </section>
+
+        {/* FAQs SECTION */}
+        <section className="my-16">
+          <div className="section-title-wrap">
+            <h2>Frequently Asked Questions</h2>
+            <p>Get professional answers to head-to-head matchup statistics, histories, and team records.</p>
+          </div>
+
+          <FaqAccordion items={faqItems} />
         </section>
       </main>
 

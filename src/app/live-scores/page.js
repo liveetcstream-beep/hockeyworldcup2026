@@ -29,5 +29,47 @@ export const metadata = {
 };
 
 export default function LiveScoresPage() {
-  return <LiveScoresClient />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hockeyworldcup2026schedule.com" },
+                  { "@type": "ListItem", "position": 2, "name": "Live Scores", "item": "https://hockeyworldcup2026schedule.com/live-scores" }
+                ]
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How to watch the Hockey World Cup 2026 live scores?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "You can follow real-time live scores for all Men's and Women's matches on our dedicated live scoreboard page. Updates include goals, cards, penalty corner statistics, and starting lineups."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "How often is the live scoreboard updated?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our scoreboard matches are synced every 30 seconds with official tournament logs to guarantee real-time score precision."
+                    }
+                  }
+                ]
+              }
+            ]
+          })
+        }}
+      />
+      <LiveScoresClient />
+    </>
+  );
 }

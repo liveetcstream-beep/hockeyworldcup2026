@@ -2,6 +2,22 @@ import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import { matchDays } from "../../../data/datepages";
+import FaqAccordion from "../../components/FaqAccordion";
+
+const faqItems = [
+  {
+    question: "Where can I view the Hockey World Cup 2026 match schedule by date?",
+    answer: "You can view the daily schedule right here on our calendar directory. Click on any of the date cards to access local times, stadium details, and timezone conversions for that specific day."
+  },
+  {
+    question: "Are match kick-off times shown in my local time zone?",
+    answer: "Our main directory lists dates in local Central European Time (CET). Each individual date page has an interactive timezone converter to display times in ET (US Eastern Time), IST (Indian Standard Time), and other timezones."
+  },
+  {
+    question: "How many matches are played on a typical tournament day?",
+    answer: "During the group stages, most match days feature a doubleheader or four-match schedule split between Wagener Stadium in Amstelveen and Belfius Hockey Arena in Wavre."
+  }
+];
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule by Date: Daily Match Fixtures",
@@ -33,6 +49,34 @@ export const metadata = {
 export default function ScheduleDatesIndexPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hockeyworldcup2026schedule.com" },
+                  { "@type": "ListItem", "position": 2, "name": "Schedule by Date", "item": "https://hockeyworldcup2026schedule.com/schedule/date" }
+                ]
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": faqItems.map((item) => ({
+                  "@type": "Question",
+                  "name": item.question,
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": item.answer
+                  }
+                }))
+              }
+            ]
+          })
+        }}
+      />
       <Header />
 
       <section className="hero-section">
@@ -124,6 +168,16 @@ export default function ScheduleDatesIndexPage() {
               </a>
             ))}
           </div>
+        </section>
+
+        {/* FAQs SECTION */}
+        <section className="my-16">
+          <div className="section-title-wrap">
+            <h2>Frequently Asked Questions</h2>
+            <p>Get answers to common questions about daily schedules, kickoff timezone conversions, and match counts.</p>
+          </div>
+
+          <FaqAccordion items={faqItems} />
         </section>
       </main>
 
