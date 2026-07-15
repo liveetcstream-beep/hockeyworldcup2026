@@ -160,7 +160,7 @@ export default async function PlayerProfilePage({ params }) {
                 fontWeight: 900, color: "var(--text-main)",
                 lineHeight: 1.15, marginBottom: "0.5rem",
               }}>
-                {p.name}
+                {p.flag} {p.name} — Hockey World Cup 2026 Profile & Stats
               </h1>
               <p style={{ fontSize: "1.05rem", color: "var(--text-muted)", fontWeight: 600, marginBottom: "1rem" }}>
                 {p.flag} {p.team} · {p.position} · #{p.jerseyNumber}

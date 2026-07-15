@@ -88,7 +88,7 @@ export default async function DateMatchPage({ params }) {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">📅 Day {day.dayNumber} — Hockey World Cup 2026</p>
-          <h1 className="hero-title">{day.date} — All Matches, Timings & Streaming</h1>
+          <h1 className="hero-title">Hockey World Cup 2026 Matches on {day.date} — Timings & Schedule</h1>
           <p className="hero-description">
             Complete fixture schedule for {day.date} at the FIH Hockey World Cup 2026 — all match timings in IST, CEST, GMT and EST, broadcast channels, and editorial match previews.
           </p>
