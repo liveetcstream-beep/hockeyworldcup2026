@@ -7,7 +7,7 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Semi-Finals — Schedule, Teams & Expert Preview",
-  description: "Complete guide to the Hockey World Cup 2026 Semi-Finals on August 27. Teams, timings, venue details, scenarios and expert tactical preview by field hockey analysts.",
+  description: "Complete guide to the Hockey World Cup 2026 Semi-Finals on August 27. Teams, timings, venue details, scenarios and expert tactical preview by field...",
   alternates: { canonical: `${BASE}/knockout/semi-finals` },
   openGraph: {
     title: "Hockey World Cup 2026 Semi-Finals — Schedule, Teams & Expert Preview",

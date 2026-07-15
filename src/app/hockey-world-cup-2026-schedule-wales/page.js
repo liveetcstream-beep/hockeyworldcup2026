@@ -7,13 +7,13 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule Wales: Time Table, Fixtures & PDF",
-  description: "Complete Hockey World Cup 2026 Schedule for Wales. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
+  description: "Complete Hockey World Cup 2026 Schedule for Wales. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list...",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-wales`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule Wales: Time Table, Fixtures & PDF",
-    description: "Complete Hockey World Cup 2026 Schedule for Wales. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
+    description: "Complete Hockey World Cup 2026 Schedule for Wales. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list...",
     url: `${BASE}/hockey-world-cup-2026-schedule-wales`,
     images: [
       {
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hockey World Cup 2026 Schedule Wales: Time Table, Fixtures & PDF",
-    description: "Complete Hockey World Cup 2026 Schedule for Wales. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
+    description: "Complete Hockey World Cup 2026 Schedule for Wales. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list...",
     images: ["/og-image.jpg"],
   },
 };

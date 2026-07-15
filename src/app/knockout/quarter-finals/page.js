@@ -7,7 +7,7 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Quarter-Finals — Bracket, Schedule & Scenarios",
-  description: "Complete guide to the Hockey World Cup 2026 Quarter-Finals. Bracket structure, qualification scenarios from all four pools, match timings, venue details and expert analysis.",
+  description: "Complete guide to the Hockey World Cup 2026 Quarter-Finals. Bracket structure, qualification scenarios from all four pools, match timings, venue...",
   alternates: { canonical: `${BASE}/knockout/quarter-finals` },
   openGraph: {
     title: "Hockey World Cup 2026 Quarter-Finals — Bracket, Schedule & Scenarios",

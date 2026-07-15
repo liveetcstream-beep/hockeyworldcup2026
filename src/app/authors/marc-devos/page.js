@@ -4,13 +4,13 @@ import Footer from "../../components/Footer";
 
 export const metadata = {
   title: "Marc Devos — Senior Field Hockey Journalist & Editorial Director | Hockey World Cup 2026 Hub",
-  description: "Marc Devos is a Brussels-based veteran sports journalist with 15+ years covering FIH World Cups, Olympic Games, and EuroHockey Championships. He serves as Editorial Director at Hockey World Cup 2026 Hub, overseeing all schedule, fixture, and match preview content.",
+  description: "Marc Devos is a Brussels-based veteran sports journalist with 15+ years covering FIH World Cups, Olympic Games, and EuroHockey Championships. He serves...",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/authors/marc-devos",
   },
   openGraph: {
     title: "Marc Devos — Senior Field Hockey Journalist & Editorial Director | Hockey World Cup 2026 Hub",
-    description: "Marc Devos is a Brussels-based veteran sports journalist with 15+ years covering FIH World Cups and EuroHockey Championships. Editorial Director at Hockey World Cup 2026 Hub.",
+    description: "Marc Devos is a Brussels-based veteran sports journalist with 15+ years covering FIH World Cups and EuroHockey Championships. Editorial Director at...",
     url: "https://hockeyworldcup2026schedule.com/authors/marc-devos",
   },
 };

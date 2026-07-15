@@ -3,13 +3,13 @@ import NewsHubClient from "./NewsHubClient";
 
 export const metadata = {
   title: "Latest Hockey World Cup 2026 News, Squad Updates & Injury Reports",
-  description: "Stay updated with the latest Hockey World Cup 2026 news. Read breaking squad announcements, player injury reports, tactical team analysis, and warm-up results.",
+  description: "Stay updated with the latest Hockey World Cup 2026 news. Read breaking squad announcements, player injury reports, tactical team analysis, and warm-up...",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/news",
   },
   openGraph: {
     title: "Latest Hockey World Cup 2026 News, Squad Updates & Injury Reports",
-    description: "Stay updated with the latest Hockey World Cup 2026 news. Read breaking squad announcements, player injury reports, tactical team analysis, and warm-up results.",
+    description: "Stay updated with the latest Hockey World Cup 2026 news. Read breaking squad announcements, player injury reports, tactical team analysis, and warm-up...",
     url: "https://hockeyworldcup2026schedule.com/news",
     images: [
       {
@@ -23,7 +23,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Latest Hockey World Cup 2026 News, Squad Updates & Injury Reports",
-    description: "Stay updated with the latest Hockey World Cup 2026 news. Read breaking squad announcements, player injury reports, tactical team analysis, and warm-up results.",
+    description: "Stay updated with the latest Hockey World Cup 2026 news. Read breaking squad announcements, player injury reports, tactical team analysis, and warm-up...",
     images: ["/og-image.jpg"],
   },
 };

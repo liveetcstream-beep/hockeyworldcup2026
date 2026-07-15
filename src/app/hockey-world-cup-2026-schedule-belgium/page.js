@@ -8,13 +8,13 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule Belgium: Time Table, Fixtures & PDF",
-  description: "Complete Hockey World Cup 2026 Schedule for Belgium. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
+  description: "Complete Hockey World Cup 2026 Schedule for Belgium. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad...",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-belgium`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule Belgium: Time Table, Fixtures & PDF",
-    description: "Complete Hockey World Cup 2026 Schedule for Belgium. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
+    description: "Complete Hockey World Cup 2026 Schedule for Belgium. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad...",
     url: `${BASE}/hockey-world-cup-2026-schedule-belgium`,
     images: [
       {
@@ -28,7 +28,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hockey World Cup 2026 Schedule Belgium: Time Table, Fixtures & PDF",
-    description: "Complete Hockey World Cup 2026 Schedule for Belgium. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list. Download PDF.",
+    description: "Complete Hockey World Cup 2026 Schedule for Belgium. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad...",
     images: ["/og-image.jpg"],
   },
 };

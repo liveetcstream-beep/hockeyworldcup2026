@@ -5,13 +5,13 @@ import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "FIH Hockey World Cup 2026 Prize Money: Team & Award Payouts",
-  description: "Get the complete breakdown of the FIH Hockey World Cup 2026 prize money. View verified team payouts for winners, runners-up, and individual player performance awards.",
+  description: "Get the complete breakdown of the FIH Hockey World Cup 2026 prize money. View verified team payouts for winners, runners-up, and individual player...",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/prize-money",
   },
   openGraph: {
     title: "FIH Hockey World Cup 2026 Prize Money: Team & Award Payouts",
-    description: "Get the complete breakdown of the FIH Hockey World Cup 2026 prize money. View verified team payouts for winners, runners-up, and individual player performance awards.",
+    description: "Get the complete breakdown of the FIH Hockey World Cup 2026 prize money. View verified team payouts for winners, runners-up, and individual player...",
     url: "https://hockeyworldcup2026schedule.com/prize-money",
     images: [
       {
@@ -25,7 +25,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "FIH Hockey World Cup 2026 Prize Money: Team & Award Payouts",
-    description: "Get the complete breakdown of the FIH Hockey World Cup 2026 prize money. View verified team payouts for winners, runners-up, and individual player performance awards.",
+    description: "Get the complete breakdown of the FIH Hockey World Cup 2026 prize money. View verified team payouts for winners, runners-up, and individual player...",
     images: ["/og-image.jpg"],
   },
 };

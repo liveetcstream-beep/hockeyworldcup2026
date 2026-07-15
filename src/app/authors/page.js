@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 export const metadata = {
   title: "Authors & Editorial Team | Hockey World Cup 2026 Hub",
-  description: "Meet the editorial team behind Hockey World Cup 2026 Hub — veteran journalists and technical analysts who verify every schedule, player stat, and match preview published on this portal.",
+  description: "Meet the editorial team behind Hockey World Cup 2026 Hub — veteran journalists and technical analysts who verify every schedule, player stat, and match...",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/authors",
   },

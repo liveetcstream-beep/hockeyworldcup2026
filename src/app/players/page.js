@@ -21,13 +21,13 @@ const faqItems = [
 
 export const metadata = {
   title: "Hockey World Cup 2026 Player Profiles & Complete Squad Lists",
-  description: "Explore player profiles and squad lists for all 16 qualified teams at the FIH Hockey World Cup 2026. View career goals, caps, drag-flick stats, and fitness updates.",
+  description: "Explore player profiles and squad lists for all 16 qualified teams at the FIH Hockey World Cup 2026. View career goals, caps, drag-flick stats, and...",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/players",
   },
   openGraph: {
     title: "Hockey World Cup 2026 Player Profiles & Complete Squad Lists",
-    description: "Explore player profiles and squad lists for all 16 qualified teams at the FIH Hockey World Cup 2026. View career goals, caps, drag-flick stats, and fitness updates.",
+    description: "Explore player profiles and squad lists for all 16 qualified teams at the FIH Hockey World Cup 2026. View career goals, caps, drag-flick stats, and...",
     url: "https://hockeyworldcup2026schedule.com/players",
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hockey World Cup 2026 Player Profiles & Complete Squad Lists",
-    description: "Explore player profiles and squad lists for all 16 qualified teams at the FIH Hockey World Cup 2026. View career goals, caps, drag-flick stats, and fitness updates.",
+    description: "Explore player profiles and squad lists for all 16 qualified teams at the FIH Hockey World Cup 2026. View career goals, caps, drag-flick stats, and...",
     images: ["/og-image.jpg"],
   },
 };

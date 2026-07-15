@@ -7,7 +7,7 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Final — Date, Venue, Tickets & Streaming Guide",
-  description: "Complete guide to the Hockey World Cup 2026 Final on August 31. Venue, match timings in IST and CEST, tickets, streaming options, trophy history and expert prediction.",
+  description: "Complete guide to the Hockey World Cup 2026 Final on August 31. Venue, match timings in IST and CEST, tickets, streaming options, trophy history and...",
   alternates: { canonical: `${BASE}/knockout/final` },
   openGraph: {
     title: "Hockey World Cup 2026 Final — Date, Venue, Tickets & Streaming Guide",

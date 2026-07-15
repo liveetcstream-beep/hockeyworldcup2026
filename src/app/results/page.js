@@ -20,13 +20,13 @@ const faqItems = [
 
 export const metadata = {
   title: "Hockey World Cup 2026 Results: All Match Scores & Group Standings",
-  description: "Get the complete results of the FIH Hockey World Cup 2026. View all match scores, goal scorers, points table adjustments, and knockout progress for all 16 nations.",
+  description: "Get the complete results of the FIH Hockey World Cup 2026. View all match scores, goal scorers, points table adjustments, and knockout progress for all...",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/results",
   },
   openGraph: {
     title: "Hockey World Cup 2026 Results: All Match Scores & Group Standings",
-    description: "Get the complete results of the FIH Hockey World Cup 2026. View all match scores, goal scorers, points table adjustments, and knockout progress for all 16 nations.",
+    description: "Get the complete results of the FIH Hockey World Cup 2026. View all match scores, goal scorers, points table adjustments, and knockout progress for all...",
     url: "https://hockeyworldcup2026schedule.com/results",
     images: [
       {
@@ -40,7 +40,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hockey World Cup 2026 Results: All Match Scores & Group Standings",
-    description: "Get the complete results of the FIH Hockey World Cup 2026. View all match scores, goal scorers, points table adjustments, and knockout progress for all 16 nations.",
+    description: "Get the complete results of the FIH Hockey World Cup 2026. View all match scores, goal scorers, points table adjustments, and knockout progress for all...",
     images: ["/og-image.jpg"],
   },
 };

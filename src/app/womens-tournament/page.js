@@ -5,13 +5,13 @@ import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "Women's Hockey World Cup 2026: Pools, Standings & Schedule",
-  description: "Follow the Women's FIH Hockey World Cup 2026. Get verified match schedules, group standings, pool tables, and expert predictions for the co-hosted tournament.",
+  description: "Follow the Women's FIH Hockey World Cup 2026. Get verified match schedules, group standings, pool tables, and expert predictions for the co-hosted...",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/womens-tournament",
   },
   openGraph: {
     title: "Women's Hockey World Cup 2026: Pools, Standings & Schedule",
-    description: "Follow the Women's FIH Hockey World Cup 2026. Get verified match schedules, group standings, pool tables, and expert predictions for the co-hosted tournament.",
+    description: "Follow the Women's FIH Hockey World Cup 2026. Get verified match schedules, group standings, pool tables, and expert predictions for the co-hosted...",
     url: "https://hockeyworldcup2026schedule.com/womens-tournament",
     images: [
       {
@@ -25,7 +25,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Women's Hockey World Cup 2026: Pools, Standings & Schedule",
-    description: "Follow the Women's FIH Hockey World Cup 2026. Get verified match schedules, group standings, pool tables, and expert predictions for the co-hosted tournament.",
+    description: "Follow the Women's FIH Hockey World Cup 2026. Get verified match schedules, group standings, pool tables, and expert predictions for the co-hosted...",
     images: ["/og-image.jpg"],
   },
 };

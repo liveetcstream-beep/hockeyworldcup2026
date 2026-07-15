@@ -4,13 +4,13 @@ import Footer from "../../components/Footer";
 
 export const metadata = {
   title: "Bram van de Meer — Technical Field Hockey Analyst | Hockey World Cup 2026 Hub",
-  description: "Bram van de Meer is a former Dutch Hoofdklasse transition coach and Technical Analyst at Hockey World Cup 2026 Hub. 15+ years auditing player stats, penalty corner conversion rates, and squad fitness data for FIH-level tournaments.",
+  description: "Bram van de Meer is a former Dutch Hoofdklasse transition coach and Technical Analyst at Hockey World Cup 2026 Hub. 15+ years auditing player stats...",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/authors/bram-van-de-meer",
   },
   openGraph: {
     title: "Bram van de Meer — Technical Field Hockey Analyst | Hockey World Cup 2026 Hub",
-    description: "Bram van de Meer is a former Dutch Hoofdklasse transition coach and Technical Analyst at Hockey World Cup 2026 Hub. 15+ years auditing player stats, penalty corner conversion rates, and squad fitness data.",
+    description: "Bram van de Meer is a former Dutch Hoofdklasse transition coach and Technical Analyst at Hockey World Cup 2026 Hub. 15+ years auditing player stats...",
     url: "https://hockeyworldcup2026schedule.com/authors/bram-van-de-meer",
   },
 };

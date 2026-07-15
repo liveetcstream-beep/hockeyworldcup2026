@@ -21,13 +21,13 @@ const faqItems = [
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule by Date: Daily Match Fixtures",
-  description: "Track daily match fixtures for the FIH Hockey World Cup 2026. Get date-wise timezone conversions, kickoff times, stadium locations, and daily streaming guides.",
+  description: "Track daily match fixtures for the FIH Hockey World Cup 2026. Get date-wise timezone conversions, kickoff times, stadium locations, and daily streaming...",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/schedule/date",
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule by Date: Daily Match Fixtures",
-    description: "Track daily match fixtures for the FIH Hockey World Cup 2026. Get date-wise timezone conversions, kickoff times, stadium locations, and daily streaming guides.",
+    description: "Track daily match fixtures for the FIH Hockey World Cup 2026. Get date-wise timezone conversions, kickoff times, stadium locations, and daily streaming...",
     url: "https://hockeyworldcup2026schedule.com/schedule/date",
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hockey World Cup 2026 Schedule by Date: Daily Match Fixtures",
-    description: "Track daily match fixtures for the FIH Hockey World Cup 2026. Get date-wise timezone conversions, kickoff times, stadium locations, and daily streaming guides.",
+    description: "Track daily match fixtures for the FIH Hockey World Cup 2026. Get date-wise timezone conversions, kickoff times, stadium locations, and daily streaming...",
     images: ["/og-image.jpg"],
   },
 };

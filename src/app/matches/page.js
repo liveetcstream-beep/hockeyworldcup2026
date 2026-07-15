@@ -5,13 +5,13 @@ import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Match Previews & H2H Guides",
-  description: "Browse detailed pre-match tactical previews, verified head-to-head records, squad lists, local CET/IST match timings, and expert predictions for the 2026 World Cup.",
+  description: "Browse detailed pre-match tactical previews, verified head-to-head records, squad lists, local CET/IST match timings, and expert predictions for the...",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches",
   },
   openGraph: {
     title: "Hockey World Cup 2026 Match Previews & H2H Guides",
-    description: "Browse detailed pre-match tactical previews, verified head-to-head records, squad lists, local CET/IST match timings, and expert predictions for the 2026 World Cup.",
+    description: "Browse detailed pre-match tactical previews, verified head-to-head records, squad lists, local CET/IST match timings, and expert predictions for the...",
     url: "https://hockeyworldcup2026schedule.com/matches",
     images: [
       {
@@ -25,7 +25,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hockey World Cup 2026 Match Previews & H2H Guides",
-    description: "Browse detailed pre-match tactical previews, verified head-to-head records, squad lists, local CET/IST match timings, and expert predictions for the 2026 World Cup.",
+    description: "Browse detailed pre-match tactical previews, verified head-to-head records, squad lists, local CET/IST match timings, and expert predictions for the...",
     images: ["/og-image.jpg"],
   },
 };

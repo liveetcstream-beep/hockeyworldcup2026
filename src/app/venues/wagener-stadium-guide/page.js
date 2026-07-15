@@ -4,13 +4,13 @@ import Footer from "../../components/Footer";
 
 export const metadata = {
   title: "Wagener Stadium Amstelveen Visitor Guide: Hotels, Parking & Transit",
-  description: "Heading to Wagener Stadium for the 2026 Hockey World Cup? Read our expert visitor guide on hotels near Amsterdamse Bos, parking tips, metro routes, and local weather.",
+  description: "Heading to Wagener Stadium for the 2026 Hockey World Cup? Read our expert visitor guide on hotels near Amsterdamse Bos, parking tips, metro routes, and...",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/venues/wagener-stadium-guide",
   },
   openGraph: {
     title: "Wagener Stadium Amstelveen Visitor Guide: Hotels, Parking & Transit",
-    description: "Heading to Wagener Stadium for the 2026 Hockey World Cup? Read our expert visitor guide on hotels near Amsterdamse Bos, parking tips, metro routes, and local weather.",
+    description: "Heading to Wagener Stadium for the 2026 Hockey World Cup? Read our expert visitor guide on hotels near Amsterdamse Bos, parking tips, metro routes, and...",
     url: "https://hockeyworldcup2026schedule.com/venues/wagener-stadium-guide",
     images: [
       {
@@ -24,7 +24,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Wagener Stadium Amstelveen Visitor Guide: Hotels, Parking & Transit",
-    description: "Heading to Wagener Stadium for the 2026 Hockey World Cup? Read our expert visitor guide on hotels near Amsterdamse Bos, parking tips, metro routes, and local weather.",
+    description: "Heading to Wagener Stadium for the 2026 Hockey World Cup? Read our expert visitor guide on hotels near Amsterdamse Bos, parking tips, metro routes, and...",
     images: ["/og-image.jpg"],
   },
 };
