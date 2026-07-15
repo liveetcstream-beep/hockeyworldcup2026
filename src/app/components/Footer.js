@@ -61,6 +61,7 @@ export default function Footer() {
             <ul className="footer-links" style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.7rem" }}>
               <li><a href="/matches/india-vs-pakistan" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🇮🇳 India vs Pakistan 🇵🇰</a></li>
               <li><a href="/matches/germany-vs-belgium" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🇩🇪 Germany vs Belgium 🇧🇪</a></li>
+              <li><a href="/matches" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none", fontSize: "0.88rem" }}>👉 View All 50+ Matches Hub</a></li>
             </ul>
           </div>
 

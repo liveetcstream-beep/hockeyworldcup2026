@@ -228,6 +228,7 @@ export default function Header() {
                         <li><a href="/matches/netherlands-vs-australia-women">🇳🇱 Netherlands vs Australia (W)</a></li>
                         <li><a href="/matches/india-vs-england">🇮🇳 India vs England 🏴󠁧󠁢󠁥󠁮󠁧󠁿</a></li>
                         <li><a href="/matches/netherlands-vs-argentina">🇳🇱 Netherlands vs Argentina 🇦🇷</a></li>
+                        <li><a href="/matches" className="accent-link" style={{ color: "var(--accent)" }}>🔥 View All Matches Hub →</a></li>
                       </ul>
                     </div>
                   </div>
