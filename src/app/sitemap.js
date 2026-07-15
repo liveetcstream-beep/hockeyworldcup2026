@@ -45,6 +45,7 @@ export default function sitemap() {
     { route: "/hockey-world-cup-2026-schedule-new-zealand", priority: 0.9, freq: "daily" },
     { route: "/hockey-world-cup-2026-schedule-chile", priority: 0.9, freq: "daily" },
     { route: "/hockey-world-cup-2026-schedule-wales", priority: 0.9, freq: "daily" },
+    { route: "/hockey-world-cup-2026-schedule-japan", priority: 0.9, freq: "daily" },
 
     // Pool standings pages
     { route: "/pool-a", priority: 0.8, freq: "daily" },
