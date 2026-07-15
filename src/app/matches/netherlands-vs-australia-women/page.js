@@ -46,6 +46,10 @@ export default function MatchPreviewPage() {
     {
       "q": "Where can I watch matches between the Netherlands and Australia?",
       "a": "Matches are broadcast live on NOS in the Netherlands, Fox Sports and Kayo in Australia, and internationally on the official FIH platform Watch.Hockey."
+    },
+    {
+      "q": "What time does the Netherlands vs Australia Women's match start?",
+      "a": "The match kicks off at 15:00 CET local Amstelveen time, which is 23:00 AEST in Australia and 09:00 EST in the USA."
     }
   ];
 

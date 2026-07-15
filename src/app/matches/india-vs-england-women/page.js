@@ -46,6 +46,10 @@ export default function MatchPreviewPage() {
     {
       "q": "Where can I watch India vs. England women's hockey live?",
       "a": "The match will air live on Star Sports and Disney+ Hotstar in India, TNT Sports in the UK, and stream internationally on Watch.Hockey."
+    },
+    {
+      "q": "Who is captaining the Indian women's team for this World Cup?",
+      "a": "Savita Punia is confirmed to captain the Indian women's team (Savvy) at the 2026 World Cup, directing the defensive unit from the goalkeeper post, with Vandana Katariya acting as vice-captain."
     }
   ];
 

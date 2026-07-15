@@ -37,6 +37,10 @@ export default function MatchPreviewPage() {
     {
       "q": "What time is kickoff for Belgium vs Netherlands?",
       "a": "The match kicks off at 20:30 CET local time, which is 00:00 IST (midnight) in India and 14:30 EST in the United States."
+    },
+    {
+      "q": "Where can I watch the Belgium vs Netherlands match on television?",
+      "a": "In Belgium, the match is broadcast live on RTBF (French-language) and VRT (Flemish-language). In the Netherlands, it is covered by NOS Sport, and globally it is streamed on Watch.Hockey."
     }
   ];
 

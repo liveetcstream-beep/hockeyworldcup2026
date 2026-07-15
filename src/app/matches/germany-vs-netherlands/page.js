@@ -37,6 +37,10 @@ export default function MatchPreviewPage() {
     {
       "q": "What time does Germany vs Netherlands start?",
       "a": "The match kicks off at 18:30 local time (CET) in Amstelveen, which is 22:00 IST in India and 12:30 EST in the USA."
+    },
+    {
+      "q": "Where can I buy tickets for the Germany vs Netherlands match?",
+      "a": "Tickets are sold online through the official FIH portal at tickets.hockeyworldcup2026.com. Due to high local interest in Amstelveen, this match is expected to be sold out, so fans are advised to book in advance."
     }
   ];
 

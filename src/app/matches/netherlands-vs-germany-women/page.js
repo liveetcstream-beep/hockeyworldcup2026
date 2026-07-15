@@ -46,6 +46,10 @@ export default function MatchPreviewPage() {
     {
       "q": "Where can I watch matches between the Netherlands and Germany?",
       "a": "The match will air live on NOS in the Netherlands, DAZN in Germany, and stream internationally on the Watch.Hockey platform."
+    },
+    {
+      "q": "What is the spectator capacity of the Wavre stadium for this match?",
+      "a": "The Belfius Hockey Arena in Wavre has a tournament-configured capacity of approximately 10,000 spectator seats. Gates open 90 minutes before pushback, and bag restrictions are strictly enforced."
     }
   ];
 

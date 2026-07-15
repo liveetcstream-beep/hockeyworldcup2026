@@ -46,6 +46,10 @@ export default function MatchPreviewPage() {
     {
       "q": "Where can I watch the England vs. Pakistan match live?",
       "a": "The match will air live on TNT Sports in the UK, PTV Sports in Pakistan, and stream internationally on the Watch.Hockey platform."
+    },
+    {
+      "q": "What time does the England vs Pakistan match start?",
+      "a": "The match kicks off at 16:30 local time (CET) in Amstelveen, which is 19:30 PKT in Pakistan, 20:00 IST in India, and 10:30 EST in the USA."
     }
   ];
 

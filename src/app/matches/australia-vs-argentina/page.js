@@ -37,6 +37,10 @@ export default function MatchPreviewPage() {
     {
       "q": "What channel is broadcasting the match in Argentina?",
       "a": "ESPN and Disney+ hold the broadcasting rights in Argentina and South America."
+    },
+    {
+      "q": "What time does the Australia vs Argentina match start?",
+      "a": "The match starts at 15:30 CET local Belgian time, which is 19:00 IST in India and 09:30 EST in the USA."
     }
   ];
 
