@@ -23,9 +23,8 @@ export async function generateMetadata({ params }) {
       title: day.metaTitle,
       description: day.metaDesc,
       url: `${BASE}/schedule/date/${day.slug}`,
-      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: day.metaTitle }],
     },
-    twitter: { card: "summary_large_image", title: day.metaTitle, description: day.metaDesc, images: ["/og-image.jpg"] },
+    twitter: { card: "summary_large_image", title: day.metaTitle, description: day.metaDesc },
   };
 }
 

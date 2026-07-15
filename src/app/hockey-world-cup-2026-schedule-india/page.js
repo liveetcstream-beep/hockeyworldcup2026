@@ -36,29 +36,29 @@ export const metadata = {
 export default function IndiaHockeyPage() {
   const faqItems = [
     {
-      question: "India ka pehla match Hockey World Cup 2026 mein kab hai?",
+      question: "When is India's first match in the Hockey World Cup 2026?",
       answer:
-        "India Men's team ka pehla Pool D match August 16, 2026 ko Amstelveen ke Wagener Stadium mein hoga. India Women ka pehla match August 15, 2026 se shuru hoga. Dono matches IST mein evening time ke aaspaas schedule hain.",
+        "The Indian Men's team will play their first Pool D match against Wales on August 15, 2026, at the Wagener Stadium in Amstelveen. The Indian Women's team will play their first match on August 16, 2026, against China. Both matches will kickoff around evening hours IST.",
     },
     {
-      question: "India Hockey World Cup 2026 mein konse pool mein hai?",
+      question: "Which pools are the Indian hockey teams in for the 2026 World Cup?",
       answer:
-        "India Men's team Pool D mein hai jinke sath Wales, England aur Pakistan hain. India Women's team Pool D mein hai jinke saath England, China aur South Africa hain.",
+        "The Indian Men's national team is placed in Pool D alongside England, Pakistan, and Wales. The Indian Women's national team is also in Pool D, grouped with England, China, and South Africa.",
     },
     {
-      question: "India vs Pakistan Hockey World Cup 2026 kab hai?",
+      question: "When is the India vs Pakistan Hockey World Cup 2026 match?",
       answer:
-        "India vs Pakistan Men's Pool D match August 2026 mein hoga. Yeh match Hockey World Cup ka sabse bada rivalry match hai — dono teams ek hi pool (Pool D) mein hain, jo direct group stage clash guaranteed karta hai.",
+        "The India vs Pakistan Men's Pool D match is scheduled for August 19, 2026. This match will be played at the Wagener Stadium in Amstelveen and represents the biggest rivalry in international field hockey.",
     },
     {
-      question: "Hockey World Cup 2026 India ke matches Star Sports pe aayenge?",
+      question: "Which TV channel will broadcast the Hockey World Cup 2026 in India?",
       answer:
-        "Haan, India mein Star Sports aur Disney+ Hotstar ke paas FIH Hockey World Cup 2026 ki broadcasting rights hain. JioCinema pe bhi streaming hogi. IST mein match timings check karne ke liye hamare schedule page pe jayen.",
+        "In India, the Star Sports Network holds the official television broadcasting rights for the FIH Hockey World Cup 2026. Live streaming will be available digitally on Disney+ Hotstar.",
     },
     {
-      question: "India Hockey World Cup 2026 mein kitni baar title jeet chuki hai?",
+      question: "How many times has India won the Hockey World Cup?",
       answer:
-        "India ne Men's Hockey World Cup 1 baar jeeta hai — 1975 mein Kuala Lumpur mein, Pakistan ko final mein 2-1 se hara ke. India Women's team ne World Cup kabhi nahi jeeta lekin 2022 mein achi performance di.",
+        "India has won the Men's Hockey World Cup once, in 1975, held in Kuala Lumpur, where they defeated Pakistan 2-1 in the final. The Indian Women's team has not won a World Cup title yet.",
     },
     { question: "Where can I watch India's matches live?", answer: "All India matches will be broadcasted live on Star Sports channels on TV and streamed live on Disney+ Hotstar." },
     { question: "Who is the captain of the Indian hockey team for HWC 2026?", answer: "Harmanpreet Singh, the star defender and legendary drag-flicker, captain's the Indian squad." }

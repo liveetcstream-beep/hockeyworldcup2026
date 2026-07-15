@@ -175,7 +175,6 @@ export async function generateMetadata({ params }) {
       title: t.metaTitle,
       description: t.metaDesc,
       url: `${BASE}/results/${resolvedParams.team}`,
-      images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: t.metaTitle }],
     },
   };
 }

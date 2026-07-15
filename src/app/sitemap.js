@@ -53,10 +53,13 @@ export default function sitemap() {
     { route: "/venues/belfius-arena-guide", priority: 0.85, freq: "weekly" },
 
     // Match preview pages
+    { route: "/matches/australia-vs-argentina", priority: 0.85, freq: "daily" },
     { route: "/matches/australia-vs-spain", priority: 0.85, freq: "daily" },
     { route: "/matches/belgium-vs-france", priority: 0.85, freq: "daily" },
+    { route: "/matches/belgium-vs-netherlands", priority: 0.85, freq: "daily" },
     { route: "/matches/england-vs-pakistan", priority: 0.85, freq: "daily" },
     { route: "/matches/germany-vs-belgium", priority: 0.85, freq: "daily" },
+    { route: "/matches/germany-vs-netherlands", priority: 0.85, freq: "daily" },
     { route: "/matches/india-vs-england", priority: 0.85, freq: "daily" },
     { route: "/matches/india-vs-england-women", priority: 0.85, freq: "daily" },
     { route: "/matches/india-vs-pakistan", priority: 0.85, freq: "daily" },
