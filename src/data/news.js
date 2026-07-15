@@ -165,5 +165,133 @@ export const newsArticles = [
       }
     ],
     tags: ["Tickets Booking", "Spectator Guide", "Wagener Stadium", "Belfius Arena", "Ticket Update"]
+  },
+  {
+    title: "Netherlands Oranje Dames Open Prep Camp in Utrecht: Focus on Penalty Corner Defense",
+    slug: "netherlands-training-camp-utrecht",
+    category: "Training News",
+    author: "Bram van de Meer",
+    authorTitle: "Senior Field Hockey Analyst",
+    authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
+    date: "July 15, 2026",
+    readTime: "5 min read",
+    image: "/news/germany-injury-news.png",
+    excerpt: "The Dutch Women's national team has officially opened their final preparation camp in Utrecht. Coach Paul van Ass focuses on refining penalty corner defensive setups.",
+    content: `
+      <p>The defending World Champions, the Netherlands Women's team (Oranje Dames), have launched their final phase of preparation in Utrecht ahead of the co-hosted <strong>FIH Hockey World Cup 2026</strong>. With matches scheduled at the historic <strong>Wagener Stadium in Amstelveen</strong>, the squad is under high pressure from local media and fans to deliver a flawless performance. Head coach Paul van Ass has structured the Utrecht camp specifically to target defensive tactical issues observed in their recent FIH Pro League matches.</p>
+
+      <h2>What is the focus of the Utrecht camp? (Tactical Focus Areas)</h2>
+      <p>While the Dutch attack led by Frédérique Matla and Yibbi Jansen remains the most lethal in international hockey, defensive vulnerabilities during transitions have caused concern among the coaching staff. Specifically, the camp is focusing on: </p>
+      <ul>
+        <li><strong>Penalty Corner Defensive Lineups:</strong> Minimizing the space available to elite drag-flickers during first-wave rushes.</li>
+        <li><strong>Attacking Circle Recovery:</strong> Re-structuring the midfield transition block to prevent fast-break counter-attacks.</li>
+        <li><strong>Physical Load Management:</strong> Monitoring player fatigue using advanced tracking metrics to avoid late-stage tournament burnout.</li>
+      </ul>
+
+      <h2>The Penalty Corner Defense Challenge</h2>
+      <p>Coach Paul van Ass highlighted that penalty corner defensive errors are the quickest way to lose a knockout game. <em>"In modern field hockey, you cannot afford to give away cheap penalty corners. We are working on our defensive runs, ensuring our first runners are faster off the line and our post-defenders cover the angles perfectly. If Yibbi Jansen is scoring at one end, our defensive unit must match that efficiency at the other."</em></p>
+
+      <h2>Addressing Fan Pain Points: Public Training Sessions & Access</h2>
+      <p>For supporters planning to visit Utrecht or follow the team's progress, here are the key spectator updates:</p>
+      <ul>
+        <li><strong>Open Training Days:</strong> The DHB has confirmed that Wednesday morning sessions will be open to the public, with autograph opportunities post-training.</li>
+        <li><strong>Logistics & Parking:</strong> The Utrecht training venue has no public parking. Spectators are advised to use Utrecht Centraal transit links and take local tram routes directly to the sports park gates.</li>
+      </ul>
+    `,
+    faqs: [
+      {
+        question: "Where is the Dutch Women's team training camp located?",
+        answer: "The final preparation camp is hosted in Utrecht, Netherlands, before the team moves to the tournament base in Amstelveen."
+      },
+      {
+        question: "What is the primary tactical focus of the training camp?",
+        answer: "Head coach Paul van Ass is prioritizing penalty corner defensive structures and midfield transition recovery drills."
+      }
+    ],
+    tags: ["Netherlands Women", "Paul van Ass", "Training Camp", "Wagener Stadium", "Training News"]
+  },
+  {
+    title: "Belgium Red Lions Confirm Three-Match Warm-Up Series in Antwerp",
+    slug: "belgium-red-lions-warmup-schedule",
+    category: "Warm-Up News",
+    author: "Marc Devos",
+    authorTitle: "Senior Belgian Hockey Journalist",
+    authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
+    date: "July 15, 2026",
+    readTime: "4 min read",
+    image: "/news/india-squad-news.png",
+    excerpt: "Belgium's Red Lions have scheduled a three-match warm-up series against England and Spain in Antwerp to finalize their starting XI before the World Cup begins.",
+    content: `
+      <p>The Royal Belgian Hockey Association (KBHB) has officially confirmed a three-match test series in Antwerp as the final warm-up phase for the Men's national team (Red Lions) before the co-hosted <strong>FIH Hockey World Cup 2026</strong>. With group fixtures scheduled at the <strong>Belfius Hockey Arena in Wavre</strong>, this warm-up series represents the final opportunity for the coaching staff to evaluate player form and resolve starting lineup debates.</p>
+
+      <h2>Who are Belgium's opponents in the warm-up series?</h2>
+      <p>The Red Lions will play two matches against a structured <strong>England</strong> squad and one match against <strong>Spain</strong> at the Wilrijkse Plein sports complex in Antwerp:</p>
+      <ul>
+        <li><strong>August 3, 2026:</strong> Belgium vs England (Men's Test Match)</li>
+        <li><strong>August 5, 2026:</strong> Belgium vs Spain (Men's Test Match)</li>
+        <li><strong>August 7, 2026:</strong> Belgium vs England (Men's Test Match)</li>
+      </ul>
+
+      <h2>Resolving the Starting XI Debates</h2>
+      <p>With a veteran roster that includes gold medalists like Arthur Van Doren and Victor Wegnez, the main challenge for coach Michel van den Heuvel is selecting the active starting lineup. <em>"Our squad depth is our greatest asset, but it also means making tough choices. These warm-up matches in Antwerp are not about the scoreline; they are about finding the right combinations in our transition setups and testing our player rotations under match pressure."</em></p>
+
+      <h2>Addressing Spectator Pain Points: Tickets & Seating</h2>
+      <p>For fans hoping to watch the warm-up matches in Antwerp, keep these details in mind:</p>
+      <ul>
+        <li><strong>Ticket Availability:</strong> Tickets are sold separately from the main World Cup tickets. They can be booked via the official KBHB portal starting July 20.</li>
+        <li><strong>Antwerp Parking Warning:</strong> Wilrijkse Plein has strict parking regulations. Spectators are urged to use the Antwerp Expo P+R facilities and walk to the pitch gates.</li>
+      </ul>
+    `,
+    faqs: [
+      {
+        question: "When and where is Belgium's warm-up series taking place?",
+        answer: "The series runs from August 3 to August 7, 2026, at the Wilrijkse Plein sports complex in Antwerp, Belgium."
+      },
+      {
+        question: "Which teams is Belgium playing during the warm-up series?",
+        answer: "The Red Lions will face England (two matches) and Spain (one match) in the test series."
+      }
+    ],
+    tags: ["Belgium Red Lions", "Warm-Up Matches", "Antwerp", "Belfius Arena", "Warm-Up News"]
+  },
+  {
+    title: "FIH Modifies Video Referral Rule Guidelines for Hockey World Cup 2026",
+    slug: "fih-video-referral-rule-changes",
+    category: "Rules Update",
+    author: "Marc Devos",
+    authorTitle: "Senior Belgian Hockey Journalist",
+    authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
+    date: "July 15, 2026",
+    readTime: "4 min read",
+    image: "/news/world-cup-ticket-news.png",
+    excerpt: "The International Hockey Federation (FIH) has confirmed modifications to the video referral system to streamline match play and reduce review delays.",
+    content: `
+      <p>The International Hockey Federation (FIH) has announced updated guidelines for the video referral system to be implemented at the co-hosted <strong>FIH Hockey World Cup 2026</strong> in Amstelveen and Wavre. The changes are designed to address a major spectator pain point: excessive match downtime and long review delays that disrupt the flow of play for fans and television broadcasters alike.</p>
+
+      <h2>What are the key rule modifications?</h2>
+      <p>The FIH Rules Committee has introduced three structural updates to how team video referrals are requested and resolved during matches:</p>
+      <ul>
+        <li><strong>Strict Time Limits:</strong> Teams must request a video referral within 10 seconds of the incident. Late requests will be rejected by the umpire.</li>
+        <li><strong>Specific Review Categories:</strong> Referrals are limited to goals, penalty corners, penalty stroke decisions, and serious physical misconduct inside the 23-meter zone.</li>
+        <li><strong>No Referral Retaliation:</strong> If a team loses their referral early in the match, they will no longer be allowed to request reviews, preventing tactical delays in the final quarters.</li>
+      </ul>
+
+      <h2>Reducing Match Downtime</h2>
+      <p>Editorial Director Marc Devos noted that the changes are a step in the right direction. <em>"In previous tournaments, teams frequently used referrals tactically in the fourth quarter to disrupt the opponent's momentum or gain a quick physical rest. By enforcing strict limits, the FIH is protecting the flow of the game for spectators and ensuring match schedules run precisely on time."</em></p>
+
+      <h2>Spectator and Broadcast Alignment</h2>
+      <p>For fans watching online or at the venues, these rule adjustments will ensure that matches complete within their pre-allocated 75-minute broadcasting windows, preventing overlap with subsequent sessions.</p>
+    `,
+    faqs: [
+      {
+        question: "What is the new time limit to request a video referral?",
+        answer: "Teams must request a video referral within 10 seconds of the incident being questioned."
+      },
+      {
+        question: "Can a team use video referrals to delay the match in the final quarter?",
+        answer: "No. If a team has lost their referral earlier in the game, they cannot request a review, preventing tactical delays in the fourth quarter."
+      }
+    ],
+    tags: ["FIH Rules", "Video Referral", "Wagener Stadium", "Belfius Arena", "Rules Update"]
   }
 ];
