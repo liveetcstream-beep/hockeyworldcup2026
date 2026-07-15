@@ -2,6 +2,7 @@
 
 > Version: 1.0 | Updated: July 2026
 > Purpose: Guide AI language models and crawlers to understand this site's content.
+
 ## About This Website
 
 This is the official comprehensive fan and media guide for the **FIH Hockey World Cup 2026**, co-hosted by Belgium and the Netherlands from August 15–30, 2026.
