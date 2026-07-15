@@ -33,28 +33,24 @@ export const metadata = {
 export default function BroadcastersPage() {
   const faqItems = [
     {
-      q: "How to watch the Hockey World Cup 2026 live stream online?",
-      a: "You can watch the Hockey World Cup 2026 live stream on regional platforms depending on your location. JioCinema streams it free in India, Tapmad streams HD coverage in Pakistan, VRT MAX and RTBF Auvio cover it in Belgium, and the Watch.Hockey app streams it globally for regions without exclusive television rights."
+      q: "Is there a free live stream of the Hockey World Cup 2026 available?",
+      a: "Yes. In India, JioCinema streams all matches for free. In Belgium, VRT MAX and RTBF Auvio stream matches free of charge within the territory. In the Netherlands, NOS.nl provides free streams of the national team's matches."
     },
     {
-      q: "Where can I check the hockey live score for the World Cup?",
-      a: "You can track the hockey live score of all matches on our official scoreboard section (hockeyworldcup2026schedule.com/live-scores) or check the official real-time updates via FIH's match center portal."
+      q: "How can fans in Pakistan watch the Hockey World Cup 2026 live online?",
+      a: "Fans in Pakistan can watch HD live streaming on the Tapmad app/website with a premium subscription, or check national television coverage on PTV Sports."
     },
     {
-      q: "How to watch the junior hockey world cup 2026 live stream?",
-      a: "Matches for the Junior Hockey World Cup 2026 are streamed live on the official Watch.Hockey platform. Certain matches involving local teams are also picked up by regional broadcasters like Star Sports/Sports18 in India and PTV Sports in Pakistan."
+      q: "Can I stream the matches for free if I am outside India or Europe?",
+      a: "For regions without exclusive broadcasting partners, the FIH streams matches live on the official Watch.Hockey platform. Some content is free, while premium tournament passes are required for full match access."
     },
     {
-      q: "Can I watch the fih hockey world cup qualifiers 2026 live streaming?",
-      a: "Yes, the FIH Hockey World Cup Qualifiers 2026 are streamed live on Watch.Hockey. Live scores and detailed qualifiers match cards can also be monitored via the FIH official website or regional sports networks."
+      q: "How can I avoid geo-blocking to watch the free streams?",
+      a: "Spectators with valid travel subscriptions often use premium VPN services to redirect their connection to free regional portals like JioCinema (India) or VRT MAX (Belgium) to watch games while traveling."
     },
     {
-      q: "Is there an ice hockey world cup 2026 live stream available here?",
-      a: "No, this guide is exclusively for the FIH Field Hockey World Cup. For the IIHF Ice Hockey World Championship, official streams are hosted on IIHF.TV or via regional broadcasters like ESPN and TSN."
-    },
-    {
-      q: "How can I access junior hockey world cup 2026 scores today live?",
-      a: "You can check junior hockey world cup 2026 scores today live by visiting our dedicated scoreboard tab, or checking the live match widgets on the FIH official app."
+      q: "Where can I find free real-time scores and match commentary?",
+      a: "We provide a completely free live score center at hockeyworldcup2026schedule.com/live-scores, displaying goals, cards, and starting lineups updated every 30 seconds."
     }
   ];
 

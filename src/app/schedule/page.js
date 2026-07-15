@@ -49,6 +49,10 @@ export default function SchedulePage() {
     {
       question: "How can I purchase official tickets for the 2026 matches?",
       answer: "Official tickets are managed via the unified tournament booking portal at tickets.hockeyworldcup2026.com. Avoid third-party scalpers or unauthorized resale platforms to ensure valid entry at Wagener Stadium and Belfius Hockey Arena."
+    },
+    {
+      question: "What is the tournament format for the 2026 World Cup?",
+      answer: "The 16 teams are split into 4 pools of 4 teams. The top team in each pool qualifies directly for the Quarter-Finals. The second and third-placed teams play in crossover playoffs to secure the remaining Quarter-Final spots, while the fourth-placed team is eliminated."
     }
   ];
 

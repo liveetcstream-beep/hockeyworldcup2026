@@ -35,7 +35,8 @@ export default function WagenerStadiumGuide() {
     { question: "What is the exact address of Wagener Stadium?", answer: "The stadium is located at Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, Netherlands. It sits on the edge of the Amsterdamse Bos (Amsterdam Forest)." },
     { question: "Can I drive and park directly at Wagener Stadium?", answer: "No, direct parking at the stadium is strictly restricted on matchdays. You are advised to use the P+R (Park and Ride) facilities in Amstelveen or Amsterdam and take public transit, or travel by bicycle." },
     { question: "How far is the stadium from Amsterdam city center?", answer: "It is about 8 kilometers south of central Amsterdam. By public transit (Metro 25 or local buses), it takes roughly 25 to 35 minutes to reach the stadium from Amsterdam Centraal." },
-    { question: "Are there hotels within walking distance?", answer: "Yes, there are several hotels in southern Amsterdam (near Buitenveldert and the Zuidas business district) and northern Amstelveen that are within a 20-30 minute walk or a short bike ride." }
+    { question: "Are there hotels within walking distance?", answer: "Yes, there are several hotels in southern Amsterdam (near Buitenveldert and the Zuidas business district) and northern Amstelveen that are within a 20-30 minute walk or a short bike ride." },
+    { question: "What public transport options go to Wagener Stadium?", answer: "You can take Metro Line 25 from Amsterdam Zuid station to the Kronenburg stop, followed by a 15-minute walk. Alternatively, local Bus Lines 347 and 348 stop nearby at Uilenstede." }
   ];
 
   return (

@@ -48,6 +48,10 @@ export default function TicketsPage() {
     {
       question: "Can I buy physical tickets at the stadium gates?",
       answer: "Tickets are sold on a first-come, first-served basis. Due to high local demand (especially for Netherlands and Belgium fixtures), matches are expected to sell out online in advance. Box offices at the gates will only open if tickets remain."
+    },
+    {
+      question: "What are the ticket price categories for the group stage and final?",
+      answer: "Standard group stage tickets start at €25 for general standing areas and €45 for premium covered seats. Prices scale for the knockout stages, with Quarter-final tickets starting at €60 and the Grand Final tickets ranging from €90 to €150 depending on category seating."
     }
   ];
 

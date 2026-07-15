@@ -46,6 +46,10 @@ const faqItems = [
   {
     question: "What is the head-to-head status of the Australia vs Belgium modern rivalry?",
     answer: "Australia leads the head-to-head wins 5-2 over their last 10 encounters. However, Belgium has won the two biggest matches: the Tokyo 2020 Olympic Gold Medal match (on penalties) and the 2023 FIH World Cup semi-final."
+  },
+  {
+    question: "How many times have India and Pakistan played against each other in the FIH Hockey World Cup?",
+    answer: "India and Pakistan have faced each other 8 times in the history of the FIH Men's Hockey World Cup. Pakistan holds a slight advantage in tournament history with 4 wins, while India has won 3 times, with 1 match ending in a draw."
   }
 ];
 
