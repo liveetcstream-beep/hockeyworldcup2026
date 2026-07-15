@@ -211,7 +211,7 @@ export default function BelgiumHockeyPage() {
         {/* Mid-page Team Banner Image */}
         <section style={{ marginBottom: "4rem", borderRadius: "20px", overflow: "hidden", boxShadow: "0 8px 40px rgba(15,23,42,0.15)" }}>
           <Image
-            src="/belgium-banner.png"
+            src="/belgium-banner.webp"
             alt="Belgium Red Lions Hockey World Cup 2026 - Belfius Hockey Arena Wavre"
             width={1200}
             height={480}

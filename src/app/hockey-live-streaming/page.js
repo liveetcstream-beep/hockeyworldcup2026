@@ -123,7 +123,7 @@ export default function BroadcastersPage() {
         {/* Infographic Banner */}
         <div style={{ marginBottom: "3rem", borderRadius: "16px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
           <img 
-            src="/images/hockey_broadcasting_banner.png" 
+            src="/images/hockey_broadcasting_banner.webp" 
             alt="Field Hockey World Cup Live Streaming and TV Broadcast Banner" 
             style={{ width: "100%", height: "auto", display: "block" }}
           />
@@ -269,7 +269,7 @@ export default function BroadcastersPage() {
         {/* Mobile Mockup Banner */}
         <div style={{ marginBottom: "3rem", borderRadius: "16px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
           <img 
-            src="/images/hockey_mobile_streaming.png" 
+            src="/images/hockey_mobile_streaming.webp" 
             alt="Mobile Streaming App Interface and Mockup for Hockey Matches" 
             style={{ width: "100%", height: "auto", display: "block" }}
           />

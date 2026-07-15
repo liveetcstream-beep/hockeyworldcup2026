@@ -123,7 +123,7 @@ export default function TicketsPage() {
         {/* Banner Graphic */}
         <div style={{ marginBottom: "3rem", borderRadius: "16px", overflow: "hidden", border: "1px solid var(--border-color)" }}>
           <img 
-            src="/images/hockey_ticket_graphic.png" 
+            src="/images/hockey_ticket_graphic.webp" 
             alt="Official Field Hockey World Cup 2026 Ticket Mockup" 
             style={{ width: "100%", height: "auto", display: "block" }}
           />
@@ -229,7 +229,7 @@ export default function TicketsPage() {
             <div>
               <h3 style={{ fontSize: "1.2rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem" }}>🇳🇱 Wagener Stadium Enclosures (Amstelveen)</h3>
               <img 
-                src="/images/wagener_stadium_seating.png" 
+                src="/images/wagener_stadium_seating.webp" 
                 alt="Wagener Stadium Seating Chart Layout" 
                 style={{ width: "100%", borderRadius: "12px", border: "1px solid var(--border-color)", marginBottom: "1rem" }}
               />
@@ -243,7 +243,7 @@ export default function TicketsPage() {
             <div>
               <h3 style={{ fontSize: "1.2rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "1rem" }}>🇧🇪 Belfius Arena Enclosures (Wavre)</h3>
               <img 
-                src="/images/belfius_arena_seating.png" 
+                src="/images/belfius_arena_seating.webp" 
                 alt="Belfius Hockey Arena Seating Chart Layout" 
                 style={{ width: "100%", borderRadius: "12px", border: "1px solid var(--border-color)", marginBottom: "1rem" }}
               />
