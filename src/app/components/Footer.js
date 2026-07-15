@@ -8,11 +8,11 @@ export default function Footer() {
           
           {/* Column 1: About & Support */}
           <div className="footer-col">
-            <h4 className="text-white font-bold" style={{ color: "#fff", fontSize: "1.1rem", fontWeight: "800", marginBottom: "1.2rem" }}>About Us</h4>
+            <div className="text-white font-bold" style={{ color: "#fff", fontSize: "1.1rem", fontWeight: "800", marginBottom: "1.2rem" }}>About Us</div>
             <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: "1.7", marginBottom: "1.5rem" }}>
               We are an independent portal bringing you verified match fixtures, schedule updates, timezone calculations, and broadcasting guides for the upcoming FIH Hockey World Cup 2026.
             </p>
-            <h4 className="text-white font-bold" style={{ color: "#fff", fontSize: "1rem", fontWeight: "800", marginBottom: "0.8rem" }}>Contact & Support</h4>
+            <div className="text-white font-bold" style={{ color: "#fff", fontSize: "1rem", fontWeight: "800", marginBottom: "0.8rem" }}>Contact & Support</div>
             <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: "1.6" }}>
               Reach out to our editorial desk at:<br/>
               <a href="mailto:editor@hockeyworldcup2026schedule.com" style={{ color: "var(--text-main)", fontWeight: "700", wordBreak: "break-all", display: "block", marginTop: "0.4rem", textDecoration: "none" }}>
@@ -23,7 +23,7 @@ export default function Footer() {
 
           {/* Column 2: Navigation Hub */}
           <div className="footer-col">
-            <h4 className="text-white font-bold" style={{ color: "#fff", fontSize: "1.1rem", fontWeight: "800", marginBottom: "1.2rem" }}>Navigation</h4>
+            <div className="text-white font-bold" style={{ color: "#fff", fontSize: "1.1rem", fontWeight: "800", marginBottom: "1.2rem" }}>Navigation</div>
             <ul className="footer-links" style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.7rem" }}>
               <li><a href="/" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🏠 Home</a></li>
               <li><a href="/schedule" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📅 Match Schedule & Timings</a></li>
@@ -37,7 +37,7 @@ export default function Footer() {
 
           {/* Column 3: pSEO Indexes & Pools */}
           <div className="footer-col">
-            <h4 className="text-white font-bold" style={{ color: "#fff", fontSize: "1.1rem", fontWeight: "800", marginBottom: "1.2rem" }}>Directory Hubs</h4>
+            <div className="text-white font-bold" style={{ color: "#fff", fontSize: "1.1rem", fontWeight: "800", marginBottom: "1.2rem" }}>Directory Hubs</div>
             <ul className="footer-links" style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.7rem" }}>
               <li><a href="/players" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🏃‍♂️ Star Player Profiles</a></li>
               <li><a href="/results" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📊 Team Results Tracker</a></li>
@@ -51,13 +51,13 @@ export default function Footer() {
 
           {/* Column 4: Knockouts & Previews */}
           <div className="footer-col">
-            <h4 className="text-white font-bold" style={{ color: "#fff", fontSize: "1.1rem", fontWeight: "800", marginBottom: "1.2rem" }}>Knockout Stages</h4>
+            <div className="text-white font-bold" style={{ color: "#fff", fontSize: "1.1rem", fontWeight: "800", marginBottom: "1.2rem" }}>Knockout Stages</div>
             <ul className="footer-links" style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.7rem", marginBottom: "1.5rem" }}>
               <li><a href="/knockout/quarter-finals" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>⚙️ Quarter-Finals Guide</a></li>
               <li><a href="/knockout/semi-finals" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>⚙️ Semi-Finals Guide</a></li>
               <li><a href="/knockout/final" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🏆 Grand Final Match Guide</a></li>
             </ul>
-            <h4 className="text-white font-bold" style={{ color: "#fff", fontSize: "1rem", fontWeight: "800", marginBottom: "0.8rem" }}>Blockbuster Previews</h4>
+            <div className="text-white font-bold" style={{ color: "#fff", fontSize: "1rem", fontWeight: "800", marginBottom: "0.8rem" }}>Blockbuster Previews</div>
             <ul className="footer-links" style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.7rem" }}>
               <li><a href="/matches/india-vs-pakistan" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🇮🇳 India vs Pakistan 🇵🇰</a></li>
               <li><a href="/matches/germany-vs-belgium" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🇩🇪 Germany vs Belgium 🇧🇪</a></li>

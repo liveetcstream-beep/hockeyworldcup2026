@@ -72,26 +72,16 @@ export const metadata = {
   },
 };
 
+import { GoogleAnalytics } from '@next/third-parties/google';
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${outfit.variable} ${plusJakartaSans.variable} h-full antialiased`}>
       <head>
-        {/* Google Analytics (gtag.js) */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-1SEPBKM7MR"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'G-1SEPBKM7MR');
-          `}
-        </Script>
+        {/* GA optimized by next/third-parties */}
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
+      <GoogleAnalytics gaId="G-1SEPBKM7MR" />
     </html>
   );
 }

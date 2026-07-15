@@ -137,7 +137,7 @@ export default function Header() {
                 <div className="mega-dropdown width-md">
                   <div className="mega-grid cols-3">
                     <div className="mega-column">
-                      <h4>📅 Tournament Calendar</h4>
+                      <div className='nav-heading'>📅 Tournament Calendar</div>
                       <ul>
                         <li><a href="/schedule">Match Schedule & Timings</a></li>
                         <li><a href="/format">⚙️ Tournament Format & Bracket</a></li>
@@ -146,7 +146,7 @@ export default function Header() {
                       </ul>
                     </div>
                     <div className="mega-column">
-                      <h4>🏑 Pools A & B Schedules</h4>
+                      <div className='nav-heading'>🏑 Pools A & B Schedules</div>
                       <ul>
                         <li><a href="/hockey-world-cup-2026-schedule-netherlands">🇳🇱 Netherlands Schedule</a></li>
                         <li><a href="/hockey-world-cup-2026-schedule-argentina">🇦🇷 Argentina Schedule</a></li>
@@ -159,7 +159,7 @@ export default function Header() {
                       </ul>
                     </div>
                     <div className="mega-column">
-                      <h4>🏑 Pools C & D Schedules</h4>
+                      <div className='nav-heading'>🏑 Pools C & D Schedules</div>
                       <ul>
                         <li><a href="/hockey-world-cup-2026-schedule-australia">🇦🇺 Australia Schedule</a></li>
                         <li><a href="/hockey-world-cup-2026-schedule-spain">🇪🇸 Spain Schedule</a></li>
@@ -184,7 +184,7 @@ export default function Header() {
                 <div className="mega-dropdown">
                   <div className="mega-grid">
                     <div className="mega-column">
-                      <h4>📊 Standings by Pool</h4>
+                      <div className='nav-heading'>📊 Standings by Pool</div>
                       <ul>
                         <li><a href="/hockey-world-cup-2026-groups">All Pool Standings Hub</a></li>
                         <li><a href="/pool-a">🔴 Pool A Standings</a></li>
@@ -194,7 +194,7 @@ export default function Header() {
                       </ul>
                     </div>
                     <div className="mega-column highlighted-col">
-                      <h4>🏃‍♂️ Team Squads</h4>
+                      <div className='nav-heading'>🏃‍♂️ Team Squads</div>
                       <ul>
                         <li><a href="/teams" className="accent-link">All 16 Squads Directory →</a></li>
                       </ul>
@@ -212,7 +212,7 @@ export default function Header() {
                 <div className="mega-dropdown">
                   <div className="mega-grid">
                     <div className="mega-column">
-                      <h4>📺 Coverage & Access</h4>
+                      <div className='nav-heading'>📺 Coverage & Access</div>
                       <ul>
                         <li><a href="/live-scores" className="live-item-link"><span className="pulse-dot"></span> Live Scoreboard</a></li>
                         <li><a href="/hockey-live-streaming">📺 Live Streaming Guide</a></li>
@@ -221,7 +221,7 @@ export default function Header() {
                       </ul>
                     </div>
                     <div className="mega-column">
-                      <h4>🔥 Blockbuster Previews <span className="hot-tag">HOT</span></h4>
+                      <div className='nav-heading'>🔥 Blockbuster Previews <span className="hot-tag">HOT</span></div>
                       <ul>
                         <li><a href="/matches/india-vs-pakistan">🇮🇳 India vs Pakistan 🇵🇰</a></li>
                         <li><a href="/matches/germany-vs-belgium">🇩🇪 Germany vs Belgium 🇧🇪</a></li>

@@ -19,16 +19,16 @@ The site provides:
 
 ## Key Pages
 
-> Full Schedule: https://hockeyworldcup2026schedule.com/schedule
-> Live Scores: https://hockeyworldcup2026schedule.com/live-scores
-> Points Table: https://hockeyworldcup2026schedule.com/points-table
-> Head-to-Head Records: https://hockeyworldcup2026schedule.com/h2h
-> Broadcasters & Streaming: https://hockeyworldcup2026schedule.com/broadcasters
-> Team Profiles: https://hockeyworldcup2026schedule.com/teams
-> Venues Guide: https://hockeyworldcup2026schedule.com/venues
-> Tournament Format: https://hockeyworldcup2026schedule.com/format
-> Past Results & History: https://hockeyworldcup2026schedule.com/past-results
-> Tickets: https://hockeyworldcup2026schedule.com/tickets
+- [Full Schedule](https://hockeyworldcup2026schedule.com/schedule)
+- [Live Scores](https://hockeyworldcup2026schedule.com/live-scores)
+- [Points Table](https://hockeyworldcup2026schedule.com/points-table)
+- [Head-to-Head Records](https://hockeyworldcup2026schedule.com/h2h)
+- [Broadcasters & Streaming](https://hockeyworldcup2026schedule.com/broadcasters)
+- [Team Profiles](https://hockeyworldcup2026schedule.com/teams)
+- [Venues Guide](https://hockeyworldcup2026schedule.com/venues)
+- [Tournament Format](https://hockeyworldcup2026schedule.com/format)
+- [Past Results & History](https://hockeyworldcup2026schedule.com/past-results)
+- [Tickets](https://hockeyworldcup2026schedule.com/tickets)
 
 ## Key Facts (for AI citation accuracy)
 
