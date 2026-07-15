@@ -7,13 +7,13 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule Pakistan: Time Table, Fixtures & PDF",
-  description: "Complete Hockey World Cup 2026 Schedule for Pakistan. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad...",
+  description: "Pakistan Hockey World Cup 2026 Schedule: Pool D fixtures vs England (Aug 15), Wales (Aug 17) & India (Aug 19). PST timings, squad, and live streaming details.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-pakistan`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule Pakistan: Time Table, Fixtures & PDF",
-    description: "Complete Hockey World Cup 2026 Schedule for Pakistan. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad...",
+    description: "Pakistan Hockey World Cup 2026 Schedule: Pool D fixtures vs England (Aug 15), Wales (Aug 17) & India (Aug 19). PST timings, squad, and live streaming details.",
     url: `${BASE}/hockey-world-cup-2026-schedule-pakistan`,
     images: [
       {
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hockey World Cup 2026 Schedule Pakistan: Time Table, Fixtures & PDF",
-    description: "Complete Hockey World Cup 2026 Schedule for Pakistan. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad...",
+    description: "Pakistan Hockey World Cup 2026 Schedule: Pool D fixtures vs England (Aug 15), Wales (Aug 17) & India (Aug 19). PST timings, squad, and live streaming details.",
     images: ["/og-image.jpg"],
   },
 };

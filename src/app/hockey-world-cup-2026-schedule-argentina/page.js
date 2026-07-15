@@ -7,13 +7,13 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule Argentina: Time Table, Fixtures & PDF",
-  description: "Complete Hockey World Cup 2026 Schedule for Argentina. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad...",
+  description: "Argentina Hockey World Cup 2026 Schedule: Pool B fixtures vs USA (Aug 15), Japan (Aug 17) & Germany (Aug 19). ART/EST timings, squad list & streaming guide.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-argentina`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule Argentina: Time Table, Fixtures & PDF",
-    description: "Complete Hockey World Cup 2026 Schedule for Argentina. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad...",
+    description: "Argentina Hockey World Cup 2026 Schedule: Pool B fixtures vs USA (Aug 15), Japan (Aug 17) & Germany (Aug 19). ART/EST timings, squad list & streaming guide.",
     url: `${BASE}/hockey-world-cup-2026-schedule-argentina`,
     images: [
       {
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hockey World Cup 2026 Schedule Argentina: Time Table, Fixtures & PDF",
-    description: "Complete Hockey World Cup 2026 Schedule for Argentina. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad...",
+    description: "Argentina Hockey World Cup 2026 Schedule: Pool B fixtures vs USA (Aug 15), Japan (Aug 17) & Germany (Aug 19). ART/EST timings, squad list & streaming guide.",
     images: ["/og-image.jpg"],
   },
 };

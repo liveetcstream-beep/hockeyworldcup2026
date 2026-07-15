@@ -7,13 +7,13 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule Chile: Time Table, Fixtures & PDF",
-  description: "Complete Hockey World Cup 2026 Schedule for Chile. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list...",
+  description: "Chile Hockey World Cup 2026 Schedule: Pool A fixtures vs Netherlands (Aug 15), New Zealand (Aug 17) & South Africa (Aug 19). CLT timings, squad & guide.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-chile`,
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule Chile: Time Table, Fixtures & PDF",
-    description: "Complete Hockey World Cup 2026 Schedule for Chile. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list...",
+    description: "Chile Hockey World Cup 2026 Schedule: Pool A fixtures vs Netherlands (Aug 15), New Zealand (Aug 17) & South Africa (Aug 19). CLT timings, squad & guide.",
     url: `${BASE}/hockey-world-cup-2026-schedule-chile`,
     images: [
       {
@@ -27,7 +27,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hockey World Cup 2026 Schedule Chile: Time Table, Fixtures & PDF",
-    description: "Complete Hockey World Cup 2026 Schedule for Chile. Find the exact match time table, fixture dates, USA/Canada broadcast times, results, and squad list...",
+    description: "Chile Hockey World Cup 2026 Schedule: Pool A fixtures vs Netherlands (Aug 15), New Zealand (Aug 17) & South Africa (Aug 19). CLT timings, squad & guide.",
     images: ["/og-image.jpg"],
   },
 };
