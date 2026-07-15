@@ -511,12 +511,13 @@ export default function BelgiumHockeyPage() {
               { href: "/schedule", label: "📅 Full Tournament Schedule" },
               { href: "/live-scores", label: "🔴 Live Scores" },
               { href: "/points-table", label: "📊 Points Table" },
-              { href: "/venues", label: "🏟️ Belfius Arena Guide" },
-              { href: "/hockey-live-streaming", label: "📺 Watch in Belgium (VRT Sport)" },
-              { href: "/hockey-world-cup-2026-groups", label: "🏑 Pool B Full Draw" },
-              { href: "/teams", label: "👥 All 16 Teams" },
-              { href: "/hockey-world-cup-2026-schedule-india", label: "🇮🇳 India's Page" },
-              { href: "/hockey-world-cup-2026-schedule-pakistan", label: "🇵🇰 Pakistan's Page" },
+              { href: "/pool-b", label: "🔵 Pool B Standings" },
+              { href: "/pool-c", label: "🟢 Pool C Standings" },
+              { href: "/matches/germany-vs-belgium", label: "⚔️ Germany vs Belgium Preview" },
+              { href: "/matches/belgium-vs-france", label: "⚔️ Belgium vs France Preview" },
+              { href: "/venues/belfius-arena-guide", label: "🏟️ Belfius Hockey Arena Guide" },
+              { href: "/hockey-live-streaming", label: "📺 Watch in Belgium (VRT/RTBF)" },
+              { href: "/hockey-world-cup-2026-schedule-germany", label: "🇩🇪 Germany Page" },
             ].map((link) => (
               <a key={link.href} href={link.href} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: "var(--bg-tertiary)", color: "var(--text-main)", border: "1px solid var(--border-color)", borderRadius: "10px", padding: "0.5rem 1rem", fontSize: "0.9rem", fontWeight: "600", textDecoration: "none", transition: "all 0.2s" }}>
                 {link.label}

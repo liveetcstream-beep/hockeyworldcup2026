@@ -488,7 +488,11 @@ export default function IndiaHockeyPage() {
               { href: "/schedule", label: "📅 Full Tournament Schedule" },
               { href: "/live-scores", label: "🔴 Live Scores" },
               { href: "/points-table", label: "📊 Points Table" },
-              { href: "/h2h", label: "⚔️ India vs Pakistan H2H" },
+              { href: "/pool-d", label: "🟡 Pool D Standings" },
+              { href: "/matches/india-vs-pakistan", label: "⚔️ India vs Pakistan Preview" },
+              { href: "/matches/india-vs-england", label: "⚔️ India vs England Preview" },
+              { href: "/matches/india-vs-england-women", label: "⚔️ India vs England Women" },
+              { href: "/venues/wagener-stadium-guide", label: "🏟️ Wagener Stadium Guide" },
               { href: "/hockey-live-streaming", label: "📺 Watch in India (Star Sports)" },
               { href: "/hockey-world-cup-2026-schedule-pakistan", label: "🇵🇰 Pakistan Page" },
             ].map((link) => (

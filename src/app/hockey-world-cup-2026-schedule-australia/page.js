@@ -448,9 +448,13 @@ export default function AustraliaHockeyPage() {
               { href: "/schedule", label: "📅 Full Tournament Schedule" },
               { href: "/live-scores", label: "🔴 Live Scores" },
               { href: "/points-table", label: "📊 Points Table" },
-              { href: "/h2h", label: "⚔️ Australia vs Pakistan H2H" },
-              { href: "/hockey-live-streaming", label: "📺 Watch in Australia (Star Sports)" },
-              { href: "/hockey-world-cup-2026-schedule-pakistan", label: "🇵🇰 Pakistan Page" },
+              { href: "/pool-c", label: "🟢 Pool C Standings" },
+              { href: "/matches/australia-vs-spain", label: "⚔️ Australia vs Spain Preview" },
+              { href: "/matches/netherlands-vs-australia-women", label: "⚔️ Netherlands vs Australia (W)" },
+              { href: "/venues/belfius-arena-guide", label: "🏟️ Belfius Hockey Arena Guide" },
+              { href: "/hockey-live-streaming", label: "📺 Watch in Australia (Foxtel/Kayo)" },
+              { href: "/hockey-world-cup-2026-schedule-spain", label: "🇪🇸 Spain Page" },
+              { href: "/hockey-world-cup-2026-schedule-netherlands", label: "🇳🇱 Netherlands Page" },
             ].map((link) => (
               <a key={link.href} href={link.href} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: "var(--bg-tertiary)", color: "var(--text-main)", border: "1px solid var(--border-color)", borderRadius: "10px", padding: "0.5rem 1rem", fontSize: "0.9rem", fontWeight: "600", textDecoration: "none", transition: "all 0.2s" }}>
                 {link.label}

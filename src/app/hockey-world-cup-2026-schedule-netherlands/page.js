@@ -425,9 +425,13 @@ export default function NetherlandsHockeyPage() {
               { href: "/schedule", label: "📅 Full Tournament Schedule" },
               { href: "/live-scores", label: "🔴 Live Scores" },
               { href: "/points-table", label: "📊 Points Table" },
-              { href: "/h2h", label: "⚔️ Netherlands vs Pakistan H2H" },
-              { href: "/hockey-live-streaming", label: "📺 Watch in Netherlands (Star Sports)" },
-              { href: "/hockey-world-cup-2026-schedule-pakistan", label: "🇵🇰 Pakistan Page" },
+              { href: "/pool-a", label: "🔴 Pool A Standings" },
+              { href: "/matches/netherlands-vs-argentina", label: "⚔️ Netherlands vs Argentina Preview" },
+              { href: "/matches/netherlands-vs-australia-women", label: "⚔️ Netherlands vs Australia (W)" },
+              { href: "/matches/netherlands-vs-germany-women", label: "⚔️ Netherlands vs Germany (W)" },
+              { href: "/venues/wagener-stadium-guide", label: "🏟️ Wagener Stadium Guide" },
+              { href: "/hockey-live-streaming", label: "📺 Watch in Netherlands (NOS/Star)" },
+              { href: "/hockey-world-cup-2026-schedule-australia", label: "🇦🇺 Australia Page" },
             ].map((link) => (
               <a key={link.href} href={link.href} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: "var(--bg-tertiary)", color: "var(--text-main)", border: "1px solid var(--border-color)", borderRadius: "10px", padding: "0.5rem 1rem", fontSize: "0.9rem", fontWeight: "600", textDecoration: "none", transition: "all 0.2s" }}>
                 {link.label}

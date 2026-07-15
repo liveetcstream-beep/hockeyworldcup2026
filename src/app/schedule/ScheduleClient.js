@@ -143,6 +143,41 @@ const WARMUP_MATCHES = [
 
 const ITEMS_PER_PAGE = 15;
 
+const getMatchPreviewLink = (match) => {
+  const teamA = match.teamA.toLowerCase();
+  const teamB = match.teamB.toLowerCase();
+  const gender = match.gender.toLowerCase();
+
+  if (teamA === "pakistan" && teamB === "india" && gender === "men") return "/matches/india-vs-pakistan";
+  if (teamA === "india" && teamB === "pakistan" && gender === "men") return "/matches/india-vs-pakistan";
+
+  if (teamA === "germany" && teamB === "belgium" && gender === "men") return "/matches/germany-vs-belgium";
+  if (teamA === "belgium" && teamB === "germany" && gender === "men") return "/matches/germany-vs-belgium";
+
+  if (teamA === "australia" && teamB === "netherlands" && gender === "women") return "/matches/netherlands-vs-australia-women";
+  if (teamA === "netherlands" && teamB === "australia" && gender === "women") return "/matches/netherlands-vs-australia-women";
+
+  if (teamA === "india" && teamB === "england" && gender === "men") return "/matches/india-vs-england";
+  if (teamA === "england" && teamB === "india" && gender === "men") return "/matches/india-vs-england";
+
+  if (teamA === "argentina" && teamB === "netherlands" && gender === "men") return "/matches/netherlands-vs-argentina";
+  if (teamA === "netherlands" && teamB === "argentina" && gender === "men") return "/matches/netherlands-vs-argentina";
+
+  if (teamA === "spain" && teamB === "australia" && gender === "men") return "/matches/australia-vs-spain";
+  if (teamA === "australia" && teamB === "spain" && gender === "men") return "/matches/australia-vs-spain";
+
+  if (teamA === "belgium" && teamB === "france" && gender === "men") return "/matches/belgium-vs-france";
+  if (teamA === "france" && teamB === "belgium" && gender === "men") return "/matches/belgium-vs-france";
+
+  if (teamA === "england" && teamB === "pakistan" && gender === "men") return "/matches/england-vs-pakistan";
+  if (teamA === "pakistan" && teamB === "england" && gender === "men") return "/matches/england-vs-pakistan";
+
+  if (teamA === "india" && teamB === "england" && gender === "women") return "/matches/india-vs-england-women";
+  if (teamA === "england" && teamB === "india" && gender === "women") return "/matches/india-vs-england-women";
+
+  return null;
+};
+
 export default function ScheduleClient() {
   const [selectedTimezone, setSelectedTimezone] = useState("CET");
   const [genderFilter, setGenderFilter] = useState("All");
@@ -418,7 +453,11 @@ export default function ScheduleClient() {
                     <span className="channel-tag">{match.pool}</span>
                   </div>
                   <div className="match-actions">
-                    <a href="/hockey-live-streaming" className="match-btn match-btn-primary">Watch Live</a>
+                    {getMatchPreviewLink(match) ? (
+                      <a href={getMatchPreviewLink(match)} className="match-btn match-btn-primary" style={{ background: "linear-gradient(135deg, #c00030 0%, #a00028 100%)" }}>Match Preview</a>
+                    ) : (
+                      <a href="/hockey-live-streaming" className="match-btn match-btn-primary">Watch Live</a>
+                    )}
                     <a href="https://fih.hockey" target="_blank" rel="noopener noreferrer" className="match-btn match-btn-secondary">Official Stats</a>
                   </div>
                 </div>
@@ -505,7 +544,11 @@ export default function ScheduleClient() {
                   <span className="channel-tag">{match.pool}</span>
                 </div>
                 <div className="match-actions">
-                  <a href="/hockey-live-streaming" className="match-btn match-btn-primary">Watch Live</a>
+                  {getMatchPreviewLink(match) ? (
+                    <a href={getMatchPreviewLink(match)} className="match-btn match-btn-primary" style={{ background: "linear-gradient(135deg, #c00030 0%, #a00028 100%)" }}>Match Preview</a>
+                  ) : (
+                    <a href="/hockey-live-streaming" className="match-btn match-btn-primary">Watch Live</a>
+                  )}
                   <a href="https://fih.hockey" target="_blank" rel="noopener noreferrer" className="match-btn match-btn-secondary">Official Stats</a>
                 </div>
               </div>

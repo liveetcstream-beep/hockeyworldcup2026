@@ -402,9 +402,11 @@ export default function SpainHockeyPage() {
               { href: "/schedule", label: "📅 Full Tournament Schedule" },
               { href: "/live-scores", label: "🔴 Live Scores" },
               { href: "/points-table", label: "📊 Points Table" },
-              { href: "/h2h", label: "⚔️ Spain vs Pakistan H2H" },
-              { href: "/hockey-live-streaming", label: "📺 Watch in Spain (Star Sports)" },
-              { href: "/hockey-world-cup-2026-schedule-pakistan", label: "🇵🇰 Pakistan Page" },
+              { href: "/pool-c", label: "🟢 Pool C Standings" },
+              { href: "/matches/australia-vs-spain", label: "⚔️ Australia vs Spain Preview" },
+              { href: "/venues/belfius-arena-guide", label: "🏟️ Belfius Hockey Arena Guide" },
+              { href: "/hockey-live-streaming", label: "📺 Watch in Spain (RTVE/Star)" },
+              { href: "/hockey-world-cup-2026-schedule-australia", label: "🇦🇺 Australia Page" },
             ].map((link) => (
               <a key={link.href} href={link.href} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", background: "var(--bg-tertiary)", color: "var(--text-main)", border: "1px solid var(--border-color)", borderRadius: "10px", padding: "0.5rem 1rem", fontSize: "0.9rem", fontWeight: "600", textDecoration: "none", transition: "all 0.2s" }}>
                 {link.label}

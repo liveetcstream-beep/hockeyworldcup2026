@@ -29,6 +29,23 @@ export const metadata = {
   },
 };
 
+const getFixtureLink = (matchText) => {
+  const text = matchText.toLowerCase();
+  if (text.includes("india") && text.includes("pakistan")) return "/matches/india-vs-pakistan";
+  if (text.includes("germany") && text.includes("belgium")) return "/matches/germany-vs-belgium";
+  if (text.includes("netherlands") && text.includes("australia") && text.includes("women")) return "/matches/netherlands-vs-australia-women";
+  if (text.includes("australia") && text.includes("netherlands") && text.includes("women")) return "/matches/netherlands-vs-australia-women";
+  if (text.includes("india") && text.includes("england") && !text.includes("women")) return "/matches/india-vs-england";
+  if (text.includes("netherlands") && text.includes("argentina") && !text.includes("women")) return "/matches/netherlands-vs-argentina";
+  if (text.includes("argentina") && text.includes("netherlands") && !text.includes("women")) return "/matches/netherlands-vs-argentina";
+  if (text.includes("australia") && text.includes("spain") && !text.includes("women")) return "/matches/australia-vs-spain";
+  if (text.includes("spain") && text.includes("australia") && !text.includes("women")) return "/matches/australia-vs-spain";
+  if (text.includes("belgium") && text.includes("france") && !text.includes("women")) return "/matches/belgium-vs-france";
+  if (text.includes("england") && text.includes("pakistan") && !text.includes("women")) return "/matches/england-vs-pakistan";
+  if (text.includes("india") && text.includes("england") && text.includes("women")) return "/matches/india-vs-england-women";
+  if (text.includes("netherlands") && text.includes("germany") && text.includes("women")) return "/matches/netherlands-vs-germany-women";
+  return null;
+};
 
 export default function PoolCPage() {
   const menFixtures = [
@@ -57,7 +74,6 @@ export default function PoolCPage() {
 
   return (
     <>
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -120,10 +136,10 @@ export default function PoolCPage() {
             Pool C: Speed & Agility
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            Pool C brings together high-speed, physical hockey styles. In the <strong>Men's tournament</strong>, the legendary <strong>Australia</strong> (Kookaburras) face the tactically disciplined <strong>Spain</strong>, the defensive grid of <strong>Ireland</strong>, and the explosive pace of <strong>South Africa</strong>.
+            Pool C brings together high-speed, physical hockey styles. In the <strong>Men's tournament</strong>, the legendary <strong><a href="/hockey-world-cup-2026-schedule-australia" style={{ color: "var(--primary)", textDecoration: "underline", fontWeight: "600" }}>Australia</a></strong> (Kookaburras) face the tactically disciplined <strong><a href="/hockey-world-cup-2026-schedule-spain" style={{ color: "var(--text-main)", textDecoration: "underline" }}>Spain</a></strong>, the defensive grid of <strong><a href="/hockey-world-cup-2026-schedule-ireland" style={{ color: "var(--text-main)", textDecoration: "underline" }}>Ireland</a></strong>, and the explosive pace of <strong><a href="/hockey-world-cup-2026-schedule-south-africa" style={{ color: "var(--text-main)", textDecoration: "underline" }}>South Africa</a></strong>.
           </p>
           <p style={{ color: "var(--text-muted)" }}>
-            In the <strong>Women's tournament</strong>, the hosts <strong>Belgium</strong> (Red Panthers) will enjoy home field advantage in Wavre as they battle the athletic <strong>New Zealand</strong>, <strong>Spain</strong>, and <strong>Ireland</strong>. The battles in this pool will showcase transition speed and physical stamina.
+            In the <strong>Women's tournament</strong>, the hosts <strong><a href="/hockey-world-cup-2026-schedule-belgium" style={{ color: "var(--primary)", textDecoration: "underline", fontWeight: "600" }}>Belgium</a></strong> (Red Panthers) will enjoy home field advantage in Wavre as they battle the athletic <strong><a href="/hockey-world-cup-2026-schedule-new-zealand" style={{ color: "var(--text-main)", textDecoration: "underline" }}>New Zealand</a></strong>, <strong><a href="/hockey-world-cup-2026-schedule-spain" style={{ color: "var(--text-main)", textDecoration: "underline" }}>Spain</a></strong>, and <strong><a href="/hockey-world-cup-2026-schedule-ireland" style={{ color: "var(--text-main)", textDecoration: "underline" }}>Ireland</a></strong>. The battles in this pool will showcase transition speed and physical stamina at the <strong><a href="/venues/belfius-arena-guide" style={{ color: "var(--text-main)", textDecoration: "underline" }}>Belfius Hockey Arena</a></strong>.
           </p>
         </section>
 
@@ -157,7 +173,15 @@ export default function PoolCPage() {
                   <tr key={idx} style={{ borderBottom: "1px solid var(--border-color)", background: idx % 2 === 0 ? "var(--bg-secondary)" : "var(--bg-tertiary)" }}>
                     <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "700" }}>{m.date}</td>
                     <td style={{ padding: "0.9rem 1rem", color: "#c00030", fontWeight: "600" }}>{m.time}</td>
-                    <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "600" }}>{m.match}</td>
+                    <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "600" }}>
+                      {getFixtureLink(m.match) ? (
+                        <a href={getFixtureLink(m.match)} style={{ color: "#ef4444", textDecoration: "underline", fontWeight: "700" }}>
+                          {m.match}
+                        </a>
+                      ) : (
+                        m.match
+                      )}
+                    </td>
                     <td style={{ padding: "0.9rem 1rem", color: "var(--text-muted)", fontSize: "0.9rem" }}>{m.venue}</td>
                   </tr>
                 ))}
@@ -186,7 +210,15 @@ export default function PoolCPage() {
                   <tr key={idx} style={{ borderBottom: "1px solid var(--border-color)", background: idx % 2 === 0 ? "var(--bg-secondary)" : "var(--bg-tertiary)" }}>
                     <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "700" }}>{m.date}</td>
                     <td style={{ padding: "0.9rem 1rem", color: "#c00030", fontWeight: "600" }}>{m.time}</td>
-                    <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "600" }}>{m.match}</td>
+                    <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "600" }}>
+                      {getFixtureLink(m.match) ? (
+                        <a href={getFixtureLink(m.match)} style={{ color: "#ef4444", textDecoration: "underline", fontWeight: "700" }}>
+                          {m.match}
+                        </a>
+                      ) : (
+                        m.match
+                      )}
+                    </td>
                     <td style={{ padding: "0.9rem 1rem", color: "var(--text-muted)", fontSize: "0.9rem" }}>{m.venue}</td>
                   </tr>
                 ))}

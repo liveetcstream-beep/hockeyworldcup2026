@@ -302,16 +302,32 @@ export default function MatchPreviewPage() {
             Related Pages
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
+            <a href="/hockey-world-cup-2026-schedule-belgium" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>🇧🇪 Belgium Schedule Hub</span>
+              <span>→</span>
+            </a>
+            <a href="/hockey-world-cup-2026-schedule-france" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>🇫🇷 France Schedule Hub</span>
+              <span>→</span>
+            </a>
+            <a href="/h2h" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>⚔️ Head-to-Head Records</span>
+              <span>→</span>
+            </a>
             <a href="/pool-b" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
               <span>📈 Pool B Standings</span>
               <span>→</span>
             </a>
-            <a href="/schedule" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
-              <span>📅 Complete Match Schedule</span>
+            <a href="/live-scores" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>🔴 Live Scoreboard</span>
+              <span>→</span>
+            </a>
+            <a href="/past-results" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
+              <span>📊 Past HWC Results</span>
               <span>→</span>
             </a>
             <a href="/venues/belfius-arena-guide" style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "8px", padding: "1rem", textDecoration: "none", color: "var(--text-main)", display: "flex", alignItems: "center", justifyContent: "space-between", transition: "border-color 0.2s" }}>
-              <span>🏟️ Belfius Arena Visitor Guide</span>
+              <span>🏟️ Belfius Hockey Arena Guide</span>
               <span>→</span>
             </a>
           </div>

@@ -29,6 +29,23 @@ export const metadata = {
   },
 };
 
+const getFixtureLink = (matchText) => {
+  const text = matchText.toLowerCase();
+  if (text.includes("india") && text.includes("pakistan")) return "/matches/india-vs-pakistan";
+  if (text.includes("germany") && text.includes("belgium")) return "/matches/germany-vs-belgium";
+  if (text.includes("netherlands") && text.includes("australia") && text.includes("women")) return "/matches/netherlands-vs-australia-women";
+  if (text.includes("australia") && text.includes("netherlands") && text.includes("women")) return "/matches/netherlands-vs-australia-women";
+  if (text.includes("india") && text.includes("england") && !text.includes("women")) return "/matches/india-vs-england";
+  if (text.includes("netherlands") && text.includes("argentina") && !text.includes("women")) return "/matches/netherlands-vs-argentina";
+  if (text.includes("argentina") && text.includes("netherlands") && !text.includes("women")) return "/matches/netherlands-vs-argentina";
+  if (text.includes("australia") && text.includes("spain") && !text.includes("women")) return "/matches/australia-vs-spain";
+  if (text.includes("spain") && text.includes("australia") && !text.includes("women")) return "/matches/australia-vs-spain";
+  if (text.includes("belgium") && text.includes("france") && !text.includes("women")) return "/matches/belgium-vs-france";
+  if (text.includes("england") && text.includes("pakistan") && !text.includes("women")) return "/matches/england-vs-pakistan";
+  if (text.includes("india") && text.includes("england") && text.includes("women")) return "/matches/india-vs-england-women";
+  if (text.includes("netherlands") && text.includes("germany") && text.includes("women")) return "/matches/netherlands-vs-germany-women";
+  return null;
+};
 
 export default function PoolDPage() {
   const menFixtures = [
@@ -57,7 +74,6 @@ export default function PoolDPage() {
 
   return (
     <>
-
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -120,10 +136,10 @@ export default function PoolDPage() {
             Pool D: The Group of Death
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem" }}>
-            Pool D is the most highly anticipated group of the 2026 Hockey World Cup. In the <strong>Men's tournament</strong>, it features the ultimate historic rivalry between <strong>India</strong> and <strong>Pakistan</strong>, combined with the structural strength of <strong>England</strong> and the fighting spirit of <strong>Wales</strong>.
+            Pool D is the most highly anticipated group of the 2026 Hockey World Cup. In the <strong>Men's tournament</strong>, it features the ultimate historic rivalry between <strong><a href="/hockey-world-cup-2026-schedule-india" style={{ color: "var(--primary)", textDecoration: "underline", fontWeight: "600" }}>India</a></strong> and <strong><a href="/hockey-world-cup-2026-schedule-pakistan" style={{ color: "var(--text-main)", textDecoration: "underline" }}>Pakistan</a></strong>, combined with the structural strength of <strong><a href="/hockey-world-cup-2026-schedule-england" style={{ color: "var(--text-main)", textDecoration: "underline" }}>England</a></strong> and the fighting spirit of <strong><a href="/hockey-world-cup-2026-schedule-wales" style={{ color: "var(--text-main)", textDecoration: "underline" }}>Wales</a></strong>.
           </p>
           <p style={{ color: "var(--text-muted)" }}>
-            In the <strong>Women's tournament</strong>, the group is equally fierce, featuring the defensive solidity of <strong>England</strong>, a rapidly rising <strong>Indian squad</strong>, a highly disciplined <strong>Chinese team</strong> coached by Alyson Annan, and <strong>South Africa</strong>. Every matchday at Wagener Stadium will have massive implications.
+            In the <strong>Women's tournament</strong>, the group is equally fierce, featuring the defensive solidity of <strong><a href="/hockey-world-cup-2026-schedule-england" style={{ color: "var(--text-main)", textDecoration: "underline" }}>England</a></strong>, a rapidly rising <strong><a href="/hockey-world-cup-2026-schedule-india" style={{ color: "var(--primary)", textDecoration: "underline", fontWeight: "600" }}>Indian squad</a></strong>, a highly disciplined Chinese team coached by Alyson Annan, and <strong><a href="/hockey-world-cup-2026-schedule-south-africa" style={{ color: "var(--text-main)", textDecoration: "underline" }}>South Africa</a></strong>. Every matchday at <strong><a href="/venues/wagener-stadium-guide" style={{ color: "var(--text-main)", textDecoration: "underline" }}>Wagener Stadium</a></strong> will have massive implications.
           </p>
         </section>
 
@@ -157,7 +173,15 @@ export default function PoolDPage() {
                   <tr key={idx} style={{ borderBottom: "1px solid var(--border-color)", background: idx % 2 === 0 ? "var(--bg-secondary)" : "var(--bg-tertiary)" }}>
                     <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "700" }}>{m.date}</td>
                     <td style={{ padding: "0.9rem 1rem", color: "#c00030", fontWeight: "600" }}>{m.time}</td>
-                    <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "600" }}>{m.match}</td>
+                    <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "600" }}>
+                      {getFixtureLink(m.match) ? (
+                        <a href={getFixtureLink(m.match)} style={{ color: "#ef4444", textDecoration: "underline", fontWeight: "700" }}>
+                          {m.match}
+                        </a>
+                      ) : (
+                        m.match
+                      )}
+                    </td>
                     <td style={{ padding: "0.9rem 1rem", color: "var(--text-muted)", fontSize: "0.9rem" }}>{m.venue}</td>
                   </tr>
                 ))}
@@ -186,7 +210,15 @@ export default function PoolDPage() {
                   <tr key={idx} style={{ borderBottom: "1px solid var(--border-color)", background: idx % 2 === 0 ? "var(--bg-secondary)" : "var(--bg-tertiary)" }}>
                     <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "700" }}>{m.date}</td>
                     <td style={{ padding: "0.9rem 1rem", color: "#c00030", fontWeight: "600" }}>{m.time}</td>
-                    <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "600" }}>{m.match}</td>
+                    <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "600" }}>
+                      {getFixtureLink(m.match) ? (
+                        <a href={getFixtureLink(m.match)} style={{ color: "#ef4444", textDecoration: "underline", fontWeight: "700" }}>
+                          {m.match}
+                        </a>
+                      ) : (
+                        m.match
+                      )}
+                    </td>
                     <td style={{ padding: "0.9rem 1rem", color: "var(--text-muted)", fontSize: "0.9rem" }}>{m.venue}</td>
                   </tr>
                 ))}
