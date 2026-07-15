@@ -12,7 +12,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
-  const day = getMatchDayBySlug(params.date);
+  const resolvedParams = await params;
+  const day = getMatchDayBySlug(resolvedParams.date);
   if (!day) return { title: "Match Day Not Found" };
   return {
     title: day.metaTitle,
@@ -28,8 +29,9 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export default function DateMatchPage({ params }) {
-  const day = getMatchDayBySlug(params.date);
+export default async function DateMatchPage({ params }) {
+  const resolvedParams = await params;
+  const day = getMatchDayBySlug(resolvedParams.date);
   if (!day) return notFound();
 
   const eventSchema = {

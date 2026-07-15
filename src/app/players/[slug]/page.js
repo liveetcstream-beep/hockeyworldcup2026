@@ -14,7 +14,8 @@ export async function generateStaticParams() {
 
 // ─── Dynamic Metadata ────────────────────────────────────────
 export async function generateMetadata({ params }) {
-  const p = getPlayerBySlug(params.slug);
+  const resolvedParams = await params;
+  const p = getPlayerBySlug(resolvedParams.slug);
   if (!p) return { title: "Player Not Found" };
   return {
     title: p.metaTitle,
@@ -37,8 +38,9 @@ export async function generateMetadata({ params }) {
 }
 
 // ─── Page ────────────────────────────────────────────────────
-export default function PlayerProfilePage({ params }) {
-  const p = getPlayerBySlug(params.slug);
+export default async function PlayerProfilePage({ params }) {
+  const resolvedParams = await params;
+  const p = getPlayerBySlug(resolvedParams.slug);
   if (!p) return notFound();
 
   // JSON-LD schemas

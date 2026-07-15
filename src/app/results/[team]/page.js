@@ -163,25 +163,27 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
   const all = getAllTeams();
-  const t = all[params.team];
+  const t = all[resolvedParams.team];
   if (!t) return { title: "Team Not Found" };
   return {
     title: t.metaTitle,
     description: t.metaDesc,
-    alternates: { canonical: `${BASE}/results/${params.team}` },
+    alternates: { canonical: `${BASE}/results/${resolvedParams.team}` },
     openGraph: {
       title: t.metaTitle,
       description: t.metaDesc,
-      url: `${BASE}/results/${params.team}`,
+      url: `${BASE}/results/${resolvedParams.team}`,
       images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: t.metaTitle }],
     },
   };
 }
 
-export default function TeamResultsPage({ params }) {
+export default async function TeamResultsPage({ params }) {
+  const resolvedParams = await params;
   const all = getAllTeams();
-  const t = all[params.team];
+  const t = all[resolvedParams.team];
   if (!t) return notFound();
 
   const breadcrumbSchema = {
@@ -190,7 +192,7 @@ export default function TeamResultsPage({ params }) {
     itemListElement: [
       { "@type": "ListItem", position: 1, name: "Home", item: BASE },
       { "@type": "ListItem", position: 2, name: "Results", item: `${BASE}/results` },
-      { "@type": "ListItem", position: 3, name: t.name, item: `${BASE}/results/${params.team}` },
+      { "@type": "ListItem", position: 3, name: t.name, item: `${BASE}/results/${resolvedParams.team}` },
     ],
   };
   const faqSchema = {
