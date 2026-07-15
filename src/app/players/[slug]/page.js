@@ -221,7 +221,7 @@ export default async function PlayerProfilePage({ params }) {
       </section>
 
       {/* ── MAIN CONTENT ── */}
-      <main className="sports-container" style={{ padding: "3rem 0 4rem" }}>
+      <main className="sports-container" style={{ paddingTop: "3rem", paddingBottom: "4rem" }}>
         <div className="p-seo-layout" style={{ gap: "3rem" }}>
 
           {/* ── ARTICLE BODY ── */}
