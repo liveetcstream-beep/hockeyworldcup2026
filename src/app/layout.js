@@ -29,14 +29,7 @@ export const metadata = {
     shortcut: '/icon.png',
     apple: '/icon.png',
   },
-  keywords: [
-    "Hockey World Cup 2026",
-    "FIH World Cup 2026",
-    "hockey world cup 2026 schedule",
-    "hockey world cup 2026 live score",
-    "hockey world cup 2026 fixtures",
-    "belgium netherlands hockey 2026",
-  ],
+
   authors: [{ name: "Marc Devos", url: "https://hockeyworldcup2026schedule.com" }],
   creator: "hockeyworldcup2026schedule.com",
   verification: {
