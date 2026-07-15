@@ -57,6 +57,7 @@ export default function sitemap() {
     { route: "/venues/belfius-arena-guide", priority: 0.85, freq: "weekly" },
 
     // Match preview pages
+    { route: "/matches", priority: 0.85, freq: "daily" },
     { route: "/matches/australia-vs-argentina", priority: 0.85, freq: "daily" },
     { route: "/matches/australia-vs-spain", priority: 0.85, freq: "daily" },
     { route: "/matches/belgium-vs-france", priority: 0.85, freq: "daily" },
