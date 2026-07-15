@@ -20,7 +20,6 @@ export const metadata = {
   metadataBase: new URL("https://hockeyworldcup2026schedule.com"),
   title: {
     default: "FIH Hockey World Cup 2026 Schedule & Streaming Guide",
-    template: "%s | Hockey World Cup 2026",
   },
   description:
     "Get the complete, verified match schedule, timezone conversions, live scores, and streaming options for the FIH Hockey World Cup 2026 in Belgium & Netherlands.",
