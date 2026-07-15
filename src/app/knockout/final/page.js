@@ -169,18 +169,20 @@ export default function FinalPage() {
           <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--text-main)", marginBottom: "1.2rem" }}>
             Hockey World Cup Winners — Full History
           </h2>
-          <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", overflow: "hidden" }}>
-            <div style={{ display: "grid", gridTemplateColumns: "80px 1fr 1fr 1fr", background: "var(--bg-tertiary)", padding: "0.8rem 1.2rem", fontSize: "0.75rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.07em", color: "var(--text-muted)" }}>
-              <span>Year</span><span>Champion</span><span>Runner-Up</span><span>Venue</span>
-            </div>
-            {pastWinners.map((r, i) => (
-              <div key={r.year} style={{ display: "grid", gridTemplateColumns: "80px 1fr 1fr 1fr", padding: "0.9rem 1.2rem", borderTop: i > 0 ? "1px solid var(--border-color)" : "none", alignItems: "center" }}>
-                <span style={{ fontSize: "0.9rem", fontWeight: 800, color: "var(--primary)" }}>{r.year}</span>
-                <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-main)" }}>{r.winner}</span>
-                <span style={{ fontSize: "0.88rem", color: "var(--text-muted)" }}>{r.runner_up}</span>
-                <span style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>{r.venue}</span>
+          <div style={{ overflowX: "auto", width: "100%", border: "1px solid var(--border-color)", borderRadius: "16px" }}>
+            <div style={{ minWidth: "550px", background: "var(--bg-secondary)" }}>
+              <div style={{ display: "grid", gridTemplateColumns: "80px 1fr 1fr 1fr", background: "var(--bg-tertiary)", padding: "0.8rem 1.2rem", fontSize: "0.75rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.07em", color: "var(--text-muted)" }}>
+                <span>Year</span><span>Champion</span><span>Runner-Up</span><span>Venue</span>
               </div>
-            ))}
+              {pastWinners.map((r, i) => (
+                <div key={r.year} style={{ display: "grid", gridTemplateColumns: "80px 1fr 1fr 1fr", padding: "0.9rem 1.2rem", borderTop: i > 0 ? "1px solid var(--border-color)" : "none", alignItems: "center" }}>
+                  <span style={{ fontSize: "0.9rem", fontWeight: 800, color: "var(--primary)" }}>{r.year}</span>
+                  <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-main)" }}>{r.winner}</span>
+                  <span style={{ fontSize: "0.88rem", color: "var(--text-muted)" }}>{r.runner_up}</span>
+                  <span style={{ fontSize: "0.78rem", color: "var(--text-muted)" }}>{r.venue}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

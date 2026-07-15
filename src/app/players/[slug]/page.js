@@ -222,12 +222,7 @@ export default async function PlayerProfilePage({ params }) {
 
       {/* ── MAIN CONTENT ── */}
       <main className="sports-container" style={{ padding: "3rem 0 4rem" }}>
-        <div style={{
-          display: "grid",
-          gridTemplateColumns: "1fr min(340px, 30%)",
-          gap: "3rem",
-          alignItems: "start",
-        }}>
+        <div className="p-seo-layout" style={{ gap: "3rem" }}>
 
           {/* ── ARTICLE BODY ── */}
           <article style={{ minWidth: 0 }}>

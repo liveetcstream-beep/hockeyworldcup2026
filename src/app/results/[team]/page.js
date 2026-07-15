@@ -245,7 +245,7 @@ export default async function TeamResultsPage({ params }) {
           <span style={{ color: "var(--text-main)", fontWeight: 600 }}>{t.name}</span>
         </nav>
 
-        <div style={{ display: "grid", gridTemplateColumns: "1fr min(300px, 30%)", gap: "2.5rem", alignItems: "start" }}>
+        <div className="p-seo-layout">
           <div>
             {/* Results Table */}
             <section style={{ marginBottom: "2.5rem" }}>
@@ -254,36 +254,38 @@ export default async function TeamResultsPage({ params }) {
               </h2>
 
               {t.results.length > 0 ? (
-                <div style={{ background: "var(--bg-secondary)", borderRadius: "16px", border: "1px solid var(--border-color)", overflow: "hidden" }}>
-                  {/* Table Header */}
-                  <div style={{
-                    display: "grid", gridTemplateColumns: "80px 1fr 120px 60px",
-                    background: "var(--bg-tertiary)", padding: "0.8rem 1.2rem",
-                    fontSize: "0.75rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.07em", color: "var(--text-muted)",
-                  }}>
-                    <span>Date</span><span>Opponent</span><span>Score</span><span>Result</span>
+                <div style={{ overflowX: "auto", width: "100%", border: "1px solid var(--border-color)", borderRadius: "16px" }}>
+                  <div style={{ minWidth: "480px", background: "var(--bg-secondary)" }}>
+                    {/* Table Header */}
+                    <div style={{
+                      display: "grid", gridTemplateColumns: "80px 1fr 120px 60px",
+                      background: "var(--bg-tertiary)", padding: "0.8rem 1.2rem",
+                      fontSize: "0.75rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.07em", color: "var(--text-muted)",
+                    }}>
+                      <span>Date</span><span>Opponent</span><span>Score</span><span>Result</span>
+                    </div>
+                    {t.results.map((r, i) => {
+                      const st = statusStyle[r.status] || statusStyle.upcoming;
+                      return (
+                        <div key={i} style={{
+                          display: "grid", gridTemplateColumns: "80px 1fr 120px 60px",
+                          padding: "1rem 1.2rem", alignItems: "center",
+                          borderTop: i > 0 ? "1px solid var(--border-color)" : "none",
+                        }}>
+                          <span style={{ fontSize: "0.85rem", color: "var(--text-muted)", fontWeight: 600 }}>{r.date}</span>
+                          <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-main)" }}>{r.opponent}</span>
+                          <span style={{ fontSize: "1.1rem", fontWeight: 900, color: r.status === "upcoming" ? "var(--text-muted)" : "var(--text-main)" }}>
+                            {r.score}
+                          </span>
+                          <span style={{
+                            display: "inline-flex", alignItems: "center", justifyContent: "center",
+                            width: "36px", height: "36px", borderRadius: "50%",
+                            background: st.bg, color: st.color, fontWeight: 900, fontSize: "0.85rem",
+                          }}>{st.text}</span>
+                        </div>
+                      );
+                    })}
                   </div>
-                  {t.results.map((r, i) => {
-                    const st = statusStyle[r.status] || statusStyle.upcoming;
-                    return (
-                      <div key={i} style={{
-                        display: "grid", gridTemplateColumns: "80px 1fr 120px 60px",
-                        padding: "1rem 1.2rem", alignItems: "center",
-                        borderTop: i > 0 ? "1px solid var(--border-color)" : "none",
-                      }}>
-                        <span style={{ fontSize: "0.85rem", color: "var(--text-muted)", fontWeight: 600 }}>{r.date}</span>
-                        <span style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--text-main)" }}>{r.opponent}</span>
-                        <span style={{ fontSize: "1.1rem", fontWeight: 900, color: r.status === "upcoming" ? "var(--text-muted)" : "var(--text-main)" }}>
-                          {r.score}
-                        </span>
-                        <span style={{
-                          display: "inline-flex", alignItems: "center", justifyContent: "center",
-                          width: "36px", height: "36px", borderRadius: "50%",
-                          background: st.bg, color: st.color, fontWeight: 900, fontSize: "0.85rem",
-                        }}>{st.text}</span>
-                      </div>
-                    );
-                  })}
                 </div>
               ) : (
                 <div style={{
