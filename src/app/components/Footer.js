@@ -29,9 +29,9 @@ export default function Footer() {
               <li><a href="/schedule" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📅 Match Schedule & Timings</a></li>
               <li><a href="/live-scores" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🔴 Live Scores Centre</a></li>
               <li><a href="/news" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>⚡ Latest News Hub</a></li>
+              <li><a href="/womens-tournament" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🚺 Women's Tournament Hub</a></li>
               <li><a href="/hockey-live-streaming" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📺 Live Streaming Guides</a></li>
               <li><a href="/tickets" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🎟️ Tickets & Seating Pricing</a></li>
-              <li><a href="/venues" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🏟️ Stadium Travel Guides</a></li>
             </ul>
           </div>
 
@@ -43,10 +43,9 @@ export default function Footer() {
               <li><a href="/results" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📊 Team Results Tracker</a></li>
               <li><a href="/schedule/date" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📆 Daily Fixtures Directory</a></li>
               <li><a href="/hockey-world-cup-2026-groups" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🏆 Pool Standings Hub</a></li>
-              <li><a href="/pool-a" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🔴 Pool A Standings</a></li>
-              <li><a href="/pool-b" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🔵 Pool B Standings</a></li>
-              <li><a href="/pool-c" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🟢 Pool C Standings</a></li>
-              <li><a href="/pool-d" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🟡 Pool D Standings</a></li>
+              <li><a href="/fantasy-predictions" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🎮 Fantasy League & Tips</a></li>
+              <li><a href="/prize-money" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>💰 Prize Money Distribution</a></li>
+              <li><a href="/authors" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>✍️ Editorial & Authors Team</a></li>
             </ul>
           </div>
 

@@ -22,6 +22,10 @@ export default function sitemap() {
     { route: "/format",      priority: 0.75, freq: "monthly" },
     { route: "/history",     priority: 0.75, freq: "monthly" },
     { route: "/tickets",     priority: 0.7,  freq: "weekly" },
+    { route: "/prize-money", priority: 0.8,  freq: "weekly" },
+    { route: "/fantasy-predictions", priority: 0.8, freq: "weekly" },
+    { route: "/womens-tournament", priority: 0.85, freq: "weekly" },
+    { route: "/authors",     priority: 0.6,  freq: "monthly" },
 
     // Tier 3B — Team hub pages
     { route: "/hockey-world-cup-2026-groups",   priority: 0.9, freq: "daily" },
