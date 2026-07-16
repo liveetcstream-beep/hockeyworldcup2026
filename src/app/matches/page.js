@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
+import { ALL_MATCHES } from "../../data/allMatches";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Match Previews & H2H Guides",
@@ -53,25 +54,35 @@ const faqItems = [
   }
 ];
 
-const matchesList = [
-  { slug: "india-vs-pakistan", teams: "India vs Pakistan", category: "Men's Pool D Blockbuster", date: "August 19, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🔥" },
-  { slug: "india-vs-wales", teams: "India vs Wales", category: "Men's Pool D Opener", date: "August 15, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🇮🇳" },
-  { slug: "pakistan-vs-wales", teams: "Pakistan vs Wales", category: "Men's Pool D", date: "August 17, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🇵🇰" },
-  { slug: "germany-vs-belgium", teams: "Germany vs Belgium", category: "Men's Pool B Blockbuster", date: "August 17, 2026", venue: "Belfius Hockey Arena, Wavre", icon: "⚔️" },
-  { slug: "netherlands-vs-australia-women", teams: "Netherlands vs Australia (Women)", category: "Women's Pool C Blockbuster", date: "August 17, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🚺" },
-  { slug: "india-vs-england", teams: "India vs England", category: "Men's Pool D", date: "August 17, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🏑" },
-  { slug: "netherlands-vs-argentina", teams: "Netherlands vs Argentina", category: "Men's Pool A Blockbuster", date: "August 18, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🇳🇱" },
-  { slug: "germany-vs-netherlands", teams: "Germany vs Netherlands", category: "Men's Pool A", date: "August 20, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🇩🇪" },
-  { slug: "australia-vs-spain", teams: "Australia vs Spain", category: "Men's Pool C", date: "August 18, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🇦🇺" },
-  { slug: "belgium-vs-france", teams: "Belgium vs France", category: "Men's Pool B", date: "August 15, 2026", venue: "Belfius Hockey Arena, Wavre", icon: "🇫🇷" },
-  { slug: "england-vs-pakistan", teams: "England vs Pakistan", category: "Men's Pool D", date: "August 15, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🏴󠁧󠁢󠁥󠁮󠁧󠁿" },
-  { slug: "india-vs-england-women", teams: "India vs England (Women)", category: "Women's Pool D", date: "August 20, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🇮🇳" },
-  { slug: "netherlands-vs-germany-women", teams: "Netherlands vs Germany (Women)", category: "Women's Pool C", date: "August 17, 2026", venue: "Belfius Hockey Arena, Wavre", icon: "🇪🇺" },
-  { slug: "australia-vs-argentina", teams: "Australia vs Argentina", category: "Men's Pool C Blockbuster", date: "August 16, 2026", venue: "Belfius Hockey Arena, Wavre", icon: "☀️" },
-  { slug: "belgium-vs-netherlands", teams: "Belgium vs Netherlands", category: "Men's Blockbuster Friendly", date: "August 23, 2026", venue: "Belfius Hockey Arena, Wavre", icon: "🏆" }
-];
+// Helper to determine if a match has a dedicated preview folder
+const getPreviewSlug = (teamA, teamB, gender) => {
+  const tA = teamA.toLowerCase();
+  const tB = teamB.toLowerCase();
+  const g = gender.toLowerCase();
+
+  if (((tA === "pakistan" && tB === "india") || (tA === "india" && tB === "pakistan")) && g === "men") return "india-vs-pakistan";
+  if (((tA === "germany" && tB === "belgium") || (tA === "belgium" && tB === "germany")) && g === "men") return "germany-vs-belgium";
+  if (((tA === "australia" && tB === "netherlands") || (tA === "netherlands" && tB === "australia")) && g === "women") return "netherlands-vs-australia-women";
+  if (((tA === "india" && tB === "england") || (tA === "england" && tB === "india")) && g === "men") return "india-vs-england";
+  if (((tA === "argentina" && tB === "netherlands") || (tA === "netherlands" && tB === "argentina")) && g === "men") return "netherlands-vs-argentina";
+  if (((tA === "spain" && tB === "australia") || (tA === "australia" && tB === "spain")) && g === "men") return "australia-vs-spain";
+  if (((tA === "belgium" && tB === "france") || (tA === "france" && tB === "belgium")) && g === "men") return "belgium-vs-france";
+  if (((tA === "england" && tB === "pakistan") || (tA === "pakistan" && tB === "england")) && g === "men") return "england-vs-pakistan";
+  if (((tA === "india" && tB === "england") || (tA === "england" && tB === "india")) && g === "women") return "india-vs-england-women";
+  if (((tA === "germany" && tB === "netherlands") || (tA === "netherlands" && tB === "germany")) && g === "men") return "germany-vs-netherlands";
+  if (((tA === "netherlands" && tB === "germany") || (tA === "germany" && tB === "netherlands")) && g === "women") return "netherlands-vs-germany-women";
+  if (((tA === "australia" && tB === "argentina") || (tA === "argentina" && tB === "australia")) && g === "men") return "australia-vs-argentina";
+  if (((tA === "belgium" && tB === "netherlands") || (tA === "netherlands" && tB === "belgium")) && g === "men") return "belgium-vs-netherlands";
+  if (((tA === "india" && tB === "wales") || (tA === "wales" && tB === "india")) && g === "men") return "india-vs-wales";
+  if (((tA === "pakistan" && tB === "wales") || (tA === "wales" && tB === "pakistan")) && g === "men") return "pakistan-vs-wales";
+
+  return null;
+};
 
 export default function MatchesDirectoryPage() {
+  // Find all matches that have previews to list them in the "Featured Previews" section
+  const featuredPreviews = ALL_MATCHES.filter(match => getPreviewSlug(match.teamA, match.teamB, match.gender) !== null);
+
   return (
     <>
       <script
@@ -117,7 +128,7 @@ export default function MatchesDirectoryPage() {
               ✍️ Audited by: <strong>Bram van de Meer (Technical Roster Auditor)</strong>
             </div>
             <div className="eeat-badge">
-              ⚡ Coverage: <strong>All Blockbuster Matches Mapped</strong>
+              ⚡ Coverage: <strong>All 100 Fixtures Mapped</strong>
             </div>
           </div>
         </div>
@@ -131,81 +142,175 @@ export default function MatchesDirectoryPage() {
           <span style={{ color: "var(--text-main)", fontWeight: "600" }}>Match Previews Directory</span>
         </nav>
 
-        {/* Matches Grid */}
-        <section style={{ marginBottom: "3.5rem" }}>
+        {/* 1. Featured Previews */}
+        <section style={{ marginBottom: "4rem" }}>
           <h2 style={{
-            fontSize: "1.5rem",
+            fontSize: "1.6rem",
             fontWeight: 800,
             color: "var(--text-main)",
             marginBottom: "1.5rem",
             borderLeft: "4px solid var(--primary)",
             paddingLeft: "1rem"
           }}>
-            Blockbuster Previews & Tactical Guides
+            🔥 Active Previews & Tactical Analysis
           </h2>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.5rem" }}>
-            {matchesList.map((match) => (
-              <a
-                key={match.slug}
-                href={`/matches/${match.slug}`}
-                style={{
-                  background: "var(--bg-secondary)",
-                  border: "1px solid var(--border-color)",
-                  borderRadius: "16px",
-                  padding: "1.5rem",
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-between",
-                  textDecoration: "none",
-                  transition: "transform 0.2s, border-color 0.2s"
-                }}
-                className="match-card"
-              >
-                <div>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.8rem" }}>
-                    <span style={{
-                      fontSize: "0.75rem",
-                      fontWeight: 800,
-                      color: "var(--primary)",
-                      background: "rgba(192,0,48,0.08)",
-                      padding: "0.2rem 0.6rem",
-                      borderRadius: "6px",
-                      textTransform: "uppercase"
-                    }}>
-                      {match.category}
-                    </span>
-                    <span style={{ fontSize: "1.1rem" }}>{match.icon}</span>
+            {featuredPreviews.map((match) => {
+              const slug = getPreviewSlug(match.teamA, match.teamB, match.gender);
+              return (
+                <a
+                  key={match.id}
+                  href={`/matches/${slug}`}
+                  style={{
+                    background: "var(--bg-secondary)",
+                    border: "1px solid var(--border-color)",
+                    borderRadius: "16px",
+                    padding: "1.5rem",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    textDecoration: "none",
+                    transition: "transform 0.2s, border-color 0.2s"
+                  }}
+                  className="match-card"
+                >
+                  <div>
+                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.8rem" }}>
+                      <span style={{
+                        fontSize: "0.75rem",
+                        fontWeight: 800,
+                        color: "var(--primary)",
+                        background: "rgba(192,0,48,0.08)",
+                        padding: "0.2rem 0.6rem",
+                        borderRadius: "6px",
+                        textTransform: "uppercase"
+                      }}>
+                        {match.gender}'s {match.pool}
+                      </span>
+                      <span style={{ fontSize: "1.1rem" }}>🏑</span>
+                    </div>
+                    <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "var(--text-main)", margin: "0 0 0.8rem 0" }}>
+                      {match.teamA} vs {match.teamB}
+                    </h3>
+                    <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", margin: "0 0 0.4rem 0" }}>
+                      <strong>Date:</strong> {match.date} | {match.timeCET} CET
+                    </p>
+                    <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", margin: 0 }}>
+                      <strong>Venue:</strong> {match.venue.split(',')[0]}
+                    </p>
                   </div>
-                  <h3 style={{ fontSize: "1.25rem", fontWeight: 800, color: "var(--text-main)", margin: "0 0 0.8rem 0" }}>
-                    {match.teams}
-                  </h3>
-                  <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", margin: "0 0 0.4rem 0" }}>
-                    <strong>Date:</strong> {match.date}
-                  </p>
-                  <p style={{ fontSize: "0.85rem", color: "var(--text-muted)", margin: 0 }}>
-                    <strong>Venue:</strong> {match.venue}
-                  </p>
-                </div>
-                <span style={{
-                  display: "inline-block",
-                  marginTop: "1.2rem",
-                  color: "var(--primary)",
-                  fontWeight: 700,
-                  fontSize: "0.9rem"
-                }}>
-                  View Tactical Preview →
-                </span>
-              </a>
-            ))}
+                  <span style={{
+                    display: "inline-block",
+                    marginTop: "1.2rem",
+                    color: "var(--primary)",
+                    fontWeight: 700,
+                    fontSize: "0.9rem"
+                  }}>
+                    View Tactical Preview →
+                  </span>
+                </a>
+              );
+            })}
+          </div>
+        </section>
+
+        {/* 2. Full 100 Matches Directory List */}
+        <section style={{ marginBottom: "4rem" }}>
+          <h2 style={{
+            fontSize: "1.6rem",
+            fontWeight: 800,
+            color: "var(--text-main)",
+            marginBottom: "1.5rem",
+            borderLeft: "4px solid var(--primary)",
+            paddingLeft: "1rem"
+          }}>
+            📋 Complete Tournament Fixtures Index (100 Matches)
+          </h2>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", marginBottom: "2rem", lineHeight: "1.6" }}>
+            Below is the full schedule of all 100 matches for the co-hosted Hockey World Cups. Click <strong>"Read Preview"</strong> to view tactical guides, injury updates, and lineups for matches that have preview analysis.
+          </p>
+
+          <div style={{ overflowX: "auto" }}>
+            <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
+              <thead>
+                <tr style={{ background: "var(--bg-tertiary)", borderBottom: "2px solid var(--border-color)" }}>
+                  <th style={{ padding: "1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-main)", fontWeight: "700" }}>ID</th>
+                  <th style={{ padding: "1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-main)", fontWeight: "700" }}>Tournament</th>
+                  <th style={{ padding: "1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-main)", fontWeight: "700" }}>Matchup Details</th>
+                  <th style={{ padding: "1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-main)", fontWeight: "700" }}>Stage / Pool</th>
+                  <th style={{ padding: "1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-main)", fontWeight: "700" }}>Date & Time (CET)</th>
+                  <th style={{ padding: "1rem", textAlign: "center", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-main)", fontWeight: "700" }}>Preview Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                {ALL_MATCHES.map((match, i) => {
+                  const slug = getPreviewSlug(match.teamA, match.teamB, match.gender);
+                  return (
+                    <tr key={match.id} style={{ borderBottom: "1px solid var(--border-color)", background: i % 2 === 0 ? "var(--bg-secondary)" : "var(--bg-tertiary)" }}>
+                      <td style={{ padding: "1rem", fontWeight: "700", color: "var(--text-muted)" }}>#{match.id}</td>
+                      <td style={{ padding: "1rem", fontWeight: "600" }}>
+                        <span style={{
+                          fontSize: "0.75rem",
+                          fontWeight: "700",
+                          color: match.gender === "Men" ? "#0284c7" : "#f43f5e",
+                          background: match.gender === "Men" ? "rgba(2,132,199,0.1)" : "rgba(244,63,94,0.1)",
+                          borderRadius: "6px",
+                          padding: "0.2rem 0.5rem"
+                        }}>
+                          {match.gender}
+                        </span>
+                      </td>
+                      <td style={{ padding: "1rem", fontWeight: "700", color: "var(--text-main)" }}>
+                        {match.teamA} vs {match.teamB}
+                      </td>
+                      <td style={{ padding: "1rem", color: "var(--text-muted)", fontSize: "0.88rem" }}>{match.pool}</td>
+                      <td style={{ padding: "1rem", color: "var(--text-muted)", fontSize: "0.88rem" }}>
+                        {match.date.split(',')[0]} at {match.timeCET}
+                      </td>
+                      <td style={{ padding: "1rem", textAlign: "center" }}>
+                        {slug ? (
+                          <a href={`/matches/${slug}`} style={{
+                            background: "linear-gradient(135deg, #c00030 0%, #a00028 100%)",
+                            color: "white",
+                            borderRadius: "8px",
+                            padding: "0.35rem 0.8rem",
+                            fontSize: "0.8rem",
+                            fontWeight: "700",
+                            textDecoration: "none",
+                            display: "inline-block",
+                            boxShadow: "0 2px 8px rgba(192,0,48,0.2)"
+                          }}>
+                            Read Preview →
+                          </a>
+                        ) : (
+                          <span style={{
+                            color: "var(--text-muted)",
+                            fontSize: "0.8rem",
+                            fontWeight: "600",
+                            background: "var(--bg-tertiary)",
+                            border: "1px solid var(--border-color)",
+                            borderRadius: "8px",
+                            padding: "0.35rem 0.8rem",
+                            display: "inline-block"
+                          }}>
+                            Mapped
+                          </span>
+                        )}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
         </section>
 
         {/* FAQs SECTION */}
         <section className="my-16">
-          <div className="section-title-wrap">
-            <h2>Frequently Asked Questions</h2>
-            <p>Get answers to common queries about our tactical previews, H2H calculations, and predictions.</p>
+          <div className="section-title-wrap" style={{ marginBottom: "2rem" }}>
+            <h2 style={{ fontSize: "1.6rem", fontWeight: 800 }}>Frequently Asked Questions</h2>
+            <p style={{ color: "var(--text-muted)" }}>Get answers to common queries about our tactical previews, H2H calculations, and predictions.</p>
           </div>
 
           <FaqAccordion items={faqItems} />
