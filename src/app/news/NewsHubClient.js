@@ -3,17 +3,18 @@
 import React, { useState } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import { newsArticles } from "../../data/news";
+import { getPublishedNews } from "../../data/newsUtils";
 
 export default function NewsHubClient() {
   const [selectedCategory, setSelectedCategory] = useState("All");
+  const publishedNews = getPublishedNews();
 
-  const categories = ["All", ...new Set(newsArticles.map(art => art.category))];
+  const categories = ["All", ...new Set(publishedNews.map(art => art.category))];
 
 
   const filteredArticles = selectedCategory === "All"
-    ? newsArticles
-    : newsArticles.filter(art => art.category === selectedCategory);
+    ? publishedNews
+    : publishedNews.filter(art => art.category === selectedCategory);
 
   return (
     <>

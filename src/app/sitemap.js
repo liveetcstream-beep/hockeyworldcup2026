@@ -1,4 +1,4 @@
-import { newsArticles } from "../data/news";
+import { getPublishedNews } from "../data/newsUtils";
 import { players } from "../data/players";
 import { matchDays } from "../data/datepages";
 
@@ -93,7 +93,7 @@ export default function sitemap() {
 
   // News articles
   pages.push({ route: "/news", priority: 0.9, freq: "daily" });
-  newsArticles.forEach((art) => {
+  getPublishedNews().forEach((art) => {
     pages.push({ route: `/news/${art.slug}`, priority: 0.85, freq: "daily" });
   });
 

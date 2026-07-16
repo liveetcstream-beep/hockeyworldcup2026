@@ -3,11 +3,12 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import FaqAccordion from "../../components/FaqAccordion";
 import { newsArticles } from "../../../data/news";
+import { getPublishedNews } from "../../../data/newsUtils";
 import { notFound } from "next/navigation";
 
 // Generate static params for compilation
 export async function generateStaticParams() {
-  return newsArticles.map((art) => ({
+  return getPublishedNews().map((art) => ({
     slug: art.slug,
   }));
 }
@@ -16,7 +17,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const article = newsArticles.find((art) => art.slug === resolvedParams.slug);
-  if (!article) return {};
+  const isPublished = article && new Date(article.date) <= new Date();
+  if (!isPublished) return {};
 
   const baseUrl = "https://hockeyworldcup2026schedule.com";
   return {
@@ -50,8 +52,9 @@ export async function generateMetadata({ params }) {
 export default async function NewsArticlePage({ params }) {
   const resolvedParams = await params;
   const article = newsArticles.find((art) => art.slug === resolvedParams.slug);
+  const isPublished = article && new Date(article.date) <= new Date();
 
-  if (!article) {
+  if (!isPublished) {
     notFound();
   }
 

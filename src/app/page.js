@@ -3,7 +3,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScheduleAndConverter from "./components/ScheduleAndConverter";
 import FaqAccordion from "./components/FaqAccordion";
-import { newsArticles } from "../data/news";
+import { getPublishedNews } from "../data/newsUtils";
 
 
 export const metadata = {
@@ -148,7 +148,7 @@ export default function Home() {
             <p>Stay updated with injury reports, warm-up matches, tactical updates, and rule changes.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {newsArticles.slice(0, 4).map((article) => (
+            {getPublishedNews().slice(0, 4).map((article) => (
               <div key={article.slug} className="local-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
                 <div style={{ position: 'relative', height: '180px', width: '100%', marginBottom: '1.2rem', overflow: 'hidden', borderRadius: '12px' }}>
                   <img src={article.image} alt={article.title} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
