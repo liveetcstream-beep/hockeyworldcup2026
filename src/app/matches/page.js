@@ -55,6 +55,8 @@ const faqItems = [
 
 const matchesList = [
   { slug: "india-vs-pakistan", teams: "India vs Pakistan", category: "Men's Pool D Blockbuster", date: "August 19, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🔥" },
+  { slug: "india-vs-wales", teams: "India vs Wales", category: "Men's Pool D Opener", date: "August 15, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🇮🇳" },
+  { slug: "pakistan-vs-wales", teams: "Pakistan vs Wales", category: "Men's Pool D", date: "August 17, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🇵🇰" },
   { slug: "germany-vs-belgium", teams: "Germany vs Belgium", category: "Men's Pool B Blockbuster", date: "August 17, 2026", venue: "Belfius Hockey Arena, Wavre", icon: "⚔️" },
   { slug: "netherlands-vs-australia-women", teams: "Netherlands vs Australia (Women)", category: "Women's Pool C Blockbuster", date: "August 17, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🚺" },
   { slug: "india-vs-england", teams: "India vs England", category: "Men's Pool D", date: "August 17, 2026", venue: "Wagener Stadium, Amstelveen", icon: "🏑" },

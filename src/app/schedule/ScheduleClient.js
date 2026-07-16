@@ -151,6 +151,12 @@ const getMatchPreviewLink = (match) => {
   if (teamA === "pakistan" && teamB === "india" && gender === "men") return "/matches/india-vs-pakistan";
   if (teamA === "india" && teamB === "pakistan" && gender === "men") return "/matches/india-vs-pakistan";
 
+  if (teamA === "india" && teamB === "wales" && gender === "men") return "/matches/india-vs-wales";
+  if (teamA === "wales" && teamB === "india" && gender === "men") return "/matches/india-vs-wales";
+
+  if (teamA === "pakistan" && teamB === "wales" && gender === "men") return "/matches/pakistan-vs-wales";
+  if (teamA === "wales" && teamB === "pakistan" && gender === "men") return "/matches/pakistan-vs-wales";
+
   if (teamA === "germany" && teamB === "belgium" && gender === "men") return "/matches/germany-vs-belgium";
   if (teamA === "belgium" && teamB === "germany" && gender === "men") return "/matches/germany-vs-belgium";
 

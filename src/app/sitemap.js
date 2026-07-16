@@ -73,6 +73,8 @@ export default function sitemap() {
     { route: "/matches/india-vs-england", priority: 0.85, freq: "daily" },
     { route: "/matches/india-vs-england-women", priority: 0.85, freq: "daily" },
     { route: "/matches/india-vs-pakistan", priority: 0.85, freq: "daily" },
+    { route: "/matches/india-vs-wales", priority: 0.85, freq: "daily" },
+    { route: "/matches/pakistan-vs-wales", priority: 0.85, freq: "daily" },
     { route: "/matches/netherlands-vs-argentina", priority: 0.85, freq: "daily" },
     { route: "/matches/netherlands-vs-australia-women", priority: 0.85, freq: "daily" },
     { route: "/matches/netherlands-vs-germany-women", priority: 0.85, freq: "daily" },
