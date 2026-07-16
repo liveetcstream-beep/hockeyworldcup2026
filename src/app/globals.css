@@ -818,8 +818,7 @@ h1, h2, h3, h4, h5, h6 {
 .pool-item {
   display: flex;
   align-items: center;
-  gap: 0.8rem;
-  padding: 0.5rem 0.8rem;
+  padding: 0;
   background: rgba(255, 255, 255, 0.01);
   border-radius: 8px;
   border: 1px solid transparent;
@@ -831,6 +830,17 @@ h1, h2, h3, h4, h5, h6 {
   border-color: var(--border-color);
   background: rgba(255, 255, 255, 0.03);
 }
+
+.pool-item-link {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.5rem 0.8rem;
+  width: 100%;
+  color: inherit;
+  text-decoration: none;
+}
+
 
 .pool-flag {
   font-size: 1.3rem;
