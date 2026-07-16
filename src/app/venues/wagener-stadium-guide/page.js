@@ -3,13 +3,13 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Wagener Stadium Amstelveen Visitor Guide: Hotels, Parking & Transit",
-  description: "Heading to Wagener Stadium for the 2026 Hockey World Cup? Read our expert visitor guide on hotels near Amsterdamse Bos, parking tips, metro routes, and...",
+  title: "Wagener Stadium Guide 2026: Tickets, Seating, Parking & How to Get There",
+  description: "Wagener Stadium Amstelveen 2026 Hockey World Cup guide: seating map, ticket prices from €20, nearest hotels, parking, and public transport directions.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/venues/wagener-stadium-guide",
   },
   openGraph: {
-    title: "Wagener Stadium Amstelveen Visitor Guide: Hotels, Parking & Transit",
+    title: "Wagener Stadium Guide 2026: Tickets, Seating, Parking & How to Get There",
     description: "Heading to Wagener Stadium for the 2026 Hockey World Cup? Read our expert visitor guide on hotels near Amsterdamse Bos, parking tips, metro routes, and...",
     url: "https://hockeyworldcup2026schedule.com/venues/wagener-stadium-guide",
     images: [
@@ -17,13 +17,13 @@ export const metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Wagener Stadium Amstelveen Visitor Guide: Hotels, Parking & Transit",
+        alt: "Wagener Stadium Guide 2026: Tickets, Seating, Parking & How to Get There",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Wagener Stadium Amstelveen Visitor Guide: Hotels, Parking & Transit",
+    title: "Wagener Stadium Guide 2026: Tickets, Seating, Parking & How to Get There",
     description: "Heading to Wagener Stadium for the 2026 Hockey World Cup? Read our expert visitor guide on hotels near Amsterdamse Bos, parking tips, metro routes, and...",
     images: ["/og-image.jpg"],
   },
