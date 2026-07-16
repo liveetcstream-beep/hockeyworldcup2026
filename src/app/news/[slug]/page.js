@@ -70,6 +70,20 @@ export default async function NewsArticlePage({ params }) {
       links.push({ href: "/pool-d", label: "🟡 Pool D Standings" });
     }
 
+    if (tags.includes("Pakistan Hockey")) {
+      links.push({ href: "/hockey-world-cup-2026-schedule-pakistan", label: "🇵🇰 Pakistan Schedule Hub" });
+      links.push({ href: "/matches/india-vs-pakistan", label: "⚔️ India vs Pakistan Preview" });
+      links.push({ href: "/matches/england-vs-pakistan", label: "⚔️ England vs Pakistan Preview" });
+      links.push({ href: "/pool-d", label: "🟡 Pool D Standings" });
+    }
+
+    if (tags.includes("Belgium Red Lions")) {
+      links.push({ href: "/hockey-world-cup-2026-schedule-belgium", label: "🇧🇪 Belgium Schedule Hub" });
+      links.push({ href: "/matches/germany-vs-belgium", label: "⚔️ Germany vs Belgium Preview" });
+      links.push({ href: "/matches/belgium-vs-netherlands", label: "⚔️ Belgium vs Netherlands Preview" });
+      links.push({ href: "/pool-b", label: "🔵 Pool B Standings" });
+    }
+
     if (tags.includes("Germany Hockey")) {
       links.push({ href: "/hockey-world-cup-2026-schedule-germany", label: "🇩🇪 Germany Schedule Hub" });
       links.push({ href: "/matches/germany-vs-belgium", label: "⚔️ Germany vs Belgium Preview" });
@@ -81,7 +95,7 @@ export default async function NewsArticlePage({ params }) {
       links.push({ href: "/tickets", label: "🎟️ Ticket Booking & Pricing" });
     }
 
-    if (tags.includes("Belfius Arena")) {
+    if (tags.includes("Belfius Arena") || tags.includes("Wavre")) {
       links.push({ href: "/venues/belfius-arena-guide", label: "🏟️ Belfius Hockey Arena Guide" });
     }
 

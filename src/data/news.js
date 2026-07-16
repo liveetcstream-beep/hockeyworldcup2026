@@ -293,5 +293,84 @@ export const newsArticles = [
       }
     ],
     tags: ["FIH Rules", "Video Referral", "Wagener Stadium", "Belfius Arena", "Rules Update"]
+  },
+  {
+    title: "Pakistan Announces 18-Player Hockey World Cup 2026 Squad: Sufyan Khan to Lead Defense",
+    slug: "pakistan-squad-analysis-2026",
+    category: "Squad News",
+    author: "Bram van de Meer",
+    authorTitle: "Senior Field Hockey Analyst",
+    authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
+    date: "July 17, 2026",
+    readTime: "5 min read",
+    image: "/news/india-squad-news.webp",
+    excerpt: "Pakistan Hockey Federation has confirmed their 18-member squad for the FIH Hockey World Cup 2026. Head coach Roelant Oltmans prioritizes youth transitions and penalty corner defense.",
+    content: `
+      <p>The Pakistan Hockey Federation (PHF) has officially announced the 18-player men's squad representing the Green Shirts at the upcoming <strong>FIH Hockey World Cup 2026</strong>. Finalized after a rigorous training camp in Islamabad under head coach Roelant Oltmans, the roster features a deliberate mix of young talent and experienced players who qualified through the FIH Qualifiers.</p>
+
+      <h2>The Official 18-Player Roster</h2>
+      <p>Here is the official squad selected for the tournament in Amstelveen:</p>
+      <ul>
+        <li><strong>Goalkeepers:</strong> Abdullah Ishtiaq, Akmal Hussain</li>
+        <li><strong>Defenders:</strong> Sufyan Khan (VC), Aqeel Ahmed, Bilal Aslam, Muhammad Hammad</li>
+        <li><strong>Midfielders:</strong> Hannan Shahid (C), Umar Bhutta, Arshad Liaqat, Rana Waheed Ashraf</li>
+        <li><strong>Forwards:</strong> Afraz, Abdul Rehman, Roman Khan, Muhammad Imad</li>
+      </ul>
+
+      <h2>Hannan Shahid & Sufyan Khan to Lead the Charge</h2>
+      <p>Dynamic midfielder <strong>Hannan Shahid</strong> has been named the team captain, carrying the creative transition burden. Defender <strong>Sufyan Khan</strong> will command the backline and serve as the primary drag-flick threat on penalty corners. Oltmans noted: <em>"Sufyan's drag-flick speeds are world-class, but our defensive structural integrity inside our circle will define our success against England and India."</em></p>
+
+      <h2>Pool D Rivalry & Key Matchups</h2>
+      <p>Placed in Pool D, Pakistan faces a challenging group-stage schedule. The team will open against England on August 15, play Wales on August 17, and face traditional rivals India on August 19 in Amstelveen. The team's qualification for the crossover play-offs depends heavily on securing early points against England and Wales.</p>
+    `,
+    faqs: [
+      {
+        question: "Who is the captain of the Pakistan hockey squad for HWC 2026?",
+        answer: "Hannan Shahid has been named the team captain, with Sufyan Khan serving as vice-captain and primary drag-flicker."
+      },
+      {
+        question: "When is the Pakistan vs India Hockey World Cup match?",
+        answer: "The highly anticipated match between Pakistan and India is scheduled for August 19, 2026, at the Wagener Stadium in Amstelveen."
+      }
+    ],
+    tags: ["Pakistan Hockey", "Sufyan Khan", "Roelant Oltmans", "Squad News", "Pool D"]
+  },
+  {
+    title: "Belgium Red Lions Announce Veteran-Heavy Squad for Hockey World Cup 2026 Title Hunt",
+    slug: "belgium-squad-announcement-2026",
+    category: "Squad News",
+    author: "Marc Devos",
+    authorTitle: "Senior Belgian Hockey Journalist",
+    authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
+    date: "July 17, 2026",
+    readTime: "5 min read",
+    image: "/news/germany-injury-news.webp",
+    excerpt: "Co-hosts Belgium have confirmed their 18-player squad for the 2026 World Cup. Arthur Van Doren and Vincent Vanasch lead a roster aiming for glory on home soil in Wavre.",
+    content: `
+      <p>The Royal Belgian Hockey Association (KBHB) has officially announced their 18-player squad for the <strong>FIH Hockey World Cup 2026</strong>. Playing in front of their home crowd at the newly built <strong>Belfius Hockey Arena in Wavre</strong>, the co-hosts have opted for experience, retaining the core that won Olympic gold and the 2018 World Cup.</p>
+
+      <h2>Belgium Red Lions World Cup 2026 Roster</h2>
+      <p>The official 18-player squad selected by head coach Michel van den Heuvel:</p>
+      <ul>
+        <li><strong>Goalkeepers:</strong> Vincent Vanasch, Loic Van Doren</li>
+        <li><strong>Defenders:</strong> Arthur Van Doren, Alexander Hendrickx, Loïck Luypaert, Gauthier Boccard</li>
+        <li><strong>Midfielders:</strong> Victor Wegnez, Felix Denayer (C), Antoine Kina, John-John Dohmen</li>
+        <li><strong>Forwards:</strong> Florent van Aubel, Tom Boon, Cédric Charlier, Nicolas De Kerpel</li>
+      </ul>
+
+      <h2>Home Advantage and Expectations</h2>
+      <p>With legends like <strong>Arthur Van Doren</strong> anchoring the defense and penalty corner specialist <strong>Alexander Hendrickx</strong> ready for drag-flicks, Belgium is one of the top favorites. The Red Lions are in Pool B alongside Germany, Malaysia, and France, setting up a blockbuster rematch of the 2023 World Cup Final against Germany on August 17 in Wavre.</p>
+    `,
+    faqs: [
+      {
+        question: "Where will Belgium play their HWC 2026 group stage matches?",
+        answer: "Belgium will play all their Pool B matches at the Belfius Hockey Arena in Wavre, Belgium."
+      },
+      {
+        question: "When is the Belgium vs Germany rematch match?",
+        answer: "Belgium faces defending champions Germany on August 17, 2026, at 20:30 local time in Wavre."
+      }
+    ],
+    tags: ["Belgium Red Lions", "Arthur Van Doren", "Wavre", "Squad News", "Pool B"]
   }
 ];

@@ -404,6 +404,7 @@ export default function PakistanHockeyPage() {
               { href: "/pool-d", label: "🟡 Pool D Standings" },
               { href: "/matches/india-vs-pakistan", label: "⚔️ India vs Pakistan Preview" },
               { href: "/matches/england-vs-pakistan", label: "⚔️ England vs Pakistan Preview" },
+              { href: "/news/pakistan-squad-analysis-2026", label: "📰 Pakistan Squad Announcement" },
               { href: "/venues/wagener-stadium-guide", label: "🏟️ Wagener Stadium Guide" },
               { href: "/hockey-live-streaming", label: "📺 Watch in Pakistan (PTV Sports)" },
               { href: "/hockey-world-cup-2026-schedule-india", label: "🇮🇳 India Page" },

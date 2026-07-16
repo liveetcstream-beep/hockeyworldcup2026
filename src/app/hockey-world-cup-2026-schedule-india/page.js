@@ -491,7 +491,7 @@ export default function IndiaHockeyPage() {
               { href: "/pool-d", label: "🟡 Pool D Standings" },
               { href: "/matches/india-vs-pakistan", label: "⚔️ India vs Pakistan Preview" },
               { href: "/matches/india-vs-england", label: "⚔️ India vs England Preview" },
-              { href: "/matches/india-vs-england-women", label: "⚔️ India vs England Women" },
+              { href: "/news/india-announces-world-cup-squad", label: "📰 India Squad Announcement" },
               { href: "/venues/wagener-stadium-guide", label: "🏟️ Wagener Stadium Guide" },
               { href: "/hockey-live-streaming", label: "📺 Watch in India (Star Sports)" },
               { href: "/hockey-world-cup-2026-schedule-pakistan", label: "🇵🇰 Pakistan Page" },

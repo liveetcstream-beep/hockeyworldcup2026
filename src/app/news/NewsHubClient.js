@@ -8,7 +8,8 @@ import { newsArticles } from "../../data/news";
 export default function NewsHubClient() {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Squad News", "Injury News", "Ticket Update"];
+  const categories = ["All", ...new Set(newsArticles.map(art => art.category))];
+
 
   const filteredArticles = selectedCategory === "All"
     ? newsArticles
