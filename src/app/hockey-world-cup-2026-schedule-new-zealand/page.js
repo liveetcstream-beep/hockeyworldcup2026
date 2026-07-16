@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Schedule New Zealand: Time Table, Fixtures & PDF",
+  title: "New Zealand Hockey World Cup 2026 Schedule: Time & Matches",
   description: "New Zealand Hockey World Cup 2026 Schedule: Pool A fixtures vs Australia (Aug 15), Chile (Aug 17) & Japan (Aug 20). NZST timings, squad & streaming info.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-new-zealand`,
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Schedule New Zealand: Time Table, Fixtures & PDF",
+    title: "New Zealand Hockey World Cup 2026 Schedule: Time & Matches",
     description: "New Zealand Hockey World Cup 2026 Schedule: Pool A fixtures vs Australia (Aug 15), Chile (Aug 17) & Japan (Aug 20). NZST timings, squad & streaming info.",
     url: `${BASE}/hockey-world-cup-2026-schedule-new-zealand`,
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Schedule New Zealand: Time Table, Fixtures & PDF",
+    title: "New Zealand Hockey World Cup 2026 Schedule: Time & Matches",
     description: "New Zealand Hockey World Cup 2026 Schedule: Pool A fixtures vs Australia (Aug 15), Chile (Aug 17) & Japan (Aug 20). NZST timings, squad & streaming info.",
     images: ["/og-image.jpg"],
   },

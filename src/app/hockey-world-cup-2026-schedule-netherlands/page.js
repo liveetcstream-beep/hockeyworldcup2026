@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Schedule Netherlands: Time Table, Fixtures & PDF",
+  title: "Netherlands Hockey World Cup 2026 Schedule: Time & Matches",
   description: "Netherlands Hockey World Cup 2026 Schedule: Pool A fixtures vs Chile (Aug 15), Japan (Aug 18) & Australia (Aug 20). CET/CEST timings, women's fixtures & squad.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-netherlands`,
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Schedule Netherlands: Time Table, Fixtures & PDF",
+    title: "Netherlands Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Netherlands Hockey World Cup 2026 Schedule: Pool A fixtures vs Chile (Aug 15), Japan (Aug 18) & Australia (Aug 20). CET/CEST timings, women's fixtures & squad.",
     url: `${BASE}/hockey-world-cup-2026-schedule-netherlands`,
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Schedule Netherlands: Time Table, Fixtures & PDF",
+    title: "Netherlands Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Netherlands Hockey World Cup 2026 Schedule: Pool A fixtures vs Chile (Aug 15), Japan (Aug 18) & Australia (Aug 20). CET/CEST timings, women's fixtures & squad.",
     images: ["/og-image.jpg"],
   },

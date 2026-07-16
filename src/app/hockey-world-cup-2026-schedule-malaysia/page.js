@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Schedule Malaysia: Time Table, Fixtures & PDF",
+  title: "Malaysia Hockey World Cup 2026 Schedule: Time & Matches",
   description: "Malaysia Hockey World Cup 2026 Schedule: Pool B fixtures vs Germany (Aug 17), USA (Aug 19) & Argentina (Aug 21). MYT timings, squad & streaming guide.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-malaysia`,
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Schedule Malaysia: Time Table, Fixtures & PDF",
+    title: "Malaysia Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Malaysia Hockey World Cup 2026 Schedule: Pool B fixtures vs Germany (Aug 17), USA (Aug 19) & Argentina (Aug 21). MYT timings, squad & streaming guide.",
     url: `${BASE}/hockey-world-cup-2026-schedule-malaysia`,
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Schedule Malaysia: Time Table, Fixtures & PDF",
+    title: "Malaysia Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Malaysia Hockey World Cup 2026 Schedule: Pool B fixtures vs Germany (Aug 17), USA (Aug 19) & Argentina (Aug 21). MYT timings, squad & streaming guide.",
     images: ["/og-image.jpg"],
   },

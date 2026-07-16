@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Schedule England: Time Table, Fixtures & PDF",
+  title: "England Hockey World Cup 2026 Schedule: Time & Matches",
   description: "England Hockey World Cup 2026 Schedule: Pool D fixtures vs Wales (Aug 15), India (Aug 17) & Pakistan (Aug 19). BST timings, squad list & TV channels.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-england`,
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Schedule England: Time Table, Fixtures & PDF",
+    title: "England Hockey World Cup 2026 Schedule: Time & Matches",
     description: "England Hockey World Cup 2026 Schedule: Pool D fixtures vs Wales (Aug 15), India (Aug 17) & Pakistan (Aug 19). BST timings, squad list & TV channels.",
     url: `${BASE}/hockey-world-cup-2026-schedule-england`,
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Schedule England: Time Table, Fixtures & PDF",
+    title: "England Hockey World Cup 2026 Schedule: Time & Matches",
     description: "England Hockey World Cup 2026 Schedule: Pool D fixtures vs Wales (Aug 15), India (Aug 17) & Pakistan (Aug 19). BST timings, squad list & TV channels.",
     images: ["/og-image.jpg"],
   },

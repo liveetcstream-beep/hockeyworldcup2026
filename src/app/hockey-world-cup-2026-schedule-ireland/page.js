@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Schedule Ireland: Time Table, Fixtures & PDF",
+  title: "Ireland Hockey World Cup 2026 Schedule: Time & Matches",
   description: "Ireland Hockey World Cup 2026 Schedule: Pool C fixtures vs South Africa (Aug 15), Spain (Aug 19) & Chile (Aug 20). IST/local timings & squad details.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-ireland`,
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Schedule Ireland: Time Table, Fixtures & PDF",
+    title: "Ireland Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Ireland Hockey World Cup 2026 Schedule: Pool C fixtures vs South Africa (Aug 15), Spain (Aug 19) & Chile (Aug 20). IST/local timings & squad details.",
     url: `${BASE}/hockey-world-cup-2026-schedule-ireland`,
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Schedule Ireland: Time Table, Fixtures & PDF",
+    title: "Ireland Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Ireland Hockey World Cup 2026 Schedule: Pool C fixtures vs South Africa (Aug 15), Spain (Aug 19) & Chile (Aug 20). IST/local timings & squad details.",
     images: ["/og-image.jpg"],
   },

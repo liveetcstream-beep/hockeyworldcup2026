@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Schedule Australia: Time Table, Fixtures & PDF",
+  title: "Australia Hockey World Cup 2026 Schedule: Time & Matches",
   description: "Australia Hockey World Cup 2026 Schedule: Pool A fixtures vs Netherlands (Aug 15), Spain (Aug 17) & New Zealand (Aug 20). AEST/local timings & squad.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-australia`,
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Schedule Australia: Time Table, Fixtures & PDF",
+    title: "Australia Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Australia Hockey World Cup 2026 Schedule: Pool A fixtures vs Netherlands (Aug 15), Spain (Aug 17) & New Zealand (Aug 20). AEST/local timings & squad.",
     url: `${BASE}/hockey-world-cup-2026-schedule-australia`,
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Schedule Australia: Time Table, Fixtures & PDF",
+    title: "Australia Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Australia Hockey World Cup 2026 Schedule: Pool A fixtures vs Netherlands (Aug 15), Spain (Aug 17) & New Zealand (Aug 20). AEST/local timings & squad.",
     images: ["/og-image.jpg"],
   },

@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Schedule Spain: Time Table, Fixtures & PDF",
+  title: "Spain Hockey World Cup 2026 Schedule: Time & Matches",
   description: "Spain Hockey World Cup 2026 Schedule: Pool C fixtures vs Belgium (Aug 16), Australia (Aug 17) & Ireland (Aug 19). CET timings, squad & live streaming guide.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-spain`,
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Schedule Spain: Time Table, Fixtures & PDF",
+    title: "Spain Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Spain Hockey World Cup 2026 Schedule: Pool C fixtures vs Belgium (Aug 16), Australia (Aug 17) & Ireland (Aug 19). CET timings, squad & live streaming guide.",
     url: `${BASE}/hockey-world-cup-2026-schedule-spain`,
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Schedule Spain: Time Table, Fixtures & PDF",
+    title: "Spain Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Spain Hockey World Cup 2026 Schedule: Pool C fixtures vs Belgium (Aug 16), Australia (Aug 17) & Ireland (Aug 19). CET timings, squad & live streaming guide.",
     images: ["/og-image.jpg"],
   },

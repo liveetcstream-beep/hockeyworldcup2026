@@ -7,13 +7,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Schedule Belgium: Time Table, Fixtures & PDF",
+  title: "Belgium Hockey World Cup 2026 Schedule: Time & Matches",
   description: "Belgium Hockey World Cup 2026 Schedule: Home nation in Pool B vs Spain (Aug 16), France (Aug 18) & Netherlands (Aug 20). CET timings, squad & streaming guide.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-belgium`,
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Schedule Belgium: Time Table, Fixtures & PDF",
+    title: "Belgium Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Belgium Hockey World Cup 2026 Schedule: Home nation in Pool B vs Spain (Aug 16), France (Aug 18) & Netherlands (Aug 20). CET timings, squad & streaming guide.",
     url: `${BASE}/hockey-world-cup-2026-schedule-belgium`,
     images: [
@@ -27,7 +27,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Schedule Belgium: Time Table, Fixtures & PDF",
+    title: "Belgium Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Belgium Hockey World Cup 2026 Schedule: Home nation in Pool B vs Spain (Aug 16), France (Aug 18) & Netherlands (Aug 20). CET timings, squad & streaming guide.",
     images: ["/og-image.jpg"],
   },

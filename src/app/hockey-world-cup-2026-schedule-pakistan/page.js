@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Pakistan Hockey World Cup 2026: PST Timings & Fixtures",
+  title: "Pakistan Hockey World Cup 2026 Schedule: Time & Matches",
   description: "Pakistan Hockey World Cup 2026 Schedule: Pool D fixtures vs England (Aug 15), Wales (Aug 17) & India (Aug 19). PST timings, PTV Sports streaming & full squad.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-pakistan`,
   },
   openGraph: {
-    title: "Pakistan Hockey World Cup 2026: PST Timings & Fixtures",
+    title: "Pakistan Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Pakistan Hockey World Cup 2026 Schedule: Pool D fixtures vs England (Aug 15), Wales (Aug 17) & India (Aug 19). PST timings, squad, and live streaming details.",
     url: `${BASE}/hockey-world-cup-2026-schedule-pakistan`,
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pakistan Hockey World Cup 2026: PST Timings & Fixtures",
+    title: "Pakistan Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Pakistan Hockey World Cup 2026 Schedule: Pool D fixtures vs England (Aug 15), Wales (Aug 17) & India (Aug 19). PST timings, squad, and live streaming details.",
     images: ["/og-image.jpg"],
   },

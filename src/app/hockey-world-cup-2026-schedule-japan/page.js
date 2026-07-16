@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Schedule Japan: Time Table & Fixtures",
+  title: "Japan Hockey World Cup 2026 Schedule: Time & Matches",
   description: "Japan Hockey World Cup 2026 Schedule: Pool A/B fixtures vs Netherlands (Aug 15), Argentina (Aug 17) & New Zealand (Aug 19). JST timings, squad & streaming.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-japan`,
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Schedule Japan: Time Table & Fixtures",
+    title: "Japan Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Japan Hockey World Cup 2026 Schedule: Pool A/B fixtures vs Netherlands (Aug 15), Argentina (Aug 17) & New Zealand (Aug 19). JST timings, squad & streaming.",
     url: `${BASE}/hockey-world-cup-2026-schedule-japan`,
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Schedule Japan: Time Table & Fixtures",
+    title: "Japan Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Japan Hockey World Cup 2026 Schedule: Pool A/B fixtures vs Netherlands (Aug 15), Argentina (Aug 17) & New Zealand (Aug 19). JST timings, squad & streaming.",
     images: ["/og-image.jpg"],
   },

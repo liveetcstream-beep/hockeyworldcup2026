@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Schedule China: Time Table, Fixtures & PDF",
+  title: "China Hockey World Cup 2026 Schedule: Time & Matches",
   description: "China Hockey World Cup 2026 Schedule: Women's Pool C fixtures vs Australia (Aug 15), Ireland (Aug 17) & Spain (Aug 19). CST timings, squad list & streaming guide.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-china`,
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Schedule China: Time Table, Fixtures & PDF",
+    title: "China Hockey World Cup 2026 Schedule: Time & Matches",
     description: "China Hockey World Cup 2026 Schedule: Women's Pool C fixtures vs Australia (Aug 15), Ireland (Aug 17) & Spain (Aug 19). CST timings, squad list & streaming guide.",
     url: `${BASE}/hockey-world-cup-2026-schedule-china`,
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Schedule China: Time Table, Fixtures & PDF",
+    title: "China Hockey World Cup 2026 Schedule: Time & Matches",
     description: "China Hockey World Cup 2026 Schedule: Women's Pool C fixtures vs Australia (Aug 15), Ireland (Aug 17) & Spain (Aug 19). CST timings, squad list & streaming guide.",
     images: ["/og-image.jpg"],
   },

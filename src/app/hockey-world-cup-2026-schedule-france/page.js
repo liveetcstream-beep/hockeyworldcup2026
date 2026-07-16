@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Schedule France: Time Table, Fixtures & PDF",
+  title: "France Hockey World Cup 2026 Schedule: Time & Matches",
   description: "France Hockey World Cup 2026 Schedule: Pool B fixtures vs Belgium (Aug 18) & Argentina (Aug 20). CET match timings, squad list & live streaming channels.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-france`,
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Schedule France: Time Table, Fixtures & PDF",
+    title: "France Hockey World Cup 2026 Schedule: Time & Matches",
     description: "France Hockey World Cup 2026 Schedule: Pool B fixtures vs Belgium (Aug 18) & Argentina (Aug 20). CET match timings, squad list & live streaming channels.",
     url: `${BASE}/hockey-world-cup-2026-schedule-france`,
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Schedule France: Time Table, Fixtures & PDF",
+    title: "France Hockey World Cup 2026 Schedule: Time & Matches",
     description: "France Hockey World Cup 2026 Schedule: Pool B fixtures vs Belgium (Aug 18) & Argentina (Aug 20). CET match timings, squad list & live streaming channels.",
     images: ["/og-image.jpg"],
   },

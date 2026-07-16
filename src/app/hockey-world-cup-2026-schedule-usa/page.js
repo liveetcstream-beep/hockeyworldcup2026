@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Schedule USA: Time Table, Fixtures & PDF",
+  title: "USA Hockey World Cup 2026 Schedule: Time & Matches",
   description: "USA Hockey World Cup 2026 Schedule: Women's Pool B fixtures vs Scotland (Aug 15), Germany (Aug 17) & Belgium (Aug 19). EST/PST timings, squad & streaming guide.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-usa`,
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Schedule USA: Time Table, Fixtures & PDF",
+    title: "USA Hockey World Cup 2026 Schedule: Time & Matches",
     description: "USA Hockey World Cup 2026 Schedule: Women's Pool B fixtures vs Scotland (Aug 15), Germany (Aug 17) & Belgium (Aug 19). EST/PST timings, squad & streaming guide.",
     url: `${BASE}/hockey-world-cup-2026-schedule-usa`,
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Schedule USA: Time Table, Fixtures & PDF",
+    title: "USA Hockey World Cup 2026 Schedule: Time & Matches",
     description: "USA Hockey World Cup 2026 Schedule: Women's Pool B fixtures vs Scotland (Aug 15), Germany (Aug 17) & Belgium (Aug 19). EST/PST timings, squad & streaming guide.",
     images: ["/og-image.jpg"],
   },

@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Schedule Germany: Time Table, Fixtures & PDF",
+  title: "Germany Hockey World Cup 2026 Schedule: Time & Matches",
   description: "Germany Hockey World Cup 2026 Schedule: Defending champions in Pool B vs Argentina (Aug 15), Malaysia (Aug 17) & Scotland (Aug 19). CET timings & squad.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-germany`,
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Schedule Germany: Time Table, Fixtures & PDF",
+    title: "Germany Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Germany Hockey World Cup 2026 Schedule: Defending champions in Pool B vs Argentina (Aug 15), Malaysia (Aug 17) & Scotland (Aug 19). CET timings & squad.",
     url: `${BASE}/hockey-world-cup-2026-schedule-germany`,
     images: [
@@ -26,7 +26,7 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Schedule Germany: Time Table, Fixtures & PDF",
+    title: "Germany Hockey World Cup 2026 Schedule: Time & Matches",
     description: "Germany Hockey World Cup 2026 Schedule: Defending champions in Pool B vs Argentina (Aug 15), Malaysia (Aug 17) & Scotland (Aug 19). CET timings & squad.",
     images: ["/og-image.jpg"],
   },
