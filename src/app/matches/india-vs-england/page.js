@@ -3,13 +3,13 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "India vs England Hockey World Cup 2026: Pool D Preview, H2H & IST Timings",
+  title: "India vs England HWC 2026: Pool D Preview & IST Times",
   description: "India vs England Hockey World Cup 2026 (Aug 17, Amstelveen): Pool D must-win clash. Full H2H records, IST match time, Star Sports streaming & prediction.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/india-vs-england",
   },
   openGraph: {
-    title: "India vs England Hockey World Cup 2026: Pool D Preview, H2H & IST Timings",
+    title: "India vs England HWC 2026: Pool D Preview & IST Times",
     description: "Complete preview of the India vs England men's clash at the 2026 Hockey World Cup. Get stadium guides, match timings, lineups, and predictions.",
     url: "https://hockeyworldcup2026schedule.com/matches/india-vs-england",
     images: [
@@ -17,13 +17,13 @@ export const metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "India vs England Hockey World Cup 2026: Pool D Preview, H2H & IST Timings",
+        alt: "India vs England HWC 2026: Pool D Preview & IST Times",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "India vs England Hockey World Cup 2026: Pool D Preview, H2H & IST Timings",
+    title: "India vs England HWC 2026: Pool D Preview & IST Times",
     description: "Complete preview of the India vs England men's clash at the 2026 Hockey World Cup. Get stadium guides, match timings, lineups, and predictions.",
     images: ["/og-image.jpg"],
   },

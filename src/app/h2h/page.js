@@ -4,13 +4,13 @@ import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Head-to-Head: India vs Pakistan H2H Stats & All Rivalries",
+  title: "HWC 2026 H2H: India vs Pakistan & Top Rivalry Stats",
   description: "Hockey World Cup 2026 head-to-head records: India vs Pakistan (82 matches), Germany vs Belgium, Netherlands vs Argentina. Win ratios, last 10 results & predictions.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/h2h",
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Head-to-Head: India vs Pakistan H2H Stats & All Rivalries",
+    title: "HWC 2026 H2H: India vs Pakistan & Top Rivalry Stats",
     description: "Detailed H2H stats, last 10 match summaries, win ratios, and tactical descriptions for the top qualified teams in the FIH Hockey World Cup 2026.",
     url: "https://hockeyworldcup2026schedule.com/h2h",
     images: [
@@ -18,13 +18,13 @@ export const metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Hockey World Cup 2026 Head-to-Head: India vs Pakistan H2H Stats & All Rivalries",
+        alt: "HWC 2026 H2H: India vs Pakistan & Top Rivalry Stats",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Head-to-Head: India vs Pakistan H2H Stats & All Rivalries",
+    title: "HWC 2026 H2H: India vs Pakistan & Top Rivalry Stats",
     description: "Detailed H2H stats, last 10 match summaries, win ratios, and tactical descriptions for the top qualified teams in the FIH Hockey World Cup 2026.",
     images: ["/og-image.jpg"],
   },
@@ -89,7 +89,7 @@ export default function H2HPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Matchup Histories & Statistics</p>
-          <h1 className="hero-title">Hockey World Cup 2026 Head-to-Head: India vs Pakistan H2H Stats & All Rivalries</h1>
+          <h1 className="hero-title">HWC 2026 H2H: India vs Pakistan & Top Rivalry Stats</h1>
           <p className="hero-description">
             Deep-dive into the historical matchups of the top-ranked teams competing in the 2026 World Cup, including full data on the last 10 encounters, goals scored, win ratios, and tactical explanations.
           </p>

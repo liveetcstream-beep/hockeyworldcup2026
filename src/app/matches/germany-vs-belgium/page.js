@@ -3,13 +3,13 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Germany vs Belgium HWC 2026: 2023 Final Rematch Preview, H2H & Prediction",
+  title: "Germany vs Belgium 2026: Final Rematch Preview & H2H",
   description: "Germany vs Belgium Hockey World Cup 2026 (Aug 17, Wavre): The 2023 World Cup Final rematch. Full H2H history, tactical preview, prediction & live stream on RTBF/DAZN.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/germany-vs-belgium",
   },
   openGraph: {
-    title: "Germany vs Belgium HWC 2026: 2023 Final Rematch Preview, H2H & Prediction",
+    title: "Germany vs Belgium 2026: Final Rematch Preview & H2H",
     description: "Defending champions Germany face co-hosts Belgium at HWC 2026. View complete head-to-head history, match timings, lineups, and predictions.",
     url: "https://hockeyworldcup2026schedule.com/matches/germany-vs-belgium",
     images: [
@@ -17,13 +17,13 @@ export const metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Germany vs Belgium HWC 2026: 2023 Final Rematch Preview, H2H & Prediction",
+        alt: "Germany vs Belgium 2026: Final Rematch Preview & H2H",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Germany vs Belgium HWC 2026: 2023 Final Rematch Preview, H2H & Prediction",
+    title: "Germany vs Belgium 2026: Final Rematch Preview & H2H",
     description: "Defending champions Germany face co-hosts Belgium at HWC 2026. View complete head-to-head history, match timings, lineups, and predictions.",
     images: ["/og-image.jpg"],
   },
