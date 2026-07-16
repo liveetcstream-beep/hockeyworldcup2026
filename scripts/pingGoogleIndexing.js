@@ -33,14 +33,14 @@ To set up the Indexing API:
     process.exit(1);
   }
 
-  // 3. Initialize Google OAuth JWT Client
-  const auth = new google.auth.JWT(
-    credentials.client_email,
-    null,
-    credentials.private_key,
-    ['https://www.googleapis.com/auth/indexing']
-  );
+  // 3. Initialize Google Auth Client
+  const auth = new google.auth.GoogleAuth({
+    keyFile: CREDENTIALS_PATH,
+    scopes: ['https://www.googleapis.com/auth/indexing'],
+  });
 
+  console.log('Authorizing with Google APIs...');
+  const authClient = await auth.getClient();
   console.log(`Authenticated as service account: ${credentials.client_email}`);
 
   // 4. Gather URLs to index
@@ -109,13 +109,15 @@ To set up the Indexing API:
   console.log(`Found ${uniqueUrls.length} total active URLs to notify Google Indexing API...`);
 
   // 5. Submit URLs sequentially to avoid hitting rate limits too fast
-  const indexing = google.indexing('v3');
+  const indexing = google.indexing({
+    version: 'v3',
+    auth: authClient
+  });
 
   for (const url of uniqueUrls) {
     try {
       console.log(`Pinging Indexing API for: ${url}`);
       const response = await indexing.urlNotifications.publish({
-        auth,
         requestBody: {
           url: url,
           type: 'URL_UPDATED'
