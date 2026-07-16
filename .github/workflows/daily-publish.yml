@@ -1,0 +1,80 @@
+name: Daily Automated Build & Google Indexing
+
+on:
+  schedule:
+    # Run once daily at 12:05 AM UTC (which is 05:05 AM PKT / 05:35 AM IST)
+    - cron: '5 0 * * *'
+  workflow_dispatch:
+    # Allows manual triggers from GitHub Actions UI
+
+jobs:
+  build-and-index:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Create Credentials File from Secrets
+        env:
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: |
+          if [ -z "$GOOGLE_SERVICE_ACCOUNT_JSON" ]; then
+            echo "Error: GOOGLE_SERVICE_ACCOUNT_JSON secret is not set in GitHub Repository Secrets."
+            exit 1
+          fi
+          echo "$GOOGLE_SERVICE_ACCOUNT_JSON" > google_service_account.json
+
+      - name: Run Build (SSG Recompilation)
+        run: npm run build
+
+      - name: Deploy to Hosting
+        # Here we run the deployment. If using Vercel, Netlify, or custom server.
+        # Since hosting can vary, we allow deploying via a webhook or direct command if secrets are set.
+        # Example for Vercel/Netlify could be triggered via curl deploy hooks.
+        # We will check if DEPLOY_WEBHOOK_URL is set, and trigger it to redeploy the built site.
+        env:
+          DEPLOY_WEBHOOK_URL: ${{ secrets.DEPLOY_WEBHOOK_URL }}
+        run: |
+          if [ -n "$DEPLOY_WEBHOOK_URL" ]; then
+            echo "Triggering deployment webhook..."
+            curl -X POST "$DEPLOY_WEBHOOK_URL"
+          else
+            echo "Skipping deploy hook because DEPLOY_WEBHOOK_URL secret is not set."
+            echo "Note: If you have Vercel/Netlify auto-git integrations, they will trigger a deployment on git push. However, for a cron job to redeploy, triggering a build hook is recommended."
+          fi
+
+      - name: Run Google Indexing API Submission
+        run: node scripts/pingGoogleIndexing.js
+
+      - name: Send Execution Notification
+        if: always()
+        env:
+          DISCORD_WEBHOOK: ${{ secrets.DISCORD_WEBHOOK }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          STATUS="${{ job.status }}"
+          MSG="📊 **Hockey World Cup 2026 Daily Cron Job**\n- Status: **$STATUS**\n- Trigger: Daily Rebuild\n- Google Indexing URL Ping: Completed successfully."
+          
+          if [ -n "$DISCORD_WEBHOOK" ]; then
+            echo "Sending Discord notification..."
+            curl -H "Content-Type: application/json" -X POST -d "{\"content\": \"$MSG\"}" "$DISCORD_WEBHOOK"
+          fi
+          
+          if [ -n "$TELEGRAM_BOT_TOKEN" ] && [ -n "$TELEGRAM_CHAT_ID" ]; then
+            echo "Sending Telegram notification..."
+            curl -s -X POST "https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage" \
+              -d "chat_id=$TELEGRAM_CHAT_ID" \
+              -d "text=$MSG" \
+              -d "parse_mode=markdown"
+          fi
