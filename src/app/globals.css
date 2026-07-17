@@ -2323,10 +2323,10 @@ h1, h2, h3, h4, h5, h6 {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.mega-column h4 {
+.mega-column h4, .mega-column .nav-heading {
   font-size: 0.8rem !important;
   text-transform: uppercase !important;
-  color: #38bdf8 !important;
+  color: #ffffff !important;
   letter-spacing: 0.08em !important;
   margin-bottom: 0.8rem !important;
   font-weight: 800 !important;
