@@ -176,101 +176,131 @@ export default function TicketsPage() {
               </thead>
               <tbody>
                 {[
-                  { cat: "Category 1 (Premium Grandstand)", group: "€45.00", knock: "€65.00", final: "€95.00" },
-                  { cat: "Category 2 (Mid-Tier Stands)", group: "€35.00", knock: "€50.00", final: "€75.00" },
-                  { cat: "Category 3 (General Admission)", group: "€20.00", knock: "€35.00", final: "€55.00" },
-                  { cat: "Family Pass (2 Adults + 2 Kids)", group: "€110.00", knock: "€150.00", final: "€240.00" }
+                  { cat: "Category 1 (Premium Covered Grandstand)", group: "€45.00", knock: "€61.00", final: "€70.00" },
+                  { cat: "Category 2 (Mid-Tier Non-Covered Touchline)", group: "€35.00", knock: "€50.00 - €56.00", final: "€59.00 - €62.00" },
+                  { cat: "Category 3 (General Admission Goalends)", group: "€20.00", knock: "€41.00 - €45.00", final: "€55.00" },
+                  { cat: "Family Pass / Group Seating Options", group: "€110.00", knock: "€150.00", final: "€240.00" }
                 ].map((row, idx) => (
                   <tr key={idx} style={{ borderBottom: "1px solid var(--border-color)", background: idx % 2 === 0 ? "var(--bg-secondary)" : "var(--bg-tertiary)" }}>
                     <td style={{ padding: "1rem", color: "var(--text-main)", fontWeight: "700" }}>{row.cat}</td>
-                    <td style={{ padding: "1rem", color: "var(--text-muted)" }}>{row.group}</td>
-                    <td style={{ padding: "1rem", color: "var(--text-muted)" }}>{row.knock}</td>
-                    <td style={{ padding: "1rem", color: "#c00030", fontWeight: "700" }}>{row.final}</td>
+                    <td style={{ padding: "1rem", color: "var(--text-muted)", fontWeight: "600" }}>{row.group}</td>
+                    <td style={{ padding: "1rem", color: "var(--text-muted)", fontWeight: "600" }}>{row.knock}</td>
+                    <td style={{ padding: "1rem", color: "#c00030", fontWeight: "800" }}>{row.final}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
 
-          <h3 style={{ fontSize: "1.2rem", fontWeight: "700", color: "white", marginTop: "2.5rem", marginBottom: "1rem" }}>🇧🇪 Belfius Hockey Arena (Wavre) Detailed Matchday Tickets</h3>
+          <h3 style={{ fontSize: "1.2rem", fontWeight: "700", color: "var(--text-main)", marginTop: "2.5rem", marginBottom: "1rem" }}>🇧🇪 Belfius Hockey Arena (Wavre) Detailed Matchday Tickets</h3>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem", fontSize: "0.95rem", lineHeight: "1.7" }}>
             Official matchday ticketing options, pricing tiers, and real-time seat availability for the tournament rounds hosted in Wavre:
           </p>
 
           {/* Semi-Finals Table - Aug 27 */}
-          <div style={{ background: "var(--bg-tertiary)", borderRadius: "16px", padding: "1.5rem", border: "1px solid var(--border-color)", marginBottom: "2rem", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
-            <h4 style={{ color: "white", margin: "0 0 1rem 0", fontSize: "1.1rem", fontWeight: "800", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <div style={{ background: "var(--bg-secondary)", borderRadius: "16px", padding: "1.5rem", border: "1px solid var(--border-color)", marginBottom: "2rem", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
+            <h4 style={{ color: "var(--text-main)", margin: "0 0 1.2rem 0", fontSize: "1.1rem", fontWeight: "800", display: "flex", alignItems: "center", gap: "0.5rem" }}>
               📅 Thursday, August 27th — Semi-Finals (Belfius Arena, Wavre)
             </h4>
             <div style={{ overflowX: "auto" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.9rem" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.95rem" }}>
                 <thead>
-                  <tr style={{ borderBottom: "2px solid var(--border-color)", color: "var(--text-muted)", textAlign: "left" }}>
-                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Stand & Category</th>
-                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Type</th>
-                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Price</th>
-                    <th style={{ padding: "0.6rem 0.5rem", textAlign: "right", fontWeight: "700" }}>Status</th>
+                  <tr style={{ borderBottom: "2px solid var(--border-color)", textAlign: "left" }}>
+                    <th style={{ padding: "0.8rem 0.6rem", color: "var(--text-main)", fontWeight: "800" }}>Stand & Category</th>
+                    <th style={{ padding: "0.8rem 0.6rem", color: "var(--text-main)", fontWeight: "800" }}>Type</th>
+                    <th style={{ padding: "0.8rem 0.6rem", color: "var(--text-main)", fontWeight: "800" }}>Price</th>
+                    <th style={{ padding: "0.8rem 0.6rem", textAlign: "right", color: "var(--text-main)", fontWeight: "800" }}>Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    { stand: "Stand A (A1)", type: "Covered (All Ages)", price: "€61.00", status: "Available", color: "#22c55e" },
-                    { stand: "Stand A (A2)", type: "Non-Covered (All Ages)", price: "€56.00", status: "Available", color: "#22c55e" },
-                    { stand: "Stand B (B1)", type: "Covered (All Ages)", price: "€61.00", status: "Coming Soon", color: "#38bdf8" },
-                    { stand: "Stand B (B1)", type: "Non-Covered (All Ages)", price: "€50.00", status: "Available", color: "#22c55e" },
-                    { stand: "Stand C", type: "Covered (15+)", price: "€45.00", status: "Available", color: "#22c55e" },
-                    { stand: "Stand C", type: "Covered (3-14 years)", price: "€26.00", status: "Available", color: "#22c55e" },
-                    { stand: "Stand D", type: "Covered (15+)", price: "€45.00", status: "Available", color: "#22c55e" },
-                    { stand: "Stand D", type: "Covered (3-14 years)", price: "€26.00", status: "Available", color: "#22c55e" },
-                    { stand: "PRM & Attendant", type: "Day Ticket (1 Attendant Included)", price: "€50.00", status: "Available", color: "#22c55e" }
+                    { stand: "Stand A (A1)", type: "Covered (All Ages)", price: "€61.00", status: "Available" },
+                    { stand: "Stand A (A2)", type: "Non-Covered (All Ages)", price: "€56.00", status: "Available" },
+                    { stand: "Stand B (B1)", type: "Covered (All Ages)", price: "€61.00", status: "Coming Soon" },
+                    { stand: "Stand B (B1)", type: "Non-Covered (All Ages)", price: "€50.00", status: "Available" },
+                    { stand: "Stand C", type: "Covered (15+)", price: "€45.00", status: "Available" },
+                    { stand: "Stand C", type: "Covered (3-14 years)", price: "€26.00", status: "Available" },
+                    { stand: "Stand D", type: "Covered (15+)", price: "€45.00", status: "Available" },
+                    { stand: "Stand D", type: "Covered (3-14 years)", price: "€26.00", status: "Available" },
+                    { stand: "PRM & Attendant", type: "Day Ticket (1 Attendant Included)", price: "€50.00", status: "Available" }
                   ].map((row, i) => (
-                    <tr key={i} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-                      <td style={{ padding: "0.6rem 0.5rem", fontWeight: "700", color: "white" }}>{row.stand}</td>
-                      <td style={{ padding: "0.6rem 0.5rem", color: "var(--text-muted)" }}>{row.type}</td>
-                      <td style={{ padding: "0.6rem 0.5rem", color: "white", fontWeight: "700" }}>{row.price}</td>
-                      <td style={{ padding: "0.6rem 0.5rem", textAlign: "right", color: row.color, fontWeight: "800" }}>{row.status}</td>
+                    <tr key={i} style={{ borderBottom: "1px solid var(--border-color)", background: i % 2 === 0 ? "rgba(0,0,0,0.02)" : "transparent" }}>
+                      <td style={{ padding: "0.8rem 0.6rem", fontWeight: "700", color: "var(--text-main)" }}>{row.stand}</td>
+                      <td style={{ padding: "0.8rem 0.6rem", color: "var(--text-muted)", fontWeight: "500" }}>{row.type}</td>
+                      <td style={{ padding: "0.8rem 0.6rem", color: "#c00030", fontWeight: "800" }}>{row.price}</td>
+                      <td style={{ padding: "0.8rem 0.6rem", textAlign: "right" }}>
+                        <span style={{
+                          display: "inline-block",
+                          padding: "0.25rem 0.75rem",
+                          borderRadius: "9999px",
+                          fontSize: "0.8rem",
+                          fontWeight: "800",
+                          textTransform: "uppercase",
+                          letterSpacing: "0.05em",
+                          background: row.status === "Available" ? "rgba(34,197,94,0.1)" : row.status === "Coming Soon" ? "rgba(14,165,233,0.1)" : "rgba(239,68,68,0.1)",
+                          color: row.status === "Available" ? "#16a34a" : row.status === "Coming Soon" ? "#0284c7" : "#dc2626",
+                          border: row.status === "Available" ? "1px solid rgba(34,197,94,0.2)" : row.status === "Coming Soon" ? "1px solid rgba(14,165,233,0.2)" : "1px solid rgba(239,68,68,0.2)"
+                        }}>
+                          {row.status}
+                        </span>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <div style={{ marginTop: "1rem", background: "rgba(2,132,199,0.05)", border: "1px solid rgba(2,132,199,0.2)", borderRadius: "8px", padding: "0.75rem", fontSize: "0.85rem", color: "#38bdf8" }}>
+            <div style={{ marginTop: "1.2rem", background: "rgba(2,132,199,0.05)", border: "1px solid rgba(2,132,199,0.2)", borderRadius: "8px", padding: "0.8rem 1rem", fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: "1.6" }}>
               💡 <strong>Note on Child Admission & PMR (Aug 27):</strong> Children up to 3 years old have free entry when accompanied by a ticket-holding adult (must sit on lap). Children from 3 to 14 years old require a ticket but get a reduced rate in Stand C & D. PRM visitors get accessible seating in tribune B with 1 attendant free ticket included.
             </div>
           </div>
 
           {/* Semi-Finals Table - Aug 28 */}
-          <div style={{ background: "var(--bg-tertiary)", borderRadius: "16px", padding: "1.5rem", border: "1px solid var(--border-color)", marginBottom: "2rem", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
-            <h4 style={{ color: "white", margin: "0 0 1rem 0", fontSize: "1.1rem", fontWeight: "800", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <div style={{ background: "var(--bg-secondary)", borderRadius: "16px", padding: "1.5rem", border: "1px solid var(--border-color)", marginBottom: "2rem", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
+            <h4 style={{ color: "var(--text-main)", margin: "0 0 1.2rem 0", fontSize: "1.1rem", fontWeight: "800", display: "flex", alignItems: "center", gap: "0.5rem" }}>
               📅 Friday, August 28th — Semi-Finals (Belfius Arena, Wavre)
             </h4>
             <div style={{ overflowX: "auto" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.9rem" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.95rem" }}>
                 <thead>
-                  <tr style={{ borderBottom: "2px solid var(--border-color)", color: "var(--text-muted)", textAlign: "left" }}>
-                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Stand & Category</th>
-                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Type</th>
-                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Price</th>
-                    <th style={{ padding: "0.6rem 0.5rem", textAlign: "right", fontWeight: "700" }}>Status</th>
+                  <tr style={{ borderBottom: "2px solid var(--border-color)", textAlign: "left" }}>
+                    <th style={{ padding: "0.8rem 0.6rem", color: "var(--text-main)", fontWeight: "800" }}>Stand & Category</th>
+                    <th style={{ padding: "0.8rem 0.6rem", color: "var(--text-main)", fontWeight: "800" }}>Type</th>
+                    <th style={{ padding: "0.8rem 0.6rem", color: "var(--text-main)", fontWeight: "800" }}>Price</th>
+                    <th style={{ padding: "0.8rem 0.6rem", textAlign: "right", color: "var(--text-main)", fontWeight: "800" }}>Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    { stand: "Stand A (A1)", type: "Covered (All Ages)", price: "€61.00", status: "Coming Soon", color: "#38bdf8" },
-                    { stand: "Stand A (A1)", type: "Non-Covered (All Ages)", price: "€53.00", status: "Sold Out", color: "#ef4444" },
-                    { stand: "Stand B (B1)", type: "Covered (All Ages)", price: "€61.00", status: "Coming Soon", color: "#38bdf8" },
-                    { stand: "Stand B (B1)", type: "Non-Covered (All Ages)", price: "€50.00", status: "Sold Out", color: "#ef4444" },
-                    { stand: "Stand C", type: "Non-Covered (15+)", price: "€41.00", status: "Available", color: "#22c55e" },
-                    { stand: "Stand C", type: "Non-Covered (3-14 years)", price: "€26.00", status: "Available", color: "#22c55e" },
-                    { stand: "Stand D", type: "Non-Covered (15+)", price: "€41.00", status: "Available", color: "#22c55e" },
-                    { stand: "Stand D", type: "Non-Covered (3-14 years)", price: "€26.00", status: "Available", color: "#22c55e" },
-                    { stand: "PRM & Attendant", type: "Day Ticket (1 Attendant Included)", price: "€50.00", status: "Available", color: "#22c55e" }
+                    { stand: "Stand A (A1)", type: "Covered (All Ages)", price: "€61.00", status: "Coming Soon" },
+                    { stand: "Stand A (A1)", type: "Non-Covered (All Ages)", price: "€53.00", status: "Sold Out" },
+                    { stand: "Stand B (B1)", type: "Covered (All Ages)", price: "€61.00", status: "Coming Soon" },
+                    { stand: "Stand B (B1)", type: "Non-Covered (All Ages)", price: "€50.00", status: "Sold Out" },
+                    { stand: "Stand C", type: "Non-Covered (15+)", price: "€41.00", status: "Available" },
+                    { stand: "Stand C", type: "Non-Covered (3-14 years)", price: "€26.00", status: "Available" },
+                    { stand: "Stand D", type: "Non-Covered (15+)", price: "€41.00", status: "Available" },
+                    { stand: "Stand D", type: "Non-Covered (3-14 years)", price: "€26.00", status: "Available" },
+                    { stand: "PRM & Attendant", type: "Day Ticket (1 Attendant Included)", price: "€50.00", status: "Available" }
                   ].map((row, i) => (
-                    <tr key={i} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-                      <td style={{ padding: "0.6rem 0.5rem", fontWeight: "700", color: "white" }}>{row.stand}</td>
-                      <td style={{ padding: "0.6rem 0.5rem", color: "var(--text-muted)" }}>{row.type}</td>
-                      <td style={{ padding: "0.6rem 0.5rem", color: "white", fontWeight: "700" }}>{row.price}</td>
-                      <td style={{ padding: "0.6rem 0.5rem", textAlign: "right", color: row.color, fontWeight: "800" }}>{row.status}</td>
+                    <tr key={i} style={{ borderBottom: "1px solid var(--border-color)", background: i % 2 === 0 ? "rgba(0,0,0,0.02)" : "transparent" }}>
+                      <td style={{ padding: "0.8rem 0.6rem", fontWeight: "700", color: "var(--text-main)" }}>{row.stand}</td>
+                      <td style={{ padding: "0.8rem 0.6rem", color: "var(--text-muted)", fontWeight: "500" }}>{row.type}</td>
+                      <td style={{ padding: "0.8rem 0.6rem", color: "#c00030", fontWeight: "800" }}>{row.price}</td>
+                      <td style={{ padding: "0.8rem 0.6rem", textAlign: "right" }}>
+                        <span style={{
+                          display: "inline-block",
+                          padding: "0.25rem 0.75rem",
+                          borderRadius: "9999px",
+                          fontSize: "0.8rem",
+                          fontWeight: "800",
+                          textTransform: "uppercase",
+                          letterSpacing: "0.05em",
+                          background: row.status === "Available" ? "rgba(34,197,94,0.1)" : row.status === "Coming Soon" ? "rgba(14,165,233,0.1)" : "rgba(239,68,68,0.1)",
+                          color: row.status === "Available" ? "#16a34a" : row.status === "Coming Soon" ? "#0284c7" : "#dc2626",
+                          border: row.status === "Available" ? "1px solid rgba(34,197,94,0.2)" : row.status === "Coming Soon" ? "1px solid rgba(14,165,233,0.2)" : "1px solid rgba(239,68,68,0.2)"
+                        }}>
+                          {row.status}
+                        </span>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
@@ -279,43 +309,58 @@ export default function TicketsPage() {
           </div>
 
           {/* Finals Table */}
-          <div style={{ background: "var(--bg-tertiary)", borderRadius: "16px", padding: "1.5rem", border: "1px solid var(--border-color)", marginBottom: "2rem", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
-            <h4 style={{ color: "white", margin: "0 0 1rem 0", fontSize: "1.1rem", fontWeight: "800", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+          <div style={{ background: "var(--bg-secondary)", borderRadius: "16px", padding: "1.5rem", border: "1px solid var(--border-color)", marginBottom: "2rem", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
+            <h4 style={{ color: "var(--text-main)", margin: "0 0 1.2rem 0", fontSize: "1.1rem", fontWeight: "800", display: "flex", alignItems: "center", gap: "0.5rem" }}>
               🏆 Sunday, August 30th — Grand Final (Belfius Arena, Wavre)
             </h4>
             <div style={{ overflowX: "auto" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.9rem" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.95rem" }}>
                 <thead>
-                  <tr style={{ borderBottom: "2px solid var(--border-color)", color: "var(--text-muted)", textAlign: "left" }}>
-                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Stand & Category</th>
-                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Type</th>
-                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Price</th>
-                    <th style={{ padding: "0.6rem 0.5rem", textAlign: "right", fontWeight: "700" }}>Status</th>
+                  <tr style={{ borderBottom: "2px solid var(--border-color)", textAlign: "left" }}>
+                    <th style={{ padding: "0.8rem 0.6rem", color: "var(--text-main)", fontWeight: "800" }}>Stand & Category</th>
+                    <th style={{ padding: "0.8rem 0.6rem", color: "var(--text-main)", fontWeight: "800" }}>Type</th>
+                    <th style={{ padding: "0.8rem 0.6rem", color: "var(--text-main)", fontWeight: "800" }}>Price</th>
+                    <th style={{ padding: "0.8rem 0.6rem", textAlign: "right", color: "var(--text-main)", fontWeight: "800" }}>Status</th>
                   </tr>
                 </thead>
                 <tbody>
                   {[
-                    { stand: "Stand A (A1)", type: "Covered (All Ages)", price: "€70.00", status: "Sold Out", color: "#ef4444" },
-                    { stand: "Stand A (A1)", type: "Non-Covered (All Ages)", price: "€62.00", status: "Sold Out", color: "#ef4444" },
-                    { stand: "Stand B (B1)", type: "Covered (All Ages)", price: "€70.00", status: "Sold Out", color: "#ef4444" },
-                    { stand: "Stand B (B1)", type: "Non-Covered (All Ages)", price: "€59.00", status: "Sold Out", color: "#ef4444" },
-                    { stand: "Stand C", type: "Covered (15+)", price: "€55.00", status: "Sold Out", color: "#ef4444" },
-                    { stand: "Stand C", type: "Covered (3-14 years)", price: "€30.00", status: "Sold Out", color: "#ef4444" },
-                    { stand: "Stand D", type: "Covered (15+)", price: "€55.00", status: "Sold Out", color: "#ef4444" },
-                    { stand: "Stand D", type: "Covered (3-14 years)", price: "€30.00", status: "Sold Out", color: "#ef4444" },
-                    { stand: "PRM & Attendant", type: "Day Ticket (1 Attendant Included)", price: "€59.00", status: "Sold Out", color: "#ef4444" }
+                    { stand: "Stand A (A1)", type: "Covered (All Ages)", price: "€70.00", status: "Sold Out" },
+                    { stand: "Stand A (A1)", type: "Non-Covered (All Ages)", price: "€62.00", status: "Sold Out" },
+                    { stand: "Stand B (B1)", type: "Covered (All Ages)", price: "€70.00", status: "Sold Out" },
+                    { stand: "Stand B (B1)", type: "Non-Covered (All Ages)", price: "€59.00", status: "Sold Out" },
+                    { stand: "Stand C", type: "Covered (15+)", price: "€55.00", status: "Sold Out" },
+                    { stand: "Stand C", type: "Covered (3-14 years)", price: "€30.00", status: "Sold Out" },
+                    { stand: "Stand D", type: "Covered (15+)", price: "€55.00", status: "Sold Out" },
+                    { stand: "Stand D", type: "Covered (3-14 years)", price: "€30.00", status: "Sold Out" },
+                    { stand: "PRM & Attendant", type: "Day Ticket (1 Attendant Included)", price: "€59.00", status: "Sold Out" }
                   ].map((row, i) => (
-                    <tr key={i} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
-                      <td style={{ padding: "0.6rem 0.5rem", fontWeight: "700", color: "white" }}>{row.stand}</td>
-                      <td style={{ padding: "0.6rem 0.5rem", color: "var(--text-muted)" }}>{row.type}</td>
-                      <td style={{ padding: "0.6rem 0.5rem", color: "white", fontWeight: "700" }}>{row.price}</td>
-                      <td style={{ padding: "0.6rem 0.5rem", textAlign: "right", color: row.color, fontWeight: "800" }}>{row.status}</td>
+                    <tr key={i} style={{ borderBottom: "1px solid var(--border-color)", background: i % 2 === 0 ? "rgba(0,0,0,0.02)" : "transparent" }}>
+                      <td style={{ padding: "0.8rem 0.6rem", fontWeight: "700", color: "var(--text-main)" }}>{row.stand}</td>
+                      <td style={{ padding: "0.8rem 0.6rem", color: "var(--text-muted)", fontWeight: "500" }}>{row.type}</td>
+                      <td style={{ padding: "0.8rem 0.6rem", color: "#c00030", fontWeight: "800" }}>{row.price}</td>
+                      <td style={{ padding: "0.8rem 0.6rem", textAlign: "right" }}>
+                        <span style={{
+                          display: "inline-block",
+                          padding: "0.25rem 0.75rem",
+                          borderRadius: "9999px",
+                          fontSize: "0.8rem",
+                          fontWeight: "800",
+                          textTransform: "uppercase",
+                          letterSpacing: "0.05em",
+                          background: row.status === "Available" ? "rgba(34,197,94,0.1)" : row.status === "Coming Soon" ? "rgba(14,165,233,0.1)" : "rgba(239,68,68,0.1)",
+                          color: row.status === "Available" ? "#16a34a" : row.status === "Coming Soon" ? "#0284c7" : "#dc2626",
+                          border: row.status === "Available" ? "1px solid rgba(34,197,94,0.2)" : row.status === "Coming Soon" ? "1px solid rgba(14,165,233,0.2)" : "1px solid rgba(239,68,68,0.2)"
+                        }}>
+                          {row.status}
+                        </span>
+                      </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-            <div style={{ marginTop: "1rem", background: "rgba(239,68,68,0.05)", border: "1px solid rgba(239,68,68,0.2)", borderRadius: "8px", padding: "0.75rem", fontSize: "0.85rem", color: "#fca5a5" }}>
+            <div style={{ marginTop: "1rem", background: "rgba(239,68,68,0.05)", border: "1px solid rgba(239,68,68,0.2)", borderRadius: "8px", padding: "0.8rem 1rem", fontSize: "0.85rem", color: "#ef4444", lineHeight: "1.6" }}>
               💡 <strong>Note on Child Admission & PMR (Grand Final):</strong> Children up to 3 years old have free entry when accompanied by a ticket-holding adult (must sit on lap). Children from 3 to 14 years old require a ticket but get a reduced rate in Stand C & D. PRM visitors get accessible seating in tribune B with 1 attendant free ticket included.
             </div>
           </div>
