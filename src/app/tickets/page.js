@@ -51,7 +51,7 @@ export default function TicketsPage() {
     },
     {
       question: "What are the ticket price categories for the group stage and final?",
-      answer: "Standard group stage tickets start at €25 for general standing areas and €45 for premium covered seats. Prices scale for the knockout stages, with Quarter-final tickets starting at €60 and the Grand Final tickets ranging from €90 to €150 depending on category seating."
+      answer: "Standard group stage tickets start at €19 for children and €32 to €36 for general admission, while premium covered grandstand seats range from €45 to €50. For the knockout stages, Semi-final tickets start at €41 up to €61, and Grand Final tickets range from €30 (reduced kids rate) to €70 for covered tribune seating."
     }
   ];
 
@@ -605,7 +605,7 @@ export default function TicketsPage() {
             6. Belfius Hockey Arena (Wavre) Matchday Parking Guide
           </h2>
           <div style={{ background: "rgba(239,68,68,0.03)", border: "1px solid rgba(239,68,68,0.15)", borderRadius: "16px", padding: "1.5rem", marginBottom: "2rem" }}>
-            <h3 style={{ color: "white", fontSize: "1.1rem", fontWeight: "700", marginTop: 0 }}>⚠️ Critical Traffic Rule: No Stadium Parking</h3>
+            <h3 style={{ color: "#dc2626", fontSize: "1.1rem", fontWeight: "700", marginTop: 0 }}>⚠️ Critical Traffic Rule: No Stadium Parking</h3>
             <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", margin: 0 }}>
               There is <strong>no parking space available around the Belfius Hockey Arena</strong> in Wavre. The entire zone surrounding the stadium is completely traffic-free during matches and is restricted strictly to residents and service/emergency vehicles.
             </p>
@@ -644,7 +644,7 @@ export default function TicketsPage() {
 
             {/* PRM Parking */}
             <div style={{ background: "var(--bg-secondary)", borderRadius: "12px", padding: "1.2rem", border: "1px solid var(--border-color)" }}>
-              <h4 style={{ color: "white", margin: "0 0 0.8rem 0", fontSize: "1.05rem", fontWeight: "700" }}>
+              <h4 style={{ color: "var(--text-main)", margin: "0 0 0.8rem 0", fontSize: "1.05rem", fontWeight: "700" }}>
                 ♿ Reduced Mobility (PRM / PMR)
               </h4>
               <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: "0 0 1rem 0" }}>Special accessible parking is available at the southern car park:</p>
@@ -659,7 +659,7 @@ export default function TicketsPage() {
           </div>
 
           <div style={{ background: "var(--bg-tertiary)", border: "1px solid var(--border-color)", borderRadius: "12px", padding: "1.2rem" }}>
-            <h4 style={{ color: "white", margin: "0 0 0.5rem 0", fontSize: "1rem", fontWeight: "700" }}>📍 Navigation and Shuttle Operations:</h4>
+            <h4 style={{ color: "var(--text-main)", margin: "0 0 0.5rem 0", fontSize: "1rem", fontWeight: "700" }}>📍 Navigation and Shuttle Operations:</h4>
             <ol style={{ color: "var(--text-muted)", paddingLeft: "1.2rem", margin: 0, fontSize: "0.95rem" }}>
               <li style={{ marginBottom: "0.5rem" }}>Use <strong>Waze or Google Maps</strong> for routing and strictly follow on-site road signs and steward instructions.</li>
               <li style={{ marginBottom: "0.5rem" }}>Board the <strong>free shuttle service</strong> running continuously between the public car park and the stadium entrance (return trip included upon presenting your parking ticket).</li>
