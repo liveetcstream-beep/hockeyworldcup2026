@@ -4,28 +4,28 @@ import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
-  title: "FIH Hockey World Cup Winners List (1971 - 2026 History)",
-  description: "Complete list of past Hockey World Cup winners, runners-up, host countries, and title counts. Find records for Pakistan, Netherlands, India, and Germany.",
+  title: "Hockey World Cup Winners List: All-Time Past Champions (1971-2026)",
+  description: "Who has won the most Hockey World Cups? Explore the complete all-time Hockey World Cup winners list, host countries, runners-up, and year-by-year tournament history.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/history",
   },
   openGraph: {
-    title: "FIH Hockey World Cup Winners List (1971 - 2026 History)",
-    description: "Complete list of past Hockey World Cup winners, runners-up, host countries, and title counts. Find records for Pakistan, Netherlands, India, and Germany.",
+    title: "Hockey World Cup Winners List: All-Time Past Champions (1971-2026)",
+    description: "Who has won the most Hockey World Cups? Explore the complete all-time Hockey World Cup winners list, host countries, runners-up, and year-by-year tournament history.",
     url: "https://hockeyworldcup2026schedule.com/history",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "FIH Hockey World Cup Winners List (1971 - 2026 History)",
+        alt: "Hockey World Cup Winners List: All-Time Past Champions (1971-2026)",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "FIH Hockey World Cup Winners List (1971 - 2026 History)",
-    description: "Complete list of past Hockey World Cup winners, runners-up, host countries, and title counts. Find records for Pakistan, Netherlands, India, and Germany.",
+    title: "Hockey World Cup Winners List: All-Time Past Champions (1971-2026)",
+    description: "Who has won the most Hockey World Cups? Explore the complete all-time Hockey World Cup winners list, host countries, runners-up, and year-by-year tournament history.",
     images: ["/og-image.jpg"],
   },
 };

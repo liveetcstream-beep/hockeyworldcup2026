@@ -5,28 +5,28 @@ import ScheduleClient from "./ScheduleClient";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Full Schedule: Match Timetable PDF",
-  description: "Download the complete 100-match Hockey World Cup 2026 schedule PDF. Access the full tournament timetable, group fixtures, and local match timings.",
+  title: "Hockey World Cup 2026 Full Schedule: Fixtures & PDF Download",
+  description: "Official FIH Hockey World Cup 2026 schedule. Access the complete match calendar, pool fixtures, kickoff times, and download the full PDF timetable.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/schedule",
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Full Schedule: Match Timetable PDF",
-    description: "Download the complete 100-match Hockey World Cup 2026 schedule PDF. Access the full tournament timetable, group fixtures, and local match timings.",
+    title: "Hockey World Cup 2026 Full Schedule: Fixtures & PDF Download",
+    description: "Official FIH Hockey World Cup 2026 schedule. Access the complete match calendar, pool fixtures, kickoff times, and download the full PDF timetable.",
     url: "https://hockeyworldcup2026schedule.com/schedule",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Hockey World Cup 2026 Full Schedule: Match Timetable PDF",
+        alt: "Hockey World Cup 2026 Full Schedule: Fixtures & PDF Download",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Full Schedule: Match Timetable PDF",
-    description: "Download the complete 100-match Hockey World Cup 2026 schedule PDF. Access the full tournament timetable, group fixtures, and local match timings.",
+    title: "Hockey World Cup 2026 Full Schedule: Fixtures & PDF Download",
+    description: "Official FIH Hockey World Cup 2026 schedule. Access the complete match calendar, pool fixtures, kickoff times, and download the full PDF timetable.",
     images: ["/og-image.jpg"],
   },
 };
