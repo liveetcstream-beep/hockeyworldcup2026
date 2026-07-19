@@ -427,9 +427,9 @@ export default function TicketsPage() {
                 style={{ width: "100%", borderRadius: "12px", border: "1px solid var(--border-color)", marginBottom: "1rem" }}
               />
               <ul style={{ color: "var(--text-muted)", paddingLeft: "1.2rem", fontSize: "0.95rem" }}>
-                <li><strong>VVIP Enclosures:</strong> Premium executive lounge boxes with private terrace access.</li>
-                <li><strong>VIP Enclosures:</strong> Mid-tier stands on the east and west touchlines.</li>
-                <li><strong>General Enclosures:</strong> Open-air stands on the northern curves.</li>
+                <li><strong>Covered Seating (Dark Red):</strong> Located at the back/upper levels of Stand A (sectors A1-A5), Stand B (sectors B1-B5), Stand C, and Stand D.</li>
+                <li><strong>Uncovered Seating (Pink):</strong> Located at the front/lower levels of Stand A (except sector A3), Stand B (sectors B1-B5), Stand C, and Stand D.</li>
+                <li><strong>Accessible Seating (PMR / WCA):</strong> Dedicated wheelchair spaces located directly in front of Stand B (sectors B1/B2 and B4/B5) with accompanying seats.</li>
               </ul>
             </div>
           </div>
