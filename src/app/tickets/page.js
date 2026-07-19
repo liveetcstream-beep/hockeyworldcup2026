@@ -141,7 +141,8 @@ export default function TicketsPage() {
             <li><a href="#online-booking" style={{ color: "#38bdf8", textDecoration: "none" }}>3. How to Book Tickets Online: Step-by-Step</a></li>
             <li><a href="#refund-policy" style={{ color: "#38bdf8", textDecoration: "none" }}>4. Ticket Refund Rules & Policies</a></li>
             <li><a href="#enclosures" style={{ color: "#38bdf8", textDecoration: "none" }}>5. Stadium Enclosures & Seating Maps</a></li>
-            <li><a href="#faqs" style={{ color: "#38bdf8", textDecoration: "none" }}>6. Frequently Asked Questions (FAQs)</a></li>
+            <li><a href="#parking-guide" style={{ color: "#38bdf8", textDecoration: "none" }}>6. Belfius Hockey Arena (Wavre) Parking Guide</a></li>
+            <li><a href="#faqs" style={{ color: "#38bdf8", textDecoration: "none" }}>7. Frequently Asked Questions (FAQs)</a></li>
           </ul>
         </section>
 
@@ -189,6 +190,134 @@ export default function TicketsPage() {
                 ))}
               </tbody>
             </table>
+          </div>
+
+          <h3 style={{ fontSize: "1.2rem", fontWeight: "700", color: "white", marginTop: "2.5rem", marginBottom: "1rem" }}>🇧🇪 Belfius Hockey Arena (Wavre) Detailed Matchday Tickets</h3>
+          <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem", fontSize: "0.95rem", lineHeight: "1.7" }}>
+            Official matchday ticketing options, pricing tiers, and real-time seat availability for the tournament rounds hosted in Wavre:
+          </p>
+
+          {/* Semi-Finals Table - Aug 27 */}
+          <div style={{ background: "var(--bg-tertiary)", borderRadius: "16px", padding: "1.5rem", border: "1px solid var(--border-color)", marginBottom: "2rem", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
+            <h4 style={{ color: "white", margin: "0 0 1rem 0", fontSize: "1.1rem", fontWeight: "800", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              📅 Thursday, August 27th — Semi-Finals (Belfius Arena, Wavre)
+            </h4>
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.9rem" }}>
+                <thead>
+                  <tr style={{ borderBottom: "2px solid var(--border-color)", color: "var(--text-muted)", textAlign: "left" }}>
+                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Stand & Category</th>
+                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Type</th>
+                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Price</th>
+                    <th style={{ padding: "0.6rem 0.5rem", textAlign: "right", fontWeight: "700" }}>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { stand: "Stand A (A1)", type: "Covered (All Ages)", price: "€61.00", status: "Available", color: "#22c55e" },
+                    { stand: "Stand A (A2)", type: "Non-Covered (All Ages)", price: "€56.00", status: "Available", color: "#22c55e" },
+                    { stand: "Stand B (B1)", type: "Covered (All Ages)", price: "€61.00", status: "Coming Soon", color: "#38bdf8" },
+                    { stand: "Stand B (B1)", type: "Non-Covered (All Ages)", price: "€50.00", status: "Available", color: "#22c55e" },
+                    { stand: "Stand C", type: "Covered (15+)", price: "€45.00", status: "Available", color: "#22c55e" },
+                    { stand: "Stand C", type: "Covered (3-14 years)", price: "€26.00", status: "Available", color: "#22c55e" },
+                    { stand: "Stand D", type: "Covered (15+)", price: "€45.00", status: "Available", color: "#22c55e" },
+                    { stand: "Stand D", type: "Covered (3-14 years)", price: "€26.00", status: "Available", color: "#22c55e" },
+                    { stand: "PRM & Attendant", type: "Day Ticket (1 Attendant Included)", price: "€50.00", status: "Available", color: "#22c55e" }
+                  ].map((row, i) => (
+                    <tr key={i} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                      <td style={{ padding: "0.6rem 0.5rem", fontWeight: "700", color: "white" }}>{row.stand}</td>
+                      <td style={{ padding: "0.6rem 0.5rem", color: "var(--text-muted)" }}>{row.type}</td>
+                      <td style={{ padding: "0.6rem 0.5rem", color: "white", fontWeight: "700" }}>{row.price}</td>
+                      <td style={{ padding: "0.6rem 0.5rem", textAlign: "right", color: row.color, fontWeight: "800" }}>{row.status}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div style={{ marginTop: "1rem", background: "rgba(2,132,199,0.05)", border: "1px solid rgba(2,132,199,0.2)", borderRadius: "8px", padding: "0.75rem", fontSize: "0.85rem", color: "#38bdf8" }}>
+              💡 <strong>Note on Child Admission & PMR (Aug 27):</strong> Children up to 3 years old have free entry when accompanied by a ticket-holding adult (must sit on lap). Children from 3 to 14 years old require a ticket but get a reduced rate in Stand C & D. PRM visitors get accessible seating in tribune B with 1 attendant free ticket included.
+            </div>
+          </div>
+
+          {/* Semi-Finals Table - Aug 28 */}
+          <div style={{ background: "var(--bg-tertiary)", borderRadius: "16px", padding: "1.5rem", border: "1px solid var(--border-color)", marginBottom: "2rem", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
+            <h4 style={{ color: "white", margin: "0 0 1rem 0", fontSize: "1.1rem", fontWeight: "800", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              📅 Friday, August 28th — Semi-Finals (Belfius Arena, Wavre)
+            </h4>
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.9rem" }}>
+                <thead>
+                  <tr style={{ borderBottom: "2px solid var(--border-color)", color: "var(--text-muted)", textAlign: "left" }}>
+                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Stand & Category</th>
+                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Type</th>
+                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Price</th>
+                    <th style={{ padding: "0.6rem 0.5rem", textAlign: "right", fontWeight: "700" }}>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { stand: "Stand A (A1)", type: "Covered (All Ages)", price: "€61.00", status: "Coming Soon", color: "#38bdf8" },
+                    { stand: "Stand A (A1)", type: "Non-Covered (All Ages)", price: "€53.00", status: "Sold Out", color: "#ef4444" },
+                    { stand: "Stand B (B1)", type: "Covered (All Ages)", price: "€61.00", status: "Coming Soon", color: "#38bdf8" },
+                    { stand: "Stand B (B1)", type: "Non-Covered (All Ages)", price: "€50.00", status: "Sold Out", color: "#ef4444" },
+                    { stand: "Stand C", type: "Non-Covered (15+)", price: "€41.00", status: "Available", color: "#22c55e" },
+                    { stand: "Stand C", type: "Non-Covered (3-14 years)", price: "€26.00", status: "Available", color: "#22c55e" },
+                    { stand: "Stand D", type: "Non-Covered (15+)", price: "€41.00", status: "Available", color: "#22c55e" },
+                    { stand: "Stand D", type: "Non-Covered (3-14 years)", price: "€26.00", status: "Available", color: "#22c55e" },
+                    { stand: "PRM & Attendant", type: "Day Ticket (1 Attendant Included)", price: "€50.00", status: "Available", color: "#22c55e" }
+                  ].map((row, i) => (
+                    <tr key={i} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                      <td style={{ padding: "0.6rem 0.5rem", fontWeight: "700", color: "white" }}>{row.stand}</td>
+                      <td style={{ padding: "0.6rem 0.5rem", color: "var(--text-muted)" }}>{row.type}</td>
+                      <td style={{ padding: "0.6rem 0.5rem", color: "white", fontWeight: "700" }}>{row.price}</td>
+                      <td style={{ padding: "0.6rem 0.5rem", textAlign: "right", color: row.color, fontWeight: "800" }}>{row.status}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          {/* Finals Table */}
+          <div style={{ background: "var(--bg-tertiary)", borderRadius: "16px", padding: "1.5rem", border: "1px solid var(--border-color)", marginBottom: "2rem", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
+            <h4 style={{ color: "white", margin: "0 0 1rem 0", fontSize: "1.1rem", fontWeight: "800", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+              🏆 Sunday, August 30th — Grand Final (Belfius Arena, Wavre)
+            </h4>
+            <div style={{ overflowX: "auto" }}>
+              <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.9rem" }}>
+                <thead>
+                  <tr style={{ borderBottom: "2px solid var(--border-color)", color: "var(--text-muted)", textAlign: "left" }}>
+                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Stand & Category</th>
+                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Type</th>
+                    <th style={{ padding: "0.6rem 0.5rem", fontWeight: "700" }}>Price</th>
+                    <th style={{ padding: "0.6rem 0.5rem", textAlign: "right", fontWeight: "700" }}>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { stand: "Stand A (A1)", type: "Covered (All Ages)", price: "€70.00", status: "Sold Out", color: "#ef4444" },
+                    { stand: "Stand A (A1)", type: "Non-Covered (All Ages)", price: "€62.00", status: "Sold Out", color: "#ef4444" },
+                    { stand: "Stand B (B1)", type: "Covered (All Ages)", price: "€70.00", status: "Sold Out", color: "#ef4444" },
+                    { stand: "Stand B (B1)", type: "Non-Covered (All Ages)", price: "€59.00", status: "Sold Out", color: "#ef4444" },
+                    { stand: "Stand C", type: "Covered (15+)", price: "€55.00", status: "Sold Out", color: "#ef4444" },
+                    { stand: "Stand C", type: "Covered (3-14 years)", price: "€30.00", status: "Sold Out", color: "#ef4444" },
+                    { stand: "Stand D", type: "Covered (15+)", price: "€55.00", status: "Sold Out", color: "#ef4444" },
+                    { stand: "Stand D", type: "Covered (3-14 years)", price: "€30.00", status: "Sold Out", color: "#ef4444" },
+                    { stand: "PRM & Attendant", type: "Day Ticket (1 Attendant Included)", price: "€59.00", status: "Sold Out", color: "#ef4444" }
+                  ].map((row, i) => (
+                    <tr key={i} style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                      <td style={{ padding: "0.6rem 0.5rem", fontWeight: "700", color: "white" }}>{row.stand}</td>
+                      <td style={{ padding: "0.6rem 0.5rem", color: "var(--text-muted)" }}>{row.type}</td>
+                      <td style={{ padding: "0.6rem 0.5rem", color: "white", fontWeight: "700" }}>{row.price}</td>
+                      <td style={{ padding: "0.6rem 0.5rem", textAlign: "right", color: row.color, fontWeight: "800" }}>{row.status}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <div style={{ marginTop: "1rem", background: "rgba(239,68,68,0.05)", border: "1px solid rgba(239,68,68,0.2)", borderRadius: "8px", padding: "0.75rem", fontSize: "0.85rem", color: "#fca5a5" }}>
+              💡 <strong>Note on Child Admission & PMR (Grand Final):</strong> Children up to 3 years old have free entry when accompanied by a ticket-holding adult (must sit on lap). Children from 3 to 14 years old require a ticket but get a reduced rate in Stand C & D. PRM visitors get accessible seating in tribune B with 1 attendant free ticket included.
+            </div>
           </div>
         </section>
 
@@ -306,11 +435,80 @@ export default function TicketsPage() {
           </div>
         </section>
 
-        {/* Section 6: FAQs */}
+        {/* Section 6: Wavre Parking Guide */}
+        <section id="parking-guide" style={{ marginBottom: "3rem", lineHeight: "1.8" }}>
+          <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
+            6. Belfius Hockey Arena (Wavre) Matchday Parking Guide
+          </h2>
+          <div style={{ background: "rgba(239,68,68,0.03)", border: "1px solid rgba(239,68,68,0.15)", borderRadius: "16px", padding: "1.5rem", marginBottom: "2rem" }}>
+            <h3 style={{ color: "white", fontSize: "1.1rem", fontWeight: "700", marginTop: 0 }}>⚠️ Critical Traffic Rule: No Stadium Parking</h3>
+            <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", margin: 0 }}>
+              There is <strong>no parking space available around the Belfius Hockey Arena</strong> in Wavre. The entire zone surrounding the stadium is completely traffic-free during matches and is restricted strictly to residents and service/emergency vehicles.
+            </p>
+          </div>
+
+          <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem" }}>
+            Spectators driving to the matches <strong>must book a parking ticket in advance</strong>. Parking is available by reservation only. All public car parks charge a flat rate of <strong>€15.00 per vehicle</strong> and include a <strong>free shuttle service</strong> to and from the stadium gates.
+          </p>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginBottom: "2rem" }}>
+            {/* Opening Day, Aug 27 & Finals Parking */}
+            <div style={{ background: "var(--bg-secondary)", borderRadius: "12px", padding: "1.2rem", border: "1px solid var(--border-color)" }}>
+              <h4 style={{ color: "white", margin: "0 0 0.8rem 0", fontSize: "1.05rem", fontWeight: "700" }}>
+                🚗 Sat Aug 15th, Thu Aug 27th & Sun Aug 30th
+              </h4>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: "0 0 1rem 0" }}>Two public car parks are open for reservation:</p>
+              <ul style={{ color: "var(--text-muted)", fontSize: "0.9rem", paddingLeft: "1.2rem", margin: 0 }}>
+                <li style={{ marginBottom: "0.5rem" }}><strong>Parking HOCKEY NORD:</strong> Rue de Wavre, 1300 Wavre (€15.00)</li>
+                <li><strong>Parking HOCKEY SUD:</strong> Boulevard de Wallonie, 1348 Louvain-la-Neuve (€15.00)</li>
+              </ul>
+            </div>
+
+            {/* Semi-Finals Parking */}
+            <div style={{ background: "var(--bg-secondary)", borderRadius: "12px", padding: "1.2rem", border: "1px solid var(--border-color)" }}>
+              <h4 style={{ color: "white", margin: "0 0 0.8rem 0", fontSize: "1.05rem", fontWeight: "700" }}>
+                🚗 Friday August 28th (Semi-Finals)
+              </h4>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: "0 0 1rem 0" }}>Only one public car park is open for reservation:</p>
+              <ul style={{ color: "var(--text-muted)", fontSize: "0.9rem", paddingLeft: "1.2rem", margin: 0 }}>
+                <li><strong>Parking HOCKEY NORD:</strong> Rue de Wavre, 1300 Wavre (€15.00)</li>
+              </ul>
+              <div style={{ marginTop: "1rem", background: "rgba(2,132,199,0.05)", padding: "0.5rem", borderRadius: "6px", fontSize: "0.8rem", color: "#38bdf8" }}>
+                💡 <em>Note: Parking Hockey Sud is NOT active on August 28th.</em>
+              </div>
+            </div>
+
+            {/* PRM Parking */}
+            <div style={{ background: "var(--bg-secondary)", borderRadius: "12px", padding: "1.2rem", border: "1px solid var(--border-color)" }}>
+              <h4 style={{ color: "white", margin: "0 0 0.8rem 0", fontSize: "1.05rem", fontWeight: "700" }}>
+                ♿ Reduced Mobility (PRM / PMR)
+              </h4>
+              <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: "0 0 1rem 0" }}>Special accessible parking is available at the southern car park:</p>
+              <ul style={{ color: "var(--text-muted)", fontSize: "0.9rem", paddingLeft: "1.2rem", margin: 0 }}>
+                <li style={{ marginBottom: "0.5rem" }}><strong>Parking HOCKEY SUD – PMR:</strong> Boulevard de Wallonie, 1348 Louvain-la-Neuve (€15.00)</li>
+                <li>Specialized transport organized by <strong>Mobilité BW</strong> (dedicated shuttle).</li>
+              </ul>
+              <div style={{ marginTop: "0.8rem", color: "#fca5a5", fontSize: "0.8rem", fontWeight: "600" }}>
+                ⚠️ Deadlines: PMR tickets must be booked at least 48 hours before the day of the event.
+              </div>
+            </div>
+          </div>
+
+          <div style={{ background: "var(--bg-tertiary)", border: "1px solid var(--border-color)", borderRadius: "12px", padding: "1.2rem" }}>
+            <h4 style={{ color: "white", margin: "0 0 0.5rem 0", fontSize: "1rem", fontWeight: "700" }}>📍 Navigation and Shuttle Operations:</h4>
+            <ol style={{ color: "var(--text-muted)", paddingLeft: "1.2rem", margin: 0, fontSize: "0.95rem" }}>
+              <li style={{ marginBottom: "0.5rem" }}>Use <strong>Waze or Google Maps</strong> for routing and strictly follow on-site road signs and steward instructions.</li>
+              <li style={{ marginBottom: "0.5rem" }}>Board the <strong>free shuttle service</strong> running continuously between the public car park and the stadium entrance (return trip included upon presenting your parking ticket).</li>
+              <li>If you are not coming by car, detailed public transport alternatives (train, regional buses) are available at the Wavre city transit pages.</li>
+            </ol>
+          </div>
+        </section>
+
+        {/* Section 7: FAQs */}
         <section id="faqs" style={{ marginBottom: "3rem" }}>
           <div className="section-title-wrap">
             <h2 style={{ fontSize: "1.6rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-              6. Frequently Asked Questions (FAQs)
+              7. Frequently Asked Questions (FAQs)
             </h2>
             <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem" }}>
               Everything you need to know about purchasing tickets and matchday entry rules.
