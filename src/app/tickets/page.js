@@ -103,6 +103,31 @@ export default function TicketsPage() {
               ⚡ Status: <strong>Official Ticketing Portal Open</strong>
             </div>
           </div>
+          <div style={{ marginTop: '2.5rem', display: 'flex', justifyContent: 'center' }}>
+            <a 
+              href="https://agenda.hockeyworldcup2026.be/3ee1be99906644478d600af215f44abd" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="cta-button primary-cta"
+              style={{
+                background: "linear-gradient(135deg, #c00030 0%, #e11d48 100%)",
+                color: "white",
+                fontWeight: "800",
+                padding: "1rem 2.5rem",
+                borderRadius: "9999px",
+                textDecoration: "none",
+                fontSize: "1.15rem",
+                boxShadow: "0 6px 20px rgba(192, 0, 48, 0.4)",
+                transition: "transform 0.2s ease, box-shadow 0.2s ease",
+                border: "1px solid rgba(255,255,255,0.1)",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.6rem"
+              }}
+            >
+              🎟️ Buy Official Tickets Online
+            </a>
+          </div>
         </div>
       </section>
 
@@ -199,6 +224,31 @@ export default function TicketsPage() {
             <li style={{ marginBottom: "0.8rem" }}>Enter required details: <strong>Full Name, Mobile Number, Address, and Government ID/Passport Number</strong> (mandatory for security validation).</li>
             <li>Complete payment using major credit cards, PayPal, Bancontact (Belgium), or iDEAL (Netherlands).</li>
           </ul>
+          <div style={{ marginTop: '1.5rem', display: 'flex', justifyContent: 'flex-start' }}>
+            <a 
+              href="https://agenda.hockeyworldcup2026.be/3ee1be99906644478d600af215f44abd" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="cta-button primary-cta"
+              style={{
+                background: "linear-gradient(135deg, #0284c7 0%, #0369a1 100%)",
+                color: "white",
+                fontWeight: "800",
+                padding: "0.8rem 2rem",
+                borderRadius: "9999px",
+                textDecoration: "none",
+                fontSize: "1rem",
+                boxShadow: "0 4px 15px rgba(2, 132, 199, 0.3)",
+                transition: "all 0.2s ease",
+                border: "1px solid rgba(255,255,255,0.1)",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "0.5rem"
+              }}
+            >
+              🎟️ Proceed to Official Booking Site
+            </a>
+          </div>
         </section>
 
         {/* Section 4: Refund Policy */}
