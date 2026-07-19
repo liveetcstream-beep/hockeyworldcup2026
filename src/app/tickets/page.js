@@ -55,6 +55,69 @@ export default function TicketsPage() {
     }
   ];
 
+  const groupStage2Days = [
+    {
+      date: "Friday, August 21st — Group Stage 2 (Belfius Arena, Wavre)",
+      tickets: [
+        { stand: "Stand A (A1)", type: "Covered (All Ages)", price: "€46.00", status: "Sold Out" },
+        { stand: "Stand A (A1)", type: "Non-Covered (All Ages)", price: "€38.00", status: "Sold Out" },
+        { stand: "Stand B (B1)", type: "Covered (All Ages)", price: "€46.00", status: "Available" },
+        { stand: "Stand B (B1)", type: "Non-Covered (All Ages)", price: "€35.00", status: "Sold Out" },
+        { stand: "Stand C", type: "Covered (15+)", price: "€32.00", status: "Available" },
+        { stand: "Stand C", type: "Covered (3-14 years)", price: "€19.00", status: "Available" },
+        { stand: "Stand D", type: "Covered (15+)", price: "€32.00", status: "Available" },
+        { stand: "Stand D", type: "Covered (3-14 years)", price: "€19.00", status: "Available" },
+        { stand: "PRM & Attendant", type: "Day Ticket (1 Attendant Included)", price: "€35.00", status: "Available" }
+      ],
+      note: "Children up to 3 years old have free entry when accompanied by a ticket-holding adult (must sit on lap). Children from 3 to 14 years old get a reduced rate in Stand C & D. PRM visitors get accessible seating in tribune B with 1 attendant free ticket included."
+    },
+    {
+      date: "Saturday, August 22nd — Group Stage 2 (Belfius Arena, Wavre)",
+      tickets: [
+        { stand: "Stand A (A1)", type: "Covered (All Ages)", price: "€50.00", status: "Available" },
+        { stand: "Stand A (A5)", type: "Non-Covered (All Ages)", price: "€42.00", status: "Available" },
+        { stand: "Stand B (B1)", type: "Covered (All Ages)", price: "€50.00", status: "Available" },
+        { stand: "Stand B (B2)", type: "Non-Covered (All Ages)", price: "€42.00", status: "Available" },
+        { stand: "Stand C", type: "Covered (15+)", price: "€36.00", status: "Available" },
+        { stand: "Stand C", type: "Covered (3-14 years)", price: "€22.00", status: "Available" },
+        { stand: "Stand D", type: "Covered (15+)", price: "€36.00", status: "Available" },
+        { stand: "Stand D", type: "Covered (3-14 years)", price: "€22.00", status: "Available" },
+        { stand: "PRM & Attendant", type: "Day Ticket (1 Attendant Included)", price: "€39.00", status: "Available" }
+      ],
+      note: "Children up to 3 years old have free entry when accompanied by a ticket-holding adult (must sit on lap). Children from 3 to 14 years old get a reduced rate in Stand C & D. PRM visitors get accessible seating in tribune B with 1 attendant free ticket included."
+    },
+    {
+      date: "Sunday, August 23rd — Group Stage 2 (Belfius Arena, Wavre)",
+      tickets: [
+        { stand: "Stand A (A1)", type: "Covered (All Ages)", price: "€50.00", status: "Sold Out" },
+        { stand: "Stand A (A1)", type: "Non-Covered (All Ages)", price: "€42.00", status: "Sold Out" },
+        { stand: "Stand B (B1)", type: "Covered (All Ages)", price: "€50.00", status: "Coming Soon" },
+        { stand: "Stand B (B1)", type: "Non-Covered (All Ages)", price: "€39.00", status: "Sold Out" },
+        { stand: "Stand C", type: "Covered (15+)", price: "€36.00", status: "Sold Out" },
+        { stand: "Stand C", type: "Covered (3-14 years)", price: "€22.00", status: "Sold Out" },
+        { stand: "Stand D", type: "Covered (15+)", price: "€36.00", status: "Sold Out" },
+        { stand: "Stand D", type: "Covered (3-14 years)", price: "€22.00", status: "Sold Out" },
+        { stand: "PRM & Attendant", type: "Day Ticket (1 Attendant Included)", price: "€39.00", status: "Available" }
+      ],
+      note: "Children up to 3 years old have free entry when accompanied by a ticket-holding adult (must sit on lap). Children from 3 to 14 years old get a reduced rate in Stand C & D. PRM visitors get accessible seating in tribune B with 1 attendant free ticket included."
+    },
+    {
+      date: "Monday, August 24th — Group Stage 2 (Belfius Arena, Wavre)",
+      tickets: [
+        { stand: "Stand A (A2)", type: "Covered (All Ages)", price: "€49.00", status: "Available" },
+        { stand: "Stand A (A1)", type: "Non-Covered (All Ages)", price: "€38.00", status: "Available" },
+        { stand: "Stand B (B1)", type: "Covered (All Ages)", price: "€46.00", status: "Available" },
+        { stand: "Stand B (B1)", type: "Non-Covered (All Ages)", price: "€35.00", status: "Available" },
+        { stand: "Stand C", type: "Covered (15+)", price: "€32.00", status: "Available" },
+        { stand: "Stand C", type: "Covered (3-14 years)", price: "€19.00", status: "Available" },
+        { stand: "Stand D", type: "Covered (15+)", price: "€32.00", status: "Available" },
+        { stand: "Stand D", type: "Covered (3-14 years)", price: "€19.00", status: "Available" },
+        { stand: "PRM & Attendant", type: "Day Ticket (1 Attendant Included)", price: "€35.00", status: "Available" }
+      ],
+      note: "Children up to 3 years old have free entry when accompanied by a ticket-holding adult (must sit on lap). Children from 3 to 14 years old get a reduced rate in Stand C & D. PRM visitors get accessible seating in tribune B with 1 attendant free ticket included."
+    }
+  ];
+
   return (
     <>
       <script
@@ -196,6 +259,62 @@ export default function TicketsPage() {
           <p style={{ color: "var(--text-muted)", marginBottom: "1.5rem", fontSize: "0.95rem", lineHeight: "1.7" }}>
             Official matchday ticketing options, pricing tiers, and real-time seat availability for the tournament rounds hosted in Wavre:
           </p>
+
+          <h4 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #0284c7", paddingLeft: "1rem", marginTop: "2rem", marginBottom: "1.5rem" }}>
+            ⚔️ Group Stage 2 Matchday Tickets (Aug 21 – 24)
+          </h4>
+
+          {groupStage2Days.map((day, dayIdx) => (
+            <div key={dayIdx} style={{ background: "var(--bg-secondary)", borderRadius: "16px", padding: "1.5rem", border: "1px solid var(--border-color)", marginBottom: "2rem", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
+              <h5 style={{ color: "var(--text-main)", margin: "0 0 1.2rem 0", fontSize: "1.1rem", fontWeight: "800", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                📅 {day.date}
+              </h5>
+              <div style={{ overflowX: "auto" }}>
+                <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.95rem" }}>
+                  <thead>
+                    <tr style={{ borderBottom: "2px solid var(--border-color)", textAlign: "left" }}>
+                      <th style={{ padding: "0.8rem 0.6rem", color: "var(--text-main)", fontWeight: "800" }}>Stand & Category</th>
+                      <th style={{ padding: "0.8rem 0.6rem", color: "var(--text-main)", fontWeight: "800" }}>Type</th>
+                      <th style={{ padding: "0.8rem 0.6rem", color: "var(--text-main)", fontWeight: "800" }}>Price</th>
+                      <th style={{ padding: "0.8rem 0.6rem", textAlign: "right", color: "var(--text-main)", fontWeight: "800" }}>Status</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {day.tickets.map((row, i) => (
+                      <tr key={i} style={{ borderBottom: "1px solid var(--border-color)", background: i % 2 === 0 ? "rgba(0,0,0,0.02)" : "transparent" }}>
+                        <td style={{ padding: "0.8rem 0.6rem", fontWeight: "700", color: "var(--text-main)" }}>{row.stand}</td>
+                        <td style={{ padding: "0.8rem 0.6rem", color: "var(--text-muted)", fontWeight: "500" }}>{row.type}</td>
+                        <td style={{ padding: "0.8rem 0.6rem", color: "#c00030", fontWeight: "800" }}>{row.price}</td>
+                        <td style={{ padding: "0.8rem 0.6rem", textAlign: "right" }}>
+                          <span style={{
+                            display: "inline-block",
+                            padding: "0.25rem 0.75rem",
+                            borderRadius: "9999px",
+                            fontSize: "0.8rem",
+                            fontWeight: "800",
+                            textTransform: "uppercase",
+                            letterSpacing: "0.05em",
+                            background: row.status === "Available" ? "rgba(34,197,94,0.1)" : row.status === "Coming Soon" ? "rgba(14,165,233,0.1)" : "rgba(239,68,68,0.1)",
+                            color: row.status === "Available" ? "#16a34a" : row.status === "Coming Soon" ? "#0284c7" : "#dc2626",
+                            border: row.status === "Available" ? "1px solid rgba(34,197,94,0.2)" : row.status === "Coming Soon" ? "1px solid rgba(14,165,233,0.2)" : "1px solid rgba(239,68,68,0.2)"
+                          }}>
+                            {row.status}
+                          </span>
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+              <div style={{ marginTop: "1.2rem", background: "rgba(2,132,199,0.05)", border: "1px solid rgba(2,132,199,0.2)", borderRadius: "8px", padding: "0.8rem 1rem", fontSize: "0.85rem", color: "var(--text-muted)", lineHeight: "1.6" }}>
+                💡 <strong>Note on Child Admission & PMR:</strong> {day.note}
+              </div>
+            </div>
+          ))}
+
+          <h4 style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", borderLeft: "4px solid #c00030", paddingLeft: "1rem", marginTop: "3rem", marginBottom: "1.5rem" }}>
+            🏆 Knockout Stage: Semi-Finals & Finals (Aug 27 – 30)
+          </h4>
 
           {/* Semi-Finals Table - Aug 27 */}
           <div style={{ background: "var(--bg-secondary)", borderRadius: "16px", padding: "1.5rem", border: "1px solid var(--border-color)", marginBottom: "2rem", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
@@ -497,10 +616,10 @@ export default function TicketsPage() {
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.5rem", marginBottom: "2rem" }}>
-            {/* Opening Day, Aug 27 & Finals Parking */}
+            {/* Opening Day, Aug 21-24, Aug 27 & Finals Parking */}
             <div style={{ background: "var(--bg-secondary)", borderRadius: "12px", padding: "1.2rem", border: "1px solid var(--border-color)" }}>
-              <h4 style={{ color: "white", margin: "0 0 0.8rem 0", fontSize: "1.05rem", fontWeight: "700" }}>
-                🚗 Sat Aug 15th, Thu Aug 27th & Sun Aug 30th
+              <h4 style={{ color: "var(--text-main)", margin: "0 0 0.8rem 0", fontSize: "1.05rem", fontWeight: "700" }}>
+                🚗 Sat Aug 15th, Aug 21st–24th, Thu Aug 27th & Sun Aug 30th
               </h4>
               <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: "0 0 1rem 0" }}>Two public car parks are open for reservation:</p>
               <ul style={{ color: "var(--text-muted)", fontSize: "0.9rem", paddingLeft: "1.2rem", margin: 0 }}>
@@ -511,7 +630,7 @@ export default function TicketsPage() {
 
             {/* Semi-Finals Parking */}
             <div style={{ background: "var(--bg-secondary)", borderRadius: "12px", padding: "1.2rem", border: "1px solid var(--border-color)" }}>
-              <h4 style={{ color: "white", margin: "0 0 0.8rem 0", fontSize: "1.05rem", fontWeight: "700" }}>
+              <h4 style={{ color: "var(--text-main)", margin: "0 0 0.8rem 0", fontSize: "1.05rem", fontWeight: "700" }}>
                 🚗 Friday August 28th (Semi-Finals)
               </h4>
               <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", margin: "0 0 1rem 0" }}>Only one public car park is open for reservation:</p>
