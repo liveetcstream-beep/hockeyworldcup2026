@@ -1563,12 +1563,16 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Responsive visibility utilities to hide columns on mobile/tablet and fit table horizontally */
 @media (max-width: 650px) {
+  .sports-table th.hide-mobile,
+  .sports-table td.hide-mobile,
   .hide-mobile {
     display: none !important;
   }
 }
 
 @media (max-width: 991px) {
+  .sports-table th.hide-tablet,
+  .sports-table td.hide-tablet,
   .hide-tablet {
     display: none !important;
   }
