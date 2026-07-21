@@ -1442,27 +1442,25 @@ h1, h2, h3, h4, h5, h6 {
   }
   
   .sports-table th {
-    padding: 0.5rem 0.3rem;
-    font-size: 0.72rem;
+    padding: 0.8rem 0.75rem;
+    font-size: 0.88rem;
   }
   
   .sports-table td {
-    padding: 0.5rem 0.3rem;
-    font-size: 0.72rem;
+    padding: 0.8rem 0.75rem;
+    font-size: 0.88rem;
   }
   
   .sports-table img {
-    width: 14px !important;
-    height: 10px !important;
-    margin-right: 4px !important;
+    width: 20px !important;
+    height: 14px !important;
+    margin-right: 6px !important;
     display: inline-block;
     vertical-align: middle;
   }
   
   .sports-table th, .sports-table td {
-    white-space: normal !important;
-    word-break: normal !important;
-    overflow-wrap: break-word !important;
+    white-space: nowrap !important;
   }
 
   /* Don't break columns like Year and Score */
@@ -1476,13 +1474,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 480px) {
   .sports-table th {
-    padding: 0.4rem 0.25rem;
-    font-size: 0.65rem;
+    padding: 0.75rem 0.6rem;
+    font-size: 0.85rem;
   }
   
   .sports-table td {
-    padding: 0.4rem 0.25rem;
-    font-size: 0.65rem;
+    padding: 0.75rem 0.6rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -2790,5 +2788,23 @@ h1, h2, h3, h4, h5, h6 {
     display: none !important;
   }
 }
+
+/* Responsive text display utility classes */
+.show-desktop-inline {
+  display: inline !important;
+}
+.show-mobile-inline {
+  display: none !important;
+}
+
+@media (max-width: 650px) {
+  .show-desktop-inline {
+    display: none !important;
+  }
+  .show-mobile-inline {
+    display: inline !important;
+  }
+}
+
 
 

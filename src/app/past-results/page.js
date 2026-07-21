@@ -105,7 +105,10 @@ export default function PastResultsPage() {
                   <td><strong>1st</strong></td>
                   <td>
                     <img src="https://flagcdn.com/w40/de.png" width="20" height="14" alt="Germany flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
-                    <strong>Germany</strong>
+                    <strong>
+                      <span className="show-desktop-inline">Germany</span>
+                      <span className="show-mobile-inline">GER</span>
+                    </strong>
                   </td>
                   <td className="hide-mobile">Pool B</td>
                   <td className="hide-mobile">7</td>
@@ -117,7 +120,10 @@ export default function PastResultsPage() {
                   <td><strong>2nd</strong></td>
                   <td>
                     <img src="https://flagcdn.com/w40/be.png" width="20" height="14" alt="Belgium flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
-                    <strong>Belgium</strong>
+                    <strong>
+                      <span className="show-desktop-inline">Belgium</span>
+                      <span className="show-mobile-inline">BEL</span>
+                    </strong>
                   </td>
                   <td className="hide-mobile">Pool B</td>
                   <td className="hide-mobile">7</td>
@@ -129,7 +135,10 @@ export default function PastResultsPage() {
                   <td><strong>3rd</strong></td>
                   <td>
                     <img src="https://flagcdn.com/w40/nl.png" width="20" height="14" alt="Netherlands flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
-                    <strong>Netherlands</strong>
+                    <strong>
+                      <span className="show-desktop-inline">Netherlands</span>
+                      <span className="show-mobile-inline">NED</span>
+                    </strong>
                   </td>
                   <td className="hide-mobile">Pool C</td>
                   <td className="hide-mobile">7</td>
@@ -141,7 +150,10 @@ export default function PastResultsPage() {
                   <td><strong>4th</strong></td>
                   <td>
                     <img src="https://flagcdn.com/w40/au.png" width="20" height="14" alt="Australia flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
-                    <strong>Australia</strong>
+                    <strong>
+                      <span className="show-desktop-inline">Australia</span>
+                      <span className="show-mobile-inline">AUS</span>
+                    </strong>
                   </td>
                   <td className="hide-mobile">Pool A</td>
                   <td className="hide-mobile">7</td>
@@ -153,7 +165,10 @@ export default function PastResultsPage() {
                   <td><strong>5th</strong></td>
                   <td>
                     <img src="https://flagcdn.com/w40/gb-eng.png" width="20" height="14" alt="England flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
-                    <strong>England</strong>
+                    <strong>
+                      <span className="show-desktop-inline">England</span>
+                      <span className="show-mobile-inline">ENG</span>
+                    </strong>
                   </td>
                   <td className="hide-mobile">Pool D</td>
                   <td className="hide-mobile">5</td>
@@ -165,7 +180,10 @@ export default function PastResultsPage() {
                   <td><strong>9th</strong></td>
                   <td>
                     <img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="India flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
-                    <strong>India</strong>
+                    <strong>
+                      <span className="show-desktop-inline">India</span>
+                      <span className="show-mobile-inline">IND</span>
+                    </strong>
                   </td>
                   <td className="hide-mobile">Pool D</td>
                   <td className="hide-mobile">6</td>

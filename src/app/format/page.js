@@ -129,34 +129,57 @@ export default function FormatPage() {
                   <th>Match Code</th>
                   <th>Matchup Formula</th>
                   <th>Winner Progression</th>
-                  <th>Loser Status</th>
-
+                  <th className="hide-mobile">Loser Status</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong>Crossover 1</strong></td>
-                  <td>2nd Place Pool A vs 3rd Place Pool B</td>
-                  <td>Advances to Quarterfinal 1 (vs Winner Pool C)</td>
-                  <td>Moves to 9th-16th Classification</td>
+                  <td><strong><span className="show-desktop-inline">Crossover 1</span><span className="show-mobile-inline">Cross 1</span></strong></td>
+                  <td>
+                    <span className="show-desktop-inline">2nd Place Pool A vs 3rd Place Pool B</span>
+                    <span className="show-mobile-inline">2A vs 3B</span>
+                  </td>
+                  <td>
+                    <span className="show-desktop-inline">Advances to Quarterfinal 1 (vs Winner Pool C)</span>
+                    <span className="show-mobile-inline">To QF1 (vs Pool C Winner)</span>
+                  </td>
+                  <td className="hide-mobile">Moves to 9th-16th Classification</td>
                 </tr>
                 <tr>
-                  <td><strong>Crossover 2</strong></td>
-                  <td>2nd Place Pool B vs 3rd Place Pool A</td>
-                  <td>Advances to Quarterfinal 2 (vs Winner Pool D)</td>
-                  <td>Moves to 9th-16th Classification</td>
+                  <td><strong><span className="show-desktop-inline">Crossover 2</span><span className="show-mobile-inline">Cross 2</span></strong></td>
+                  <td>
+                    <span className="show-desktop-inline">2nd Place Pool B vs 3rd Place Pool A</span>
+                    <span className="show-mobile-inline">2B vs 3A</span>
+                  </td>
+                  <td>
+                    <span className="show-desktop-inline">Advances to Quarterfinal 2 (vs Winner Pool D)</span>
+                    <span className="show-mobile-inline">To QF2 (vs Pool D Winner)</span>
+                  </td>
+                  <td className="hide-mobile">Moves to 9th-16th Classification</td>
                 </tr>
                 <tr>
-                  <td><strong>Crossover 3</strong></td>
-                  <td>2nd Place Pool C vs 3rd Place Pool D</td>
-                  <td>Advances to Quarterfinal 3 (vs Winner Pool A)</td>
-                  <td>Moves to 9th-16th Classification</td>
+                  <td><strong><span className="show-desktop-inline">Crossover 3</span><span className="show-mobile-inline">Cross 3</span></strong></td>
+                  <td>
+                    <span className="show-desktop-inline">2nd Place Pool C vs 3rd Place Pool D</span>
+                    <span className="show-mobile-inline">2C vs 3D</span>
+                  </td>
+                  <td>
+                    <span className="show-desktop-inline">Advances to Quarterfinal 3 (vs Winner Pool A)</span>
+                    <span className="show-mobile-inline">To QF3 (vs Pool A Winner)</span>
+                  </td>
+                  <td className="hide-mobile">Moves to 9th-16th Classification</td>
                 </tr>
                 <tr>
-                  <td><strong>Crossover 4</strong></td>
-                  <td>2nd Place Pool D vs 3rd Place Pool C</td>
-                  <td>Advances to Quarterfinal 4 (vs Winner Pool B)</td>
-                  <td>Moves to 9th-16th Classification</td>
+                  <td><strong><span className="show-desktop-inline">Crossover 4</span><span className="show-mobile-inline">Cross 4</span></strong></td>
+                  <td>
+                    <span className="show-desktop-inline">2nd Place Pool D vs 3rd Place Pool C</span>
+                    <span className="show-mobile-inline">2D vs 3C</span>
+                  </td>
+                  <td>
+                    <span className="show-desktop-inline">Advances to Quarterfinal 4 (vs Winner Pool B)</span>
+                    <span className="show-mobile-inline">To QF4 (vs Pool B Winner)</span>
+                  </td>
+                  <td className="hide-mobile">Moves to 9th-16th Classification</td>
                 </tr>
               </tbody>
             </table>

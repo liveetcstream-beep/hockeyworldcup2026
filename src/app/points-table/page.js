@@ -8,54 +8,54 @@ import FaqAccordion from "../components/FaqAccordion";
 const standingsData = {
   Men: {
     "Pool A": [
-      { name: "NETHERLANDS", flag: "nl" },
-      { name: "ARGENTINA", flag: "ar" },
-      { name: "NEW ZEALAND", flag: "nz" },
-      { name: "CHILE", flag: "cl" }
+      { name: "NETHERLANDS", code: "NED", flag: "nl" },
+      { name: "ARGENTINA", code: "ARG", flag: "ar" },
+      { name: "NEW ZEALAND", code: "NZL", flag: "nz" },
+      { name: "CHILE", code: "CHI", flag: "cl" }
     ],
     "Pool B": [
-      { name: "GERMANY", flag: "de" },
-      { name: "BELGIUM", flag: "be" },
-      { name: "MALAYSIA", flag: "my" },
-      { name: "FRANCE", flag: "fr" }
+      { name: "GERMANY", code: "GER", flag: "de" },
+      { name: "BELGIUM", code: "BEL", flag: "be" },
+      { name: "MALAYSIA", code: "MAS", flag: "my" },
+      { name: "FRANCE", code: "FRA", flag: "fr" }
     ],
     "Pool C": [
-      { name: "AUSTRALIA", flag: "au" },
-      { name: "SPAIN", flag: "es" },
-      { name: "IRELAND", flag: "ie" },
-      { name: "SOUTH AFRICA", flag: "za" }
+      { name: "AUSTRALIA", code: "AUS", flag: "au" },
+      { name: "SPAIN", code: "ESP", flag: "es" },
+      { name: "IRELAND", code: "IRL", flag: "ie" },
+      { name: "SOUTH AFRICA", code: "RSA", flag: "za" }
     ],
     "Pool D": [
-      { name: "INDIA", flag: "in" },
-      { name: "ENGLAND", flag: "gb-eng" },
-      { name: "PAKISTAN", flag: "pk" },
-      { name: "WALES", flag: "gb-wls" }
+      { name: "INDIA", code: "IND", flag: "in" },
+      { name: "ENGLAND", code: "ENG", flag: "gb-eng" },
+      { name: "PAKISTAN", code: "PAK", flag: "pk" },
+      { name: "WALES", code: "WAL", flag: "gb-wls" }
     ]
   },
   Women: {
     "Pool A": [
-      { name: "NETHERLANDS", flag: "nl" },
-      { name: "AUSTRALIA", flag: "au" },
-      { name: "JAPAN", flag: "jp" },
-      { name: "CHILE", flag: "cl" }
+      { name: "NETHERLANDS", code: "NED", flag: "nl" },
+      { name: "AUSTRALIA", code: "AUS", flag: "au" },
+      { name: "JAPAN", code: "JPN", flag: "jp" },
+      { name: "CHILE", code: "CHI", flag: "cl" }
     ],
     "Pool B": [
-      { name: "ARGENTINA", flag: "ar" },
-      { name: "GERMANY", flag: "de" },
-      { name: "UNITED STATES", flag: "us" },
-      { name: "SCOTLAND", flag: "gb-sct" }
+      { name: "ARGENTINA", code: "ARG", flag: "ar" },
+      { name: "GERMANY", code: "GER", flag: "de" },
+      { name: "UNITED STATES", code: "USA", flag: "us" },
+      { name: "SCOTLAND", code: "SCO", flag: "gb-sct" }
     ],
     "Pool C": [
-      { name: "BELGIUM", flag: "be" },
-      { name: "SPAIN", flag: "es" },
-      { name: "NEW ZEALAND", flag: "nz" },
-      { name: "FRANCE", flag: "fr" }
+      { name: "BELGIUM", code: "BEL", flag: "be" },
+      { name: "SPAIN", code: "ESP", flag: "es" },
+      { name: "NEW ZEALAND", code: "NZL", flag: "nz" },
+      { name: "FRANCE", code: "FRA", flag: "fr" }
     ],
     "Pool D": [
-      { name: "CHINA", flag: "cn" },
-      { name: "INDIA", flag: "in" },
-      { name: "ENGLAND", flag: "gb-eng" },
-      { name: "SOUTH AFRICA", flag: "za" }
+      { name: "CHINA", code: "CHN", flag: "cn" },
+      { name: "INDIA", code: "IND", flag: "in" },
+      { name: "ENGLAND", code: "ENG", flag: "gb-eng" },
+      { name: "SOUTH AFRICA", code: "RSA", flag: "za" }
     ]
   }
 };
@@ -208,7 +208,7 @@ export default function PointsTablePage() {
                   <th>P</th>
                   <th>W</th>
                   <th className="hide-mobile">D</th>
-                  <th>L</th>
+                  <th className="hide-mobile">L</th>
                   <th className="hide-tablet">ScF</th>
                   <th className="hide-tablet">ScA</th>
                   <th className="hide-mobile">PDiff</th>
@@ -222,12 +222,13 @@ export default function PointsTablePage() {
                     <td><strong>{idx + 1}</strong></td>
                     <td style={{ display: "flex", alignItems: "center", gap: "0.8rem", fontWeight: "700" }}>
                       <img src={`https://flagcdn.com/w40/${team.flag}.png`} width="24" height="16" alt={`${team.name} flag`} style={{ borderRadius: "2px", border: "1px solid rgba(0,0,0,0.06)" }} />
-                      {team.name}
+                      <span className="show-desktop-inline">{team.name}</span>
+                      <span className="show-mobile-inline">{team.code}</span>
                     </td>
                     <td>0</td>
                     <td>0</td>
                     <td className="hide-mobile">0</td>
-                    <td>0</td>
+                    <td className="hide-mobile">0</td>
                     <td className="hide-tablet">0</td>
                     <td className="hide-tablet">0</td>
                     <td className="hide-mobile">0</td>
