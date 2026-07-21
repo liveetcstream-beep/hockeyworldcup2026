@@ -2810,5 +2810,15 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@media (max-width: 650px) {
+  /* H2H target page tables: reduce padding and font size slightly to fit mobile width */
+  .h2h-table-container th,
+  .h2h-table-container td {
+    padding: 0.6rem 0.4rem !important;
+    font-size: 0.82rem !important;
+  }
+}
+
+
 
 
