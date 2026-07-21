@@ -2712,3 +2712,56 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
 }
 
+/* --- RICH ARTICLE CONTENT TABLES STYLING --- */
+.rich-article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  font-size: 0.95rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.rich-article-content th {
+  background: var(--bg-tertiary);
+  color: var(--text-main);
+  font-weight: 800;
+  padding: 1rem 1.2rem;
+  text-align: left;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.rich-article-content td {
+  padding: 1rem 1.2rem;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--border-color);
+  line-height: 1.6;
+}
+
+.rich-article-content tr:last-child td {
+  border-bottom: none;
+}
+
+.rich-article-content tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.02);
+}
+
+.rich-article-content tr:hover {
+  background: rgba(192, 0, 48, 0.03);
+}
+
+/* Ensure mobile tables scroll instead of squishing columns */
+@media (max-width: 768px) {
+  .rich-article-content table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+    border-radius: 8px;
+  }
+}
+
