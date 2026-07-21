@@ -135,39 +135,39 @@ export default function H2HPage() {
                   <td data-label="Date">Sep 14, 2024</td>
                   <td data-label="Tournament">Asian Champions Trophy</td>
                   <td data-label="Venue">Hulunbuir, China</td>
-                  <td data-label="Result (Score)">India 2 – 1 Pakistan</td>
-                  <td data-label="Outcome">🇮🇳 India Win</td>
+                  <td data-label="Result (Score)">IND 2 – 1 PAK</td>
+                  <td data-label="Outcome">🇮🇳 IND Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">2</td>
                   <td data-label="Date">Sep 30, 2023</td>
                   <td data-label="Tournament">Asian Games Group Stage</td>
                   <td data-label="Venue">Hangzhou, China</td>
-                  <td data-label="Result (Score)">India 10 – 2 Pakistan</td>
-                  <td data-label="Outcome">🇮🇳 India Win</td>
+                  <td data-label="Result (Score)">IND 10 – 2 PAK</td>
+                  <td data-label="Outcome">🇮🇳 IND Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">3</td>
                   <td data-label="Date">Aug 9, 2023</td>
                   <td data-label="Tournament">Asian Champions Trophy</td>
                   <td data-label="Venue">Chennai, India</td>
-                  <td data-label="Result (Score)">India 4 – 0 Pakistan</td>
-                  <td data-label="Outcome">🇮🇳 India Win</td>
+                  <td data-label="Result (Score)">IND 4 – 0 PAK</td>
+                  <td data-label="Outcome">🇮🇳 IND Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">4</td>
                   <td data-label="Date">Jun 1, 2022</td>
                   <td data-label="Tournament">Asia Cup Super 4s</td>
                   <td data-label="Venue">Jakarta, Indonesia</td>
-                  <td data-label="Result (Score)">India 2 – 1 Pakistan</td>
-                  <td data-label="Outcome">🇮🇳 India Win</td>
+                  <td data-label="Result (Score)">IND 2 – 1 PAK</td>
+                  <td data-label="Outcome">🇮🇳 IND Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">5</td>
                   <td data-label="Date">May 23, 2022</td>
                   <td data-label="Tournament">Asia Cup Pool Stage</td>
                   <td data-label="Venue">Jakarta, Indonesia</td>
-                  <td data-label="Result (Score)">India 1 – 1 Pakistan</td>
+                  <td data-label="Result (Score)">IND 1 – 1 PAK</td>
                   <td data-label="Outcome">🤝 Draw</td>
                 </tr>
                 <tr>
@@ -175,23 +175,23 @@ export default function H2HPage() {
                   <td data-label="Date">Dec 22, 2021</td>
                   <td data-label="Tournament">Asian Champions Trophy (Bronze)</td>
                   <td data-label="Venue">Dhaka, Bangladesh</td>
-                  <td data-label="Result (Score)">India 4 – 3 Pakistan</td>
-                  <td data-label="Outcome">🇮🇳 India Win</td>
+                  <td data-label="Result (Score)">IND 4 – 3 PAK</td>
+                  <td data-label="Outcome">🇮🇳 IND Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">7</td>
                   <td data-label="Date">Dec 17, 2021</td>
                   <td data-label="Tournament">Asian Champions Trophy Pool Stage</td>
                   <td data-label="Venue">Dhaka, Bangladesh</td>
-                  <td data-label="Result (Score)">India 3 – 1 Pakistan</td>
-                  <td data-label="Outcome">🇮🇳 India Win</td>
+                  <td data-label="Result (Score)">IND 3 – 1 PAK</td>
+                  <td data-label="Outcome">🇮🇳 IND Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">8</td>
                   <td data-label="Date">Oct 28, 2018</td>
                   <td data-label="Tournament">Asian Champions Trophy Final</td>
                   <td data-label="Venue">Muscat, Oman</td>
-                  <td data-label="Result (Score)">India 0 – 0 Pakistan (Abandoned)</td>
+                  <td data-label="Result (Score)">IND 0 – 0 PAK (Abandoned)</td>
                   <td data-label="Outcome">🏆 Joint Winners</td>
                 </tr>
                 <tr>
@@ -199,16 +199,16 @@ export default function H2HPage() {
                   <td data-label="Date">Oct 20, 2018</td>
                   <td data-label="Tournament">Asian Champions Trophy Pool Stage</td>
                   <td data-label="Venue">Muscat, Oman</td>
-                  <td data-label="Result (Score)">India 3 – 1 Pakistan</td>
-                  <td data-label="Outcome">🇮🇳 India Win</td>
+                  <td data-label="Result (Score)">IND 3 – 1 PAK</td>
+                  <td data-label="Outcome">🇮🇳 IND Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">10</td>
                   <td data-label="Date">Sep 1, 2018</td>
                   <td data-label="Tournament">Asian Games (Bronze Medal)</td>
                   <td data-label="Venue">Jakarta, Indonesia</td>
-                  <td data-label="Result (Score)">India 2 – 1 Pakistan</td>
-                  <td data-label="Outcome">🇮🇳 India Win</td>
+                  <td data-label="Result (Score)">IND 2 – 1 PAK</td>
+                  <td data-label="Outcome">🇮🇳 IND Win</td>
                 </tr>
               </tbody>
             </table>
@@ -229,7 +229,7 @@ export default function H2HPage() {
             fontSize: "0.95rem"
           }}>
             <span>📊 Last 10 Encounters Summary:</span>
-            <span style={{ color: "#d97706", fontWeight: "800" }}>India 7 – 0 Pakistan (3 Draws / Joint Title)</span>
+            <span style={{ color: "#d97706", fontWeight: "800" }}>IND 7 – 0 PAK (3 Draws / Joint Title)</span>
           </div>
 
           <p className="text-xs mt-4 italic" style={{ lineHeight: "1.9", color: "var(--text-muted)", fontSize: "0.9rem", fontFamily: "var(--font-body)" }}>
@@ -269,7 +269,7 @@ export default function H2HPage() {
                   <td data-label="Date">June 24, 2024</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Utrecht, Netherlands</td>
-                  <td data-label="Result (Score)">Netherlands 1 – 1 Germany</td>
+                  <td data-label="Result (Score)">NED 1 – 1 GER</td>
                   <td data-label="Outcome">🤝 Draw (1-3 Pen DE)</td>
                 </tr>
                 <tr>
@@ -277,15 +277,15 @@ export default function H2HPage() {
                   <td data-label="Date">June 23, 2024</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Utrecht, Netherlands</td>
-                  <td data-label="Result (Score)">Netherlands 3 – 2 Germany</td>
-                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                  <td data-label="Result (Score)">NED 3 – 2 GER</td>
+                  <td data-label="Outcome">🇳🇱 NED Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">3</td>
                   <td data-label="Date">June 20, 2023</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Amsterdam, Netherlands</td>
-                  <td data-label="Result (Score)">Netherlands 2 – 2 Germany</td>
+                  <td data-label="Result (Score)">NED 2 – 2 GER</td>
                   <td data-label="Outcome">🤝 Draw (1-4 Pen DE)</td>
                 </tr>
                 <tr>
@@ -293,47 +293,47 @@ export default function H2HPage() {
                   <td data-label="Date">June 16, 2023</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Amsterdam, Netherlands</td>
-                  <td data-label="Result (Score)">Netherlands 4 – 1 Germany</td>
-                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                  <td data-label="Result (Score)">NED 4 – 1 GER</td>
+                  <td data-label="Outcome">🇳🇱 NED Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">5</td>
                   <td data-label="Date">Jan 27, 2023</td>
                   <td data-label="Tournament">FIH Men's World Cup</td>
                   <td data-label="Venue">Bhubaneswar, India</td>
-                  <td data-label="Result (Score)">Germany 4 – 3 Netherlands</td>
-                  <td data-label="Outcome">🇩🇪 Germany Win</td>
+                  <td data-label="Result (Score)">GER 4 – 3 NED</td>
+                  <td data-label="Outcome">🇩🇪 GER Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">6</td>
                   <td data-label="Date">June 12, 2022</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Hamburg, Germany</td>
-                  <td data-label="Result (Score)">Netherlands 3 – 2 Germany</td>
-                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                  <td data-label="Result (Score)">NED 3 – 2 GER</td>
+                  <td data-label="Outcome">🇳🇱 NED Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">7</td>
                   <td data-label="Date">June 11, 2022</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Hamburg, Germany</td>
-                  <td data-label="Result (Score)">Netherlands 2 – 1 Germany</td>
-                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                  <td data-label="Result (Score)">NED 2 – 1 GER</td>
+                  <td data-label="Outcome">🇳🇱 NED Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">8</td>
                   <td data-label="Date">July 30, 2021</td>
                   <td data-label="Tournament">Olympic Games Tokyo</td>
                   <td data-label="Venue">Tokyo, Japan</td>
-                  <td data-label="Result (Score)">Germany 3 – 1 Netherlands</td>
-                  <td data-label="Outcome">🇩🇪 Germany Win</td>
+                  <td data-label="Result (Score)">GER 3 – 1 NED</td>
+                  <td data-label="Outcome">🇩🇪 GER Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">9</td>
                   <td data-label="Date">June 13, 2021</td>
                   <td data-label="Tournament">EuroHockey Final</td>
                   <td data-label="Venue">Amstelveen, Netherlands</td>
-                  <td data-label="Result (Score)">Germany 2 – 2 Netherlands</td>
+                  <td data-label="Result (Score)">GER 2 – 2 NED</td>
                   <td data-label="Outcome">🤝 Draw (1-4 Pen NL)</td>
                 </tr>
                 <tr>
@@ -341,7 +341,7 @@ export default function H2HPage() {
                   <td data-label="Date">June 4, 2021</td>
                   <td data-label="Tournament">EuroHockey Pool Stage</td>
                   <td data-label="Venue">Amstelveen, Netherlands</td>
-                  <td data-label="Result (Score)">Germany 2 – 2 Netherlands</td>
+                  <td data-label="Result (Score)">GER 2 – 2 NED</td>
                   <td data-label="Outcome">🤝 Draw (3-0 Pen DE)</td>
                 </tr>
               </tbody>
@@ -363,7 +363,7 @@ export default function H2HPage() {
             fontSize: "0.95rem"
           }}>
             <span>📊 Last 10 Encounters Summary:</span>
-            <span style={{ color: "#0284c7", fontWeight: "800" }}>Netherlands 4 – 2 Germany (4 Draws)</span>
+            <span style={{ color: "#0284c7", fontWeight: "800" }}>NED 4 – 2 GER (4 Draws)</span>
           </div>
 
           <p className="text-xs mt-4 italic" style={{ lineHeight: "1.9", color: "var(--text-muted)", fontSize: "0.9rem", fontFamily: "var(--font-body)" }}>
@@ -403,7 +403,7 @@ export default function H2HPage() {
                   <td data-label="Date">May 26, 2024</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Antwerp, Belgium</td>
-                  <td data-label="Result (Score)">Belgium 2 – 2 Australia</td>
+                  <td data-label="Result (Score)">BEL 2 – 2 AUS</td>
                   <td data-label="Outcome">🤝 Draw (5-3 Pen BE)</td>
                 </tr>
                 <tr>
@@ -411,39 +411,39 @@ export default function H2HPage() {
                   <td data-label="Date">June 2, 2024</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">London, UK</td>
-                  <td data-label="Result (Score)">Belgium 1 – 4 Australia</td>
-                  <td data-label="Outcome">🇦🇺 Australia Win</td>
+                  <td data-label="Result (Score)">BEL 1 – 4 AUS</td>
+                  <td data-label="Outcome">🇦🇺 AUS Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">3</td>
                   <td data-label="Date">June 18, 2023</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Antwerp, Belgium</td>
-                  <td data-label="Result (Score)">Belgium 1 – 3 Australia</td>
-                  <td data-label="Outcome">🇦🇺 Australia Win</td>
+                  <td data-label="Result (Score)">BEL 1 – 3 AUS</td>
+                  <td data-label="Outcome">🇦🇺 AUS Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">4</td>
                   <td data-label="Date">June 16, 2023</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Antwerp, Belgium</td>
-                  <td data-label="Result (Score)">Belgium 2 – 1 Australia</td>
-                  <td data-label="Outcome">🇧🇪 Belgium Win</td>
+                  <td data-label="Result (Score)">BEL 2 – 1 AUS</td>
+                  <td data-label="Outcome">🇧🇪 BEL Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">5</td>
                   <td data-label="Date">Jan 24, 2023</td>
                   <td data-label="Tournament">FIH Men's World Cup</td>
                   <td data-label="Venue">Bhubaneswar, India</td>
-                  <td data-label="Result (Score)">Belgium 2 – 0 Australia</td>
-                  <td data-label="Outcome">🇧🇪 Belgium Win</td>
+                  <td data-label="Result (Score)">BEL 2 – 0 AUS</td>
+                  <td data-label="Outcome">🇧🇪 BEL Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">6</td>
                   <td data-label="Date">June 26, 2022</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Terrassa, Spain</td>
-                  <td data-label="Result (Score)">Belgium 3 – 3 Australia</td>
+                  <td data-label="Result (Score)">BEL 3 – 3 AUS</td>
                   <td data-label="Outcome">🤝 Draw (1-3 Pen AU)</td>
                 </tr>
                 <tr>
@@ -451,15 +451,15 @@ export default function H2HPage() {
                   <td data-label="Date">June 25, 2022</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Terrassa, Spain</td>
-                  <td data-label="Result (Score)">Belgium 2 – 4 Australia</td>
-                  <td data-label="Outcome">🇦🇺 Australia Win</td>
+                  <td data-label="Result (Score)">BEL 2 – 4 AUS</td>
+                  <td data-label="Outcome">🇦🇺 AUS Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">8</td>
                   <td data-label="Date">Aug 5, 2021</td>
                   <td data-label="Tournament">Olympic Games Tokyo Final</td>
                   <td data-label="Venue">Tokyo, Japan</td>
-                  <td data-label="Result (Score)">Belgium 1 – 1 Australia</td>
+                  <td data-label="Result (Score)">BEL 1 – 1 AUS</td>
                   <td data-label="Outcome">🤝 Draw (3-2 Pen BE)</td>
                 </tr>
                 <tr>
@@ -467,16 +467,16 @@ export default function H2HPage() {
                   <td data-label="Date">June 15, 2019</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Antwerp, Belgium</td>
-                  <td data-label="Result (Score)">Australia 2 – 0 Belgium</td>
-                  <td data-label="Outcome">🇦🇺 Australia Win</td>
+                  <td data-label="Result (Score)">AUS 2 – 0 BEL</td>
+                  <td data-label="Outcome">🇦🇺 AUS Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">10</td>
                   <td data-label="Date">Feb 3, 2018</td>
                   <td data-label="Tournament">Test Match</td>
                   <td data-label="Venue">Melbourne, Australia</td>
-                  <td data-label="Result (Score)">Australia 3 – 2 Belgium</td>
-                  <td data-label="Outcome">🇦🇺 Australia Win</td>
+                  <td data-label="Result (Score)">AUS 3 – 2 BEL</td>
+                  <td data-label="Outcome">🇦🇺 AUS Win</td>
                 </tr>
               </tbody>
             </table>
@@ -497,7 +497,7 @@ export default function H2HPage() {
             fontSize: "0.95rem"
           }}>
             <span>📊 Last 10 Encounters Summary:</span>
-            <span style={{ color: "#16a34a", fontWeight: "800" }}>Australia 5 – 2 Belgium (3 Draws)</span>
+            <span style={{ color: "#16a34a", fontWeight: "800" }}>AUS 5 – 2 BEL (3 Draws)</span>
           </div>
 
           <p className="text-xs mt-4 italic" style={{ lineHeight: "1.9", color: "var(--text-muted)", fontSize: "0.9rem", fontFamily: "var(--font-body)" }}>
@@ -537,79 +537,79 @@ export default function H2HPage() {
                   <td data-label="Date">Aug 9, 2024</td>
                   <td data-label="Tournament">Olympic Games Paris (Semi-Final)</td>
                   <td data-label="Venue">Paris, France</td>
-                  <td data-label="Result (Score)">Netherlands 3 – 0 Argentina</td>
-                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                  <td data-label="Result (Score)">NED 3 – 0 ARG</td>
+                  <td data-label="Outcome">🇳🇱 NED Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">2</td>
                   <td data-label="Date">Dec 10, 2023</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Santiago del Estero, Argentina</td>
-                  <td data-label="Result (Score)">Netherlands 2 – 1 Argentina</td>
-                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                  <td data-label="Result (Score)">NED 2 – 1 ARG</td>
+                  <td data-label="Outcome">🇳🇱 NED Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">3</td>
                   <td data-label="Date">Dec 8, 2023</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Santiago del Estero, Argentina</td>
-                  <td data-label="Result (Score)">Netherlands 4 – 1 Argentina</td>
-                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                  <td data-label="Result (Score)">NED 4 – 1 ARG</td>
+                  <td data-label="Outcome">🇳🇱 NED Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">4</td>
                   <td data-label="Date">Jun 10, 2023</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Eindhoven, Netherlands</td>
-                  <td data-label="Result (Score)">Netherlands 7 – 2 Argentina</td>
-                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                  <td data-label="Result (Score)">NED 7 – 2 ARG</td>
+                  <td data-label="Outcome">🇳🇱 NED Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">5</td>
                   <td data-label="Date">Jun 9, 2023</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Eindhoven, Netherlands</td>
-                  <td data-label="Result (Score)">Netherlands 2 – 0 Argentina</td>
-                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                  <td data-label="Result (Score)">NED 2 – 0 ARG</td>
+                  <td data-label="Outcome">🇳🇱 NED Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">6</td>
                   <td data-label="Date">Jul 17, 2022</td>
                   <td data-label="Tournament">Women's World Cup Final</td>
                   <td data-label="Venue">Terrassa, Spain</td>
-                  <td data-label="Result (Score)">Netherlands 3 – 1 Argentina</td>
-                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                  <td data-label="Result (Score)">NED 3 – 1 ARG</td>
+                  <td data-label="Outcome">🇳🇱 NED Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">7</td>
                   <td data-label="Date">Aug 6, 2021</td>
                   <td data-label="Tournament">Olympic Games Tokyo Final</td>
                   <td data-label="Venue">Tokyo, Japan</td>
-                  <td data-label="Result (Score)">Netherlands 3 – 1 Argentina</td>
-                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                  <td data-label="Result (Score)">NED 3 – 1 ARG</td>
+                  <td data-label="Outcome">🇳🇱 NED Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">8</td>
                   <td data-label="Date">Feb 16, 2020</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Buenos Aires, Argentina</td>
-                  <td data-label="Result (Score)">Netherlands 0 – 2 Argentina</td>
-                  <td data-label="Outcome">🇦🇷 Argentina Win</td>
+                  <td data-label="Result (Score)">NED 0 – 2 ARG</td>
+                  <td data-label="Outcome">🇦🇷 ARG Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">9</td>
                   <td data-label="Date">Feb 15, 2020</td>
                   <td data-label="Tournament">FIH Pro League</td>
                   <td data-label="Venue">Buenos Aires, Argentina</td>
-                  <td data-label="Result (Score)">Netherlands 3 – 1 Argentina</td>
-                  <td data-label="Outcome">🇳🇱 Netherlands Win</td>
+                  <td data-label="Result (Score)">NED 3 – 1 ARG</td>
+                  <td data-label="Outcome">🇳🇱 NED Win</td>
                 </tr>
                 <tr>
                   <td data-label="No.">10</td>
                   <td data-label="Date">Jun 29, 2019</td>
                   <td data-label="Tournament">FIH Pro League Grand Final</td>
                   <td data-label="Venue">Amstelveen, Netherlands</td>
-                  <td data-label="Result (Score)">Netherlands 2 – 2 Argentina</td>
+                  <td data-label="Result (Score)">NED 2 – 2 ARG</td>
                   <td data-label="Outcome">🤝 Draw (4-3 Pen NL)</td>
                 </tr>
               </tbody>
@@ -631,7 +631,7 @@ export default function H2HPage() {
             fontSize: "0.95rem"
           }}>
             <span>📊 Last 10 Encounters Summary:</span>
-            <span style={{ color: "#e11d48", fontWeight: "800" }}>Netherlands 8 – 1 Argentina (1 Draw)</span>
+            <span style={{ color: "#e11d48", fontWeight: "800" }}>NED 8 – 1 ARG (1 Draw)</span>
           </div>
 
           <p className="text-xs mt-4 italic" style={{ lineHeight: "1.9", color: "var(--text-muted)", fontSize: "0.9rem", fontFamily: "var(--font-body)" }}>

@@ -1512,7 +1512,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
   /* Maintain table layout on mobile and tablets instead of converting to cards */
   .table-responsive {
-    overflow-x: visible !important;
+    overflow-x: auto !important;
     width: 100% !important;
     margin-bottom: 2rem;
   }
