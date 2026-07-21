@@ -117,7 +117,7 @@ export default function H2HPage() {
             </p>
           </div>
           
-          <div className="table-responsive">
+          <div className="table-responsive h2h-table-container">
             <table className="sports-table">
               <thead>
                 <tr>
@@ -251,7 +251,7 @@ export default function H2HPage() {
             </p>
           </div>
 
-          <div className="table-responsive">
+          <div className="table-responsive h2h-table-container">
             <table className="sports-table">
               <thead>
                 <tr>
@@ -385,7 +385,7 @@ export default function H2HPage() {
             </p>
           </div>
 
-          <div className="table-responsive">
+          <div className="table-responsive h2h-table-container">
             <table className="sports-table">
               <thead>
                 <tr>
@@ -519,7 +519,7 @@ export default function H2HPage() {
             </p>
           </div>
 
-          <div className="table-responsive">
+          <div className="table-responsive h2h-table-container">
             <table className="sports-table">
               <thead>
                 <tr>

@@ -207,13 +207,13 @@ export default function PointsTablePage() {
                   <th>COUNTRY</th>
                   <th>P</th>
                   <th>W</th>
-                  <th>D</th>
+                  <th className="hide-mobile">D</th>
                   <th>L</th>
-                  <th>ScF</th>
-                  <th>ScA</th>
-                  <th>PDiff</th>
+                  <th className="hide-tablet">ScF</th>
+                  <th className="hide-tablet">ScA</th>
+                  <th className="hide-mobile">PDiff</th>
                   <th>Pt</th>
-                  <th>RES</th>
+                  <th className="hide-tablet">RES</th>
                 </tr>
               </thead>
               <tbody>
@@ -226,13 +226,13 @@ export default function PointsTablePage() {
                     </td>
                     <td>0</td>
                     <td>0</td>
+                    <td className="hide-mobile">0</td>
                     <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
-                    <td>0</td>
+                    <td className="hide-tablet">0</td>
+                    <td className="hide-tablet">0</td>
+                    <td className="hide-mobile">0</td>
                     <td><strong>0</strong></td>
-                    <td style={{ color: "#94a3b8" }}>-</td>
+                    <td className="hide-tablet" style={{ color: "#94a3b8" }}>-</td>
                   </tr>
                 ))}
               </tbody>

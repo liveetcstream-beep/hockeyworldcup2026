@@ -1511,95 +1511,71 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-@media (max-width: 650px) {
-  /* Convert tables to cards on mobile to prevent squeezing and horizontal scroll */
+@media (max-width: 768px) {
+  /* Maintain table layout on mobile and tablets instead of converting to cards */
   .table-responsive {
-    background: transparent !important;
-    border: none !important;
     overflow-x: visible !important;
+    width: 100% !important;
     margin-bottom: 2rem;
   }
   
-  .sports-table, 
-  .sports-table thead, 
-  .sports-table tbody, 
-  .sports-table th, 
-  .sports-table td, 
-  .sports-table tr { 
-    display: block !important; 
+  .sports-table {
+    display: table !important;
     width: 100% !important;
   }
   
   .sports-table thead {
-    display: none !important; /* Hide header rows */
+    display: table-header-group !important;
+  }
+  
+  .sports-table tbody {
+    display: table-row-group !important;
   }
   
   .sports-table tr {
-    background: var(--bg-secondary);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    margin-bottom: 1.5rem;
-    padding: 1.2rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    display: table-row !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
   }
   
+  .sports-table th,
   .sports-table td {
-    border: none !important;
-    border-bottom: 1px dashed rgba(255, 255, 255, 0.05) !important;
-    padding: 0.8rem 0 !important;
-    font-size: 0.85rem !important;
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    text-align: right !important;
+    display: table-cell !important;
+    padding: 0.5rem 0.25rem !important;
+    font-size: 0.72rem !important;
+    text-align: left !important;
     white-space: normal !important;
   }
   
-  .sports-table td:last-child {
-    border-bottom: none !important;
-  }
-  
-  /* Insert label using data-label attribute */
   .sports-table td::before {
-    content: attr(data-label);
-    font-weight: 700;
-    color: var(--primary);
-    text-align: left;
-    margin-right: 1rem;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
+    display: none !important; /* Hide data-label pseudo contents */
   }
-  
-  /* Let text wrap naturally in the value side */
-  .sports-table td > span,
-  .sports-table td > strong,
-  .sports-table td > a,
-  .sports-table td > div {
-    max-width: 65% !important;
-    text-align: right !important;
-  }
-
-  /* Page-scoped overrides for tables without data-label attribute */
-  .history-table-container td:nth-of-type(1)::before { content: "Year" !important; }
-  .history-table-container td:nth-of-type(2)::before { content: "Host Country" !important; }
-  .history-table-container td:nth-of-type(3)::before { content: "Winner" !important; }
-  .history-table-container td:nth-of-type(4)::before { content: "Score" !important; }
-  .history-table-container td:nth-of-type(5)::before { content: "Runner-Up" !important; }
-
-  .results-table-container td:nth-of-type(1)::before { content: "Rank" !important; }
-  .results-table-container td:nth-of-type(2)::before { content: "Nation" !important; }
-  .results-table-container td:nth-of-type(3)::before { content: "Pool" !important; }
-  .results-table-container td:nth-of-type(4)::before { content: "Matches" !important; }
-  .results-table-container td:nth-of-type(5)::before { content: "Wins" !important; }
-  .results-table-container td:nth-of-type(6)::before { content: "Goal Diff" !important; }
-  .results-table-container td:nth-of-type(7)::before { content: "Standing" !important; }
-
-  .format-table-container td:nth-of-type(1)::before { content: "Match Code" !important; }
-  .format-table-container td:nth-of-type(2)::before { content: "Matchup" !important; }
-  .format-table-container td:nth-of-type(3)::before { content: "Winner" !important; }
-  .format-table-container td:nth-of-type(4)::before { content: "Loser Status" !important; }
 }
+
+@media (max-width: 480px) {
+  .sports-table th,
+  .sports-table td {
+    padding: 0.4rem 0.15rem !important;
+    font-size: 0.65rem !important;
+  }
+}
+
+/* Responsive visibility utilities to hide columns on mobile/tablet and fit table horizontally */
+@media (max-width: 650px) {
+  .hide-mobile {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .hide-tablet {
+    display: none !important;
+  }
+}
+
 
 .view-more-btn {
   display: inline-flex;
@@ -2764,4 +2740,38 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 8px;
   }
 }
+
+/* Page-scoped responsive table column adjustments without manual classes */
+@media (max-width: 650px) {
+  /* History page table: hide Host Country (2nd col) and Score (4th col) */
+  .history-table-container th:nth-child(2),
+  .history-table-container td:nth-child(2),
+  .history-table-container th:nth-child(4),
+  .history-table-container td:nth-child(4) {
+    display: none !important;
+  }
+
+  /* H2H pages tables: hide No. (1st col) and Tournament (3rd col) */
+  .h2h-table-container th:nth-child(1),
+  .h2h-table-container td:nth-child(1),
+  .h2h-table-container th:nth-child(3),
+  .h2h-table-container td:nth-child(3) {
+    display: none !important;
+  }
+
+  /* Format page table: hide Loser Status (4th col) on mobile */
+  .format-table-container th:nth-child(4),
+  .format-table-container td:nth-child(4) {
+    display: none !important;
+  }
+}
+
+@media (max-width: 991px) {
+  /* H2H pages tables: hide Venue (4th col) on mobile & tablets */
+  .h2h-table-container th:nth-child(4),
+  .h2h-table-container td:nth-child(4) {
+    display: none !important;
+  }
+}
+
 

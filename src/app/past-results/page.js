@@ -93,10 +93,10 @@ export default function PastResultsPage() {
                 <tr>
                   <th>Rank</th>
                   <th>Nation</th>
-                  <th>Pool</th>
-                  <th>Matches Played</th>
+                  <th className="hide-mobile">Pool</th>
+                  <th className="hide-mobile">Matches Played</th>
                   <th>Wins</th>
-                  <th>Goal Difference</th>
+                  <th className="hide-mobile">Goal Difference</th>
                   <th>Status</th>
                 </tr>
               </thead>
@@ -107,10 +107,10 @@ export default function PastResultsPage() {
                     <img src="https://flagcdn.com/w40/de.png" width="20" height="14" alt="Germany flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
                     <strong>Germany</strong>
                   </td>
-                  <td>Pool B</td>
-                  <td>7</td>
+                  <td className="hide-mobile">Pool B</td>
+                  <td className="hide-mobile">7</td>
                   <td>5</td>
-                  <td>+13</td>
+                  <td className="hide-mobile">+13</td>
                   <td>🏆 Champions</td>
                 </tr>
                 <tr>
@@ -119,10 +119,10 @@ export default function PastResultsPage() {
                     <img src="https://flagcdn.com/w40/be.png" width="20" height="14" alt="Belgium flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
                     <strong>Belgium</strong>
                   </td>
-                  <td>Pool B</td>
-                  <td>7</td>
+                  <td className="hide-mobile">Pool B</td>
+                  <td className="hide-mobile">7</td>
                   <td>4</td>
-                  <td>+16</td>
+                  <td className="hide-mobile">+16</td>
                   <td>🥈 Runners-Up</td>
                 </tr>
                 <tr>
@@ -131,10 +131,10 @@ export default function PastResultsPage() {
                     <img src="https://flagcdn.com/w40/nl.png" width="20" height="14" alt="Netherlands flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
                     <strong>Netherlands</strong>
                   </td>
-                  <td>Pool C</td>
-                  <td>7</td>
+                  <td className="hide-mobile">Pool C</td>
+                  <td className="hide-mobile">7</td>
                   <td>6</td>
-                  <td>+24</td>
+                  <td className="hide-mobile">+24</td>
                   <td>🥉 Third Place</td>
                 </tr>
                 <tr>
@@ -143,10 +143,10 @@ export default function PastResultsPage() {
                     <img src="https://flagcdn.com/w40/au.png" width="20" height="14" alt="Australia flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
                     <strong>Australia</strong>
                   </td>
-                  <td>Pool A</td>
-                  <td>7</td>
+                  <td className="hide-mobile">Pool A</td>
+                  <td className="hide-mobile">7</td>
                   <td>4</td>
-                  <td>+9</td>
+                  <td className="hide-mobile">+9</td>
                   <td>Semifinalist</td>
                 </tr>
                 <tr>
@@ -155,10 +155,10 @@ export default function PastResultsPage() {
                     <img src="https://flagcdn.com/w40/gb-eng.png" width="20" height="14" alt="England flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
                     <strong>England</strong>
                   </td>
-                  <td>Pool D</td>
-                  <td>5</td>
+                  <td className="hide-mobile">Pool D</td>
+                  <td className="hide-mobile">5</td>
                   <td>3</td>
-                  <td>+9</td>
+                  <td className="hide-mobile">+9</td>
                   <td>Quarterfinalist</td>
                 </tr>
                 <tr>
@@ -167,10 +167,10 @@ export default function PastResultsPage() {
                     <img src="https://flagcdn.com/w40/in.png" width="20" height="14" alt="India flag" style={{ borderRadius: "2px", marginRight: "8px", verticalAlign: "middle" }} />
                     <strong>India</strong>
                   </td>
-                  <td>Pool D</td>
-                  <td>6</td>
+                  <td className="hide-mobile">Pool D</td>
+                  <td className="hide-mobile">6</td>
                   <td>4</td>
-                  <td>+12</td>
+                  <td className="hide-mobile">+12</td>
                   <td>Classification Group</td>
                 </tr>
               </tbody>
