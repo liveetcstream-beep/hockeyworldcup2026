@@ -6,13 +6,13 @@ import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Full Schedule: Fixtures & PDF Download",
-  description: "Official FIH Hockey World Cup 2026 schedule. Access the complete match calendar, pool fixtures, kickoff times, and download the full PDF timetable.",
+  description: "Official FIH Hockey World Cup 2026 schedule. Access the complete match calendar, pool fixtures, kickoff times, and download the full PDF time table.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/schedule",
   },
   openGraph: {
     title: "Hockey World Cup 2026 Full Schedule: Fixtures & PDF Download",
-    description: "Official FIH Hockey World Cup 2026 schedule. Access the complete match calendar, pool fixtures, kickoff times, and download the full PDF timetable.",
+    description: "Official FIH Hockey World Cup 2026 schedule. Access the complete match calendar, pool fixtures, kickoff times, and download the full PDF time table.",
     url: "https://hockeyworldcup2026schedule.com/schedule",
     images: [
       {
@@ -26,7 +26,7 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Hockey World Cup 2026 Full Schedule: Fixtures & PDF Download",
-    description: "Official FIH Hockey World Cup 2026 schedule. Access the complete match calendar, pool fixtures, kickoff times, and download the full PDF timetable.",
+    description: "Official FIH Hockey World Cup 2026 schedule. Access the complete match calendar, pool fixtures, kickoff times, and download the full PDF time table.",
     images: ["/og-image.jpg"],
   },
 };
@@ -65,7 +65,7 @@ export default function SchedulePage() {
         <div className="sports-container hero-content">
           <p className="hero-subtitle">Official FIH Tournament Bracket & Fixtures</p>
           <h1 className="hero-title">
-            Hockey World Cup 2026 Full Match Schedule & Timetable
+            Hockey World Cup 2026 Full Match Schedule & Time Table
           </h1>
           <p className="hero-description">
             Get the complete, verified 100-match tournament schedule for the Men's and Women's FIH Hockey World Cups in Belgium & Netherlands. Filter by team, track USA time zones (EDT/ET), view group stages, and download the print-friendly PDF guide.

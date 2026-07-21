@@ -2416,13 +2416,13 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.85rem;
 }
 
-/* Mobile Search Styles (Dark Drawer Background) */
+/* Mobile Search Styles (Light Drawer Background Override) */
 .mobile-nav-overlay .search-form {
   position: relative;
   display: flex;
   align-items: center;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(15, 23, 42, 0.05);
+  border: 1px solid rgba(15, 23, 42, 0.12);
   border-radius: 8px;
   padding: 0.25rem 0.6rem;
   transition: border-color 0.3s ease, background 0.3s ease;
@@ -2430,27 +2430,27 @@ h1, h2, h3, h4, h5, h6 {
 
 .mobile-nav-overlay .search-form:focus-within {
   border-color: var(--primary);
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(15, 23, 42, 0.08);
 }
 
 .mobile-nav-overlay .search-input {
   background: transparent;
   border: none;
   outline: none;
-  color: #ffffff !important; /* White text for dark drawer! */
+  color: #0f172a !important; /* Dark text for light drawer! */
   font-size: 0.85rem;
   padding: 0.3rem 0.2rem;
 }
 
 .mobile-nav-overlay .search-input::placeholder {
-  color: #94a3b8 !important;
+  color: #64748b !important;
 }
 
 .mobile-nav-overlay .search-btn {
   background: transparent;
   border: none;
   cursor: pointer;
-  color: #ffffff;
+  color: #0f172a;
   font-size: 0.9rem;
 }
 
