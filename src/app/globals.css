@@ -1900,6 +1900,23 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-main) !important;
 }
 
+.mobile-nav-overlay .search-form {
+  background: var(--bg-secondary) !important;
+  border: 1px solid var(--border-color) !important;
+}
+
+.mobile-nav-overlay .search-input {
+  color: var(--text-main) !important;
+}
+
+.mobile-nav-overlay .search-input::placeholder {
+  color: var(--text-muted) !important;
+}
+
+.mobile-nav-overlay .search-btn {
+  color: var(--text-main) !important;
+}
+
 .mobile-nav-links a {
   color: var(--text-muted) !important;
   border-bottom: 1px solid rgba(15, 23, 42, 0.04) !important;
