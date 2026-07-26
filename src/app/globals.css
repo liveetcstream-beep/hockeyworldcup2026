@@ -2819,6 +2819,107 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Rich Article Content Typography & Spacing */
+.rich-article-content {
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+}
+
+.rich-article-content p {
+  margin-top: 1rem;
+  margin-bottom: 1.6rem;
+  font-size: 1.08rem;
+  line-height: 1.85;
+}
+
+.rich-article-content h2 {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-top: 2.8rem;
+  margin-bottom: 1.2rem;
+  line-height: 1.4;
+  border-left: 4px solid var(--primary);
+  padding-left: 0.9rem;
+  font-style: italic;
+}
+
+.rich-article-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.rich-article-content ul, 
+.rich-article-content ol {
+  margin-top: 1rem;
+  margin-bottom: 1.8rem;
+  padding-left: 1.6rem;
+}
+
+.rich-article-content li {
+  margin-bottom: 0.85rem;
+  line-height: 1.75;
+}
+
+.rich-article-content li strong {
+  color: var(--text-main);
+}
+
+.rich-article-content blockquote {
+  margin: 2rem 0;
+  padding: 1.2rem 1.5rem;
+  background: var(--bg-secondary);
+  border-left: 4px solid var(--primary);
+  border-radius: 0 12px 12px 0;
+  font-style: italic;
+  color: var(--text-main);
+}
+
+.rich-article-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2.2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.rich-article-content th,
+.rich-article-content td {
+  padding: 0.9rem 1.2rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.rich-article-content th {
+  background: var(--bg-tertiary);
+  color: var(--text-main);
+  font-weight: 700;
+}
+
+.rich-article-content td {
+  background: var(--bg-secondary);
+  font-size: 0.95rem;
+}
+
+.rich-article-content a {
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.rich-article-content a:hover {
+  color: #a00028;
+}
+
+
 
 
 
