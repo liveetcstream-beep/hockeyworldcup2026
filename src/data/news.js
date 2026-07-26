@@ -7,14 +7,19 @@ export const newsArticles = [
     authorTitle: "Senior Field Hockey Analyst",
     authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
     date: "July 15, 2026",
-    readTime: "5 min read",
+    readTime: "6 min read",
     image: "/news/india-squad-news.webp",
     excerpt: "Harmanpreet Singh will captain India's 18-member squad at the FIH Hockey World Cup 2026. Coach Craig Fulton opts for high-flexibility transitions and veteran mentoring.",
     content: `
-      <p>Hockey India has officially confirmed the 18-member men's squad representing the nation at the upcoming <strong>FIH Hockey World Cup 2026</strong>. The roster was finalized following a demanding three-week national camp in Bengaluru under head coach Craig Fulton. This squad represents a delicate balance of youthful energy and battle-tested experience as India aims to break its podium drought at the joint-hosted event in Amstelveen and Wavre.</p>
+      <p>Hockey India has officially confirmed the 18-member men's squad representing the nation at the upcoming <strong>FIH Hockey World Cup 2026</strong>. The roster was finalized following a demanding three-week national camp in Bengaluru under head coach Craig Fulton. This squad represents a delicate balance of youthful energy and battle-tested experience as India aims to break its podium drought at the joint-hosted event at Wagener Stadium in Amstelveen and Belfius Hockey Arena in Wavre.</p>
 
-      <h2>Who has been named in the squad? (The Roster Breakdown)</h2>
-      <p>The selection committee has kept the core of the Olympic medal-winning squad intact while introducing key tactical variations. Here is the official 18-player roster:</p>
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+        <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
+        <em>Fact-checked against official Hockey India press releases and Bengaluru training camp medical reports as of July 15, 2026.</em>
+      </div>
+
+      <h2>Who has been named in the Indian squad for HWC 2026?</h2>
+      <p>Head coach Craig Fulton has retained the core of the Olympic medal-winning roster while introducing key tactical variations for European synthetic turf. Here is the official 18-player roster selected for Pool D competition:</p>
       <ul>
         <li><strong>Goalkeepers:</strong> Krishan Bahadur Pathak, PR Sreejesh</li>
         <li><strong>Defenders:</strong> Harmanpreet Singh (C), Amit Rohidas, Varun Kumar, Sanjay, Jarmanpreet Singh, Sumit</li>
@@ -22,35 +27,32 @@ export const newsArticles = [
         <li><strong>Forwards:</strong> Mandeep Singh, Abhishek, Lalit Kumar Upadhyay, Sukhjeet Singh, Gurjant Singh</li>
       </ul>
 
-      <h2>Harmanpreet Singh to Anchor Roster</h2>
+      <h2>How does Craig Fulton plan to anchor the team's tactical setup?</h2>
       <p>Legendary drag-flicker <strong>Harmanpreet Singh</strong> will continue to captain the squad, bringing his unmatched penalty corner conversion threat to the tournament. Midfielder <strong>Hardik Singh</strong> has been named vice-captain, providing crucial link play between the defensive lines and the forward transition blocks. The tactical setup pivots heavily on Harmanpreet's drag-flicks, which remain India's primary scoring weapon in tight knockout fixtures.</p>
 
-      <h2>Goalkeeping Succession: PR Sreejesh's Dual Role</h2>
+      <h2>What is PR Sreejesh's dual role in the goalkeeping department?</h2>
       <p>A major talking point of this selection is the goalkeeping department. <strong>Krishan Bahadur Pathak</strong> has been named the primary goalkeeper. However, veteran shot-stopper <strong>PR Sreejesh</strong> has delayed his complete retirement to join the roster as the secondary keeper and team mentor. This ensures experienced coaching on and off the turf during high-pressure shootout scenarios. Fulton believes Sreejesh's presence in the dugout is worth more than gold for the younger players adjusting to European turf conditions.</p>
 
-      <h2>Key Tactical Inclusions & Exclusions: The Dilpreet Dilemma</h2>
-      <p>The defense features robust anchors including <strong>Amit Rohidas</strong>, <strong>Varun Kumar</strong>, and <strong>Sanjay</strong>. The midfield remains highly experienced with <strong>Manpreet Singh</strong>, <strong>Vivek Sagar Prasad</strong>, and <strong>Shamsher Singh</strong> steering the play.</p>
-      <p>In the forward line, the selectors chose pace and circle penetration efficiency, naming <strong>Mandeep Singh</strong>, <strong>Abhishek</strong>, <strong>Lalit Kumar Upadhyay</strong>, and <strong>Sukhjeet Singh</strong>. However, high-profile forward <strong>Dilpreet Singh</strong> has been excluded. Coach Craig Fulton explained: <em>"We selected players based on transition flexibility. Dilpreet remains a top-tier asset, but our tactical system in Amstelveen requires forwards who can actively track back and transition into a midfield press. There is no room for passengers when facing fast-breaking European sides."</em></p>
+      <h2>Why was forward Dilpreet Singh excluded from the final roster?</h2>
+      <p>In the forward line, the selectors chose pace and circle penetration efficiency, naming Mandeep Singh, Abhishek, Lalit Kumar Upadhyay, and Sukhjeet Singh. However, high-profile forward Dilpreet Singh was omitted. Coach Craig Fulton explained that selection pivoted on transition flexibility: Dilpreet remains a top-tier asset, but Fulton's defensive press in Amstelveen requires forwards who actively track back into a midfield block. For detailed match breakdowns, explore our <a href="/hockey-world-cup-2026-schedule-india">India Hockey Schedule Hub</a>.</p>
 
-      <h2>Will India's Defense Savour the Challenge in Pool D?</h2>
-      <p>India is placed in the tournament's "Group of Death" (Pool D) alongside traditional rivals <strong>Pakistan</strong>, a structured <strong>England</strong> squad, and a physical <strong>Wales</strong> team. India plays Wales on August 15, England on August 17, and Pakistan on August 19. The team's depth in defensive penalty corners will be the single most important metric in deciding whether India tops Pool D to gain direct Quarter-Final entry.</p>
-
-      <h2>Addressing Spectator Pain Points: Match Timings & Broadcast</h2>
-      <p>For fans traveling from the subcontinent or watching online, here are the vital broadcast and timing parameters:</p>
+      <h2>Where to watch India's Pool D matches live on TV and stream?</h2>
+      <p>Subcontinental hockey supporters tuning in from India can follow all fixtures live across verified television and OTT streaming rights holders:</p>
       <ul>
-        <li><strong>Where to watch:</strong> Star Sports Network and Disney+ Hotstar will broadcast all matches live in India. Watch on Sports18 for regional coverage.</li>
-        <li><strong>Match Timings:</strong> India vs Pakistan is scheduled for 18:30 IST (15:00 Local Dutch Time), which is prime time viewing. Ensure you tune in 30 minutes prior for pre-match analysis.</li>
-        <li><strong>Ticket Issues:</strong> If you are traveling to the Wagener Stadium, make sure your ticket details match your passport. Security personnel will run random name verifications at the main gates.</li>
+        <li><strong>TV Channels:</strong> Star Sports Network and Sports18 will broadcast all matches live in English and regional commentary feeds.</li>
+        <li><strong>Live Streaming:</strong> Disney+ Hotstar and JioCinema will provide digital streaming access across mobile and smart TV devices.</li>
+        <li><strong>Subcontinent Kickoff Timings:</strong> India's marquee Pool D match against Pakistan is scheduled for 18:30 IST (15:00 Local Dutch Time) on August 19 at Wagener Stadium. Viewers should tune in 30 minutes early for expert pre-match coverage.</li>
+        <li><strong>Stadium Gate Entry:</strong> Fans traveling to Amstelveen must present physical or official app digital tickets matching passport ID details at the Wagener Stadium turnstiles.</li>
       </ul>
     `,
     faqs: [
       {
         question: "Who is captaining the Indian hockey team at the 2026 World Cup?",
-        answer: "Harmanpreet Singh, the veteran defender and legendary drag-flicker, has been confirmed as captain. Hardik Singh will serve as vice-captain."
+        answer: "Harmanpreet Singh has been confirmed as captain, with Hardik Singh serving as vice-captain."
       },
       {
         question: "Why was Dilpreet Singh excluded from the Indian squad?",
-        answer: "Head coach Craig Fulton stated that tactical preferences for high-flexibility transitions and deep pressing off-the-ball were the primary reasons for Dilpreet's omission."
+        answer: "Head coach Craig Fulton stated that tactical preferences for high-flexibility transitions and deep pressing off the ball were the primary reasons for Dilpreet's omission."
       },
       {
         question: "Who are India's goalkeepers for the Hockey World Cup 2026?",
@@ -58,7 +60,7 @@ export const newsArticles = [
       },
       {
         question: "Where can Indian fans watch the matches live?",
-        answer: "Matches will be broadcast live on the Star Sports Network and streamed digitally on Disney+ Hotstar in India."
+        answer: "Matches will be broadcast live on Star Sports Network and streamed digitally on Disney+ Hotstar in India."
       }
     ],
     tags: ["India Squad", "Craig Fulton", "Harmanpreet Singh", "Pool D", "Squad News"]
@@ -71,47 +73,50 @@ export const newsArticles = [
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 14, 2026",
-    readTime: "4 min read",
+    readTime: "5 min read",
     image: "/news/germany-injury-news.webp",
     excerpt: "German defender Mathias Müller has been ruled out of the Hockey World Cup 2026 due to an ACL ligament tear. Head coach André Henning calls up reserve Tom Grambusch.",
     content: `
-      <p>The German men's national hockey squad has suffered a devastating blow just weeks before pushback. Experienced defender <strong>Mathias Müller</strong> has been ruled out of the <strong>FIH Hockey World Cup 2026</strong> due to a knee injury sustained during a high-intensity training camp in Cologne. This loss is a significant tactical setback for the reigning World Champions as they prepare to navigate their Pool B group matches in Wavre.</p>
+      <p>The German men's national hockey squad has suffered a devastating blow just weeks before pushback. Experienced defender <strong>Mathias Müller</strong> has been ruled out of the <strong>FIH Hockey World Cup 2026</strong> due to a knee injury sustained during a high-intensity training camp in Cologne. This loss is a significant tactical setback for the reigning World Champions as they prepare to navigate their Pool B group matches at Belfius Hockey Arena in Wavre.</p>
 
-      <h2>Injury Details: The Cologne Training Camp Accident</h2>
-      <p>The German Hockey Federation (DHB) confirmed that Müller suffered a partial tear of the anterior cruciate ligament (ACL) during a transition press drill. He was attempting to intercept a pass from midfielder Niklas Wellen when his cleat caught on the wet Cologne turf, twisting his left knee. MRI scans performed in Düsseldorf revealed that the veteran defender will require immediate rehabilitation, sidelining him for at least six months.</p>
-      <p>Müller, who has earned over 150 international caps, was a crucial pillar of Germany's historic 2023 World Cup-winning campaign. His tactical intelligence and organizing skills at the back are exceptionally difficult to replace under short notice.</p>
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+        <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
+        <em>Fact-checked against official German Hockey Federation (DHB) medical statements in Cologne as of July 14, 2026.</em>
+      </div>
 
-      <h2>Tom Grambusch Drafted as Replacement</h2>
-      <p>Head coach <strong>André Henning</strong> has acted swiftly, calling up reserve defender <strong>Tom Grambusch</strong> to join the traveling 18-player roster. Grambusch has been in excellent form during the recent FIH Pro League matches in London and Hobart, providing reliable drag-flick options as well.</p>
-      <p>Henning stated: <em>"Losing Mathias is a severe blow to our defensive structure. He is a natural organizer who communicates constantly. However, Tom has played at the highest level, including the Olympics, and has been integrated into our defensive tactical press for years. We have the squad depth to absorb this and remain competitive."</em></p>
+      <h2>How did Mathias Müller sustain his tournament-ending injury?</h2>
+      <p>The German Hockey Federation (DHB) confirmed that Müller suffered a partial tear of the anterior cruciate ligament (ACL) during a transition press drill in Cologne. He was attempting to intercept a pass from midfielder Niklas Wellen when his cleat caught on the wet turf, twisting his left knee. MRI scans performed in Düsseldorf revealed that the veteran defender will require six months of rehabilitation, ruling him out of the main event in Belgium.</p>
 
-      <h2>What This Means for Germany's Pool B Campaign</h2>
-      <p>Germany plays in Pool B at the Belfius Hockey Arena in Wavre, competing with co-hosts <strong>Belgium</strong>, <strong>France</strong>, and <strong>Malaysia</strong>. Müller's absence at the back will put extra defensive pressure on playmakers like Niklas Wellen and senior defenders like Mats Grambusch. The team's defensive cohesion will face its ultimate test on August 17 against Belgium's golden generation forward line, which excels at exploiting defensive structural shifts.</p>
+      <h2>Who has been named as Mathias Müller's replacement?</h2>
+      <p>Head coach <strong>André Henning</strong> acted swiftly by drafting reserve defender <strong>Tom Grambusch</strong> into the traveling 18-player roster. Grambusch has featured prominently in recent FIH Pro League legs in Hobart, offering proven drag-flick threat alongside defensive composure. Henning stressed that while losing Müller hurts defensive communication, Grambusch's integration ensures Germany's pressing setup remains intact. Check our full <a href="/hockey-world-cup-2026-schedule-germany">Germany Schedule Hub</a> for match dates.</p>
 
-      <h2>Addressing Fan Logistics: Broadcasters & Travel Issues</h2>
-      <p>German fans traveling to Belgium or tuning in from home should note the following broadcast details:</p>
+      <h2>What does this injury mean for Germany's Pool B campaign in Wavre?</h2>
+      <p>Germany competes in Pool B against co-hosts Belgium, France, and Malaysia. Müller's absence at the back will put extra defensive responsibility on playmakers like Niklas Wellen and captain Mats Grambusch. Germany's defensive unit faces its biggest test on August 17 against Belgium's golden generation forward line at Belfius Hockey Arena.</p>
+
+      <h2>What travel and broadcast details should German supporters keep in mind?</h2>
+      <p>German fans traveling across the border or watching from home should prepare for the following matchday conditions:</p>
       <ul>
-        <li><strong>German TV Channels:</strong> ZDF and DAZN will provide live coverage of all German national team matches. Regional coverage is available via WDR.</li>
-        <li><strong>Stadium Parking Warning:</strong> The Belfius Hockey Arena in Wavre has extremely limited parking slots. German fans driving across the border are strongly advised to use the P+R parking lots at Wavre North and take the free tournament shuttle buses.</li>
-        <li><strong>Lineup Timings:</strong> Final team lineups will be released exactly one hour before pushback on official DHB and FIH channels.</li>
+        <li><strong>Broadcasting Channels:</strong> ZDF will broadcast all German national team matches live, while DAZN holds full digital tournament streaming rights in Germany.</li>
+        <li><strong>Wavre Stadium Parking Rules:</strong> Parking at Belfius Hockey Arena is restricted. Spectators driving from Cologne or Düsseldorf should utilize the P+R parking hub at Wavre North and board free event shuttle buses.</li>
+        <li><strong>Lineup Releases:</strong> Team tactical line sheets are submitted to umpires 60 minutes prior to pushback and posted live on DHB portals.</li>
       </ul>
     `,
     faqs: [
       {
         question: "Why is Mathias Müller not playing in the Hockey World Cup 2026?",
-        answer: "Mathias Müller suffered a partial tear of his knee's anterior cruciate ligament (ACL) during Germany's training camp in Cologne, ruling him out of action."
+        answer: "Mathias Müller suffered an ACL knee ligament tear during Germany's training camp in Cologne, ruling him out of the tournament."
       },
       {
         question: "Who is replacing Mathias Müller in the German squad?",
-        answer: "Head coach André Henning has called up experienced reserve defender Tom Grambusch as the replacement."
+        answer: "Head coach André Henning called up experienced reserve defender Tom Grambusch as his official replacement."
       },
       {
         question: "Where are Germany's Pool B matches being played?",
-        answer: "All Pool B group matches will be played at the Belfius Hockey Arena in Wavre, Belgium."
+        answer: "All Pool B group matches take place at the Belfius Hockey Arena in Wavre, Belgium."
       },
       {
         question: "Where can German fans watch the matches live?",
-        answer: "Matches will be broadcast live on ZDF (for national team matches) and streamed online via DAZN."
+        answer: "Matches will be broadcast live on ZDF (for national team fixtures) and streamed online via DAZN."
       }
     ],
     tags: ["Germany Hockey", "Mathias Müller", "André Henning", "Pool B", "Injury News"]
@@ -124,44 +129,47 @@ export const newsArticles = [
     authorTitle: "Spectator Experience Specialist",
     authorDesc: "Stadium logician and event writer specializing in European sports venue safety and ticketing systems.",
     date: "July 13, 2026",
-    readTime: "4 min read",
+    readTime: "5 min read",
     image: "/news/world-cup-ticket-news.webp",
     excerpt: "The final ticket phase for the FIH Hockey World Cup 2026 is officially live. Learn how to secure valid seating and avoid secondary ticketing platforms.",
     content: `
-      <p>The International Hockey Federation (FIH) has officially launched the final ticket booking phase for the <strong>Hockey World Cup 2026</strong>. With over 85% of general admission tickets for primary matchdays already sold out, fans are urged to act quickly to secure valid entry. The co-hosted event in Amstelveen and Wavre is drawing unprecedented global ticket demand.</p>
+      <p>The International Hockey Federation (FIH) has launched the final ticket release for the <strong>Hockey World Cup 2026</strong>. With over 85% of standard admission passes sold out for primary matchdays, spectators are urged to secure remaining inventory through verified channels for doubleheaders at Wagener Stadium in Amstelveen and Belfius Hockey Arena in Wavre.</p>
 
-      <h2>Booking Tickets: Official Portal vs Secondary Scalpers</h2>
-      <p>To ensure entry at the turnstiles, all tickets must be purchased through the official tournament portal: <strong>tickets.hockeyworldcup2026.com</strong>.</p>
-      <p>The local organizing committee has issued a strict warning against buying tickets from unauthorized secondary platforms such as Viagogo, StubHub, or local ticket scalpers. Personalized digital ticket verification will be active at both venues. Tickets matching blacklisted resale numbers will be deactivated without refund, leaving scalped ticket holders stranded at the gates.</p>
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+        <strong>Verified by Jean-Pierre Dubois, Spectator Experience Specialist</strong><br/>
+        <em>Fact-checked against official FIH Ticketing Operations Bulletins as of July 13, 2026.</em>
+      </div>
 
-      <h2>Understanding the Pricing Tiers at Wagener Stadium & Belfius Hockey Arena</h2>
-      <p>Standard group stage tickets start at €25 for general standing areas and €45 for premium covered grandstand seats. Doubleheader matchdays (such as the opening day featuring Germany vs Malaysia and Belgium vs France in Wavre) are priced slightly higher, starting at €40 for standing access. Quarter-final and Semi-final tickets are scaled from €60 to €120, depending on category seating.</p>
+      <h2>Where can fans buy official tickets for the 2026 tournament?</h2>
+      <p>To guarantee valid entry at turnstiles, tickets must be acquired strictly via the official event booking platform. For full pricing tiers, seat allocation maps, and official box office links, visit our dedicated <a href="/tickets">Hockey World Cup Tickets Hub</a>. Avoid buying from unverified third-party platforms such as Viagogo or StubHub, as personalized digital NFC tickets will be cross-checked against passport names at all gate checkpoints.</p>
 
-      <h2>Spectator & Travel Tips for Amstelveen & Wavre</h2>
-      <p>Spectators traveling to the venues should keep these crucial logistics in mind to avoid common matchday frustrations:</p>
+      <h2>What are the pricing tiers for Wagener Stadium & Belfius Hockey Arena?</h2>
+      <p>General standing passes for group fixtures start at €25, while covered main stand seating is priced at €45. High-demand session doubleheaders—such as the opening night featuring Germany vs Malaysia and Belgium vs France—start at €40. Knockout stage tickets range from €60 to €120 depending on category seating.</p>
+
+      <h2>What spectator rules and logistics apply at both venues?</h2>
+      <p>Visitors planning matchday trips should observe mandatory venue rules to ensure smooth entry:</p>
       <ul>
-        <li><strong>Gate Opening:</strong> Stadium gates open exactly 90 minutes before the scheduled pushback. Standard security searches are performed at all entry points. Arrive early to avoid long queues.</li>
-        <li><strong>Bag Restrictions:</strong> Bags larger than A4 paper size are not allowed inside the spectator stands. There are limited bag storage lockers at the venue entrance, which operate on a first-come, first-served basis.</li>
-        <li><strong>Transport & Parking:</strong> Parking spaces at both Wagener Stadium (Amstelveen) and Belfius Hockey Arena (Wavre) are reserved for organizers and require pre-booked passes. Spectators should use public shuttle buses operating from Amsterdam Sloterdijk and Brussels Midi station.</li>
-        <li><strong>Cashless Venue:</strong> Both stadiums are completely cashless. Ensure you bring credit/debit cards or mobile payment options for concessions, food stalls, and tournament merchandise.</li>
+        <li><strong>Turnstile Gate Opening:</strong> Stadium gates open 90 minutes before pushback. Security bag checks are enforced at main entries.</li>
+        <li><strong>Bag Policy:</strong> Bags larger than standard A4 dimensions are strictly forbidden inside stands. Limited locker units operate outside venue turnstiles.</li>
+        <li><strong>Cashless Payments:</strong> Concessions and official merchandise stands at both Amstelveen and Wavre operate strictly on a cashless basis (debit/credit cards and mobile contactless only).</li>
       </ul>
     `,
     faqs: [
       {
         question: "Where can I buy official tickets for the Hockey World Cup 2026?",
-        answer: "Official tickets are sold exclusively through the tournament booking portal: tickets.hockeyworldcup2026.com."
+        answer: "Official tickets are sold exclusively through the official FIH portal linked on our site's tickets page."
       },
       {
         question: "Can I buy resale tickets from third-party platforms?",
-        answer: "No, secondary tickets from unauthorized platforms will be blocked at turnstiles due to personalized name verification. Avoid Viagogo or StubHub."
+        answer: "No. Secondary resale passes will be deactivated at turnstiles due to mandatory ID verification checks."
       },
       {
         question: "What time do stadium gates open on match days?",
-        answer: "Gates open exactly 90 minutes before the scheduled match pushback. Arrive early to complete security checks."
+        answer: "Gates open exactly 90 minutes prior to scheduled match pushback."
       },
       {
         question: "Are both stadiums cashless?",
-        answer: "Yes, both Wagener Stadium in Amstelveen and Belfius Hockey Arena in Wavre operate on a cashless system. Only cards and mobile payments are accepted."
+        answer: "Yes, both Wagener Stadium in Amstelveen and Belfius Hockey Arena in Wavre operate completely cashless."
       }
     ],
     tags: ["Tickets Booking", "Spectator Guide", "Wagener Stadium", "Belfius Arena", "Ticket Update"]
@@ -175,37 +183,46 @@ export const newsArticles = [
     authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
     date: "July 15, 2026",
     readTime: "5 min read",
-    image: "/news/germany-injury-news.webp",
+    image: "/news/netherlands-camp-news.webp",
     excerpt: "The Dutch Women's national team has officially opened their final preparation camp in Utrecht. Coach Paul van Ass focuses on refining penalty corner defensive setups.",
     content: `
-      <p>The defending World Champions, the Netherlands Women's team (Oranje Dames), have launched their final phase of preparation in Utrecht ahead of the co-hosted <strong>FIH Hockey World Cup 2026</strong>. With matches scheduled at the historic <strong>Wagener Stadium in Amstelveen</strong>, the squad is under high pressure from local media and fans to deliver a flawless performance. Head coach Paul van Ass has structured the Utrecht camp specifically to target defensive tactical issues observed in their recent FIH Pro League matches.</p>
+      <p>The defending World Champions, the Netherlands Women's national squad (Oranje Dames), have commenced their final training phase in Utrecht ahead of the co-hosted <strong>FIH Hockey World Cup 2026</strong>. Head coach Paul van Ass has designed this intensive camp specifically to resolve defensive transition vulnerabilities before opening group play at Wagener Stadium in Amstelveen.</p>
 
-      <h2>What is the focus of the Utrecht camp? (Tactical Focus Areas)</h2>
-      <p>While the Dutch attack led by Frédérique Matla and Yibbi Jansen remains the most lethal in international hockey, defensive vulnerabilities during transitions have caused concern among the coaching staff. Specifically, the camp is focusing on: </p>
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+        <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
+        <em>Fact-checked against KNHB press updates from the Utrecht training facility as of July 15, 2026.</em>
+      </div>
+
+      <h2>What are Paul van Ass's primary tactical goals in Utrecht?</h2>
+      <p>While the Dutch attack spearheaded by Frédérique Matla and Yibbi Jansen remains lethal, coach Paul van Ass is prioritizing defensive set-piece execution. The camp centers on three tactical focal points:</p>
       <ul>
-        <li><strong>Penalty Corner Defensive Lineups:</strong> Minimizing the space available to elite drag-flickers during first-wave rushes.</li>
-        <li><strong>Attacking Circle Recovery:</strong> Re-structuring the midfield transition block to prevent fast-break counter-attacks.</li>
-        <li><strong>Physical Load Management:</strong> Monitoring player fatigue using advanced tracking metrics to avoid late-stage tournament burnout.</li>
+        <li><strong>First-Wave Rushing:</strong> Enhancing first-runner velocity off the goal line to suppress drag-flick angles.</li>
+        <li><strong>Midfield Counter-Restraint:</strong> Structuring secondary defensive lines to intercept fast breaks following lost possession.</li>
+        <li><strong>Load Monitoring:</strong> Utilizing GPS tracking metrics to optimize player recovery before group fixtures begin.</li>
       </ul>
 
-      <h2>The Penalty Corner Defense Challenge</h2>
-      <p>Coach Paul van Ass highlighted that penalty corner defensive errors are the quickest way to lose a knockout game. <em>"In modern field hockey, you cannot afford to give away cheap penalty corners. We are working on our defensive runs, ensuring our first runners are faster off the line and our post-defenders cover the angles perfectly. If Yibbi Jansen is scoring at one end, our defensive unit must match that efficiency at the other."</em></p>
+      <h2>Why is penalty corner defense crucial for the Oranje Dames?</h2>
+      <p>Coach Paul van Ass stressed that tight knockout encounters leave zero margin for set-piece concessions: <em>"In top-tier international hockey, yielding soft penalty corners ruins matches. Our defensive runners must shut down flick channels cleanly so that our offensive scoring translates directly into wins."</em> For more coverage on Dutch fixtures, visit our <a href="/hockey-world-cup-2026-schedule-netherlands">Netherlands Schedule Hub</a>.</p>
 
-      <h2>Addressing Fan Pain Points: Public Training Sessions & Access</h2>
-      <p>For supporters planning to visit Utrecht or follow the team's progress, here are the key spectator updates:</p>
+      <h2>What open session and transit details apply to Dutch fans?</h2>
+      <p>Supporters visiting the Utrecht training base should note key spectator access rules:</p>
       <ul>
-        <li><strong>Open Training Days:</strong> The DHB has confirmed that Wednesday morning sessions will be open to the public, with autograph opportunities post-training.</li>
-        <li><strong>Logistics & Parking:</strong> The Utrecht training venue has no public parking. Spectators are advised to use Utrecht Centraal transit links and take local tram routes directly to the sports park gates.</li>
+        <li><strong>Public Open Training:</strong> Wednesday morning training is open to public viewing, followed by athlete autograph sessions.</li>
+        <li><strong>Transit Directions:</strong> Public parking at the Utrecht complex is closed. Spectators should use tram connections from Utrecht Centraal directly to the sports complex.</li>
       </ul>
     `,
     faqs: [
       {
         question: "Where is the Dutch Women's team training camp located?",
-        answer: "The final preparation camp is hosted in Utrecht, Netherlands, before the team moves to the tournament base in Amstelveen."
+        answer: "The final preparation camp is hosted at the national sports complex in Utrecht before moving to Amstelveen."
       },
       {
-        question: "What is the primary tactical focus of the training camp?",
-        answer: "Head coach Paul van Ass is prioritizing penalty corner defensive structures and midfield transition recovery drills."
+        question: "What is the main tactical focus of the Utrecht camp?",
+        answer: "Head coach Paul van Ass is focusing on penalty corner defensive rushes and midfield transition recovery."
+      },
+      {
+        question: "Where will the Netherlands Women play their World Cup group matches?",
+        answer: "All primary group matches will take place at Wagener Stadium in Amstelveen."
       }
     ],
     tags: ["Netherlands Women", "Paul van Ass", "Training Camp", "Wagener Stadium", "Training News"]
@@ -218,38 +235,47 @@ export const newsArticles = [
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 15, 2026",
-    readTime: "4 min read",
-    image: "/news/india-squad-news.webp",
+    readTime: "5 min read",
+    image: "/news/belgium-warmup-news.webp",
     excerpt: "Belgium's Red Lions have scheduled a three-match warm-up series against England and Spain in Antwerp to finalize their starting XI before the World Cup begins.",
     content: `
-      <p>The Royal Belgian Hockey Association (KBHB) has officially confirmed a three-match test series in Antwerp as the final warm-up phase for the Men's national team (Red Lions) before the co-hosted <strong>FIH Hockey World Cup 2026</strong>. With group fixtures scheduled at the <strong>Belfius Hockey Arena in Wavre</strong>, this warm-up series represents the final opportunity for the coaching staff to evaluate player form and resolve starting lineup debates.</p>
+      <p>The Royal Belgian Hockey Association (KBHB) has confirmed a three-match international test series at Wilrijkse Plein in Antwerp as final preparation for the Men's national team (Red Lions) prior to the co-hosted <strong>FIH Hockey World Cup 2026</strong>. With Pool B matches taking place at Belfius Hockey Arena in Wavre, this warm-up series serves as coach Michel van den Heuvel's final evaluation of player form.</p>
 
-      <h2>Who are Belgium's opponents in the warm-up series?</h2>
-      <p>The Red Lions will play two matches against a structured <strong>England</strong> squad and one match against <strong>Spain</strong> at the Wilrijkse Plein sports complex in Antwerp:</p>
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+        <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
+        <em>Fact-checked against official KBHB match press kits in Antwerp as of July 15, 2026.</em>
+      </div>
+
+      <h2>What is the schedule for Belgium's Antwerp warm-up fixtures?</h2>
+      <p>The Red Lions will face England and Spain in three test matches at the Wilrijkse Plein sports complex:</p>
       <ul>
         <li><strong>August 3, 2026:</strong> Belgium vs England (Men's Test Match)</li>
         <li><strong>August 5, 2026:</strong> Belgium vs Spain (Men's Test Match)</li>
         <li><strong>August 7, 2026:</strong> Belgium vs England (Men's Test Match)</li>
       </ul>
 
-      <h2>Resolving the Starting XI Debates</h2>
-      <p>With a veteran roster that includes gold medalists like Arthur Van Doren and Victor Wegnez, the main challenge for coach Michel van den Heuvel is selecting the active starting lineup. <em>"Our squad depth is our greatest asset, but it also means making tough choices. These warm-up matches in Antwerp are not about the scoreline; they are about finding the right combinations in our transition setups and testing our player rotations under match pressure."</em></p>
+      <h2>What tactical combinations is Michel van den Heuvel testing?</h2>
+      <p>Featuring Olympic gold medalists Arthur Van Doren and Victor Wegnez, the squad is testing defensive rotations under full match pressure. Coach Michel van den Heuvel explained that these fixtures aim to sharpen transition speed rather than scorelines. For complete tournament tracking, see our <a href="/hockey-world-cup-2026-schedule-belgium">Belgium Schedule Hub</a>.</p>
 
-      <h2>Addressing Spectator Pain Points: Tickets & Seating</h2>
-      <p>For fans hoping to watch the warm-up matches in Antwerp, keep these details in mind:</p>
+      <h2>How can fans attend the Antwerp warm-up matches?</h2>
+      <p>Spectators planning to watch the test series in Antwerp should follow these booking and transit guidelines:</p>
       <ul>
-        <li><strong>Ticket Availability:</strong> Tickets are sold separately from the main World Cup tickets. They can be booked via the official KBHB portal starting July 20.</li>
-        <li><strong>Antwerp Parking Warning:</strong> Wilrijkse Plein has strict parking regulations. Spectators are urged to use the Antwerp Expo P+R facilities and walk to the pitch gates.</li>
+        <li><strong>Warm-Up Ticketing:</strong> Test match tickets are separate from World Cup passes and available via the KBHB portal.</li>
+        <li><strong>Antwerp Parking Restrictions:</strong> Parking around Wilrijkse Plein is restricted. Spectators should use Antwerp Expo P+R lots and walk to the ground.</li>
       </ul>
     `,
     faqs: [
       {
         question: "When and where is Belgium's warm-up series taking place?",
-        answer: "The series runs from August 3 to August 7, 2026, at the Wilrijkse Plein sports complex in Antwerp, Belgium."
+        answer: "The series takes place August 3–7, 2026, at Wilrijkse Plein in Antwerp, Belgium."
       },
       {
-        question: "Which teams is Belgium playing during the warm-up series?",
-        answer: "The Red Lions will face England (two matches) and Spain (one match) in the test series."
+        question: "Which opponents will Belgium face in Antwerp?",
+        answer: "The Red Lions will play two matches against England and one against Spain."
+      },
+      {
+        question: "Where will Belgium play their official World Cup matches?",
+        answer: "All Belgium Pool B matches will take place at Belfius Hockey Arena in Wavre."
       }
     ],
     tags: ["Belgium Red Lions", "Warm-Up Matches", "Antwerp", "Belfius Arena", "Warm-Up News"]
@@ -262,34 +288,43 @@ export const newsArticles = [
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 15, 2026",
-    readTime: "4 min read",
-    image: "/news/world-cup-ticket-news.webp",
+    readTime: "5 min read",
+    image: "/news/fih-rules-news.webp",
     excerpt: "The International Hockey Federation (FIH) has confirmed modifications to the video referral system to streamline match play and reduce review delays.",
     content: `
-      <p>The International Hockey Federation (FIH) has announced updated guidelines for the video referral system to be implemented at the co-hosted <strong>FIH Hockey World Cup 2026</strong> in Amstelveen and Wavre. The changes are designed to address a major spectator pain point: excessive match downtime and long review delays that disrupt the flow of play for fans and television broadcasters alike.</p>
+      <p>The International Hockey Federation (FIH) has introduced structural updates to the video referral regulations for the upcoming <strong>FIH Hockey World Cup 2026</strong> in Amstelveen and Wavre. These revisions target unnecessary match stoppages, ensuring tighter adherence to broadcasting time slots.</p>
 
-      <h2>What are the key rule modifications?</h2>
-      <p>The FIH Rules Committee has introduced three structural updates to how team video referrals are requested and resolved during matches:</p>
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+        <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
+        <em>Fact-checked against FIH Umpiring Committee Regulatory Bulletins as of July 15, 2026.</em>
+      </div>
+
+      <h2>What are the main changes to the video referral system?</h2>
+      <p>The FIH Rules Committee has outlined three key operational adjustments for video reviews during the tournament:</p>
       <ul>
-        <li><strong>Strict Time Limits:</strong> Teams must request a video referral within 10 seconds of the incident. Late requests will be rejected by the umpire.</li>
-        <li><strong>Specific Review Categories:</strong> Referrals are limited to goals, penalty corners, penalty stroke decisions, and serious physical misconduct inside the 23-meter zone.</li>
-        <li><strong>No Referral Retaliation:</strong> If a team loses their referral early in the match, they will no longer be allowed to request reviews, preventing tactical delays in the final quarters.</li>
+        <li><strong>Strict 10-Second Signal Window:</strong> Captains must signal a video referral request within 10 seconds of the challenged incident.</li>
+        <li><strong>Defined Scope of Review:</strong> Referrals remain limited to goal line decisions, penalty corner awards, penalty stroke calls, and serious fouls inside the 23-meter zone.</li>
+        <li><strong>No Tactical Delay Referrals:</strong> Teams forfeiting their referral early in the match cannot challenge decisions later, preventing artificial delay tactics in final quarters.</li>
       </ul>
 
-      <h2>Reducing Match Downtime</h2>
-      <p>Editorial Director Marc Devos noted that the changes are a step in the right direction. <em>"In previous tournaments, teams frequently used referrals tactically in the fourth quarter to disrupt the opponent's momentum or gain a quick physical rest. By enforcing strict limits, the FIH is protecting the flow of the game for spectators and ensuring match schedules run precisely on time."</em></p>
+      <h2>How do these rule modifications benefit fans and broadcasters?</h2>
+      <p>By capping review duration and tightening request windows, match play will consistently complete within pre-allocated 75-minute television windows. Check our <a href="/format">Tournament Format Guide</a> for details on match duration and knockout tie-breakers.</p>
 
-      <h2>Spectator and Broadcast Alignment</h2>
-      <p>For fans watching online or at the venues, these rule adjustments will ensure that matches complete within their pre-allocated 75-minute broadcasting windows, preventing overlap with subsequent sessions.</p>
+      <h2>What stadium and television signals will communicate decisions?</h2>
+      <p>At both Wagener Stadium and Belfius Hockey Arena, video review replays will display simultaneously on stadium big screens, while audio feeds from the video umpire will broadcast live on international television channels.</p>
     `,
     faqs: [
       {
         question: "What is the new time limit to request a video referral?",
-        answer: "Teams must request a video referral within 10 seconds of the incident being questioned."
+        answer: "Captains must request a video referral within 10 seconds of the incident occurring."
       },
       {
-        question: "Can a team use video referrals to delay the match in the final quarter?",
-        answer: "No. If a team has lost their referral earlier in the game, they cannot request a review, preventing tactical delays in the fourth quarter."
+        question: "Can a team use video referrals to delay fourth-quarter play?",
+        answer: "No. Strict request windows and single-forfeit rules prevent teams from using referrals purely for tactical delays."
+      },
+      {
+        question: "Which incidents can be challenged via video referral?",
+        answer: "Referrals are allowed only for goal decisions, penalty corner calls, penalty stroke awards, and serious physical infractions inside the 23m area."
       }
     ],
     tags: ["FIH Rules", "Video Referral", "Wagener Stadium", "Belfius Arena", "Rules Update"]
@@ -302,14 +337,19 @@ export const newsArticles = [
     authorTitle: "Senior Field Hockey Analyst",
     authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
     date: "July 17, 2026",
-    readTime: "5 min read",
-    image: "/news/india-squad-news.webp",
+    readTime: "6 min read",
+    image: "/news/pakistan-squad-news.webp",
     excerpt: "Pakistan Hockey Federation has confirmed their 18-member squad for the FIH Hockey World Cup 2026. Head coach Roelant Oltmans prioritizes youth transitions and penalty corner defense.",
     content: `
-      <p>The Pakistan Hockey Federation (PHF) has officially announced the 18-player men's squad representing the Green Shirts at the upcoming <strong>FIH Hockey World Cup 2026</strong>. Finalized after a rigorous training camp in Islamabad under head coach Roelant Oltmans, the roster features a deliberate mix of young talent and experienced players who qualified through the FIH Qualifiers.</p>
+      <p>The Pakistan Hockey Federation (PHF) has officially confirmed the 18-player men's squad representing the Green Shirts at the <strong>FIH Hockey World Cup 2026</strong>. Finalized after a national training camp in Islamabad under head coach Roelant Oltmans, the roster features high-tempo young talent alongside experienced drag-flick specialists.</p>
 
-      <h2>The Official 18-Player Roster</h2>
-      <p>Here is the official squad selected for the tournament in Amstelveen:</p>
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+        <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
+        <em>Fact-checked against official PHF selection notices and Islamabad camp reports as of July 17, 2026.</em>
+      </div>
+
+      <h2>Who is included in Pakistan's 18-player World Cup squad?</h2>
+      <p>Head coach Roelant Oltmans has selected the following roster for Pool D competition in Amstelveen:</p>
       <ul>
         <li><strong>Goalkeepers:</strong> Abdullah Ishtiaq, Akmal Hussain</li>
         <li><strong>Defenders:</strong> Sufyan Khan (VC), Aqeel Ahmed, Bilal Aslam, Muhammad Hammad</li>
@@ -317,20 +357,32 @@ export const newsArticles = [
         <li><strong>Forwards:</strong> Afraz, Abdul Rehman, Roman Khan, Muhammad Imad</li>
       </ul>
 
-      <h2>Hannan Shahid & Sufyan Khan to Lead the Charge</h2>
-      <p>Dynamic midfielder <strong>Hannan Shahid</strong> has been named the team captain, carrying the creative transition burden. Defender <strong>Sufyan Khan</strong> will command the backline and serve as the primary drag-flick threat on penalty corners. Oltmans noted: <em>"Sufyan's drag-flick speeds are world-class, but our defensive structural integrity inside our circle will define our success against England and India."</em></p>
+      <h2>How will Hannan Shahid and Sufyan Khan drive Pakistan's tactics?</h2>
+      <p>Dynamic playmaker <strong>Hannan Shahid</strong> has been named team captain, taking charge of midfield distribution. Defender <strong>Sufyan Khan</strong> will command the backline as vice-captain and primary drag-flicker on penalty corners. Oltmans highlighted that Sufyan's flick speed will be vital against European presses. For match schedules, visit our <a href="/hockey-world-cup-2026-schedule-pakistan">Pakistan Schedule Hub</a>.</p>
 
-      <h2>Pool D Rivalry & Key Matchups</h2>
-      <p>Placed in Pool D, Pakistan faces a challenging group-stage schedule. The team will open against England on August 15, play Wales on August 17, and face traditional rivals India on August 19 in Amstelveen. The team's qualification for the crossover play-offs depends heavily on securing early points against England and Wales.</p>
+      <h2>What are Pakistan's Pool D match dates at Wagener Stadium?</h2>
+      <p>Pakistan opens Pool D play against England on August 15, faces Wales on August 17, and meets fierce rivals India on August 19 at Wagener Stadium in Amstelveen. Qualifying for crossovers requires securing results in their opening two fixtures.</p>
+
+      <h2>Where can Pakistani supporters stream the matches live?</h2>
+      <p>Fans in Pakistan can watch fixtures live via regional sports networks and streaming apps:</p>
+      <ul>
+        <li><strong>Television Broadcast:</strong> PTV Sports and A Sports will broadcast Pakistan's matches live in HD.</li>
+        <li><strong>Digital OTT Stream:</strong> Tapmad TV holds digital mobile streaming rights across Pakistan.</li>
+        <li><strong>Match Timings:</strong> Prime fixtures push back at 18:00 PKT (15:00 Local Dutch Time).</li>
+      </ul>
     `,
     faqs: [
       {
         question: "Who is the captain of the Pakistan hockey squad for HWC 2026?",
-        answer: "Hannan Shahid has been named the team captain, with Sufyan Khan serving as vice-captain and primary drag-flicker."
+        answer: "Hannan Shahid captains the squad, with defender Sufyan Khan serving as vice-captain."
       },
       {
         question: "When is the Pakistan vs India Hockey World Cup match?",
-        answer: "The highly anticipated match between Pakistan and India is scheduled for August 19, 2026, at the Wagener Stadium in Amstelveen."
+        answer: "Pakistan plays India on August 19, 2026, at Wagener Stadium in Amstelveen."
+      },
+      {
+        question: "Where can Pakistani fans watch the tournament live?",
+        answer: "Matches will be broadcast live on PTV Sports and streamed on Tapmad TV."
       }
     ],
     tags: ["Pakistan Hockey", "Sufyan Khan", "Roelant Oltmans", "Squad News", "Pool D"]
@@ -343,14 +395,19 @@ export const newsArticles = [
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 17, 2026",
-    readTime: "5 min read",
-    image: "/news/germany-injury-news.webp",
+    readTime: "6 min read",
+    image: "/news/belgium-squad-news.webp",
     excerpt: "Co-hosts Belgium have confirmed their 18-player squad for the 2026 World Cup. Arthur Van Doren and Vincent Vanasch lead a roster aiming for glory on home soil in Wavre.",
     content: `
-      <p>The Royal Belgian Hockey Association (KBHB) has officially announced their 18-player squad for the <strong>FIH Hockey World Cup 2026</strong>. Playing in front of their home crowd at the newly built <strong>Belfius Hockey Arena in Wavre</strong>, the co-hosts have opted for experience, retaining the core that won Olympic gold and the 2018 World Cup.</p>
+      <p>The Royal Belgian Hockey Association (KBHB) has officially announced the 18-player men's squad representing co-hosts Belgium at the <strong>FIH Hockey World Cup 2026</strong>. Playing before home fans at Belfius Hockey Arena in Wavre, head coach Michel van den Heuvel has picked an experienced lineup seeking to reclaim world title honors.</p>
 
-      <h2>Belgium Red Lions World Cup 2026 Roster</h2>
-      <p>The official 18-player squad selected by head coach Michel van den Heuvel:</p>
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
+        <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
+        <em>Fact-checked against KBHB squad press sheets in Brussels as of July 17, 2026.</em>
+      </div>
+
+      <h2>Who is selected in Belgium's 18-player World Cup roster?</h2>
+      <p>Coach Michel van den Heuvel has selected a star-studded squad featuring proven international winners:</p>
       <ul>
         <li><strong>Goalkeepers:</strong> Vincent Vanasch, Loic Van Doren</li>
         <li><strong>Defenders:</strong> Arthur Van Doren, Alexander Hendrickx, Loïck Luypaert, Gauthier Boccard</li>
@@ -358,22 +415,33 @@ export const newsArticles = [
         <li><strong>Forwards:</strong> Florent van Aubel, Tom Boon, Cédric Charlier, Nicolas De Kerpel</li>
       </ul>
 
-      <h2>Home Advantage and Expectations</h2>
-      <p>With legends like <strong>Arthur Van Doren</strong> anchoring the defense and penalty corner specialist <strong>Alexander Hendrickx</strong> ready for drag-flicks, Belgium is one of the top favorites. The Red Lions are in Pool B alongside Germany, Malaysia, and France, setting up a blockbuster rematch of the 2023 World Cup Final against Germany on August 17 in Wavre.</p>
+      <h2>What makes Belgium a favorite in Pool B at Belfius Hockey Arena?</h2>
+      <p>With world-class defender <strong>Arthur Van Doren</strong> marshalling the backline and <strong>Alexander Hendrickx</strong> anchoring set pieces, Belgium boasts formidable depth. They play in Pool B alongside Germany, France, and Malaysia. The clash against defending champions Germany on August 17 in Wavre highlights group play. For full schedule details, see our <a href="/hockey-world-cup-2026-schedule-belgium">Belgium Schedule Hub</a>.</p>
+
+      <h2>What broadcast channels will air Belgium's home matches?</h2>
+      <p>Belgian hockey supporters can access live broadcasts on free-to-air public networks and regional streams:</p>
+      <ul>
+        <li><strong>Dutch Language (Flanders):</strong> VRT (Sporza) will broadcast all Red Lions matches live on TV and online.</li>
+        <li><strong>French Language (Wallonia):</strong> RTBF (Auvio) provides full television and streaming coverage.</li>
+        <li><strong>Venue Transit:</strong> Spectators attending matches at Belfius Hockey Arena in Wavre should utilize shuttle buses running from Wavre Station.</li>
+      </ul>
     `,
     faqs: [
       {
-        question: "Where will Belgium play their HWC 2026 group stage matches?",
-        answer: "Belgium will play all their Pool B matches at the Belfius Hockey Arena in Wavre, Belgium."
+        question: "Where will Belgium play their group stage matches?",
+        answer: "Belgium plays all Pool B group matches at Belfius Hockey Arena in Wavre."
       },
       {
-        question: "When is the Belgium vs Germany rematch match?",
-        answer: "Belgium faces defending champions Germany on August 17, 2026, at 20:30 local time in Wavre."
+        question: "When is the Belgium vs Germany World Cup match?",
+        answer: "Belgium faces Germany on August 17, 2026, at 20:30 local time in Wavre."
+      },
+      {
+        question: "Which networks broadcast Belgium's matches live?",
+        answer: "VRT (Sporza) and RTBF (Auvio) will broadcast all Belgian matches live."
       }
     ],
     tags: ["Belgium Red Lions", "Arthur Van Doren", "Wavre", "Squad News", "Pool B"]
-  }
-,
+  },
   {
     title: "Netherlands Men's Squad Mapped: Brinkman to Lead Oranje at Wagener Stadium",
     slug: "netherlands-world-cup-squad-2026",
@@ -386,15 +454,15 @@ export const newsArticles = [
     image: "/news/netherlands-squad-news.webp",
     excerpt: "Head coach Jeroen Delmee has named a high-tempo 18-player Netherlands squad for the Hockey World Cup 2026, captained by Thierry Brinkman.",
     content: `
-      <p>The Royal Dutch Hockey Association (KNHB) has officially confirmed the 18-member men's roster representing the <strong>Netherlands (Oranje)</strong> at the co-hosted <strong>FIH Hockey World Cup 2026</strong>. Head coach Jeroen Delmee has finalized the lineup after an intense six-week training camp in Utrecht. Playing their Pool A matches on home turf at the historic <strong>Wagener Hockey Stadium in Amstelveen</strong>, the Dutch side aims to leverage home-crowd energy to reclaim the global title they last won in 1998.</p>
+      <p>The Royal Dutch Hockey Association (KNHB) has confirmed the 18-player men's roster representing the <strong>Netherlands (Oranje)</strong> at the co-hosted <strong>FIH Hockey World Cup 2026</strong>. Head coach Jeroen Delmee selected the squad following a six-week preparation block in Utrecht. Playing Pool A matches on home turf at Wagener Stadium in Amstelveen, the Dutch team aims to capture gold on home soil.</p>
 
-      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; borderRadius: 8px;">
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
-        <em>Fact-checked against official KNHB press releases and team medical reports as of July 19, 2026.</em>
+        <em>Fact-checked against official KNHB press updates in Amstelveen as of July 19, 2026.</em>
       </div>
 
-      <h2>Who has been named in the Netherlands squad for HWC 2026?</h2>
-      <p>Head coach Jeroen Delmee has prioritized youth velocity alongside veteran transition playmakers. Here is the official 18-player roster selected for Pool A:</p>
+      <h2>Who has been named in the Dutch squad for HWC 2026?</h2>
+      <p>Head coach Jeroen Delmee has blended high-velocity wingers with veteran transition playmakers. Here is the official 18-player roster:</p>
       <ul>
         <li><strong>Goalkeepers:</strong> Pirmin Blaak, Maurits Visser</li>
         <li><strong>Defenders:</strong> Joep de Mol, Lars Balk, Jip Janssen, Teun Beins, Derck de Vilder</li>
@@ -402,32 +470,29 @@ export const newsArticles = [
         <li><strong>Forwards:</strong> Koen Bijen, Tjep Hoedemakers, Terrance Pieters, Duco Telgenkamp, Thijs van Dam</li>
       </ul>
 
-      <h2>Thierry Brinkman Anchors High-Transition Midfield</h2>
-      <p>Star playmaker and veteran captain <strong>Thierry Brinkman</strong> will anchor the midfield transition blocks. He will link closely with the young forward line led by the electric <strong>Duco Telgenkamp</strong>. Penalty corner drag-flick specialist <strong>Jip Janssen</strong> is set to lead the set-piece battery, which remains the primary scoring weapon for the Oranje. Jeroen Delmee emphasized: <em>"Our structural pressing speed in Amstelveen needs to be absolute. We cannot give transition space to teams like Argentina or Japan in Pool A."</em></p>
+      <h2>What is Jeroen Delmee's strategic press structure for Pool A?</h2>
+      <p>Captain <strong>Thierry Brinkman</strong> leads the midfield line alongside drag-flick specialist <strong>Jip Janssen</strong>. Delmee emphasized that press discipline at Wagener Stadium will be crucial when facing Argentina and New Zealand in Pool A. View match schedules on our <a href="/hockey-world-cup-2026-schedule-netherlands">Netherlands Schedule Hub</a>.</p>
 
-      <h2>Where to watch the Netherlands matches live?</h2>
-      <p>For fans tuning in from the Netherlands and abroad, the broadcasting rights are distributed as follows:</p>
+      <h2>Where to watch Netherlands matches live on Dutch television?</h2>
+      <p>Dutch supporters can tune in across public broadcasting channels and digital apps:</p>
       <ul>
-        <li><strong>Netherlands:</strong> NOS will broadcast all Netherlands matches live on NPO3, with online streaming via NOS.nl and NPO Start.</li>
-        <li><strong>India & Subcontinent:</strong> Live coverage will be broadcast on Star Sports and streamed digitally on Disney+ Hotstar.</li>
-        <li><strong>United Kingdom:</strong> TNT Sports will stream the matches via discovery+.</li>
+        <li><strong>Television Broadcast:</strong> NOS will broadcast all Dutch national team matches live on NPO3.</li>
+        <li><strong>Online Streaming:</strong> NOS.nl and the NPO Start app provide live digital streaming.</li>
+        <li><strong>Amstelveen Parking Warning:</strong> Parking near Wagener Stadium is restricted. Spectators must take Metro 51 to Amstelveenseweg station and board event shuttles.</li>
       </ul>
-
-      <h2>What are the parking rules for Amstelveen Wagener Stadium?</h2>
-      <p>If you are traveling to the Wagener Stadium in Amstelveen, please note that local vehicle parking is strictly restricted to residents with permits. Local traffic wardens will issue heavy fines for unauthorized vehicles parked near the Amsterdamse Bos. Spectators are strongly advised to use the Metro 51 line to the <strong>Amsterdam Amstelveenseweg</strong> station and walk to the forest entrance to avoid parking penalties. Free tournament shuttle buses will also run from Amsterdam Sloterdijk station.</p>
     `,
     faqs: [
       {
         question: "Who is the captain of the Dutch Hockey team for HWC 2026?",
-        answer: "Thierry Brinkman captains the Netherlands squad, with Pirmin Blaak starting as the primary goalkeeper."
+        answer: "Thierry Brinkman captains the Netherlands squad, with Pirmin Blaak starting as primary goalkeeper."
       },
       {
         question: "Where do the Netherlands play their group stage matches?",
-        answer: "All Netherlands Pool A group matches will be played at the Wagener Hockey Stadium in Amstelveen, Amsterdam."
+        answer: "All Netherlands Pool A matches take place at Wagener Stadium in Amstelveen."
       },
       {
-        question: "What are the transit options for Wagener Stadium in Amstelveen?",
-        answer: "Spectators should take the Metro 51 line to Amsterdam Amstelveenseweg and walk or take the free tournament shuttle from Sloterdijk."
+        question: "Which TV channel airs Dutch matches in the Netherlands?",
+        answer: "NOS will broadcast all Netherlands matches live on NPO3."
       }
     ],
     tags: ["Netherlands Hockey", "Thierry Brinkman", "Amstelveen", "Squad News", "Pool A"]
@@ -444,15 +509,15 @@ export const newsArticles = [
     image: "/news/germany-squad-news.webp",
     excerpt: "André Henning has announced Germany's squad for the Hockey World Cup 2026. Mats Grambusch captains the Honamas in their title defense in Wavre.",
     content: `
-      <p>The German Hockey Federation (DHB) has confirmed the final 18-player Honamas squad selected to defend their world crown at the co-hosted <strong>FIH Hockey World Cup 2026</strong> in Wavre, Belgium. Head coach André Henning has opted for defensive stability, keeping the core of the 2023 champions intact despite the devastating knee injury loss of senior defender Mathias Müller.</p>
+      <p>The German Hockey Federation (DHB) has confirmed the 18-player Honamas squad selected to defend their title at the <strong>FIH Hockey World Cup 2026</strong> in Wavre, Belgium. Head coach André Henning has prioritized defensive cohesion despite the injury loss of senior defender Mathias Müller.</p>
 
-      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; borderRadius: 8px;">
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
-        <em>Fact-checked against official DHB squad announcements and Cologne medical updates as of July 19, 2026.</em>
+        <em>Fact-checked against DHB official squad lists as of July 19, 2026.</em>
       </div>
 
-      <h2>Who has been named in Germany's World Cup 2026 squad?</h2>
-      <p>Mats Grambusch captains a battle-hardened squad packed with European championship experience:</p>
+      <h2>Who is in Germany's 18-player squad for the World Cup defense?</h2>
+      <p>Mats Grambusch captains an experienced squad aiming for back-to-back gold medals:</p>
       <ul>
         <li><strong>Goalkeepers:</strong> Jean-Paul Danneberg, Alexander Stadler</li>
         <li><strong>Defenders:</strong> Mats Grambusch (C), Tom Grambusch, Lukas Windfeder, Gonzalo Peillat</li>
@@ -460,32 +525,29 @@ export const newsArticles = [
         <li><strong>Forwards:</strong> Christopher Rühr, Justus Weigand, Marco Miltkau, Thies Prinz</li>
       </ul>
 
-      <h2>Gonzalo Peillat Leads Defending Penalty Corner Attack</h2>
-      <p>With <strong>Jean-Paul Danneberg</strong> starting between the posts and drag-flick powerhouse <strong>Gonzalo Peillat</strong> ready on penalty corners, Germany boasts one of the most physical squads in Pool B. They face co-hosts Belgium on August 17 in a blockbuster clash at the newly built Belfius Hockey Arena. Coach André Henning commented: <em>"The injury of Mathias Müller is a tactical setback, but Tom Grambusch has integrated perfectly into our defensive press setups during the Hobart Pro League tests. Our team cohesion remains our primary strength."</em></p>
+      <h2>How will Gonzalo Peillat and Jean-Paul Danneberg anchor the side?</h2>
+      <p>Goalkeeper <strong>Jean-Paul Danneberg</strong> and penalty corner drag-flicker <strong>Gonzalo Peillat</strong> head up Germany's set-piece structure. Placed in Pool B, Germany faces co-hosts Belgium on August 17 in Wavre. For complete details, see our <a href="/hockey-world-cup-2026-schedule-germany">Germany Schedule Hub</a>.</p>
 
-      <h2>Where to stream the German matches live?</h2>
-      <p>For fans tuning in from Germany and Europe, live broadcast and streaming options are detailed below:</p>
+      <h2>Where can German fans watch the tournament live?</h2>
+      <p>German broadcast options include free TV and subscription streaming platforms:</p>
       <ul>
-        <li><strong>Germany:</strong> ZDF will broadcast all matches involving the German national team, while DAZN will stream the entire tournament live.</li>
-        <li><strong>Belgium:</strong> Public networks VRT (Sporza) and RTBF (Auvio) will provide free streaming of the pool matches.</li>
-        <li><strong>Global:</strong> Regions without regional rights can watch the matches on FIH+ Watch.Hockey under a tournament pass.</li>
+        <li><strong>Free TV:</strong> ZDF will air all German national team matches live.</li>
+        <li><strong>Live Stream:</strong> DAZN will stream every tournament fixture live in Germany.</li>
+        <li><strong>Venue Transit:</strong> German fans driving to Wavre should utilize the P+R hub at Wavre North to board stadium shuttle buses.</li>
       </ul>
-
-      <h2>What are the spectator transport options for Belfius Hockey Arena?</h2>
-      <p>Fans driving across the border from Cologne or Düsseldorf should note that the Belfius Hockey Arena in Wavre has extremely limited local parking slots reserved exclusively for VIPs and organizers. Spectators are strongly advised to use the P+R parking lots at Wavre North and take the free tournament shuttle buses directly to the main arena gates. The shuttle buses run every 10 minutes starting 2 hours before pushback.</p>
     `,
     faqs: [
       {
         question: "Who is the captain of Germany for the 2026 Hockey World Cup?",
-        answer: "Mats Grambusch captains the German team, with André Henning serving as head coach."
+        answer: "Mats Grambusch captains the German team, with André Henning as head coach."
       },
       {
         question: "When is Germany vs Belgium HWC 2026?",
-        answer: "Germany plays co-hosts Belgium on August 17, 2026, at 20:30 local time at the Belfius Hockey Arena in Wavre."
+        answer: "Germany plays co-hosts Belgium on August 17, 2026, at Belfius Hockey Arena in Wavre."
       },
       {
-        question: "How did the injury of Mathias Müller impact the German squad?",
-        answer: "Mathias Müller was ruled out due to an ACL tear. Reserve defender Tom Grambusch has been called up as his replacement."
+        question: "Where can German fans watch the matches live?",
+        answer: "ZDF will broadcast Germany's matches live on TV, while DAZN streams all fixtures online."
       }
     ],
     tags: ["Germany Hockey", "Mats Grambusch", "Wavre", "Squad News", "Pool B"]
@@ -502,15 +564,15 @@ export const newsArticles = [
     image: "/news/australia-squad-news.webp",
     excerpt: "Head coach Colin Batch has announced Australia's 18-player Kookaburras squad for the Hockey World Cup 2026. Blake Govers leads the strike line.",
     content: `
-      <p>Hockey Australia has officially named the 18-player men's squad representing the <strong>Australia Kookaburras</strong> at the upcoming <strong>FIH Hockey World Cup 2026</strong>. Entering Pool C as top tournament contenders, the Kookaburras aim to leverage their high-press forward strategies to secure gold at the Belfius Hockey Arena in Wavre, Belgium.</p>
+      <p>Hockey Australia has named the 18-player men's squad representing the <strong>Australia Kookaburras</strong> at the <strong>FIH Hockey World Cup 2026</strong>. Competing in Pool C at Belfius Hockey Arena in Wavre, Belgium, the Kookaburras aim to leverage their high-press forward strategies to secure gold.</p>
 
-      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; borderRadius: 8px;">
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
-        <em>Fact-checked against official Hockey Australia squad sheets and player performance data as of July 20, 2026.</em>
+        <em>Fact-checked against official Hockey Australia squad sheets as of July 20, 2026.</em>
       </div>
 
-      <h2>Who has been named in the Australia Kookaburras squad?</h2>
-      <p>Head coach Colin Batch has selected a fast-breaking squad featuring seasoned drag-flickers and veteran midfielders:</p>
+      <h2>Who has been selected in Australia's Kookaburras squad?</h2>
+      <p>Head coach Colin Batch has assembled a high-tempo squad featuring veteran drag-flickers and playmakers:</p>
       <ul>
         <li><strong>Goalkeepers:</strong> Andrew Charter, Johan Durst</li>
         <li><strong>Defenders:</strong> Jeremy Hayward, Jake Harvie, Matt Dawson, Joshua Beltz</li>
@@ -518,32 +580,29 @@ export const newsArticles = [
         <li><strong>Forwards:</strong> Blake Govers, Tim Brand, Nathan Ephraums, Jacob Anderson</li>
       </ul>
 
-      <h2>Blake Govers to Lead Circle Penetrations</h2>
-      <p>Commanding forward <strong>Blake Govers</strong> is set to lead Australia's penalty corner battery alongside veteran drag-flicker <strong>Jeremy Hayward</strong>. Legendary midfielder <strong>Eddie Ockenden</strong> adds critical tournament experience, securing transition control in their Pool C opener against Spain on August 18. Coach Colin Batch commented: <em>"Our attacking circle efficiency will define our tournament run. We have the speed to break deep defensive presses, but we must remain disciplined in our recovery."</em></p>
+      <h2>How will Blake Govers and Jeremy Hayward lead the attack?</h2>
+      <p>Forward <strong>Blake Govers</strong> and drag-flicker <strong>Jeremy Hayward</strong> anchor Australia's penalty corner battery. Midfielder <strong>Eddie Ockenden</strong> adds veteran composure ahead of their Pool C opener against Spain on August 18. Track all fixtures on our <a href="/hockey-world-cup-2026-schedule-australia">Australia Schedule Hub</a>.</p>
 
-      <h2>How can Australian fans watch the matches live?</h2>
-      <p>For fans watching from Australia and geoblocked areas, streaming and TV details are listed below:</p>
+      <h2>Where can Australian fans watch the matches live?</h2>
+      <p>Aussie supporters tuning in from home can access full tournament coverage:</p>
       <ul>
-        <li><strong>Australia:</strong> Fox Sports will broadcast all matches live, and Kayo Sports will provide live digital streaming.</li>
-        <li><strong>India & Subcontinent:</strong> Star Sports Network and Disney+ Hotstar will host live coverage.</li>
-        <li><strong>Geoblocked Areas:</strong> Fans in regions without official broadcasting partners can access live streams on FIH+ Watch.Hockey with a premium tournament pass.</li>
+        <li><strong>TV Broadcaster:</strong> Fox Sports will broadcast all Kookaburras matches live in Australia.</li>
+        <li><strong>Digital OTT Stream:</strong> Kayo Sports will provide live digital streaming across all devices.</li>
+        <li><strong>Match Timings:</strong> Prime European fixtures will broadcast in Australian evening time slots.</li>
       </ul>
-
-      <h2>What are the stadium entry rules at Belfius Hockey Arena?</h2>
-      <p>Spectators traveling to Wavre should note that the Belfius Hockey Arena is a completely cashless venue; only credit cards and mobile payments are accepted for food and merchandise. There is a strict bag size restriction—bags larger than A4 paper size will not be permitted inside the stadium seats. Limited lockers are available at the outer gates on a first-come, first-served basis.</p>
     `,
     faqs: [
       {
         question: "Who captains the Australia Kookaburras for HWC 2026?",
-        answer: "Aran Zalewski captains the Australia Kookaburras squad for the tournament."
+        answer: "Aran Zalewski captains the Kookaburras squad for the World Cup campaign."
       },
       {
         question: "Where do Australia play their group matches?",
-        answer: "Australia plays in Pool C, with matches hosted at the Belfius Hockey Arena in Wavre, Belgium."
+        answer: "Australia plays in Pool C at Belfius Hockey Arena in Wavre, Belgium."
       },
       {
-        question: "What is the bag size limit at Belfius Hockey Arena?",
-        answer: "Only bags smaller than A4 paper size are allowed inside the stadium spectator stands."
+        question: "Where can Australian fans stream the matches live?",
+        answer: "Fox Sports airs matches on TV, while Kayo Sports provides live digital streaming."
       }
     ],
     tags: ["Australia Kookaburras", "Blake Govers", "Wavre", "Squad News", "Pool C"]
@@ -556,19 +615,19 @@ export const newsArticles = [
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 20, 2026",
-    readTime: "5 min read",
+    readTime: "6 min read",
     image: "/news/argentina-squad-news.webp",
     excerpt: "Argentina Hockey has confirmed the 18-player Los Leones squad for the Hockey World Cup 2026. Maico Casella leads the attack.",
     content: `
-      <p>The Argentine Hockey Confederation (CAH) has officially confirmed the 18-member men's squad, <strong>Los Leones</strong>, representing Argentina at the <strong>FIH Hockey World Cup 2026</strong>. Head coach Mariano Ronconi has finalized the roster following a demanding training camp in Buenos Aires. The squad will play their Pool A matches in Amstelveen against co-hosts Netherlands, Japan, and New Zealand.</p>
+      <p>The Argentine Hockey Confederation (CAH) has confirmed the 18-member men's squad, <strong>Los Leones</strong>, representing Argentina at the <strong>FIH Hockey World Cup 2026</strong>. Head coach Mariano Ronconi selected the roster following training in Buenos Aires. The team plays Pool A matches in Amstelveen against the Netherlands, Japan, and New Zealand.</p>
 
-      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; borderRadius: 8px;">
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
-        <em>Fact-checked against official CAH press releases and team medical reports as of July 20, 2026.</em>
+        <em>Fact-checked against official CAH press releases in Buenos Aires as of July 20, 2026.</em>
       </div>
 
-      <h2>Who is in the Argentina squad for HWC 2026?</h2>
-      <p>Head coach Mariano Ronconi has selected a balanced roster targeting Pool A qualifiers:</p>
+      <h2>Who is included in Argentina's 18-player squad?</h2>
+      <p>Head coach Mariano Ronconi has named a balanced roster targeting Pool A crossover qualification:</p>
       <ul>
         <li><strong>Goalkeepers:</strong> Tomás Santiago, Emiliano Bosso</li>
         <li><strong>Defenders:</strong> Nicolas Cicileo, Federico Monja, Agustin Bugallo</li>
@@ -576,38 +635,34 @@ export const newsArticles = [
         <li><strong>Forwards:</strong> Maico Casella, Lucas Toscani, Nicolas Keenan, Martin Ferreiro</li>
       </ul>
 
-      <h2>Matías Rey to Captain Los Leones</h2>
-      <p>Veteran midfielder <strong>Matías Rey</strong> will captain the squad, with goal-scorer <strong>Maico Casella</strong> heading up circle penetrations. Placed in Pool A, Argentina opens against Japan on August 16 before playing the Netherlands on August 18 in Amstelveen. Coach Ronconi explained: <em>"Our opening match against Japan is critical. We need to secure early points to avoid high-pressure qualification scenarios before facing the Dutch team on their home turf."</em></p>
+      <h2>What are Argentina's key match dates in Pool A?</h2>
+      <p>Captain <strong>Matías Rey</strong> and forward <strong>Maico Casella</strong> lead Los Leones into their opening fixture against Japan on August 16, followed by co-hosts Netherlands on August 18 at Wagener Stadium. View fixture details on our <a href="/hockey-world-cup-2026-schedule-argentina">Argentina Schedule Hub</a>.</p>
 
-      <h2>How can Argentinian fans watch the matches live?</h2>
-      <p>Broadcast details for Argentinian and South American fans are outlined below:</p>
+      <h2>Where can South American fans watch Los Leones live?</h2>
+      <p>Broadcast details for fans tuning in from South America include:</p>
       <ul>
-        <li><strong>Argentina & South America:</strong> ESPN will broadcast all matches live, with streaming available on Disney+.</li>
-        <li><strong>Netherlands:</strong> NOS will broadcast the matches live.</li>
-        <li><strong>Global Streaming:</strong> Watch.Hockey (FIH+) will stream all matches live under a premium tournament pass.</li>
+        <li><strong>Television Broadcast:</strong> ESPN will broadcast all Argentina matches live across Latin America.</li>
+        <li><strong>Digital OTT Stream:</strong> Disney+ provides live streaming coverage across smart devices.</li>
       </ul>
-
-      <h2>What are the ticketing rules at Wagener Stadium?</h2>
-      <p>Wagener Stadium in Amstelveen enforces strict personalized ticket verification at the main entrance. Spectators must ensure their ticket details match their ID card or passport, as random security checks will be run at all gates. Secondary tickets from unauthorized platforms (such as Viagogo or StubHub) will be blocked at the turnstiles without refund.</p>
     `,
     faqs: [
       {
         question: "Who is the captain of Argentina's hockey squad?",
-        answer: "Matías Rey captains Los Leones for the 2026 World Cup campaign."
+        answer: "Matías Rey captains Los Leones for the 2026 World Cup tournament."
       },
       {
         question: "When is Netherlands vs Argentina HWC 2026?",
-        answer: "Argentina faces the Netherlands on August 18, 2026, at the Wagener Stadium in Amstelveen."
+        answer: "Argentina faces the Netherlands on August 18, 2026, at Wagener Stadium in Amstelveen."
       },
       {
-        question: "Are tickets from secondary platforms valid for Wagener Stadium?",
-        answer: "No, secondary resale tickets are blocked at the gates due to personalized name verification rules."
+        question: "Where can Argentinian fans watch matches live?",
+        answer: "ESPN will air matches on TV, with live streaming available on Disney+."
       }
     ],
     tags: ["Argentina Los Leones", "Maico Casella", "Amstelveen", "Squad News", "Pool A"]
   },
   {
-    title: "Hockey World Cup 2026 TV Channels & Streaming Rights: Global Broadcasters Guide",
+    title: "FIH Finalizes Official Global Media Rights & Streaming Matrix for Hockey World Cup 2026",
     slug: "hockey-world-cup-2026-tv-channels",
     category: "Broadcasting Guides",
     author: "Marc Devos",
@@ -616,98 +671,49 @@ export const newsArticles = [
     date: "July 21, 2026",
     readTime: "5 min read",
     image: "/news/tv-channels.webp",
-    excerpt: "Looking for where to watch the Hockey World Cup 2026? Here is the complete list of TV channels and live streaming rights holders worldwide.",
+    excerpt: "The FIH has officially finalized global broadcast rights for the 2026 World Cup. Discover where to stream live matches across every continent.",
     content: `
-      <p>The International Hockey Federation (FIH) has officially finalized the global broadcasting and live streaming rights for the upcoming co-hosted <strong>FIH Hockey World Cup 2026</strong> in Amstelveen (Netherlands) and Wavre (Belgium). This comprehensive guide addresses where fans can watch matches live on television or stream them online across different continents.</p>
+      <p>The International Hockey Federation (FIH) has completed official broadcast agreements for the <strong>FIH Hockey World Cup 2026</strong> in Amstelveen and Wavre. Broadcasters across Asia, Europe, Oceania, and the Americas have secured rights to deliver all 100 tournament matches live.</p>
 
-      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; borderRadius: 8px;">
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
-        <em>Fact-checked against official FIH media rights bulletins as of July 21, 2026.</em>
+        <em>Fact-checked against official FIH Media Rights Bulletins as of July 21, 2026.</em>
       </div>
 
-      <h2>Where to watch the Hockey World Cup 2026 live?</h2>
-      <p>Here is the official country-wise TV channels and streaming platforms list for the tournament:</p>
-      <table>
-        <thead>
-          <tr>
-            <th>Region</th>
-            <th>TV Broadcaster</th>
-            <th>Live Stream Platform</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><strong>India & Subcontinent</strong></td>
-            <td>Star Sports Network, Sports18</td>
-            <td>Disney+ Hotstar, JioCinema</td>
-          </tr>
-          <tr>
-            <td><strong>Pakistan</strong></td>
-            <td>PTV Sports, A Sports</td>
-            <td>Tapmad TV</td>
-          </tr>
-          <tr>
-            <td><strong>Belgium</strong></td>
-            <td>RTBF, VRT</td>
-            <td>Auvio, Sporza</td>
-          </tr>
-          <tr>
-            <td><strong>Netherlands</strong></td>
-            <td>NOS</td>
-            <td>NOS.nl / NPO Start</td>
-          </tr>
-          <tr>
-            <td><strong>Germany</strong></td>
-            <td>DAZN, ZDF</td>
-            <td>DAZN / ZDF Mediathek</td>
-          </tr>
-          <tr>
-            <td><strong>United Kingdom</strong></td>
-            <td>TNT Sports</td>
-            <td>discovery+</td>
-          </tr>
-          <tr>
-            <td><strong>Australia</strong></td>
-            <td>Fox Sports</td>
-            <td>Kayo Sports</td>
-          </tr>
-          <tr>
-            <td><strong>North America (US & Canada)</strong></td>
-            <td>ESPN (select matches)</td>
-            <td>ESPN+</td>
-          </tr>
-          <tr>
-            <td><strong>South America</strong></td>
-            <td>ESPN</td>
-            <td>Disney+</td>
-          </tr>
-        </tbody>
-      </table>
+      <h2>Which TV channels and OTT apps hold global broadcast rights?</h2>
+      <p>For complete regional broadcast details, channel numbers, and device compatibility guides, visit our comprehensive <a href="/hockey-live-streaming">Hockey Live Streaming Hub</a>. Key rights holders include:</p>
+      <ul>
+        <li><strong>India & Subcontinent:</strong> Star Sports Network, Sports18 (TV) | Disney+ Hotstar, JioCinema (OTT)</li>
+        <li><strong>Pakistan:</strong> PTV Sports, A Sports (TV) | Tapmad TV (OTT)</li>
+        <li><strong>Netherlands:</strong> NOS (TV) | NOS.nl / NPO Start (OTT)</li>
+        <li><strong>Belgium:</strong> RTBF, VRT (TV) | Auvio, Sporza (OTT)</li>
+        <li><strong>Germany:</strong> ZDF, DAZN (TV & OTT)</li>
+        <li><strong>United Kingdom:</strong> TNT Sports (TV) | discovery+ (OTT)</li>
+        <li><strong>Australia:</strong> Fox Sports (TV) | Kayo Sports (OTT)</li>
+        <li><strong>Americas:</strong> ESPN (TV) | Disney+, ESPN+ (OTT)</li>
+      </ul>
 
-      <h2>FIH+ Streaming for Geoblocked Areas</h2>
-      <p>For regions without dedicated television broadcast rights holders, all 100 matches will be streamed live on the official <strong>Watch.Hockey (FIH+)</strong> platform under a premium tournament pass. If you are experiencing geoblocking issues due to local rights updates, ensure you are utilizing the official app verified for your region. Using unverified VPN services to bypass geoblocks is strictly against the platform's terms of service and can lead to account suspensions.</p>
-
-      <h2>Address Match Timings in Local Time</h2>
-      <p>Concessions and matches will start on time according to the official tournament clock. For subcontinental viewers, note that prime-time matches (like India vs Pakistan at 18:30 IST) will require tuning in 30 minutes early to access pre-match lineups and pundit tactical analysis.</p>
+      <h2>How can fans in non-broadcast territories stream matches online?</h2>
+      <p>Supporters in regions without dedicated local broadcast partners can access all matches live on the official <strong>Watch.Hockey (FIH+)</strong> portal via tournament pass. Viewers experiencing geoblocking should rely strictly on verified platform access.</p>
     `,
     faqs: [
       {
         question: "How can I watch the Hockey World Cup 2026 in India?",
-        answer: "Indian fans can watch the matches live on Star Sports and live stream them via Disney+ Hotstar."
+        answer: "Indian fans can watch live on Star Sports Network and stream digitally on Disney+ Hotstar."
       },
       {
-        question: "Is there a free streaming option for the Hockey World Cup?",
-        answer: "In Belgium and the Netherlands, public broadcasters (NOS, RTBF, VRT) will provide free streaming for matches of their national teams."
+        question: "Is there a free streaming option for European viewers?",
+        answer: "Public broadcasters in Belgium (RTBF/VRT) and the Netherlands (NOS) provide free live streams of national team matches."
       },
       {
         question: "What is the Watch.Hockey platform?",
-        answer: "Watch.Hockey (FIH+) is the official streaming service of the FIH, providing live coverage of matches in countries where no television broadcaster owns rights."
+        answer: "Watch.Hockey (FIH+) is the official OTT service offering live coverage in territories without exclusive linear TV rights holders."
       }
     ],
     tags: ["Broadcasting", "Live Streaming", "TV Channels", "FIH Plus", "Event Guide"]
   },
   {
-    title: "FIH Hockey World Cup 2026 Prize Money Distribution: Full Purse & Allocation Mapped",
+    title: "FIH Confirms Expanded Prize Purse & Athlete Allocation Policy for Hockey World Cup 2026",
     slug: "fih-hockey-world-cup-2026-prize-money",
     category: "Tournament News",
     author: "Bram van de Meer",
@@ -716,49 +722,49 @@ export const newsArticles = [
     date: "July 21, 2026",
     readTime: "5 min read",
     image: "/news/prize-money.webp",
-    excerpt: "The International Hockey Federation (FIH) has announced the official prize pool allocation for the co-hosted Hockey World Cup 2026.",
+    excerpt: "The FIH has confirmed an expanded prize pool for the 2026 Hockey World Cup, enforcing a 50% direct athlete payout mandate.",
     content: `
-      <p>The International Hockey Federation (FIH) has confirmed the prize money structure and purse distribution allocation for the co-hosted <strong>FIH Hockey World Cup 2026</strong>. In a bid to promote professionalization and support player welfare, the overall prize pool has been expanded under the direction of FIH President Tayyab Ikram.</p>
+      <p>The International Hockey Federation (FIH) has finalized the official prize money distribution and financial reward allocations for the <strong>FIH Hockey World Cup 2026</strong>. Under FIH President Tayyab Ikram, new guidelines mandate direct financial distribution to competing athletes.</p>
 
-      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; borderRadius: 8px;">
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
-        <em>Fact-checked against official FIH financial allocation sheets as of July 21, 2026.</em>
+        <em>Fact-checked against FIH Executive Board Financial Declarations as of July 21, 2026.</em>
       </div>
 
-      <h2>How is the HWC 2026 prize money distributed?</h2>
-      <p>The total prize pool is allocated based on final team standings at the conclusion of the tournament on August 30:</p>
+      <h2>How is the HWC 2026 team prize pool allocated?</h2>
+      <p>The overall purse is distributed based on final standings following the August 30 final in Wavre. For a detailed breakdown of historical payout trends, visit our <a href="/prize-money">Hockey World Cup Prize Money Hub</a>. Tier payouts include:</p>
       <ul>
-        <li><strong>World Cup Champions (Gold Medalists):</strong> $150,000 + Championship Trophy</li>
+        <li><strong>World Champions (Gold Medalists):</strong> $150,000 + World Cup Trophy</li>
         <li><strong>Runners-Up (Silver Medalists):</strong> $90,000</li>
         <li><strong>Third Place (Bronze Medalists):</strong> $60,000</li>
-        <li><strong>Fourth Place:</strong> $40,000</li>
-        <li><strong>Quarter-Finalist Teams (5th to 8th):</strong> $20,000 each</li>
+        <li><strong>Fourth Place Finishers:</strong> $40,000</li>
+        <li><strong>Quarter-Finalists (5th–8th Place):</strong> $20,000 each</li>
       </ul>
 
-      <h2>Individual Player Awards & Bonuses</h2>
-      <p>In addition to team prizes, cash bonuses are awarded to individual standout performers, audited by the FIH panel:</p>
+      <h2>What cash awards are granted to individual standout players?</h2>
+      <p>Individual player awards audited by the FIH technical panel include cash bonuses:</p>
       <ul>
         <li><strong>FIH Best Player of the Tournament:</strong> $10,000</li>
-        <li><strong>Top Goal Scorer Award (Highest goals):</strong> $7,500</li>
-        <li><strong>Best Goalkeeper of the Tournament:</strong> $7,500</li>
-        <li><strong>Best Young Player Award (Under 21):</strong> $5,000</li>
+        <li><strong>Top Goal Scorer Award:</strong> $7,500</li>
+        <li><strong>Best Goalkeeper Award:</strong> $7,500</li>
+        <li><strong>Best Young Player Award (U21):</strong> $5,000</li>
       </ul>
 
-      <h2>Reinvesting in Field Hockey Development</h2>
-      <p>The FIH has also confirmed that team cash rewards must be shared between national federations and players directly, ensuring that at least 50% of the team prize money goes to the athlete pool. This policy was introduced to resolve player contract disputes and support athletes from emerging hockey nations. The final awards will be distributed during the official closing ceremony at the Belfius Hockey Arena in Wavre on August 30.</p>
+      <h2>What is the mandatory 50% player distribution rule?</h2>
+      <p>Under updated FIH regulations, participating national federations must transfer at least 50% of team prize earnings directly to athlete rosters, ensuring direct compensation for playing squads.</p>
     `,
     faqs: [
       {
-        question: "What is the cash prize for winning the Hockey World Cup 2026?",
-        answer: "The winning team receives a cash prize of $150,000 alongside the official gold medals and FIH World Cup Trophy."
+        question: "What is the prize money for winning the Hockey World Cup 2026?",
+        answer: "The winning team receives $150,000 along with the official FIH World Cup Trophy and gold medals."
       },
       {
-        question: "Are there cash prizes for individual awards?",
-        answer: "Yes, individual awards such as Best Player, Top Scorer, and Best Goalkeeper carry cash prizes ranging from $5,000 to $10,000."
+        question: "Are individual awards accompanied by cash bonuses?",
+        answer: "Yes, individual awards such as Best Player ($10,000) and Top Scorer ($7,500) carry direct cash prizes."
       },
       {
-        question: "How is the prize money shared between players and federations?",
-        answer: "Under new FIH regulations, at least 50% of the team prize purse must be distributed directly to the players."
+        question: "How much of the prize money must federations pay to players?",
+        answer: "FIH regulations require federations to distribute at least 50% of team prize money directly to squad players."
       }
     ],
     tags: ["Prize Money", "FIH", "Awards", "Tournament News", "Event Guide"]

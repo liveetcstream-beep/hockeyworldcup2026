@@ -139,7 +139,7 @@ export default function Header() {
                     <div className="mega-column">
                       <div className='nav-heading'>📅 Tournament Calendar</div>
                       <ul>
-                        <li><a href="/schedule">Time Table</a></li>
+                        <li><a href="/schedule">Full Schedule</a></li>
                         <li><a href="/format">⚙️ Tournament Format & Bracket</a></li>
                         <li><a href="/points-table">📈 Points Table</a></li>
                         <li><a href="/h2h">⚔️ Head-to-Head (H2H) History</a></li>
@@ -347,7 +347,7 @@ export default function Header() {
           <li><a href="/" onClick={() => setIsMobileOpen(false)}>🏠 Home</a></li>
           
           <li className="mobile-section-header">📅 Schedules & Pools</li>
-          <li><a href="/schedule" onClick={() => setIsMobileOpen(false)}>📅 Time Table</a></li>
+          <li><a href="/schedule" onClick={() => setIsMobileOpen(false)}>📅 Full Schedule</a></li>
           <li><a href="/hockey-world-cup-2026-groups" onClick={() => setIsMobileOpen(false)}>🏆 All Pool Groups</a></li>
           <li><a href="/format" onClick={() => setIsMobileOpen(false)}>⚙️ Tournament Format</a></li>
           <li><a href="/points-table" onClick={() => setIsMobileOpen(false)}>📈 Points Table</a></li>
