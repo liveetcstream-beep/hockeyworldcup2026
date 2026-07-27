@@ -224,10 +224,10 @@ export default async function NewsArticlePage({ params }) {
           {/* Contextual Internal Links Section */}
           <section style={{ margin: "3.5rem 0", background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "20px", padding: "2rem" }}>
             <h3 style={{ fontSize: "1.25rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", marginBottom: "1.2rem", borderLeft: "4px solid #c00030", paddingLeft: "0.8rem" }}>
-              📌 In-Depth Coverage & Standings
+              📍 Key Tournament Hubs & Match Details
             </h3>
             <p style={{ fontSize: "0.95rem", color: "var(--text-muted)", marginBottom: "1.5rem" }}>
-              To get complete coverage of the squads, team brackets, local time conversions, and tickets booking, explore the following hubs:
+              Jump straight to team squad lists, match schedules, ticket details, or live standings:
             </p>
             <div style={{ display: "flex", flexWrap: "wrap", gap: "0.8rem" }}>
               {relatedLinks.map((link) => (
