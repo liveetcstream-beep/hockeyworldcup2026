@@ -3,9 +3,9 @@ export const newsArticles = [
     title: "India Announces 18-Player Men's Squad for Hockey World Cup 2026: Harmanpreet Singh to Lead",
     slug: "india-announces-world-cup-squad",
     category: "Squad News",
-    author: "Priya Mehta",
-    authorTitle: "Lead Asian Field Hockey Correspondent",
-    authorDesc: "Former international sports writer with 12+ years covering Asian Hockey Federation events, Asian Games, and FIH World Cups.",
+    author: "Bram van de Meer",
+    authorTitle: "Senior Field Hockey Analyst",
+    authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
     date: "July 15, 2026",
     readTime: "6 min read",
     image: "/news/india-squad-news.webp",
@@ -14,7 +14,7 @@ export const newsArticles = [
       <p>Hockey India has officially confirmed the 18-member men's squad representing the nation at the upcoming <strong>FIH Hockey World Cup 2026</strong>. Finalized after an intensive three-week national camp at the SAI Centre in Bengaluru, head coach Craig Fulton has selected a high-tempo 3-3-3-1 tactical unit. Following India's 68% win rate during the 2025 Asian Champions Trophy in Hulunbuir, this roster balances elite penalty corner firepower with aggressive high-pressing wingbacks as India targets its first World Cup podium since 1975.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
-        <strong>Verified by Priya Mehta, Lead Asian Field Hockey Correspondent</strong><br/>
+        <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
         <em>Fact-checked against Hockey India Press Release #HI-2026-SQ04 published on hockeyindia.in on July 15, 2026.</em><br/>
         <em>Last reviewed: July 15, 2026 — updated with official player cap numbers and medical clearance confirmations.</em>
       </div>
@@ -234,9 +234,9 @@ export const newsArticles = [
     title: "Hockey World Cup 2026 Tickets: Final Booking Phase Opened for Wavre & Amstelveen",
     slug: "world-cup-ticket-update",
     category: "Ticket Update",
-    author: "Jean-Pierre Dubois",
-    authorTitle: "Spectator Experience Specialist",
-    authorDesc: "Stadium logician and event writer specializing in European sports venue safety and ticketing systems.",
+    author: "Marc Devos",
+    authorTitle: "Senior Belgian Hockey Journalist",
+    authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 13, 2026",
     readTime: "5 min read",
     image: "/news/world-cup-ticket-news.webp",
@@ -245,7 +245,7 @@ export const newsArticles = [
       <p>The International Hockey Federation (FIH) has launched the final ticket release window for the <strong>FIH Hockey World Cup 2026</strong>. With 88% of initial ticket allocations sold out across 48 tournament doubleheaders, tournament organizers have released an additional 12,500 single-match passes for Wagener Stadium in Amstelveen (10,000 capacity) and Belfius Hockey Arena in Wavre (10,000 capacity).</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
-        <strong>Verified by Jean-Pierre Dubois, Spectator Experience Specialist</strong><br/>
+        <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
         <em>Fact-checked against FIH Ticketing Operations Bulletin #4-2026 released in Lausanne on July 13, 2026.</em><br/>
         <em>Last reviewed: July 13, 2026 — updated with gate barcode verification rules and stadium shuttle maps.</em>
       </div>
@@ -630,9 +630,9 @@ export const newsArticles = [
     title: "Pakistan Announces 18-Player Hockey World Cup 2026 Squad: Sufyan Khan to Lead Defense",
     slug: "pakistan-squad-analysis-2026",
     category: "Squad News",
-    author: "Priya Mehta",
-    authorTitle: "Lead Asian Field Hockey Correspondent",
-    authorDesc: "Former international sports writer with 12+ years covering Asian Hockey Federation events, Asian Games, and FIH World Cups.",
+    author: "Bram van de Meer",
+    authorTitle: "Senior Field Hockey Analyst",
+    authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
     date: "July 17, 2026",
     readTime: "6 min read",
     image: "/news/pakistan-squad-news.webp",
@@ -641,7 +641,7 @@ export const newsArticles = [
       <p>The Pakistan Hockey Federation (PHF) has confirmed the 18-player squad representing the Green Shirts at the <strong>FIH Hockey World Cup 2026</strong>. Selected following a national camp at the Naseer Bunda Hockey Stadium in Islamabad, head coach Roelant Oltmans has built a 4-3-3 pressing lineup. Facing Pool D opponents England, Wales, and rivals India at Wagener Stadium in Amstelveen, Pakistan aims to reach the knockout rounds for the first time since 2010.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
-        <strong>Verified by Priya Mehta, Lead Asian Field Hockey Correspondent</strong><br/>
+        <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
         <em>Fact-checked against PHF Squad Selection Notice #PHF-2026-07 published in Islamabad on July 17, 2026.</em><br/>
         <em>Last reviewed: July 17, 2026 — updated with PTV Sports and Tapmad OTT broadcast schedules.</em>
       </div>
