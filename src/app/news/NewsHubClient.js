@@ -72,7 +72,7 @@ export default function NewsHubClient() {
         </div>
 
         {/* Articles List Grid */}
-        <div className="news-feed-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "2rem" }}>
+        <div className="news-feed-grid" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(310px, 1fr))", gap: "2rem" }}>
           {filteredArticles.map((art) => (
             <article
               key={art.slug}
@@ -81,86 +81,105 @@ export default function NewsHubClient() {
                 display: "flex",
                 flexDirection: "column",
                 height: "100%",
-                padding: "1.5rem",
                 background: "var(--bg-secondary)",
                 borderRadius: "20px",
                 border: "1px solid var(--border-color)",
-                boxShadow: "0 4px 30px rgba(0, 0, 0, 0.05)",
-                transition: "transform 0.3s ease, border-color 0.3s ease"
+                boxShadow: "0 4px 20px rgba(0, 0, 0, 0.04)",
+                overflow: "hidden",
+                transition: "transform 0.3s ease, box-shadow 0.3s ease"
               }}
             >
-              {/* Category Badge & Meta Row */}
-              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
+              {/* Featured Image Container with Category Badge */}
+              <div style={{ position: "relative", width: "100%", aspectRatio: "16 / 10", overflow: "hidden", background: "var(--bg-tertiary)" }}>
+                <a href={`/news/${art.slug}`}>
+                  <img
+                    src={art.image}
+                    alt={art.title}
+                    style={{
+                      width: "100%",
+                      height: "100%",
+                      objectFit: "cover",
+                      display: "block",
+                      transition: "transform 0.4s ease"
+                    }}
+                  />
+                </a>
                 <span
                   style={{
-                    background: "rgba(192, 0, 48, 0.1)",
-                    color: "var(--primary)",
-                    fontSize: "0.75rem",
+                    position: "absolute",
+                    top: "0.9rem",
+                    left: "0.9rem",
+                    background: "rgba(192, 0, 48, 0.92)",
+                    color: "white",
+                    fontSize: "0.72rem",
                     fontWeight: "800",
                     textTransform: "uppercase",
-                    padding: "0.3rem 0.8rem",
-                    borderRadius: "6px",
-                    letterSpacing: "0.05em"
+                    padding: "0.35rem 0.8rem",
+                    borderRadius: "8px",
+                    letterSpacing: "0.05em",
+                    backdropFilter: "blur(4px)",
+                    boxShadow: "0 2px 10px rgba(0,0,0,0.2)"
                   }}
                 >
                   {art.category}
                 </span>
-                <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>⏱️ {art.readTime}</span>
               </div>
 
-              {/* Title */}
-              <h2 style={{ fontSize: "1.25rem", color: "var(--text-main)", fontWeight: "800", marginBottom: "0.8rem", lineHeight: "1.4" }}>
-                <a href={`/news/${art.slug}`} style={{ color: "inherit", textDecoration: "none" }}>
-                  {art.title}
-                </a>
-              </h2>
+              {/* Card Body */}
+              <div style={{ padding: "1.4rem", display: "flex", flexDirection: "column", flexGrow: 1 }}>
+                {/* Date & Read Time */}
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.8rem", fontSize: "0.78rem", color: "var(--text-muted)", fontWeight: "600" }}>
+                  <span>📅 {art.date}</span>
+                  <span>⏱️ {art.readTime}</span>
+                </div>
 
-              {/* Excerpt */}
-              <p style={{ color: "var(--text-muted)", fontSize: "0.92rem", lineHeight: "1.6", marginBottom: "1.5rem", flexGrow: 1 }}>
-                {art.excerpt}
-              </p>
+                {/* Title */}
+                <h2 style={{ fontSize: "1.15rem", color: "var(--text-main)", fontWeight: "800", marginBottom: "0.6rem", lineHeight: "1.4", display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                  <a href={`/news/${art.slug}`} style={{ color: "inherit", textDecoration: "none" }}>
+                    {art.title}
+                  </a>
+                </h2>
 
-              {/* Author & Date Footer */}
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "center",
-                  borderTop: "1px solid var(--border-color)",
-                  paddingTop: "1rem",
-                  marginTop: "auto"
-                }}
-              >
-                <div>
-                  <span style={{ display: "block", fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "700" }}>
+                {/* Shortened Excerpt */}
+                <p style={{ color: "var(--text-muted)", fontSize: "0.88rem", lineHeight: "1.5", marginBottom: "1.2rem", flexGrow: 1, display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical", overflow: "hidden" }}>
+                  {art.excerpt}
+                </p>
+
+                {/* Author & Action Button Footer */}
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    borderTop: "1px solid var(--border-color)",
+                    paddingTop: "1rem",
+                    marginTop: "auto"
+                  }}
+                >
+                  <span style={{ fontSize: "0.82rem", color: "var(--text-main)", fontWeight: "700" }}>
                     ✍️ {art.author}
                   </span>
-                  <span style={{ fontSize: "0.75rem", color: "var(--text-muted)" }}>{art.authorTitle}</span>
+                  <a
+                    href={`/news/${art.slug}`}
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "0.3rem",
+                      background: "rgba(192, 0, 48, 0.08)",
+                      color: "var(--primary)",
+                      border: "1px solid rgba(192, 0, 48, 0.2)",
+                      borderRadius: "8px",
+                      padding: "0.45rem 0.9rem",
+                      fontSize: "0.82rem",
+                      fontWeight: "700",
+                      textDecoration: "none",
+                      transition: "all 0.2s ease"
+                    }}
+                  >
+                    Read Article →
+                  </a>
                 </div>
-                <span style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>📅 {art.date}</span>
               </div>
-
-              {/* Action Button */}
-              <a
-                href={`/news/${art.slug}`}
-                style={{
-                  display: "block",
-                  textAlign: "center",
-                  background: "var(--bg-tertiary)",
-                  color: "var(--text-main)",
-                  border: "1px solid var(--border-color)",
-                  borderRadius: "10px",
-                  padding: "0.7rem",
-                  fontSize: "0.9rem",
-                  fontWeight: "700",
-                  textDecoration: "none",
-                  marginTop: "1.2rem",
-                  transition: "all 0.2s"
-                }}
-                className="match-btn"
-              >
-                Read Full Article →
-              </a>
             </article>
           ))}
         </div>
