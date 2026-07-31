@@ -43,17 +43,17 @@ export default function AustraliaHockeyPage() {
   ];
 
   const menMatches = [
-    { date: "August 16, 2026", time: "~1:00 PM IST", opponent: "🇮🇪 Ireland", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
-    { date: "August 18, 2026", time: "~3:30 PM IST", opponent: "🇪🇸 Spain", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
-    { date: "August 20, 2026", time: "~12:30 PM IST", opponent: "🇿🇦 South Africa", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 16, 2026", time: "5:30 PM AEST (9:30 AM CET)", opponent: "🇮🇪 Ireland", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 18, 2026", time: "8:00 PM AEST (12:00 PM CET)", opponent: "🇪🇸 Spain", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 20, 2026", time: "5:00 PM AEST (9:00 AM CET)", opponent: "🇿🇦 South Africa", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
     { date: "Aug 22-24, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
     { date: "Aug 27-28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
   ];
 
   const womenMatches = [
-    { date: "August 15, 2026", time: "~11:30 AM IST", opponent: "🏳️ Japan", pool: "Pool A", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
-    { date: "August 17, 2026", time: "~7:30 PM IST", opponent: "🇳🇱 Netherlands", pool: "Pool A", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
-    { date: "August 19, 2026", time: "~11:00 AM IST", opponent: "🇨🇱 Chile", pool: "Pool A", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 15, 2026", time: "4:00 PM AEST (8:00 AM CET)", opponent: "🏳️ Japan", pool: "Pool A", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 17, 2026", time: "12:00 AM AEST (4:00 PM CET)", opponent: "🇳🇱 Netherlands", pool: "Pool A", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 19, 2026", time: "3:30 PM AEST (7:30 AM CET)", opponent: "🇨🇱 Chile", pool: "Pool A", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
     { date: "Aug 21-23, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
   ];
 
@@ -194,7 +194,7 @@ export default function AustraliaHockeyPage() {
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
               <thead>
                 <tr style={{ background: "#c00030", color: "white" }}>
-                  {["Date", "Time (IST)", "Opponent", "Stage", "Venue"].map((h) => (
+                  {["Date", "Time (AEST)", "Opponent", "Stage", "Venue"].map((h) => (
                     <th key={h} style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: "700" }}>{h}</th>
                   ))}
                 </tr>
@@ -225,7 +225,7 @@ export default function AustraliaHockeyPage() {
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
               <thead>
                 <tr style={{ background: "#f43f5e", color: "white" }}>
-                  {["Date", "Time (IST)", "Opponent", "Stage", "Venue"].map((h) => (
+                  {["Date", "Time (AEST)", "Opponent", "Stage", "Venue"].map((h) => (
                     <th key={h} style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: "700" }}>{h}</th>
                   ))}
                 </tr>

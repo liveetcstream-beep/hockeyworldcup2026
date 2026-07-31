@@ -67,9 +67,9 @@ export default function PakistanHockeyPage() {
   ];
 
   const menMatches = [
-    { date: "August 15, 2026", time: "7:00 PM PKT (4:00 PM CET)", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "August 17, 2026", time: "5:00 PM PKT (2:00 PM CET)", opponent: "🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "August 19, 2026", time: "7:30 PM PKT (4:30 PM CET)", opponent: "🇮🇳 India", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen", type: "Pool Stage (Derby)" },
+    { date: "August 15, 2026", time: "6:30 PM PKT (3:30 PM CET)", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "August 17, 2026", time: "4:30 PM PKT (1:30 PM CET)", opponent: "🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "August 19, 2026", time: "7:00 PM PKT (4:00 PM CET)", opponent: "🇮🇳 India", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen", type: "Pool Stage (Derby)" },
     { date: "August 22-24, 2026", time: "TBD", opponent: "Crossover / Classification", pool: "Knockout", venue: "Wagener / Belfius Arena", type: "Second Stage" },
     { date: "August 27-30, 2026", time: "TBD", opponent: "Quarter-Final / Semi / Final", pool: "Knockout", venue: "Wagener Hockey Stadium", type: "Knockout" },
   ];

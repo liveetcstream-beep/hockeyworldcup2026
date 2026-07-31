@@ -40,17 +40,17 @@ export default function SpainHockeyPage() {
   ];
 
   const menMatches = [
-    { date: "August 16, 2026", time: "~4:00 PM IST", opponent: "🇿🇦 South Africa", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
-    { date: "August 18, 2026", time: "~3:30 PM IST", opponent: "🇦🇺 Australia", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
-    { date: "August 20, 2026", time: "~6:30 PM IST", opponent: "🇮🇪 Ireland", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 16, 2026", time: "12:30 PM CET", opponent: "🇿🇦 South Africa", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 18, 2026", time: "12:00 PM CET", opponent: "🇦🇺 Australia", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 20, 2026", time: "3:00 PM CET", opponent: "🇮🇪 Ireland", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
     { date: "Aug 22-24, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
     { date: "Aug 27-28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
   ];
 
   const womenMatches = [
-    { date: "August 16, 2026", time: "~10:00 PM IST", opponent: "🇮🇪 Ireland", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
-    { date: "August 18, 2026", time: "~10:00 PM IST", opponent: "🇧🇪 Belgium", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
-    { date: "August 20, 2026", time: "~3:30 PM IST", opponent: "🇳🇿 New Zealand", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 16, 2026", time: "6:30 PM CET", opponent: "🇮🇪 Ireland", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 18, 2026", time: "6:30 PM CET", opponent: "🇧🇪 Belgium", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 20, 2026", time: "12:00 PM CET", opponent: "🇳🇿 New Zealand", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
     { date: "Aug 21-23, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
   ];
 
@@ -191,7 +191,7 @@ export default function SpainHockeyPage() {
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
               <thead>
                 <tr style={{ background: "#c00030", color: "white" }}>
-                  {["Date", "Time (IST)", "Opponent", "Stage", "Venue"].map((h) => (
+                  {["Date", "Time (CET)", "Opponent", "Stage", "Venue"].map((h) => (
                     <th key={h} style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: "700" }}>{h}</th>
                   ))}
                 </tr>
@@ -222,7 +222,7 @@ export default function SpainHockeyPage() {
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
               <thead>
                 <tr style={{ background: "#f43f5e", color: "white" }}>
-                  {["Date", "Time (IST)", "Opponent", "Stage", "Venue"].map((h) => (
+                  {["Date", "Time (CET)", "Opponent", "Stage", "Venue"].map((h) => (
                     <th key={h} style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: "700" }}>{h}</th>
                   ))}
                 </tr>

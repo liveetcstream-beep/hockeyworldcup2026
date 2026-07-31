@@ -43,9 +43,9 @@ export default function ChileHockeyPage() {
   ];
 
   const womenMatches = [
-    { date: "August 15, 2026", time: "~5:30 PM IST", opponent: "🇳🇱 Netherlands", pool: "Pool A", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
-    { date: "August 17, 2026", time: "~11:00 AM IST", opponent: "🏳️ Japan", pool: "Pool A", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
-    { date: "August 19, 2026", time: "~11:00 AM IST", opponent: "🇦🇺 Australia", pool: "Pool A", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 15, 2026", time: "8:00 AM CLT (2:00 PM CET)", opponent: "🇳🇱 Netherlands", pool: "Pool A", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 17, 2026", time: "1:30 AM CLT (7:30 AM CET)", opponent: "🏳️ Japan", pool: "Pool A", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 19, 2026", time: "1:30 AM CLT (7:30 AM CET)", opponent: "🇦🇺 Australia", pool: "Pool A", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
     { date: "Aug 21-23, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
   ];
 
@@ -186,7 +186,7 @@ export default function ChileHockeyPage() {
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
               <thead>
                 <tr style={{ background: "#c00030", color: "white" }}>
-                  {["Date", "Time (IST)", "Opponent", "Stage", "Venue"].map((h) => (
+                  {["Date", "Time (CLT)", "Opponent", "Stage", "Venue"].map((h) => (
                     <th key={h} style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: "700" }}>{h}</th>
                   ))}
                 </tr>
@@ -217,7 +217,7 @@ export default function ChileHockeyPage() {
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
               <thead>
                 <tr style={{ background: "#f43f5e", color: "white" }}>
-                  {["Date", "Time (IST)", "Opponent", "Stage", "Venue"].map((h) => (
+                  {["Date", "Time (CLT)", "Opponent", "Stage", "Venue"].map((h) => (
                     <th key={h} style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: "700" }}>{h}</th>
                   ))}
                 </tr>

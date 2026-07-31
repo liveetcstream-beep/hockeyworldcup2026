@@ -40,9 +40,9 @@ export default function WalesHockeyPage() {
   ];
 
   const menMatches = [
-    { date: "August 15, 2026", time: "~2:30 PM IST", opponent: "🇮🇳 India", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
-    { date: "August 17, 2026", time: "~2:00 PM IST", opponent: "🇵🇰 Pakistan", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
-    { date: "August 19, 2026", time: "~2:00 PM IST", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 15, 2026", time: "10:00 AM BST (11:00 AM CET)", opponent: "🇮🇳 India", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 17, 2026", time: "9:30 AM BST (10:30 AM CET)", opponent: "🇵🇰 Pakistan", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
+    { date: "August 19, 2026", time: "9:30 AM BST (10:30 AM CET)", opponent: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 England", pool: "Pool D", venue: "Wagener Hockey Stadium", type: "Pool Stage" },
     { date: "Aug 22-24, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
     { date: "Aug 27-28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
   ];
@@ -187,7 +187,7 @@ export default function WalesHockeyPage() {
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
               <thead>
                 <tr style={{ background: "#c00030", color: "white" }}>
-                  {["Date", "Time (IST)", "Opponent", "Stage", "Venue"].map((h) => (
+                  {["Date", "Time (BST)", "Opponent", "Stage", "Venue"].map((h) => (
                     <th key={h} style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: "700" }}>{h}</th>
                   ))}
                 </tr>
@@ -218,7 +218,7 @@ export default function WalesHockeyPage() {
             <table style={{ width: "100%", borderCollapse: "collapse", background: "var(--bg-secondary)", borderRadius: "16px", overflow: "hidden", boxShadow: "0 4px 20px rgba(15,23,42,0.06)" }}>
               <thead>
                 <tr style={{ background: "#f43f5e", color: "white" }}>
-                  {["Date", "Time (IST)", "Opponent", "Stage", "Venue"].map((h) => (
+                  {["Date", "Time (BST)", "Opponent", "Stage", "Venue"].map((h) => (
                     <th key={h} style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", letterSpacing: "0.06em", fontWeight: "700" }}>{h}</th>
                   ))}
                 </tr>

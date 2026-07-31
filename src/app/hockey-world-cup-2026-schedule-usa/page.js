@@ -53,17 +53,17 @@ export default function USAHockeyPage() {
   ];
 
   const womenMatches = [
-    { date: "August 15, 2026", time: "~6:30 AM EST", opponent: "🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre", type: "Pool Stage" },
-    { date: "August 17, 2026", time: "~4:30 AM EST", opponent: "🇩🇪 Germany", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre", type: "Pool Stage" },
-    { date: "August 19, 2026", time: "~4:30 AM EST", opponent: "🇧🇪 Belgium", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre", type: "Pool Stage" },
+    { date: "August 15, 2026", time: "9:00 PM ET (3:00 AM CET)", opponent: "🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre", type: "Pool Stage" },
+    { date: "August 17, 2026", time: "7:00 PM ET (1:00 AM CET)", opponent: "🇩🇪 Germany", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre", type: "Pool Stage" },
+    { date: "August 19, 2026", time: "7:00 PM ET (1:00 AM CET)", opponent: "🇧🇪 Belgium", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre", type: "Pool Stage" },
     { date: "Aug 21–23, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
     { date: "Aug 27–28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
   ];
 
   const menMatches = [
-    { date: "August 15, 2026", time: "~6:30 AM EST", opponent: "🇦🇷 Argentina", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre", type: "Pool Stage" },
-    { date: "August 17, 2026", time: "~10:30 AM EST", opponent: "🇲🇾 Malaysia", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre", type: "Pool Stage" },
-    { date: "August 19, 2026", time: "~4:30 AM EST", opponent: "🇩🇪 Germany", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre", type: "Pool Stage" },
+    { date: "August 15, 2026", time: "9:00 PM ET (3:00 AM CET)", opponent: "🇦🇷 Argentina", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre", type: "Pool Stage" },
+    { date: "August 17, 2026", time: "1:00 AM ET (7:00 AM CET)", opponent: "🇲🇾 Malaysia", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre", type: "Pool Stage" },
+    { date: "August 19, 2026", time: "7:00 PM ET (1:00 AM CET)", opponent: "🇩🇪 Germany", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre", type: "Pool Stage" },
     { date: "Aug 21–23, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
     { date: "Aug 27–28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
   ];

@@ -71,17 +71,17 @@ export default function BelgiumHockeyPage() {
   ];
 
   const menMatches = [
-    { date: "August 15, 2026", time: "~10:30 PM IST", opponent: "🇫🇷 France", pool: "Pool B", venue: "Belfius Hockey Arena", type: "Pool Stage" },
-    { date: "August 17, 2026", time: "~10:00 PM IST", opponent: "🇩🇪 Germany", pool: "Pool B", venue: "Belfius Hockey Arena", type: "Pool Stage" },
-    { date: "August 19, 2026", time: "~10:00 PM IST", opponent: "🇲🇾 Malaysia", pool: "Pool B", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 15, 2026", time: "7:00 PM CET", opponent: "🇫🇷 France", pool: "Pool B", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 17, 2026", time: "6:30 PM CET", opponent: "🇩🇪 Germany", pool: "Pool B", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 19, 2026", time: "6:30 PM CET", opponent: "🇲🇾 Malaysia", pool: "Pool B", venue: "Belfius Hockey Arena", type: "Pool Stage" },
     { date: "Aug 22-24, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
     { date: "Aug 27-28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
   ];
 
   const womenMatches = [
-    { date: "August 16, 2026", time: "~7:00 PM IST", opponent: "🇳🇿 New Zealand", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
-    { date: "August 18, 2026", time: "~10:00 PM IST", opponent: "🇪🇸 Spain", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
-    { date: "August 20, 2026", time: "~10:00 PM IST", opponent: "🇮🇪 Ireland", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 16, 2026", time: "3:30 PM CET", opponent: "🇳🇿 New Zealand", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 18, 2026", time: "6:30 PM CET", opponent: "🇪🇸 Spain", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
+    { date: "August 20, 2026", time: "6:30 PM CET", opponent: "🇮🇪 Ireland", pool: "Pool C", venue: "Belfius Hockey Arena", type: "Pool Stage" },
     { date: "Aug 21-23, 2026", time: "TBD", opponent: "Second Stage", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
   ];
 

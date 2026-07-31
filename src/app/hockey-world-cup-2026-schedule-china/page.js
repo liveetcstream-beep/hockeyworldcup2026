@@ -53,9 +53,9 @@ export default function ChinaHockeyPage() {
   ];
 
   const womenMatches = [
-    { date: "August 15, 2026", time: "~6:30 PM CST", opponent: "🇦🇺 Australia", pool: "Pool C", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "August 17, 2026", time: "~10:30 PM CST", opponent: "🇮🇪 Ireland", pool: "Pool C", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
-    { date: "August 19, 2026", time: "~10:30 PM CST", opponent: "🇪🇸 Spain", pool: "Pool C", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "August 15, 2026", time: "9:00 PM CST (3:00 PM CET)", opponent: "🇦🇺 Australia", pool: "Pool C", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "August 17, 2026", time: "1:00 AM CST (7:00 PM CET)", opponent: "🇮🇪 Ireland", pool: "Pool C", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
+    { date: "August 19, 2026", time: "1:00 AM CST (7:00 PM CET)", opponent: "🇪🇸 Spain", pool: "Pool C", venue: "Wagener Stadium, Amstelveen", type: "Pool Stage" },
     { date: "Aug 21–23, 2026", time: "TBD", opponent: "Second Stage / Crossover", pool: "Group E/F", venue: "TBD", type: "Second Stage" },
     { date: "Aug 27–28, 2026", time: "TBD", opponent: "Semi-Final (if qualified)", pool: "–", venue: "TBD", type: "Knockout" },
   ];
