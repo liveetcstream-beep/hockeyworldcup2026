@@ -45,7 +45,7 @@ export default function TeamsPage() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
+              ✍️ Verified: <strong>HWC 2026 Editorial Desk</strong>
             </div>
           </div>
         </div>

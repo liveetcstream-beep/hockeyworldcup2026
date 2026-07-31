@@ -60,7 +60,7 @@ export default function NewsHubPage() {
                     "name": "Are the injury reports and squad updates officially sourced?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Yes, our editorial director Marc Devos accredit-checks and monitors official press releases, national hockey federation bulletins, and team doctor statements for accuracy."
+                      "text": "Yes, our editorial director HWC 2026 Editorial Team accredit-checks and monitors official press releases, national hockey federation bulletins, and team doctor statements for accuracy."
                     }
                   }
                 ]

@@ -139,7 +139,7 @@ export default function ScotlandHockeyPage() {
             Complete Scotland Men's & Women's fixture guide for the 2026 FIH Hockey World Cup. Full time table, BST match timings, squad analysis, and live streaming channels on BBC Sport. Download the <strong>Hockey World Cup 2026 Schedule PDF</strong> for Scotland.
           </p>
           <div className="eeat-badge-container">
-            <div className="eeat-badge">✔️ Verified: <strong>Marc Devos (Senior FIH Analyst)</strong></div>
+            <div className="eeat-badge">✔️ Verified: <strong>HWC 2026 Editorial Team (Senior FIH Analyst)</strong></div>
             <div className="eeat-badge">⚡ Status: <strong>Official Fixtures Confirmed</strong></div>
           </div>
           <div style={{ marginTop: "1.5rem", display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>

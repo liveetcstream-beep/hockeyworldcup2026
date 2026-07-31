@@ -171,7 +171,7 @@ export default function FantasyPredictionsPage() {
             Expert Match Predictions: Pool Stage Forecasts
           </h2>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem", fontSize: "0.95rem" }}>
-            Our editorial director Marc Devos has evaluated the preliminary pool dynamics based on historic H2H stats and recent team form data:
+            Our editorial director HWC 2026 Editorial Team has evaluated the preliminary pool dynamics based on historic H2H stats and recent team form data:
           </p>
 
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1.5rem" }}>

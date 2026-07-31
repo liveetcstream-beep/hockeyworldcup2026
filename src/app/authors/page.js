@@ -18,13 +18,13 @@ export const metadata = {
 const authors = [
   {
     emoji: "✍️",
-    name: "Marc Devos",
+    name: "HWC 2026 Editorial Team",
     role: "Senior Field Hockey Journalist & Editorial Director",
     location: "Brussels, Belgium",
     experience: "15+ Years Covering FIH",
     credential: "Accredited FIH Tournament Journalist",
     summary:
-      "Marc Devos has covered field hockey at the highest international level since 2008 — including FIH World Cups in The Hague (2014), Bhubaneswar (2018 & 2023), and multiple EuroHockey Championships. He leads all editorial content on this portal, including fixture schedules, match previews, team form guides, and venue information. His editorial independence from the FIH and national federations ensures all coverage is unbiased and reader-first.",
+      "HWC 2026 Editorial Team has covered field hockey at the highest international level since 2008 — including FIH World Cups in The Hague (2014), Bhubaneswar (2018 & 2023), and multiple EuroHockey Championships. He leads all editorial content on this portal, including fixture schedules, match previews, team form guides, and venue information. His editorial independence from the FIH and national federations ensures all coverage is unbiased and reader-first.",
     focus: ["Fixture Schedule Accuracy", "Match Preview & Tactical Analysis", "Venue & Travel Guides", "Pool & Group Stage Analysis"],
     href: "/authors/marc-devos",
     gradient: "linear-gradient(135deg, #0b1f3a 0%, #1a2e4a 100%)",
@@ -193,7 +193,7 @@ export default function AuthorsIndexPage() {
             Google's Search Quality Rater Guidelines place enormous emphasis on Experience, Expertise, Authoritativeness, and Trustworthiness — what they call E-E-A-T. For sports information specifically, this means readers and search engines alike need to know that the person writing about field hockey has genuine knowledge of the sport, not just SEO targeting.
           </p>
           <p style={{ color: "var(--text-muted)", lineHeight: "1.8", fontSize: "0.92rem", marginBottom: "1rem" }}>
-            Marc Devos has physically attended FIH World Cups. Bram van de Meer has coached on a field hockey pitch. These are not biographical embellishments — they are the reason the data on this portal is more reliable than sites that automate hockey statistics from unreliable third-party feeds.
+            HWC 2026 Editorial Team has physically attended FIH World Cups. Bram van de Meer has coached on a field hockey pitch. These are not biographical embellishments — they are the reason the data on this portal is more reliable than sites that automate hockey statistics from unreliable third-party feeds.
           </p>
           <p style={{ color: "var(--text-muted)", lineHeight: "1.8", fontSize: "0.92rem" }}>
             If you find an error anywhere on this portal, contact us at{" "}

@@ -61,7 +61,7 @@ export default function FormatPage() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
+              ✍️ Verified: <strong>HWC 2026 Editorial Desk</strong>
             </div>
           </div>
         </div>
@@ -197,7 +197,7 @@ export default function FormatPage() {
 
           <div className="expert-quote-box">
             "The crossover phase is highly volatile. A single bad day on the water-based turf in Amstelveen can ruin a top team's tournament run, making it a favorite for sports betters."
-            <strong>— Marc Devos, Senior Belgian Hockey Analyst</strong>
+            <strong>— HWC 2026 Editorial Desk</strong>
           </div>
         </section>
       </main>

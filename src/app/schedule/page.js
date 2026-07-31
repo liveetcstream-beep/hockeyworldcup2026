@@ -73,7 +73,7 @@ export default function SchedulePage() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Expert Verified by: <strong>Marc Devos (Senior Belgian Hockey Journalist)</strong>
+              ✍️ Expert Verified by: <strong>HWC 2026 Editorial Desk</strong>
             </div>
             <div className="eeat-badge">
               ⚡ Status: <strong>All 100 Fixtures Confirmed</strong>
@@ -200,7 +200,7 @@ export default function SchedulePage() {
           </p>
           <div className="expert-quote-box">
             "With back-to-back doubleheaders scheduled in both Belgium and the Netherlands, player recovery times are extremely short. A team's depth in their 18-player roster will be the ultimate deciding factor in the later crossover and quarterfinal stages."
-            <strong>— Marc Devos, Senior Belgian Hockey Analyst</strong>
+            <strong>— HWC 2026 Editorial Desk</strong>
           </div>
         </section>
 

@@ -103,7 +103,7 @@ export default function MatchPreviewPage() {
           </p>
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Analyst: <strong>Marc Devos (Senior Hockey Journalist)</strong>
+              ✍️ Analyst: <strong>HWC 2026 Editorial Desk</strong>
             </div>
             <div className="eeat-badge">
               ⚡ Status: <strong>Fixtures Confirmed</strong>

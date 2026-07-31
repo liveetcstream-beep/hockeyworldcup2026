@@ -127,7 +127,7 @@ export default function WomensTournamentHubPage() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Correspondent: <strong>Marc Devos (Accredited FIH Journalist)</strong>
+              ✍️ Correspondent: <strong>HWC 2026 Editorial Desk</strong>
             </div>
             <div className="eeat-badge">
               ⚡ Coverage: <strong>Men's & Women's Parity Guaranteed</strong>
@@ -153,7 +153,7 @@ export default function WomensTournamentHubPage() {
             A common source of frustration for hockey fans is the significant disparity in media coverage between the Men's and Women's tournaments. While Men's matches receive primary television placements and detailed tactical write-ups, Women's group matches are often relegated to secondary streaming feeds with minimal statistical context.
           </p>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem", fontSize: "0.95rem" }}>
-            At Hockey World Cup 2026 Hub, we ensure full parity of coverage. Under the direction of senior correspondent Marc Devos, our editorial guidelines require equal depth for both sections. This hub serves as a central directory for the Women's tournament, compiling pool compositions, team form outlines, and travel-spectator guidelines for matches at Wagener Stadium and Belfius Hockey Arena.
+            At Hockey World Cup 2026 Hub, we ensure full parity of coverage. Under the direction of senior correspondent HWC 2026 Editorial Team, our editorial guidelines require equal depth for both sections. This hub serves as a central directory for the Women's tournament, compiling pool compositions, team form outlines, and travel-spectator guidelines for matches at Wagener Stadium and Belfius Hockey Arena.
           </p>
         </section>
 

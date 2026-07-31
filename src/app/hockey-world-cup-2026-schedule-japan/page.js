@@ -126,7 +126,7 @@ export default function JapanHockeyPage() {
             Complete Japan men's & women's fixture guide, full time table, CET match timings, results, and tournament analysis.
           </p>
           <div className="eeat-badge-container">
-            <div className="eeat-badge">✔️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong></div>
+            <div className="eeat-badge">✔️ Verified: <strong>HWC 2026 Editorial Desk</strong></div>
           </div>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#fixtures" className="cta-button primary-cta">View Time Table & Results</a>

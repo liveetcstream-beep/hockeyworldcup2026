@@ -29,7 +29,7 @@ export const metadata = {
     apple: '/icon.png',
   },
 
-  authors: [{ name: "Marc Devos", url: "https://hockeyworldcup2026schedule.com" }],
+  authors: [{ name: "HWC 2026 Editorial Team", url: "https://hockeyworldcup2026schedule.com" }],
   creator: "hockeyworldcup2026schedule.com",
   verification: {
     google: "D00inc3t5pMk-B-QqBVxCgOLSj4dSxAvabIHxCTqGVA",

@@ -161,7 +161,7 @@ export default function GroupsPage() {
             Complete pool groups for FIH Hockey World Cup 2026. Men's and Women's Pool A, B, C, D with all 16 qualified nations, rankings, key rivalries, and Second Stage qualification rules.
           </p>
           <div className="eeat-badge-container">
-            <div className="eeat-badge">✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong></div>
+            <div className="eeat-badge">✍️ Verified: <strong>HWC 2026 Editorial Desk</strong></div>
           </div>
         </div>
       </section>

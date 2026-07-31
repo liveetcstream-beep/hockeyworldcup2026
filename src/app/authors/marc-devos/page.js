@@ -3,29 +3,29 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Marc Devos — Senior Field Hockey Journalist & Editorial Director | Hockey World Cup 2026 Hub",
-  description: "Marc Devos is a Brussels-based veteran sports journalist with 15+ years covering FIH World Cups, Olympic Games, and EuroHockey Championships. He serves...",
+  title: "HWC 2026 Editorial Team — Senior Field Hockey Journalist & Editorial Director | Hockey World Cup 2026 Hub",
+  description: "HWC 2026 Editorial Team is a Brussels-based veteran sports journalist with 15+ years covering FIH World Cups, Olympic Games, and EuroHockey Championships. He serves...",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/authors/marc-devos",
   },
   openGraph: {
-    title: "Marc Devos — Senior Field Hockey Journalist & Editorial Director | Hockey World Cup 2026 Hub",
-    description: "Marc Devos is a Brussels-based veteran sports journalist with 15+ years covering FIH World Cups and EuroHockey Championships. Editorial Director at...",
+    title: "HWC 2026 Editorial Team — Senior Field Hockey Journalist & Editorial Director | Hockey World Cup 2026 Hub",
+    description: "HWC 2026 Editorial Team is a Brussels-based veteran sports journalist with 15+ years covering FIH World Cups and EuroHockey Championships. Editorial Director at...",
     url: "https://hockeyworldcup2026schedule.com/authors/marc-devos",
   },
 };
 
 const faqs = [
   {
-    q: "Who is Marc Devos?",
-    a: "Marc Devos is a veteran sports journalist based in Brussels, Belgium, with over 15 years of experience exclusively covering European and international field hockey. He has been accredited at multiple FIH World Cups, EuroHockey Championships, and Olympic Games qualifying tournaments. He currently serves as Editorial Director at Hockey World Cup 2026 Hub, responsible for all fixture, schedule, and match analysis content."
+    q: "Who is HWC 2026 Editorial Team?",
+    a: "HWC 2026 Editorial Team is a veteran sports journalist based in Brussels, Belgium, with over 15 years of experience exclusively covering European and international field hockey. He has been accredited at multiple FIH World Cups, EuroHockey Championships, and Olympic Games qualifying tournaments. He currently serves as Editorial Director at Hockey World Cup 2026 Hub, responsible for all fixture, schedule, and match analysis content."
   },
   {
-    q: "What FIH events has Marc Devos covered?",
+    q: "What FIH events has HWC 2026 Editorial Team covered?",
     a: "Marc has covered field hockey at the highest international level since 2008, including FIH Hockey World Cups in The Hague (2014), Bhubaneswar (2018), and Bhubaneswar/Rourkela (2023), as well as EuroHockey Championships at multiple editions and FIH Pro League seasons from their inception in 2019. He brings first-hand tournament knowledge that goes beyond what official press releases provide."
   },
   {
-    q: "What does Marc Devos write about on this website?",
+    q: "What does HWC 2026 Editorial Team write about on this website?",
     a: "Marc leads the editorial coverage for fixture schedules, match preview analysis, historical context pieces, and team form guides. His most-read content categories include pre-match previews for high-stakes Pool D fixtures (India, Pakistan, England), knockout stage tactical previews, and venue guide articles for fans attending matches in Amstelveen and Wavre."
   },
   {
@@ -33,8 +33,8 @@ const faqs = [
     a: "Fixture times, dates, and venue assignments published on this portal are cross-referenced directly against the official FIH Tournament Management System (TMS), the official tournament operator announcements, and national federation broadcast confirmations. Marc applies a three-check methodology: TMS confirmation, broadcaster schedule verification, and local venue official release — before any fixture time is published on this site."
   },
   {
-    q: "Is Marc Devos affiliated with the FIH or any national federation?",
-    a: "Marc Devos is an independent journalist. He is not employed by the FIH, any national hockey federation, or tournament commercial partner. His editorial independence means the analysis and coverage on this portal is not influenced by commercial relationships. Press accreditation at FIH events requires compliance with FIH media standards, which Marc maintains — but accreditation does not imply editorial endorsement from either side."
+    q: "Is HWC 2026 Editorial Team affiliated with the FIH or any national federation?",
+    a: "HWC 2026 Editorial Team is an independent journalist. He is not employed by the FIH, any national hockey federation, or tournament commercial partner. His editorial independence means the analysis and coverage on this portal is not influenced by commercial relationships. Press accreditation at FIH events requires compliance with FIH media standards, which Marc maintains — but accreditation does not imply editorial endorsement from either side."
   }
 ];
 
@@ -51,7 +51,7 @@ export default function MarcDevosAuthorPage() {
           <span style={{ margin: "0 0.5rem" }}>&gt;</span>
           <a href="/authors" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Authors</a>
           <span style={{ margin: "0 0.5rem" }}>&gt;</span>
-          <span style={{ color: "var(--text-main)", fontWeight: "600" }}>Marc Devos</span>
+          <span style={{ color: "var(--text-main)", fontWeight: "600" }}>HWC 2026 Editorial Team</span>
         </nav>
 
         {/* Author Hero Card */}
@@ -77,7 +77,7 @@ export default function MarcDevosAuthorPage() {
           </div>
           <div style={{ flex: 1, minWidth: "260px" }}>
             <h1 style={{ fontSize: "2rem", fontWeight: 900, color: "var(--text-main)", marginBottom: "0.4rem" }}>
-              Marc Devos
+              HWC 2026 Editorial Team
             </h1>
             <p style={{ fontSize: "1rem", color: "var(--primary)", fontWeight: 700, marginBottom: "1rem" }}>
               Senior Field Hockey Journalist & Editorial Director
@@ -100,7 +100,7 @@ export default function MarcDevosAuthorPage() {
               ))}
             </div>
             <p style={{ color: "var(--text-muted)", lineHeight: "1.85", fontSize: "0.95rem" }}>
-              Marc Devos has been ringside at field hockey's biggest moments for over 15 years. Not as a general sports reporter dipping in and out of hockey coverage at tournament time, but as a specialist — someone who followed the Belgian Red Lions from a mid-tier European side to World Cup champions, who watched the Netherlands lose and rebuild after 2022, and who has tracked the rise of India's hockey program from the FIH Pro League's opening season through to their current form. That background is what drives the editorial direction of this portal.
+              HWC 2026 Editorial Team has been ringside at field hockey's biggest moments for over 15 years. Not as a general sports reporter dipping in and out of hockey coverage at tournament time, but as a specialist — someone who followed the Belgian Red Lions from a mid-tier European side to World Cup champions, who watched the Netherlands lose and rebuild after 2022, and who has tracked the rise of India's hockey program from the FIH Pro League's opening season through to their current form. That background is what drives the editorial direction of this portal.
             </p>
           </div>
         </section>
@@ -181,7 +181,7 @@ export default function MarcDevosAuthorPage() {
               "Every match time on this portal carries a direct source reference to the FIH TMS. If the FIH changes a start time, our page updates. That's the only standard that protects the fans who make real travel decisions based on what they read here."
             </p>
             <strong style={{ color: "var(--primary)", display: "block", marginTop: "0.8rem", fontSize: "0.9rem" }}>
-              — Marc Devos, Editorial Director
+              — HWC 2026 Editorial Team, Editorial Director
             </strong>
           </div>
           <p style={{ color: "var(--text-muted)", fontSize: "0.95rem" }}>
@@ -212,7 +212,7 @@ export default function MarcDevosAuthorPage() {
             Editorial Independence & How Corrections Are Handled
           </h2>
           <p style={{ color: "var(--text-muted)", lineHeight: "1.8", fontSize: "0.92rem", marginBottom: "1rem" }}>
-            Marc Devos is an independent journalist. He is not affiliated with the FIH, Hockey Belgium, the KNHB (Dutch federation), or any national Olympic committee. His press accreditation at FIH events reflects compliance with FIH media standards — not editorial influence from the federation.
+            HWC 2026 Editorial Team is an independent journalist. He is not affiliated with the FIH, Hockey Belgium, the KNHB (Dutch federation), or any national Olympic committee. His press accreditation at FIH events reflects compliance with FIH media standards — not editorial influence from the federation.
           </p>
           <p style={{ color: "var(--text-muted)", lineHeight: "1.8", fontSize: "0.92rem", marginBottom: "1rem" }}>
             <strong style={{ color: "var(--text-main)" }}>Correction Policy:</strong> If a factual error is identified in any content Marc has authored on this portal, it is corrected with a visible correction notice within 24 hours. The original incorrect information is not silently deleted — a correction note is appended with the date of amendment. This is a standard editorial accountability practice.
@@ -229,7 +229,7 @@ export default function MarcDevosAuthorPage() {
         {/* FAQ Section */}
         <section style={{ marginBottom: "3rem" }}>
           <h2 style={{ fontSize: "1.6rem", fontWeight: 800, color: "var(--text-main)", borderLeft: "4px solid var(--primary)", paddingLeft: "1rem", marginBottom: "1.5rem" }}>
-            Frequently Asked Questions About Marc Devos
+            Frequently Asked Questions About HWC 2026 Editorial Team
           </h2>
           <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
             {faqs.map((item, idx) => (
@@ -254,7 +254,7 @@ export default function MarcDevosAuthorPage() {
           borderRadius: "16px", padding: "1.5rem 2rem"
         }}>
           <h3 style={{ fontSize: "1rem", fontWeight: 800, color: "var(--text-main)", marginBottom: "1rem" }}>
-            Explore Content Written by Marc Devos
+            Explore Content Written by HWC 2026 Editorial Team
           </h3>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.8rem" }}>
             {[

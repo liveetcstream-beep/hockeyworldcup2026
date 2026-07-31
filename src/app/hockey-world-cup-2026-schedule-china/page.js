@@ -133,7 +133,7 @@ export default function ChinaHockeyPage() {
             Complete China Women's fixture guide for the 2026 FIH Hockey World Cup. Full time table, CST match timings, squad analysis, streaming on CCTV-5, and match predictions. Download the <strong>Hockey World Cup 2026 Schedule PDF</strong> for China Women.
           </p>
           <div className="eeat-badge-container">
-            <div className="eeat-badge">✔️ Verified: <strong>Marc Devos (Senior FIH Analyst)</strong></div>
+            <div className="eeat-badge">✔️ Verified: <strong>HWC 2026 Editorial Team (Senior FIH Analyst)</strong></div>
             <div className="eeat-badge">⚡ Status: <strong>Official Fixtures Confirmed</strong></div>
           </div>
           <div style={{ marginTop: "1.5rem", display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>

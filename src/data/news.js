@@ -234,7 +234,7 @@ export const newsArticles = [
     title: "Hockey World Cup 2026 Tickets: Final Booking Phase Opened for Wavre & Amstelveen",
     slug: "world-cup-ticket-update",
     category: "Ticket Update",
-    author: "Marc Devos",
+    author: "HWC 2026 Editorial Team",
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 13, 2026",
@@ -245,7 +245,7 @@ export const newsArticles = [
       <p>The International Hockey Federation (FIH) has launched the final ticket release window for the <strong>FIH Hockey World Cup 2026</strong>. With 88% of initial ticket allocations sold out across 48 tournament doubleheaders, tournament organizers have released an additional 12,500 single-match passes for Wagener Stadium in Amstelveen (10,000 capacity) and Belfius Hockey Arena in Wavre (10,000 capacity).</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
-        <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
+        <strong>Verified by HWC 2026 Editorial Desk</strong><br/>
         <em>Fact-checked against FIH Ticketing Operations Bulletin #4-2026 released in Lausanne on July 13, 2026.</em><br/>
         <em>Last reviewed: July 13, 2026 — updated with gate barcode verification rules and stadium shuttle maps.</em>
       </div>
@@ -440,7 +440,7 @@ export const newsArticles = [
     title: "Belgium Red Lions Confirm Three-Match Warm-Up Series in Antwerp",
     slug: "belgium-red-lions-warmup-schedule",
     category: "Warm-Up News",
-    author: "Marc Devos",
+    author: "HWC 2026 Editorial Team",
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 15, 2026",
@@ -451,7 +451,7 @@ export const newsArticles = [
       <p>The Royal Belgian Hockey Association (KBHB) has finalized a three-match international test series at Wilrijkse Plein in Antwerp (3,500 capacity) for the Men's national team (Red Lions). Serving as head coach Michel van den Heuvel's final tactical evaluation ahead of Pool B play at Belfius Hockey Arena in Wavre, this warm-up series pits the co-hosts against England and Spain.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
-        <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
+        <strong>Verified by HWC 2026 Editorial Desk</strong><br/>
         <em>Fact-checked against KBHB Press Release #2026-WB3 issued in Brussels on July 15, 2026.</em><br/>
         <em>Last reviewed: July 15, 2026 — updated with official match kickoffs and squad availability notes.</em>
       </div>
@@ -534,7 +534,7 @@ export const newsArticles = [
     title: "FIH Modifies Video Referral Rule Guidelines for Hockey World Cup 2026",
     slug: "fih-video-referral-rule-changes",
     category: "Rules Update",
-    author: "Marc Devos",
+    author: "HWC 2026 Editorial Team",
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 15, 2026",
@@ -545,7 +545,7 @@ export const newsArticles = [
       <p>The International Hockey Federation (FIH) has announced updated video referral regulations for the <strong>FIH Hockey World Cup 2026</strong> in Amstelveen and Wavre. Following trials during the 2024-25 FIH Pro League season that reduced average review durations from 145 seconds down to 42 seconds, the FIH Umpiring Committee has standardized tighter referral rules across all 48 tournament fixtures.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
-        <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
+        <strong>Verified by HWC 2026 Editorial Desk</strong><br/>
         <em>Fact-checked against FIH Umpiring Committee Regulatory Bulletin #2026-03 published in Lausanne on July 15, 2026.</em><br/>
         <em>Last reviewed: July 15, 2026 — updated with video umpire audio broadcast specifications.</em>
       </div>
@@ -736,7 +736,7 @@ export const newsArticles = [
     title: "Belgium Red Lions Announce Veteran-Heavy Squad for Hockey World Cup 2026 Title Hunt",
     slug: "belgium-squad-announcement-2026",
     category: "Squad News",
-    author: "Marc Devos",
+    author: "HWC 2026 Editorial Team",
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 17, 2026",
@@ -747,7 +747,7 @@ export const newsArticles = [
       <p>The Royal Belgian Hockey Association (KBHB) has confirmed the 18-player squad representing co-hosts <strong>Belgium (Red Lions)</strong> at the <strong>FIH Hockey World Cup 2026</strong>. Playing before home fans at Belfius Hockey Arena in Wavre (10,000 capacity), head coach Michel van den Heuvel has selected a squad boasting 3,140 cumulative international caps as Belgium aims to reclaim the World Cup trophy won in 2018.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
-        <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
+        <strong>Verified by HWC 2026 Editorial Desk</strong><br/>
         <em>Fact-checked against KBHB Squad Official Announcement #KBHB-2026-M01 issued in Brussels on July 17, 2026.</em><br/>
         <em>Last reviewed: July 17, 2026 — updated with cap totals and player injury clearances.</em>
       </div>
@@ -923,7 +923,7 @@ export const newsArticles = [
     title: "Germany Name HWC 2026 Squad: André Henning Selects Defending Champions Roster",
     slug: "germany-world-cup-squad-2026",
     category: "Squad News",
-    author: "Marc Devos",
+    author: "HWC 2026 Editorial Team",
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 19, 2026",
@@ -934,7 +934,7 @@ export const newsArticles = [
       <p>The German Hockey Federation (DHB) has confirmed the 18-player Honamas squad selected to defend their title at the <strong>FIH Hockey World Cup 2026</strong> in Wavre, Belgium. Head coach André Henning has constructed a compact 4-2-3-1 defensive press to offset the injury loss of senior defender Mathias Müller, seeking back-to-back gold medals following their 2023 World Cup victory in Bhubaneswar.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
-        <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
+        <strong>Verified by HWC 2026 Editorial Desk</strong><br/>
         <em>Fact-checked against DHB Official Roster Release #DHB-2026-M03 published in Cologne on July 19, 2026.</em><br/>
         <em>Last reviewed: July 19, 2026 — updated with Gonzalo Peillat set-piece metrics.</em>
       </div>
@@ -1133,7 +1133,7 @@ export const newsArticles = [
     title: "Argentina Los Leones Announce 18-Player Squad for Pool A Clash in Amstelveen",
     slug: "argentina-world-cup-squad-2026",
     category: "Squad News",
-    author: "Marc Devos",
+    author: "HWC 2026 Editorial Team",
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
     date: "July 20, 2026",
@@ -1144,7 +1144,7 @@ export const newsArticles = [
       <p>The Argentine Hockey Confederation (CAH) has confirmed the 18-member men's squad (Los Leones) representing Argentina at the <strong>FIH Hockey World Cup 2026</strong>. Head coach Mariano Ronconi selected the roster following preparation in Buenos Aires. The team plays Pool A matches at Wagener Stadium in Amstelveen against the Netherlands, New Zealand, and Chile, aiming to return to the semi-finals for the first time since winning Olympic gold in 2016.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
-        <strong>Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
+        <strong>Verified by HWC 2026 Editorial Desk</strong><br/>
         <em>Fact-checked against CAH Press Release #CAH-2026-07 issued in Buenos Aires on July 20, 2026.</em><br/>
         <em>Last reviewed: July 20, 2026 — updated with ESPN Latin America broadcast times.</em>
       </div>

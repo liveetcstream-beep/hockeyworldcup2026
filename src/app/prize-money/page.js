@@ -92,7 +92,7 @@ export default function PrizeMoneyPage() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Analyst: <strong>Marc Devos (Senior Belgian Hockey Analyst)</strong>
+              ✍️ Analyst: <strong>HWC 2026 Editorial Desk</strong>
             </div>
             <div className="eeat-badge">
               ⚡ Sourced from: <strong>FIH Official Budget Outlines</strong>
@@ -118,7 +118,7 @@ export default function PrizeMoneyPage() {
             For many elite hockey players representing countries outside the top-tier professional leagues of Europe, a World Cup podium finish isn't just about sporting glory — it has a direct impact on their career sustainability. Unlike sports with massive commercial broadcasting revenue, field hockey depends heavily on central funding from the International Hockey Federation (FIH) and local government sports grants.
           </p>
           <p style={{ color: "var(--text-muted)", marginBottom: "1.2rem", fontSize: "0.95rem" }}>
-            Spectators frequently ask: *"How much do the winners actually get?"* This is where transparency is often lacking. Many fan sites publish speculative, outdated figures copied from older tournaments. Under the supervision of our editorial director Marc Devos, we cross-referenced official FIH Executive Board budget outlines to provide the verified financial breakdown of the 2026 prize pool.
+            Spectators frequently ask: *"How much do the winners actually get?"* This is where transparency is often lacking. Many fan sites publish speculative, outdated figures copied from older tournaments. Under the supervision of our editorial director HWC 2026 Editorial Team, we cross-referenced official FIH Executive Board budget outlines to provide the verified financial breakdown of the 2026 prize pool.
           </p>
         </section>
 
@@ -219,7 +219,7 @@ export default function PrizeMoneyPage() {
               "Central FIH prize money provides essential operating support to national federations, but the real financial stability for top players comes from local sponsorships, government rewards, and domestic professional league contracts."
             </p>
             <strong style={{ color: "var(--primary)", display: "block", marginTop: "0.6rem", fontSize: "0.85rem" }}>
-              — Marc Devos, Editorial Director
+              — HWC 2026 Editorial Team, Editorial Director
             </strong>
           </div>
         </section>

@@ -45,7 +45,7 @@ export default function PastResultsPage() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
+              ✍️ Verified: <strong>HWC 2026 Editorial Desk</strong>
             </div>
           </div>
         </div>
@@ -222,7 +222,7 @@ export default function PastResultsPage() {
               <span className="insight-col-tag">E-E-A-T</span>
               <span className="insight-col-header">Verified Records</span>
               <p className="insight-col-text">
-                These stats are hand-compiled by Marc Devos using official FIH data sheets. For historical cross-referencing, these records confirm the shifting dominance of European hockey, which will carry into the 2026 co-hosted games.
+                These stats are hand-compiled by HWC 2026 Editorial Team using official FIH data sheets. For historical cross-referencing, these records confirm the shifting dominance of European hockey, which will carry into the 2026 co-hosted games.
               </p>
             </div>
           </div>

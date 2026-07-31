@@ -30,7 +30,7 @@ export default function NewsHubClient() {
           </p>
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Senior Editor: <strong>Marc Devos</strong>
+              ✍️ Senior Editor: <strong>HWC 2026 Editorial Team</strong>
             </div>
             <div className="eeat-badge">
               📅 Status: <strong>Continuously Evolving</strong>

@@ -51,8 +51,8 @@ export default function LiveScoresClient() {
           </p>
 
           <div className="eeat-badge-container">
-            <div className="eeat-badge">
-              ✍️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong>
+            <div className="eeat-badge" style={{ background: "rgba(255, 255, 255, 0.05)", border: "1px solid var(--border-color)", padding: "0.4rem 1rem", borderRadius: "8px", fontSize: "0.85rem" }}>
+              ✅ Reviewed by <strong>HWC 2026 Editorial Desk</strong> (Synced with official FIH live match logging)
             </div>
           </div>
         </div>
@@ -300,7 +300,7 @@ export default function LiveScoresClient() {
               <span className="insight-col-tag">Coverage</span>
               <span className="insight-col-header">Play-by-Play Commentary</span>
               <p className="insight-col-text">
-                On matchdays, our lead Belgian journalist Marc Devos provides live text commentary. We focus on tactical switches, circle entry efficiency, drag-flick alignments, and structural player rotations that aren't visible on basic television scoreboards.
+                On matchdays, our lead Belgian journalist HWC 2026 Editorial Team provides live text commentary. We focus on tactical switches, circle entry efficiency, drag-flick alignments, and structural player rotations that aren't visible on basic television scoreboards.
               </p>
             </div>
 
@@ -325,7 +325,7 @@ export default function LiveScoresClient() {
           </p>
           <div className="expert-quote-box">
             "Having immediate access to real-time circle penetrations and individual penalty corner conversion rates is highly crucial. In modern hockey, 65% of matches are decided on set-pieces, making live statistics tracking vital for team analysts."
-            <strong>— Marc Devos, Senior Belgian Hockey Analyst</strong>
+            <strong>— HWC 2026 Editorial Desk</strong>
           </div>
         </section>
       </main>

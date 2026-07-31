@@ -92,7 +92,7 @@ export default async function DateMatchPage({ params }) {
             Complete fixture schedule for {day.date} at the FIH Hockey World Cup 2026 — all match timings in IST, CEST, GMT and EST, broadcast channels, and editorial match previews.
           </p>
           <div className="eeat-badge-container">
-            <div className="eeat-badge">✍️ Expert Coverage by <strong>Marc Devos</strong></div>
+            <div className="eeat-badge">✍️ Expert Coverage by <strong>HWC 2026 Editorial Team</strong></div>
             <div className="eeat-badge">📅 Updated: <strong>July 2026</strong></div>
             <div className="eeat-badge">🎓 Source: <strong>FIH Official Schedule</strong></div>
           </div>

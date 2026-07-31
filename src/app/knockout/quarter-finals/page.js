@@ -64,7 +64,7 @@ export default function QuarterFinalsPage() {
             Your complete guide to the Hockey World Cup 2026 Quarter-Finals. How teams qualify from each pool, the bracket structure, match timings across all timezones, venue details, and expert scenario analysis.
           </p>
           <div className="eeat-badge-container">
-            <div className="eeat-badge">✍️ Analysis by <strong>Marc Devos</strong></div>
+            <div className="eeat-badge">✍️ Analysis by <strong>HWC 2026 Editorial Team</strong></div>
             <div className="eeat-badge">📅 Schedule: <strong>Aug 24–25, 2026</strong></div>
             <div className="eeat-badge">🎓 Source: <strong>FIH Official Format</strong></div>
           </div>

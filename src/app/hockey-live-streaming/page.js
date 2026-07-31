@@ -34,7 +34,7 @@ export default function BroadcastersPage() {
   const faqItems = [
     {
       q: "Is there a free live stream of the Hockey World Cup 2026 available?",
-      a: "Yes. In India, JioCinema streams all matches for free. In Belgium, VRT MAX and RTBF Auvio stream matches free of charge within the territory. In the Netherlands, NOS.nl provides free streams of the national team's matches."
+      a: "Yes. In India, JioHotstar streams matches live online. In Belgium, VRT MAX and RTBF Auvio stream matches free of charge within the territory. In the Netherlands, NOS.nl provides free streams of the national team's matches."
     },
     {
       q: "How can fans in Pakistan watch the Hockey World Cup 2026 live online?",
@@ -46,7 +46,7 @@ export default function BroadcastersPage() {
     },
     {
       q: "How can I avoid geo-blocking to watch the free streams?",
-      a: "Spectators with valid travel subscriptions often use premium VPN services to redirect their connection to free regional portals like JioCinema (India) or VRT MAX (Belgium) to watch games while traveling."
+      a: "Spectators with valid travel subscriptions often use premium VPN services to redirect their connection to free regional portals like VRT MAX (Belgium) or NOS (Netherlands) to watch games while traveling."
     },
     {
       q: "Where can I find free real-time scores and match commentary?",
@@ -96,7 +96,7 @@ export default function BroadcastersPage() {
           </p>
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Editor-in-Chief: <strong>Marc Devos (Senior Belgian Hockey Journalist)</strong>
+              ✍️ Editor-in-Chief: <strong>HWC 2026 Editorial Desk</strong>
             </div>
             <div className="eeat-badge">
               ⚡ Status: <strong>Verified Streaming & Score Directories</strong>
@@ -190,7 +190,7 @@ export default function BroadcastersPage() {
               </thead>
               <tbody>
                 {[
-                  { region: "India", app: "JioCinema (Free, No Subscription Required)" },
+                  { region: "India", app: "JioHotstar / Star Sports" },
                   { region: "Pakistan", app: "Tapmad (HD Stream, Paid Subscription)" },
                   { region: "Belgium", app: "VRT MAX, RTBF Auvio (Free in Territory)" },
                   { region: "Netherlands", app: "NOS.nl, NOS App (Free in Territory)" },
@@ -283,9 +283,9 @@ export default function BroadcastersPage() {
 
           <div style={{ display: "flex", flexDirection: "column", gap: "2rem" }}>
             <div>
-              <h3 style={{ fontSize: "1.2rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "0.5rem" }}>📱 JioCinema App (India)</h3>
+              <h3 style={{ fontSize: "1.2rem", fontWeight: "700", color: "var(--text-main)", marginBottom: "0.5rem" }}>📱 JioHotstar & Star Sports (India)</h3>
               <p style={{ color: "var(--text-muted)", margin: 0 }}>
-                For Indian sports fans, JioCinema is the absolute best way to catch the action. JioCinema streams all 2026 Hockey World Cup games live, completely free of charge, with high-definition video feeds. Users just need to download the app on their Android, iOS, or Smart TV devices.
+                For Indian sports fans, JioHotstar and Star Sports are the official live streaming and broadcast destinations. All 2026 Hockey World Cup matches will be streamed live in HD with multi-language commentary.
               </p>
             </div>
 

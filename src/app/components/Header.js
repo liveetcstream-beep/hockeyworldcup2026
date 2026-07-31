@@ -126,129 +126,14 @@ export default function Header() {
           {/* Desktop Navigation Link Directory */}
           <nav className="desktop-only">
             <ul className="sports-nav">
-              <li><a href="/">Home</a></li>
-
-              {/* Schedules Dropdown */}
-              <li className="mega-menu-trigger">
-                <span className="mega-trigger-label">
-                  Schedules
-                  <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
-                </span>
-                <div className="mega-dropdown width-md">
-                  <div className="mega-grid cols-3">
-                    <div className="mega-column">
-                      <div className='nav-heading'>📅 Tournament Calendar</div>
-                      <ul>
-                        <li><a href="/schedule">Full Schedule</a></li>
-                        <li><a href="/format">⚙️ Tournament Format & Bracket</a></li>
-                        <li><a href="/points-table">📈 Points Table</a></li>
-                        <li><a href="/h2h">⚔️ Head-to-Head (H2H) History</a></li>
-                      </ul>
-                    </div>
-                    <div className="mega-column">
-                      <div className='nav-heading'>🏑 Pools A & B Schedules</div>
-                      <ul>
-                        <li><a href="/hockey-world-cup-2026-schedule-netherlands">🇳🇱 Netherlands Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-argentina">🇦🇷 Argentina Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-chile">🇨🇱 Chile Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-new-zealand">🇳🇿 New Zealand Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-germany">🇩🇪 Germany Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-belgium">🇧🇪 Belgium Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-malaysia">🇲🇾 Malaysia Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-france">🇫🇷 France Schedule</a></li>
-                      </ul>
-                    </div>
-                    <div className="mega-column">
-                      <div className='nav-heading'>🏑 Pools C & D Schedules</div>
-                      <ul>
-                        <li><a href="/hockey-world-cup-2026-schedule-australia">🇦🇺 Australia Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-spain">🇪🇸 Spain Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-ireland">🇮🇪 Ireland Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-south-africa">🇿🇦 South Africa Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-india">🇮🇳 India Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-pakistan">🇵🇰 Pakistan Schedule</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              {/* Team Hubs & Pools Dropdown */}
-              <li className="mega-menu-trigger">
-                <span className="mega-trigger-label">
-                  Team Hubs & Pools
-                  <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
-                </span>
-                <div className="mega-dropdown">
-                  <div className="mega-grid">
-                    <div className="mega-column">
-                      <div className='nav-heading'>📊 Standings by Pool</div>
-                      <ul>
-                        <li><a href="/hockey-world-cup-2026-groups">All Pool Standings Hub</a></li>
-                        <li><a href="/pool-a">🔴 Pool A Standings</a></li>
-                        <li><a href="/pool-b">🔵 Pool B Standings</a></li>
-                        <li><a href="/pool-c">🟢 Pool C Standings</a></li>
-                        <li><a href="/pool-d">🟡 Pool D Standings</a></li>
-                      </ul>
-                    </div>
-                    <div className="mega-column highlighted-col">
-                      <div className='nav-heading'>🏃‍♂️ Team Squads</div>
-                      <ul>
-                        <li><a href="/teams" className="accent-link">All 16 Squads Directory →</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              {/* Live Centre & Previews Mega Menu */}
-              <li className="mega-menu-trigger">
-                <span className="mega-trigger-label">
-                  Matchday Live
-                  <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
-                </span>
-                <div className="mega-dropdown">
-                  <div className="mega-grid">
-                    <div className="mega-column">
-                      <div className='nav-heading'>📺 Coverage & Access</div>
-                      <ul>
-                        <li><a href="/live-scores" className="live-item-link"><span className="pulse-dot"></span> Live Scoreboard</a></li>
-                        <li><a href="/hockey-live-streaming">📺 Live Streaming Guide</a></li>
-                        <li><a href="/tickets">🎟️ Tickets & Seating Pricing <span className="hot-tag">BUY</span></a></li>
-                        <li><a href="/venues">🗺️ Stadium Travel Guides</a></li>
-                      </ul>
-                    </div>
-                    <div className="mega-column">
-                      <div className='nav-heading'>🔥 Blockbuster Previews <span className="hot-tag">HOT</span></div>
-                      <ul>
-                        <li><a href="/matches/india-vs-pakistan">🇮🇳 India vs Pakistan 🇵🇰</a></li>
-                        <li><a href="/matches/germany-vs-belgium">🇩🇪 Germany vs Belgium 🇧🇪</a></li>
-                        <li><a href="/matches/netherlands-vs-australia-women">🇳🇱 Netherlands vs Australia (W)</a></li>
-                        <li><a href="/matches/india-vs-england">🇮🇳 India vs England 🏴󠁧󠁢󠁥󠁮󠁧󠁿</a></li>
-                        <li><a href="/matches/netherlands-vs-argentina">🇳🇱 Netherlands vs Argentina 🇦🇷</a></li>
-                        <li><a href="/matches" className="accent-link" style={{ color: "var(--accent)" }}>🔥 View All Matches Hub →</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              {/* Stats Dropdown */}
-              <li className="nav-item-dropdown">
-                <span className="dropdown-trigger">
-                  History & Stats
-                  <svg width="10" height="6" viewBox="0 0 10 6"><path d="M0 0l5 5 5-5z"/></svg>
-                </span>
-                <ul className="dropdown-menu">
-                  <li><a href="/history">🏆 World Cup Winners</a></li>
-                  <li><a href="/past-results">📊 2023 World Cup Stats</a></li>
-                </ul>
-              </li>
-
-              {/* News Section */}
+              <li><a href="/schedule">Schedule</a></li>
+              <li><a href="/points-table">Points Table</a></li>
+              <li><a href="/live-scores">Live Scores</a></li>
+              <li><a href="/teams">Teams</a></li>
+              <li><a href="/tickets">Tickets</a></li>
+              <li><a href="/venues">Venues</a></li>
               <li><a href="/news">News</a></li>
+              <li><a href="/history">History</a></li>
             </ul>
           </nav>
 
@@ -437,8 +322,7 @@ export default function Header() {
           <li><a href="/history" onClick={() => setIsMobileOpen(false)}>🏆 World Cup Winners</a></li>
           <li><a href="/past-results" onClick={() => setIsMobileOpen(false)}>📊 2023 World Cup Stats</a></li>
 
-          <li className="mobile-section-header">📰 Freshness Coverage</li>
-          <li><a href="/news" onClick={() => setIsMobileOpen(false)}>📰 Latest News & Updates</a></li>
+          <li><a href="/news" onClick={() => setIsMobileOpen(false)}>📰 News & Articles</a></li>
         </ul>
       </div>
     </>

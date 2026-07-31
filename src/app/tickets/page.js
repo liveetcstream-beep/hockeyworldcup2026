@@ -4,28 +4,28 @@ import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Tickets: Price Guide & Official Booking Outlets",
-  description: "Get your official Hockey World Cup 2026 tickets today! Find match ticket prices, booking portals, stadium guides, and parking passes for Netherlands & Belgium.",
+  title: "Hockey World Cup 2026 Tickets: Prices From €19",
+  description: "Official booking guide for Hockey World Cup 2026 tickets. Category-wise pricing from €19 to €70, seating maps, and official booking portal (worldcup.hockey).",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/tickets",
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Tickets: Price Guide & Official Booking Outlets",
-    description: "Get your official Hockey World Cup 2026 tickets today! Find match ticket prices, booking portals, stadium guides, and parking passes for Netherlands & Belgium.",
+    title: "Hockey World Cup 2026 Tickets: Prices From €19",
+    description: "Official booking guide for Hockey World Cup 2026 tickets. Category-wise pricing from €19 to €70, seating maps, and official booking portal (worldcup.hockey).",
     url: "https://hockeyworldcup2026schedule.com/tickets",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Hockey World Cup 2026 Tickets: Price Guide & Official Booking Outlets",
+        alt: "Hockey World Cup 2026 Tickets: Prices From €19",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Tickets: Price Guide & Official Booking Outlets",
-    description: "Get your official Hockey World Cup 2026 tickets today! Find match ticket prices, booking portals, stadium guides, and parking passes for Netherlands & Belgium.",
+    title: "Hockey World Cup 2026 Tickets: Prices From €19",
+    description: "Official booking guide for Hockey World Cup 2026 tickets.",
     images: ["/og-image.jpg"],
   },
 };
@@ -35,7 +35,7 @@ export default function TicketsPage() {
   const faqItems = [
     {
       question: "How to book online tickets for the Hockey World Cup 2026?",
-      answer: "You can book tickets online via the unified official portal at tickets.hockeyworldcup2026.com or through designated ticketing sites managed by the Royal Belgian Hockey Association (KBHB) and the Royal Dutch Hockey Association (KNHB). Enter your name, valid email, and contact info to confirm the booking."
+      answer: "You can book tickets online via the official portal at worldcup.hockey managed by the Royal Belgian Hockey Association (KBHB) and the Royal Dutch Hockey Association (KNHB). Enter your name, valid email, and contact info to confirm the booking."
     },
     {
       question: "Are physical tickets mandatory to enter the stadium?",
@@ -160,7 +160,7 @@ export default function TicketsPage() {
           </p>
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Analyst: <strong>Marc Devos (Senior Belgian Hockey Analyst)</strong>
+              ✍️ Analyst: <strong>HWC 2026 Editorial Desk</strong>
             </div>
             <div className="eeat-badge">
               ⚡ Status: <strong>Official Ticketing Portal Open</strong>
@@ -683,7 +683,7 @@ export default function TicketsPage() {
 
           <div className="expert-quote-box" style={{ marginTop: "2rem" }}>
             "We strongly urge fans to book accommodation early in Brussels (BE) and Amsterdam (NL), as central transit lines experience high tourist bookings in late August."
-            <strong>— Marc Devos, Senior Belgian Hockey Analyst</strong>
+            <strong>— HWC 2026 Editorial Desk</strong>
           </div>
         </section>
       </main>

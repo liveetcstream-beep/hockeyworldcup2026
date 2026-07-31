@@ -173,7 +173,7 @@ export default async function PlayerProfilePage({ params }) {
                 border: "1px solid var(--border-color)",
                 fontSize: "0.82rem",
               }}>
-                <span>✍️ Written by <strong>Marc Devos</strong> — Senior Hockey Analyst</span>
+                <span>✍️ Written by <strong>HWC 2026 Editorial Team</strong> — Senior Hockey Analyst</span>
                 <span>📅 Last Updated: <strong>July 2026</strong></span>
                 <span>🎓 Source: <strong>FIH Official Data</strong></span>
               </div>

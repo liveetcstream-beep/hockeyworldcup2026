@@ -57,7 +57,7 @@ export default function SemiFinalsPage() {
             The last four teams standing at the FIH Hockey World Cup 2026 battle for a place in the Final on August 27. Complete match timings across all timezones, streaming guide, tactical previews, and historical context.
           </p>
           <div className="eeat-badge-container">
-            <div className="eeat-badge">✍️ Expert Analysis: <strong>Marc Devos</strong></div>
+            <div className="eeat-badge">✍️ Expert Analysis: <strong>HWC 2026 Editorial Team</strong></div>
             <div className="eeat-badge">📅 Semi-Final Day: <strong>August 27, 2026</strong></div>
           </div>
         </div>

@@ -270,7 +270,7 @@ export default function BramVanDeMeerAuthorPage() {
               { label: "🇮🇳 Harmanpreet Singh Profile", href: "/players/harmanpreet-singh" },
               { label: "🇳🇱 Arthur Van Doren Profile", href: "/players/arthur-van-doren" },
               { label: "📊 India Results Tracker", href: "/results/india" },
-              { label: "✍️ Marc Devos — Senior Journalist", href: "/authors/marc-devos" },
+              { label: "✍️ HWC 2026 Editorial Team — Senior Journalist", href: "/authors/marc-devos" },
             ].map((link) => (
               <a key={link.href} href={link.href} style={{
                 background: "var(--bg-tertiary)", border: "1px solid var(--border-color)",

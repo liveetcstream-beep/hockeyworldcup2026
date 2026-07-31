@@ -169,7 +169,7 @@ export default function BelgiumHockeyPage() {
             Complete Belgium men's & women's hockey fixture guide, full time table, CET / USA / Canada match timings, results, and squad analysis. Download the complete <strong>Hockey World Cup 2026 Schedule PDF</strong> for Belgium's matches.
           </p>
           <div className="eeat-badge-container">
-            <div className="eeat-badge">✔️ Verified: <strong>Marc Devos (Belgian Hockey Analyst)</strong></div>
+            <div className="eeat-badge">✔️ Verified: <strong>HWC 2026 Editorial Desk</strong></div>
           </div>
           <div style={{ marginTop: '1.5rem', display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
             <a href="#fixtures" className="cta-button primary-cta">View Time Table & Results</a>
