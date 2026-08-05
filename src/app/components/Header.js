@@ -211,13 +211,190 @@ export default function Header() {
                   </div>
                 </div>
               </li>
-              <li><a href="/rankings">Rankings</a></li>
-              <li><a href="/live-scores">Live Scores</a></li>
-              <li><a href="/teams">Teams</a></li>
-              <li><a href="/tickets">Tickets</a></li>
-              <li><a href="/venues">Venues</a></li>
-              <li><a href="/news">News</a></li>
-              <li><a href="/history">History</a></li>
+              <li className="mega-menu-trigger">
+                <a href="/rankings" className="mega-trigger-label flex items-center gap-1">
+                  Rankings <span style={{ fontSize: "0.65rem", marginLeft: "2px" }}>▼</span>
+                </a>
+                <div className="mega-dropdown width-md">
+                  <div className="mega-grid cols-2">
+                    <div className="mega-column">
+                      <h4>📊 FIH World Rankings</h4>
+                      <ul>
+                        <li><a href="/rankings">🏆 Men's World Rankings</a></li>
+                        <li><a href="/rankings">👩 Women's World Rankings</a></li>
+                        <li><a href="/points-table">📈 Group Stage Points Table</a></li>
+                      </ul>
+                    </div>
+                    <div className="mega-column highlighted-col">
+                      <h4>⭐ Team Rankings Guides</h4>
+                      <ul>
+                        <li><a href="/hockey-world-cup-2026-schedule-india">🇮🇳 India (#5 Men / #9 Women)</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-pakistan">🇵🇰 Pakistan (#16 Men)</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-netherlands">🇳🇱 Netherlands (#1 World No.1)</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-germany">🇩🇪 Germany (#3 Defending Champ)</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li className="mega-menu-trigger">
+                <a href="/live-scores" className="mega-trigger-label flex items-center gap-1">
+                  Live Scores <span style={{ fontSize: "0.65rem", marginLeft: "2px" }}>▼</span>
+                </a>
+                <div className="mega-dropdown width-md">
+                  <div className="mega-grid cols-2">
+                    <div className="mega-column">
+                      <h4>🔴 Real-Time Match Center</h4>
+                      <ul>
+                        <li><a href="/live-scores">⚡ Live Match Center</a></li>
+                        <li><a href="/past-results">📜 Past Match Results</a></li>
+                        <li><a href="/hockey-live-streaming">📺 Live Broadcast & TV Guide</a></li>
+                      </ul>
+                    </div>
+                    <div className="mega-column highlighted-col">
+                      <h4>⚔️ Blockbuster Matches</h4>
+                      <ul>
+                        <li><a href="/matches/india-vs-pakistan">🇮🇳 IND vs PAK 🇵🇰 (Aug 19)</a></li>
+                        <li><a href="/matches/germany-vs-belgium">🇩🇪 GER vs BEL 🇧🇪 (Aug 17)</a></li>
+                        <li><a href="/matches/india-vs-wales">🇮🇳 IND vs WAL 🏴󠁧󠁢󠁷󠁬󠁳󠁿 (Aug 15)</a></li>
+                        <li><a href="/matches/pakistan-vs-wales">🇵🇰 PAK vs WAL 🏴󠁧󠁢󠁷󠁬󠁳󠁿 (Aug 17)</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li className="mega-menu-trigger">
+                <a href="/teams" className="mega-trigger-label flex items-center gap-1">
+                  Teams <span style={{ fontSize: "0.65rem", marginLeft: "2px" }}>▼</span>
+                </a>
+                <div className="mega-dropdown width-md">
+                  <div className="mega-grid cols-2">
+                    <div className="mega-column">
+                      <h4>🏃‍♂️ Qualified Teams Hub</h4>
+                      <ul>
+                        <li><a href="/teams">👥 All 20 Qualified Teams</a></li>
+                        <li><a href="/players">⭐ 80+ Player Profiles & Rosters</a></li>
+                        <li><a href="/h2h">⚔️ Head-to-Head Comparisons</a></li>
+                      </ul>
+                    </div>
+                    <div className="mega-column highlighted-col">
+                      <h4>🏑 Squad Rosters</h4>
+                      <ul>
+                        <li><a href="/players/harmanpreet-singh">🇮🇳 Harmanpreet Singh (India)</a></li>
+                        <li><a href="/players/hardik-singh">🇮🇳 Hardik Singh (India)</a></li>
+                        <li><a href="/players/mandeep-singh">🇮🇳 Mandeep Singh (India)</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-pakistan">🇵🇰 Pakistan 18-Player Squad</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li className="mega-menu-trigger">
+                <a href="/tickets" className="mega-trigger-label flex items-center gap-1">
+                  Tickets <span style={{ fontSize: "0.65rem", marginLeft: "2px" }}>▼</span>
+                </a>
+                <div className="mega-dropdown width-md">
+                  <div className="mega-grid cols-2">
+                    <div className="mega-column">
+                      <h4>🎟️ Booking & Pricing</h4>
+                      <ul>
+                        <li><a href="/tickets">🎫 Official Ticket Price Guide</a></li>
+                        <li><a href="/venues/wagener-stadium-guide">🏟️ Wagener Stadium Seats (NED)</a></li>
+                        <li><a href="/venues/belfius-arena-guide">🏟️ Belfius Arena Seats (BEL)</a></li>
+                      </ul>
+                    </div>
+                    <div className="mega-column highlighted-col">
+                      <h4>🏆 Knockout Stage Tickets</h4>
+                      <ul>
+                        <li><a href="/knockout/quarter-finals">🔥 Quarter-Final Tickets</a></li>
+                        <li><a href="/knockout/semi-finals">⚡ Semi-Final Tickets</a></li>
+                        <li><a href="/knockout/final">👑 Grand Final Tickets</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li className="mega-menu-trigger">
+                <a href="/venues" className="mega-trigger-label flex items-center gap-1">
+                  Venues <span style={{ fontSize: "0.65rem", marginLeft: "2px" }}>▼</span>
+                </a>
+                <div className="mega-dropdown width-md">
+                  <div className="mega-grid cols-2">
+                    <div className="mega-column">
+                      <h4>🏟️ Host Stadiums</h4>
+                      <ul>
+                        <li><a href="/venues">🏟️ All Host Venues Guide</a></li>
+                        <li><a href="/venues/wagener-stadium-guide">🇳🇱 Wagener Stadium (Amstelveen)</a></li>
+                        <li><a href="/venues/belfius-arena-guide">🇧🇪 Belfius Arena (Wavre)</a></li>
+                      </ul>
+                    </div>
+                    <div className="mega-column highlighted-col">
+                      <h4>✈️ Travel & Parking</h4>
+                      <ul>
+                        <li><a href="/tickets">🎟️ Stadium Ticket Gates</a></li>
+                        <li><a href="/venues/wagener-stadium-guide">🚇 Metro & Parking (Amstelveen)</a></li>
+                        <li><a href="/venues/belfius-arena-guide">🚌 Travel & Parking (Wavre)</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li className="mega-menu-trigger">
+                <a href="/news" className="mega-trigger-label flex items-center gap-1">
+                  News <span style={{ fontSize: "0.65rem", marginLeft: "2px" }}>▼</span>
+                </a>
+                <div className="mega-dropdown width-md">
+                  <div className="mega-grid cols-2">
+                    <div className="mega-column">
+                      <h4>📰 Latest Updates</h4>
+                      <ul>
+                        <li><a href="/news">📢 All Tournament News</a></li>
+                        <li><a href="/news/india-announces-world-cup-squad">🇮🇳 India Squad Announcement</a></li>
+                        <li><a href="/news/germany-injury-update">🇩🇪 Germany Injury Update</a></li>
+                      </ul>
+                    </div>
+                    <div className="mega-column highlighted-col">
+                      <h4>✍️ Editorial Desk</h4>
+                      <ul>
+                        <li><a href="/authors/bram-van-de-meer">✍️ Bram van de Meer (Analyst)</a></li>
+                        <li><a href="/authors/marc-devos">✍️ Marc Devos (Senior Journalist)</a></li>
+                        <li><a href="/authors">👥 Meet All Authors</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <li className="mega-menu-trigger">
+                <a href="/history" className="mega-trigger-label flex items-center gap-1">
+                  History <span style={{ fontSize: "0.65rem", marginLeft: "2px" }}>▼</span>
+                </a>
+                <div className="mega-dropdown width-md">
+                  <div className="mega-grid cols-2">
+                    <div className="mega-column">
+                      <h4>🏆 Tournament Archives</h4>
+                      <ul>
+                        <li><a href="/history">📜 All-Time Champions List (1971-2026)</a></li>
+                        <li><a href="/history">🏆 Men's World Cup Winners</a></li>
+                        <li><a href="/history">👑 Women's World Cup Winners</a></li>
+                      </ul>
+                    </div>
+                    <div className="mega-column highlighted-col">
+                      <h4>📊 Historical Records</h4>
+                      <ul>
+                        <li><a href="/past-results">🥇 Past Tournament Results</a></li>
+                        <li><a href="/prize-money">💰 Prize Money & Trophy Record</a></li>
+                        <li><a href="/format">⚙️ World Cup Format History</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
             </ul>
           </nav>
 
