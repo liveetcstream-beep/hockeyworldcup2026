@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FaqAccordion from "../components/FaqAccordion";
 
 export default function LiveScoresClient() {
   const [liveMatches, setLiveMatches] = useState([]);
@@ -327,6 +328,30 @@ export default function LiveScoresClient() {
             "Having immediate access to real-time circle penetrations and individual penalty corner conversion rates is highly crucial. In modern hockey, 65% of matches are decided on set-pieces, making live statistics tracking vital for team analysts."
             <strong>— HWC 2026 Editorial Desk</strong>
           </div>
+        </section>
+
+        {/* Structured FAQ Section */}
+        <section className="my-16">
+          <div className="section-title-wrap">
+            <h2>Frequently Asked Questions — Live Scores & Match Fitness</h2>
+            <p>Direct answers regarding live updates, streaming access, and player Yo-Yo test standards.</p>
+          </div>
+          <FaqAccordion
+            items={[
+              {
+                question: "How to watch the Hockey World Cup 2026 live scores?",
+                answer: "You can follow real-time live scores for all Men's and Women's matches on our dedicated live scoreboard page. Updates include goals, cards, penalty corner statistics, and starting lineups."
+              },
+              {
+                question: "What is the Yo-Yo test score requirement for Hockey World Cup players?",
+                answer: "Top international field hockey teams like India, Australia, and Belgium require players to achieve a minimum Yo-Yo Intermittent Recovery Test (Level 1) score of 19.5 to 20.1 to meet pre-tournament match fitness standards."
+              },
+              {
+                question: "How often is the live scoreboard updated during matches?",
+                answer: "Our scoreboard matches are synced every 30 seconds with official tournament logs to guarantee real-time score precision."
+              }
+            ]}
+          />
         </section>
       </main>
 

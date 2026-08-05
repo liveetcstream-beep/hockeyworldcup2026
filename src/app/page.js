@@ -11,6 +11,12 @@ export const metadata = {
   description: "Get the official Hockey World Cup 2026 Schedule, verified match fixtures, timezone conversions, and live streaming updates.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com",
+    languages: {
+      "en": "https://hockeyworldcup2026schedule.com",
+      "fr-BE": "https://hockeyworldcup2026schedule.com",
+      "nl-BE": "https://hockeyworldcup2026schedule.com",
+      "x-default": "https://hockeyworldcup2026schedule.com",
+    },
   },
   openGraph: {
     title: "Hockey World Cup 2026 Schedule: Fixtures & Live Updates",
@@ -60,7 +66,9 @@ export default function Home() {
       {/* HERO SECTION */}
       <section className="hero-section">
         <div className="sports-container hero-content">
-          <p className="hero-subtitle">FIH Men's & Women's World Cup 2026</p>
+          <p className="hero-subtitle">
+            FIH Men's & Women's World Cup 2026 — Coupe du Monde de Hockey · WK Hockey 2026
+          </p>
           <h1 className="hero-title">
             Hockey World Cup 2026 Schedule: Fixtures & Live Updates
           </h1>
@@ -391,8 +399,8 @@ export default function Home() {
                   </a>
                 </li>
                 <li className="pool-item">
-                  <a href="/hockey-world-cup-2026-schedule-chile" className="pool-item-link">
-                    <img src="https://flagcdn.com/w40/cl.png" width="20" height="14" alt="Chile flag" style={{ borderRadius: "2px" }} /> Chile
+                  <a href="/hockey-world-cup-2026-schedule-japan" className="pool-item-link">
+                    <img src="https://flagcdn.com/w40/jp.png" width="20" height="14" alt="Japan flag" style={{ borderRadius: "2px" }} /> Japan
                   </a>
                 </li>
                 <li className="pool-item">
@@ -557,8 +565,8 @@ export default function Home() {
                   </a>
                 </li>
                 <li className="pool-item">
-                  <a href="/hockey-world-cup-2026-schedule-france" className="pool-item-link">
-                    <img src="https://flagcdn.com/w40/fr.png" width="20" height="14" alt="France flag" style={{ borderRadius: "2px" }} /> France
+                  <a href="/hockey-world-cup-2026-schedule-ireland" className="pool-item-link">
+                    <img src="https://flagcdn.com/w40/ie.png" width="20" height="14" alt="Ireland flag" style={{ borderRadius: "2px" }} /> Ireland
                   </a>
                 </li>
               </ul>
@@ -628,27 +636,33 @@ export default function Home() {
             </div>
 
             {/* Belfius Hockey Arena */}
-            <div className="local-card">
+            <div className="local-card" style={{ border: "1px solid rgba(0, 145, 255, 0.2)" }}>
               <div className="local-icon">🏟️</div>
-              <h3 className="text-white font-bold italic">🇧🇪 Belfius Hockey Arena, Wavre</h3>
-              <p>Situated in the Walloon Brabant province of Belgium, Wavre is prone to sudden summer showers. The newly built stadium has integrated eco-drainage channels to comply with the Royal Belgian Hockey Association's carbon-neutral standard.</p>
+              <h3 className="text-white font-bold italic">🇧🇪 Belfius Hockey Arena (Wavre, Belgium) — Co-Host Venue</h3>
+              <p>
+                Named after primary Belgian hockey sponsor Belfius, this state-of-the-art 10,000-capacity arena in Wavre hosts 48 tournament matches including the Men's Pool B clashes and Semi-Finals. Equipped with eco-drained water-turf and spectator fan zones.
+              </p>
               
               <div className="local-meta">
                 <div className="local-meta-item">
                   <span>Postal Zip Code:</span>
-                  <strong>1300 (Wavre Municipal)</strong>
+                  <strong>1300 (Wavre Municipal, Walloon Brabant)</strong>
                 </div>
                 <div className="local-meta-item">
-                  <span>Transit Route:</span>
-                  <strong>TEC Bus Route 20 / Wavre Railway Station</strong>
+                  <span>Capacity & Sponsor:</span>
+                  <strong>10,000 Spectators (Belfius Official Arena)</strong>
                 </div>
                 <div className="local-meta-item">
-                  <span>Nearby Landmark:</span>
-                  <strong>Walibi Belgium Amusement Park (Right next door)</strong>
+                  <span>Transit & Shuttles:</span>
+                  <strong>Direct shuttle from Brussels-Nord & Wavre Station</strong>
                 </div>
                 <div className="local-meta-item">
-                  <span>Climate Issue:</span>
-                  <strong>Variable humidity; evening wind shifts</strong>
+                  <span>Spectator Parking:</span>
+                  <strong>Park & Ride Walibi Lot (P2/P3 Zone)</strong>
+                </div>
+                <div className="local-meta-item">
+                  <span>Full Guide & Map:</span>
+                  <a href="/venues/belfius-arena-guide" style={{ color: "#0091ff", fontWeight: "700", textDecoration: "underline" }}>Belfius Arena Spectator Guide →</a>
                 </div>
               </div>
             </div>

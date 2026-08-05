@@ -3,6 +3,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import ScheduleClient from "./ScheduleClient";
 import FaqAccordion from "../components/FaqAccordion";
+import { getPublishedNews } from "../../data/newsUtils";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Full Schedule: Fixtures & PDF Download",
@@ -150,6 +151,32 @@ export default function SchedulePage() {
 
         {/* Client Schedule Filter & Pagination Section */}
         <ScheduleClient />
+
+        {/* LATEST NEWS & TOURNAMENT UPDATES SECTION */}
+        <section id="schedule-news" className="my-16">
+          <div className="section-title-wrap">
+            <h2>Latest Tournament News & Fixture Updates</h2>
+            <p>Stay informed with team announcements, squad changes, injury reports, and matchday guidelines.</p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {getPublishedNews().slice(0, 3).map((article) => (
+              <div key={article.slug} className="local-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
+                <div style={{ position: 'relative', height: '160px', width: '100%', marginBottom: '1rem', overflow: 'hidden', borderRadius: '12px' }}>
+                  <img src={article.image} alt={article.title} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
+                  <span style={{ color: 'var(--primary)', fontWeight: '700', fontSize: '0.75rem', textTransform: 'uppercase', marginBottom: '0.4rem', display: 'block' }}>{article.category}</span>
+                  <h3 style={{ fontSize: '1rem', lineHeight: '1.4', margin: '0 0 0.6rem 0', color: 'var(--text-main)' }}>{article.title}</h3>
+                  <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem', marginBottom: '1.2rem' }}>{article.excerpt}</p>
+                  <div style={{ marginTop: 'auto', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+                    <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>⏱️ {article.readTime}</span>
+                    <a href={`/news/${article.slug}`} className="cta-button primary-cta" style={{ fontSize: '0.75rem', padding: '0.35rem 0.7rem', borderRadius: '6px' }}>Read Article →</a>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Dynamic Key Dates & Silo Block */}
         <section className="my-12">

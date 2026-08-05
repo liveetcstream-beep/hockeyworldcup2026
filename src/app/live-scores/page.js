@@ -57,6 +57,14 @@ export default function LiveScoresPage() {
                   },
                   {
                     "@type": "Question",
+                    "name": "What is the Yo-Yo test score requirement for Hockey World Cup players?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Top international field hockey teams like India, Australia, and Belgium require players to achieve a minimum Yo-Yo Intermittent Recovery Test (Level 1) score of 19.5 to 20.1 to meet pre-tournament match fitness standards."
+                    }
+                  },
+                  {
+                    "@type": "Question",
                     "name": "How often is the live scoreboard updated?",
                     "acceptedAnswer": {
                       "@type": "Answer",

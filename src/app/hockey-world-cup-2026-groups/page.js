@@ -39,7 +39,7 @@ const mensPools = [
     teams: [
       { code: "nl", name: "Netherlands", rank: "#1" },
       { code: "ar", name: "Argentina", rank: "#3" },
-      { code: "cl", name: "Chile", rank: "#12" },
+      { code: "jp", name: "Japan", rank: "#12" },
       { code: "nz", name: "New Zealand", rank: "#9" },
     ],
     danger: "Netherlands — World No.1 favorites",
@@ -103,7 +103,7 @@ const womensPools = [
       { code: "be", name: "Belgium", rank: "#5" },
       { code: "es", name: "Spain", rank: "#6" },
       { code: "nz", name: "New Zealand", rank: "#9" },
-      { code: "fr", name: "France", rank: "#11" },
+      { code: "ie", name: "Ireland", rank: "#8" },
     ],
     danger: "Belgium — Home advantage at Wavre",
   },

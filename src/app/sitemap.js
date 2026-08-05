@@ -13,6 +13,7 @@ export default function sitemap() {
     { route: "/schedule",    priority: 0.95, freq: "daily" },
     { route: "/live-scores", priority: 0.95, freq: "hourly" },
     { route: "/points-table",priority: 0.9,  freq: "daily" },
+    { route: "/rankings",    priority: 0.95, freq: "daily" },
     // Tier 3 — Core content pages
     { route: "/h2h",         priority: 0.85, freq: "weekly" },
     { route: "/teams",       priority: 0.85, freq: "weekly" },

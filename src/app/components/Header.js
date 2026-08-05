@@ -128,6 +128,7 @@ export default function Header() {
             <ul className="sports-nav">
               <li><a href="/schedule">Schedule</a></li>
               <li><a href="/points-table">Points Table</a></li>
+              <li><a href="/rankings">Rankings</a></li>
               <li><a href="/live-scores">Live Scores</a></li>
               <li><a href="/teams">Teams</a></li>
               <li><a href="/tickets">Tickets</a></li>
@@ -236,6 +237,7 @@ export default function Header() {
           <li><a href="/hockey-world-cup-2026-groups" onClick={() => setIsMobileOpen(false)}>🏆 All Pool Groups</a></li>
           <li><a href="/format" onClick={() => setIsMobileOpen(false)}>⚙️ Tournament Format</a></li>
           <li><a href="/points-table" onClick={() => setIsMobileOpen(false)}>📈 Points Table</a></li>
+          <li><a href="/rankings" onClick={() => setIsMobileOpen(false)}>📊 FIH World Rankings</a></li>
           <li><a href="/h2h" onClick={() => setIsMobileOpen(false)}>⚔️ Head-to-Head Records</a></li>
 
           <li className="mobile-section-header">🏃‍♂️ Team Profiles</li>

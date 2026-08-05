@@ -19,6 +19,10 @@ const faqItems = [
 ];
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Hockey World Cup 2026 Results: All Match Scores & Group Standings",
   description: "Get the complete results of the FIH Hockey World Cup 2026. View all match scores, goal scorers, points table adjustments, and knockout progress for all...",
   alternates: {

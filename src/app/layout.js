@@ -28,6 +28,15 @@ export const metadata = {
     shortcut: '/icon.png',
     apple: '/icon.png',
   },
+  alternates: {
+    canonical: "https://hockeyworldcup2026schedule.com",
+    languages: {
+      "en": "https://hockeyworldcup2026schedule.com",
+      "fr-BE": "https://hockeyworldcup2026schedule.com",
+      "nl-BE": "https://hockeyworldcup2026schedule.com",
+      "x-default": "https://hockeyworldcup2026schedule.com",
+    },
+  },
 
   authors: [{ name: "HWC 2026 Editorial Team", url: "https://hockeyworldcup2026schedule.com" }],
   creator: "hockeyworldcup2026schedule.com",
