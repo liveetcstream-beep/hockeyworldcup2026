@@ -99,6 +99,11 @@ const faqItems = [
   }
 ];
 
+const getTeamSlug = (countryName) => {
+  if (countryName === "United States") return "usa";
+  return countryName.toLowerCase().replace(/\s+/g, "-");
+};
+
 export default function RankingsPage() {
   return (
     <>
@@ -174,7 +179,7 @@ export default function RankingsPage() {
                     </td>
                     <td style={{ padding: "1rem", color: t.change.startsWith("+") ? "#4ade80" : t.change.startsWith("-") ? "#f87171" : "var(--text-muted)" }}>{t.change}</td>
                     <td style={{ padding: "1rem" }}>
-                      <a href={`/hockey-world-cup-2026-schedule-${t.country.toLowerCase().replace(/\s+/g, '-')}`} style={{ color: "#38bdf8", fontWeight: "600", fontSize: "0.85rem", textDecoration: "none" }}>Schedule →</a>
+                      <a href={`/hockey-world-cup-2026-schedule-${getTeamSlug(t.country)}`} style={{ color: "#38bdf8", fontWeight: "600", fontSize: "0.85rem", textDecoration: "none" }}>Schedule →</a>
                     </td>
                   </tr>
                 ))}
@@ -217,7 +222,7 @@ export default function RankingsPage() {
                     </td>
                     <td style={{ padding: "1rem", color: t.change.startsWith("+") ? "#4ade80" : t.change.startsWith("-") ? "#f87171" : "var(--text-muted)" }}>{t.change}</td>
                     <td style={{ padding: "1rem" }}>
-                      <a href={`/hockey-world-cup-2026-schedule-${t.country.toLowerCase().replace(/\s+/g, '-')}`} style={{ color: "#f43f5e", fontWeight: "600", fontSize: "0.85rem", textDecoration: "none" }}>Schedule →</a>
+                      <a href={`/hockey-world-cup-2026-schedule-${getTeamSlug(t.country)}`} style={{ color: "#f43f5e", fontWeight: "600", fontSize: "0.85rem", textDecoration: "none" }}>Schedule →</a>
                     </td>
                   </tr>
                 ))}

@@ -130,8 +130,8 @@ export default function Header() {
                 <a href="/schedule" className="mega-trigger-label flex items-center gap-1">
                   Schedule <span style={{ fontSize: "0.65rem", marginLeft: "2px" }}>▼</span>
                 </a>
-                <div className="mega-dropdown width-md">
-                  <div className="mega-grid cols-3">
+                <div className="mega-dropdown width-xl">
+                  <div className="mega-grid cols-4">
                     <div className="mega-column">
                       <h4>📆 Match Dates</h4>
                       <ul>
@@ -141,10 +141,12 @@ export default function Header() {
                         <li><a href="/schedule/date/august-18-matches">Aug 18 Matches</a></li>
                         <li><a href="/schedule/date/august-19-matches">Aug 19 Matches</a></li>
                         <li><a href="/schedule/date/august-20-matches">Aug 20 Matches</a></li>
+                        <li><a href="/schedule" className="accent-link">Full Schedule Hub →</a></li>
                       </ul>
                     </div>
+
                     <div className="mega-column">
-                      <h4>🏆 Top Team Schedules</h4>
+                      <h4>🏆 Men's Teams (A-N)</h4>
                       <ul>
                         <li><a href="/hockey-world-cup-2026-schedule-india">🇮🇳 India Schedule</a></li>
                         <li><a href="/hockey-world-cup-2026-schedule-pakistan">🇵🇰 Pakistan Schedule</a></li>
@@ -152,17 +154,33 @@ export default function Header() {
                         <li><a href="/hockey-world-cup-2026-schedule-germany">🇩🇪 Germany Schedule</a></li>
                         <li><a href="/hockey-world-cup-2026-schedule-netherlands">🇳🇱 Netherlands Schedule</a></li>
                         <li><a href="/hockey-world-cup-2026-schedule-australia">🇦🇺 Australia Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-argentina">🇦🇷 Argentina Schedule</a></li>
                       </ul>
                     </div>
-                    <div className="mega-column highlighted-col">
-                      <h4>🌍 All 20 Teams</h4>
+
+                    <div className="mega-column">
+                      <h4>🏑 Men's Teams (E-W)</h4>
                       <ul>
                         <li><a href="/hockey-world-cup-2026-schedule-england">🏴󠁧󠁢󠁥󠁮󠁧󠁿 England Schedule</a></li>
                         <li><a href="/hockey-world-cup-2026-schedule-spain">🇪🇸 Spain Schedule</a></li>
-                        <li><a href="/hockey-world-cup-2026-schedule-argentina">🇦🇷 Argentina Schedule</a></li>
                         <li><a href="/hockey-world-cup-2026-schedule-malaysia">🇲🇾 Malaysia Schedule</a></li>
                         <li><a href="/hockey-world-cup-2026-schedule-france">🇫🇷 France Schedule</a></li>
-                        <li><a href="/schedule" className="accent-link">View All 20 Schedules →</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-japan">🇯🇵 Japan Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-ireland">🇮🇪 Ireland Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-wales">🏴󠁧󠁢󠁷󠁬󠁳󠁿 Wales Schedule</a></li>
+                      </ul>
+                    </div>
+
+                    <div className="mega-column highlighted-col">
+                      <h4>🌍 More & Women's</h4>
+                      <ul>
+                        <li><a href="/hockey-world-cup-2026-schedule-south-africa">🇿🇦 South Africa</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-new-zealand">🇳🇿 New Zealand</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-chile">🇨🇱 Chile Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-usa">🇺🇸 USA Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-scotland">🏴󠁧󠁢󠁳󠁣󠁴󠁿 Scotland Schedule</a></li>
+                        <li><a href="/hockey-world-cup-2026-schedule-china">🇨🇳 China Schedule</a></li>
+                        <li><a href="/teams" className="accent-link">All 20 Team Hubs →</a></li>
                       </ul>
                     </div>
                   </div>
