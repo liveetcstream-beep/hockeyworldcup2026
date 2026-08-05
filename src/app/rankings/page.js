@@ -233,10 +233,10 @@ export default function RankingsPage() {
           </h3>
           <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <a href="/points-table" style={{ background: "rgba(2,132,199,0.1)", color: "#38bdf8", padding: "0.6rem 1.2rem", borderRadius: "10px", fontWeight: "600", textDecoration: "none" }}>🏆 Group Points Table</a>
-            <a href="/schedule" style={{ background: "rgba(2,132,199,0.1)", color="#38bdf8", padding: "0.6rem 1.2rem", borderRadius: "10px", fontWeight: "600", textDecoration: "none" }}>📅 Full Match Schedule</a>
-            <a href="/live-scores" style={{ background: "rgba(2,132,199,0.1)", color="#38bdf8", padding: "0.6rem 1.2rem", borderRadius: "10px", fontWeight: "600", textDecoration: "none" }}>🔴 Live Scores</a>
-            <a href="/teams" style={{ background: "rgba(2,132,199,0.1)", color="#38bdf8", padding: "0.6rem 1.2rem", borderRadius: "10px", fontWeight: "600", textDecoration: "none" }}>👥 All 16 Teams</a>
-            <a href="/players" style={{ background: "rgba(2,132,199,0.1)", color="#38bdf8", padding: "0.6rem 1.2rem", borderRadius: "10px", fontWeight: "600", textDecoration: "none" }}>⭐ 80 Player Profiles</a>
+            <a href="/schedule" style={{ background: "rgba(2,132,199,0.1)", color: "#38bdf8", padding: "0.6rem 1.2rem", borderRadius: "10px", fontWeight: "600", textDecoration: "none" }}>📅 Full Match Schedule</a>
+            <a href="/live-scores" style={{ background: "rgba(2,132,199,0.1)", color: "#38bdf8", padding: "0.6rem 1.2rem", borderRadius: "10px", fontWeight: "600", textDecoration: "none" }}>🔴 Live Scores</a>
+            <a href="/teams" style={{ background: "rgba(2,132,199,0.1)", color: "#38bdf8", padding: "0.6rem 1.2rem", borderRadius: "10px", fontWeight: "600", textDecoration: "none" }}>👥 All 16 Teams</a>
+            <a href="/players" style={{ background: "rgba(2,132,199,0.1)", color: "#38bdf8", padding: "0.6rem 1.2rem", borderRadius: "10px", fontWeight: "600", textDecoration: "none" }}>⭐ 80 Player Profiles</a>
           </div>
         </section>
 

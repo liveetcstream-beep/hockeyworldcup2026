@@ -87,10 +87,33 @@ export default function PointsTablePage() {
             How do teams earn rankings during the 2026 group stages in Belgium and the Netherlands? Read the official FIH point system and tie-breaker guidelines.
           </p>
 
-          {/* Direct Answer Box */}
-          <div style={{ background: "rgba(0, 153, 0, 0.08)", border: "1px solid rgba(0, 153, 0, 0.2)", borderRadius: "12px", padding: "1.2rem 1.5rem", margin: "1rem 0 1.5rem 0", textAlign: "left" }}>
-            <p style={{ margin: 0, fontSize: "0.95rem", color: "var(--text-main)", fontWeight: "600", lineHeight: "1.7" }}>
-              💡 <strong>Points System & Tie-Breakers:</strong> Teams receive <strong>3 points for a win</strong>, <strong>1 point for a draw</strong>, and 0 points for a loss. If two teams finish equal on points, tie-breakers apply in this exact order: 1. Total Matches Won → 2. Goal Difference (GD) → 3. Goals For (GF) → 4. Head-to-Head Result.
+          {/* Featured Summary Box */}
+          <div style={{
+            background: "rgba(0, 153, 0, 0.06)",
+            borderLeft: "4px solid #10b981",
+            borderTop: "1px solid rgba(16, 185, 129, 0.15)",
+            borderRight: "1px solid rgba(16, 185, 129, 0.15)",
+            borderBottom: "1px solid rgba(16, 185, 129, 0.15)",
+            borderRadius: "8px",
+            padding: "1.25rem 1.5rem",
+            margin: "1.2rem 0 1.5rem 0",
+            textAlign: "left"
+          }}>
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              marginBottom: "0.5rem",
+              color: "#10b981",
+              fontSize: "0.85rem",
+              fontWeight: "700",
+              textTransform: "uppercase",
+              letterSpacing: "0.5px"
+            }}>
+              <span>⚡</span> QUICK OVERVIEW
+            </div>
+            <p style={{ margin: 0, fontSize: "1rem", color: "var(--text-main)", fontWeight: "500", lineHeight: "1.7" }}>
+              In the FIH Hockey World Cup group stage, teams earn <strong>3 points for a win</strong>, <strong>1 point for a draw</strong>, and <strong>0 points for a loss</strong>. Equal points are broken in order: 1. Total Matches Won → 2. Goal Difference (GD) → 3. Goals For (GF) → 4. Head-to-Head Result.
             </p>
           </div>
 

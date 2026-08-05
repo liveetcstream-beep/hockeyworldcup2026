@@ -133,10 +133,33 @@ export default function HistoryPage() {
           <p className="hero-subtitle">Tournament Hall of Fame (1971–2026)</p>
           <h1 className="hero-title">Hockey World Cup Winners List (All-Time Champions)</h1>
           
-          {/* Direct Answer Box Snippet Target */}
-          <div style={{ background: "rgba(0, 145, 255, 0.08)", border: "1px solid rgba(0, 145, 255, 0.2)", borderRadius: "12px", padding: "1.2rem 1.5rem", margin: "1rem 0 1.5rem 0", textAlign: "left" }}>
-            <p style={{ margin: 0, fontSize: "1rem", color: "var(--text-main)", fontWeight: "600", lineHeight: "1.7" }}>
-              💡 <strong>Quick Summary Answer:</strong> In Men's Hockey World Cup history, <strong>Pakistan holds the record for most titles with 4 wins</strong> (1971, 1978, 1982, 1994). Netherlands, Australia, and Germany have 3 titles each. In Women's Hockey World Cup history, <strong>the Netherlands leads with a record 9 titles</strong>.
+          {/* Featured Summary Box */}
+          <div style={{
+            background: "rgba(0, 145, 255, 0.06)",
+            borderLeft: "4px solid #0091ff",
+            borderTop: "1px solid rgba(0, 145, 255, 0.15)",
+            borderRight: "1px solid rgba(0, 145, 255, 0.15)",
+            borderBottom: "1px solid rgba(0, 145, 255, 0.15)",
+            borderRadius: "8px",
+            padding: "1.25rem 1.5rem",
+            margin: "1.2rem 0 1.5rem 0",
+            textAlign: "left"
+          }}>
+            <div style={{
+              display: "flex",
+              alignItems: "center",
+              gap: "8px",
+              marginBottom: "0.5rem",
+              color: "#0091ff",
+              fontSize: "0.85rem",
+              fontWeight: "700",
+              textTransform: "uppercase",
+              letterSpacing: "0.5px"
+            }}>
+              <span>⚡</span> QUICK OVERVIEW
+            </div>
+            <p style={{ margin: 0, fontSize: "1rem", color: "var(--text-main)", fontWeight: "500", lineHeight: "1.7" }}>
+              <strong>Pakistan holds the record for most Men's Hockey World Cup titles with 4 victories</strong> (1971, 1978, 1982, 1994). They are followed by the Netherlands (1973, 1990, 1998), Australia (1986, 2010, 2014), and Germany (2002, 2006, 2023) with 3 titles each. India won the title in 1975, and Belgium won in 2018. In Women's World Cup history, <strong>the Netherlands dominates with a record 9 titles</strong>.
             </p>
           </div>
 
