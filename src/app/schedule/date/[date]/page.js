@@ -4,6 +4,7 @@ import Header from "../../../components/Header";
 import Footer from "../../../components/Footer";
 import FaqAccordion from "../../../components/FaqAccordion";
 import { matchDays, getMatchDayBySlug, allDateSlugs } from "../../../../data/datepages";
+import { ALL_MATCHES } from "../../../../data/allMatches";
 
 const BASE = "https://hockeyworldcup2026schedule.com";
 
@@ -28,10 +29,133 @@ export async function generateMetadata({ params }) {
   };
 }
 
+const flagCodeMap = {
+  "Netherlands": "nl",
+  "South Africa": "za",
+  "India": "in",
+  "Wales": "gb-wls",
+  "Belgium": "be",
+  "Malaysia": "my",
+  "Germany": "de",
+  "France": "fr",
+  "Australia": "au",
+  "Spain": "es",
+  "Argentina": "ar",
+  "New Zealand": "nz",
+  "Chile": "cl",
+  "Ireland": "ie",
+  "Pakistan": "pk",
+  "England": "gb-eng",
+  "China": "cn",
+  "United States": "us",
+  "USA": "us",
+  "Scotland": "gb-sct"
+};
+
+const getConvertedTimes = (timeCET) => {
+  if (!timeCET) return [];
+  const [h, m] = timeCET.split(":").map(Number);
+
+  // PKT = CET + 3 hours
+  const pktH = (h + 3) % 24;
+  const timePKT = `${String(pktH).padStart(2, "0")}:${String(m).padStart(2, "0")} PKT`;
+
+  // IST = CET + 3.5 hours
+  let istM = m + 30;
+  let istH = h + 3;
+  if (istM >= 60) {
+    istM -= 60;
+    istH += 1;
+  }
+  istH = istH % 24;
+  const timeIST = `${String(istH).padStart(2, "0")}:${String(istM).padStart(2, "0")} IST`;
+
+  // GMT = CET - 1 hour
+  let gmtH = h - 1;
+  if (gmtH < 0) gmtH += 24;
+  const timeGMT = `${String(gmtH).padStart(2, "0")}:${String(m).padStart(2, "0")} GMT`;
+
+  // EST = CET - 6 hours
+  let estH = h - 6;
+  if (estH < 0) estH += 24;
+  const estPeriod = estH >= 12 ? "PM" : "AM";
+  const displayEstH = estH % 12 === 0 ? 12 : estH % 12;
+  const timeEST = `${String(displayEstH).padStart(2, "0")}:${String(m).padStart(2, "0")} ${estPeriod} EST`;
+
+  return [
+    { label: "CEST (Local)", time: `${timeCET} CEST` },
+    { label: "PKT (Pakistan)", time: timePKT },
+    { label: "IST (India)", time: timeIST },
+    { label: "GMT (UK)", time: timeGMT },
+    { label: "EST (USA)", time: timeEST },
+  ];
+};
+
+const getMatchPreviewLink = (teamA, teamB, gender) => {
+  const tA = teamA.toLowerCase();
+  const tB = teamB.toLowerCase();
+  const g = gender?.toLowerCase();
+
+  if ((tA === "pakistan" && tB === "india") || (tA === "india" && tB === "pakistan")) return "/matches/india-vs-pakistan";
+  if ((tA === "india" && tB === "wales") || (tA === "wales" && tB === "india")) return "/matches/india-vs-wales";
+  if ((tA === "pakistan" && tB === "wales") || (tA === "wales" && tB === "pakistan")) return "/matches/pakistan-vs-wales";
+  if ((tA === "germany" && tB === "belgium") || (tA === "belgium" && tB === "germany")) return "/matches/germany-vs-belgium";
+  if ((tA === "australia" && tB === "netherlands") || (tA === "netherlands" && tB === "australia")) return "/matches/netherlands-vs-australia-women";
+  if ((tA === "india" && tB === "england") || (tA === "england" && tB === "india")) return g === "women" ? "/matches/india-vs-england-women" : "/matches/india-vs-england";
+  if ((tA === "argentina" && tB === "netherlands") || (tA === "netherlands" && tB === "argentina")) return "/matches/netherlands-vs-argentina";
+  if ((tA === "spain" && tB === "australia") || (tA === "australia" && tB === "spain")) return "/matches/australia-vs-spain";
+  if ((tA === "belgium" && tB === "france") || (tA === "france" && tB === "belgium")) return "/matches/belgium-vs-france";
+  if ((tA === "england" && tB === "pakistan") || (tA === "pakistan" && tB === "england")) return "/matches/england-vs-pakistan";
+
+  return null;
+};
+
 export default async function DateMatchPage({ params }) {
   const resolvedParams = await params;
   const day = getMatchDayBySlug(resolvedParams.date);
   if (!day) return notFound();
+
+  // Dynamically sync matches from master ALL_MATCHES database
+  const masterMatchesForDay = ALL_MATCHES.filter((m) => m.date === day.date);
+
+  const displayMatches = masterMatchesForDay.length > 0
+    ? masterMatchesForDay.map((m) => ({
+        matchNumber: m.id,
+        timeCET: m.timeCET,
+        team1: m.teamA,
+        flagCode1: m.flagA || flagCodeMap[m.teamA] || "un",
+        team2: m.teamB,
+        flagCode2: m.flagB || flagCodeMap[m.teamB] || "un",
+        venue: m.venue,
+        pool: m.pool,
+        gender: m.gender,
+        matchPreviewUrl: getMatchPreviewLink(m.teamA, m.teamB, m.gender),
+        streaming: [
+          { country: "India", channel: "Star Sports / Disney+ Hotstar" },
+          { country: "Pakistan", channel: "PTV Sports / GEO Super" },
+          { country: "UK", channel: "BT Sport" },
+          { country: "USA", channel: "ESPN+" },
+          { country: "Netherlands", channel: "NPO3 / Ziggo Sport" },
+          { country: "Belgium", channel: "VRT / RTBF" },
+        ],
+      }))
+    : day.matches.map((m) => ({
+        matchNumber: m.matchNumber || 1,
+        timeCET: m.time_cest || "12:00",
+        team1: m.team1,
+        flagCode1: flagCodeMap[m.team1] || "un",
+        team2: m.team2,
+        flagCode2: flagCodeMap[m.team2] || "un",
+        venue: m.venue,
+        pool: m.pool,
+        gender: m.team1.includes("Women") || m.pool.includes("Women") ? "Women" : "Men",
+        matchPreviewUrl: m.matchPreviewUrl || getMatchPreviewLink(m.team1, m.team2),
+        streaming: m.streaming || [
+          { country: "India", channel: "Star Sports / Hotstar" },
+          { country: "Pakistan", channel: "PTV Sports" },
+          { country: "Worldwide", channel: "Watch.Hockey" },
+        ],
+      }));
 
   const eventSchema = {
     "@context": "https://schema.org",
@@ -39,13 +163,13 @@ export default async function DateMatchPage({ params }) {
     name: day.metaTitle,
     description: day.metaDesc,
     url: `${BASE}/schedule/date/${day.slug}`,
-    itemListElement: day.matches.map((m, i) => ({
+    itemListElement: displayMatches.map((m, i) => ({
       "@type": "ListItem",
       position: i + 1,
       item: {
         "@type": "SportsEvent",
-        name: `${m.team1} vs ${m.team2}`,
-        startDate: `2026-${day.date.replace("August ", "08-").padStart(5, "0").replace("August ", "")}T${m.time_gmt}:00Z`,
+        name: `${m.team1} vs ${m.team2} (${m.gender}'s ${m.pool})`,
+        startDate: `2026-${day.date.replace("August ", "08-").padStart(5, "0").replace("August ", "")}T${m.timeCET}:00Z`,
         location: { "@type": "Place", name: m.venue },
         competitor: [
           { "@type": "SportsTeam", name: m.team1 },
@@ -86,15 +210,15 @@ export default async function DateMatchPage({ params }) {
       {/* HERO */}
       <section className="hero-section">
         <div className="sports-container hero-content">
-          <p className="hero-subtitle">📅 Day {day.dayNumber} — Hockey World Cup 2026</p>
-          <h1 className="hero-title">Hockey World Cup 2026 Matches on {day.date} — Timings & Schedule</h1>
+          <p className="hero-subtitle">📅 Day {day.dayNumber} — Synced FIH World Cup Fixtures</p>
+          <h1 className="hero-title">Hockey World Cup 2026 Matches on {day.date} — Full Timings & Schedule</h1>
           <p className="hero-description">
-            Complete fixture schedule for {day.date} at the FIH Hockey World Cup 2026 — all match timings in IST, CEST, GMT and EST, broadcast channels, and editorial match previews.
+            Complete, verified match schedule for {day.date} at the FIH Hockey World Cup 2026. All match kickoff times in PKT, IST, CEST, GMT, and EST, broadcast channel listings, stadium venue guides, and direct match previews.
           </p>
           <div className="eeat-badge-container">
-            <div className="eeat-badge">✍️ Expert Coverage by <strong>HWC 2026 Editorial Team</strong></div>
-            <div className="eeat-badge">📅 Updated: <strong>July 2026</strong></div>
-            <div className="eeat-badge">🎓 Source: <strong>FIH Official Schedule</strong></div>
+            <div className="eeat-badge">✍️ Expert Coverage by <strong>HWC 2026 Editorial Desk</strong></div>
+            <div className="eeat-badge">⚡ Status: <strong>Synced with Master Schedule</strong></div>
+            <div className="eeat-badge">🎓 Database: <strong>FIH Official Match Center</strong></div>
           </div>
         </div>
       </section>
@@ -113,129 +237,162 @@ export default async function DateMatchPage({ params }) {
         <div style={{
           background: "linear-gradient(135deg, #c00030 0%, #8b0020 100%)",
           borderRadius: "14px", padding: "1.2rem 1.5rem",
-          marginBottom: "2rem", color: "#fff",
+          marginBottom: "2rem", color: "#ffffff",
           display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "1rem",
         }}>
           {[
-            { label: "CEST (Belgium/Netherlands)", offset: "+2" },
-            { label: "IST (India)", offset: "+5:30" },
-            { label: "GMT (UK)", offset: "±0" },
-            { label: "EST (USA East)", offset: "-4" },
-            { label: "AEST (Australia)", offset: "+10" },
+            { label: "CEST (Local)", offset: "UTC +2" },
+            { label: "PKT (Pakistan)", offset: "UTC +5" },
+            { label: "IST (India)", offset: "UTC +5:30" },
+            { label: "GMT (UK)", offset: "UTC ±0" },
+            { label: "EST (USA East)", offset: "UTC -4" },
           ].map((tz) => (
             <div key={tz.label} style={{ textAlign: "center" }}>
-              <div style={{ fontSize: "0.7rem", opacity: 0.8, textTransform: "uppercase", letterSpacing: "0.06em" }}>{tz.label}</div>
-              <div style={{ fontSize: "1rem", fontWeight: 800 }}>UTC {tz.offset}</div>
+              <div style={{ fontSize: "0.72rem", opacity: 0.9, textTransform: "uppercase", letterSpacing: "0.06em", color: "#ffffff" }}>{tz.label}</div>
+              <div style={{ fontSize: "1rem", fontWeight: 800, color: "#ffffff" }}>{tz.offset}</div>
             </div>
           ))}
         </div>
 
         {/* Match Cards */}
-        <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem", marginBottom: "3rem" }}>
-          {day.matches.map((match, idx) => (
-            <div key={idx} className="match-card" style={{
-              background: "var(--bg-secondary)",
-              borderRadius: "18px",
-              border: "1px solid var(--border-color)",
-              overflow: "hidden",
-            }}>
-              {/* Pool Header Bar */}
-              <div style={{
-                background: "linear-gradient(135deg, #c00030 0%, #8b0020 100%)",
-                padding: "0.6rem 1.5rem",
-                display: "flex", justifyContent: "space-between", alignItems: "center",
+        <div style={{ display: "flex", flexDirection: "column", gap: "1.8rem", marginBottom: "3rem" }}>
+          {displayMatches.map((match, idx) => {
+            const timeList = getConvertedTimes(match.timeCET);
+
+            return (
+              <div key={idx} className="match-card" style={{
+                background: "var(--bg-secondary)",
+                borderRadius: "18px",
+                border: "1px solid var(--border-color)",
+                boxShadow: "0 4px 20px rgba(0,0,0,0.06)",
+                overflow: "hidden",
               }}>
-                <span style={{ color: "#fff", fontSize: "0.78rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.08em" }}>
-                  {match.pool}
-                </span>
-                <span style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.78rem" }}>{match.venue}</span>
-              </div>
-
-              <div style={{ padding: "1.5rem" }}>
-                {/* Teams Row */}
+                {/* Pool Header Bar */}
                 <div style={{
-                  display: "grid",
-                  gridTemplateColumns: "1fr auto 1fr",
-                  alignItems: "center",
-                  gap: "1rem",
-                  marginBottom: "1.5rem",
+                  background: "linear-gradient(135deg, #c00030 0%, #8b0020 100%)",
+                  padding: "0.75rem 1.5rem",
+                  display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem"
                 }}>
-                  <div style={{ textAlign: "center" }}>
-                    <div style={{ fontSize: "2.5rem", marginBottom: "0.3rem" }}>{match.flag1}</div>
-                    <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "var(--text-main)" }}>{match.team1}</div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "8px" }}>
+                    <span style={{ background: "rgba(255,255,255,0.2)", color: "#ffffff", fontSize: "0.75rem", fontWeight: "800", padding: "0.2rem 0.6rem", borderRadius: "4px", textTransform: "uppercase" }}>
+                      {match.gender}'s {match.pool}
+                    </span>
+                    <span style={{ color: "#ffffff", fontSize: "0.85rem", fontWeight: "800" }}>
+                      Match #{match.matchNumber}
+                    </span>
                   </div>
-                  <div style={{ textAlign: "center" }}>
-                    {match.result ? (
-                      <div style={{ fontSize: "1.8rem", fontWeight: 900, color: "var(--primary)" }}>{match.result}</div>
-                    ) : (
-                      <div style={{ fontSize: "1.2rem", fontWeight: 700, color: "var(--text-muted)" }}>VS</div>
-                    )}
-                  </div>
-                  <div style={{ textAlign: "center" }}>
-                    <div style={{ fontSize: "2.5rem", marginBottom: "0.3rem" }}>{match.flag2}</div>
-                    <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "var(--text-main)" }}>{match.team2}</div>
-                  </div>
+                  <span style={{ color: "rgba(255,255,255,0.9)", fontSize: "0.8rem", fontWeight: "600" }}>
+                    📍 {match.venue}
+                  </span>
                 </div>
 
-                {/* Timezone Grid */}
-                <div style={{
-                  display: "grid",
-                  gridTemplateColumns: "repeat(auto-fit, minmax(100px, 1fr))",
-                  gap: "0.8rem",
-                  marginBottom: "1.2rem",
-                  padding: "1rem",
-                  background: "var(--bg-tertiary)",
-                  borderRadius: "10px",
-                }}>
-                  {[
-                    { label: "CEST", time: match.time_cest },
-                    { label: "IST", time: match.time_ist },
-                    { label: "GMT", time: match.time_gmt },
-                    { label: "EST", time: match.time_est },
-                    { label: "AEST", time: match.time_aest },
-                  ].filter(t => t.time).map((tz) => (
-                    <div key={tz.label} style={{ textAlign: "center" }}>
-                      <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", textTransform: "uppercase", letterSpacing: "0.05em" }}>{tz.label}</div>
-                      <div style={{ fontSize: "1.1rem", fontWeight: 800, color: "var(--text-main)" }}>{tz.time}</div>
+                <div style={{ padding: "1.5rem" }}>
+                  {/* Teams Row with FlagCDN Images */}
+                  <div style={{
+                    display: "grid",
+                    gridTemplateColumns: "1fr auto 1fr",
+                    alignItems: "center",
+                    gap: "1.5rem",
+                    marginBottom: "1.5rem",
+                  }}>
+                    {/* Team 1 */}
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "0.5rem" }}>
+                      <img
+                        src={`https://flagcdn.com/w80/${match.flagCode1}.png`}
+                        alt={`${match.team1} flag`}
+                        style={{ width: "52px", height: "34px", borderRadius: "5px", boxShadow: "0 2px 8px rgba(0,0,0,0.18)", objectFit: "cover" }}
+                      />
+                      <div style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)" }}>{match.team1}</div>
                     </div>
-                  ))}
-                </div>
 
-                {/* Streaming Options */}
-                <div style={{ marginBottom: "1rem" }}>
-                  <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "0.6rem" }}>
-                    📺 Where to Watch
-                  </p>
-                  <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>
-                    {match.streaming?.map((s) => (
-                      <span key={s.country} style={{
-                        fontSize: "0.8rem", fontWeight: 600,
-                        background: "var(--bg-tertiary)",
-                        border: "1px solid var(--border-color)",
-                        borderRadius: "6px", padding: "0.3rem 0.7rem",
-                        color: "var(--text-main)",
-                      }}>
-                        {s.country}: {s.channel}
+                    {/* VS Badge */}
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center" }}>
+                      <span style={{ fontSize: "0.75rem", fontWeight: "800", color: "var(--primary)", textTransform: "uppercase", background: "rgba(192,0,48,0.1)", padding: "0.25rem 0.6rem", borderRadius: "6px", marginBottom: "0.3rem" }}>
+                        FIH World Cup
                       </span>
+                      <div style={{ fontSize: "1.3rem", fontWeight: "900", color: "var(--text-muted)" }}>VS</div>
+                    </div>
+
+                    {/* Team 2 */}
+                    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", textAlign: "center", gap: "0.5rem" }}>
+                      <img
+                        src={`https://flagcdn.com/w80/${match.flagCode2}.png`}
+                        alt={`${match.team2} flag`}
+                        style={{ width: "52px", height: "34px", borderRadius: "5px", boxShadow: "0 2px 8px rgba(0,0,0,0.18)", objectFit: "cover" }}
+                      />
+                      <div style={{ fontSize: "1.2rem", fontWeight: "800", color: "var(--text-main)" }}>{match.team2}</div>
+                    </div>
+                  </div>
+
+                  {/* Timezone Grid */}
+                  <div style={{
+                    display: "grid",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(110px, 1fr))",
+                    gap: "0.8rem",
+                    marginBottom: "1.4rem",
+                    padding: "1rem 1.2rem",
+                    background: "var(--bg-tertiary)",
+                    borderRadius: "12px",
+                    border: "1px solid var(--border-color)",
+                  }}>
+                    {timeList.map((tz) => (
+                      <div key={tz.label} style={{ textAlign: "center" }}>
+                        <div style={{ fontSize: "0.7rem", color: "var(--text-muted)", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.05em" }}>{tz.label}</div>
+                        <div style={{ fontSize: "1.1rem", fontWeight: "800", color: "var(--text-main)" }}>{tz.time}</div>
+                      </div>
                     ))}
                   </div>
-                </div>
 
-                {match.matchPreviewUrl && (
-                  <a href={match.matchPreviewUrl} style={{
-                    display: "inline-block",
-                    background: "var(--bg-tertiary)",
-                    border: "1px solid var(--border-color)",
-                    borderRadius: "8px", padding: "0.6rem 1.2rem",
-                    color: "var(--text-main)", textDecoration: "none",
-                    fontSize: "0.88rem", fontWeight: 700,
-                  }}>
-                    Read Match Preview →
-                  </a>
-                )}
+                  {/* Streaming & Preview Action Buttons */}
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem" }}>
+                    <div>
+                      <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", fontWeight: 700, textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: "0.4rem" }}>
+                        📺 Broadcast Channels
+                      </p>
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.4rem" }}>
+                        {match.streaming?.map((s) => (
+                          <span key={s.country} style={{
+                            fontSize: "0.78rem", fontWeight: 600,
+                            background: "var(--bg-tertiary)",
+                            border: "1px solid var(--border-color)",
+                            borderRadius: "6px", padding: "0.25rem 0.6rem",
+                            color: "var(--text-main)",
+                          }}>
+                            {s.country}: {s.channel}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+
+                    {match.matchPreviewUrl ? (
+                      <a href={match.matchPreviewUrl} style={{
+                        background: "#c00030",
+                        color: "#ffffff",
+                        borderRadius: "8px", padding: "0.65rem 1.3rem",
+                        textDecoration: "none",
+                        fontSize: "0.88rem", fontWeight: 800,
+                        boxShadow: "0 2px 8px rgba(192,0,48,0.2)",
+                        transition: "all 0.2s ease"
+                      }}>
+                        Read Match Preview →
+                      </a>
+                    ) : (
+                      <a href={`/hockey-world-cup-2026-schedule-${match.team1.toLowerCase().replace(/\s+/g, '-')}`} style={{
+                        background: "var(--bg-tertiary)",
+                        border: "1px solid var(--border-color)",
+                        color: "var(--text-main)",
+                        borderRadius: "8px", padding: "0.6rem 1.2rem",
+                        textDecoration: "none",
+                        fontSize: "0.85rem", fontWeight: 700,
+                      }}>
+                        {match.team1} Team Hub →
+                      </a>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
 
         {/* Editorial Section */}
@@ -261,7 +418,7 @@ export default async function DateMatchPage({ params }) {
           marginBottom: "2.5rem",
         }}>
           <h3 style={{ fontSize: "1rem", fontWeight: 800, textTransform: "uppercase", letterSpacing: "0.06em", color: "var(--text-muted)", marginBottom: "1rem" }}>
-            Related Pages
+            🔗 Related Match Day Links
           </h3>
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.6rem" }}>
             {day.internalLinks?.map((link) => (
