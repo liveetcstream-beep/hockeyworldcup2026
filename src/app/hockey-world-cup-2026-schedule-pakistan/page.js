@@ -6,28 +6,28 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Pakistan Hockey World Cup 2026 Schedule: PKT Match Timings & Squad",
-  description: "Official Pakistan Hockey World Cup 2026 schedule in PKT (UTC+5). Pool D fixtures vs England (Aug 15), Wales (Aug 17) & India (Aug 19), 18-player squad & PTV Sports streaming guide.",
+  title: "Hockey World Cup 2026 Schedule Pakistan: Fixtures, Timings & Squad",
+  description: "Hockey World Cup 2026 Schedule Pakistan: Pool D match dates vs England (Aug 15), Wales (Aug 17) & India (Aug 19), local PKT match timings, Wagener Stadium details & 18-player squad.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-pakistan`,
   },
   openGraph: {
-    title: "Pakistan Hockey World Cup 2026 Schedule: PKT Match Timings & Squad",
-    description: "Verified Pakistan Hockey World Cup 2026 Pool D schedule in PKT. Matches vs England (Aug 15), Wales (Aug 17), and India (Aug 19), live broadcast details, and 18-player roster.",
+    title: "Hockey World Cup 2026 Schedule Pakistan: Fixtures, Timings & Squad",
+    description: "Hockey World Cup 2026 Schedule Pakistan in PKT. Matches vs England (Aug 15), Wales (Aug 17), and India (Aug 19), live broadcast details, and 18-player roster.",
     url: `${BASE}/hockey-world-cup-2026-schedule-pakistan`,
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Pakistan Hockey World Cup 2026 Schedule & PKT Timings",
+        alt: "Hockey World Cup 2026 Schedule Pakistan",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Pakistan Hockey World Cup 2026 Schedule: PKT Match Timings & Squad",
-    description: "Verified Pakistan Hockey World Cup 2026 Pool D schedule in PKT. Fixtures vs England, Wales, and India.",
+    title: "Hockey World Cup 2026 Schedule Pakistan: Fixtures, Timings & Squad",
+    description: "Hockey World Cup 2026 Schedule Pakistan: Pool D match dates vs England, Wales, and India in PKT.",
     images: ["/og-image.jpg"],
   },
 };
@@ -169,9 +169,9 @@ export default function PakistanHockeyPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">🏑 Pool D — Verified Fixtures & PKT Timings</p>
-          <h1 className="hero-title">Pakistan Hockey World Cup 2026 Schedule</h1>
+          <h1 className="hero-title">Hockey World Cup 2026 Schedule Pakistan</h1>
           <p className="hero-description">
-            Verified Pakistan Men's field hockey World Cup 2026 schedule in Pakistan Standard Time (PKT). Complete Pool D match dates vs England (Aug 15), Wales (Aug 17), and India (Aug 19) at Wagener Stadium, 18-player squad, and PTV Sports broadcast guide.
+            Get the official <strong>Hockey World Cup 2026 schedule Pakistan</strong> in Pakistan Standard Time (PKT). Complete Pool D match dates vs England (Aug 15), Wales (Aug 17), and India (Aug 19) at Wagener Stadium, 18-player squad roster, and PTV Sports broadcast guide.
           </p>
           <div className="eeat-badge-container" style={{ marginTop: "1rem" }}>
             <div className="eeat-badge" style={{ background: "rgba(0,153,0,0.1)", border: "1px solid rgba(0,153,0,0.3)", color: "#009900", padding: "0.5rem 1rem", borderRadius: "8px", fontSize: "0.85rem", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>

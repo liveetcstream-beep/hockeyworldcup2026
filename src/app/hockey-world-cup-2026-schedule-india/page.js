@@ -6,28 +6,28 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "India Hockey World Cup 2026 Schedule: IST Match Timings & Squad",
-  description: "Official India Hockey World Cup 2026 schedule in IST (UTC+5:30). Pool D matches vs Wales (Aug 15), England (Aug 17) & Pakistan (Aug 19), 18-player squad & JioHotstar streaming guide.",
+  title: "Hockey World Cup 2026 Schedule India: Fixtures, Timings & Squad",
+  description: "Hockey World Cup 2026 Schedule India: Pool D match dates vs Wales (Aug 15), England (Aug 17) & Pakistan (Aug 19), local IST timings, Wagener Stadium details & squad list.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
   },
   openGraph: {
-    title: "India Hockey World Cup 2026 Schedule: IST Match Timings & Squad",
-    description: "Official India Hockey World Cup 2026 schedule in IST. Pool D matches vs Wales (Aug 15), England (Aug 17) & Pakistan (Aug 19), live streaming, and squad details.",
+    title: "Hockey World Cup 2026 Schedule India: Fixtures, Timings & Squad",
+    description: "Hockey World Cup 2026 Schedule India in IST. Matches vs Wales (Aug 15), England (Aug 17) & Pakistan (Aug 19), live streaming, and squad details.",
     url: `${BASE}/hockey-world-cup-2026-schedule-india`,
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "India Hockey World Cup 2026 Schedule & IST Timings",
+        alt: "Hockey World Cup 2026 Schedule India",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "India Hockey World Cup 2026 Schedule: IST Match Timings & Squad",
-    description: "Official India Hockey World Cup 2026 schedule in IST.",
+    title: "Hockey World Cup 2026 Schedule India: Fixtures, Timings & Squad",
+    description: "Hockey World Cup 2026 Schedule India in IST.",
     images: ["/og-image.jpg"],
   },
 };
@@ -145,9 +145,9 @@ export default function IndiaHockeyPage() {
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">🏑 Pool D — Verified Fixtures & IST Timings</p>
-          <h1 className="hero-title">India Hockey World Cup 2026 Schedule</h1>
+          <h1 className="hero-title">Hockey World Cup 2026 Schedule India</h1>
           <p className="hero-description">
-            Verified Indian Men's & Women's field hockey World Cup 2026 schedule in Indian Standard Time (IST). Complete Pool D match dates vs Wales (Aug 15), England (Aug 17), and Pakistan (Aug 19) at Wagener Stadium, roster analysis, and Star Sports / JioHotstar broadcast details.
+            Get the official <strong>Hockey World Cup 2026 schedule India</strong> in Indian Standard Time (IST). Complete Pool D match dates vs Wales (Aug 15), England (Aug 17), and Pakistan (Aug 19) at Wagener Stadium, roster analysis, and Star Sports / JioHotstar broadcast details.
           </p>
           <div className="eeat-badge-container" style={{ marginTop: "1rem" }}>
             <div className="eeat-badge" style={{ background: "rgba(192,0,48,0.1)", border: "1px solid rgba(192,0,48,0.3)", color: "#c00030", padding: "0.5rem 1rem", borderRadius: "8px", fontSize: "0.85rem", display: "inline-flex", alignItems: "center", gap: "0.5rem" }}>

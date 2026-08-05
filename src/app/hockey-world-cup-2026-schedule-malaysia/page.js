@@ -6,14 +6,14 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Malaysia Hockey World Cup 2026 Schedule: Time & Matches",
-  description: "Malaysia Hockey World Cup 2026 Schedule: Pool B fixtures vs Germany (Aug 17), USA (Aug 19) & Argentina (Aug 21). MYT timings, squad & streaming guide.",
+  title: "Hockey World Cup 2026 Schedule Malaysia: Fixtures, Timings & Squad",
+  description: "Hockey World Cup 2026 Schedule Malaysia: Pool B fixtures vs Germany (Aug 17), USA (Aug 19) & Argentina (Aug 21). MYT timings, squad & streaming guide.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-malaysia`,
   },
   openGraph: {
-    title: "Malaysia Hockey World Cup 2026 Schedule: Time & Matches",
-    description: "Malaysia Hockey World Cup 2026 Schedule: Pool B fixtures vs Germany (Aug 17), USA (Aug 19) & Argentina (Aug 21). MYT timings, squad & streaming guide.",
+    title: "Hockey World Cup 2026 Schedule Malaysia: Fixtures, Timings & Squad",
+    description: "Hockey World Cup 2026 Schedule Malaysia: Pool B fixtures vs Germany (Aug 17), USA (Aug 19) & Argentina (Aug 21). MYT timings, squad & streaming guide.",
     url: `${BASE}/hockey-world-cup-2026-schedule-malaysia`,
     images: [
       {
@@ -26,8 +26,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Malaysia Hockey World Cup 2026 Schedule: Time & Matches",
-    description: "Malaysia Hockey World Cup 2026 Schedule: Pool B fixtures vs Germany (Aug 17), USA (Aug 19) & Argentina (Aug 21). MYT timings, squad & streaming guide.",
+    title: "Hockey World Cup 2026 Schedule Malaysia: Fixtures, Timings & Squad",
+    description: "Hockey World Cup 2026 Schedule Malaysia: Pool B fixtures vs Germany (Aug 17), USA (Aug 19) & Argentina (Aug 21). MYT timings, squad & streaming guide.",
     images: ["/og-image.jpg"],
   },
 };
@@ -133,7 +133,7 @@ export default function MalaysiaHockeyPage() {
           border: "1px solid rgba(192, 0, 48, 0.2)"
         }}>
           <div>
-            <h3 style={{ color: "white", fontSize: "1.2rem", fontWeight: "800", margin: 0 }}>Looking for the Complete Tournament Schedule?</h3>
+            <h3 className="cta-banner-heading" style={{ color: "#ffffff", fontSize: "1.2rem", fontWeight: "800", margin: 0 }}>Looking for the Complete Tournament Schedule?</h3>
             <p style={{ color: "rgba(255, 255, 255, 0.8)", fontSize: "0.9rem", margin: "0.2rem 0 0 0" }}>Get the full timetable, group matches, and local timezone converter for all 16 countries.</p>
           </div>
           <a href="/schedule" style={{

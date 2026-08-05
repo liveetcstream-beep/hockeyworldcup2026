@@ -6,14 +6,14 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "New Zealand Hockey World Cup 2026 Schedule: Time & Matches",
-  description: "New Zealand Hockey World Cup 2026 Schedule: Pool A fixtures vs Australia (Aug 15), Chile (Aug 17) & Japan (Aug 20). NZST timings, squad & streaming info.",
+  title: "Hockey World Cup 2026 Schedule New Zealand: Fixtures, Timings & Squad",
+  description: "Hockey World Cup 2026 Schedule New Zealand: Pool A fixtures vs Australia (Aug 15), Chile (Aug 17) & Japan (Aug 20). NZST timings, squad & streaming info.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-new-zealand`,
   },
   openGraph: {
-    title: "New Zealand Hockey World Cup 2026 Schedule: Time & Matches",
-    description: "New Zealand Hockey World Cup 2026 Schedule: Pool A fixtures vs Australia (Aug 15), Chile (Aug 17) & Japan (Aug 20). NZST timings, squad & streaming info.",
+    title: "Hockey World Cup 2026 Schedule New Zealand: Fixtures, Timings & Squad",
+    description: "Hockey World Cup 2026 Schedule New Zealand: Pool A fixtures vs Australia (Aug 15), Chile (Aug 17) & Japan (Aug 20). NZST timings, squad & streaming info.",
     url: `${BASE}/hockey-world-cup-2026-schedule-new-zealand`,
     images: [
       {
@@ -26,8 +26,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "New Zealand Hockey World Cup 2026 Schedule: Time & Matches",
-    description: "New Zealand Hockey World Cup 2026 Schedule: Pool A fixtures vs Australia (Aug 15), Chile (Aug 17) & Japan (Aug 20). NZST timings, squad & streaming info.",
+    title: "Hockey World Cup 2026 Schedule New Zealand: Fixtures, Timings & Squad",
+    description: "Hockey World Cup 2026 Schedule New Zealand: Pool A fixtures vs Australia (Aug 15), Chile (Aug 17) & Japan (Aug 20). NZST timings, squad & streaming info.",
     images: ["/og-image.jpg"],
   },
 };
@@ -137,7 +137,7 @@ export default function NewZealandHockeyPage() {
           border: "1px solid rgba(192, 0, 48, 0.2)"
         }}>
           <div>
-            <h3 style={{ color: "white", fontSize: "1.2rem", fontWeight: "800", margin: 0 }}>Looking for the Complete Tournament Schedule?</h3>
+            <h3 className="cta-banner-heading" style={{ color: "#ffffff", fontSize: "1.2rem", fontWeight: "800", margin: 0 }}>Looking for the Complete Tournament Schedule?</h3>
             <p style={{ color: "rgba(255, 255, 255, 0.8)", fontSize: "0.9rem", margin: "0.2rem 0 0 0" }}>Get the full timetable, group matches, and local timezone converter for all 16 countries.</p>
           </div>
           <a href="/schedule" style={{
