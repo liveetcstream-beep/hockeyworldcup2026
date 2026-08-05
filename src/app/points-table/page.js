@@ -122,6 +122,36 @@ export default function PointsTablePage() {
       />
 
       <main className="sports-container py-12">
+        {/* Pool Pages Navigation Bar */}
+        <section style={{
+          background: "var(--bg-secondary)",
+          border: "1px solid var(--border-color)",
+          borderRadius: "16px",
+          padding: "1.2rem 1.5rem",
+          marginBottom: "2rem"
+        }}>
+          <h3 style={{ fontSize: "0.95rem", fontWeight: "800", textTransform: "uppercase", letterSpacing: "0.05em", color: "var(--text-muted)", marginBottom: "0.8rem" }}>
+            🏆 Dedicated Pool Standings & Analysis Hubs:
+          </h3>
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem" }}>
+            <a href="/hockey-world-cup-2026-groups" style={{ background: "#c00030", color: "#ffffff", padding: "0.55rem 1.1rem", borderRadius: "8px", fontWeight: "700", textDecoration: "none", fontSize: "0.88rem" }}>
+              🏆 All 16 Pool Groups Hub
+            </a>
+            <a href="/pool-a" style={{ background: "rgba(2, 132, 199, 0.1)", color: "#0284c7", border: "1px solid rgba(2, 132, 199, 0.2)", padding: "0.55rem 1.1rem", borderRadius: "8px", fontWeight: "700", textDecoration: "none", fontSize: "0.88rem" }}>
+              🅰️ Pool A (NED, ARG, NZL, CHI)
+            </a>
+            <a href="/pool-b" style={{ background: "rgba(16, 185, 129, 0.1)", color: "#10b981", border: "1px solid rgba(16, 185, 129, 0.2)", padding: "0.55rem 1.1rem", borderRadius: "8px", fontWeight: "700", textDecoration: "none", fontSize: "0.88rem" }}>
+              🇧 Pool B (GER, BEL, MAS, FRA)
+            </a>
+            <a href="/pool-c" style={{ background: "rgba(245, 158, 11, 0.1)", color: "#d97706", border: "1px solid rgba(245, 158, 11, 0.2)", padding: "0.55rem 1.1rem", borderRadius: "8px", fontWeight: "700", textDecoration: "none", fontSize: "0.88rem" }}>
+              🅲 Pool C (AUS, ESP, IRL, RSA)
+            </a>
+            <a href="/pool-d" style={{ background: "rgba(168, 85, 247, 0.1)", color: "#9333ea", border: "1px solid rgba(168, 85, 247, 0.2)", padding: "0.55rem 1.1rem", borderRadius: "8px", fontWeight: "700", textDecoration: "none", fontSize: "0.88rem" }}>
+              🅳 Pool D (IND, ENG, PAK, WAL)
+            </a>
+          </div>
+        </section>
+
         {/* INTERACTIVE STANDINGS WIDGET */}
         <section className="my-12">
           {/* Gender Tabs */}

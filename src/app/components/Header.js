@@ -186,7 +186,31 @@ export default function Header() {
                   </div>
                 </div>
               </li>
-              <li><a href="/points-table">Points Table</a></li>
+              <li className="mega-menu-trigger">
+                <a href="/points-table" className="mega-trigger-label flex items-center gap-1">
+                  Points Table <span style={{ fontSize: "0.65rem", marginLeft: "2px" }}>▼</span>
+                </a>
+                <div className="mega-dropdown width-md">
+                  <div className="mega-grid cols-2">
+                    <div className="mega-column">
+                      <h4>🏆 Pool Groups Hub</h4>
+                      <ul>
+                        <li><a href="/hockey-world-cup-2026-groups"> All 16 Pool Groups Hub</a></li>
+                        <li><a href="/points-table" className="accent-link"> Full Standings & Tie-Breakers →</a></li>
+                      </ul>
+                    </div>
+                    <div className="mega-column highlighted-col">
+                      <h4>📊 Standings by Pool</h4>
+                      <ul>
+                        <li><a href="/pool-a">🅰️ Pool A (NED, ARG, NZL, CHI)</a></li>
+                        <li><a href="/pool-b">🇧️ Pool B (GER, BEL, MAS, FRA)</a></li>
+                        <li><a href="/pool-c">🅲 Pool C (AUS, ESP, IRL, RSA)</a></li>
+                        <li><a href="/pool-d">🅳 Pool D (IND, ENG, PAK, WAL)</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </li>
               <li><a href="/rankings">Rankings</a></li>
               <li><a href="/live-scores">Live Scores</a></li>
               <li><a href="/teams">Teams</a></li>
