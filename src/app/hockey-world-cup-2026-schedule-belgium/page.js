@@ -34,6 +34,21 @@ export const metadata = {
 };
 
 
+
+const flagCodeMap = {
+  "Netherlands": "nl", "South Africa": "za", "India": "in", "Wales": "gb-wls",
+  "Belgium": "be", "Malaysia": "my", "Germany": "de", "France": "fr",
+  "Australia": "au", "Spain": "es", "Argentina": "ar", "New Zealand": "nz",
+  "Chile": "cl", "Ireland": "ie", "Pakistan": "pk", "England": "gb-eng",
+  "China": "cn", "United States": "us", "USA": "us", "Scotland": "gb-sct"
+};
+
+function getOpponentFlagCode(opponentStr) {
+  if (!opponentStr) return "un";
+  const clean = opponentStr.replace(/^vs\s+/i, "").trim();
+  return flagCodeMap[clean] || "un";
+}
+
 export default function BelgiumHockeyPage() {
   const faqItems = [
     {
@@ -291,7 +306,16 @@ export default function BelgiumHockeyPage() {
                   <tr key={i} style={{ borderBottom: "1px solid var(--border-color)", background: i % 2 === 0 ? "var(--bg-secondary)" : "var(--bg-tertiary)" }}>
                     <td style={{ padding: "0.9rem 1rem", fontWeight: "700", color: "var(--text-main)", whiteSpace: "nowrap" }}>{m.date}</td>
                     <td style={{ padding: "0.9rem 1rem", color: "#d4af37", fontWeight: "600" }}>{m.time}</td>
-                    <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "600" }}>{m.opponent}</td>
+                    <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "600" }}>
+                      <div style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+                        <img 
+                          src={`https://flagcdn.com/w40/${getOpponentFlagCode(m.opponent)}.png`} 
+                          alt="" 
+                          style={{ width: "22px", height: "15px", borderRadius: "3px", objectFit: "cover", boxShadow: "0 1px 3px rgba(0,0,0,0.2)" }} 
+                        />
+                        <span>{m.opponent}</span>
+                      </div>
+                    </td>
                     <td style={{ padding: "0.9rem 1rem" }}>
                       <span style={{
                         background: m.type === "Pool Stage" ? "rgba(26,26,46,0.12)" : m.type === "Final" ? "rgba(212,175,55,0.15)" : "rgba(2,132,199,0.1)",
@@ -326,7 +350,16 @@ export default function BelgiumHockeyPage() {
                   <tr key={i} style={{ borderBottom: "1px solid var(--border-color)", background: i % 2 === 0 ? "var(--bg-secondary)" : "var(--bg-tertiary)" }}>
                     <td style={{ padding: "0.9rem 1rem", fontWeight: "700", color: "var(--text-main)", whiteSpace: "nowrap" }}>{m.date}</td>
                     <td style={{ padding: "0.9rem 1rem", color: "#f43f5e", fontWeight: "600" }}>{m.time}</td>
-                    <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "600" }}>{m.opponent}</td>
+                    <td style={{ padding: "0.9rem 1rem", color: "var(--text-main)", fontWeight: "600" }}>
+                      <div style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+                        <img 
+                          src={`https://flagcdn.com/w40/${getOpponentFlagCode(m.opponent)}.png`} 
+                          alt="" 
+                          style={{ width: "22px", height: "15px", borderRadius: "3px", objectFit: "cover", boxShadow: "0 1px 3px rgba(0,0,0,0.2)" }} 
+                        />
+                        <span>{m.opponent}</span>
+                      </div>
+                    </td>
                     <td style={{ padding: "0.9rem 1rem" }}>
                       <span style={{ background: m.type === "Pool Stage" ? "rgba(244,63,94,0.1)" : "rgba(2,132,199,0.1)", color: m.type === "Pool Stage" ? "#f43f5e" : "#0284c7", borderRadius: "8px", padding: "0.2rem 0.6rem", fontSize: "0.8rem", fontWeight: "600" }}>{m.type}</span>
                     </td>

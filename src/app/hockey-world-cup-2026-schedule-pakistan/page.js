@@ -32,6 +32,21 @@ export const metadata = {
   },
 };
 
+
+const flagCodeMap = {
+  "Netherlands": "nl", "South Africa": "za", "India": "in", "Wales": "gb-wls",
+  "Belgium": "be", "Malaysia": "my", "Germany": "de", "France": "fr",
+  "Australia": "au", "Spain": "es", "Argentina": "ar", "New Zealand": "nz",
+  "Chile": "cl", "Ireland": "ie", "Pakistan": "pk", "England": "gb-eng",
+  "China": "cn", "United States": "us", "USA": "us", "Scotland": "gb-sct"
+};
+
+function getOpponentFlagCode(opponentStr) {
+  if (!opponentStr) return "un";
+  const clean = opponentStr.replace(/^vs\s+/i, "").trim();
+  return flagCodeMap[clean] || "un";
+}
+
 export default function PakistanHockeyPage() {
   const faqItems = [
     {
