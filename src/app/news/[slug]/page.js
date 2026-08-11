@@ -143,7 +143,9 @@ export default async function NewsArticlePage({ params }) {
                   `https://hockeyworldcup2026schedule.com${article.image}`
                 ],
                 "datePublished": new Date(article.date).toISOString().split('T')[0] + "T09:00:00+02:00",
-                "dateModified": new Date(article.date).toISOString().split('T')[0] + "T09:00:00+02:00",
+                "dateModified": article.lastModified
+                  ? new Date(article.lastModified).toISOString().split('T')[0] + "T21:00:00+05:00"
+                  : new Date(article.date).toISOString().split('T')[0] + "T09:00:00+02:00",
                 "author": {
                   "@type": "Person",
                   "name": article.author,

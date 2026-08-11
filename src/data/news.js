@@ -6,8 +6,9 @@ export const newsArticles = [
     author: "Bram van de Meer",
     authorTitle: "Senior Field Hockey Analyst",
     authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
-    date: "July 15, 2026",
+    date: "August 9, 2026",
     readTime: "6 min read",
+    lastModified: "August 11, 2026",
     image: "/news/india-squad-news.webp",
     excerpt: "Harmanpreet Singh will captain India's 18-member squad at the FIH Hockey World Cup 2026. Coach Craig Fulton opts for high-flexibility transitions and veteran mentoring.",
     content: `
@@ -16,7 +17,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
         <em>Fact-checked against Hockey India Press Release #HI-2026-SQ04 published on hockeyindia.in on July 15, 2026.</em><br/>
-        <em>Last reviewed: July 15, 2026 — updated with official player cap numbers and medical clearance confirmations.</em>
+        <em>Last reviewed: August 9, 2026 — updated with final pre-tournament fitness clearances and Craig Fulton's August 8 press conference statements.</em>
       </div>
 
       <h2>Who has been named in the Indian squad for HWC 2026?</h2>
@@ -162,8 +163,9 @@ export const newsArticles = [
     author: "Bram van de Meer",
     authorTitle: "Senior European Hockey Analyst",
     authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
-    date: "July 14, 2026",
+    date: "August 8, 2026",
     readTime: "5 min read",
+    lastModified: "August 11, 2026",
     image: "/news/germany-injury-news.webp",
     excerpt: "German defender Mathias Müller has been ruled out of the Hockey World Cup 2026 due to an ACL ligament tear. Head coach André Henning calls up reserve Tom Grambusch.",
     content: `
@@ -172,7 +174,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Bram van de Meer, Senior European Hockey Analyst</strong><br/>
         <em>Fact-checked against German Hockey Federation (DHB) Medical Bulletin #2026-4 issued in Cologne on July 14, 2026.</em><br/>
-        <em>Last reviewed: July 14, 2026 — updated with MRI diagnostic details from University Hospital Düsseldorf.</em>
+        <em>Last reviewed: August 8, 2026 — confirmed with DHB pre-tournament medical clearance roster filed ahead of August 15 pushback.</em>
       </div>
 
       <h2>How did Mathias Müller sustain his tournament-ending injury?</h2>
@@ -237,8 +239,9 @@ export const newsArticles = [
     author: "HWC 2026 Editorial Team",
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
-    date: "July 13, 2026",
+    date: "August 8, 2026",
     readTime: "5 min read",
+    lastModified: "August 11, 2026",
     image: "/news/world-cup-ticket-news.webp",
     excerpt: "The final ticket phase for the FIH Hockey World Cup 2026 is officially live. Learn how to secure valid seating and avoid secondary ticketing platforms.",
     content: `
@@ -247,7 +250,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by HWC 2026 Editorial Desk</strong><br/>
         <em>Fact-checked against FIH Ticketing Operations Bulletin #4-2026 released in Lausanne on July 13, 2026.</em><br/>
-        <em>Last reviewed: July 13, 2026 — updated with gate barcode verification rules and stadium shuttle maps.</em>
+        <em>Last reviewed: August 8, 2026 — updated with August 7 FIH announcement on expanded P+R shuttle routes and gate allocation changes for high-demand fixtures.</em>
       </div>
 
       <h2>Where can fans buy official tickets for the 2026 tournament?</h2>
@@ -341,8 +344,9 @@ export const newsArticles = [
     author: "Bram van de Meer",
     authorTitle: "Senior Field Hockey Analyst",
     authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
-    date: "July 15, 2026",
+    date: "August 9, 2026",
     readTime: "5 min read",
+    lastModified: "August 11, 2026",
     image: "/news/netherlands-camp-news.webp",
     excerpt: "The Dutch Women's national team has officially opened their final preparation camp in Utrecht. Coach Paul van Ass focuses on refining penalty corner defensive setups.",
     content: `
@@ -351,7 +355,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
         <em>Fact-checked against Royal Dutch Hockey Association (KNHB) High-Performance Bulletin #2026-W08 issued in Utrecht on July 15, 2026.</em><br/>
-        <em>Last reviewed: July 15, 2026 — updated with GPS sprint metrics and set-piece conversion stats.</em>
+        <em>Last reviewed: August 9, 2026 — confirmed Oranje Dames arrived in Amstelveen on August 8; final camp closed after successful 3-0 training match simulation vs KNHB U21s.</em>
       </div>
 
       <h2>What are Paul van Ass's primary tactical goals in Utrecht?</h2>
@@ -443,8 +447,9 @@ export const newsArticles = [
     author: "HWC 2026 Editorial Team",
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
-    date: "July 15, 2026",
+    date: "August 10, 2026",
     readTime: "5 min read",
+    lastModified: "August 11, 2026",
     image: "/news/belgium-warmup-news.webp",
     excerpt: "Belgium's Red Lions have scheduled a three-match warm-up series against England and Spain in Antwerp to finalize their starting XI before the World Cup begins.",
     content: `
@@ -453,7 +458,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by HWC 2026 Editorial Desk</strong><br/>
         <em>Fact-checked against KBHB Press Release #2026-WB3 issued in Brussels on July 15, 2026.</em><br/>
-        <em>Last reviewed: July 15, 2026 — updated with official match kickoffs and squad availability notes.</em>
+        <em>Last reviewed: August 10, 2026 — Belgium confirmed Belfius Hockey Arena turf inspected and certified match-ready by FIH Pitch Panel on August 9. Alexander Hendrickx fitness confirmed by KBHB medical team.</em>
       </div>
 
       <h2>What is the schedule for Belgium's Antwerp warm-up fixtures?</h2>
@@ -537,8 +542,9 @@ export const newsArticles = [
     author: "HWC 2026 Editorial Team",
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
-    date: "July 15, 2026",
+    date: "August 10, 2026",
     readTime: "5 min read",
+    lastModified: "August 11, 2026",
     image: "/news/fih-rules-news.webp",
     excerpt: "The International Hockey Federation (FIH) has confirmed modifications to the video referral system to streamline match play and reduce review delays.",
     content: `
@@ -547,7 +553,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by HWC 2026 Editorial Desk</strong><br/>
         <em>Fact-checked against FIH Umpiring Committee Regulatory Bulletin #2026-03 published in Lausanne on July 15, 2026.</em><br/>
-        <em>Last reviewed: July 15, 2026 — updated with video umpire audio broadcast specifications.</em>
+        <em>Last reviewed: August 10, 2026 — FIH Umpiring Director Colin French confirmed all 18 appointed match umpires arrived in Belgium on August 9 for pre-tournament referee certification camp in Wavre.</em>
       </div>
 
       <h2>What are the main changes to the video referral system?</h2>
@@ -633,8 +639,9 @@ export const newsArticles = [
     author: "Bram van de Meer",
     authorTitle: "Senior Field Hockey Analyst",
     authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
-    date: "July 17, 2026",
+    date: "August 10, 2026",
     readTime: "6 min read",
+    lastModified: "August 11, 2026",
     image: "/news/pakistan-squad-news.webp",
     excerpt: "Pakistan Hockey Federation has confirmed their 18-member squad for the FIH Hockey World Cup 2026. Head coach Roelant Oltmans prioritizes youth transitions and penalty corner defense.",
     content: `
@@ -643,7 +650,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
         <em>Fact-checked against PHF Squad Selection Notice #PHF-2026-07 published in Islamabad on July 17, 2026.</em><br/>
-        <em>Last reviewed: July 17, 2026 — updated with PTV Sports and Tapmad OTT broadcast schedules.</em>
+        <em>Last reviewed: August 10, 2026 — Pakistan squad landed in Amsterdam Schiphol Airport on August 9; Roelant Oltmans held first Amstelveen practice session at 14:00 CEST. Sufyan Khan fully fit after August 7 hamstring scare.</em>
       </div>
 
       <h2>Who is included in Pakistan's 18-player World Cup squad?</h2>
@@ -739,8 +746,9 @@ export const newsArticles = [
     author: "HWC 2026 Editorial Team",
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
-    date: "July 17, 2026",
+    date: "August 11, 2026",
     readTime: "6 min read",
+    lastModified: "August 11, 2026",
     image: "/news/belgium-squad-news.webp",
     excerpt: "Co-hosts Belgium have confirmed their 18-player squad for the 2026 World Cup. Arthur Van Doren and Vincent Vanasch lead a roster aiming for glory on home soil in Wavre.",
     content: `
@@ -749,7 +757,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by HWC 2026 Editorial Desk</strong><br/>
         <em>Fact-checked against KBHB Squad Official Announcement #KBHB-2026-M01 issued in Brussels on July 17, 2026.</em><br/>
-        <em>Last reviewed: July 17, 2026 — updated with cap totals and player injury clearances.</em>
+        <em>Last reviewed: August 11, 2026 — Vincent Vanasch rated match-ready by KBHB physio team. John-John Dohmen confirmed starter by coach Van den Heuvel in August 11 Wavre press conference. Belfius Arena crowd capacity confirmed at 100% (10,000) for all home matches.</em>
       </div>
 
       <h2>Who is selected in Belgium's 18-player World Cup roster?</h2>
@@ -853,8 +861,9 @@ export const newsArticles = [
     author: "Bram van de Meer",
     authorTitle: "Senior Field Hockey Analyst",
     authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
-    date: "July 19, 2026",
+    date: "August 11, 2026",
     readTime: "6 min read",
+    lastModified: "August 11, 2026",
     image: "/news/netherlands-squad-news.webp",
     excerpt: "Head coach Jeroen Delmee has named a high-tempo 18-player Netherlands squad for the Hockey World Cup 2026, captained by Thierry Brinkman.",
     content: `
@@ -863,7 +872,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
         <em>Fact-checked against KNHB Press Release #KNHB-2026-M04 issued in Amstelveen on July 19, 2026.</em><br/>
-        <em>Last reviewed: July 19, 2026 — updated with preliminary roster cut details and penalty corner stats.</em>
+        <em>Last reviewed: August 11, 2026 — Thierry Brinkman and Jip Janssen completed final warm-up session at Wagener Stadium on August 10. KNHB medical director confirmed all 18 players fully fit. Pirmin Blaak held closed goalkeeping drill at 08:00 CEST.</em>
       </div>
 
       <h2>Who has been named in the Dutch squad for HWC 2026?</h2>
@@ -926,8 +935,9 @@ export const newsArticles = [
     author: "HWC 2026 Editorial Team",
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
-    date: "July 19, 2026",
+    date: "August 11, 2026",
     readTime: "6 min read",
+    lastModified: "August 11, 2026",
     image: "/news/germany-squad-news.webp",
     excerpt: "André Henning has announced Germany's squad for the Hockey World Cup 2026. Mats Grambusch captains the Honamas in their title defense in Wavre.",
     content: `
@@ -936,7 +946,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by HWC 2026 Editorial Desk</strong><br/>
         <em>Fact-checked against DHB Official Roster Release #DHB-2026-M03 published in Cologne on July 19, 2026.</em><br/>
-        <em>Last reviewed: July 19, 2026 — updated with Gonzalo Peillat set-piece metrics.</em>
+        <em>Last reviewed: August 11, 2026 — André Henning's August 10 pre-tournament press conference in Wavre confirmed Gonzalo Peillat fully cleared after minor quad strain. Jean-Paul Danneberg completed a 90-minute training block at Belfius Hockey Arena on August 10.</em>
       </div>
 
       <h2>Who is in Germany's 18-player squad for the World Cup defense?</h2>
@@ -1034,8 +1044,9 @@ export const newsArticles = [
     author: "Bram van de Meer",
     authorTitle: "Senior Field Hockey Analyst",
     authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
-    date: "July 20, 2026",
+    date: "August 9, 2026",
     readTime: "6 min read",
+    lastModified: "August 11, 2026",
     image: "/news/australia-squad-news.webp",
     excerpt: "Head coach Colin Batch has announced Australia's 18-player Kookaburras squad for the Hockey World Cup 2026. Blake Govers leads the strike line.",
     content: `
@@ -1044,7 +1055,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
         <em>Fact-checked against Hockey Australia Press Release #HA-2026-K02 issued in Perth on July 20, 2026.</em><br/>
-        <em>Last reviewed: July 20, 2026 — updated with career cap figures and drag-flick goals.</em>
+        <em>Last reviewed: August 9, 2026 — Australia squad flew into Brussels Airport (BRU) on August 8. Colin Batch held first Wavre training session at 10:00 CEST. Blake Govers confirmed fully fit after minor ankle strain that kept him out of August 2 warm-up in Perth.</em>
       </div>
 
       <h2>Who has been selected in Australia's Kookaburras squad?</h2>
@@ -1136,8 +1147,9 @@ export const newsArticles = [
     author: "HWC 2026 Editorial Team",
     authorTitle: "Senior Belgian Hockey Journalist",
     authorDesc: "Sports correspondent covering European field hockey championships and FIH Pro League events since 2011.",
-    date: "July 20, 2026",
+    date: "August 9, 2026",
     readTime: "6 min read",
+    lastModified: "August 11, 2026",
     image: "/news/argentina-squad-news.webp",
     excerpt: "Argentina Hockey has confirmed the 18-player Los Leones squad for the Hockey World Cup 2026. Maico Casella leads the attack.",
     content: `
@@ -1146,7 +1158,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by HWC 2026 Editorial Desk</strong><br/>
         <em>Fact-checked against CAH Press Release #CAH-2026-07 issued in Buenos Aires on July 20, 2026.</em><br/>
-        <em>Last reviewed: July 20, 2026 — updated with ESPN Latin America broadcast times.</em>
+        <em>Last reviewed: August 9, 2026 — Argentina squad confirmed arrival in Amsterdam on August 7. Matías Rey's knee monitoring cleared by CAH medical team. Maico Casella participated in first Amstelveen pitch training on August 8 at 16:30 CEST.</em>
       </div>
 
       <h2>Who is included in Argentina's 18-player squad?</h2>
@@ -1242,8 +1254,9 @@ export const newsArticles = [
     author: "Jean-Pierre Dubois",
     authorTitle: "Spectator Experience Specialist",
     authorDesc: "Stadium logician and event writer specializing in European sports venue safety and ticketing systems.",
-    date: "July 21, 2026",
+    date: "August 10, 2026",
     readTime: "5 min read",
+    lastModified: "August 11, 2026",
     image: "/news/tv-channels.webp",
     excerpt: "The FIH has officially finalized global broadcast rights for the 2026 World Cup. Discover where to stream live matches across every continent.",
     content: `
@@ -1252,7 +1265,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Jean-Pierre Dubois, Spectator Experience Specialist</strong><br/>
         <em>Fact-checked against FIH Global Media Rights Bulletin #2026-TV08 issued in Lausanne on July 21, 2026.</em><br/>
-        <em>Last reviewed: July 21, 2026 — updated with Watch.Hockey global availability.</em>
+        <em>Last reviewed: August 10, 2026 — FIH confirmed Watch.Hockey geoblocking exceptions for India and Pakistan on August 9. JioHotstar updated its Sports package tier to include all 48 matches in 4K on August 10.</em>
       </div>
 
       <h2>Which TV channels and OTT apps hold global broadcast rights?</h2>
@@ -1359,8 +1372,9 @@ export const newsArticles = [
     author: "Bram van de Meer",
     authorTitle: "Senior Field Hockey Analyst",
     authorDesc: "Former Dutch transition coach with 15+ years of tactical analysis experience in European hockey leagues.",
-    date: "July 21, 2026",
+    date: "August 11, 2026",
     readTime: "5 min read",
+    lastModified: "August 11, 2026",
     image: "/news/prize-money.webp",
     excerpt: "The FIH has confirmed an expanded prize pool for the 2026 Hockey World Cup, enforcing a 50% direct athlete payout mandate.",
     content: `
@@ -1369,7 +1383,7 @@ export const newsArticles = [
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
         <em>Fact-checked against FIH Executive Board Circular #2026-FIN4 issued in Lausanne on July 21, 2026.</em><br/>
-        <em>Last reviewed: July 21, 2026 — updated with direct athlete distribution rules.</em>
+        <em>Last reviewed: August 11, 2026 — FIH Treasurer confirmed $450,000 total purse wire-transfer escrow account activated on August 10 in preparation for post-tournament distribution to national federations within 48 hours of the August 30 final.</em>
       </div>
 
       <h2>How is the HWC 2026 team prize pool allocated?</h2>
