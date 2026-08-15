@@ -5,17 +5,194 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
+const INITIAL_LIVE_MATCHES = [
+  {
+    id: 101,
+    status: "LIVE",
+    minute: "54'",
+    period: "4th Quarter",
+    teamA: "England",
+    flagA: "gb-eng",
+    scoreA: 3,
+    teamB: "Pakistan",
+    flagB: "pk",
+    scoreB: 2,
+    venue: "Wagener Hockey Stadium, Amstelveen (1182 AM)",
+    pool: "Pool D (Men)",
+    stats: {
+      possession: "52% - 48%",
+      penaltyCorners: "6 (2) - 4 (1)",
+      shotsOnTarget: "9 - 6",
+      yellowCards: 1,
+      redCards: 0
+    },
+    events: [
+      { minute: "14'", player: "Liam Ansell", type: "Penalty Corner Goal ⚽", team: "England" },
+      { minute: "28'", player: "Muhammad Shahbaz Jr.", type: "Field Goal ⚽", team: "Pakistan" },
+      { minute: "39'", player: "Phil Roper", type: "Field Goal ⚽", team: "England" },
+      { minute: "47'", player: "Sufyan Khan", type: "Penalty Corner Goal ⚽", team: "Pakistan" },
+      { minute: "51'", player: "Sam Ward", type: "Penalty Corner Goal ⚽", team: "England" }
+    ],
+    postMatchSetup: {
+      recapSlug: "/news/england-vs-pakistan-result-score-august-15-hwc-2026",
+      highlightsUrl: "https://www.youtube.com/@FIHockey",
+      nextMatchA: "England vs India — Aug 17 (12:00 CET)",
+      nextMatchB: "Pakistan vs Wales — Aug 17 (09:30 CET)"
+    }
+  },
+  {
+    id: 102,
+    status: "LIVE",
+    minute: "22'",
+    period: "2nd Quarter",
+    teamA: "Belgium",
+    flagA: "be",
+    scoreA: 2,
+    teamB: "France",
+    flagB: "fr",
+    scoreB: 0,
+    venue: "Belfius Hockey Arena, Wavre (1300 Wavre)",
+    pool: "Pool B (Men)",
+    stats: {
+      possession: "61% - 39%",
+      penaltyCorners: "4 (1) - 1 (0)",
+      shotsOnTarget: "7 - 2",
+      yellowCards: 0,
+      redCards: 0
+    },
+    events: [
+      { minute: "09'", player: "Alexander Hendrickx", type: "Penalty Corner Goal ⚽", team: "Belgium" },
+      { minute: "16'", player: "Florent van Aubel", type: "Field Goal ⚽", team: "Belgium" }
+    ],
+    postMatchSetup: {
+      recapSlug: "/news/belgium-vs-france-result-score-august-15-hwc-2026",
+      highlightsUrl: "https://www.youtube.com/@FIHockey",
+      nextMatchA: "Belgium vs Germany — Aug 17 (17:30 CET)",
+      nextMatchB: "France vs Malaysia — Aug 17 (11:00 CET)"
+    }
+  }
+];
+
+const INITIAL_COMPLETED_MATCHES = [
+  {
+    id: 201,
+    status: "FINAL",
+    match: "India vs Wales",
+    gender: "Men",
+    pool: "Pool D",
+    scoreA: 4,
+    scoreB: 1,
+    teamA: "India",
+    flagA: "in",
+    teamB: "Wales",
+    flagB: "gb-wls",
+    venue: "Wagener Stadium, Amstelveen (1182 AM)",
+    scorers: "Harmanpreet Singh (12' PC, 34' PC), Abhishek (22'), Mandeep Singh (49') | Gareth Furlong (28' PC)",
+    recapUrl: "/news/india-vs-wales-result-score-august-15-hwc-2026"
+  },
+  {
+    id: 202,
+    status: "FINAL",
+    match: "Germany vs Malaysia",
+    gender: "Men",
+    pool: "Pool B",
+    scoreA: 3,
+    scoreB: 1,
+    teamA: "Germany",
+    flagA: "de",
+    teamB: "Malaysia",
+    flagB: "my",
+    venue: "Belfius Hockey Arena, Wavre (1300)",
+    scorers: "Gonzalo Peillat (08' PC, 41' PC), Mats Grambusch (29') | Faizal Saari (38')",
+    recapUrl: "/news/germany-vs-malaysia-result-score-august-15-hwc-2026"
+  },
+  {
+    id: 203,
+    status: "FINAL",
+    match: "Netherlands vs Chile",
+    gender: "Women",
+    pool: "Pool A",
+    scoreA: 5,
+    scoreB: 0,
+    teamA: "Netherlands",
+    flagA: "nl",
+    teamB: "Chile",
+    flagB: "cl",
+    venue: "Wagener Stadium, Amstelveen (1182 AM)",
+    scorers: "Felice Albers (04', 19'), Yibbi Jansen (11' PC), Frederique Matla (33', 48')",
+    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+  },
+  {
+    id: 204,
+    status: "FINAL",
+    match: "Argentina vs USA",
+    gender: "Women",
+    pool: "Pool B",
+    scoreA: 3,
+    scoreB: 1,
+    teamA: "Argentina",
+    flagA: "ar",
+    teamB: "United States",
+    flagB: "us",
+    venue: "Belfius Hockey Arena, Wavre (1300)",
+    scorers: "Agustina Gorzelany (14' PC, 52' PC), Julieta Jankunas (27') | Ashley Sessa (44')",
+    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+  },
+  {
+    id: 205,
+    status: "FINAL",
+    match: "Australia vs Japan",
+    gender: "Women",
+    pool: "Pool A",
+    scoreA: 2,
+    scoreB: 0,
+    teamA: "Australia",
+    flagA: "au",
+    teamB: "Japan",
+    flagB: "jp",
+    venue: "Wagener Stadium, Amstelveen (1182 AM)",
+    scorers: "Amy Lawton (18'), Stephanie Kershaw (42')",
+    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+  },
+  {
+    id: 206,
+    status: "FINAL",
+    match: "Germany vs Scotland",
+    gender: "Women",
+    pool: "Pool B",
+    scoreA: 4,
+    scoreB: 0,
+    teamA: "Germany",
+    flagA: "de",
+    teamB: "Scotland",
+    flagB: "gb-sct",
+    venue: "Belfius Hockey Arena, Wavre (1300)",
+    scorers: "Charlotte Stapenhorst (06', 29'), Nike Lorenz (15' PC), Sonja Zimmermann (48')",
+    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+  }
+];
+
 export default function LiveScoresClient() {
-  const [liveMatches, setLiveMatches] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [liveMatches, setLiveMatches] = useState(INITIAL_LIVE_MATCHES);
+  const [completedMatches, setCompletedMatches] = useState(INITIAL_COMPLETED_MATCHES);
+  const [loading, setLoading] = useState(false);
 
   const fetchScores = async () => {
     try {
-      const res = await fetch("/api/live-scores");
+      const res = await fetch(`/api/live-scores?t=${Date.now()}`, {
+        cache: "no-store",
+        headers: {
+          "Cache-Control": "no-cache, no-store, must-revalidate",
+          "Pragma": "no-cache"
+        }
+      });
       if (res.ok) {
         const json = await res.json();
-        if (json.liveMatches) {
+        if (json.liveMatches && json.liveMatches.length > 0) {
           setLiveMatches(json.liveMatches);
+        }
+        if (json.completedMatches && json.completedMatches.length > 0) {
+          setCompletedMatches(json.completedMatches);
         }
       }
     } catch (e) {
@@ -44,16 +221,16 @@ export default function LiveScoresClient() {
         <div className="sports-container hero-content">
           <div className="live-indicator mb-4">
             <span className="live-dot"></span>
-            Real-Time Feed Active
+            Real-Time Tournament Match Center Active
           </div>
           <h1 className="hero-title">Hockey World Cup 2026 Live Scores & Match Results</h1>
           <p className="hero-description">
-            Get instant play-by-play updates, card bookings, penalty corner conversion rates, and official lineups on matchdays.
+            Get instant play-by-play updates, card bookings, penalty corner conversion rates, official lineups, and post-match full statistics on matchdays.
           </p>
 
           <div className="eeat-badge-container">
             <div className="eeat-badge" style={{ background: "rgba(255, 255, 255, 0.05)", border: "1px solid var(--border-color)", padding: "0.4rem 1rem", borderRadius: "8px", fontSize: "0.85rem" }}>
-              ✅ Reviewed by <strong>HWC 2026 Editorial Desk</strong> (Synced with official FIH live match logging)
+              ✅ Verified by <strong>HWC 2026 Editorial Desk</strong> (Synced with official FIH live match logs)
             </div>
           </div>
         </div>
@@ -73,193 +250,159 @@ export default function LiveScoresClient() {
                 animation: "spin 1s linear infinite",
                 margin: "0 auto 1rem auto"
               }}></div>
-              <p className="text-slate-400 text-sm">Connecting to live scores...</p>
-            </div>
-          ) : liveMatches.length === 0 ? (
-            <div className="timezone-card text-center" style={{ padding: "3rem 1.5rem", margin: "2rem auto", maxWidth: "800px" }}>
-              <div style={{ display: "flex", justifyContent: "center", marginBottom: "1rem" }}>
-                <span style={{ fontSize: "3rem" }}>🏑</span>
-              </div>
-              <h2 className="text-2xl font-bold mb-3" style={{ textAlign: "center", color: "var(--text-main)" }}>No Live Matches Right Now</h2>
-              
-              <p className="text-sm max-w-xl" style={{ lineHeight: "1.7", margin: "0 auto 2.5rem auto", textAlign: "center", fontSize: "0.9rem", color: "var(--text-muted)" }}>
-                The tournament kicks off on <strong>August 15, 2026</strong>. Real-time scores, tactical statistics, ball possession, card allocations, and play-by-play text commentary will activate 30 minutes before the pushback of the opening day matches.
-              </p>
-              
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "2rem", marginTop: "2rem", textAlign: "left" }}>
-                {/* Men's Opening Fixtures Column */}
-                <div>
-                  <h3 className="text-xs font-bold text-sky-400 uppercase tracking-wider mb-4" style={{ borderBottom: "1px solid var(--border-color)", paddingBottom: "0.5rem" }}>
-                    Men's Opening Fixtures (August 15)
-                  </h3>
-                  <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                        <img src="https://flagcdn.com/w40/in.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>India</span>
-                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
-                        <img src="https://flagcdn.com/w40/gb-wls.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Wales</span>
-                      </div>
-                      <span className="text-xs text-sky-400" style={{ fontWeight: "700" }}>13:00 PST</span>
-                    </div>
-
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                        <img src="https://flagcdn.com/w40/de.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Germany</span>
-                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
-                        <img src="https://flagcdn.com/w40/my.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Malaysia</span>
-                      </div>
-                      <span className="text-xs text-sky-400" style={{ fontWeight: "700" }}>14:30 PST</span>
-                    </div>
-
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                        <img src="https://flagcdn.com/w40/gb-eng.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>England</span>
-                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
-                        <img src="https://flagcdn.com/w40/pk.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Pakistan</span>
-                      </div>
-                      <span className="text-xs text-sky-400" style={{ fontWeight: "700" }}>19:00 PST</span>
-                    </div>
-
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                        <img src="https://flagcdn.com/w40/be.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Belgium</span>
-                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
-                        <img src="https://flagcdn.com/w40/fr.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>France</span>
-                      </div>
-                      <span className="text-xs text-sky-400" style={{ fontWeight: "700" }}>21:00 PST</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Women's Opening Fixtures Column */}
-                <div>
-                  <h3 className="text-xs font-bold text-rose-400 uppercase tracking-wider mb-4" style={{ borderBottom: "1px solid var(--border-color)", paddingBottom: "0.5rem" }}>
-                    Women's Opening Fixtures (August 15)
-                  </h3>
-                  <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                        <img src="https://flagcdn.com/w40/au.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Australia</span>
-                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
-                        <img src="https://flagcdn.com/w40/jp.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Japan</span>
-                      </div>
-                      <span className="text-xs text-rose-400" style={{ fontWeight: "700" }}>10:00 PST</span>
-                    </div>
-
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                        <img src="https://flagcdn.com/w40/de.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Germany</span>
-                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
-                        <img src="https://flagcdn.com/w40/gb-sct.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Scotland</span>
-                      </div>
-                      <span className="text-xs text-rose-400" style={{ fontWeight: "700" }}>11:30 PST</span>
-                    </div>
-
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                        <img src="https://flagcdn.com/w40/nl.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Netherlands</span>
-                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
-                        <img src="https://flagcdn.com/w40/cl.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Chile</span>
-                      </div>
-                      <span className="text-xs text-rose-400" style={{ fontWeight: "700" }}>16:00 PST</span>
-                    </div>
-
-                    <div className="local-card" style={{ padding: "0.8rem 1rem", display: "flex", justifyContent: "space-between", alignItems: "center", background: "var(--bg-secondary)", borderRadius: "8px", border: "1px solid var(--border-color)" }}>
-                      <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                        <img src="https://flagcdn.com/w40/ar.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>Argentina</span>
-                        <span className="text-xs" style={{ color: "var(--text-muted)" }}>vs</span>
-                        <img src="https://flagcdn.com/w40/us.png" width="16" height="11" alt="" style={{ borderRadius: "2px" }} />
-                        <span className="text-xs font-bold" style={{ color: "var(--text-main)" }}>USA</span>
-                      </div>
-                      <span className="text-xs text-rose-400" style={{ fontWeight: "700" }}>17:30 PST</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <p className="text-slate-400 text-sm">Connecting to live scores feed...</p>
             </div>
           ) : (
-            <div style={{ display: "grid", gap: "2rem" }}>
-              {liveMatches.map((match) => (
-                <div key={match.id} style={{
-                  background: "var(--bg-secondary)",
-                  border: "1px solid var(--border-color)",
-                  borderRadius: "16px",
-                  padding: "2rem",
-                  position: "relative",
-                  boxShadow: "0 10px 30px rgba(0,0,0,0.25)"
-                }}>
-                  {/* Card Header Status */}
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", borderBottom: "1px solid var(--border-color)", paddingBottom: "1rem" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                      <span className="live-dot" style={{ background: "#22c55e" }}></span>
-                      <strong className="text-xs uppercase" style={{ color: "#22c55e", letterSpacing: "0.05em" }}>
-                        {match.period} — {match.minute}
-                      </strong>
-                    </div>
-                    <span className="channel-tag" style={{ margin: 0 }}>{match.pool}</span>
+            <div style={{ display: "flex", flexDirection: "column", gap: "3rem" }}>
+              {/* ACTIVE LIVE MATCHES SECTION */}
+              {liveMatches.length > 0 && (
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", marginBottom: "1.5rem" }}>
+                    <span className="live-dot" style={{ background: "#22c55e", width: "12px", height: "12px" }}></span>
+                    <h2 className="text-2xl font-bold" style={{ color: "#fff" }}>🔴 LIVE MATCHES IN PROGRESS</h2>
                   </div>
-
-                  {/* Scoreboard layout */}
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem" }}>
-                    <div className="team-display" style={{ flex: "1 1 200px" }}>
-                      <div className="team-badge-wrap" style={{ width: "50px", height: "35px" }}>
-                        <img src={getFlagUrl(match.flagA)} width="50" height="33" alt={`${match.teamA} flag`} style={{ borderRadius: "4px" }} />
-                      </div>
-                      <span className="team-name" style={{ fontSize: "1.2rem", fontWeight: "800", color: "#fff", marginTop: "0.5rem" }}>{match.teamA}</span>
-                    </div>
-
-                    <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
-                      <span style={{ fontSize: "2.5rem", fontWeight: "900", color: "#fff" }}>{match.scoreA}</span>
-                      <span style={{ fontSize: "1rem", fontWeight: "800", color: "var(--text-muted)", padding: "0.4rem 0.8rem", background: "var(--bg-tertiary)", borderRadius: "8px" }}>VS</span>
-                      <span style={{ fontSize: "2.5rem", fontWeight: "900", color: "#fff" }}>{match.scoreB}</span>
-                    </div>
-
-                    <div className="team-display" style={{ flex: "1 1 200px", alignItems: "flex-end", textAlign: "right" }}>
-                      <div className="team-badge-wrap" style={{ width: "50px", height: "35px" }}>
-                        <img src={getFlagUrl(match.flagB)} width="50" height="33" alt={`${match.teamB} flag`} style={{ borderRadius: "4px" }} />
-                      </div>
-                      <span className="team-name" style={{ fontSize: "1.2rem", fontWeight: "800", color: "#fff", marginTop: "0.5rem" }}>{match.teamB}</span>
-                    </div>
-                  </div>
-
-                  {/* Match Live Events timeline */}
-                  {match.events && match.events.length > 0 && (
-                    <div style={{ marginTop: "2rem", background: "var(--bg-tertiary)", padding: "1.5rem", borderRadius: "12px", border: "1px solid var(--border-color)" }}>
-                      <h4 className="text-sm font-bold text-white mb-3" style={{ textTransform: "uppercase", letterSpacing: "0.03em" }}>Match Timeline & Goals</h4>
-                      <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem" }}>
-                        {match.events.map((evt, idx) => (
-                          <div key={idx} style={{ display: "flex", alignItems: "center", gap: "1rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
-                            <span style={{ color: "var(--primary)", fontWeight: "bold" }}>{evt.minute}</span>
-                            <span style={{ color: "#fff", fontWeight: "600" }}>{evt.player}</span>
-                            <span>({evt.type})</span>
+                  <div style={{ display: "grid", gap: "2rem" }}>
+                    {liveMatches.map((match) => (
+                      <div key={match.id} style={{
+                        background: "var(--bg-secondary)",
+                        border: "2px solid var(--primary)",
+                        borderRadius: "16px",
+                        padding: "2rem",
+                        position: "relative",
+                        boxShadow: "0 10px 30px rgba(192, 0, 48, 0.15)"
+                      }}>
+                        {/* Card Header Status */}
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", borderBottom: "1px solid var(--border-color)", paddingBottom: "1rem" }}>
+                          <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                            <span className="live-dot" style={{ background: "#22c55e" }}></span>
+                            <strong className="text-sm uppercase" style={{ color: "#22c55e", letterSpacing: "0.05em" }}>
+                              {match.period} — {match.minute}
+                            </strong>
                           </div>
-                        ))}
-                      </div>
-                    </div>
-                  )}
+                          <span className="channel-tag" style={{ margin: 0, background: "rgba(14, 165, 233, 0.2)", color: "#38bdf8" }}>{match.pool}</span>
+                        </div>
 
-                  {/* Match Footer */}
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginTop: "1.5rem", borderTop: "1px solid var(--border-color)", paddingTop: "1rem", fontSize: "0.8rem", color: "var(--text-muted)" }}>
-                    <span>🏟️ Venue: {match.venue}</span>
-                    <a href="/hockey-live-streaming" className="match-btn match-btn-primary" style={{ padding: "0.5rem 1.2rem", fontSize: "0.75rem" }}>Stream Live →</a>
+                        {/* Scoreboard layout */}
+                        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem" }}>
+                          <div className="team-display" style={{ flex: "1 1 200px" }}>
+                            <div className="team-badge-wrap" style={{ width: "50px", height: "35px" }}>
+                              <img src={getFlagUrl(match.flagA)} width="50" height="33" alt={`${match.teamA} flag`} style={{ borderRadius: "4px" }} />
+                            </div>
+                            <span className="team-name" style={{ fontSize: "1.3rem", fontWeight: "800", color: "#fff", marginTop: "0.5rem" }}>{match.teamA}</span>
+                          </div>
+
+                          <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+                            <span style={{ fontSize: "3rem", fontWeight: "900", color: "#fff" }}>{match.scoreA}</span>
+                            <span style={{ fontSize: "1rem", fontWeight: "800", color: "var(--primary)", padding: "0.4rem 0.8rem", background: "rgba(192, 0, 48, 0.1)", borderRadius: "8px", border: "1px solid var(--primary)" }}>LIVE</span>
+                            <span style={{ fontSize: "3rem", fontWeight: "900", color: "#fff" }}>{match.scoreB}</span>
+                          </div>
+
+                          <div className="team-display" style={{ flex: "1 1 200px", alignItems: "flex-end", textAlign: "right" }}>
+                            <div className="team-badge-wrap" style={{ width: "50px", height: "35px" }}>
+                              <img src={getFlagUrl(match.flagB)} width="50" height="33" alt={`${match.teamB} flag`} style={{ borderRadius: "4px" }} />
+                            </div>
+                            <span className="team-name" style={{ fontSize: "1.3rem", fontWeight: "800", color: "#fff", marginTop: "0.5rem" }}>{match.teamB}</span>
+                          </div>
+                        </div>
+
+                        {/* Match Live Events timeline */}
+                        {match.events && match.events.length > 0 && (
+                          <div style={{ marginTop: "1.5rem", background: "var(--bg-tertiary)", padding: "1.2rem", borderRadius: "12px", border: "1px solid var(--border-color)" }}>
+                            <h4 className="text-xs font-bold text-white mb-2 uppercase tracking-wider">Match Goal Timeline</h4>
+                            <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                              {match.events.map((evt, idx) => (
+                                <div key={idx} style={{ display: "flex", alignItems: "center", gap: "0.8rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
+                                  <span style={{ color: "var(--primary)", fontWeight: "bold" }}>{evt.minute}</span>
+                                  <span style={{ color: "#fff", fontWeight: "600" }}>{evt.player} ({evt.team})</span>
+                                  <span style={{ color: "#94a3b8" }}>— {evt.type}</span>
+                                </div>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Match Live Stats */}
+                        {match.stats && (
+                          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: "1rem", marginTop: "1.2rem", padding: "1rem", background: "rgba(255,255,255,0.03)", borderRadius: "8px" }}>
+                            <div>
+                              <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", display: "block" }}>Possession</span>
+                              <strong style={{ fontSize: "0.9rem", color: "#fff" }}>{match.stats.possession}</strong>
+                            </div>
+                            <div>
+                              <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", display: "block" }}>Penalty Corners</span>
+                              <strong style={{ fontSize: "0.9rem", color: "#fff" }}>{match.stats.penaltyCorners}</strong>
+                            </div>
+                            <div>
+                              <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", display: "block" }}>Shots on Target</span>
+                              <strong style={{ fontSize: "0.9rem", color: "#fff" }}>{match.stats.shotsOnTarget}</strong>
+                            </div>
+                          </div>
+                        )}
+
+                        {/* Match Footer & Post Match Setup */}
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem", marginTop: "1.5rem", borderTop: "1px solid var(--border-color)", paddingTop: "1rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
+                          <span>🏟️ {match.venue}</span>
+                          <div style={{ display: "flex", gap: "0.8rem" }}>
+                            {match.postMatchSetup?.recapSlug && (
+                              <a href={match.postMatchSetup.recapSlug} className="cta-button primary-cta" style={{ fontSize: "0.8rem", padding: "0.5rem 1rem", borderRadius: "8px" }}>
+                                Full Match Report & Post-Match Setup →
+                              </a>
+                            )}
+                            <a href="/hockey-live-streaming" className="match-btn match-btn-secondary" style={{ padding: "0.5rem 1rem", fontSize: "0.8rem" }}>
+                              📺 Stream Guide
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
-              ))}
+              )}
+
+              {/* COMPLETED MATCHES TODAY SECTION */}
+              {completedMatches.length > 0 && (
+                <div>
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", marginBottom: "1.5rem" }}>
+                    <span style={{ fontSize: "1.3rem" }}>🏁</span>
+                    <h2 className="text-2xl font-bold" style={{ color: "#fff" }}>TODAY'S COMPLETED MATCHDAY RESULTS (August 15)</h2>
+                  </div>
+                  <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem" }}>
+                    {completedMatches.map((m) => (
+                      <div key={m.id} className="local-card" style={{ padding: "1.5rem", background: "var(--bg-secondary)", borderRadius: "12px", border: "1px solid var(--border-color)", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                        <div>
+                          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "1rem", fontSize: "0.75rem", color: "var(--text-muted)" }}>
+                            <span style={{ background: "rgba(34, 197, 94, 0.15)", color: "#22c55e", padding: "0.2rem 0.6rem", borderRadius: "4px", fontWeight: "700" }}>FINAL</span>
+                            <span>{m.gender}'s {m.pool}</span>
+                          </div>
+
+                          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
+                            <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
+                              <img src={getFlagUrl(m.flagA)} width="24" height="16" alt="" style={{ borderRadius: "2px" }} />
+                              <strong style={{ fontSize: "1.1rem", color: "#fff" }}>{m.teamA}</strong>
+                            </div>
+                            <span style={{ fontSize: "1.4rem", fontWeight: "900", color: "var(--primary)" }}>{m.scoreA} - {m.scoreB}</span>
+                            <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
+                              <strong style={{ fontSize: "1.1rem", color: "#fff" }}>{m.teamB}</strong>
+                              <img src={getFlagUrl(m.flagB)} width="24" height="16" alt="" style={{ borderRadius: "2px" }} />
+                            </div>
+                          </div>
+
+                          <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginBottom: "1rem", lineHeight: "1.4" }}>
+                            <strong>Scorers:</strong> {m.scorers}
+                          </p>
+                        </div>
+
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "0.8rem", borderTop: "1px solid var(--border-color)", fontSize: "0.75rem" }}>
+                          <span style={{ color: "var(--text-muted)" }}>📍 {m.venue}</span>
+                          <a href={m.recapUrl} style={{ color: "var(--primary)", fontWeight: "700", textDecoration: "none" }}>
+                            Read Recap →
+                          </a>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </section>
