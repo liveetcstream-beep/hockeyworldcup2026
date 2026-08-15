@@ -158,7 +158,7 @@ export const newsArticles = [
   },
 
   {
-    title: "India vs Wales Result: India Win 4-1 on Independence Day Opener at HWC 2026 (Aug 15)",
+    title: "India vs Wales Result: India Win 3-1 on Independence Day Opener at HWC 2026 (Aug 15)",
     slug: "india-vs-wales-result-score-august-15-hwc-2026",
     category: "Match Result",
     author: "Bram van de Meer",
@@ -168,22 +168,21 @@ export const newsArticles = [
     lastModified: "August 15, 2026",
     readTime: "6 min read",
     image: "/news/tv-channels.webp",
-    excerpt: "Harmanpreet Singh scored two penalty corners as India defeated Wales 4-1 on India's 80th Independence Day in Pool D of the FIH Hockey World Cup 2026.",
+    excerpt: "Harmanpreet Singh scored two penalty corners as India defeated Wales 3-1 on India's 80th Independence Day in Pool D of the FIH Hockey World Cup 2026.",
     content: `
-      <p>India kicked off their <strong>FIH Hockey World Cup 2026</strong> journey in style, securing a convincing 4–1 victory over Wales in Pool D on August 15 — India's 80th Independence Day. The match at Wagener Stadium in Amstelveen (Nieuwe Kalfjeslaan 21, 1182 AM) was played before a boisterous Indian crowd waving tricolors in the Dutch sunshine.</p>
+      <p>India kicked off their <strong>FIH Hockey World Cup 2026</strong> journey in style, securing a convincing 3–1 victory over Wales in Pool D on August 15 — India's 80th Independence Day. The match at Wagener Stadium in Amstelveen (Nieuwe Kalfjeslaan 21, 1182 AM) was played before a boisterous Indian crowd waving tricolors in the Dutch sunshine.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>✅ Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
         <em>Pitchside at Wagener Hockey Stadium (Amstelveen, 1182 AM). Cross-referenced with official FIH match report (Match #51). Last updated: August 15, 2026 at 18:00 IST.</em>
       </div>
 
-      <h2>Match Summary: India 4 – 1 Wales</h2>
+      <h2>Match Summary: India 3 – 1 Wales</h2>
       <ul>
         <li><strong>12' ⚽ Goal (India):</strong> Harmanpreet Singh — Drag-flick penalty corner into bottom right</li>
         <li><strong>22' ⚽ Goal (India):</strong> Abhishek Singh — Field goal off reverse stick strike</li>
         <li><strong>28' ⚽ Goal (Wales):</strong> Gareth Furlong — Penalty Corner deflection</li>
         <li><strong>34' ⚽ Goal (India):</strong> Harmanpreet Singh — Powerful top-netting drag-flick</li>
-        <li><strong>49' ⚽ Goal (India):</strong> Mandeep Singh — Tap-in goal from circle scramble</li>
       </ul>
 
       <h2>Harmanpreet Singh Leads PC Attack</h2>
@@ -195,11 +194,11 @@ export const newsArticles = [
     faqs: [
       {
         question: "What was the final score of India vs Wales at HWC 2026?",
-        answer: "India defeated Wales 4-1 on August 15, 2026 at Wagener Stadium, Amstelveen."
+        answer: "India defeated Wales 3-1 on August 15, 2026 at Wagener Stadium, Amstelveen."
       },
       {
         question: "Who scored India's goals against Wales?",
-        answer: "Harmanpreet Singh (12' PC, 34' PC), Abhishek Singh (22'), and Mandeep Singh (49'). Gareth Furlong scored for Wales (28' PC)."
+        answer: "Harmanpreet Singh (12' PC, 34' PC) and Abhishek Singh (22'). Gareth Furlong scored for Wales (28' PC)."
       }
     ],
     tags: ["India vs Wales", "Harmanpreet Singh", "Independence Day", "Pool D", "Match Result"]

@@ -110,14 +110,14 @@ const TODAY_COMPLETED_MATCHES = [
     match: "India vs Wales",
     gender: "Men",
     pool: "Pool D",
-    scoreA: 4,
+    scoreA: 3,
     scoreB: 1,
     teamA: "India",
     flagA: "in",
     teamB: "Wales",
     flagB: "gb-wls",
     venue: "Wagener Stadium, Amstelveen (1182 AM)",
-    scorers: "Harmanpreet Singh (12' PC, 34' PC), Abhishek (22'), Mandeep Singh (49') | Gareth Furlong (28' PC)",
+    scorers: "Harmanpreet Singh (12' PC, 34' PC), Abhishek (22') | Gareth Furlong (28' PC)",
     recapUrl: "/news/india-vs-wales-result-score-august-15-hwc-2026"
   },
   {
