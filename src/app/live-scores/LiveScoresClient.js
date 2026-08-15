@@ -77,6 +77,38 @@ const INITIAL_COMPLETED_MATCHES = [
   {
     id: 201,
     status: "FINAL",
+    match: "England vs Pakistan",
+    gender: "Men",
+    pool: "Pool D",
+    scoreA: 4,
+    scoreB: 1,
+    teamA: "England",
+    flagA: "gb-eng",
+    teamB: "Pakistan",
+    flagB: "pk",
+    venue: "Wagener Stadium, Amstelveen (1182 AM)",
+    scorers: "Liam Ansell (14' PC), Phil Roper (39'), Sam Ward (47' PC), Nicholas Bandurak (54') | Muhammad Shahbaz Jr. (28')",
+    recapUrl: "/news/england-vs-pakistan-result-score-august-15-hwc-2026"
+  },
+  {
+    id: 202,
+    status: "FINAL",
+    match: "Belgium vs France",
+    gender: "Men",
+    pool: "Pool B",
+    scoreA: 3,
+    scoreB: 1,
+    teamA: "Belgium",
+    flagA: "be",
+    teamB: "France",
+    flagB: "fr",
+    venue: "Belfius Hockey Arena, Wavre (1300)",
+    scorers: "Alexander Hendrickx (09' PC), Florent van Aubel (16'), Tom Boon (53' PC) | Timothée Clément (44' PC)",
+    recapUrl: "/news/belgium-vs-france-result-score-august-15-hwc-2026"
+  },
+  {
+    id: 203,
+    status: "FINAL",
     match: "India vs Wales",
     gender: "Men",
     pool: "Pool D",
@@ -91,7 +123,7 @@ const INITIAL_COMPLETED_MATCHES = [
     recapUrl: "/news/india-vs-wales-result-score-august-15-hwc-2026"
   },
   {
-    id: 202,
+    id: 204,
     status: "FINAL",
     match: "Germany vs Malaysia",
     gender: "Men",
@@ -107,7 +139,7 @@ const INITIAL_COMPLETED_MATCHES = [
     recapUrl: "/news/germany-vs-malaysia-result-score-august-15-hwc-2026"
   },
   {
-    id: 203,
+    id: 205,
     status: "FINAL",
     match: "Netherlands vs Chile",
     gender: "Women",
@@ -123,7 +155,7 @@ const INITIAL_COMPLETED_MATCHES = [
     recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
   },
   {
-    id: 204,
+    id: 206,
     status: "FINAL",
     match: "Argentina vs USA",
     gender: "Women",
@@ -139,7 +171,7 @@ const INITIAL_COMPLETED_MATCHES = [
     recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
   },
   {
-    id: 205,
+    id: 207,
     status: "FINAL",
     match: "Australia vs Japan",
     gender: "Women",
@@ -155,7 +187,7 @@ const INITIAL_COMPLETED_MATCHES = [
     recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
   },
   {
-    id: 206,
+    id: 208,
     status: "FINAL",
     match: "Germany vs Scotland",
     gender: "Women",
