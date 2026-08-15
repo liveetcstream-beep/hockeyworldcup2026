@@ -15,11 +15,11 @@ export default function sitemap() {
   }
 
   const pages = [
-    // Tier 1 — Homepage
+    // Tier 1 — Homepage & Real-time Live Scores
     { route: "",             priority: 1.0, freq: "daily", lastMod: now },
+    { route: "/live-scores", priority: 1.0, freq: "always", lastMod: now },
     // Tier 2 — High-traffic live/schedule pages
     { route: "/schedule",    priority: 0.95, freq: "daily",  lastMod: now },
-    { route: "/live-scores", priority: 0.95, freq: "hourly", lastMod: now },
     { route: "/points-table",priority: 0.9,  freq: "daily",  lastMod: now },
     { route: "/rankings",    priority: 0.95, freq: "daily",  lastMod: now },
     // Tier 3 — Core content pages
