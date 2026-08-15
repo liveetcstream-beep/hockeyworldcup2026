@@ -7,20 +7,20 @@ const CURRENT_LIVE_MATCHES = [
   {
     id: 101,
     status: "LIVE",
-    minute: "54'",
+    minute: "58'",
     period: "4th Quarter",
     teamA: "England",
     flagA: "gb-eng",
-    scoreA: 3,
+    scoreA: 4,
     teamB: "Pakistan",
     flagB: "pk",
-    scoreB: 2,
+    scoreB: 1,
     venue: "Wagener Hockey Stadium, Amstelveen (1182 AM)",
     pool: "Pool D (Men)",
     stats: {
-      possession: "52% - 48%",
-      penaltyCorners: "6 (2) - 4 (1)",
-      shotsOnTarget: "9 - 6",
+      possession: "56% - 44%",
+      penaltyCorners: "7 (2) - 3 (0)",
+      shotsOnTarget: "11 - 4",
       yellowCards: 1,
       redCards: 0
     },
@@ -28,8 +28,8 @@ const CURRENT_LIVE_MATCHES = [
       { minute: "14'", player: "Liam Ansell", type: "Penalty Corner Goal ⚽", team: "England" },
       { minute: "28'", player: "Muhammad Shahbaz Jr.", type: "Field Goal ⚽", team: "Pakistan" },
       { minute: "39'", player: "Phil Roper", type: "Field Goal ⚽", team: "England" },
-      { minute: "47'", player: "Sufyan Khan", type: "Penalty Corner Goal ⚽", team: "Pakistan" },
-      { minute: "51'", player: "Sam Ward", type: "Penalty Corner Goal ⚽", team: "England" }
+      { minute: "47'", player: "Sam Ward", type: "Penalty Corner Goal ⚽", team: "England" },
+      { minute: "54'", player: "Nicholas Bandurak", type: "Field Goal ⚽", team: "England" }
     ],
     postMatchSetup: {
       recapSlug: "/news/england-vs-pakistan-result-score-august-15-hwc-2026",

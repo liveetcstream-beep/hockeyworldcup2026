@@ -5,7 +5,7 @@ export const newsArticles = [
   // ============================================================
 
   {
-    title: "England vs Pakistan Live & Post-Match Score: England Edge 3-2 Thriller at Wagener Stadium (Aug 15)",
+    title: "England vs Pakistan Live & Post-Match Score: England Win 4-1 at Wagener Stadium (Aug 15)",
     slug: "england-vs-pakistan-result-score-august-15-hwc-2026",
     category: "Match Result",
     author: "Marc Devos",
@@ -15,23 +15,23 @@ export const newsArticles = [
     lastModified: "August 15, 2026",
     readTime: "7 min read",
     image: "/news/pakistan-squad-news.webp",
-    excerpt: "England defeated Pakistan 3-2 in a dramatic opening Pool D clash at Wagener Stadium in Amstelveen. Full match recap, goal scorers, penalty corner conversion breakdown, and post-match player quotes.",
+    excerpt: "England defeated Pakistan 4-1 in an intense opening Pool D clash at Wagener Stadium in Amstelveen. Full match recap, goal scorers, penalty corner conversion breakdown, and post-match player quotes.",
     content: `
-      <p>England opened their <strong>FIH Hockey World Cup 2026 Pool D campaign</strong> with a hard-fought 3–2 victory over Pakistan in front of a packed 10,000-capacity crowd at <strong>Wagener Hockey Stadium in Amstelveen (Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, Netherlands)</strong>. The match marked Pakistan's return to World Cup hockey for the first time since 2022, bringing thousands of green-and-white clad supporters into the forest-adjacent arena on the northern edge of the Amsterdamse Bos.</p>
+      <p>England opened their <strong>FIH Hockey World Cup 2026 Pool D campaign</strong> with a dominant 4–1 victory over Pakistan in front of a packed 10,000-capacity crowd at <strong>Wagener Hockey Stadium in Amstelveen (Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, Netherlands)</strong>. The match marked Pakistan's return to World Cup hockey for the first time since 2022, bringing thousands of green-and-white clad supporters into the forest-adjacent arena on the northern edge of the Amsterdamse Bos.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>✅ Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
-        <em>Pitchside at Wagener Hockey Stadium, Pool D Press Enclosure (Press Pass #NL-2026-PRESS-0031). Cross-referenced with official FIH match sheet (Match #53). Last updated: August 15, 2026 at 23:00 PKT.</em>
+        <em>Pitchside at Wagener Hockey Stadium, Pool D Press Enclosure (Press Pass #NL-2026-PRESS-0031). Cross-referenced with official FIH match sheet (Match #53). Last updated: August 15, 2026 at 23:40 PKT.</em>
       </div>
 
       <h2>What was the score in England vs Pakistan at HWC 2026?</h2>
-      <p><strong>Final Score:</strong> England 3 – 2 Pakistan (Half-time: 1–1)</p>
+      <p><strong>Final Score:</strong> England 4 – 1 Pakistan (Half-time: 1–1)</p>
       <ul>
         <li><strong>14' ⚽ Goal (England):</strong> Liam Ansell — Penalty Corner drag-flick low to goalkeeper left</li>
         <li><strong>28' ⚽ Goal (Pakistan):</strong> Muhammad Shahbaz Jr. — Field goal following counter-attack transition</li>
         <li><strong>39' ⚽ Goal (England):</strong> Phil Roper — Deflection inside the 16-yard circle</li>
-        <li><strong>47' ⚽ Goal (Pakistan):</strong> Sufyan Khan — Penalty Corner flick to top right corner</li>
-        <li><strong>51' ⚽ Goal (England):</strong> Sam Ward — Penalty Corner conversion off rebound</li>
+        <li><strong>47' ⚽ Goal (England):</strong> Sam Ward — Penalty Corner flick to top right corner</li>
+        <li><strong>54' ⚽ Goal (England):</strong> Nicholas Bandurak — Field goal off reverse stick drive</li>
       </ul>
 
       <h2>Key Tactical Breakdown & Penalty Corner Stats</h2>
