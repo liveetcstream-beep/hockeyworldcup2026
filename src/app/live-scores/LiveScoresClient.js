@@ -259,27 +259,27 @@ export default function LiveScoresClient() {
                 <div>
                   <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", marginBottom: "1.5rem" }}>
                     <span className="live-dot" style={{ background: "#22c55e", width: "12px", height: "12px" }}></span>
-                    <h2 className="text-2xl font-bold" style={{ color: "#fff" }}>🔴 LIVE MATCHES IN PROGRESS</h2>
+                    <h2 className="text-2xl font-bold" style={{ color: "#0f172a" }}>🔴 LIVE MATCHES IN PROGRESS</h2>
                   </div>
                   <div style={{ display: "grid", gap: "2rem" }}>
                     {liveMatches.map((match) => (
                       <div key={match.id} style={{
-                        background: "var(--bg-secondary)",
+                        background: "#ffffff",
                         border: "2px solid var(--primary)",
                         borderRadius: "16px",
                         padding: "2rem",
                         position: "relative",
-                        boxShadow: "0 10px 30px rgba(192, 0, 48, 0.15)"
+                        boxShadow: "0 10px 30px rgba(192, 0, 48, 0.08)"
                       }}>
                         {/* Card Header Status */}
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", borderBottom: "1px solid var(--border-color)", paddingBottom: "1rem" }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", borderBottom: "1px solid #e2e8f0", paddingBottom: "1rem" }}>
                           <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                             <span className="live-dot" style={{ background: "#22c55e" }}></span>
-                            <strong className="text-sm uppercase" style={{ color: "#22c55e", letterSpacing: "0.05em" }}>
+                            <strong className="text-sm uppercase" style={{ color: "#16a34a", letterSpacing: "0.05em", fontWeight: "800" }}>
                               {match.period} — {match.minute}
                             </strong>
                           </div>
-                          <span className="channel-tag" style={{ margin: 0, background: "rgba(14, 165, 233, 0.2)", color: "#38bdf8" }}>{match.pool}</span>
+                          <span className="channel-tag" style={{ margin: 0, background: "#e0f2fe", color: "#0369a1", fontWeight: "800" }}>{match.pool}</span>
                         </div>
 
                         {/* Scoreboard layout */}
@@ -288,33 +288,33 @@ export default function LiveScoresClient() {
                             <div className="team-badge-wrap" style={{ width: "50px", height: "35px" }}>
                               <img src={getFlagUrl(match.flagA)} width="50" height="33" alt={`${match.teamA} flag`} style={{ borderRadius: "4px" }} />
                             </div>
-                            <span className="team-name" style={{ fontSize: "1.3rem", fontWeight: "800", color: "#fff", marginTop: "0.5rem" }}>{match.teamA}</span>
+                            <span className="team-name" style={{ fontSize: "1.4rem", fontWeight: "900", color: "#0f172a", marginTop: "0.5rem" }}>{match.teamA}</span>
                           </div>
 
                           <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
-                            <span style={{ fontSize: "3rem", fontWeight: "900", color: "#fff" }}>{match.scoreA}</span>
-                            <span style={{ fontSize: "1rem", fontWeight: "800", color: "var(--primary)", padding: "0.4rem 0.8rem", background: "rgba(192, 0, 48, 0.1)", borderRadius: "8px", border: "1px solid var(--primary)" }}>LIVE</span>
-                            <span style={{ fontSize: "3rem", fontWeight: "900", color: "#fff" }}>{match.scoreB}</span>
+                            <span style={{ fontSize: "3.2rem", fontWeight: "900", color: "#c00030" }}>{match.scoreA}</span>
+                            <span style={{ fontSize: "0.9rem", fontWeight: "900", color: "#c00030", padding: "0.4rem 0.8rem", background: "rgba(192, 0, 48, 0.08)", borderRadius: "8px", border: "1px solid #c00030" }}>LIVE</span>
+                            <span style={{ fontSize: "3.2rem", fontWeight: "900", color: "#c00030" }}>{match.scoreB}</span>
                           </div>
 
                           <div className="team-display" style={{ flex: "1 1 200px", alignItems: "flex-end", textAlign: "right" }}>
                             <div className="team-badge-wrap" style={{ width: "50px", height: "35px" }}>
                               <img src={getFlagUrl(match.flagB)} width="50" height="33" alt={`${match.teamB} flag`} style={{ borderRadius: "4px" }} />
                             </div>
-                            <span className="team-name" style={{ fontSize: "1.3rem", fontWeight: "800", color: "#fff", marginTop: "0.5rem" }}>{match.teamB}</span>
+                            <span className="team-name" style={{ fontSize: "1.4rem", fontWeight: "900", color: "#0f172a", marginTop: "0.5rem" }}>{match.teamB}</span>
                           </div>
                         </div>
 
                         {/* Match Live Events timeline */}
                         {match.events && match.events.length > 0 && (
-                          <div style={{ marginTop: "1.5rem", background: "var(--bg-tertiary)", padding: "1.2rem", borderRadius: "12px", border: "1px solid var(--border-color)" }}>
-                            <h4 className="text-xs font-bold text-white mb-2 uppercase tracking-wider">Match Goal Timeline</h4>
-                            <div style={{ display: "flex", flexDirection: "column", gap: "0.5rem" }}>
+                          <div style={{ marginTop: "1.5rem", background: "#f8fafc", padding: "1.2rem", borderRadius: "12px", border: "1px solid #e2e8f0" }}>
+                            <h4 style={{ color: "#0f172a", fontSize: "0.8rem", fontWeight: "800", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.8rem" }}>Match Goal Timeline</h4>
+                            <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
                               {match.events.map((evt, idx) => (
-                                <div key={idx} style={{ display: "flex", alignItems: "center", gap: "0.8rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
-                                  <span style={{ color: "var(--primary)", fontWeight: "bold" }}>{evt.minute}</span>
-                                  <span style={{ color: "#fff", fontWeight: "600" }}>{evt.player} ({evt.team})</span>
-                                  <span style={{ color: "#94a3b8" }}>— {evt.type}</span>
+                                <div key={idx} style={{ display: "flex", alignItems: "center", gap: "0.8rem", fontSize: "0.9rem" }}>
+                                  <span style={{ color: "#c00030", fontWeight: "800", minWidth: "30px" }}>{evt.minute}</span>
+                                  <span style={{ color: "#0f172a", fontWeight: "800" }}>{evt.player}</span>
+                                  <span style={{ color: "#475569", fontWeight: "600" }}>({evt.team}) — {evt.type}</span>
                                 </div>
                               ))}
                             </div>
@@ -323,32 +323,32 @@ export default function LiveScoresClient() {
 
                         {/* Match Live Stats */}
                         {match.stats && (
-                          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: "1rem", marginTop: "1.2rem", padding: "1rem", background: "rgba(255,255,255,0.03)", borderRadius: "8px" }}>
+                          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(140px, 1fr))", gap: "1rem", marginTop: "1.2rem", padding: "1.2rem", background: "#f1f5f9", borderRadius: "12px", border: "1px solid #cbd5e1", textAlign: "center" }}>
                             <div>
-                              <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", display: "block" }}>Possession</span>
-                              <strong style={{ fontSize: "0.9rem", color: "#fff" }}>{match.stats.possession}</strong>
+                              <span style={{ fontSize: "0.75rem", color: "#475569", fontWeight: "800", textTransform: "uppercase", letterSpacing: "0.05em", display: "block", marginBottom: "0.2rem" }}>Possession</span>
+                              <strong style={{ fontSize: "1.1rem", color: "#0f172a", fontWeight: "900" }}>{match.stats.possession}</strong>
                             </div>
                             <div>
-                              <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", display: "block" }}>Penalty Corners</span>
-                              <strong style={{ fontSize: "0.9rem", color: "#fff" }}>{match.stats.penaltyCorners}</strong>
+                              <span style={{ fontSize: "0.75rem", color: "#475569", fontWeight: "800", textTransform: "uppercase", letterSpacing: "0.05em", display: "block", marginBottom: "0.2rem" }}>Penalty Corners</span>
+                              <strong style={{ fontSize: "1.1rem", color: "#0f172a", fontWeight: "900" }}>{match.stats.penaltyCorners}</strong>
                             </div>
                             <div>
-                              <span style={{ fontSize: "0.75rem", color: "var(--text-muted)", display: "block" }}>Shots on Target</span>
-                              <strong style={{ fontSize: "0.9rem", color: "#fff" }}>{match.stats.shotsOnTarget}</strong>
+                              <span style={{ fontSize: "0.75rem", color: "#475569", fontWeight: "800", textTransform: "uppercase", letterSpacing: "0.05em", display: "block", marginBottom: "0.2rem" }}>Shots on Target</span>
+                              <strong style={{ fontSize: "1.1rem", color: "#0f172a", fontWeight: "900" }}>{match.stats.shotsOnTarget}</strong>
                             </div>
                           </div>
                         )}
 
                         {/* Match Footer & Post Match Setup */}
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem", marginTop: "1.5rem", borderTop: "1px solid var(--border-color)", paddingTop: "1rem", fontSize: "0.85rem", color: "var(--text-muted)" }}>
-                          <span>🏟️ {match.venue}</span>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem", marginTop: "1.5rem", borderTop: "1px solid #e2e8f0", paddingTop: "1rem", fontSize: "0.85rem", color: "#475569" }}>
+                          <span style={{ fontWeight: "600" }}>🏟️ {match.venue}</span>
                           <div style={{ display: "flex", gap: "0.8rem" }}>
                             {match.postMatchSetup?.recapSlug && (
-                              <a href={match.postMatchSetup.recapSlug} className="cta-button primary-cta" style={{ fontSize: "0.8rem", padding: "0.5rem 1rem", borderRadius: "8px" }}>
+                              <a href={match.postMatchSetup.recapSlug} style={{ background: "#c00030", color: "#ffffff", padding: "0.6rem 1.2rem", borderRadius: "8px", fontWeight: "800", fontSize: "0.85rem", textDecoration: "none", boxShadow: "0 4px 12px rgba(192,0,48,0.25)" }}>
                                 Full Match Report & Post-Match Setup →
                               </a>
                             )}
-                            <a href="/hockey-live-streaming" className="match-btn match-btn-secondary" style={{ padding: "0.5rem 1rem", fontSize: "0.8rem" }}>
+                            <a href="/hockey-live-streaming" style={{ background: "#0284c7", color: "#ffffff", padding: "0.6rem 1.2rem", borderRadius: "8px", fontWeight: "800", fontSize: "0.85rem", textDecoration: "none" }}>
                               📺 Stream Guide
                             </a>
                           </div>
@@ -364,37 +364,37 @@ export default function LiveScoresClient() {
                 <div>
                   <div style={{ display: "flex", alignItems: "center", gap: "0.8rem", marginBottom: "1.5rem" }}>
                     <span style={{ fontSize: "1.3rem" }}>🏁</span>
-                    <h2 className="text-2xl font-bold" style={{ color: "#fff" }}>TODAY'S COMPLETED MATCHDAY RESULTS (August 15)</h2>
+                    <h2 className="text-2xl font-bold" style={{ color: "#0f172a" }}>TODAY'S COMPLETED MATCHDAY RESULTS (August 15)</h2>
                   </div>
                   <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem" }}>
                     {completedMatches.map((m) => (
-                      <div key={m.id} className="local-card" style={{ padding: "1.5rem", background: "var(--bg-secondary)", borderRadius: "12px", border: "1px solid var(--border-color)", display: "flex", flexDirection: "column", justifyContent: "space-between" }}>
+                      <div key={m.id} className="local-card" style={{ padding: "1.5rem", background: "#ffffff", borderRadius: "12px", border: "1px solid #cbd5e1", display: "flex", flexDirection: "column", justifyContent: "space-between", boxShadow: "0 4px 15px rgba(0,0,0,0.04)" }}>
                         <div>
-                          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "1rem", fontSize: "0.75rem", color: "var(--text-muted)" }}>
-                            <span style={{ background: "rgba(34, 197, 94, 0.15)", color: "#22c55e", padding: "0.2rem 0.6rem", borderRadius: "4px", fontWeight: "700" }}>FINAL</span>
-                            <span>{m.gender}'s {m.pool}</span>
+                          <div style={{ display: "flex", justifyContent: "space-between", marginBottom: "1rem", fontSize: "0.75rem", color: "#475569" }}>
+                            <span style={{ background: "#dcfce7", color: "#15803d", padding: "0.2rem 0.6rem", borderRadius: "4px", fontWeight: "800" }}>FINAL</span>
+                            <span style={{ fontWeight: "700" }}>{m.gender}'s {m.pool}</span>
                           </div>
 
                           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
                             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
                               <img src={getFlagUrl(m.flagA)} width="24" height="16" alt="" style={{ borderRadius: "2px" }} />
-                              <strong style={{ fontSize: "1.1rem", color: "#fff" }}>{m.teamA}</strong>
+                              <strong style={{ fontSize: "1.1rem", color: "#0f172a", fontWeight: "800" }}>{m.teamA}</strong>
                             </div>
-                            <span style={{ fontSize: "1.4rem", fontWeight: "900", color: "var(--primary)" }}>{m.scoreA} - {m.scoreB}</span>
+                            <span style={{ fontSize: "1.4rem", fontWeight: "900", color: "#c00030" }}>{m.scoreA} - {m.scoreB}</span>
                             <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
-                              <strong style={{ fontSize: "1.1rem", color: "#fff" }}>{m.teamB}</strong>
+                              <strong style={{ fontSize: "1.1rem", color: "#0f172a", fontWeight: "800" }}>{m.teamB}</strong>
                               <img src={getFlagUrl(m.flagB)} width="24" height="16" alt="" style={{ borderRadius: "2px" }} />
                             </div>
                           </div>
 
-                          <p style={{ fontSize: "0.8rem", color: "var(--text-muted)", marginBottom: "1rem", lineHeight: "1.4" }}>
-                            <strong>Scorers:</strong> {m.scorers}
+                          <p style={{ fontSize: "0.82rem", color: "#334155", marginBottom: "1rem", lineHeight: "1.5" }}>
+                            <strong style={{ color: "#0f172a" }}>Scorers:</strong> {m.scorers}
                           </p>
                         </div>
 
-                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "0.8rem", borderTop: "1px solid var(--border-color)", fontSize: "0.75rem" }}>
-                          <span style={{ color: "var(--text-muted)" }}>📍 {m.venue}</span>
-                          <a href={m.recapUrl} style={{ color: "var(--primary)", fontWeight: "700", textDecoration: "none" }}>
+                        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", paddingTop: "0.8rem", borderTop: "1px solid #e2e8f0", fontSize: "0.78rem" }}>
+                          <span style={{ color: "#475569", fontWeight: "600" }}>📍 {m.venue}</span>
+                          <a href={m.recapUrl} style={{ color: "#c00030", fontWeight: "800", textDecoration: "none" }}>
                             Read Recap →
                           </a>
                         </div>
