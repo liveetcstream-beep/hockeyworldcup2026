@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 import { fetchFIHTMSLiveScores } from "@/lib/fihTmsScraper";
+import { sanitizeAndValidateMatches } from "@/lib/matchSanityValidator";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -173,18 +174,12 @@ export async function GET(request) {
       }
     ];
 
-    // Filter live matches in progress right now
-    const liveMatches = todayMatches.filter((m) => m.status === "LIVE");
-
-    // Filter upcoming matches for today
-    const upcomingToday = todayMatches.filter((m) => m.status === "UPCOMING");
-
-    // The single next match to start
-    const nextMatch = upcomingToday.length > 0 ? upcomingToday[0] : null;
+    // Apply strict automated counter-checks & auto-correction validation
+    const { verifiedCompleted, verifiedLive, verifiedUpcoming, nextMatch } = sanitizeAndValidateMatches(todayMatches);
 
     // Filter completed results (completed today + completed yesterday)
     const completedMatches = [
-      ...todayMatches.filter((m) => m.status === "FINAL"),
+      ...verifiedCompleted,
       ...yesterdayMatches
     ];
 
@@ -193,10 +188,10 @@ export async function GET(request) {
       lastUpdated: new Date().toISOString(),
       matchday: "Matchday 2 (August 16, 2026)",
       timezone: "CET / CEST (Host Local Time in Belgium & Netherlands)",
-      liveCount: liveMatches.length,
-      liveMatches,
+      liveCount: verifiedLive.length,
+      liveMatches: verifiedLive,
       nextMatch,
-      upcomingToday,
+      upcomingToday: verifiedUpcoming,
       completedMatches
     }, {
       headers: {
