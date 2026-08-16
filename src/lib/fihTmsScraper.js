@@ -87,6 +87,14 @@ export async function fetchFIHTMSLiveScores() {
           pool = `Pool ${poolMatch[1].toUpperCase()} (${item.gender})`;
         }
 
+        // Extract relative time e.g. <b>40 minutes from now</b> or <b>3 hours from now</b>
+        let relativeTime = "";
+        const relTimeRegex = /<b>([^<]+from now|mins:\s*\d+[^<]*)<\/b>/i;
+        const relTimeMatch = relTimeRegex.exec(bodyHtml);
+        if (relTimeMatch) {
+          relativeTime = relTimeMatch[1].trim();
+        }
+
         matches.push({
           id: parseInt(matchId, 10),
           tmsId: matchId,
@@ -100,6 +108,8 @@ export async function fetchFIHTMSLiveScores() {
           flagA: teamAInfo.flag,
           teamB: teamBInfo.name,
           flagB: teamBInfo.flag,
+          timeCET: relativeTime ? `Local Time · ${relativeTime}` : "Local Venue Time",
+          relativeTime,
           tmsUrl: `https://tms.fih.ch/matches/${matchId}`,
           source: "FIH TMS Official Stream"
         });
