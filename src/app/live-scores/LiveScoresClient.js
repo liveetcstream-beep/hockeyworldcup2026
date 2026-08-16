@@ -245,26 +245,26 @@ const INITIAL_COMPLETED_RESULTS = [
 
 const INITIAL_UPCOMING_TODAY = [
   {
-    id: 205,
+    id: 207,
     status: "UPCOMING",
     isNext: true,
-    timeCET: "17:30 CET · 40 mins from now",
-    localTimes: "20:30 PKT / 21:00 IST / 16:30 BST",
-    match: "Belgium vs New Zealand",
-    gender: "Women's Pool C (W7)",
-    teamA: "Belgium",
-    flagA: "be",
-    teamB: "New Zealand",
-    flagB: "nz",
+    timeCET: "20:30 CET · 1 hour from now",
+    localTimes: "23:30 PKT / 00:00 IST / 19:30 BST",
+    match: "Spain vs Ireland",
+    gender: "Women's Pool C (W8)",
+    teamA: "Spain",
+    flagA: "es",
+    teamB: "Ireland",
+    flagB: "ie",
     venue: "Belfius Hockey Arena, Wavre (Belgium)",
-    previewUrl: "/womens-tournament"
+    previewUrl: "/pool-c"
   },
   {
     id: 206,
     status: "UPCOMING",
     isNext: false,
-    timeCET: "19:00 CET · 2 hours from now",
-    localTimes: "22:00 PKT / 22:30 IST / 02:00 JST",
+    timeCET: "21:00 CET · 1.5 hours from now",
+    localTimes: "00:00 PKT / 00:30 IST / 20:00 BST",
     match: "Argentina vs Japan",
     gender: "Men's Pool A (M8)",
     teamA: "Argentina",
@@ -275,19 +275,34 @@ const INITIAL_UPCOMING_TODAY = [
     previewUrl: "/matches/australia-vs-argentina"
   },
   {
-    id: 207,
+    id: 301,
     status: "UPCOMING",
     isNext: false,
-    timeCET: "20:30 CET · 3.5 hours from now",
-    localTimes: "23:30 PKT / 00:00 IST (Aug 17)",
-    match: "Spain vs Ireland",
-    gender: "Women's Pool C (W8)",
-    teamA: "Spain",
-    flagA: "es",
-    teamB: "Ireland",
-    flagB: "ie",
+    timeCET: "Tomorrow · 14 hours from now",
+    localTimes: "13:00 PKT / 13:30 IST",
+    match: "Chile vs Japan",
+    gender: "Women's Pool A (W9)",
+    teamA: "Chile",
+    flagA: "cl",
+    teamB: "Japan",
+    flagB: "jp",
+    venue: "Wagener Stadium, Amstelveen (Netherlands)",
+    previewUrl: "/pool-a"
+  },
+  {
+    id: 302,
+    status: "UPCOMING",
+    isNext: false,
+    timeCET: "Tomorrow · 15 hours from now",
+    localTimes: "14:30 PKT / 15:00 IST",
+    match: "USA vs Scotland",
+    gender: "Women's Pool B (W10)",
+    teamA: "USA",
+    flagA: "us",
+    teamB: "Scotland",
+    flagB: "gb-sct",
     venue: "Belfius Hockey Arena, Wavre (Belgium)",
-    previewUrl: "/pool-c"
+    previewUrl: "/pool-b"
   }
 ];
 
