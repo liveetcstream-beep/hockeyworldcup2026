@@ -4,62 +4,60 @@ import React, { useState, useEffect } from "react";
 
 const DEFAULT_LIVE_MATCHES = [
   {
-    id: 203,
-    status: "LIVE",
-    period: "2nd Quarter",
-    minute: "24'",
-    quarterNumber: 2,
-    elapsedMinutes: 24,
-    timeCET: "11:30 CET",
-    localTimes: "15:00 IST / 14:30 PST",
-    gender: "Men's Pool C",
-    teamA: "Spain",
-    flagA: "es",
-    scoreA: 1,
-    teamB: "South Africa",
-    flagB: "za",
-    scoreB: 0,
-    venue: "Belfius Hockey Arena, Wavre (BEL)",
-    stats: {
-      possession: "56% - 44%",
-      penaltyCorners: "3 (1) - 1 (0)",
-      shotsOnTarget: "5 - 2"
-    },
-    events: [
-      { minute: "14'", player: "Marc Miralles", type: "Penalty Corner Goal ⚽", team: "Spain" }
-    ]
-  }
-];
-
-const DEFAULT_UPCOMING_TODAY = [
-  {
     id: 202,
-    status: "UPCOMING",
+    status: "LIVE",
+    period: "1st Quarter",
+    minute: "12'",
+    quarterNumber: 1,
+    elapsedMinutes: 12,
     timeCET: "13:00 CET",
     localTimes: "16:00 PKT / 16:30 IST",
-    match: "China vs India",
     gender: "Women's Pool D",
     teamA: "China",
     flagA: "cn",
+    scoreA: 0,
     teamB: "India",
     flagB: "in",
-    venue: "Wagener Stadium, Amstelveen (NED)",
+    scoreB: 0,
+    venue: "Wagener Hockey Stadium, Amstelveen (NED)",
+    stats: {
+      possession: "49% - 51%",
+      penaltyCorners: "1 (0) - 1 (0)",
+      shotsOnTarget: "2 - 2"
+    },
+    events: [],
     previewUrl: "/news/china-vs-india-women-result-score-august-16-hwc-2026"
   },
   {
     id: 204,
-    status: "UPCOMING",
+    status: "LIVE",
+    period: "1st Quarter",
+    minute: "10'",
+    quarterNumber: 1,
+    elapsedMinutes: 10,
     timeCET: "13:00 CET",
     localTimes: "16:00 PKT / 16:30 IST / 23:00 NZST",
-    match: "Netherlands vs New Zealand",
     gender: "Men's Pool A",
     teamA: "Netherlands",
     flagA: "nl",
+    scoreA: 1,
     teamB: "New Zealand",
     flagB: "nz",
-    venue: "Wagener Stadium, Amstelveen (NED)",
+    scoreB: 0,
+    venue: "Wagener Hockey Stadium, Amstelveen (NED)",
+    stats: {
+      possession: "63% - 37%",
+      penaltyCorners: "2 (0) - 0 (0)",
+      shotsOnTarget: "4 - 1"
+    },
+    events: [
+      { minute: "08'", player: "Thierry Brinkman", type: "Field Goal ⚽", team: "Netherlands" }
+    ],
     previewUrl: "/matches/germany-vs-netherlands"
-  },
+  }
+];
+
+const DEFAULT_UPCOMING_TODAY = [
   {
     id: 205,
     status: "UPCOMING",
@@ -87,10 +85,56 @@ const DEFAULT_UPCOMING_TODAY = [
     flagB: "jp",
     venue: "Wagener Stadium, Amstelveen (NED)",
     previewUrl: "/matches/australia-vs-argentina"
+  },
+  {
+    id: 207,
+    status: "UPCOMING",
+    timeCET: "17:30 CET",
+    localTimes: "20:30 PKT / 21:00 IST",
+    match: "Spain vs Ireland",
+    gender: "Women's Pool C",
+    teamA: "Spain",
+    flagA: "es",
+    teamB: "Ireland",
+    flagB: "ie",
+    venue: "Belfius Hockey Arena, Wavre (BEL)",
+    previewUrl: "/pool-c"
   }
 ];
 
 const DEFAULT_COMPLETED_RESULTS = [
+  {
+    id: 203,
+    status: "FINAL",
+    match: "Spain vs South Africa",
+    gender: "Men's Pool C",
+    scoreA: 2,
+    scoreB: 0,
+    teamA: "Spain",
+    flagA: "es",
+    teamB: "South Africa",
+    flagB: "za",
+    venue: "Belfius Hockey Arena, Wavre",
+    date: "Aug 16 · FT",
+    scorers: "Marc Miralles (14' PC), Pere Amat (52')",
+    recapUrl: "/news/spain-vs-south-africa-result-score-august-16-hwc-2026"
+  },
+  {
+    id: 200,
+    status: "FINAL",
+    match: "England vs South Africa",
+    gender: "Women's Pool D",
+    scoreA: 2,
+    scoreB: 1,
+    teamA: "England",
+    flagA: "gb-eng",
+    teamB: "South Africa",
+    flagB: "za",
+    venue: "Wagener Stadium, Amstelveen",
+    date: "Aug 16 · FT",
+    scorers: "Tess Howard (14'), Giselle Ansley (38' PC) | Quanita Bobbs (49' PC)",
+    recapUrl: "/news/england-vs-south-africa-women-result-score-august-16-hwc-2026"
+  },
   {
     id: 201,
     status: "FINAL",

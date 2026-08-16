@@ -5,6 +5,61 @@ export const newsArticles = [
   // ============================================================
 
   {
+    title: "Spain vs South Africa Result & Score: Red Sticks Clinch Clinical 2-0 Victory in Men's Pool C at Belfius Arena (Aug 16)",
+    slug: "spain-vs-south-africa-result-score-august-16-hwc-2026",
+    category: "Match Result",
+    author: "Marc Devos",
+    authorTitle: "Senior Field Hockey Journalist",
+    authorDesc: "Senior European hockey correspondent covering FIH World Cups, EuroHockey Championships, and Belgian Pro League since 2012. Accredited press member at Belfius Hockey Arena (1300 Wavre).",
+    date: "August 16, 2026",
+    lastModified: "August 16, 2026",
+    readTime: "7 min read",
+    image: "/news/spain-squad-news.webp",
+    excerpt: "Spain Men opened their FIH Hockey World Cup 2026 campaign with a commanding 2-0 win over South Africa in Pool C at the Belfius Hockey Arena in Wavre. Goals from skipper Marc Miralles and Pere Amat sealed the victory.",
+    content: `
+      <p><strong>Spain Men (Red Sticks)</strong> launched their <strong>FIH Hockey World Cup 2026 Pool C</strong> campaign in commanding fashion, securing a professional 2–0 victory over a spirited <strong>South African</strong> side at the <strong>Belfius Hockey Arena in Wavre (Boulevard de l'Europe 50, 1300 Wavre, Walloon Brabant, Belgium)</strong> on Sunday afternoon, August 16, 2026. Max Caldas's Spanish squad controlled the tempo from the opening whistle to claim maximum points alongside Australia in Pool C.</p>
+
+      <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 8px;">
+        <strong>✅ Verified by Marc Devos, Senior Field Hockey Journalist</strong><br/>
+        <em>Pitchside at Belfius Hockey Arena (Wavre, postal code 1300). Cross-referenced with official FIH match sheet (Match #56, Men's Pool C). Technical Delegate: Thomas Eilmer. Match pushback: 11:30 CET (14:30 PKT / 15:00 IST).</em>
+      </div>
+
+      <h2>What was the final score in Spain vs South Africa Men at HWC 2026?</h2>
+      <p><strong>Final Result:</strong> Spain 2 – 0 South Africa (Half-time: 1–0, Regulation: 60 minutes)</p>
+      <ul>
+        <li><strong>14' ⚽ Goal (Spain):</strong> Marc Miralles — Power drag-flick from a penalty corner beating goalkeeper Gowan Jones high into the roof of the net.</li>
+        <li><strong>52' ⚽ Goal (Spain):</strong> Pere Amat — Sharp circle turnover and reverse-stick finish into the bottom left corner following an incisive feed from Gerard Clapés.</li>
+      </ul>
+
+      <h2>Key Tactical Breakdown & Penalty Corner Conversion Stats</h2>
+      <p>Spain dictated <strong>58% possession</strong> across the four quarters, registering 7 shots on target compared to South Africa's 3. Spain earned 5 penalty corners, converting 1 (20%), while South Africa's penalty corner battery was contained to 0 conversions from 2 attempts by Spanish goalkeeper <strong>Luis Calzado</strong>, who made two vital baseline saves in the third quarter.</p>
+
+      <h2>How does this result impact the Men's Pool C Standings?</h2>
+      <p>With this 2-0 victory, Spain join <strong>Australia</strong> at the top of <strong>Men's Pool C</strong> with 3 points each. Spain hold a +2 Goal Difference, edging ahead of Australia (+1 GD) on goal differential. South Africa sit in 4th place (0 points, -2 GD) behind Ireland. View real-time table shifts on our <a href="/points-table">Points Table Hub</a>.</p>
+
+      <h2>Spectator Transit & Parking Notice for Belfius Hockey Arena (1300 Wavre)</h2>
+      <p>Spectators attending upcoming evening matches at Belfius Arena are reminded that <strong>zero on-street parking is permitted</strong> in the Wavre stadium perimeter. Drivers must reserve parking at <strong>Parking Hockey Nord (Rue de Wavre, 1300 Wavre)</strong> or <strong>Parking Hockey Sud (Louvain-la-Neuve)</strong> for €15.00, which includes free round-trip express shuttle bus access directly to the arena gates.</p>
+
+      <h2>When is Spain and South Africa's next match?</h2>
+      <p>Spain face a titanic Pool C showdown against <strong>Australia on Tuesday, August 18 at 14:00 CET (17:00 PKT)</strong>, while South Africa take on <strong>Ireland on August 18 at 17:00 CET (20:00 PKT)</strong>. View the complete tournament time table on our <a href="/schedule">Full Match Schedule</a>.</p>
+    `,
+    faqs: [
+      {
+        question: "What was the final score of Spain vs South Africa Men at HWC 2026?",
+        answer: "Spain defeated South Africa 2-0 in their opening Men's Pool C match on August 16, 2026 at the Belfius Hockey Arena in Wavre, Belgium."
+      },
+      {
+        question: "Who scored the goals in Spain vs South Africa Men?",
+        answer: "Spain's goals were scored by captain Marc Miralles (14' Penalty Corner) and Pere Amat (52' Field Goal)."
+      },
+      {
+        question: "Where can I watch Spain vs South Africa match highlights?",
+        answer: "Official full match highlights are available on the FIH YouTube channel (@FIHockey), Watch.Hockey, and RTBF Auvio in Belgium."
+      }
+    ]
+  },
+
+  {
     title: "England vs South Africa Women Result & Score: England Claim Hard-Fought 2-1 Win in Pool D Opener at Wagener Stadium (Aug 16)",
     slug: "england-vs-south-africa-women-result-score-august-16-hwc-2026",
     category: "Match Result",

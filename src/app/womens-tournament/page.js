@@ -50,36 +50,36 @@ const womensPools = [
     name: "Pool A (Amstelveen)",
     teams: [
       { name: "Netherlands", ranking: "#1", flag: "🇳🇱" },
-      { name: "Argentina", ranking: "#2", flag: "🇦🇷" },
-      { name: "Japan", ranking: "#11", flag: "🇯🇵" },
+      { name: "Australia", ranking: "#5", flag: "🇦🇺" },
+      { name: "Japan", ranking: "#10", flag: "🇯🇵" },
       { name: "Chile", ranking: "#14", flag: "🇨🇱" }
     ]
   },
   {
     name: "Pool B (Wavre)",
     teams: [
-      { name: "Germany", ranking: "#3", flag: "🇩🇪" },
-      { name: "Belgium", ranking: "#4", flag: "🇧🇪" },
-      { name: "United States", ranking: "#13", flag: "🇺🇸" },
-      { name: "Scotland", ranking: "#17", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿" }
+      { name: "Argentina", ranking: "#2", flag: "🇦🇷" },
+      { name: "Germany", ranking: "#4", flag: "🇩🇪" },
+      { name: "United States", ranking: "#11", flag: "🇺🇸" },
+      { name: "Scotland", ranking: "#15", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿" }
     ]
   },
   {
-    name: "Pool C (Amstelveen)",
+    name: "Pool C (Wavre)",
     teams: [
-      { name: "Australia", ranking: "#5", flag: "🇦🇺" },
-      { name: "Spain", ranking: "#7", flag: "🇪🇸" },
-      { name: "China", ranking: "#8", flag: "🇨🇳" },
-      { name: "Ireland", ranking: "#12", flag: "🇮🇪" }
+      { name: "Belgium", ranking: "#3", flag: "🇧🇪" },
+      { name: "Spain", ranking: "#8", flag: "🇪🇸" },
+      { name: "New Zealand", ranking: "#12", flag: "🇳🇿" },
+      { name: "Ireland", ranking: "#13", flag: "🇮🇪" }
     ]
   },
   {
-    name: "Pool D (Wavre)",
+    name: "Pool D (Amstelveen)",
     teams: [
-      { name: "England", ranking: "#6", flag: "🏴" },
+      { name: "China", ranking: "#6", flag: "🇨🇳" },
+      { name: "England", ranking: "#7", flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿" },
       { name: "India", ranking: "#9", flag: "🇮🇳" },
-      { name: "New Zealand", ranking: "#10", flag: "🇳🇿" },
-      { name: "South Africa", ranking: "#15", flag: "🇿🇦" }
+      { name: "South Africa", ranking: "#16", flag: "🇿🇦" }
     ]
   }
 ];

@@ -69,7 +69,7 @@ export default function PoolAPage() {
   const faqItems = [
     { question: "How many teams from Pool A qualify for the Quarter-Finals?", answer: "The top team in Pool A qualifies directly for the Quarter-Finals. The teams finishing second and third will play in the crossover playoffs to secure a spot in the Quarter-Finals. The bottom team is eliminated." },
     { question: "Where will Pool A matches be played?", answer: "All Pool A matches (both Men's and Women's tournaments) will be held at the Wagener Hockey Stadium in Amstelveen, Netherlands." },
-    { question: "Who are the favorites to win Pool A?", answer: "The Netherlands are the overwhelming favorites in both the Men's and Women's sections, especially with the home crowd advantage in Amstelveen. Argentina represents their biggest challenge in both categories." }
+    { question: "Who are the favorites to win Pool A?", answer: "The Netherlands are the overwhelming favorites in both the Men's and Women's sections with home crowd advantage in Amstelveen. In Men's Pool A, Argentina represents their biggest challenge, while in Women's Pool A, Australia represents their primary title rival." }
   ];
 
   return (

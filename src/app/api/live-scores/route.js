@@ -192,45 +192,33 @@ const ALL_TOURNAMENT_MATCHDAYS = {
       recapUrl: "/news/australia-vs-ireland-result-score-august-16-hwc-2026"
     },
 
-    // 2. Currently Active Live Match (11:30 CET / 14:30 PKT)
     {
       id: 203,
-      status: "LIVE",
-      period: "4th Quarter",
+      status: "FINAL",
+      match: "Spain vs South Africa",
       gender: "Men",
       pool: "Pool C (Men)",
+      scoreA: 2,
+      scoreB: 0,
       teamA: "Spain",
       flagA: "es",
-      scoreA: 1,
       teamB: "South Africa",
       flagB: "za",
-      scoreB: 0,
       venue: "Belfius Hockey Arena, Wavre (BEL)",
       timeCET: "11:30",
-      stats: {
-        possession: "56% - 44%",
-        penaltyCorners: "3 (1) - 1 (0)",
-        shotsOnTarget: "5 - 2",
-        yellowCards: 0,
-        redCards: 0
-      },
-      events: [
-        { minute: "14'", player: "Marc Miralles", type: "Penalty Corner Goal ⚽", team: "Spain" }
-      ],
-      postMatchSetup: {
-        recapSlug: "/matches/australia-vs-spain",
-        highlightsUrl: "https://www.youtube.com/@FIHockey",
-        nextMatchA: "Spain vs Australia — Aug 18 (16:00 CET)",
-        nextMatchB: "South Africa vs Ireland — Aug 18 (14:00 CET)"
-      }
+      scorers: "Marc Miralles (14' PC), Pere Amat (52')",
+      stats: { possession: "58% - 42%", penaltyCorners: "5 (1) - 2 (0)", shotsOnTarget: "7 - 3", yellowCards: 0, redCards: 0 },
+      recapUrl: "/news/spain-vs-south-africa-result-score-august-16-hwc-2026"
     },
 
-    // 3. Upcoming Today Afternoon & Evening Matches
+    // 2. Currently Active Live Matches (Pushback 13:00 CET / 16:00 PKT)
     {
       id: 202,
-      status: "UPCOMING",
-      period: "Pushback 13:00 CET",
-      minute: "Starts 4:00 PM PKT (16:30 IST)",
+      status: "LIVE",
+      period: "1st Quarter",
+      minute: "12'",
+      quarterNumber: 1,
+      elapsedMinutes: 12,
       gender: "Women",
       pool: "Pool D (Women)",
       teamA: "China",
@@ -242,29 +230,36 @@ const ALL_TOURNAMENT_MATCHDAYS = {
       venue: "Wagener Stadium, Amstelveen (NED)",
       timeCET: "13:00",
       localTimes: "16:00 PKT / 16:30 IST",
-      stats: { possession: "0% - 0%", penaltyCorners: "0 - 0", shotsOnTarget: "0 - 0", yellowCards: 0, redCards: 0 },
+      stats: { possession: "49% - 51%", penaltyCorners: "1 (0) - 1 (0)", shotsOnTarget: "2 - 2", yellowCards: 0, redCards: 0 },
       events: [],
       previewUrl: "/news/china-vs-india-women-result-score-august-16-hwc-2026"
     },
     {
       id: 204,
-      status: "UPCOMING",
-      period: "Pushback 13:00 CET",
-      minute: "Starts 4:00 PM PKT (16:30 IST)",
+      status: "LIVE",
+      period: "1st Quarter",
+      minute: "10'",
+      quarterNumber: 1,
+      elapsedMinutes: 10,
       gender: "Men",
       pool: "Pool A (Men)",
       teamA: "Netherlands",
       flagA: "nl",
-      scoreA: 0,
+      scoreA: 1,
       teamB: "New Zealand",
       flagB: "nz",
       scoreB: 0,
       venue: "Wagener Stadium, Amstelveen (NED)",
       timeCET: "13:00",
-      stats: { possession: "0% - 0%", penaltyCorners: "0 - 0", shotsOnTarget: "0 - 0", yellowCards: 0, redCards: 0 },
-      events: [],
+      scorers: "Thierry Brinkman (08')",
+      stats: { possession: "63% - 37%", penaltyCorners: "2 (0) - 0 (0)", shotsOnTarget: "4 - 1", yellowCards: 0, redCards: 0 },
+      events: [
+        { minute: "08'", player: "Thierry Brinkman", type: "Field Goal ⚽", team: "Netherlands" }
+      ],
       previewUrl: "/matches/germany-vs-netherlands"
     },
+
+    // 3. Upcoming Today Afternoon & Evening Matches
     {
       id: 205,
       status: "UPCOMING",

@@ -52,10 +52,10 @@ const STANDINGS_DATA = {
       { name: "Japan", code: "JPN", flag: "jp", slug: "japan", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" }
     ],
     "Pool C": [
+      { name: "Spain", code: "ESP", flag: "es", slug: "spain", p: 1, w: 1, d: 0, l: 0, gf: 2, ga: 0, gd: 2, pts: 3, recentRes: "W 2-0 vs RSA" },
       { name: "Australia", code: "AUS", flag: "au", slug: "australia", p: 1, w: 1, d: 0, l: 0, gf: 2, ga: 1, gd: 1, pts: 3, recentRes: "W 2-1 vs IRL" },
-      { name: "Spain", code: "ESP", flag: "es", slug: "spain", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
-      { name: "South Africa", code: "RSA", flag: "za", slug: "south-africa", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
-      { name: "Ireland", code: "IRL", flag: "ie", slug: "ireland", p: 1, w: 0, d: 0, l: 1, gf: 1, ga: 2, gd: -1, pts: 0, recentRes: "L 1-2 vs AUS" }
+      { name: "Ireland", code: "IRL", flag: "ie", slug: "ireland", p: 1, w: 0, d: 0, l: 1, gf: 1, ga: 2, gd: -1, pts: 0, recentRes: "L 1-2 vs AUS" },
+      { name: "South Africa", code: "RSA", flag: "za", slug: "south-africa", p: 1, w: 0, d: 0, l: 1, gf: 0, ga: 2, gd: -2, pts: 0, recentRes: "L 0-2 vs ESP" }
     ]
   },
   Women: {

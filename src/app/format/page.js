@@ -103,83 +103,83 @@ export default function FormatPage() {
             
             <div className="insight-col-card accent-card">
               <span className="insight-col-tag">Stage 2</span>
-              <span className="insight-col-header">Crossover Stage</span>
+              <span className="insight-col-header">Second Group Phase (Pools E, F, G, H)</span>
               <p className="insight-col-text">
-                Teams finishing 2nd and 3rd in their pools must play crossover matches to keep their title hopes alive. In this knockout round, 2nd-placed squads face 3rd-placed squads from opposite groups (e.g., A2 vs B3, C2 vs D3).
+                Rather than single-knockout crossovers, the 2026 edition uses a Second Group Stage: The top 2 teams from Pools A & D form <strong>Pool E</strong>, while top 2 from Pools B & C form <strong>Pool F</strong>. Bottom 2 teams form <strong>Pool G & H</strong> for 9th–16th classification.
               </p>
             </div>
 
             <div className="insight-col-card">
               <span className="insight-col-tag">Stage 3</span>
-              <span className="insight-col-header">Knockout Finals</span>
+              <span className="insight-col-header">Semi-Finals & Grand Final</span>
               <p className="insight-col-text">
-                The 4 crossover winners join the 4 group winners in the Quarterfinals. From this point forward, it is a single-elimination tournament leading to the final at the Belfius Arena in Wavre, Belgium.
+                The top 2 teams from Pool E and Pool F advance directly to the Semi-Finals (1st E vs 2nd F, 1st F vs 2nd E). Winners clash in the Grand Final at the Belfius Arena in Wavre, Belgium.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Crossover Math Mapping Table */}
+        {/* Second Group Phase Math Mapping Table */}
         <section className="my-16">
-          <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-sky-400 pl-4 italic">Crossover Matchups Mapping</h2>
+          <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-sky-400 pl-4 italic">Second Group Stage & Classification Pools Mapping</h2>
           <div className="table-responsive format-table-container">
             <table className="sports-table">
               <thead>
                 <tr>
-                  <th>Match Code</th>
-                  <th>Matchup Formula</th>
-                  <th>Winner Progression</th>
-                  <th className="hide-mobile">Loser Status</th>
+                  <th>Phase 2 Pool</th>
+                  <th>Qualified Teams Source</th>
+                  <th>Progression Target</th>
+                  <th className="hide-mobile">Venue</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <td><strong><span className="show-desktop-inline">Crossover 1</span><span className="show-mobile-inline">Cross 1</span></strong></td>
+                  <td><strong><span className="show-desktop-inline">Pool E (Championship)</span><span className="show-mobile-inline">Pool E</span></strong></td>
                   <td>
-                    <span className="show-desktop-inline">2nd Place Pool A vs 3rd Place Pool B</span>
-                    <span className="show-mobile-inline">2A vs 3B</span>
+                    <span className="show-desktop-inline">1st & 2nd Place Pool A + 1st & 2nd Place Pool D</span>
+                    <span className="show-mobile-inline">1A, 2A, 1D, 2D</span>
                   </td>
                   <td>
-                    <span className="show-desktop-inline">Advances to Quarterfinal 1 (vs Winner Pool C)</span>
-                    <span className="show-mobile-inline">To QF1 (vs Pool C Winner)</span>
+                    <span className="show-desktop-inline">Top 2 advance to Semi-Finals (1st–4th Place)</span>
+                    <span className="show-mobile-inline">To Semi-Finals</span>
                   </td>
-                  <td className="hide-mobile">Moves to 9th-16th Classification</td>
+                  <td className="hide-mobile">Wagener Stadium, Amstelveen</td>
                 </tr>
                 <tr>
-                  <td><strong><span className="show-desktop-inline">Crossover 2</span><span className="show-mobile-inline">Cross 2</span></strong></td>
+                  <td><strong><span className="show-desktop-inline">Pool F (Championship)</span><span className="show-mobile-inline">Pool F</span></strong></td>
                   <td>
-                    <span className="show-desktop-inline">2nd Place Pool B vs 3rd Place Pool A</span>
-                    <span className="show-mobile-inline">2B vs 3A</span>
+                    <span className="show-desktop-inline">1st & 2nd Place Pool B + 1st & 2nd Place Pool C</span>
+                    <span className="show-mobile-inline">1B, 2B, 1C, 2C</span>
                   </td>
                   <td>
-                    <span className="show-desktop-inline">Advances to Quarterfinal 2 (vs Winner Pool D)</span>
-                    <span className="show-mobile-inline">To QF2 (vs Pool D Winner)</span>
+                    <span className="show-desktop-inline">Top 2 advance to Semi-Finals (1st–4th Place)</span>
+                    <span className="show-mobile-inline">To Semi-Finals</span>
                   </td>
-                  <td className="hide-mobile">Moves to 9th-16th Classification</td>
+                  <td className="hide-mobile">Belfius Hockey Arena, Wavre</td>
                 </tr>
                 <tr>
-                  <td><strong><span className="show-desktop-inline">Crossover 3</span><span className="show-mobile-inline">Cross 3</span></strong></td>
+                  <td><strong><span className="show-desktop-inline">Pool G (Classification)</span><span className="show-mobile-inline">Pool G</span></strong></td>
                   <td>
-                    <span className="show-desktop-inline">2nd Place Pool C vs 3rd Place Pool D</span>
-                    <span className="show-mobile-inline">2C vs 3D</span>
+                    <span className="show-desktop-inline">3rd & 4th Place Pool A + 3rd & 4th Place Pool D</span>
+                    <span className="show-mobile-inline">3A, 4A, 3D, 4D</span>
                   </td>
                   <td>
-                    <span className="show-desktop-inline">Advances to Quarterfinal 3 (vs Winner Pool A)</span>
-                    <span className="show-mobile-inline">To QF3 (vs Pool A Winner)</span>
+                    <span className="show-desktop-inline">9th to 16th FIH World Ranking Classification</span>
+                    <span className="show-mobile-inline">9th-16th Rank</span>
                   </td>
-                  <td className="hide-mobile">Moves to 9th-16th Classification</td>
+                  <td className="hide-mobile">Wagener Stadium, Amstelveen</td>
                 </tr>
                 <tr>
-                  <td><strong><span className="show-desktop-inline">Crossover 4</span><span className="show-mobile-inline">Cross 4</span></strong></td>
+                  <td><strong><span className="show-desktop-inline">Pool H (Classification)</span><span className="show-mobile-inline">Pool H</span></strong></td>
                   <td>
-                    <span className="show-desktop-inline">2nd Place Pool D vs 3rd Place Pool C</span>
-                    <span className="show-mobile-inline">2D vs 3C</span>
+                    <span className="show-desktop-inline">3rd & 4th Place Pool B + 3rd & 4th Place Pool C</span>
+                    <span className="show-mobile-inline">3B, 4B, 3C, 4C</span>
                   </td>
                   <td>
-                    <span className="show-desktop-inline">Advances to Quarterfinal 4 (vs Winner Pool B)</span>
-                    <span className="show-mobile-inline">To QF4 (vs Pool B Winner)</span>
+                    <span className="show-desktop-inline">9th to 16th FIH World Ranking Classification</span>
+                    <span className="show-mobile-inline">9th-16th Rank</span>
                   </td>
-                  <td className="hide-mobile">Moves to 9th-16th Classification</td>
+                  <td className="hide-mobile">Belfius Hockey Arena, Wavre</td>
                 </tr>
               </tbody>
             </table>

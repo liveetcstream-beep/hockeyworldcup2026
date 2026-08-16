@@ -32,47 +32,46 @@ export const metadata = {
   },
 };
 
-
 const mensPools = [
   {
     pool: "A", color: "#0284c7",
     teams: [
-      { code: "nl", name: "Netherlands", rank: "#1" },
-      { code: "ar", name: "Argentina", rank: "#3" },
-      { code: "jp", name: "Japan", rank: "#12" },
-      { code: "nz", name: "New Zealand", rank: "#9" },
+      { code: "nl", name: "Netherlands", rank: "#2 (3613 pts)" },
+      { code: "ar", name: "Argentina", rank: "#7 (3264 pts)" },
+      { code: "nz", name: "New Zealand", rank: "#11 (2610 pts)" },
+      { code: "jp", name: "Japan", rank: "#14 (2090 pts)" },
     ],
-    danger: "Netherlands — World No.1 favorites",
+    danger: "Netherlands — Co-Hosts & 3-Time Champions",
   },
   {
     pool: "B", color: "#7c3aed",
     teams: [
-      { code: "de", name: "Germany", rank: "#2 (Reigning Champions)" },
-      { code: "my", name: "Malaysia", rank: "#10" },
-      { code: "be", name: "Belgium", rank: "#3" },
-      { code: "fr", name: "France", rank: "#11" },
+      { code: "be", name: "Belgium", rank: "#1 (World No. 1, 3838 pts)" },
+      { code: "de", name: "Germany", rank: "#5 (Reigning Champions, 3406 pts)" },
+      { code: "fr", name: "France", rank: "#9 (2795 pts)" },
+      { code: "my", name: "Malaysia", rank: "#12 (2340 pts)" },
     ],
-    danger: "Germany vs Belgium — Pool of Death",
+    danger: "Belgium vs Germany — Rematch of 2023 World Cup Final",
   },
   {
     pool: "C", color: "#d97706",
     teams: [
-      { code: "au", name: "Australia", rank: "#4" },
-      { code: "ie", name: "Ireland", rank: "#8" },
-      { code: "es", name: "Spain", rank: "#7" },
-      { code: "za", name: "South Africa", rank: "#15" },
+      { code: "au", name: "Australia", rank: "#4 (3494 pts)" },
+      { code: "es", name: "Spain", rank: "#6 (3296 pts)" },
+      { code: "ie", name: "Ireland", rank: "#10 (2795 pts)" },
+      { code: "za", name: "South Africa", rank: "#13 (2150 pts)" },
     ],
-    danger: "Australia — Perennial contenders",
+    danger: "Australia — 3-Time World Champions",
   },
   {
     pool: "D", color: "#c00030",
     teams: [
-      { code: "in", name: "India", rank: "#5" },
-      { code: "gb-wls", name: "Wales", rank: "#14" },
-      { code: "gb-eng", name: "England", rank: "#6" },
-      { code: "pk", name: "Pakistan", rank: "#18" },
+      { code: "gb-eng", name: "England", rank: "#3 (3599 pts)" },
+      { code: "in", name: "India", rank: "#8 (3233 pts)" },
+      { code: "pk", name: "Pakistan", rank: "#15 (4-Time Champions, 1980 pts)" },
+      { code: "gb-wls", name: "Wales", rank: "#16 (1850 pts)" },
     ],
-    danger: "India vs Pakistan Derby — Biggest Rivalry",
+    danger: "India vs Pakistan — Biggest Asian Derby in Amstelveen",
   },
 ];
 
@@ -80,42 +79,42 @@ const womensPools = [
   {
     pool: "A", color: "#f43f5e",
     teams: [
-      { code: "nl", name: "Netherlands", rank: "#1 (Defending Champions)" },
-      { code: "au", name: "Australia", rank: "#2" },
-      { code: "jp", name: "Japan", rank: "#8" },
-      { code: "cl", name: "Chile", rank: "#16" },
+      { code: "nl", name: "Netherlands", rank: "#1 (Defending Champions, 3640 pts)" },
+      { code: "au", name: "Australia", rank: "#5 (2870 pts)" },
+      { code: "jp", name: "Japan", rank: "#10 (2250 pts)" },
+      { code: "cl", name: "Chile", rank: "#14 (1820 pts)" },
     ],
-    danger: "Netherlands vs Australia — World's Best",
+    danger: "Netherlands vs Australia — High-Pace Clash",
   },
   {
     pool: "B", color: "#7c3aed",
     teams: [
-      { code: "ar", name: "Argentina", rank: "#3" },
-      { code: "de", name: "Germany", rank: "#4" },
-      { code: "gb-sct", name: "Scotland", rank: "#10" },
-      { code: "us", name: "United States", rank: "#7" },
+      { code: "ar", name: "Argentina", rank: "#2 (Las Leonas, 3120 pts)" },
+      { code: "de", name: "Germany", rank: "#4 (2890 pts)" },
+      { code: "us", name: "United States", rank: "#11 (2180 pts)" },
+      { code: "gb-sct", name: "Scotland", rank: "#15 (1740 pts)" },
     ],
-    danger: "Argentina — Strong South American squad",
+    danger: "Argentina vs Germany — Pool B Showdown",
   },
   {
     pool: "C", color: "#d97706",
     teams: [
-      { code: "be", name: "Belgium", rank: "#5" },
-      { code: "es", name: "Spain", rank: "#6" },
-      { code: "nz", name: "New Zealand", rank: "#9" },
-      { code: "ie", name: "Ireland", rank: "#8" },
+      { code: "be", name: "Belgium", rank: "#3 (Red Panthers, 2980 pts)" },
+      { code: "es", name: "Spain", rank: "#8 (2580 pts)" },
+      { code: "nz", name: "New Zealand", rank: "#12 (2090 pts)" },
+      { code: "ie", name: "Ireland", rank: "#13 (2010 pts)" },
     ],
-    danger: "Belgium — Home advantage at Wavre",
+    danger: "Belgium — Home Advantage at Belfius Arena",
   },
   {
     pool: "D", color: "#c00030",
     teams: [
-      { code: "cn", name: "China", rank: "#6" },
-      { code: "in", name: "India", rank: "#6" },
-      { code: "gb-eng", name: "England", rank: "#12" },
-      { code: "za", name: "South Africa", rank: "#14" },
+      { code: "cn", name: "China", rank: "#6 (Asian Champions, 2740 pts)" },
+      { code: "gb-eng", name: "England", rank: "#7 (2690 pts)" },
+      { code: "in", name: "India", rank: "#9 (2490 pts)" },
+      { code: "za", name: "South Africa", rank: "#16 (1680 pts)" },
     ],
-    danger: "China vs India — Asian Clash",
+    danger: "China vs India — Marquee Asian Rivalry",
   },
 ];
 
@@ -139,12 +138,12 @@ export default function GroupsPage() {
     {
       question: "Germany Pool B mein Belgium ke saath hai — yeh kyon khatra hai?",
       answer:
-        "Germany (reigning World Champions, Rank #2) aur Belgium (World Rank #3, co-host) Pool B mein hain. Germany vs Belgium Pool B match iss World Cup ka most-watched European match hoga. Dono teams semi-final favorites hain.",
+        "Germany (reigning World Champions, Rank #5) aur Belgium (World Rank #1, co-host) Pool B mein hain. Germany vs Belgium Pool B match iss World Cup ka most-watched European match hoga.",
     },
     {
       question: "Worst pool draw kiska hai Hockey World Cup 2026 mein?",
       answer:
-        "Men's Pool B — Germany, Belgium, Malaysia, France — sabse tough pool hai. Germany aur Belgium dono potential champions hain. Pool D bhi kafi mushkil hai — India, Pakistan, England sab competitive teams hain.",
+        "Men's Pool B — Belgium, Germany, France, Malaysia — sabse tough pool hai. Pool D bhi kafi mushkil hai — England, India, Pakistan, Wales sab competitive teams hain.",
     },
   ];
 

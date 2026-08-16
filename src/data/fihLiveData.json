@@ -1,5 +1,5 @@
 {
-  "lastScraped": "2026-08-16T10:50:42.250Z",
+  "lastScraped": "2026-08-16T11:10:53.748Z",
   "tournament": "FIH Hockey World Cup 2026 (Men & Women)",
   "venues": [
     {
@@ -71,12 +71,11 @@
     {
       "id": 203,
       "slug": "spain-vs-south-africa",
-      "status": "LIVE",
-      "period": "4th Quarter",
+      "status": "FINAL",
       "match": "Spain vs South Africa",
       "gender": "Men",
       "pool": "Pool C (Men)",
-      "scoreA": 1,
+      "scoreA": 2,
       "scoreB": 0,
       "teamA": "Spain",
       "flagA": "es",
@@ -86,28 +85,22 @@
       "timePKT": "14:30",
       "timeIST": "15:00",
       "venue": "Belfius Hockey Arena, Wavre (BEL)",
-      "scorers": "Marc Miralles (14' PC)",
+      "scorers": "Marc Miralles (14' PC), Pere Amat (52')",
       "stats": {
-        "possession": "56% - 44%",
-        "penaltyCorners": "3 (1) - 1 (0)",
-        "shotsOnTarget": "5 - 2"
+        "possession": "58% - 42%",
+        "penaltyCorners": "5 (1) - 2 (0)",
+        "shotsOnTarget": "7 - 3"
       },
-      "events": [
-        {
-          "minute": "14'",
-          "player": "Marc Miralles",
-          "type": "Penalty Corner Goal ⚽",
-          "team": "Spain"
-        }
-      ],
-      "previewUrl": "/matches/australia-vs-spain"
+      "recapUrl": "/news/spain-vs-south-africa-result-score-august-16-hwc-2026"
     },
     {
       "id": 202,
       "slug": "china-vs-india-women",
-      "status": "UPCOMING",
-      "period": "Pushback 13:00 CET",
-      "minute": "Starts 4:00 PM PKT (16:30 IST)",
+      "status": "LIVE",
+      "period": "1st Quarter",
+      "minute": "12'",
+      "quarterNumber": 1,
+      "elapsedMinutes": 12,
       "match": "China vs India",
       "gender": "Women",
       "pool": "Pool D (Women)",
@@ -121,18 +114,26 @@
       "timePKT": "16:00",
       "timeIST": "16:30",
       "venue": "Wagener Hockey Stadium, Amstelveen (NED)",
+      "stats": {
+        "possession": "49% - 51%",
+        "penaltyCorners": "1 (0) - 1 (0)",
+        "shotsOnTarget": "2 - 2"
+      },
+      "events": [],
       "previewUrl": "/news/china-vs-india-women-result-score-august-16-hwc-2026"
     },
     {
       "id": 204,
       "slug": "netherlands-vs-new-zealand",
-      "status": "UPCOMING",
-      "period": "Pushback 13:00 CET",
-      "minute": "Starts 4:00 PM PKT (16:30 IST)",
+      "status": "LIVE",
+      "period": "1st Quarter",
+      "minute": "10'",
+      "quarterNumber": 1,
+      "elapsedMinutes": 10,
       "match": "Netherlands vs New Zealand",
       "gender": "Men",
       "pool": "Pool A (Men)",
-      "scoreA": 0,
+      "scoreA": 1,
       "scoreB": 0,
       "teamA": "Netherlands",
       "flagA": "nl",
@@ -142,6 +143,20 @@
       "timePKT": "16:00",
       "timeIST": "16:30",
       "venue": "Wagener Hockey Stadium, Amstelveen (NED)",
+      "scorers": "Thierry Brinkman (08')",
+      "stats": {
+        "possession": "63% - 37%",
+        "penaltyCorners": "2 (0) - 0 (0)",
+        "shotsOnTarget": "4 - 1"
+      },
+      "events": [
+        {
+          "minute": "08'",
+          "player": "Thierry Brinkman",
+          "type": "Field Goal ⚽",
+          "team": "Netherlands"
+        }
+      ],
       "previewUrl": "/matches/germany-vs-netherlands"
     },
     {

@@ -52,9 +52,9 @@ export default function PoolDPage() {
     { date: "August 15, 2026", time: "10:00 CET", match: "India 🇮🇳 vs Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿", venue: "Wagener Stadium, Amstelveen" },
     { date: "August 15, 2026", time: "16:00 CET", match: "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs Pakistan 🇵🇰", venue: "Wagener Stadium, Amstelveen" },
     { date: "August 17, 2026", time: "09:30 CET", match: "Pakistan 🇵🇰 vs Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 17, 2026", time: "12:30 CET", match: "India 🇮🇳 vs England 🏴󠁧󠁢󠁥󠁮󠁧󠁿", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 19, 2026", time: "12:30 CET", match: "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 19, 2026", time: "14:00 CET", match: "Pakistan 🇵🇰 vs India 🇮🇳", venue: "Wagener Stadium, Amstelveen" }
+    { date: "August 17, 2026", time: "12:00 CET", match: "India 🇮🇳 vs England 🏴󠁧󠁢󠁥󠁮󠁧󠁿", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 19, 2026", time: "09:30 CET", match: "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 19, 2026", time: "12:00 CET", match: "Pakistan 🇵🇰 vs India 🇮🇳", venue: "Wagener Stadium, Amstelveen" }
   ];
 
   const womenFixtures = [
