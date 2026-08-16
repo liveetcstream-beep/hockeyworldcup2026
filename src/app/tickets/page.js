@@ -5,13 +5,13 @@ import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Tickets: Prices From €19",
-  description: "Official booking guide for Hockey World Cup 2026 tickets. Category-wise pricing from €19 to €70, seating maps, and official booking portal (worldcup.hockey).",
+  description: "Official booking guide for Hockey World Cup 2026 tickets. Category-wise pricing from €19 to €70, seating maps, and official host portals (tickets.hockeyworldcup2026.be and tickets.hockeyworldcup2026.nl).",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/tickets",
   },
   openGraph: {
     title: "Hockey World Cup 2026 Tickets: Prices From €19",
-    description: "Official booking guide for Hockey World Cup 2026 tickets. Category-wise pricing from €19 to €70, seating maps, and official booking portal (worldcup.hockey).",
+    description: "Official booking guide for Hockey World Cup 2026 tickets. Category-wise pricing from €19 to €70, seating maps, and official host portals (tickets.hockeyworldcup2026.be and tickets.hockeyworldcup2026.nl).",
     url: "https://hockeyworldcup2026schedule.com/tickets",
     images: [
       {
@@ -35,7 +35,7 @@ export default function TicketsPage() {
   const faqItems = [
     {
       question: "How to book online tickets for the Hockey World Cup 2026?",
-      answer: "You can book tickets online via the official portal at worldcup.hockey managed by the Royal Belgian Hockey Association (KBHB) and the Royal Dutch Hockey Association (KNHB). Enter your name, valid email, and contact info to confirm the booking."
+      answer: "You can book tickets online via the two official host portals: tickets.hockeyworldcup2026.be (managed by the Royal Belgian Hockey Association - KBHB for Wavre fixtures) and tickets.hockeyworldcup2026.nl (managed by the Royal Dutch Hockey Association - KNHB for Amstelveen fixtures)."
     },
     {
       question: "Are physical tickets mandatory to enter the stadium?",

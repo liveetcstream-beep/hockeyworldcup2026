@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="footer-col">
             <div className="text-white font-bold" style={{ color: "#fff", fontSize: "1.1rem", fontWeight: "800", marginBottom: "1.2rem" }}>About Us</div>
             <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: "1.7", marginBottom: "1.5rem" }}>
-              We are an independent fan-run hub bringing you verified match fixtures, schedule updates, local timezone calculations, and official broadcasting guides for the upcoming FIH Hockey World Cup 2026 in Wavre & Amstelveen. All fixtures are cross-referenced with fih.hockey & worldcup.hockey.
+              Independent fan information site. Not affiliated with FIH. All live scores and fixtures are verified against official FIH Tournament Management System (TMS) and fih.hockey records.
             </p>
             <div className="text-white font-bold" style={{ color: "#fff", fontSize: "1rem", fontWeight: "800", marginBottom: "0.8rem" }}>Editorial Desk</div>
             <p style={{ fontSize: "0.88rem", color: "var(--text-muted)", lineHeight: "1.6" }}>
@@ -26,13 +26,13 @@ export default function Footer() {
             <div className="text-white font-bold" style={{ color: "#fff", fontSize: "1.1rem", fontWeight: "800", marginBottom: "1.2rem" }}>Tournament Hubs</div>
             <ul className="footer-links" style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.7rem" }}>
               <li><a href="/" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🏠 Home</a></li>
-              <li><a href="/schedule" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📅 Hockey World Cup 2026 Full Schedule</a></li>
-              <li><a href="/points-table" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📈 Hockey World Cup 2026 Points Table</a></li>
-              <li><a href="/live-scores" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🔴 Hockey World Cup Live Scores</a></li>
-              <li><a href="/tickets" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🎟️ Hockey World Cup 2026 Tickets & Prices</a></li>
+              <li><a href="/schedule" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📅 Full Match Schedule (16 Days)</a></li>
+              <li><a href="/points-table" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📈 Points Table & Standings</a></li>
+              <li><a href="/live-scores" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🔴 Real-Time Match Center</a></li>
+              <li><a href="/tickets" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🎟️ Official Tickets Guide</a></li>
               <li><a href="/venues" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🗺️ Wagener Stadium & Belfius Arena Guide</a></li>
-              <li><a href="/history" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🏆 Hockey World Cup Winners List</a></li>
-              <li><a href="/news" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>⚡ Hockey World Cup 2026 Latest News</a></li>
+              <li><a href="/history" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🏆 Hockey World Cup Winners (1971–2023)</a></li>
+              <li><a href="/news" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>⚡ Match Reports & Analysis</a></li>
             </ul>
           </div>
 
@@ -47,7 +47,7 @@ export default function Footer() {
               <li><a href="/hockey-world-cup-2026-schedule-germany" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.85rem" }}>🇩🇪 Germany Schedule</a></li>
               <li><a href="/hockey-world-cup-2026-schedule-australia" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.85rem" }}>🇦🇺 Australia Schedule</a></li>
               <li><a href="/hockey-world-cup-2026-schedule-england" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.85rem" }}>🏴󠁧󠁢󠁥󠁮󠁧󠁿 England Schedule</a></li>
-              <li><a href="/teams" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none", fontSize: "0.85rem" }}>👉 View All 16 Squads & Hubs</a></li>
+              <li><a href="/teams" style={{ color: "var(--text-main)", fontWeight: "600", textDecoration: "none", fontSize: "0.85rem" }}>👉 View All 20 Qualified Nations</a></li>
             </ul>
           </div>
 
@@ -55,10 +55,10 @@ export default function Footer() {
           <div className="footer-col">
             <div className="text-white font-bold" style={{ color: "#fff", fontSize: "1.1rem", fontWeight: "800", marginBottom: "1.2rem" }}>Official Guides</div>
             <ul className="footer-links" style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.7rem", marginBottom: "1.5rem" }}>
-              <li><a href="/hockey-live-streaming" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📺 Hockey World Cup Live Streaming (JioHotstar, PTV Sports, NOS)</a></li>
+              <li><a href="/hockey-live-streaming" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📺 Live Streaming (Watch.Hockey, JioHotstar, PTV Sports, NOS)</a></li>
               <li><a href="/h2h" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>⚔️ Head-to-Head (H2H) Records</a></li>
-              <li><a href="/past-results" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📊 2023 World Cup Past Results</a></li>
-              <li><a href="https://worldcup.hockey" target="_blank" rel="noopener noreferrer" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🎟️ Official Ticket Portal (worldcup.hockey)</a></li>
+              <li><a href="/past-results" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>📊 Confirmed Match Results</a></li>
+              <li><a href="/tickets" style={{ color: "var(--text-muted)", textDecoration: "none", fontSize: "0.88rem" }}>🎟️ Official Host Tickets Portals</a></li>
             </ul>
           </div>
 
@@ -67,7 +67,7 @@ export default function Footer() {
         {/* Footer Bottom bar */}
         <div className="footer-bottom" style={{ borderTop: "1px solid var(--border-color)", paddingTop: "1.5rem", display: "flex", flexWrap: "wrap", justifyContent: "space-between", alignItems: "center", gap: "1rem", fontSize: "0.82rem", color: "var(--text-muted)" }}>
           <p style={{ margin: 0 }}>
-            © 2026 HockeyWorldCup2026Schedule.com. All Rights Reserved. Independent fan portal. Not affiliated with the International Hockey Federation (FIH).
+            © 2026 HockeyWorldCup2026Schedule.com. Independent fan information site. Not affiliated with the International Hockey Federation (FIH). All live scores and fixtures should be verified on fih.hockey / tms.fih.ch.
           </p>
           <div className="flex gap-4" style={{ display: "flex", gap: "1rem" }}>
             <a href="/privacy-policy" style={{ color: "var(--text-muted)", textDecoration: "none" }}>Privacy Policy</a>

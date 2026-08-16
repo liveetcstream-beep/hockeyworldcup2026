@@ -3,8 +3,12 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Netherlands vs Germany Women Hockey World Cup 2026",
-  description: "Preview the Netherlands vs Germany women's match at HWC 2026. Access complete head-to-head history, squad sheets, match timings, and predictions.",
+  title: "Netherlands vs Germany Women Hockey World Cup 2026 Potential Clash Guide",
+  description: "Tactical preview and historical analysis of a potential Netherlands vs Germany Women's World Cup clash in the Second Group Phase or Finals.",
+  robots: {
+    index: false,
+    follow: true,
+  },
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/netherlands-vs-germany-women",
   },

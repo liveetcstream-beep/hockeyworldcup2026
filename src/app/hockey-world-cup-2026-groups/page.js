@@ -36,40 +36,40 @@ const mensPools = [
   {
     pool: "A", color: "#0284c7",
     teams: [
-      { code: "nl", name: "Netherlands", rank: "#2 (3613 pts)" },
-      { code: "ar", name: "Argentina", rank: "#7 (3264 pts)" },
-      { code: "nz", name: "New Zealand", rank: "#11 (2610 pts)" },
-      { code: "jp", name: "Japan", rank: "#14 (2090 pts)" },
+      { code: "nl", name: "Netherlands", rank: "#2 (3613.06 pts)" },
+      { code: "ar", name: "Argentina", rank: "#7 (3264.51 pts)" },
+      { code: "nz", name: "New Zealand", rank: "#11 (2736.73 pts)" },
+      { code: "jp", name: "Japan", rank: "#16 (2411.96 pts)" },
     ],
     danger: "Netherlands — Co-Hosts & 3-Time Champions",
   },
   {
     pool: "B", color: "#7c3aed",
     teams: [
-      { code: "be", name: "Belgium", rank: "#1 (World No. 1, 3838 pts)" },
-      { code: "de", name: "Germany", rank: "#5 (Reigning Champions, 3406 pts)" },
-      { code: "fr", name: "France", rank: "#9 (2795 pts)" },
-      { code: "my", name: "Malaysia", rank: "#12 (2340 pts)" },
+      { code: "be", name: "Belgium", rank: "#1 (World No. 1, 3838.25 pts)" },
+      { code: "de", name: "Germany", rank: "#5 (Reigning Champions, 3406.20 pts)" },
+      { code: "fr", name: "France", rank: "#9 (2795.56 pts)" },
+      { code: "my", name: "Malaysia", rank: "#14 (2451.93 pts)" },
     ],
     danger: "Belgium vs Germany — Rematch of 2023 World Cup Final",
   },
   {
     pool: "C", color: "#d97706",
     teams: [
-      { code: "au", name: "Australia", rank: "#4 (3494 pts)" },
-      { code: "es", name: "Spain", rank: "#6 (3296 pts)" },
-      { code: "ie", name: "Ireland", rank: "#10 (2795 pts)" },
-      { code: "za", name: "South Africa", rank: "#13 (2150 pts)" },
+      { code: "au", name: "Australia", rank: "#4 (3494.67 pts)" },
+      { code: "es", name: "Spain", rank: "#6 (3296.83 pts)" },
+      { code: "ie", name: "Ireland", rank: "#10 (2795.27 pts)" },
+      { code: "za", name: "South Africa", rank: "#13 (2541.82 pts)" },
     ],
     danger: "Australia — 3-Time World Champions",
   },
   {
     pool: "D", color: "#c00030",
     teams: [
-      { code: "gb-eng", name: "England", rank: "#3 (3599 pts)" },
-      { code: "in", name: "India", rank: "#8 (3233 pts)" },
-      { code: "pk", name: "Pakistan", rank: "#15 (4-Time Champions, 1980 pts)" },
-      { code: "gb-wls", name: "Wales", rank: "#16 (1850 pts)" },
+      { code: "gb-eng", name: "England", rank: "#3 (3599.34 pts)" },
+      { code: "in", name: "India", rank: "#8 (3233.64 pts)" },
+      { code: "pk", name: "Pakistan", rank: "#12 (4-Time Champions, 2549.86 pts)" },
+      { code: "gb-wls", name: "Wales", rank: "#15 (2428.82 pts)" },
     ],
     danger: "India vs Pakistan — Biggest Asian Derby in Amstelveen",
   },
@@ -81,8 +81,8 @@ const womensPools = [
     teams: [
       { code: "nl", name: "Netherlands", rank: "#1 (Defending Champions, 3640 pts)" },
       { code: "au", name: "Australia", rank: "#5 (2870 pts)" },
-      { code: "jp", name: "Japan", rank: "#10 (2250 pts)" },
       { code: "cl", name: "Chile", rank: "#14 (1820 pts)" },
+      { code: "jp", name: "Japan", rank: "#10 (2250 pts)" },
     ],
     danger: "Netherlands vs Australia — High-Pace Clash",
   },
@@ -109,7 +109,7 @@ const womensPools = [
   {
     pool: "D", color: "#c00030",
     teams: [
-      { code: "cn", name: "China", rank: "#6 (Asian Champions, 2740 pts)" },
+      { code: "cn", name: "China", rank: "#6 (Olympic Silver Medalists, 2740 pts)" },
       { code: "gb-eng", name: "England", rank: "#7 (2690 pts)" },
       { code: "in", name: "India", rank: "#9 (2490 pts)" },
       { code: "za", name: "South Africa", rank: "#16 (1680 pts)" },
@@ -123,27 +123,27 @@ export default function GroupsPage() {
     {
       question: "Hockey World Cup 2026 mein kitne pools hain?",
       answer:
-        "FIH Hockey World Cup 2026 mein 4 pools hain (A, B, C, D) — Men's aur Women's dono tournaments ke liye. Har pool mein 4 teams hain. Total 16 men's teams aur 16 women's teams participate kar rahi hain.",
+        "FIH Hockey World Cup 2026 mein 4 pools hain (A, B, C, D) — Men's aur Women's dono tournaments ke liye. Har pool mein 4 teams hain. Total 16 men's teams aur 16 women's teams (20 unique countries) participate kar rahi hain.",
     },
     {
       question: "Pool se kaise teams qualify karti hain next stage ke liye?",
       answer:
-        "Har pool se top 2 teams Second Stage mein qualify karti hain. Pool A aur Pool D ke winners/runners-up Group E banate hain. Pool B aur C ke winners/runners-up Group F banate hain. Group E aur F ke top 2 teams semi-final mein jaate hain.",
+        "Har pool se top 2 teams Second Group Phase mein qualify karti hain. Pools A & D ke top 2 teams Pool E banate hain (Amstelveen), aur Pools B & C ke top 2 teams Pool F banate hain (Wavre). Pools E aur F ke top 2 teams direct Semi-Finals mein advance karte hain.",
     },
     {
       question: "India aur Pakistan ek hi pool mein hain?",
       answer:
-        "Haan! India aur Pakistan dono Men's Pool D mein hain — jinke saath Wales aur England bhi hain. Yeh ek historic draw hai — India vs Pakistan Pool D derby iss tournament ka biggest match hoga.",
+        "Haan! India aur Pakistan dono Men's Pool D mein hain — jinke saath Wales aur England bhi hain. India vs Pakistan Pool D derby 19 August ko Wagener Stadium Amstelveen mein 15:00 CEST (18:30 IST / 18:00 PKT) par schedule hai.",
     },
     {
-      question: "Germany Pool B mein Belgium ke saath hai — yeh kyon khatra hai?",
+      question: "Germany Pool B mein Belgium ke saath hai — yeh kyon dangerous draw hai?",
       answer:
-        "Germany (reigning World Champions, Rank #5) aur Belgium (World Rank #1, co-host) Pool B mein hain. Germany vs Belgium Pool B match iss World Cup ka most-watched European match hoga.",
+        "Germany (reigning 2023 World Champions, Rank #5) aur Belgium (World Rank #1, co-host) Pool B mein hain. Germany vs Belgium Pool B match 17 August ko 20:30 CEST par Belfius Hockey Arena Wavre mein hoga.",
     },
     {
-      question: "Worst pool draw kiska hai Hockey World Cup 2026 mein?",
+      question: "Grand Finals kab aur kahan khele jaenge?",
       answer:
-        "Men's Pool B — Belgium, Germany, France, Malaysia — sabse tough pool hai. Pool D bhi kafi mushkil hai — England, India, Pakistan, Wales sab competitive teams hain.",
+        "Women's Grand Final Saturday, 29 August 2026 ko Wagener Stadium Amstelveen mein hoga. Men's Grand Final Sunday, 30 August 2026 ko 16:30 CEST par Belfius Hockey Arena Wavre mein hoga.",
     },
   ];
 
@@ -161,21 +161,21 @@ export default function GroupsPage() {
           </p>
           <div className="eeat-badge-container">
             <div className="eeat-badge">✍️ Verified: <strong>HWC 2026 Editorial Desk</strong></div>
+            <div className="eeat-badge">⚡ Official Source: <strong>FIH TMS &amp; Schedule v2</strong></div>
           </div>
         </div>
       </section>
 
       <main className="sports-container py-12">
-
         {/* Tournament Format Quick Explainer */}
         <section style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "20px", padding: "2rem", marginBottom: "4rem" }}>
-          <h2 style={{ fontSize: "1.3rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", marginBottom: "1.2rem" }}>📋 How Qualification Works</h2>
+          <h2 style={{ fontSize: "1.3rem", fontWeight: "800", color: "var(--text-main)", fontStyle: "italic", marginBottom: "1.2rem" }}>📋 Official 2026 Tournament Pathway</h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))", gap: "1rem" }}>
             {[
-              { step: "1", label: "Pool Stage (Aug 15–20)", desc: "4 pools × 4 teams. Round-robin within pool. Top 2 from each pool qualify for Second Stage.", color: "#0284c7" },
-              { step: "2", label: "Second Stage (Aug 22–24)", desc: "Pool A+D → Group E. Pool B+C → Group F. Each team plays 2 matches. Top 2 from E & F reach semis.", color: "#7c3aed" },
-              { step: "3", label: "Semi-Finals (Aug 27)", desc: "E1 vs F2 and F1 vs E2. Winners go to the Final. Losers play Bronze medal match.", color: "#d97706" },
-              { step: "4", label: "Grand Final (Aug 30)", desc: "Men's Final at Belfius Arena, Wavre. Women's Final at Wagener Stadium, Amstelveen.", color: "#c00030" },
+              { step: "1", label: "Pool Stage (Aug 15–20)", desc: "4 pools × 4 teams. Round-robin within pool. Top 2 from each pool advance to Championship Pools E & F.", color: "#0284c7" },
+              { step: "2", label: "Second Stage (Aug 21–24)", desc: "Pools A+D form Pool E (Amstelveen). Pools B+C form Pool F (Wavre). Top 2 from E & F reach Semi-Finals.", color: "#7c3aed" },
+              { step: "3", label: "Semi-Finals (Aug 27–28)", desc: "Women's Semi-Finals Aug 27 (Amstelveen); Men's Semi-Finals Aug 28 (Wavre).", color: "#d97706" },
+              { step: "4", label: "Grand Finals (Aug 29–30)", desc: "Women's Final Saturday Aug 29 (Amstelveen); Men's Final Sunday Aug 30 (Wavre, 16:30 CEST).", color: "#c00030" },
             ].map((s) => (
               <div key={s.step} style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
                 <div style={{ width: "36px", height: "36px", borderRadius: "50%", background: s.color, color: "white", fontWeight: "900", fontSize: "1.1rem", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>{s.step}</div>
@@ -255,12 +255,12 @@ export default function GroupsPage() {
           </h2>
           <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.2rem" }}>
             {[
-              { match: "🇮🇳 India vs 🇵🇰 Pakistan", pool: "Men's Pool D", why: "The sub-continental derby. World Cup's most-watched rivalry. India leads recent H2H 7-0.", heat: "🔥🔥🔥🔥🔥" },
-              { match: "🇩🇪 Germany vs 🇧🇪 Belgium", pool: "Men's Pool B", why: "Reigning champions vs co-host nation. European grudge match.", heat: "🔥🔥🔥🔥" },
-              { match: "🇳🇱 Netherlands vs 🇦🇺 Australia", pool: "Women's Pool A", why: "World's two best women's teams. No. 1 vs No. 2 — all-time classic.", heat: "🔥🔥🔥🔥🔥" },
-              { match: "🇦🇺 Australia vs 🇮🇪 Ireland", pool: "Men's Pool C", why: "Australia always favorites — but Ireland known for upsets.", heat: "🔥🔥🔥" },
-              { match: "🇨🇳 China vs 🇮🇳 India", pool: "Women's Pool D", why: "Asian rivals. Both teams have World Cup upset potential.", heat: "🔥🔥🔥🔥" },
-              { match: "🇦🇷 Argentina vs 🇩🇪 Germany", pool: "Women's Pool B", why: "Two traditionally strong women's hockey nations in direct clash.", heat: "🔥🔥🔥🔥" },
+              { match: "🇮🇳 India vs 🇵🇰 Pakistan", pool: "Men's Pool D", why: "The sub-continental derby at Wagener Stadium on Aug 19 (15:00 CEST / 18:30 IST).", heat: "🔥🔥🔥🔥🔥" },
+              { match: "🇩🇪 Germany vs 🇧🇪 Belgium", pool: "Men's Pool B", why: "Reigning 2023 champions vs co-host nation at Belfius Arena on Aug 17 (20:30 CEST).", heat: "🔥🔥🔥🔥" },
+              { match: "🇳🇱 Netherlands vs 🇦🇺 Australia", pool: "Women's Pool A", why: "World's two best women's teams at Wagener Stadium on Aug 17 (18:00 CEST).", heat: "🔥🔥🔥🔥🔥" },
+              { match: "🇦🇺 Australia vs 🇮🇪 Ireland", pool: "Men's Pool C", why: "Australia edged Ireland 2-1 in Wavre on Aug 16.", heat: "🔥🔥🔥" },
+              { match: "🇨🇳 China vs 🇮🇳 India", pool: "Women's Pool D", why: "Asian rivals and Olympic silver medalists clash in Amstelveen on Aug 16 (13:00 CEST).", heat: "🔥🔥🔥🔥" },
+              { match: "🇦🇷 Argentina vs 🇩🇪 Germany", pool: "Women's Pool B", why: "Two powerhouse women's hockey nations in Pool B clash on Aug 17 (17:00 CEST).", heat: "🔥🔥🔥🔥" },
             ].map((clash) => (
               <div key={clash.match} style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.4rem", boxShadow: "0 4px 16px rgba(15,23,42,0.05)" }}>
                 <div style={{ fontWeight: "800", fontSize: "1rem", color: "var(--text-main)", marginBottom: "0.4rem" }}>{clash.match}</div>

@@ -3,8 +3,12 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Germany vs Netherlands Hockey World Cup 2026 Match Preview",
-  description: "Tactical preview of Germany vs Netherlands men's match at HWC 2026. Check head-to-head records, squad lineups, kickoff times, and expert predictions.",
+  title: "Germany vs Netherlands Hockey World Cup 2026 Potential Clash Guide",
+  description: "Tactical preview and historical analysis of a potential Germany vs Netherlands Men's World Cup clash in the Second Group Phase or Semi-Finals.",
+  robots: {
+    index: false,
+    follow: true,
+  },
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/germany-vs-netherlands",
   },

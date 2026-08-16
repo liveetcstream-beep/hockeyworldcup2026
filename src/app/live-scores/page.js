@@ -35,7 +35,7 @@ const COMPLETED_MATCH_RESULTS = [
   {
     id: 1,
     match: "England vs Pakistan",
-    gender: "Men's Pool D",
+    gender: "Men's Pool D (M3)",
     scoreA: 4,
     scoreB: 1,
     teamA: "England",
@@ -43,14 +43,14 @@ const COMPLETED_MATCH_RESULTS = [
     teamB: "Pakistan",
     flagB: "pk",
     venue: "Wagener Stadium, Amstelveen",
-    scorers: "Liam Ansell (14' PC), Phil Roper (39'), Sam Ward (47' PC), Nicholas Bandurak (54') | Muhammad Shahbaz Jr. (28')",
+    scorers: "Stuart Rushmere (14'), Sam Ward (29' PC), Samuel Hooper (41' PC), James Albery (56') | Rehman Abdul Afraz (33')",
     previewUrl: "/matches/england-vs-pakistan",
     recapUrl: "/news/england-vs-pakistan-result-score-august-15-hwc-2026"
   },
   {
     id: 2,
     match: "India vs Wales",
-    gender: "Men's Pool D",
+    gender: "Men's Pool D (M1)",
     scoreA: 3,
     scoreB: 1,
     teamA: "India",
@@ -58,102 +58,140 @@ const COMPLETED_MATCH_RESULTS = [
     teamB: "Wales",
     flagB: "gb-wls",
     venue: "Wagener Stadium, Amstelveen",
-    scorers: "Harmanpreet Singh (12' PC, 34' PC), Abhishek (22') | Gareth Furlong (28' PC)",
+    scorers: "Sanjay (08' PC), Harmanpreet Singh (11' PC, 43' PC) | Sam Welsh (56')",
     previewUrl: "/matches/india-vs-wales",
     recapUrl: "/news/india-vs-wales-result-score-august-15-hwc-2026"
   },
   {
     id: 3,
     match: "Belgium vs France",
-    gender: "Men's Pool B",
+    gender: "Men's Pool B (M4)",
     scoreA: 3,
-    scoreB: 1,
+    scoreB: 2,
     teamA: "Belgium",
     flagA: "be",
     teamB: "France",
     flagB: "fr",
     venue: "Belfius Hockey Arena, Wavre",
-    scorers: "Alexander Hendrickx (09' PC), Florent van Aubel (16'), Tom Boon (53' PC) | Timothée Clément (44' PC)",
+    scorers: "Nelson Onana (17'), Roman Duvekot (44'), Alexander Hendrickx (56' PC) | Eliot Curty (03'), Timothée Clément (18')",
     previewUrl: "/matches/belgium-vs-france",
     recapUrl: "/news/belgium-vs-france-result-score-august-15-hwc-2026"
   },
   {
     id: 4,
     match: "Germany vs Malaysia",
-    gender: "Men's Pool B",
-    scoreA: 3,
+    gender: "Men's Pool B (M2)",
+    scoreA: 5,
     scoreB: 1,
     teamA: "Germany",
     flagA: "de",
     teamB: "Malaysia",
     flagB: "my",
     venue: "Belfius Hockey Arena, Wavre",
-    scorers: "Gonzalo Peillat (08' PC, 41' PC), Mats Grambusch (29') | Faizal Saari (38')",
+    scorers: "Jakob Brilla (04'), Christopher Rühr (07'), Justus Weigand (10'), Justus Warweg (34' PC), Paul-Philipp Kaufmann (51') | Azrai Aizad Abu Kamal (40')",
     previewUrl: "/matches/germany-vs-belgium",
     recapUrl: "/news/germany-vs-malaysia-result-score-august-15-hwc-2026"
   },
   {
     id: 5,
     match: "Netherlands vs Chile",
-    gender: "Women's Pool A",
-    scoreA: 5,
+    gender: "Women's Pool A (W3)",
+    scoreA: 2,
     scoreB: 0,
     teamA: "Netherlands",
     flagA: "nl",
     teamB: "Chile",
     flagB: "cl",
     venue: "Wagener Stadium, Amstelveen",
-    scorers: "Felice Albers (04', 19'), Yibbi Jansen (11' PC), Frederique Matla (33', 48')",
-    previewUrl: "/matches/netherlands-vs-australia-women",
+    scorers: "Felice Albers (19'), Yibbi Jansen (44' PC)",
+    previewUrl: "/news/womens-hwc-2026-august-15-results-scores",
     recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
   },
   {
     id: 6,
-    match: "Argentina vs USA",
-    gender: "Women's Pool B",
+    match: "Germany vs Scotland",
+    gender: "Women's Pool B (W2)",
     scoreA: 3,
+    scoreB: 0,
+    teamA: "Germany",
+    flagA: "de",
+    teamB: "Scotland",
+    flagB: "gb-sct",
+    venue: "Belfius Hockey Arena, Wavre",
+    scorers: "Charlotte Stapenhorst (06', 29'), Nike Lorenz (48' PC)",
+    previewUrl: "/news/womens-hwc-2026-august-15-results-scores",
+    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+  },
+  {
+    id: 7,
+    match: "Australia vs Japan",
+    gender: "Women's Pool A (W1)",
+    scoreA: 2,
+    scoreB: 0,
+    teamA: "Australia",
+    flagA: "au",
+    teamB: "Japan",
+    flagB: "jp",
+    venue: "Wagener Stadium, Amstelveen",
+    scorers: "Claire Colwill (27' PC, 50' PC)",
+    previewUrl: "/news/womens-hwc-2026-august-15-results-scores",
+    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+  },
+  {
+    id: 8,
+    match: "Argentina vs USA",
+    gender: "Women's Pool B (W4)",
+    scoreA: 1,
     scoreB: 1,
     teamA: "Argentina",
     flagA: "ar",
     teamB: "United States",
     flagB: "us",
     venue: "Belfius Hockey Arena, Wavre",
-    scorers: "Agustina Gorzelany (14' PC, 52' PC), Julieta Jankunas (27') | Ashley Sessa (44')",
-    previewUrl: "/matches/australia-vs-argentina",
+    scorers: "Agustina Gorzelany (14' PC) | Ashley Sessa (44')",
+    previewUrl: "/news/womens-hwc-2026-august-15-results-scores",
     recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
   }
 ];
 
 const UPCOMING_BLOCKBUSTER_MATCHES = [
   {
-    title: "India vs Pakistan (Men's Pool D)",
-    date: "Wednesday, August 19, 2026",
-    time: "14:00 CET (17:30 IST / 17:00 PST)",
+    title: "India vs England (Men's Pool D)",
+    date: "Monday, August 17, 2026",
+    time: "15:00 CEST (18:30 IST / 14:00 BST)",
     venue: "Wagener Stadium, Amstelveen",
-    slug: "/matches/india-vs-pakistan",
-    teams: "IND vs PAK"
+    slug: "/matches/india-vs-england",
+    teams: "IND vs ENG"
   },
   {
     title: "Germany vs Belgium (Men's Pool B)",
     date: "Monday, August 17, 2026",
-    time: "17:30 CET (21:00 IST / 11:30 AM EDT)",
+    time: "20:30 CEST (00:00 IST / 14:30 EDT)",
     venue: "Belfius Hockey Arena, Wavre",
     slug: "/matches/germany-vs-belgium",
     teams: "GER vs BEL"
   },
   {
     title: "Netherlands vs Australia (Women's Pool A)",
-    date: "Tuesday, August 18, 2026",
-    time: "19:30 CET (23:00 IST / 03:30 AEST)",
+    date: "Monday, August 17, 2026",
+    time: "18:00 CEST (21:30 IST / 02:00 AEST)",
     venue: "Wagener Stadium, Amstelveen",
     slug: "/matches/netherlands-vs-australia-women",
     teams: "NED vs AUS"
   },
   {
+    title: "India vs Pakistan (Men's Pool D Derby)",
+    date: "Wednesday, August 19, 2026",
+    time: "15:00 CEST (18:30 IST / 18:00 PKT)",
+    venue: "Wagener Stadium, Amstelveen",
+    slug: "/matches/india-vs-pakistan",
+    teams: "IND vs PAK"
+  },
+  {
     title: "Australia vs Spain (Men's Pool C)",
     date: "Tuesday, August 18, 2026",
-    time: "16:00 CET (19:30 IST / 00:00 AEST)",
-    venue: "Wagener Stadium, Amstelveen",
+    time: "14:00 CEST (17:30 IST / 22:00 AEST)",
+    venue: "Belfius Hockey Arena, Wavre",
     slug: "/matches/australia-vs-spain",
     teams: "AUS vs ESP"
   }
@@ -171,7 +209,7 @@ export default function LiveScoresPage() {
     },
     {
       question: "What time is India vs Pakistan hockey clash at HWC 2026?",
-      answer: "The blockbuster India vs Pakistan Pool D match will take place on August 19, 2026, at 14:00 CET (17:30 IST in India / 17:00 PST in Pakistan) at Wagener Stadium, Amstelveen."
+      answer: "The blockbuster India vs Pakistan Pool D match will take place on August 19, 2026, at 15:00 CEST (18:30 IST in India / 18:00 PKT in Pakistan) at Wagener Stadium, Amstelveen."
     },
     {
       question: "How do live match scores affect the tournament Points Table?",

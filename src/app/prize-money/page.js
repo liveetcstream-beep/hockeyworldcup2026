@@ -84,10 +84,10 @@ export default function PrizeMoneyPage() {
 
       <section className="hero-section">
         <div className="sports-container hero-content">
-          <p className="hero-subtitle">💰 Official FIH Financial Disclosures & Allocations</p>
+          <p className="hero-subtitle">💰 Financial Analysis & Industry Estimates</p>
           <h1 className="hero-title">FIH Hockey World Cup 2026 Prize Money Breakdown</h1>
           <p className="hero-description">
-            While field hockey doesn't command the massive commercial revenues of football or cricket, the financial stakes for the 16 competing nations are higher than ever. Read the audited allocation of team payouts and individual performance awards.
+            While field hockey doesn't command the massive commercial revenues of football or cricket, the financial stakes for the competing nations are higher than ever. Read our comprehensive analysis of team payout structures and performance bonuses.
           </p>
 
           <div className="eeat-badge-container">
@@ -95,7 +95,7 @@ export default function PrizeMoneyPage() {
               ✍️ Analyst: <strong>HWC 2026 Editorial Desk</strong>
             </div>
             <div className="eeat-badge">
-              ⚡ Sourced from: <strong>FIH Official Budget Outlines</strong>
+              ⚡ Basis: <strong>National Federation & Tournaments Estimates</strong>
             </div>
           </div>
         </div>

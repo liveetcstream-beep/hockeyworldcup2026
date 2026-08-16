@@ -263,10 +263,11 @@ export default function FinalPage() {
           <div style={{ display: "flex", flexWrap: "wrap", gap: "0.6rem" }}>
             {[
               { text: "Semi-Finals Preview", href: "/knockout/semi-finals" },
-              { text: "Quarter-Finals Bracket", href: "/knockout/quarter-finals" },
+              { text: "Second Stage (Pools E–H)", href: "/knockout/quarter-finals" },
               { text: "India Results", href: "/results/india" },
               { text: "Belgium Results", href: "/results/belgium" },
-              { text: "August 31 Match Schedule", href: "/schedule/date/august-31-matches" },
+              { text: "August 29 Women's Final Schedule", href: "/schedule/date/august-29-matches" },
+              { text: "August 30 Men's Final Schedule", href: "/schedule/date/august-30-matches" },
               { text: "Live Score Tracker", href: "/live-scores" },
               { text: "Points Table", href: "/points-table" },
               { text: "Ticket Guide", href: "/tickets" },

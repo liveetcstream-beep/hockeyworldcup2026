@@ -49,27 +49,27 @@ const getFixtureLink = (matchText) => {
 
 export default function PoolBPage() {
   const menFixtures = [
-    { date: "August 15, 2026", time: "11:30 CET", match: "Germany 🇩🇪 vs Malaysia 🇲🇾", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 15, 2026", time: "17:30 CET", match: "Belgium 🇧🇪 vs France 🇫🇷", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 17, 2026", time: "11:00 CET", match: "France 🇫🇷 vs Malaysia 🇲🇾", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 17, 2026", time: "17:00 CET", match: "Germany 🇩🇪 vs Belgium 🇧🇪", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 19, 2026", time: "14:30 CET", match: "France 🇫🇷 vs Germany 🇩🇪", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 19, 2026", time: "17:30 CET", match: "Belgium 🇧🇪 vs Malaysia 🇲🇾", venue: "Belfius Hockey Arena, Wavre" }
+    { date: "August 15, 2026", time: "14:30 CEST", match: "Germany 🇩🇪 vs Malaysia 🇲🇾", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 15, 2026", time: "21:00 CEST", match: "Belgium 🇧🇪 vs France 🇫🇷", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 17, 2026", time: "14:00 CEST", match: "France 🇫🇷 vs Malaysia 🇲🇾", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 17, 2026", time: "20:30 CEST", match: "Germany 🇩🇪 vs Belgium 🇧🇪", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 19, 2026", time: "17:30 CEST", match: "France 🇫🇷 vs Germany 🇩🇪", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 19, 2026", time: "20:30 CEST", match: "Belgium 🇧🇪 vs Malaysia 🇲🇾", venue: "Belfius Hockey Arena, Wavre" }
   ];
 
   const womenFixtures = [
-    { date: "August 15, 2026", time: "08:30 CET", match: "Germany 🇩🇪 vs Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 15, 2026", time: "14:30 CET", match: "Argentina 🇦🇷 vs United States 🇺🇸", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 17, 2026", time: "08:00 CET", match: "United States 🇺🇸 vs Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 17, 2026", time: "14:00 CET", match: "Germany 🇩🇪 vs Argentina 🇦🇷", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 19, 2026", time: "08:00 CET", match: "Argentina 🇦🇷 vs Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 19, 2026", time: "11:00 CET", match: "United States 🇺🇸 vs Germany 🇩🇪", venue: "Belfius Hockey Arena, Wavre" }
+    { date: "August 15, 2026", time: "11:30 CEST", match: "Germany 🇩🇪 vs Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 15, 2026", time: "17:30 CEST", match: "Argentina 🇦🇷 vs United States 🇺🇸", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 17, 2026", time: "11:00 CEST", match: "United States 🇺🇸 vs Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 17, 2026", time: "17:00 CEST", match: "Germany 🇩🇪 vs Argentina 🇦🇷", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 19, 2026", time: "11:00 CEST", match: "Argentina 🇦🇷 vs Scotland 🏴󠁧󠁢󠁳󠁣󠁴󠁿", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 19, 2026", time: "14:00 CEST", match: "United States 🇺🇸 vs Germany 🇩🇪", venue: "Belfius Hockey Arena, Wavre" }
   ];
 
   const faqItems = [
     { question: "Where are Pool B matches being played?", answer: "All Pool B group matches will take place at the Belfius Hockey Arena in Wavre, Belgium." },
-    { question: "What is the key match to watch in Pool B?", answer: "The Men's matchup between Germany (2023 World Champions) and Belgium (Hosts & 2018 Champions) on August 17 is a massive rematch of the 2023 World Cup Final and will likely decide who tops the pool." },
-    { question: "How does qualification work for Pool B?", answer: "The top team in Pool B will advance directly to the Quarter-Finals. The 2nd and 3rd placed teams enter the crossover playoff stage, while the 4th placed team is eliminated." }
+    { question: "What is the key match to watch in Pool B?", answer: "The Men's matchup between Germany (2023 World Champions) and Belgium (Hosts & World No. 1) on August 17 at 20:30 CEST is a massive rematch of the 2023 World Cup Final and will likely decide who tops the pool." },
+    { question: "How does qualification work for Pool B?", answer: "The top 2 teams in Pool B qualify directly for Championship Pool F in Wavre alongside the top 2 teams from Pool C. The 3rd and 4th placed teams move into Classification Pool H to contest 9th to 16th global rankings." }
   ];
 
   return (

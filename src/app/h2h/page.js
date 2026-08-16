@@ -113,7 +113,7 @@ export default function H2HPage() {
               <span className="h2h-badge ml-auto" style={{ background: "linear-gradient(135deg, #f97316 0%, #e11d48 100%)" }}>🔥 Hockey El Clásico</span>
             </div>
             <p className="text-sm leading-relaxed m-0" style={{ color: "var(--text-muted)" }}>
-              The subcontinental rivalry between India and Pakistan is the most storied matchup in field hockey history. With a combined 11 Olympic gold medals and 4 World Cup trophies, every encounter is a high-octane battle of skill and passion. Below is the official record of their last 10 head-to-head senior international encounters:
+              The subcontinental rivalry between India and Pakistan is the most storied matchup in field hockey history. With a combined 11 Olympic gold medals (India 8, Pakistan 3) and 5 World Cup trophies (Pakistan 4, India 1), every encounter is a high-octane battle of skill and passion. Below is the verified record of their last 10 head-to-head senior international encounters (Source: FIH TMS match archives):
             </p>
           </div>
           

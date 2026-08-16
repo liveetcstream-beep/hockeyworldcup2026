@@ -49,25 +49,25 @@ const getFixtureLink = (matchText) => {
 
 export default function PoolAPage() {
   const menFixtures = [
-    { date: "August 16, 2026", time: "13:00 CET", match: "Netherlands 🇳🇱 vs New Zealand 🇳🇿", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 16, 2026", time: "16:00 CET", match: "Argentina 🇦🇷 vs Japan 🇯🇵", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 18, 2026", time: "14:00 CET", match: "New Zealand 🇳🇿 vs Japan 🇯🇵", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 18, 2026", time: "17:00 CET", match: "Argentina 🇦🇷 vs Netherlands 🇳🇱", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 20, 2026", time: "14:00 CET", match: "New Zealand 🇳🇿 vs Argentina 🇦🇷", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 20, 2026", time: "15:00 CET", match: "Netherlands 🇳🇱 vs Japan 🇯🇵", venue: "Wagener Stadium, Amstelveen" }
+    { date: "August 16, 2026", time: "16:00 CEST", match: "Netherlands 🇳🇱 vs New Zealand 🇳🇿", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 16, 2026", time: "19:00 CEST", match: "Argentina 🇦🇷 vs Japan 🇯🇵", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 18, 2026", time: "15:30 CEST", match: "New Zealand 🇳🇿 vs Japan 🇯🇵", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 18, 2026", time: "18:00 CEST", match: "Argentina 🇦🇷 vs Netherlands 🇳🇱", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 20, 2026", time: "15:30 CEST", match: "New Zealand 🇳🇿 vs Argentina 🇦🇷", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 20, 2026", time: "18:00 CEST", match: "Netherlands 🇳🇱 vs Japan 🇯🇵", venue: "Wagener Stadium, Amstelveen" }
   ];
 
   const womenFixtures = [
-    { date: "August 15, 2026", time: "07:00 CET", match: "Australia 🇦🇺 vs Japan 🇯🇵", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 15, 2026", time: "13:00 CET", match: "Netherlands 🇳🇱 vs Chile 🇨🇱", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 17, 2026", time: "06:30 CET", match: "Chile 🇨🇱 vs Japan 🇯🇵", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 17, 2026", time: "15:00 CET", match: "Australia 🇦🇺 vs Netherlands 🇳🇱", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 19, 2026", time: "06:30 CET", match: "Chile 🇨🇱 vs Australia 🇦🇺", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 19, 2026", time: "15:00 CET", match: "Netherlands 🇳🇱 vs Japan 🇯🇵", venue: "Wagener Stadium, Amstelveen" }
+    { date: "August 15, 2026", time: "10:00 CEST", match: "Australia 🇦🇺 vs Japan 🇯🇵", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 15, 2026", time: "16:00 CEST", match: "Netherlands 🇳🇱 vs Chile 🇨🇱", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 17, 2026", time: "09:30 CEST", match: "Chile 🇨🇱 vs Japan 🇯🇵", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 17, 2026", time: "18:00 CEST", match: "Australia 🇦🇺 vs Netherlands 🇳🇱", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 19, 2026", time: "09:30 CEST", match: "Chile 🇨🇱 vs Australia 🇦🇺", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 19, 2026", time: "17:30 CEST", match: "Netherlands 🇳🇱 vs Japan 🇯🇵", venue: "Wagener Stadium, Amstelveen" }
   ];
 
   const faqItems = [
-    { question: "How many teams from Pool A qualify for the Quarter-Finals?", answer: "The top team in Pool A qualifies directly for the Quarter-Finals. The teams finishing second and third will play in the crossover playoffs to secure a spot in the Quarter-Finals. The bottom team is eliminated." },
+    { question: "How many teams from Pool A qualify for the Second Group Phase?", answer: "The top 2 teams in Pool A qualify directly for Championship Pool E in Amstelveen alongside the top 2 teams from Pool D. The 3rd and 4th placed teams move into Classification Pool G to contest 9th to 16th global rankings." },
     { question: "Where will Pool A matches be played?", answer: "All Pool A matches (both Men's and Women's tournaments) will be held at the Wagener Hockey Stadium in Amstelveen, Netherlands." },
     { question: "Who are the favorites to win Pool A?", answer: "The Netherlands are the overwhelming favorites in both the Men's and Women's sections with home crowd advantage in Amstelveen. In Men's Pool A, Argentina represents their biggest challenge, while in Women's Pool A, Australia represents their primary title rival." }
   ];
@@ -149,7 +149,7 @@ export default function PoolAPage() {
             📈 Pool A Qualification Scenarios
           </h3>
           <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
-            The tournament format is unforgiving. To advance directly to the Quarter-Finals, a team must finish <strong>first in the pool standings</strong>. Teams finishing second and third face the sudden-death crossover matches (e.g. 2nd Pool A vs 3rd Pool D). The team that finishes at the bottom of the standings is knocked out and will play in the 9th-16th placement matches.
+            Under the official 2026 FIH format, the top 2 teams in Pool A advance directly to <strong>Championship Pool E (Second Group Phase)</strong> in Amstelveen, where they join the top 2 teams from Pool D. The 3rd and 4th placed teams move into Classification Pool G to contest 9th–16th world ranking positions. There are no crossover knockout matches.
           </p>
         </section>
 
@@ -163,7 +163,7 @@ export default function PoolAPage() {
               <thead>
                 <tr style={{ background: "#c00030", color: "white" }}>
                   <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", fontWeight: "700" }}>Date</th>
-                  <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", fontWeight: "700" }}>Time (CET)</th>
+                  <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", fontWeight: "700" }}>Time (CEST)</th>
                   <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", fontWeight: "700" }}>Matchup</th>
                   <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", fontWeight: "700" }}>Venue</th>
                 </tr>
@@ -200,7 +200,7 @@ export default function PoolAPage() {
               <thead>
                 <tr style={{ background: "#c00030", color: "white" }}>
                   <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", fontWeight: "700" }}>Date</th>
-                  <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", fontWeight: "700" }}>Time (CET)</th>
+                  <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", fontWeight: "700" }}>Time (CEST)</th>
                   <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", fontWeight: "700" }}>Matchup</th>
                   <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.8rem", textTransform: "uppercase", fontWeight: "700" }}>Venue</th>
                 </tr>

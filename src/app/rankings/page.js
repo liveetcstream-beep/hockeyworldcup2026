@@ -49,12 +49,12 @@ const mensRankings = [
   { rank: 8, country: "India", flag: "🇮🇳", flagCode: "in", points: "3233.64", pool: "Pool D", change: "—" },
   { rank: 9, country: "France", flag: "🇫🇷", flagCode: "fr", points: "2795.56", pool: "Pool B", change: "—" },
   { rank: 10, country: "Ireland", flag: "🇮🇪", flagCode: "ie", points: "2795.27", pool: "Pool C", change: "—" },
-  { rank: 11, country: "New Zealand", flag: "🇳🇿", flagCode: "nz", points: "2610.12", pool: "Pool A", change: "—" },
-  { rank: 12, country: "Malaysia", flag: "🇲🇾", flagCode: "my", points: "2340.50", pool: "Pool B", change: "—" },
-  { rank: 13, country: "South Africa", flag: "🇿🇦", flagCode: "za", points: "2150.80", pool: "Pool C", change: "—" },
-  { rank: 14, country: "Japan", flag: "🇯🇵", flagCode: "jp", points: "2090.40", pool: "Pool A", change: "—" },
-  { rank: 15, country: "Pakistan", flag: "🇵🇰", flagCode: "pk", points: "1980.25", pool: "Pool D", change: "—" },
-  { rank: 16, country: "Wales", flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿", flagCode: "gb-wls", points: "1850.10", pool: "Pool D", change: "—" },
+  { rank: 11, country: "New Zealand", flag: "🇳🇿", flagCode: "nz", points: "2736.73", pool: "Pool A", change: "—" },
+  { rank: 12, country: "South Africa", flag: "🇿🇦", flagCode: "za", points: "2541.82", pool: "Pool C", change: "—" },
+  { rank: 13, country: "Pakistan", flag: "🇵🇰", flagCode: "pk", points: "2539.12", pool: "Pool D", change: "—" },
+  { rank: 14, country: "Malaysia", flag: "🇲🇾", flagCode: "my", points: "2451.93", pool: "Pool B", change: "—" },
+  { rank: 15, country: "Wales", flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿", flagCode: "gb-wls", points: "2415.44", pool: "Pool D", change: "—" },
+  { rank: 16, country: "Japan", flag: "🇯🇵", flagCode: "jp", points: "2411.96", pool: "Pool A", change: "—" },
 ];
 
 const womensRankings = [
@@ -138,11 +138,14 @@ export default function RankingsPage() {
         {/* Overview Box */}
         <section style={{ background: "rgba(2, 132, 199, 0.05)", border: "1px solid rgba(2, 132, 199, 0.2)", borderRadius: "16px", padding: "1.5rem 2rem", marginBottom: "3rem" }}>
           <h2 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#38bdf8", marginBottom: "0.5rem" }}>
-            📊 2026 FIH World Rankings Summary
+            📊 2026 FIH Outdoor World Rankings Summary
           </h2>
           <p style={{ color: "var(--text-muted)", lineHeight: "1.7", margin: 0 }}>
-            The <strong>FIH Hockey World Rankings</strong> determine seedings for the FIH Hockey World Cup 2026 in Belgium and Netherlands. <strong>Netherlands</strong> leads the global standings in both Men's and Women's categories, while reigning champions <strong>Germany (No. 3 Men)</strong>, co-hosts <strong>Belgium (No. 2 Men)</strong>, and Olympic medallists <strong>India (No. 5 Men)</strong> form the top tier of contenders.
+            The <strong>FIH Outdoor World Rankings</strong> reflect international performance across the FIH Pro League and major championships. <strong>Belgium Men</strong> hold the World No. 1 spot closely followed by <strong>Netherlands Men (No. 2)</strong>, <strong>England (No. 3)</strong>, <strong>Australia (No. 4)</strong>, and reigning world champions <strong>Germany (No. 5)</strong>. In the women&apos;s division, <strong>Netherlands Women</strong> lead the global rankings ahead of <strong>Argentina (No. 2)</strong> and <strong>Belgium (No. 3)</strong>.
           </p>
+          <div style={{ marginTop: "0.8rem", fontSize: "0.8rem", color: "var(--text-muted)", borderTop: "1px solid rgba(255,255,255,0.06)", paddingTop: "0.6rem" }}>
+            <em>Ranking snapshot: August 2026 · Official source: FIH Outdoor World Rankings Index</em>
+          </div>
         </section>
 
         {/* Men's Rankings Table */}

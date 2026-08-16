@@ -4,46 +4,49 @@ import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Format: Pool, Second Stage & Rules",
-  description: "Complete guide on how the 16 teams qualify for the quarterfinals. Learn how crossover matches, penalty shootouts, and classification stages work.",
+  title: "Hockey World Cup 2026 Format: Second Group Phase & Rules",
+  description: "Complete guide to the FIH Hockey World Cup 2026 tournament format. Discover how Pools A-D progress into Second Stage Pools E-H, leading to the Semi-Finals.",
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/format",
   },
   openGraph: {
-    title: "Hockey World Cup 2026 Format: Pool, Second Stage & Rules",
-    description: "Complete guide on how the 16 teams qualify for the quarterfinals. Learn how crossover matches, penalty shootouts, and classification stages work.",
+    title: "Hockey World Cup 2026 Format: Second Group Phase & Rules",
+    description: "Complete guide to the FIH Hockey World Cup 2026 tournament format. Learn how the Second Group Phase (Pools E-H) and Semi-Finals work.",
     url: "https://hockeyworldcup2026schedule.com/format",
     images: [
       {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Hockey World Cup 2026 Format: Pool, Second Stage & Rules",
+        alt: "Hockey World Cup 2026 Format: Second Group Phase & Rules",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Hockey World Cup 2026 Format: Pool, Second Stage & Rules",
-    description: "Complete guide on how the 16 teams qualify for the quarterfinals. Learn how crossover matches, penalty shootouts, and classification stages work.",
+    title: "Hockey World Cup 2026 Format: Second Group Phase & Rules",
+    description: "Complete guide to the FIH Hockey World Cup 2026 tournament format: Pools A-D, Second Stage Pools E-H, and Finals.",
     images: ["/og-image.jpg"],
   },
 };
 
-
 export default function FormatPage() {
   const faqItems = [
     {
-      question: "What happens to the teams that finish 4th in their pools?",
-      answer: "The teams finishing last (4th place) are immediately eliminated from contesting the World Cup trophy. However, they continue to play classification matches to establish final FIH world ranking positions."
+      question: "Are there single-elimination Quarter-Finals in 2026?",
+      answer: "No. The 2026 FIH Hockey World Cup uses a Second Group Phase (Pools E, F, G, H) from August 21–24 rather than traditional quarter-finals or crossover playoffs. The top two teams from Pools E and F advance directly to the Semi-Finals."
     },
     {
-      question: "How are tie-breaker situations resolved in knockout rounds?",
-      answer: "If a crossover or knockout match ends in a draw at the end of regulation (60 minutes), the game goes directly to a penalty shootout. There is no extra time (overtime) played in FIH tournaments."
+      question: "How do teams qualify for the Second Group Phase?",
+      answer: "The top 2 teams from Pools A and D form Pool E (playing at Wagener Stadium in Amstelveen). The top 2 teams from Pools B and C form Pool F (playing at Belfius Arena in Wavre)."
     },
     {
-      question: "Why does the FIH use the crossover format?",
-      answer: "The crossover format keeps the group stage highly competitive. Even if a powerhouse team loses its opening match, they can still qualify for the knockouts by securing 2nd or 3rd place, keeping television viewers and sponsors engaged."
+      question: "What happens to teams that finish 3rd or 4th in their opening pools?",
+      answer: "Teams finishing 3rd and 4th enter Classification Pools G (Bottom 2 of A & D) and H (Bottom 2 of B & C) to determine official FIH World Ranking positions 9th through 16th."
+    },
+    {
+      question: "How are tied knockout and playoff matches decided?",
+      answer: "If a playoff or knockout match ends in a draw at the end of regulation (60 minutes), the game proceeds directly to an official FIH 8-second penalty shootout. There is no extra time."
     }
   ];
 
@@ -53,15 +56,18 @@ export default function FormatPage() {
 
       <section className="hero-section">
         <div className="sports-container hero-content">
-          <p className="hero-subtitle">Knockout Progression & Rules</p>
-          <h1 className="hero-title">Hockey World Cup 2026 Format: Pool, Second Stage & Rules</h1>
+          <p className="hero-subtitle">Tournament Structure &amp; Progression Rules</p>
+          <h1 className="hero-title">Hockey World Cup 2026 Format: Second Group Phase &amp; Rules</h1>
           <p className="hero-description">
-            Understanding the progression structure is vital. Only 16 countries compete, but the road to the final in Wavre involves group stages, crossover matches, and straight knockouts.
+            Complete explanation of the FIH Hockey World Cup 2026 competition system. How 16 nations progress from Pools A–D into Second Stage Pools E–H, leading to the Semi-Finals and Grand Finals.
           </p>
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
               ✍️ Verified: <strong>HWC 2026 Editorial Desk</strong>
+            </div>
+            <div className="eeat-badge">
+              🎓 Source: <strong>FIH Official Competition Regulations</strong>
             </div>
           </div>
         </div>
@@ -95,25 +101,25 @@ export default function FormatPage() {
           <div className="insights-grid">
             <div className="insight-col-card">
               <span className="insight-col-tag">Stage 1</span>
-              <span className="insight-col-header">Group Pool Stage</span>
+              <span className="insight-col-header">Opening Pool Stage (Aug 15–20)</span>
               <p className="insight-col-text">
-                The 16 qualified teams are split into 4 pools of 4 (Pools A, B, C, D). They play a single round-robin structure. At the end of the pool matches, the top finisher in each group qualifies directly for the Quarterfinals.
+                The 16 qualified teams are split into 4 pools of 4 (Pools A, B, C, D) playing single round-robin fixtures. The top 2 teams in each pool advance to Championship Pools E &amp; F, while 3rd and 4th place teams enter Classification Pools G &amp; H.
               </p>
             </div>
             
             <div className="insight-col-card accent-card">
               <span className="insight-col-tag">Stage 2</span>
-              <span className="insight-col-header">Second Group Phase (Pools E, F, G, H)</span>
+              <span className="insight-col-header">Second Group Phase (Aug 21–24)</span>
               <p className="insight-col-text">
-                Rather than single-knockout crossovers, the 2026 edition uses a Second Group Stage: The top 2 teams from Pools A & D form <strong>Pool E</strong>, while top 2 from Pools B & C form <strong>Pool F</strong>. Bottom 2 teams form <strong>Pool G & H</strong> for 9th–16th classification.
+                Rather than single-knockout crossovers, the 2026 edition uses a Second Group Stage: The top 2 teams from Pools A &amp; D form <strong>Pool E</strong> (Amstelveen), while top 2 from Pools B &amp; C form <strong>Pool F</strong> (Wavre). Pools G &amp; H decide 9th–16th placements.
               </p>
             </div>
 
             <div className="insight-col-card">
               <span className="insight-col-tag">Stage 3</span>
-              <span className="insight-col-header">Semi-Finals & Grand Final</span>
+              <span className="insight-col-header">Semi-Finals &amp; Grand Finals</span>
               <p className="insight-col-text">
-                The top 2 teams from Pool E and Pool F advance directly to the Semi-Finals (1st E vs 2nd F, 1st F vs 2nd E). Winners clash in the Grand Final at the Belfius Arena in Wavre, Belgium.
+                The top 2 teams from Pool E and Pool F advance directly to the Semi-Finals (1st E vs 2nd F, 1st F vs 2nd E). Winners clash in the Women&apos;s Grand Final (Aug 29 in Amstelveen) and Men&apos;s Grand Final (Aug 30 in Wavre).
               </p>
             </div>
           </div>
@@ -189,14 +195,14 @@ export default function FormatPage() {
         {/* Interactive FAQ Section */}
         <section className="my-16">
           <div className="section-title-wrap">
-            <h2>Tournament Structure Q&A</h2>
-            <p>Direct responses regarding crossover rounds, shootout criteria, and advancement rules.</p>
+            <h2>Tournament Structure Q&amp;A</h2>
+            <p>Direct responses regarding Second Group Phase progression, shootout criteria, and advancement rules.</p>
           </div>
           
           <FaqAccordion items={faqItems} />
 
           <div className="expert-quote-box">
-            "The crossover phase is highly volatile. A single bad day on the water-based turf in Amstelveen can ruin a top team's tournament run, making it a favorite for sports betters."
+            &quot;The Second Group Stage format rewards tournament consistency over luck. With teams carrying forward head-to-head records against their advancing pool rivals, every single match in Pools E and F carries championship weight.&quot;
             <strong>— HWC 2026 Editorial Desk</strong>
           </div>
         </section>

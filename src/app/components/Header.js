@@ -24,89 +24,109 @@ export default function Header() {
     { name: "South Africa", slug: "south-africa", flag: "🇿🇦" },
     { name: "New Zealand", slug: "new-zealand", flag: "🇳🇿" },
     { name: "Chile", slug: "chile", flag: "🇨🇱" },
-    { name: "Wales", slug: "wales", flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿" }
+    { name: "Wales", slug: "wales", flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿" },
+    { name: "China", slug: "china", flag: "🇨🇳" },
+    { name: "USA", slug: "usa", flag: "🇺🇸" },
+    { name: "Japan", slug: "japan", flag: "🇯🇵" },
+    { name: "Scotland", slug: "scotland", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿" },
   ];
 
   const liveStatsTicker = [
     {
-      badge: "FINAL",
+      badge: "FINAL (M3)",
       type: "final",
       match: "ENG 4 - 1 PAK",
       flags: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇵🇰",
-      stat: "Ansell 14' (PC), Ward 47' | Shahbaz 28'",
+      stat: "Rushmere 14', Ward 29' (PC), Hooper 41' (PC), Albery 56' | Afraz 33'",
       link: "/news/england-vs-pakistan-result-score-august-15-hwc-2026"
     },
     {
-      badge: "FINAL",
+      badge: "FINAL (M1)",
       type: "final",
       match: "IND 3 - 1 WAL",
       flags: "🇮🇳 🏴󠁧󠁢󠁷󠁬󠁳󠁿",
-      stat: "Harmanpreet 12' (PC), 34' (PC) | Furlong 28'",
+      stat: "Sanjay 08' (PC), Harmanpreet 11' (PC), 43' (PC) | Welsh 56'",
       link: "/news/india-vs-wales-result-score-august-15-hwc-2026"
     },
     {
-      badge: "FINAL",
+      badge: "FINAL (M4)",
       type: "final",
-      match: "BEL 3 - 1 FRA",
+      match: "BEL 3 - 2 FRA",
       flags: "🇧🇪 🇫🇷",
-      stat: "Hendrickx 09' (PC), Boon 53' (PC)",
+      stat: "Onana 17', Duvekot 44', Hendrickx 56' (PC) | Curty 03', Clément 18'",
       link: "/news/belgium-vs-france-result-score-august-15-hwc-2026"
     },
     {
-      badge: "FINAL",
+      badge: "FINAL (M2)",
       type: "final",
-      match: "GER 3 - 1 MAS",
+      match: "GER 5 - 1 MAS",
       flags: "🇩🇪 🇲🇾",
-      stat: "Peillat 08' (PC), Grambusch 29'",
+      stat: "Brilla 04', Rühr 07', Weigand 10', Warweg 34' (PC), Kaufmann 51' | Azrai 40'",
       link: "/news/germany-vs-malaysia-result-score-august-15-hwc-2026"
     },
     {
-      badge: "WOMEN FT",
+      badge: "FINAL (W3)",
       type: "women",
-      match: "NED 5 - 0 CHI",
+      match: "NED 2 - 0 CHI",
       flags: "🇳🇱 🇨🇱",
-      stat: "Albers 04', 19', Jansen 11'",
+      stat: "Albers 19', Jansen 44' (PC)",
       link: "/news/womens-hwc-2026-august-15-results-scores"
     },
     {
-      badge: "WOMEN FT",
+      badge: "FINAL (W2)",
       type: "women",
-      match: "GER 4 - 0 SCO",
+      match: "GER 3 - 0 SCO",
       flags: "🇩🇪 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-      stat: "Stapenhorst 06', Lorenz 15'",
+      stat: "Stapenhorst 06', 29', Lorenz 48' (PC)",
       link: "/news/womens-hwc-2026-august-15-results-scores"
     },
     {
-      badge: "UPCOMING",
-      type: "upcoming",
-      match: "IND vs PAK",
-      flags: "🇮🇳 🇵🇰",
-      stat: "Aug 19 · 14:00 CET (17:30 IST)",
-      link: "/matches/india-vs-pakistan"
+      badge: "FINAL (W1)",
+      type: "women",
+      match: "AUS 2 - 0 JPN",
+      flags: "🇦🇺 🇯🇵",
+      stat: "Claire Colwill 27' (PC), 50' (PC)",
+      link: "/news/womens-hwc-2026-august-15-results-scores"
     },
     {
-      badge: "UPCOMING",
+      badge: "FINAL (W4)",
+      type: "women",
+      match: "ARG 1 - 1 USA",
+      flags: "🇦🇷 🇺🇸",
+      stat: "Gorzelany 14' (PC) | Ashley Sessa 44'",
+      link: "/news/womens-hwc-2026-august-15-results-scores"
+    },
+    {
+      badge: "UPCOMING (M9)",
+      type: "upcoming",
+      match: "IND vs ENG",
+      flags: "🇮🇳 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+      stat: "Aug 17 · 15:00 CEST (18:30 IST)",
+      link: "/matches/india-vs-england"
+    },
+    {
+      badge: "UPCOMING (M11)",
       type: "upcoming",
       match: "GER vs BEL",
       flags: "🇩🇪 🇧🇪",
-      stat: "Aug 17 · 17:30 CET",
+      stat: "Aug 17 · 20:30 CEST (00:00 IST)",
       link: "/matches/germany-vs-belgium"
     },
     {
-      badge: "UPCOMING",
+      badge: "UPCOMING (W11)",
       type: "upcoming",
       match: "NED vs AUS (W)",
       flags: "🇳🇱 🇦🇺",
-      stat: "Aug 18 · 19:30 CET",
+      stat: "Aug 17 · 18:00 CEST (21:30 IST)",
       link: "/matches/netherlands-vs-australia-women"
     },
     {
-      badge: "TOP SCORER",
-      type: "stats",
-      match: "Harmanpreet Singh (IND)",
-      flags: "🇮🇳",
-      stat: "2 Goals (2 PC) · #1 Tournament Scorer",
-      link: "/points-table"
+      badge: "UPCOMING (M15)",
+      type: "upcoming",
+      match: "PAK vs IND",
+      flags: "🇵🇰 🇮🇳",
+      stat: "Aug 19 · 15:00 CEST (18:00 PKT / 18:30 IST)",
+      link: "/matches/india-vs-pakistan"
     }
   ];
 
@@ -261,11 +281,11 @@ export default function Header() {
                       </ul>
                     </div>
                     <div className="mega-column highlighted-col">
-                      <h4>🏆 Knockout Brackets</h4>
+                      <h4>🏆 Tournament Stages</h4>
                       <ul>
-                        <li><a href="/knockout/quarter-finals">🔥 Quarter-Finals Fixtures</a></li>
+                        <li><a href="/knockout/quarter-finals">🔥 Second Stage (Pools E–H)</a></li>
                         <li><a href="/knockout/semi-finals">⚡ Semi-Finals Schedule</a></li>
-                        <li><a href="/knockout/final">👑 Men's & Women's Grand Finals</a></li>
+                        <li><a href="/knockout/final">👑 Grand Finals (Aug 29 &amp; 30)</a></li>
                         <li><a href="/schedule" className="accent-link">📥 Download Printable PDF →</a></li>
                       </ul>
                     </div>
@@ -281,9 +301,9 @@ export default function Header() {
                 <div className="mega-dropdown width-md">
                   <div className="mega-grid cols-2">
                     <div className="mega-column">
-                      <h4>📊 Points Table & Groups</h4>
+                      <h4>📊 Points Table &amp; Groups</h4>
                       <ul>
-                        <li><a href="/points-table" style={{ fontWeight: "700", color: "#38bdf8" }}>📈 Complete Points Table & Tie-Breakers →</a></li>
+                        <li><a href="/points-table" style={{ fontWeight: "700", color: "#38bdf8" }}>📈 Complete Points Table &amp; Tie-Breakers →</a></li>
                         <li><a href="/hockey-world-cup-2026-groups">🏆 All 16 Pool Groups Hub</a></li>
                         <li><a href="/rankings">🌐 Official FIH World Rankings</a></li>
                         <li><a href="/womens-tournament">👩 Women's Tournament Standings</a></li>
@@ -292,10 +312,10 @@ export default function Header() {
                     <div className="mega-column highlighted-col">
                       <h4>🏆 Dedicated Pool Standings</h4>
                       <ul>
-                        <li><a href="/pool-a">🅰️ Pool A (NED, ARG, NZL, CHI)</a></li>
-                        <li><a href="/pool-b">🇧️ Pool B (GER, BEL, MAS, FRA)</a></li>
-                        <li><a href="/pool-c">🅲 Pool C (AUS, ESP, IRL, RSA)</a></li>
-                        <li><a href="/pool-d">🅳 Pool D (IND, ENG, PAK, WAL)</a></li>
+                        <li><a href="/pool-a">🅰️ Pool A (Men: NED, ARG · Women: NED, AUS)</a></li>
+                        <li><a href="/pool-b">🇧️ Pool B (Men: BEL, GER · Women: ARG, GER)</a></li>
+                        <li><a href="/pool-c">🅲 Pool C (Men: AUS, ESP · Women: BEL, ESP)</a></li>
+                        <li><a href="/pool-d">🅳 Pool D (Men: ENG, IND, PAK · Women: CHN, IND)</a></li>
                       </ul>
                     </div>
                   </div>

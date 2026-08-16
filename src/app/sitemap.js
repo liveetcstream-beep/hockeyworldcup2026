@@ -124,14 +124,23 @@ export default function sitemap() {
   const resultTeams = [
     "india", "pakistan", "belgium", "netherlands", "germany",
     "australia", "argentina", "england", "spain", "france",
-    "malaysia", "ireland", "wales", "south-africa", "new-zealand", "chile"
+    "malaysia", "ireland", "wales", "south-africa", "new-zealand", "chile",
+    "china", "usa", "japan", "scotland"
   ];
   pages.push({ route: "/results", priority: 0.9, freq: "daily", lastMod: now });
   resultTeams.forEach((team) => {
     pages.push({ route: `/results/${team}`, priority: 0.9, freq: "daily", lastMod: now });
   });
 
-  return pages.map(({ route, priority, freq, lastMod }) => ({
+  // Strict deduplication map
+  const uniquePagesMap = new Map();
+  pages.forEach((p) => {
+    if (!uniquePagesMap.has(p.route)) {
+      uniquePagesMap.set(p.route, p);
+    }
+  });
+
+  return Array.from(uniquePagesMap.values()).map(({ route, priority, freq, lastMod }) => ({
     url: `${baseUrl}${route}`,
     lastModified: lastMod,
     changeFrequency: freq,

@@ -3,8 +3,12 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Australia vs Argentina Hockey World Cup 2026 Match Preview",
-  description: "Preview the Australia vs Argentina men's match at HWC 2026. Check head-to-head records, squad lineups, match timings, and predictions.",
+  title: "Australia vs Argentina Hockey World Cup 2026 Potential Clash Guide",
+  description: "Tactical preview and historical analysis of a potential Australia vs Argentina Men's World Cup clash in the Second Group Phase or Semi-Finals.",
+  robots: {
+    index: false,
+    follow: true,
+  },
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/australia-vs-argentina",
   },

@@ -49,27 +49,27 @@ const getFixtureLink = (matchText) => {
 
 export default function PoolCPage() {
   const menFixtures = [
-    { date: "August 16, 2026", time: "08:30 CET", match: "Australia 🇦🇺 vs Ireland 🇮🇪", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 16, 2026", time: "11:30 CET", match: "Spain 🇪🇸 vs South Africa 🇿🇦", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 18, 2026", time: "14:30 CET", match: "Spain 🇪🇸 vs Australia 🇦🇺", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 18, 2026", time: "16:00 CET", match: "Ireland 🇮🇪 vs South Africa 🇿🇦", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 20, 2026", time: "08:00 CET", match: "Australia 🇦🇺 vs South Africa 🇿🇦", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 20, 2026", time: "14:30 CET", match: "Ireland 🇮🇪 vs Spain 🇪🇸", venue: "Belfius Hockey Arena, Wavre" }
+    { date: "August 16, 2026", time: "11:30 CEST", match: "Australia 🇦🇺 vs Ireland 🇮🇪", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 16, 2026", time: "14:30 CEST", match: "Spain 🇪🇸 vs South Africa 🇿🇦", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 18, 2026", time: "14:00 CEST", match: "Spain 🇪🇸 vs Australia 🇦🇺", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 18, 2026", time: "17:30 CEST", match: "Ireland 🇮🇪 vs South Africa 🇿🇦", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 20, 2026", time: "14:00 CEST", match: "Australia 🇦🇺 vs South Africa 🇿🇦", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 20, 2026", time: "17:30 CEST", match: "Ireland 🇮🇪 vs Spain 🇪🇸", venue: "Belfius Hockey Arena, Wavre" }
   ];
 
   const womenFixtures = [
-    { date: "August 16, 2026", time: "14:30 CET", match: "Belgium 🇧🇪 vs New Zealand 🇳🇿", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 16, 2026", time: "17:30 CET", match: "Spain 🇪🇸 vs Ireland 🇮🇪", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 18, 2026", time: "08:00 CET", match: "New Zealand 🇳🇿 vs Ireland 🇮🇪", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 18, 2026", time: "17:30 CET", match: "Spain 🇪🇸 vs Belgium 🇧🇪", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 20, 2026", time: "11:00 CET", match: "New Zealand 🇳🇿 vs Spain 🇪🇸", venue: "Belfius Hockey Arena, Wavre" },
-    { date: "August 20, 2026", time: "17:30 CET", match: "Belgium 🇧🇪 vs Ireland 🇮🇪", venue: "Belfius Hockey Arena, Wavre" }
+    { date: "August 16, 2026", time: "17:30 CEST", match: "Belgium 🇧🇪 vs New Zealand 🇳🇿", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 16, 2026", time: "20:30 CEST", match: "Spain 🇪🇸 vs Ireland 🇮🇪", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 18, 2026", time: "11:30 CEST", match: "New Zealand 🇳🇿 vs Ireland 🇮🇪", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 18, 2026", time: "20:30 CEST", match: "Spain 🇪🇸 vs Belgium 🇧🇪", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 20, 2026", time: "11:30 CEST", match: "New Zealand 🇳🇿 vs Spain 🇪🇸", venue: "Belfius Hockey Arena, Wavre" },
+    { date: "August 20, 2026", time: "20:30 CEST", match: "Belgium 🇧🇪 vs Ireland 🇮🇪", venue: "Belfius Hockey Arena, Wavre" }
   ];
 
   const faqItems = [
     { question: "Where are the Pool C matches hosted?", answer: "All Pool C matches for both Men's and Women's tournaments are played at the Belfius Hockey Arena in Wavre, Belgium." },
     { question: "Are Australia's Kookaburras favored to win Pool C?", answer: "Yes, the Australian Men's team (Kookaburras) are strong favorites to win Pool C, but they face tricky European opposition in Spain and Ireland, alongside a highly athletic South African squad." },
-    { question: "How many teams qualify from Pool C?", answer: "The top team in Pool C qualifies directly for the Quarter-Finals. The second and third-placed teams enter the crossovers, while the fourth-placed team is eliminated." }
+    { question: "How many teams qualify from Pool C?", answer: "The top 2 teams in Pool C qualify directly for Championship Pool F in Wavre alongside the top 2 teams from Pool B. The 3rd and 4th placed teams move into Classification Pool H to contest 9th to 16th global rankings." }
   ];
 
   return (

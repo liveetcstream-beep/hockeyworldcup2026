@@ -49,26 +49,26 @@ const getFixtureLink = (matchText) => {
 
 export default function PoolDPage() {
   const menFixtures = [
-    { date: "August 15, 2026", time: "10:00 CET", match: "India 🇮🇳 vs Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 15, 2026", time: "16:00 CET", match: "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs Pakistan 🇵🇰", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 17, 2026", time: "09:30 CET", match: "Pakistan 🇵🇰 vs Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 17, 2026", time: "12:00 CET", match: "India 🇮🇳 vs England 🏴󠁧󠁢󠁥󠁮󠁧󠁿", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 19, 2026", time: "09:30 CET", match: "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 19, 2026", time: "12:00 CET", match: "Pakistan 🇵🇰 vs India 🇮🇳", venue: "Wagener Stadium, Amstelveen" }
+    { date: "August 15, 2026", time: "13:00 CEST", match: "India 🇮🇳 vs Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 15, 2026", time: "19:00 CEST", match: "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs Pakistan 🇵🇰", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 17, 2026", time: "12:30 CEST", match: "Pakistan 🇵🇰 vs Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 17, 2026", time: "15:00 CEST", match: "India 🇮🇳 vs England 🏴󠁧󠁢󠁥󠁮󠁧󠁿", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 19, 2026", time: "12:30 CEST", match: "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs Wales 🏴󠁧󠁢󠁷󠁬󠁳󠁿", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 19, 2026", time: "15:00 CEST", match: "Pakistan 🇵🇰 vs India 🇮🇳", venue: "Wagener Stadium, Amstelveen" }
   ];
 
   const womenFixtures = [
-    { date: "August 16, 2026", time: "07:00 CET", match: "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs South Africa 🇿🇦", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 16, 2026", time: "13:00 CET (4:00 PM PKT / 16:30 IST)", match: "China 🇨🇳 vs India 🇮🇳", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 18, 2026", time: "09:30 CET", match: "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs China 🇨🇳", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 18, 2026", time: "12:00 CET", match: "India 🇮🇳 vs South Africa 🇿🇦", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 20, 2026", time: "06:30 CET", match: "China 🇨🇳 vs South Africa 🇿🇦", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 20, 2026", time: "12:00 CET", match: "India 🇮🇳 vs England 🏴󠁧󠁢󠁥󠁮󠁧󠁿", venue: "Wagener Stadium, Amstelveen" }
+    { date: "August 16, 2026", time: "10:00 CEST", match: "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs South Africa 🇿🇦", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 16, 2026", time: "13:00 CEST (16:30 IST / 16:00 PKT)", match: "China 🇨🇳 vs India 🇮🇳", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 18, 2026", time: "12:30 CEST", match: "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs China 🇨🇳", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 18, 2026", time: "15:00 CEST", match: "India 🇮🇳 vs South Africa 🇿🇦", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 20, 2026", time: "12:30 CEST", match: "China 🇨🇳 vs South Africa 🇿🇦", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 20, 2026", time: "15:00 CEST", match: "India 🇮🇳 vs England 🏴󠁧󠁢󠁥󠁮󠁧󠁿", venue: "Wagener Stadium, Amstelveen" }
   ];
 
   const faqItems = [
-    { question: "Why is Pool D called the 'Group of Death'?", answer: "Pool D in the Men's tournament features traditional Asian hockey giants India and Pakistan, alongside a highly disciplined England squad and a robust Welsh team. With only three qualifying spots and intense historic rivalries, it is the hardest group to predict." },
-    { question: "When is the India vs Pakistan Men's match?", answer: "The blockbuster clash between India and Pakistan is scheduled for August 19, 2026, at 14:00 CET at the Wagener Stadium in Amstelveen." },
+    { question: "Why is Pool D called the 'Group of Death'?", answer: "Pool D in the Men's tournament features traditional Asian hockey giants India and Pakistan, alongside a highly disciplined England squad and a robust Welsh team. With only two direct Second Stage qualifying spots and intense historic rivalries, it is the hardest group to predict." },
+    { question: "When is the India vs Pakistan Men's match?", answer: "The blockbuster clash between Pakistan and India is scheduled for August 19, 2026, at 15:00 CEST (18:30 IST / 18:00 PKT) at Wagener Stadium in Amstelveen." },
     { question: "Where are the Pool D matches played?", answer: "All group stage matches for Pool D (both Men's and Women's tournaments) will take place at the Wagener Hockey Stadium in Amstelveen, Netherlands." }
   ];
 
@@ -149,7 +149,7 @@ export default function PoolDPage() {
             📈 Pool D Qualification Scenarios
           </h3>
           <p style={{ color: "var(--text-muted)", fontSize: "0.95rem", lineHeight: "1.7", margin: 0 }}>
-            Finishing first is paramount to bypass the crossover stage and head straight to the Quarter-Finals. The 2nd and 3rd placed teams will cross over to play qualifiers from Pool A. The team finishing at the bottom of the pool stands will be immediately knocked out, ending their World Cup campaign.
+            Under the official 2026 FIH format, the top 2 teams in Pool D advance directly to <strong>Championship Pool E (Second Group Phase)</strong> in Amstelveen, where they join the top 2 teams from Pool A. The 3rd and 4th placed teams move into Classification Pool G to contest 9th–16th world ranking positions. There are no crossover knockout matches.
           </p>
         </section>
 
@@ -163,7 +163,7 @@ export default function PoolDPage() {
               <thead>
                 <tr style={{ background: "#c00030", color: "white" }}>
                   <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "700" }}>Date</th>
-                  <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "700" }}>Time (CET)</th>
+                  <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "700" }}>Time (CEST)</th>
                   <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "700" }}>Matchup</th>
                   <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "700" }}>Venue</th>
                 </tr>
@@ -200,7 +200,7 @@ export default function PoolDPage() {
               <thead>
                 <tr style={{ background: "#c00030", color: "white" }}>
                   <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "700" }}>Date</th>
-                  <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "700" }}>Time (CET)</th>
+                  <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "700" }}>Time (CEST)</th>
                   <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "700" }}>Matchup</th>
                   <th style={{ padding: "0.9rem 1rem", textAlign: "left", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "700" }}>Venue</th>
                 </tr>

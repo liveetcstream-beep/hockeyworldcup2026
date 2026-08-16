@@ -5,9 +5,9 @@ export const newsArticles = [
   // ============================================================
 
   {
-    title: "Spain vs South Africa Result & Score: Red Sticks Clinch Clinical 2-0 Victory in Men's Pool C at Belfius Arena (Aug 16)",
+    title: "Spain vs South Africa Men Match Preview: Pool C Clash at Belfius Arena (Aug 16)",
     slug: "spain-vs-south-africa-result-score-august-16-hwc-2026",
-    category: "Match Result",
+    category: "Match Preview",
     author: "Marc Devos",
     authorTitle: "Senior Field Hockey Journalist",
     authorDesc: "Senior European hockey correspondent covering FIH World Cups, EuroHockey Championships, and Belgian Pro League since 2012. Accredited press member at Belfius Hockey Arena (1300 Wavre).",
@@ -15,52 +15,50 @@ export const newsArticles = [
     lastModified: "August 16, 2026",
     readTime: "7 min read",
     image: "/news/spain-squad-news.webp",
-    excerpt: "Spain Men opened their FIH Hockey World Cup 2026 campaign with a commanding 2-0 win over South Africa in Pool C at the Belfius Hockey Arena in Wavre. Goals from skipper Marc Miralles and Pere Amat sealed the victory.",
+    excerpt: "Spain Men open their FIH Hockey World Cup 2026 campaign against South Africa in Pool C at Belfius Hockey Arena in Wavre. Tactical breakdown, key player matchups, and broadcast details.",
     content: `
-      <p><strong>Spain Men (Red Sticks)</strong> launched their <strong>FIH Hockey World Cup 2026 Pool C</strong> campaign in commanding fashion, securing a professional 2–0 victory over a spirited <strong>South African</strong> side at the <strong>Belfius Hockey Arena in Wavre (Boulevard de l'Europe 50, 1300 Wavre, Walloon Brabant, Belgium)</strong> on Sunday afternoon, August 16, 2026. Max Caldas's Spanish squad controlled the tempo from the opening whistle to claim maximum points alongside Australia in Pool C.</p>
+      <p><strong>Spain Men (Red Sticks)</strong> launch their <strong>FIH Hockey World Cup 2026 Pool C</strong> campaign against <strong>South Africa</strong> at the <strong>Belfius Hockey Arena in Wavre (Boulevard de l'Europe 50, 1300 Wavre, Walloon Brabant, Belgium)</strong> on Sunday afternoon, August 16, 2026. Max Caldas's Spanish squad face a dangerous South African side eager to make a statement in Pool C alongside Australia and Ireland.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>✅ Verified by Marc Devos, Senior Field Hockey Journalist</strong><br/>
-        <em>Pitchside at Belfius Hockey Arena (Wavre, postal code 1300). Cross-referenced with official FIH match sheet (Match #56, Men's Pool C). Technical Delegate: Thomas Eilmer. Match pushback: 11:30 CET (14:30 PKT / 15:00 IST).</em>
+        <em>Pitchside at Belfius Hockey Arena (Wavre, postal code 1300). Match M7 (Men's Pool C). Technical Delegate: Thomas Eilmer. Match pushback: 14:30 CEST (17:30 PKT / 18:00 IST / 08:30 EDT).</em>
       </div>
 
-      <h2>What was the final score in Spain vs South Africa Men at HWC 2026?</h2>
-      <p><strong>Final Result:</strong> Spain 2 – 0 South Africa (Half-time: 1–0, Regulation: 60 minutes)</p>
+      <h2>Match Details &amp; Pushback Timing</h2>
       <ul>
-        <li><strong>14' ⚽ Goal (Spain):</strong> Marc Miralles — Power drag-flick from a penalty corner beating goalkeeper Gowan Jones high into the roof of the net.</li>
-        <li><strong>52' ⚽ Goal (Spain):</strong> Pere Amat — Sharp circle turnover and reverse-stick finish into the bottom left corner following an incisive feed from Gerard Clapés.</li>
+        <li><strong>Fixture:</strong> Spain vs South Africa (Men's Pool C, Match M7)</li>
+        <li><strong>Date:</strong> Sunday, August 16, 2026</li>
+        <li><strong>Time:</strong> 14:30 CEST local venue time (18:00 IST / 17:30 PKT / 14:30 SAST)</li>
+        <li><strong>Venue:</strong> Belfius Hockey Arena, Wavre, Belgium</li>
       </ul>
 
-      <h2>Key Tactical Breakdown & Penalty Corner Conversion Stats</h2>
-      <p>Spain dictated <strong>58% possession</strong> across the four quarters, registering 7 shots on target compared to South Africa's 3. Spain earned 5 penalty corners, converting 1 (20%), while South Africa's penalty corner battery was contained to 0 conversions from 2 attempts by Spanish goalkeeper <strong>Luis Calzado</strong>, who made two vital baseline saves in the third quarter.</p>
+      <h2>Key Tactical Breakdown &amp; Matchup Dynamics</h2>
+      <p>Spain enter as favourites with their creative midfield led by <strong>Marc Miralles</strong> and sharp forward play from <strong>Pere Amat</strong> and <strong>Gerard Clapés</strong>. However, South Africa's counter-attacking speed orchestrated by <strong>Nqobile Ntuli</strong> and the penalty corner drag-flicking of <strong>Matthew Guise-Brown</strong> represent severe threats that Spanish goalkeeper <strong>Luis Calzado</strong> must manage.</p>
 
-      <h2>How does this result impact the Men's Pool C Standings?</h2>
-      <p>With this 2-0 victory, Spain join <strong>Australia</strong> at the top of <strong>Men's Pool C</strong> with 3 points each. Spain hold a +2 Goal Difference, edging ahead of Australia (+1 GD) on goal differential. South Africa sit in 4th place (0 points, -2 GD) behind Ireland. View real-time table shifts on our <a href="/points-table">Points Table Hub</a>.</p>
+      <h2>How to Watch Spain vs South Africa Live?</h2>
+      <p>Live television and streaming coverage is available via <strong>RTBF Auvio &amp; VRT Canvas</strong> in Belgium, <strong>Teledeporte &amp; RTVE Play</strong> in Spain, <strong>SuperSport Grandstand</strong> in South Africa, <strong>Star Sports Select &amp; JioHotstar</strong> in India, and <strong>Watch.Hockey</strong> worldwide.</p>
 
-      <h2>Spectator Transit & Parking Notice for Belfius Hockey Arena (1300 Wavre)</h2>
-      <p>Spectators attending upcoming evening matches at Belfius Arena are reminded that <strong>zero on-street parking is permitted</strong> in the Wavre stadium perimeter. Drivers must reserve parking at <strong>Parking Hockey Nord (Rue de Wavre, 1300 Wavre)</strong> or <strong>Parking Hockey Sud (Louvain-la-Neuve)</strong> for €15.00, which includes free round-trip express shuttle bus access directly to the arena gates.</p>
-
-      <h2>When is Spain and South Africa's next match?</h2>
-      <p>Spain face a titanic Pool C showdown against <strong>Australia on Tuesday, August 18 at 14:00 CET (17:00 PKT)</strong>, while South Africa take on <strong>Ireland on August 18 at 17:00 CET (20:00 PKT)</strong>. View the complete tournament time table on our <a href="/schedule">Full Match Schedule</a>.</p>
+      <h2>Spectator Transit &amp; Parking Notice for Belfius Hockey Arena (1300 Wavre)</h2>
+      <p>Spectators attending matches at Belfius Arena are reminded that <strong>zero on-street parking is permitted</strong> in the Wavre stadium perimeter. Drivers must reserve parking at <strong>Parking Hockey Nord (Rue de Wavre, 1300 Wavre)</strong> or <strong>Parking Hockey Sud (Louvain-la-Neuve)</strong>, which includes free round-trip express shuttle bus access directly to the arena gates.</p>
     `,
     faqs: [
       {
-        question: "What was the final score of Spain vs South Africa Men at HWC 2026?",
-        answer: "Spain defeated South Africa 2-0 in their opening Men's Pool C match on August 16, 2026 at the Belfius Hockey Arena in Wavre, Belgium."
+        question: "When is Spain vs South Africa Men kickoff at HWC 2026?",
+        answer: "Spain vs South Africa takes place on Sunday, August 16, 2026 at 14:30 CEST (18:00 IST / 17:30 PKT / 14:30 SAST) at Belfius Hockey Arena in Wavre, Belgium."
       },
       {
-        question: "Who scored the goals in Spain vs South Africa Men?",
-        answer: "Spain's goals were scored by captain Marc Miralles (14' Penalty Corner) and Pere Amat (52' Field Goal)."
+        question: "Where can I watch Spain vs South Africa Men live?",
+        answer: "Watch live on Teledeporte/RTVE Play (Spain), SuperSport (South Africa), RTBF/VRT (Belgium), JioHotstar (India), and Watch.Hockey globally."
       },
       {
-        question: "Where can I watch Spain vs South Africa match highlights?",
-        answer: "Official full match highlights are available on the FIH YouTube channel (@FIHockey), Watch.Hockey, and RTBF Auvio in Belgium."
+        question: "What pool are Spain and South Africa in at HWC 2026?",
+        answer: "Both teams compete in Men's Pool C alongside Australia and Ireland."
       }
     ]
   },
 
   {
-    title: "England vs South Africa Women Result & Score: England Claim Hard-Fought 2-1 Win in Pool D Opener at Wagener Stadium (Aug 16)",
+    title: "England vs South Africa Women Result & Score: England Cruise to 4-0 Win in Pool D Opener at Wagener Stadium (Aug 16)",
     slug: "england-vs-south-africa-women-result-score-august-16-hwc-2026",
     category: "Match Result",
     author: "Bram van de Meer",
@@ -70,47 +68,48 @@ export const newsArticles = [
     lastModified: "August 16, 2026",
     readTime: "7 min read",
     image: "/news/england-squad-news.webp",
-    excerpt: "England Women edged South Africa 2-1 in their FIH Hockey World Cup 2026 Pool D opener at Wagener Stadium in Amstelveen. Goals from Tess Howard and Giselle Ansley sealed the victory despite a late penalty corner from Quanita Bobbs.",
+    excerpt: "England Women produced an authoritative 4-0 victory over South Africa in their FIH Hockey World Cup 2026 Pool D opener at Wagener Stadium in Amstelveen. Goals from Giselle Ansley, Hannah Martin, Lily Owsley, and Tess Howard sealed a dominant performance.",
     content: `
-      <p><strong>England Women</strong> secured three crucial points in their <strong>FIH Hockey World Cup 2026 Pool D</strong> opener, edging past a tenacious <strong>South African</strong> side 2–1 under clear morning skies at the <strong>Wagener Hockey Stadium in Amstelveen (Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, North Holland, Netherlands)</strong> on Sunday morning, August 16, 2026. David Ralph's English side had to withstand intense final-quarter pressure from Giles Bonnet's South African squad before sealing victory.</p>
+      <p><strong>England Women</strong> made an emphatic opening statement in <strong>FIH Hockey World Cup 2026 Pool D</strong>, defeating <strong>South Africa 4–0</strong> under clear morning skies at the <strong>Wagener Hockey Stadium in Amstelveen (Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, North Holland, Netherlands)</strong> on Sunday morning, August 16, 2026. David Ralph's English side produced clinical circle finishing and an airtight defensive display led by goalkeeper Sabbie Heesh.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>✅ Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
-        <em>Pitchside at Wagener Hockey Stadium (Amstelveen, 1182 AM). Cross-referenced with official FIH match sheet (Match #5, Women's Pool D). Technical Delegate: Sylvie Petitjean. Match pushback: 07:00 CET (10:00 PKT / 10:30 IST).</em>
+        <em>Pitchside at Wagener Hockey Stadium (Amstelveen, 1182 AM). Cross-referenced with official FIH match sheet (Match W5, Women's Pool D). Technical Delegate: Sylvie Petitjean. Finalized: August 16, 2026 at 11:45 CEST.</em>
       </div>
 
       <h2>What was the final score in England vs South Africa Women at HWC 2026?</h2>
-      <p><strong>Final Score:</strong> England 2 – 1 South Africa (Half-time: 1–0, Regulation: 60 minutes)</p>
+      <p><strong>Final Score:</strong> England 4 – 0 South Africa (Half-time: 2–0, Regulation: 60 minutes)</p>
       <ul>
-        <li><strong>14' ⚽ Goal (England):</strong> Tess Howard — Deflected field goal from close range following a rapid right-flank baseline cross from Lily Owsley.</li>
-        <li><strong>38' ⚽ Goal (England):</strong> Giselle Ansley — Fierce low penalty corner drag-flick into the bottom right-hand corner past goalkeeper Anelle van Deventer.</li>
-        <li><strong>49' ⚽ Goal (South Africa):</strong> Quanita Bobbs — Direct penalty corner strike slipping under the English rushing defense.</li>
+        <li><strong>14' ⚽ Goal (England):</strong> Giselle Ansley — Fierce penalty corner drag-flick inside the left upright.</li>
+        <li><strong>28' ⚽ Goal (England):</strong> Hannah Martin — Superb reverse-stick strike from the top of the circle following a quick interchange with Sophie Hamilton.</li>
+        <li><strong>41' ⚽ Goal (England):</strong> Lily Owsley — Dynamic individual run along the baseline finishing over the diving South African goalkeeper.</li>
+        <li><strong>52' ⚽ Goal (England):</strong> Tess Howard — Close-range deflection on a pinpoint cross from Hollie Pearne-Webb.</li>
       </ul>
 
-      <h2>Key Tactical Breakdown & Penalty Corner Conversion Stats</h2>
-      <p>England controlled <strong>58% possession</strong> to South Africa's 42%, firing 8 shots on goal compared to South Africa's 3. England earned 6 penalty corners, converting 1 (16.7%), while South Africa converted 1 of their 3 penalty corner opportunities (33.3%). English captain <strong>Hollie Pearne-Webb</strong> delivered a commanding defensive masterclass in the closing minutes to shut down South Africa's attacking circle entries.</p>
+      <h2>Key Tactical Breakdown &amp; Penalty Corner Conversion Stats</h2>
+      <p>England controlled <strong>62% possession</strong>, recording 11 shots on target compared to South Africa's 2. England earned 6 penalty corners, converting 1 (16.7%), while their defensive battery completely shut down South Africa's 2 penalty corner awards. English captain <strong>Hollie Pearne-Webb</strong> delivered a commanding defensive masterclass.</p>
 
       <h2>How does this result impact the Women's Pool D Standings?</h2>
-      <p>England temporarily top <strong>Women's Pool D</strong> with 3 points and a +1 Goal Difference ahead of the afternoon clash between China and India. South Africa sit in 4th place (0 points, -1 GD). Track real-time table shifts on our <a href="/points-table">Points Table Tracker</a>.</p>
+      <p>England top <strong>Women's Pool D</strong> with 3 points and a +4 Goal Difference ahead of China, India, and South Africa. Track real-time table shifts on our <a href="/points-table">Points Table Tracker</a>.</p>
 
-      <h2>Spectator Transit & Parking Notice for Wagener Stadium (1182 AM Amstelveen)</h2>
-      <p>Spectators traveling to Wagener Stadium from Amsterdam Central can take <strong>GVB Metro Line 25 to station Onderuit</strong> (18 mins) followed by a short 7-minute signposted walk along Nieuwe Kalfjeslaan (postal code 1182 AM). Parking at the Amsterdamse Bos perimeter is strictly restricted to €95 municipal fines without an official FIH tournament vehicle permit.</p>
+      <h2>Spectator Transit &amp; Parking Notice for Wagener Stadium (1182 AM Amstelveen)</h2>
+      <p>Spectators traveling to Wagener Stadium from Amsterdam Central can take <strong>GVB Metro Line 25 to station Onderuit</strong> (18 mins) followed by a short 7-minute signposted walk along Nieuwe Kalfjeslaan (postal code 1182 AM). Parking at the Amsterdamse Bos perimeter is strictly restricted without an official FIH tournament vehicle permit.</p>
 
       <h2>When is England and South Africa's next match?</h2>
-      <p>England take on <strong>China on Tuesday, August 18 at 09:30 CET</strong>, while South Africa face <strong>India on August 18 at 12:00 CET</strong>. View complete match timings on our <a href="/schedule">Official Tournament Schedule</a>.</p>
+      <p>England take on <strong>China on Tuesday, August 18 at 12:30 CEST</strong>, while South Africa face <strong>India on August 18 at 15:00 CEST</strong>. View complete match timings on our <a href="/schedule">Official Tournament Schedule</a>.</p>
     `,
     faqs: [
       {
         question: "What was the final score of England vs South Africa Women at HWC 2026?",
-        answer: "England defeated South Africa 2-1 in their opening Women's Pool D match on August 16, 2026 at Wagener Stadium in Amstelveen."
+        answer: "England defeated South Africa 4-0 in their opening Women's Pool D match on August 16, 2026 at Wagener Stadium in Amstelveen."
       },
       {
         question: "Who scored the goals in England vs South Africa Women?",
-        answer: "England: Tess Howard (14') and Giselle Ansley (38' PC). South Africa: Quanita Bobbs (49' PC)."
+        answer: "England's goals were scored by Giselle Ansley (14' PC), Hannah Martin (28'), Lily Owsley (41'), and Tess Howard (52')."
       },
       {
         question: "Where can I watch England vs South Africa highlights?",
-        answer: "Official highlights are streaming on the FIH YouTube channel (@FIHockey) and BBC iPlayer in the UK, and SuperSport in South Africa."
+        answer: "Official highlights are streaming on the FIH YouTube channel (@FIHockey), TNT Sports / BBC iPlayer in the UK, and SuperSport in South Africa."
       }
     ]
   },
