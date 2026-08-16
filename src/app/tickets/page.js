@@ -39,7 +39,7 @@ export default function TicketsPage() {
     },
     {
       question: "Are physical tickets mandatory to enter the stadium?",
-      answer: "Yes. For security and quick scanner processing at the gates of both Wagener Stadium and Belfius Arena, a physical printed copy of your barcoded ticket is mandatory. Plain mobile screen displays are not recommended as backup options."
+      answer: "Both Wagener Stadium (Amstelveen) and Belfius Hockey Arena (Wavre) feature high-speed optical barcode & QR scanners at turnstiles. You can present your official digital mobile ticket (via Apple Wallet, Google Wallet, or downloaded PDF) directly on your smartphone with brightness set to maximum. However, carrying a clear, printed paper backup is strongly recommended to prevent battery or screen glare issues during peak gate entry."
     },
     {
       question: "What is the refund policy for Hockey World Cup 2026 tickets?",
