@@ -181,12 +181,12 @@ export default function SchedulePage() {
             </div>
             <div style={{ background: "rgba(255,255,255,0.05)", padding: "0.9rem 1.2rem", borderRadius: "10px", border: "1px solid rgba(255,255,255,0.08)" }}>
               <span style={{ fontSize: "0.75rem", color: "#94a3b8", textTransform: "uppercase", fontWeight: "700" }}>Pool B Men</span>
-              <div style={{ fontWeight: "800", fontSize: "0.95rem", margin: "0.2rem 0" }}>Belgium (3) - (1) France</div>
+              <div style={{ fontWeight: "800", fontSize: "0.95rem", margin: "0.2rem 0" }}>Belgium (3) - (2) France</div>
               <span style={{ fontSize: "0.75rem", color: "#22c55e", fontWeight: "700" }}>✅ Completed Match Result</span>
             </div>
             <div style={{ background: "rgba(255,255,255,0.05)", padding: "0.9rem 1.2rem", borderRadius: "10px", border: "1px solid rgba(255,255,255,0.08)" }}>
               <span style={{ fontSize: "0.75rem", color: "#94a3b8", textTransform: "uppercase", fontWeight: "700" }}>Pool B Men</span>
-              <div style={{ fontWeight: "800", fontSize: "0.95rem", margin: "0.2rem 0" }}>Germany (3) - (1) Malaysia</div>
+              <div style={{ fontWeight: "800", fontSize: "0.95rem", margin: "0.2rem 0" }}>Germany (5) - (1) Malaysia</div>
               <span style={{ fontSize: "0.75rem", color: "#22c55e", fontWeight: "700" }}>✅ Completed Match Result</span>
             </div>
           </div>
@@ -207,7 +207,7 @@ export default function SchedulePage() {
         {/* LATEST NEWS & TOURNAMENT UPDATES SECTION */}
         <section id="schedule-news" className="my-16">
           <div className="section-title-wrap">
-            <h2>Latest Tournament News & Fixture Updates</h2>
+            <h2>Latest Tournament News &amp; Fixture Updates</h2>
             <p>Stay informed with team announcements, squad changes, injury reports, and matchday guidelines.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -235,34 +235,34 @@ export default function SchedulePage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div className="local-card" style={{ padding: "2rem" }}>
               <div className="local-icon">📅</div>
-              <h3 className="text-white mt-4 mb-2">Key Dates & Stages</h3>
+              <h3 className="text-white mt-4 mb-2">Key Dates &amp; Stages</h3>
               <ul className="pool-list" style={{ marginTop: "1rem" }}>
                 <li style={{ padding: "0.5rem 0", borderBottom: "1px solid rgba(255,255,255,0.03)", color: "var(--text-muted)" }}>
-                  <strong className="text-white">Pool Matches:</strong> August 15 – August 24, 2026
+                  <strong className="text-white">Opening Pool Stage (Pools A–D):</strong> August 15 – August 20, 2026
                 </li>
                 <li style={{ padding: "0.5rem 0", borderBottom: "1px solid rgba(255,255,255,0.03)", color: "var(--text-muted)" }}>
-                  <strong className="text-white">Crossover Rounds:</strong> August 21 – August 25, 2026
+                  <strong className="text-white">Second Group Phase (Pools E–H):</strong> August 21 – August 24, 2026
                 </li>
                 <li style={{ padding: "0.5rem 0", borderBottom: "1px solid rgba(255,255,255,0.03)", color: "var(--text-muted)" }}>
-                  <strong className="text-white">Quarterfinals:</strong> August 23 – August 28, 2026
+                  <strong className="text-white">Classification Matches (9th–16th):</strong> Aug 27 (Women) &amp; Aug 28 (Men)
                 </li>
                 <li style={{ padding: "0.5rem 0", borderBottom: "1px solid rgba(255,255,255,0.03)", color: "var(--text-muted)" }}>
-                  <strong className="text-white">Semifinals:</strong> Aug 27 (Women) & Aug 28 (Men)
+                  <strong className="text-white">Semifinals:</strong> Aug 27 (Women) &amp; Aug 28 (Men)
                 </li>
                 <li style={{ padding: "0.5rem 0", color: "var(--text-muted)" }}>
-                  <strong className="text-white">Grand Finals:</strong> Aug 29 (Women, NED) & Aug 30 (Men, BEL)
+                  <strong className="text-white">Grand Finals:</strong> Aug 29 (Women, NED) &amp; Aug 30 (Men, BEL)
                 </li>
               </ul>
             </div>
 
             <div className="local-card" style={{ padding: "2rem" }}>
               <div className="local-icon">🇺🇸</div>
-              <h3 className="text-white mt-4 mb-2">USA Broadcast & ET Schedule</h3>
+              <h3 className="text-white mt-4 mb-2">USA Broadcast &amp; ET Schedule</h3>
               <p className="text-sm text-slate-400" style={{ marginTop: "1rem", lineHeight: "1.6" }}>
-                For fans in the United States tracking the USWNT (United States Women's National Team), match schedules are broadcasted live on Fox Sports channels and streamed online via Watch.Hockey.
+                For fans in the United States tracking the USWNT (United States Women's National Team), match schedules are broadcasted live across CBS Sports Network and streamed online via Watch.Hockey.
               </p>
               <p className="text-sm text-slate-400" style={{ marginTop: "0.5rem", lineHeight: "1.6" }}>
-                To make viewing easy, we have pre-configured match times in ET (US Eastern Time) inside our interactive timezone selector. Select <strong>US Eastern Time (EDT)</strong> above to automatically convert CET times.
+                To make viewing easy, select <strong>US Eastern Time (EDT)</strong> in our timezone selector above to view converted times.
               </p>
             </div>
           </div>
@@ -272,13 +272,13 @@ export default function SchedulePage() {
         <section className="guidelines-card">
           <h2>Important Matchday Attendance Guidelines</h2>
           <p>
-            If you are traveling to Wagener Stadium (Amstelveen) or Belfius Hockey Arena (Wavre), please note that gates open exactly 90 minutes before the scheduled pushback. Standard security searches are performed at all gates, and bags larger than A4 size are not allowed inside the spectator stands.
+            If you are traveling to Wagener Stadium (Amstelveen) or Belfius Hockey Arena (Wavre), please note that gates open exactly 90 minutes before scheduled pushback.
           </p>
           <p>
-            For local timezone adjustments: the official tournament clock runs on Central European Time (CET / GMT+2 during summer). If you are viewing streams from India, Pakistan, or the Americas, please use the interactive timezone selector on this page to prevent confusion, as broadcasting partners will commence live coverage exactly 15 minutes before the pushback.
+            Local timezone notice: the official tournament clock runs on Central European Summer Time (CEST / UTC+2). If you are viewing streams from India, Pakistan, or the Americas, please use the interactive timezone selector on this page to prevent confusion.
           </p>
           <div className="expert-quote-box">
-            "With back-to-back doubleheaders scheduled in both Belgium and the Netherlands, player recovery times are extremely short. A team's depth in their 18-player roster will be the ultimate deciding factor in the later crossover and quarterfinal stages."
+            "With back-to-back doubleheaders scheduled in both Belgium and the Netherlands, player recovery times are extremely short. A team's depth in their tournament squad will be the ultimate deciding factor in the Second Stage and Semi-Final rounds."
             <strong>— HWC 2026 Editorial Desk</strong>
           </div>
         </section>

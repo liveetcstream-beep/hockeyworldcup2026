@@ -148,17 +148,17 @@ export default function BroadcastersPage() {
               </thead>
               <tbody>
                 {[
-                  { region: "India & South Asia", channel: "Sports18 Network HD" },
-                  { region: "Pakistan", channel: "Ten Sports HD, PTV Sports" },
+                  { region: "India & South Asia", channel: "Star Sports Select HD / JioHotstar" },
+                  { region: "Pakistan", channel: "A Sports HD, PTV Sports" },
                   { region: "United Kingdom & Ireland", channel: "TNT Sports" },
                   { region: "Belgium (Co-Host)", channel: "RTBF (French), VRT (Flemish)" },
                   { region: "Netherlands (Co-Host)", channel: "NOS Sport" },
-                  { region: "Australia", channel: "Fox Sports Australia" },
-                  { region: "USA", channel: "Fox Sports 2" },
-                  { region: "Canada", channel: "Willow Sports" },
+                  { region: "Australia", channel: "Fox Sports Australia / 7plus" },
+                  { region: "USA", channel: "CBS Sports Network / Watch.Hockey" },
+                  { region: "Canada", channel: "CBS Sports / Watch.Hockey" },
                   { region: "New Zealand", channel: "Sky Sport NZ" },
                   { region: "Sub-Saharan Africa", channel: "SuperSport" },
-                  { region: "MENA & Middle East", channel: "Cricbuzz, StarzPlay" },
+                  { region: "MENA & Middle East", channel: "StarzPlay / Watch.Hockey" },
                   { region: "Caribbean Region", channel: "Flow Sports" }
                 ].map((row, idx) => (
                   <tr key={idx} style={{ borderBottom: "1px solid var(--border-color)", background: idx % 2 === 0 ? "var(--bg-secondary)" : "var(--bg-tertiary)" }}>
@@ -185,19 +185,19 @@ export default function BroadcastersPage() {
               <thead>
                 <tr style={{ background: "#c00030", color: "white" }}>
                   <th style={{ padding: "1rem", textAlign: "left", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "700" }}>Region / Country</th>
-                  <th style={{ padding: "1rem", textAlign: "left", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "700" }}>Live Streaming Apps & Web Portals</th>
+                  <th style={{ padding: "1rem", textAlign: "left", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "700" }}>Live Streaming Apps &amp; Web Portals</th>
                 </tr>
               </thead>
               <tbody>
                 {[
-                  { region: "India", app: "JioHotstar / Star Sports" },
-                  { region: "Pakistan", app: "Tapmad (HD Stream, Paid Subscription)" },
+                  { region: "India", app: "JioHotstar / Star Sports Select" },
+                  { region: "Pakistan", app: "Tapmad / Tamasha (HD Stream)" },
                   { region: "Belgium", app: "VRT MAX, RTBF Auvio (Free in Territory)" },
                   { region: "Netherlands", app: "NOS.nl, NOS App (Free in Territory)" },
-                  { region: "Australia", app: "Kayo Sports, Watch.Hockey" },
+                  { region: "Australia", app: "Kayo Sports, 7plus, Watch.Hockey" },
                   { region: "United Kingdom", app: "Discovery+, Watch.Hockey" },
-                  { region: "USA & Canada", app: "Willow TV App, Watch.Hockey" },
-                  { region: "MENA Region", app: "Cricbuzz, StarzPlay, Myco" },
+                  { region: "USA & Canada", app: "CBS Sports App, Watch.Hockey" },
+                  { region: "MENA Region", app: "StarzPlay, Watch.Hockey" },
                   { region: "Rest of the World", app: "Watch.Hockey (FIH Official Portal)" }
                 ].map((row, idx) => (
                   <tr key={idx} style={{ borderBottom: "1px solid var(--border-color)", background: idx % 2 === 0 ? "var(--bg-secondary)" : "var(--bg-tertiary)" }}>

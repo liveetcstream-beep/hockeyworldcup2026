@@ -121,7 +121,8 @@ export default async function DateMatchPage({ params }) {
   const displayMatches = masterMatchesForDay.length > 0
     ? masterMatchesForDay.map((m) => ({
         matchNumber: m.id,
-        timeCET: m.timeCET,
+        matchCode: m.matchCode || `Match #${m.id}`,
+        timeCET: m.timeCEST || m.timeCET,
         team1: m.teamA,
         flagCode1: m.flagA || flagCodeMap[m.teamA] || "un",
         team2: m.teamB,
@@ -131,12 +132,12 @@ export default async function DateMatchPage({ params }) {
         gender: m.gender,
         matchPreviewUrl: getMatchPreviewLink(m.teamA, m.teamB, m.gender),
         streaming: [
-          { country: "India", channel: "Star Sports / Disney+ Hotstar" },
-          { country: "Pakistan", channel: "PTV Sports / GEO Super" },
-          { country: "UK", channel: "BT Sport" },
-          { country: "USA", channel: "ESPN+" },
-          { country: "Netherlands", channel: "NPO3 / Ziggo Sport" },
-          { country: "Belgium", channel: "VRT / RTBF" },
+          { country: "India", channel: "Star Sports Select / JioHotstar" },
+          { country: "Pakistan", channel: "A Sports / PTV Sports" },
+          { country: "UK", channel: "TNT Sports" },
+          { country: "USA", channel: "CBS Sports Network / Watch.Hockey" },
+          { country: "Netherlands", channel: "NOS Sport / Ziggo Sport" },
+          { country: "Belgium", channel: "VRT 1 / RTBF" },
         ],
       }))
     : day.matches.map((m) => ({
@@ -278,7 +279,7 @@ export default async function DateMatchPage({ params }) {
                       {match.gender}'s {match.pool}
                     </span>
                     <span style={{ color: "#ffffff", fontSize: "0.85rem", fontWeight: "800" }}>
-                      Match #{match.matchNumber}
+                      {match.matchCode || `Match #${match.matchNumber}`}
                     </span>
                   </div>
                   <span style={{ color: "rgba(255,255,255,0.9)", fontSize: "0.8rem", fontWeight: "600" }}>

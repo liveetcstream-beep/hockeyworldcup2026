@@ -3,20 +3,14 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
-  title: "Belgium vs Netherlands Hockey World Cup 2026 Match Preview",
-  description: "Preview the massive Belgium vs Netherlands men's hockey match at HWC 2026. Check head-to-head records, squad lineups, match timings, and predictions.",
+  title: "Belgium vs Netherlands Hockey World Cup 2026 Potential Clash Guide",
+  description: "Tactical preview and historical analysis of a potential Belgium vs Netherlands Men's World Cup clash in the Second Group Phase or Semi-Finals.",
+  robots: {
+    index: false,
+    follow: true,
+  },
   alternates: {
     canonical: "https://hockeyworldcup2026schedule.com/matches/belgium-vs-netherlands",
-  },
-  openGraph: {
-    title: "Belgium vs Netherlands Hockey World Cup 2026 Match Preview",
-    description: "Preview the massive Belgium vs Netherlands men's hockey match at HWC 2026. Check head-to-head records, squad lineups, match timings, and predictions.",
-    url: "https://hockeyworldcup2026schedule.com/matches/belgium-vs-netherlands",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Belgium vs Netherlands Hockey World Cup 2026 Match Preview",
-    description: "Preview the massive Belgium vs Netherlands men's hockey match at HWC 2026. Check head-to-head records, squad lineups, match timings, and predictions.",
   },
 };
 

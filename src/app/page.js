@@ -42,19 +42,19 @@ export default function Home() {
   const faqItems = [
     {
       question: "Which teams have qualified for the FIH Hockey World Cup 2026?",
-      answer: "A total of 16 men's and 16 women's national teams have qualified through continental championships (EuroHockey, Asia Cup, Pan American Cup) and the FIH Hockey World Cup Qualifiers. Major contenders include Belgium, Netherlands, India, Germany, and Australia."
+      answer: "A total of 16 men's and 16 women's national teams (32 tournament entries across 20 nations) have qualified through continental championships (EuroHockey, Asia Cup, Pan American Cup, Oceania Cup, Africa Cup) and the FIH World Cup Qualifiers."
     },
     {
-      question: "Where will the Hockey World Cup 2026 finals be played?",
-      answer: "The Men's Hockey World Cup 2026 final will take place at the Belfius Hockey Arena in Wavre, Belgium. The Women's tournament final will be hosted at the Wagener Stadium in Amstelveen, Netherlands. Both finals are scheduled for Sunday, August 30, 2026."
+      question: "Where and when will the Hockey World Cup 2026 finals be played?",
+      answer: "The Women's World Cup Grand Final will be held at Wagener Stadium in Amstelveen, Netherlands on Saturday, August 29, 2026 at 16:00 CEST (Bronze match at 13:00 CEST). The Men's Grand Final will take place at Belfius Hockey Arena in Wavre, Belgium on Sunday, August 30, 2026 at 16:30 CEST (Bronze match at 14:00 CEST)."
     },
     {
       question: "Where can Indian fans live stream the Hockey World Cup 2026 matches?",
-      answer: "In India, official live streaming will be broadcast digitally on JioHotstar and televised on Star Sports channels."
+      answer: "In India, official live streaming is broadcast digitally on JioHotstar and televised live on Star Sports Select channels."
     },
     {
-      question: "How can I buy tickets for the matches in Wagener Stadium (Amstelveen)?",
-      answer: "Official ticket sales are handled via the official tournament portal at worldcup.hockey. Ticket prices start from €19 to €36 for group stage matches."
+      question: "How can I buy tickets for the matches in Wavre and Amstelveen?",
+      answer: "Official tickets are available through official host federation portals: tickets.hockeyworldcup2026.be (Belgium/Wavre) and tickets.hockeyworldcup2026.nl (Netherlands/Amstelveen), as linked from fih.hockey."
     }
   ];
 
@@ -63,25 +63,30 @@ export default function Home() {
       {/* HEADER SECTION */}
       <Header />
 
+      {/* TOP INDEPENDENT NOTICE BANNER */}
+      <div style={{ background: "rgba(2, 132, 199, 0.12)", borderBottom: "1px solid rgba(2, 132, 199, 0.3)", padding: "0.5rem 1rem", textAlign: "center", fontSize: "0.82rem", color: "#94a3b8" }}>
+        ℹ️ <strong>Independent Tournament Portal:</strong> This is an independent fan schedule and analytics guide. Not affiliated with or endorsed by the International Hockey Federation (FIH). Official source: <a href="https://www.fih.hockey" target="_blank" rel="noopener noreferrer" style={{ color: "#38bdf8", textDecoration: "underline" }}>fih.hockey</a>.
+      </div>
+
       {/* HERO SECTION */}
       <section className="hero-section">
         <div className="sports-container hero-content">
           <p className="hero-subtitle">
-            FIH Men's & Women's World Cup 2026 — Coupe du Monde de Hockey · WK Hockey 2026
+            FIH Men's &amp; Women's World Cup 2026 — Coupe du Monde de Hockey · WK Hockey 2026
           </p>
           <h1 className="hero-title">
-            Hockey World Cup 2026 Schedule: Fixtures & Live Updates
+            Hockey World Cup 2026 Schedule: Fixtures &amp; Live Updates
           </h1>
           <p className="hero-description">
-            Get the comprehensive, verified 2026 FIH Hockey World Cup fixtures, local stadium start times, and TV channel allocations. We solve your timezone confusion and streaming blackout restrictions for the mega tournament in Belgium and the Netherlands.
+            Complete, verified 2026 FIH Hockey World Cup fixtures, official venue local CEST start times, and global TV broadcast channel allocations. Complete coverage for all 100 matches across Belgium and the Netherlands.
           </p>
 
           <div className="eeat-badge-container">
             <div className="eeat-badge" style={{ background: "rgba(255, 255, 255, 0.05)", border: "1px solid var(--border-color)", padding: "0.4rem 1rem", borderRadius: "8px", fontSize: "0.85rem" }}>
-              ✅ Reviewed by <strong>HWC 2026 Editorial Desk</strong> (Cross-referenced with fih.hockey)
+              📋 <strong>100 Tournament Fixtures</strong> (50 Men · 50 Women)
             </div>
             <div className="eeat-badge">
-              ⚡ Status: <strong>Official Fixtures Confirmed</strong>
+              ⚡ Status: <strong>Tournament Live · Matchday 2</strong>
             </div>
           </div>
         </div>
@@ -200,7 +205,10 @@ export default function Home() {
               🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs Pakistan Result (4-1)
             </a>
             <a href="/matches/belgium-vs-france" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#ffffff", padding: "0.45rem 0.9rem", borderRadius: "8px", fontSize: "0.82rem", fontWeight: "700", textDecoration: "none" }}>
-              🇧🇪 Belgium vs France Result (3-1)
+              🇧🇪 Belgium vs France Result (3-2)
+            </a>
+            <a href="/matches/germany-vs-malaysia" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#ffffff", padding: "0.45rem 0.9rem", borderRadius: "8px", fontSize: "0.82rem", fontWeight: "700", textDecoration: "none" }}>
+              🇩🇪 Germany vs Malaysia Result (5-1)
             </a>
             <a href="/hockey-world-cup-2026-groups" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#ffffff", padding: "0.45rem 0.9rem", borderRadius: "8px", fontSize: "0.82rem", fontWeight: "700", textDecoration: "none" }}>
               🏆 All 16 Pools & Standings
@@ -218,7 +226,7 @@ export default function Home() {
         <section id="recent-news" className="my-12">
           <div className="section-title-wrap">
             <h2>Recent News & Analysis</h2>
-            <p>Stay updated with injury reports, warm-up matches, tactical updates, and rule changes.</p>
+            <p>Stay updated with injury reports, tactical updates, and official match reports.</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {getPublishedNews().slice(0, 4).map((article) => (
@@ -255,15 +263,15 @@ export default function Home() {
                 title: "India vs Pakistan",
                 slug: "india-vs-pakistan",
                 date: "August 19, 2026",
-                time: "18:30 IST / 15:00 Local",
+                time: "18:30 IST / 15:00 CEST Local",
                 venue: "Wagener Stadium, Amstelveen",
-                desc: "The ultimate subcontinental derby. India's penalty corner options meet Pakistan's counter-attacking speed in a highly anticipated Pool D clash."
+                desc: "The ultimate subcontinental derby. India's penalty corner battery meets Pakistan's counter-attacking speed in a highly anticipated Pool D clash."
               },
               {
                 title: "Germany vs Belgium",
                 slug: "germany-vs-belgium",
                 date: "August 17, 2026",
-                time: "20:30 Local",
+                time: "20:30 CEST Local",
                 venue: "Belfius Hockey Arena, Wavre",
                 desc: "Rematch of the epic 2023 World Cup Final. Defending champions Germany face co-hosts Belgium in a high-intensity battle for Pool B dominance."
               },
@@ -271,25 +279,25 @@ export default function Home() {
                 title: "India vs England",
                 slug: "india-vs-england",
                 date: "August 17, 2026",
-                time: "16:00 IST / 12:30 Local",
+                time: "18:30 IST / 15:00 CEST Local",
                 venue: "Wagener Stadium, Amstelveen",
-                desc: "A crucial Pool D showdown. Both squads have historic tournament rivalries, making this a decisive match for direct Quarter-Final spots."
+                desc: "A crucial Pool D showdown. Both squads have historic tournament rivalries, making this a decisive match for top spot and direct qualification to the Second Stage (Pool E)."
               },
               {
-                title: "Belgium vs Netherlands",
-                slug: "belgium-vs-netherlands",
-                date: "August 20, 2026",
-                time: "20:30 Local",
-                venue: "Belfius Hockey Arena, Wavre",
-                desc: "The Low Countries derby. One of the oldest rivalries in European hockey returns to the world stage in a high-stakes group encounter."
+                title: "Netherlands vs Australia (Women)",
+                slug: "netherlands-vs-australia-women",
+                date: "August 17, 2026",
+                time: "18:00 CEST Local",
+                venue: "Wagener Stadium, Amstelveen",
+                desc: "The world's top two women's hockey powers collide in Pool A. A heavyweight clash between the reigning world champions and the Hockeyroos."
               },
               {
                 title: "England vs Pakistan",
                 slug: "england-vs-pakistan",
                 date: "August 15, 2026",
-                time: "17:00 Local",
+                time: "19:00 CEST Local / 22:00 PKT",
                 venue: "Wagener Stadium, Amstelveen",
-                desc: "The opening weekend blockbuster. Pakistan opens their World Cup campaign against a highly structured England team in Pool D."
+                desc: "The opening weekend blockbuster. England earned three points in Pool D with a clinical 4-1 victory at Wagener Stadium."
               }
             ].map((match) => (
               <div key={match.slug} className="local-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>

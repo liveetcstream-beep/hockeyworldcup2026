@@ -6,25 +6,23 @@ import FaqAccordion from "../../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
-  title: "Hockey World Cup 2026 Semi-Finals — Schedule, Teams & Expert Preview",
-  description: "Complete guide to the Hockey World Cup 2026 Semi-Finals on August 27. Teams, timings, venue details, scenarios and expert tactical preview by field...",
+  title: "Hockey World Cup 2026 Semi-Finals — Dates, Matchups & Expert Preview",
+  description: "Complete guide to the FIH Hockey World Cup 2026 Semi-Finals: Women's Semis on August 27 and Men's Semis on August 28. Official match codes (W47/W48, M47/M48), timings, venues, and streaming.",
   alternates: { canonical: `${BASE}/knockout/semi-finals` },
   openGraph: {
-    title: "Hockey World Cup 2026 Semi-Finals — Schedule, Teams & Expert Preview",
-    description: "Everything you need to know about the HWC 2026 Semi-Finals — teams, timings, and expert analysis.",
+    title: "Hockey World Cup 2026 Semi-Finals — Dates, Matchups & Expert Preview",
+    description: "Everything you need to know about the HWC 2026 Semi-Finals — Women (Aug 27) and Men (Aug 28).",
     url: `${BASE}/knockout/semi-finals`,
     images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Hockey World Cup 2026 Semi-Finals" }],
   },
 };
 
 const faqItems = [
-  { q: "When are the Hockey World Cup 2026 Semi-Finals?", a: "The Semi-Finals are on August 27, 2026 — Semi-Final 1 at 14:00 CEST (17:30 IST) and Semi-Final 2 at 18:30 CEST (22:00 IST)." },
-  { q: "How do teams qualify for the Semi-Finals?", a: "Teams that win their Quarter-Final matches on August 24-25 advance to the Semi-Finals on August 27." },
-  { q: "Where will the Semi-Finals be played?", a: "Semi-Final venues will be confirmed after Quarter-Final results. Both Wagener Stadium (Amstelveen) and Belfius Hockey Arena (Wavre) are potential semi-final host venues." },
-  { q: "What format are the Semi-Finals?", a: "Semi-Finals are single knockout matches. Ties go directly to a penalty shootout — there is no extra time in the 2026 format." },
-  { q: "What time are the Semi-Finals in IST (India)?", a: "Semi-Final 1 starts at approximately 17:30 IST. Semi-Final 2 starts at approximately 22:00 IST on August 27." },
-  { q: "Where can I watch the Semi-Finals live?", a: "Star Sports / Hotstar (India), BT Sport (UK), ESPN+ (USA), ZDF/DAZN (Germany), VRT (Belgium), NPO3/Ziggo (Netherlands), Kayo Sports (Australia), PTV Sports (Pakistan)." },
-  { q: "Has India ever reached the Hockey World Cup Semi-Finals?", a: "India's most recent Semi-Final appearance was in 1975 when they won the World Cup. They have been aiming to return to that stage ever since." }
+  { q: "When are the Women's Hockey World Cup 2026 Semi-Finals?", a: "The Women's Semi-Finals take place on Thursday, August 27, 2026: Semi-Final 1 (Match W47) at 18:00 CEST (21:30 IST) at Wagener Stadium in Amstelveen, and Semi-Final 2 (Match W48) at 20:30 CEST (00:00 IST) at Belfius Hockey Arena in Wavre." },
+  { q: "When are the Men's Hockey World Cup 2026 Semi-Finals?", a: "The Men's Semi-Finals take place on Friday, August 28, 2026: Semi-Final 1 (Match M47) at 18:00 CEST (21:30 IST) at Wagener Stadium in Amstelveen, and Semi-Final 2 (Match M48) at 20:30 CEST (00:00 IST) at Belfius Hockey Arena in Wavre." },
+  { q: "How do teams qualify for the Semi-Finals in 2026?", a: "The top two teams from Second Group Stage Pools E and F advance directly to the Semi-Finals: 1st Pool E vs 2nd Pool F and 1st Pool F vs 2nd Pool E." },
+  { q: "Where will the Semi-Finals be played?", a: "Semi-Final matches are split between Wagener Stadium (Amstelveen, Netherlands) and Belfius Hockey Arena (Wavre, Belgium)." },
+  { q: "What format is used for tied Semi-Final matches?", a: "If scores are tied after 60 minutes of regulation play, matches proceed immediately to an official FIH 8-second penalty shootout. There is no extra time." }
 ];
 
 const schema = {

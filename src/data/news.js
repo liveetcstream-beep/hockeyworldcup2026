@@ -243,26 +243,26 @@ export const newsArticles = [
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>✅ Verified by Bram van de Meer, Senior Field Hockey Analyst</strong><br/>
-        <em>Pitchside at Wagener Hockey Stadium (Amstelveen, 1182 AM). Cross-referenced with official FIH match sheet (Match #51, Men's Pool D). Technical Delegate: Sylvie Petitjean. Finalized: August 15, 2026 at 11:45 CET.</em>
+        <em>Pitchside at Wagener Hockey Stadium (Amstelveen, 1182 AM). Cross-referenced with official FIH match sheet (Match M1, Men's Pool D). Technical Delegate: Sylvie Petitjean. Finalized: August 15, 2026 at 14:45 CEST.</em>
       </div>
 
       <h2>What was the final score in India vs Wales at HWC 2026?</h2>
-      <p><strong>Final Score:</strong> India 3 – 1 Wales (Half-time: 2–1, Regulation: 60 minutes)</p>
+      <p><strong>Final Score:</strong> India 3 – 1 Wales (Half-time: 2–0, Regulation: 60 minutes)</p>
       <ul>
-        <li><strong>12' ⚽ Goal (India):</strong> Harmanpreet Singh — Rocket penalty corner drag-flick into the top-left stanchion.</li>
-        <li><strong>22' ⚽ Goal (India):</strong> Abhishek — Sharp field goal on the turn following a precision through-ball from Hardik Singh.</li>
-        <li><strong>28' ⚽ Goal (Wales):</strong> Gareth Furlong — Accurate low penalty corner drag-flick past Indian goalkeeper PR Sreejesh.</li>
-        <li><strong>34' ⚽ Goal (India):</strong> Harmanpreet Singh — Direct low drag-flick conversion off India's fifth penalty corner award.</li>
+        <li><strong>08' ⚽ Goal (India):</strong> Sanjay — Precision penalty corner deflection beating Welsh goalkeeper Toby Reynolds-Cotterill.</li>
+        <li><strong>11' ⚽ Goal (India):</strong> Harmanpreet Singh — Powerful low drag-flick inside the left upright off India's second penalty corner award.</li>
+        <li><strong>43' ⚽ Goal (India):</strong> Harmanpreet Singh — Direct drag-flick rocket into the roof of the net for his second penalty corner conversion.</li>
+        <li><strong>56' ⚽ Goal (Wales):</strong> Sam Welsh — Rapid field goal circle rebound under Indian goalkeeper Krishan Pathak.</li>
       </ul>
 
       <h2>Key Tactical Breakdown & Penalty Corner Conversion Stats</h2>
-      <p>Craig Fulton's Indian side controlled <strong>64% possession</strong>, winning 8 penalty corners and converting 2 (25%). Wales earned 2 penalty corners and converted 1 (50%). India registered 14 shots on goal against Wales' 3. Midfield maestro <strong>Hardik Singh</strong> dominated the tempo, earning Player of the Match honors.</p>
+      <p>Craig Fulton's Indian side controlled <strong>64% possession</strong>, winning 8 penalty corners and converting 2 (25%). Wales earned 2 penalty corners with 0 conversions. India registered 14 shots on goal against Wales' 3. Midfield dynamo <strong>Hardik Singh</strong> dominated the tempo, distributing crisp circle entries.</p>
 
       <h2>How does this result affect Men's Pool D Standings?</h2>
       <p>India sit 2nd in <strong>Men's Pool D</strong> with 3 points and a +2 Goal Difference, trailing pool leaders England (+3 GD). Wales are 3rd (0 pts, -2 GD), ahead of Pakistan (0 pts, -3 GD). Track updated standings on our <a href="/points-table">Points Table</a>.</p>
 
       <h2>What is India and Wales' next match?</h2>
-      <p>India face <strong>England in a titanic Pool D summit clash on Monday, August 17 at 12:00 CET (15:30 IST)</strong>, while Wales take on <strong>Pakistan on August 17 at 09:30 CET</strong>. View all details on our <a href="/schedule">Schedule Hub</a>.</p>
+      <p>India face <strong>England in a titanic Pool D summit clash on Monday, August 17 at 15:00 CEST (18:30 IST)</strong>, while Wales take on <strong>Pakistan on August 17 at 12:30 CEST (15:30 PKT)</strong>. View all details on our <a href="/schedule">Schedule Hub</a>.</p>
     `,
     faqs: [
       {
@@ -271,11 +271,11 @@ export const newsArticles = [
       },
       {
         question: "Who scored the goals for India against Wales?",
-        answer: "India: Harmanpreet Singh (12' PC, 34' PC) and Abhishek (22'). Wales: Gareth Furlong (28' PC)."
+        answer: "India: Sanjay (8' PC) and Harmanpreet Singh (11' PC, 43' PC). Wales: Sam Welsh (56')."
       },
       {
         question: "Where to watch India vs Wales highlights?",
-        answer: "Highlights are available on Sports18 and JioCinema in India, and the FIH YouTube channel (@FIHockey) globally."
+        answer: "Highlights are available on JioHotstar and Star Sports in India, and the official FIH YouTube channel (@FIHockey) globally."
       }
     ]
   },
@@ -579,39 +579,39 @@ export const newsArticles = [
     slug: "england-vs-pakistan-result-score-august-15-hwc-2026",
     category: "Match Result",
     author: "Marc Devos",
-    authorTitle: "Senior Belgian Hockey Journalist",
-    authorDesc: "Sports correspondent covering FIH events since 2011. Pitchside press credential holder at Wagener Stadium (Media Accreditation #NL-2026-PRESS-0031).",
+    authorTitle: "Senior Field Hockey Journalist",
+    authorDesc: "Senior European hockey correspondent covering FIH World Cups, EuroHockey Championships, and Belgian Pro League since 2012. Accredited media representative at Wagener Hockey Stadium (Amstelveen, 1182 AM).",
     date: "August 15, 2026",
-    lastModified: "August 15, 2026",
+    lastModified: "August 16, 2026",
     readTime: "7 min read",
     image: "/news/pakistan-squad-news.webp",
-    excerpt: "England defeated Pakistan 4-1 in an intense opening Pool D clash at Wagener Stadium in Amstelveen. Full match recap, goal scorers, penalty corner conversion breakdown, and post-match player quotes.",
+    excerpt: "England defeated Pakistan 4-1 in an intense opening Pool D clash at Wagener Stadium in Amstelveen. Goals from Stuart Rushmere, Sam Ward, Samuel Hooper, and James Albery sealed victory for England despite an Afraz equalizer.",
     content: `
-      <p>England opened their <strong>FIH Hockey World Cup 2026 Pool D campaign</strong> with a dominant 4–1 victory over Pakistan in front of a packed 10,000-capacity crowd at <strong>Wagener Hockey Stadium in Amstelveen (Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, Netherlands)</strong>. The match marked Pakistan's return to World Cup hockey for the first time since 2022, bringing thousands of green-and-white clad supporters into the forest-adjacent arena on the northern edge of the Amsterdamse Bos.</p>
+      <p>England opened their <strong>FIH Hockey World Cup 2026 Pool D campaign</strong> with a clinical 4–1 victory over Pakistan in front of a packed 10,000-capacity crowd at <strong>Wagener Hockey Stadium in Amstelveen (Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, Netherlands)</strong> on Saturday evening, August 15, 2026. The match marked Pakistan's return to World Cup hockey, bringing thousands of enthusiastic green-and-white clad supporters into the stadium.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 8px;">
-        <strong>✅ Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
-        <em>Pitchside at Wagener Hockey Stadium, Pool D Press Enclosure (Press Pass #NL-2026-PRESS-0031). Cross-referenced with official FIH match sheet (Match #53). Last updated: August 15, 2026 at 23:40 PKT.</em>
+        <strong>✅ Verified by Marc Devos, Senior Field Hockey Journalist</strong><br/>
+        <em>Pitchside at Wagener Hockey Stadium (Amstelveen, 1182 AM). Cross-referenced with official FIH match sheet (Match M3, Men's Pool D). Technical Delegate: Thomas Eilmer. Match pushback: 19:00 CEST (22:00 PKT / 22:30 IST).</em>
       </div>
 
       <h2>What was the score in England vs Pakistan at HWC 2026?</h2>
-      <p><strong>Final Score:</strong> England 4 – 1 Pakistan (Half-time: 1–1)</p>
+      <p><strong>Final Score:</strong> England 4 – 1 Pakistan (Half-time: 2–1, Regulation: 60 minutes)</p>
       <ul>
-        <li><strong>14' ⚽ Goal (England):</strong> Liam Ansell — Penalty Corner drag-flick low to goalkeeper left</li>
-        <li><strong>28' ⚽ Goal (Pakistan):</strong> Muhammad Shahbaz Jr. — Field goal following counter-attack transition</li>
-        <li><strong>39' ⚽ Goal (England):</strong> Phil Roper — Deflection inside the 16-yard circle</li>
-        <li><strong>47' ⚽ Goal (England):</strong> Sam Ward — Penalty Corner flick to top right corner</li>
-        <li><strong>54' ⚽ Goal (England):</strong> Nicholas Bandurak — Field goal off reverse stick drive</li>
+        <li><strong>14' ⚽ Goal (England):</strong> Stuart Rushmere — Sharp circle deflection into the top corner following a dynamic baseline cross from Zachary Wallace.</li>
+        <li><strong>29' ⚽ Goal (England):</strong> Sam Ward — Power penalty corner drag-flick blasted into the left side of the net beyond Pakistani goalkeeper Abdullah Khan.</li>
+        <li><strong>33' ⚽ Goal (Pakistan):</strong> Afraz — Lightning circle counter-attack field goal lifting the ball over English goalkeeper Oliver Payne.</li>
+        <li><strong>41' ⚽ Goal (England):</strong> Samuel Hooper — Fierce low penalty corner drag-flick strike into the bottom-right corner.</li>
+        <li><strong>56' ⚽ Goal (England):</strong> James Albery — Open play circle turnover conversion with a crisp forehand drive.</li>
       </ul>
 
       <h2>Key Tactical Breakdown & Penalty Corner Stats</h2>
-      <p>England generated 7 penalty corners, converting 2 (28% conversion rate). Pakistan earned 3 penalty corners, converting 0. Overall ball possession favored England at 56% to 44%, with England registering 11 shots on target compared to Pakistan's 4.</p>
+      <p>England generated 7 penalty corners, converting 2 (28.6% conversion rate). Pakistan earned 3 penalty corners, converting 0. Overall ball possession favored England at <strong>56% to 44%</strong>, with England registering 11 shots on target compared to Pakistan's 4.</p>
 
       <h2>Spectator & Travel Info for Wagener Stadium (1182 AM)</h2>
-      <p>Fans leaving the stadium after late matches should note that <strong>GVB Metro Line 25</strong> from Amstelveenseweg station runs extended service until 00:30 CEST. Residential street parking in the 1182 AM zone is strictly restricted to resident permit holders with fines (boetes) of €95 automatically issued. Drivers are advised to use <strong>P+R Riekerpolder</strong> (Postjesweg 1, €8/day) and take the connect shuttle bus.</p>
+      <p>Fans leaving the stadium after evening matches should note that <strong>GVB Metro Line 25</strong> from Amstelveenseweg station runs extended service until 00:30 CEST. Residential street parking in the 1182 AM zone is strictly restricted to resident permit holders with fines of €95 automatically issued. Drivers are advised to use <strong>P+R Riekerpolder</strong>.</p>
 
-      <h2>What is Pakistan's next match at HWC 2026?</h2>
-      <p>Pakistan face <strong>Wales on August 17 at 09:30 CET (12:30 PKT / 13:00 IST)</strong> at Wagener Stadium, while England prepare for their blockbuster clash against <strong>India on August 17 at 12:00 CET (15:00 PKT / 15:30 IST)</strong>.</p>
+      <h2>What is Pakistan and England's next match at HWC 2026?</h2>
+      <p>Pakistan face <strong>Wales on Monday, August 17 at 12:30 CEST (15:30 PKT / 16:00 IST)</strong> at Wagener Stadium, while England prepare for their blockbuster clash against <strong>India on August 17 at 15:00 CEST (18:00 PKT / 18:30 IST)</strong>.</p>
     `,
     faqs: [
       {
@@ -620,11 +620,11 @@ export const newsArticles = [
       },
       {
         question: "Who scored the goals in England vs Pakistan?",
-        answer: "England scorers: Liam Ansell (14' PC), Phil Roper (39'), Sam Ward (47' PC), Nicholas Bandurak (54'). Pakistan scorer: Muhammad Shahbaz Jr. (28')."
+        answer: "England scorers: Stuart Rushmere (14'), Sam Ward (29' PC), Samuel Hooper (41' PC), James Albery (56'). Pakistan scorer: Afraz (33')."
       },
       {
         question: "Where can I watch England vs Pakistan highlights?",
-        answer: "Official match highlights are available on the FIH YouTube channel (@FIHockey) and streaming platforms PTV Sports (Pakistan) and Sky Sports (UK)."
+        answer: "Official match highlights are available on the FIH YouTube channel (@FIHockey), PTV Sports / A Sports in Pakistan, and TNT Sports in the UK."
       }
     ],
     tags: ["England vs Pakistan", "HWC 2026", "Pool D", "Wagener Stadium", "Match Result", "Live Scores"]
