@@ -69,7 +69,7 @@ export const newsArticles = [
     lastModified: "August 16, 2026",
     readTime: "6 min read",
     image: "/news/england-squad-news.webp",
-    excerpt: "England Women secured a dominant 4-0 victory over South Africa in Women's Pool D at Wagener Stadium in Amstelveen, featuring goals from Giselle Ansley, Hannah Martin, Lily Owsley, and Tess Howard.",
+    excerpt: "England Women secured a dominant 4-0 victory over South Africa in Women's Pool D at Wagener Stadium in Amstelveen, featuring goals from Darcy Bourne, Tessa Howard, Elizabeth Neal, and Sophie Hamilton.",
     content: `
       <p>The <strong>England Women's Hockey Team</strong> delivered a commanding <strong>4–0 victory</strong> against <strong>South Africa</strong> in their <strong>FIH Hockey World Cup 2026 Pool D</strong> opener at <strong>Wagener Hockey Stadium in Amstelveen (Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, Netherlands)</strong> on Sunday morning, August 16, 2026.</p>
 
@@ -81,10 +81,10 @@ export const newsArticles = [
       <h2>What was the final score in England vs South Africa Women?</h2>
       <p><strong>Final Score:</strong> England 4 – 0 South Africa (Full Time: 60 minutes)</p>
       <ul>
-        <li><strong>14' ⚽ Goal (England):</strong> Giselle Ansley — Drag-flick penalty corner into bottom left netting.</li>
-        <li><strong>28' ⚽ Goal (England):</strong> Hannah Martin — Reverse-stick shot from top of circle.</li>
-        <li><strong>41' ⚽ Goal (England):</strong> Lily Owsley — Deflection inside 5-meter mark off baseline drive.</li>
-        <li><strong>52' ⚽ Goal (England):</strong> Tess Howard — Open play field goal past keeper.</li>
+        <li><strong>10' ⚽ Goal (England):</strong> Darcy Bourne — Penalty corner drag-flick into lower corner.</li>
+        <li><strong>14' ⚽ Goal (England):</strong> Tessa Howard — Field goal strike from inside the circle.</li>
+        <li><strong>30' ⚽ Goal (England):</strong> Elizabeth Neal — Drag-flick penalty corner set piece.</li>
+        <li><strong>41' ⚽ Goal (England):</strong> Sophie Hamilton — Open play finish past South African goalkeeper.</li>
       </ul>
 
       <h2>Key Tactical Breakdown &amp; Pool D Table Impact</h2>
