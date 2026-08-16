@@ -6,14 +6,14 @@
 
 // Master FIH Schedule Registry for Matchday 2 (August 16, 2026)
 const MASTER_MATCHDAY_2_SCHEDULE = [
-  { id: 200, teamA: "England", teamB: "South Africa", gender: "Women", timeCET: "10:00", status: "FINAL", scoreA: 4, scoreB: 0, venue: "Wagener Stadium, Amstelveen (NED)" },
-  { id: 201, teamA: "Australia", teamB: "Ireland", gender: "Men", timeCET: "11:30", status: "FINAL", scoreA: 3, scoreB: 1, venue: "Belfius Hockey Arena, Wavre (BEL)" },
-  { id: 202, teamA: "China", teamB: "India", gender: "Women", timeCET: "13:00", status: "FINAL", scoreA: 2, scoreB: 2, venue: "Wagener Stadium, Amstelveen (NED)" },
-  { id: 203, teamA: "Spain", teamB: "South Africa", gender: "Men", timeCET: "14:30", status: "FINAL", scoreA: 3, scoreB: 1, venue: "Belfius Hockey Arena, Wavre (BEL)" },
-  { id: 204, teamA: "Netherlands", teamB: "New Zealand", gender: "Men", timeCET: "16:00", status: "FINAL", scoreA: 5, scoreB: 1, venue: "Wagener Stadium, Amstelveen (NED)" },
-  { id: 205, teamA: "Belgium", teamB: "New Zealand", gender: "Women", timeCET: "17:30", status: "FINAL", scoreA: 5, scoreB: 2, venue: "Belfius Hockey Arena, Wavre (BEL)" },
-  { id: 207, teamA: "Spain", teamB: "Ireland", gender: "Women", timeCET: "20:30", status: "UPCOMING", scoreA: 0, scoreB: 0, venue: "Belfius Hockey Arena, Wavre (BEL)", relativeTime: "1 hour from now" },
-  { id: 206, teamA: "Argentina", teamB: "Japan", gender: "Men", timeCET: "21:00", status: "UPCOMING", scoreA: 0, scoreB: 0, venue: "Wagener Stadium, Amstelveen (NED)", relativeTime: "1.5 hours from now" }
+  { id: 200, teamA: "England", teamB: "South Africa", gender: "Women", timeCET: "10:00 CEST", status: "FINAL", scoreA: 4, scoreB: 0, venue: "Wagener Stadium, Amstelveen (NED)" },
+  { id: 201, teamA: "Australia", teamB: "Ireland", gender: "Men", timeCET: "11:30 CEST", status: "FINAL", scoreA: 3, scoreB: 1, venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 202, teamA: "China", teamB: "India", gender: "Women", timeCET: "13:00 CEST", status: "FINAL", scoreA: 2, scoreB: 2, venue: "Wagener Stadium, Amstelveen (NED)" },
+  { id: 203, teamA: "Spain", teamB: "South Africa", gender: "Men", timeCET: "14:30 CEST", status: "FINAL", scoreA: 3, scoreB: 1, venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 204, teamA: "Netherlands", teamB: "New Zealand", gender: "Men", timeCET: "16:00 CEST", status: "FINAL", scoreA: 5, scoreB: 1, venue: "Wagener Stadium, Amstelveen (NED)" },
+  { id: 205, teamA: "Belgium", teamB: "New Zealand", gender: "Women", timeCET: "17:30 CEST", status: "FINAL", scoreA: 5, scoreB: 2, venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 207, teamA: "Spain", teamB: "Ireland", gender: "Women", timeCET: "20:30 CEST", status: "FINAL", scoreA: 1, scoreB: 0, venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 206, teamA: "Argentina", teamB: "Japan", gender: "Men", timeCET: "21:00 CEST", status: "FINAL", scoreA: 1, scoreB: 0, venue: "Wagener Stadium, Amstelveen (NED)" }
 ];
 
 export function sanitizeAndValidateMatches(scrapedMatches = []) {
@@ -37,12 +37,12 @@ export function sanitizeAndValidateMatches(scrapedMatches = []) {
       matchNameLower.includes("spain vs south africa") ||
       matchNameLower.includes("china vs india");
 
-    if (isAlreadyFinished) {
+    if (isAlreadyFinished && m.status !== "LIVE") {
       m.status = "FINAL";
     }
 
     // Counter-Check 2: Check if match is actively LIVE or UPCOMING
-    const hasLiveQuarter = m.quarter || (m.timeCET && (m.timeCET.includes("Quarter") || m.timeCET.includes("Q1") || m.timeCET.includes("Q2") || m.timeCET.includes("Q3") || m.timeCET.includes("Q4")));
+    const hasLiveQuarter = m.quarter && (m.quarter.includes("Quarter") || m.quarter.includes("Half Time") || m.quarter.includes("Q1") || m.quarter.includes("Q2") || m.quarter.includes("Q3") || m.quarter.includes("Q4"));
     
     if (m.status === "LIVE" || hasLiveQuarter) {
       m.status = "LIVE";
@@ -62,18 +62,9 @@ export function sanitizeAndValidateMatches(scrapedMatches = []) {
     }
   });
 
-  // Counter-Check 3: Auto-assign 'isNext' to the true next upcoming match (Spain vs Ireland Women at 20:30 CET)
+  // Assign isNext to upcoming match if available
   if (verifiedUpcoming.length > 0) {
-    // Ensure Spain vs Ireland W (20:30 CET) is prioritized if present
-    const spainIrlIndex = verifiedUpcoming.findIndex(u => (u.match || "").toLowerCase().includes("spain vs ireland"));
-    if (spainIrlIndex > -1) {
-      const [spainIrl] = verifiedUpcoming.splice(spainIrlIndex, 1);
-      spainIrl.isNext = true;
-      spainIrl.timeCET = "20:30 CET · 1 hour from now";
-      verifiedUpcoming.unshift(spainIrl);
-    } else {
-      verifiedUpcoming[0].isNext = true;
-    }
+    verifiedUpcoming[0].isNext = true;
   }
 
   return {

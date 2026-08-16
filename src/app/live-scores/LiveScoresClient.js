@@ -306,10 +306,10 @@ const INITIAL_UPCOMING_TODAY = [
   }
 ];
 
-export default function LiveScoresClient() {
+export default function LiveScoresClient({ initialCompleted }) {
   const [liveMatches, setLiveMatches] = useState([]);
   const [upcomingToday, setUpcomingToday] = useState(INITIAL_UPCOMING_TODAY);
-  const [completedMatches, setCompletedMatches] = useState(INITIAL_COMPLETED_RESULTS);
+  const [completedMatches, setCompletedMatches] = useState(initialCompleted && initialCompleted.length > 0 ? initialCompleted : INITIAL_COMPLETED_RESULTS);
   const [nextMatch, setNextMatch] = useState(INITIAL_UPCOMING_TODAY[0] || null);
   const [activeFilter, setActiveFilter] = useState("all");
   const [resultsGender, setResultsGender] = useState("all"); // "all", "men", "women"

@@ -33,7 +33,97 @@ export const metadata = {
 
 const COMPLETED_MATCH_RESULTS = [
   {
-    id: 1,
+    id: 205,
+    match: "Belgium vs New Zealand",
+    gender: "Women's Pool C (W7)",
+    scoreA: 5,
+    scoreB: 2,
+    teamA: "Belgium",
+    flagA: "be",
+    teamB: "New Zealand",
+    flagB: "nz",
+    venue: "Belfius Hockey Arena, Wavre (BEL)",
+    timeCET: "17:30 CEST (Local Time)",
+    scorers: "Charlotte Englebert (08' FG, 41' PC), Stephanie Vanden Borre (19' PC, 54' PC), Michelle Struijk (33') | Hope Ralph (24' PC), Olivia Shannon (50' FG)",
+    recapUrl: "/news/belgium-vs-new-zealand-result-score-august-16-hwc-2026"
+  },
+  {
+    id: 204,
+    match: "Netherlands vs New Zealand",
+    gender: "Men's Pool A (M7)",
+    scoreA: 5,
+    scoreB: 1,
+    teamA: "Netherlands",
+    flagA: "nl",
+    teamB: "New Zealand",
+    flagB: "nz",
+    venue: "Wagener Stadium, Amstelveen (NED)",
+    timeCET: "16:00 CEST (Local Time)",
+    scorers: "Thierry Brinkman (08', 48'), Jip Janssen (24' PC), Koen Bijen (33', 51') | Sam Lane (39' PC)",
+    recapUrl: "/news/netherlands-vs-new-zealand-result-score-august-16-hwc-2026"
+  },
+  {
+    id: 203,
+    match: "Spain vs South Africa",
+    gender: "Men's Pool C (M6)",
+    scoreA: 3,
+    scoreB: 1,
+    teamA: "Spain",
+    flagA: "es",
+    teamB: "South Africa",
+    flagB: "za",
+    venue: "Belfius Hockey Arena, Wavre (BEL)",
+    timeCET: "14:30 CEST (Local Time)",
+    scorers: "Marc Miralles (14' PC), Pere Amat (41'), Xavier Gispert (52') | Bradley Sherwood (28' PC)",
+    recapUrl: "/news/spain-vs-south-africa-result-score-august-16-hwc-2026"
+  },
+  {
+    id: 202,
+    match: "China vs India",
+    gender: "Women's Pool D (W6)",
+    scoreA: 2,
+    scoreB: 2,
+    teamA: "China",
+    flagA: "cn",
+    teamB: "India",
+    flagB: "in",
+    venue: "Wagener Stadium, Amstelveen (NED)",
+    timeCET: "13:00 CEST (Local Time)",
+    scorers: "Gu Bingfeng (18' PC, 48' PC) | Deepika (12' PC), Udita (41' PC)",
+    recapUrl: "/news/china-vs-india-women-result-score-august-16-hwc-2026"
+  },
+  {
+    id: 201,
+    match: "Australia vs Ireland",
+    gender: "Men's Pool C (M5)",
+    scoreA: 3,
+    scoreB: 1,
+    teamA: "Australia",
+    flagA: "au",
+    teamB: "Ireland",
+    flagB: "ie",
+    venue: "Belfius Hockey Arena, Wavre (BEL)",
+    timeCET: "11:30 CEST (Local Time)",
+    scorers: "Joel Rintala (11' PC), Blake Govers (35' PC), Tim Brand (52') | Lee Cole (24' PC)",
+    recapUrl: "/news/australia-vs-ireland-result-score-august-16-hwc-2026"
+  },
+  {
+    id: 200,
+    match: "England vs South Africa",
+    gender: "Women's Pool D (W5)",
+    scoreA: 4,
+    scoreB: 0,
+    teamA: "England",
+    flagA: "gb-eng",
+    teamB: "South Africa",
+    flagB: "za",
+    venue: "Wagener Stadium, Amstelveen (NED)",
+    timeCET: "10:00 CEST (Local Time)",
+    scorers: "Darcy Bourne (10' PC), Tessa Howard (14'), Elizabeth Neal (30' PC), Sophie Hamilton (41')",
+    recapUrl: "/news/england-vs-south-africa-result-score-august-16-hwc-2026"
+  },
+  {
+    id: 101,
     match: "England vs Pakistan",
     gender: "Men's Pool D (M3)",
     scoreA: 4,
@@ -42,13 +132,13 @@ const COMPLETED_MATCH_RESULTS = [
     flagA: "gb-eng",
     teamB: "Pakistan",
     flagB: "pk",
-    venue: "Wagener Stadium, Amstelveen",
+    venue: "Wagener Stadium, Amstelveen (NED)",
+    timeCET: "19:00 CEST (Local Time)",
     scorers: "Stuart Rushmere (14'), Sam Ward (29' PC), Samuel Hooper (41' PC), James Albery (56') | Rehman Abdul Afraz (33')",
-    previewUrl: "/matches/england-vs-pakistan",
     recapUrl: "/news/england-vs-pakistan-result-score-august-15-hwc-2026"
   },
   {
-    id: 2,
+    id: 102,
     match: "India vs Wales",
     gender: "Men's Pool D (M1)",
     scoreA: 3,
@@ -57,13 +147,13 @@ const COMPLETED_MATCH_RESULTS = [
     flagA: "in",
     teamB: "Wales",
     flagB: "gb-wls",
-    venue: "Wagener Stadium, Amstelveen",
+    venue: "Wagener Stadium, Amstelveen (NED)",
+    timeCET: "13:00 CEST (Local Time)",
     scorers: "Sanjay (08' PC), Harmanpreet Singh (11' PC, 43' PC) | Sam Welsh (56')",
-    previewUrl: "/matches/india-vs-wales",
     recapUrl: "/news/india-vs-wales-result-score-august-15-hwc-2026"
   },
   {
-    id: 3,
+    id: 103,
     match: "Belgium vs France",
     gender: "Men's Pool B (M4)",
     scoreA: 3,
@@ -72,13 +162,13 @@ const COMPLETED_MATCH_RESULTS = [
     flagA: "be",
     teamB: "France",
     flagB: "fr",
-    venue: "Belfius Hockey Arena, Wavre",
-    scorers: "Nelson Onana (17'), Roman Duvekot (44'), Alexander Hendrickx (56' PC) | Eliot Curty (03'), Timothée Clément (18')",
-    previewUrl: "/matches/belgium-vs-france",
+    venue: "Belfius Hockey Arena, Wavre (BEL)",
+    timeCET: "21:00 CEST (Local Time)",
+    scorers: "Timothée Clément (03' FG), Nicolas de Kerpel (17' FG), François Curty (18' FG), Arno van Dessel (44' FG), Roman Duvekot (56' FG)",
     recapUrl: "/news/belgium-vs-france-result-score-august-15-hwc-2026"
   },
   {
-    id: 4,
+    id: 104,
     match: "Germany vs Malaysia",
     gender: "Men's Pool B (M2)",
     scoreA: 5,
@@ -87,13 +177,13 @@ const COMPLETED_MATCH_RESULTS = [
     flagA: "de",
     teamB: "Malaysia",
     flagB: "my",
-    venue: "Belfius Hockey Arena, Wavre",
-    scorers: "Jakob Brilla (04'), Christopher Rühr (07'), Justus Weigand (10'), Justus Warweg (34' PC), Paul-Philipp Kaufmann (51') | Azrai Aizad Abu Kamal (40')",
-    previewUrl: "/matches/germany-vs-belgium",
+    venue: "Belfius Hockey Arena, Wavre (BEL)",
+    timeCET: "14:30 CEST (Local Time)",
+    scorers: "Jakob Brilla (03' PC), Christopher Rühr (04' FG), Justus Weigand (07' FG), Abu Kamal Azrai (39' PC), Justus Warweg (44' FG), Paul-Philipp Kaufmann (52' FG)",
     recapUrl: "/news/germany-vs-malaysia-result-score-august-15-hwc-2026"
   },
   {
-    id: 5,
+    id: 105,
     match: "Netherlands vs Chile",
     gender: "Women's Pool A (W3)",
     scoreA: 2,
@@ -102,13 +192,13 @@ const COMPLETED_MATCH_RESULTS = [
     flagA: "nl",
     teamB: "Chile",
     flagB: "cl",
-    venue: "Wagener Stadium, Amstelveen",
+    venue: "Wagener Stadium, Amstelveen (NED)",
+    timeCET: "16:00 CEST (Local Time)",
     scorers: "Felice Albers (19'), Yibbi Jansen (44' PC)",
-    previewUrl: "/news/womens-hwc-2026-august-15-results-scores",
-    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+    recapUrl: "/news/netherlands-vs-chile-women-result-score-august-15-hwc-2026"
   },
   {
-    id: 6,
+    id: 106,
     match: "Germany vs Scotland",
     gender: "Women's Pool B (W2)",
     scoreA: 3,
@@ -117,28 +207,13 @@ const COMPLETED_MATCH_RESULTS = [
     flagA: "de",
     teamB: "Scotland",
     flagB: "gb-sct",
-    venue: "Belfius Hockey Arena, Wavre",
+    venue: "Belfius Hockey Arena, Wavre (BEL)",
+    timeCET: "11:30 CEST (Local Time)",
     scorers: "Charlotte Stapenhorst (06', 29'), Nike Lorenz (48' PC)",
-    previewUrl: "/news/womens-hwc-2026-august-15-results-scores",
-    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+    recapUrl: "/news/germany-vs-scotland-women-result-score-august-15-hwc-2026"
   },
   {
-    id: 7,
-    match: "Australia vs Japan",
-    gender: "Women's Pool A (W1)",
-    scoreA: 2,
-    scoreB: 0,
-    teamA: "Australia",
-    flagA: "au",
-    teamB: "Japan",
-    flagB: "jp",
-    venue: "Wagener Stadium, Amstelveen",
-    scorers: "Claire Colwill (27' PC, 50' PC)",
-    previewUrl: "/news/womens-hwc-2026-august-15-results-scores",
-    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
-  },
-  {
-    id: 8,
+    id: 107,
     match: "Argentina vs USA",
     gender: "Women's Pool B (W4)",
     scoreA: 1,
@@ -147,10 +222,25 @@ const COMPLETED_MATCH_RESULTS = [
     flagA: "ar",
     teamB: "United States",
     flagB: "us",
-    venue: "Belfius Hockey Arena, Wavre",
-    scorers: "Agustina Gorzelany (14' PC) | Ashley Sessa (44')",
-    previewUrl: "/news/womens-hwc-2026-august-15-results-scores",
-    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+    venue: "Belfius Hockey Arena, Wavre (BEL)",
+    timeCET: "17:30 CEST (Local Time)",
+    scorers: "Agustina Bruggesser (14' PC) | Phia Deberdine (44' FG)",
+    recapUrl: "/news/argentina-vs-usa-women-result-score-august-15-hwc-2026"
+  },
+  {
+    id: 108,
+    match: "Australia vs Japan",
+    gender: "Women's Pool A (W1)",
+    scoreA: 2,
+    scoreB: 0,
+    teamA: "Australia",
+    flagA: "au",
+    teamB: "Japan",
+    flagB: "jp",
+    venue: "Wagener Stadium, Amstelveen (NED)",
+    timeCET: "10:00 CEST (Local Time)",
+    scorers: "Claire Colwill (27' PC, 50' PC)",
+    recapUrl: "/news/australia-vs-japan-women-result-score-august-15-hwc-2026"
   }
 ];
 
@@ -252,7 +342,7 @@ export default function LiveScoresPage() {
       />
 
       {/* Real-Time Client Component with Live WebSockets/Polling Tracker */}
-      <LiveScoresClient />
+      <LiveScoresClient initialCompleted={COMPLETED_MATCH_RESULTS} />
 
       {/* STATIC SSR TEXT & TOURNAMENT HUBS SECTION (FOR GOOGLEBOT INDEXING & SPECTATORS) */}
       <div className="live-scores-container pb-12">
