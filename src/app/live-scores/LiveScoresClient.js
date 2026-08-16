@@ -8,6 +8,10 @@ const DEFAULT_LIVE_MATCHES = [
     status: "LIVE",
     period: "3rd Quarter",
     minute: "38'",
+    quarterNumber: 3,
+    elapsedMinutes: 38,
+    timeCET: "08:30 CET",
+    localTimes: "12:00 IST / 11:30 PST / 16:30 AEST",
     gender: "Men's Pool C",
     teamA: "Australia",
     flagA: "au",
@@ -32,6 +36,10 @@ const DEFAULT_LIVE_MATCHES = [
     status: "LIVE",
     period: "1st Quarter",
     minute: "12'",
+    quarterNumber: 1,
+    elapsedMinutes: 12,
+    timeCET: "10:00 CET",
+    localTimes: "13:30 IST / 13:00 PST / 16:00 CST",
     gender: "Women's Pool D",
     teamA: "China",
     flagA: "cn",
@@ -56,6 +64,7 @@ const DEFAULT_UPCOMING_TODAY = [
     id: 203,
     status: "UPCOMING",
     timeCET: "11:30 CET",
+    localTimes: "15:00 IST / 14:30 PST",
     match: "Spain vs South Africa",
     gender: "Men's Pool C",
     teamA: "Spain",
@@ -69,6 +78,7 @@ const DEFAULT_UPCOMING_TODAY = [
     id: 204,
     status: "UPCOMING",
     timeCET: "13:00 CET",
+    localTimes: "16:30 IST / 16:00 PST / 23:00 NZST",
     match: "Netherlands vs New Zealand",
     gender: "Men's Pool A",
     teamA: "Netherlands",
@@ -82,6 +92,7 @@ const DEFAULT_UPCOMING_TODAY = [
     id: 205,
     status: "UPCOMING",
     timeCET: "14:30 CET",
+    localTimes: "18:00 IST / 17:30 PST",
     match: "Belgium vs New Zealand",
     gender: "Women's Pool C",
     teamA: "Belgium",
@@ -95,6 +106,7 @@ const DEFAULT_UPCOMING_TODAY = [
     id: 206,
     status: "UPCOMING",
     timeCET: "16:00 CET",
+    localTimes: "19:30 IST / 19:00 PST / 23:00 JST",
     match: "Argentina vs Japan",
     gender: "Men's Pool A",
     teamA: "Argentina",
@@ -243,6 +255,15 @@ export default function LiveScoresClient() {
   const [completedMatches, setCompletedMatches] = useState(DEFAULT_COMPLETED_RESULTS);
   const [activeFilter, setActiveFilter] = useState("all");
   const [lastSyncTime, setLastSyncTime] = useState("");
+  const [runningSeconds, setRunningSeconds] = useState(28);
+
+  // Live seconds ticker effect
+  useEffect(() => {
+    const secTimer = setInterval(() => {
+      setRunningSeconds((prev) => (prev >= 59 ? 0 : prev + 1));
+    }, 1000);
+    return () => clearInterval(secTimer);
+  }, []);
 
   const fetchScores = async () => {
     try {
@@ -271,6 +292,8 @@ export default function LiveScoresClient() {
     return () => clearInterval(interval);
   }, []);
 
+  const formatSeconds = (sec) => (sec < 10 ? `0${sec}` : `${sec}`);
+
   return (
     <div>
       {/* Hero Live Header Banner */}
@@ -284,7 +307,7 @@ export default function LiveScoresClient() {
             Hockey World Cup 2026 Live Scores & Match Results
           </h1>
           <p className="hero-description" style={{ color: "#475569", fontSize: "1.05rem", maxWidth: "800px", margin: "0 auto 1.5rem auto", lineHeight: "1.6" }}>
-            Follow quarter-by-quarter live scorecards, real-time penalty corner conversion rates, goal timelines, official results, and upcoming match fixtures.
+            Follow live quarter-by-quarter timers, elapsed match duration, real-time penalty corner conversion rates, goal timelines, official results, and today's upcoming pushbacks.
           </p>
 
           <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
@@ -400,7 +423,7 @@ export default function LiveScoresClient() {
                 </h2>
               </div>
               <span style={{ fontSize: "0.78rem", color: "#b91c1c", background: "#fee2e2", padding: "0.3rem 0.75rem", borderRadius: "6px", fontWeight: "800" }}>
-                2 Matches Active Now
+                {liveMatches.length} Matches Active Now
               </span>
             </div>
 
@@ -413,17 +436,26 @@ export default function LiveScoresClient() {
                   padding: "1.5rem",
                   position: "relative"
                 }}>
-                  {/* Card Header */}
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem", borderBottom: "1px solid #e2e8f0", paddingBottom: "0.6rem" }}>
+                  {/* Card Header with Elapsed Match Time */}
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem", borderBottom: "1px solid #e2e8f0", paddingBottom: "0.75rem", flexWrap: "wrap", gap: "0.5rem" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                      <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#22c55e" }}></span>
-                      <strong style={{ color: "#16a34a", fontSize: "0.82rem", textTransform: "uppercase", fontWeight: "900" }}>
+                      <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#22c55e", boxShadow: "0 0 8px #22c55e" }}></span>
+                      <strong style={{ color: "#15803d", fontSize: "0.88rem", textTransform: "uppercase", fontWeight: "900", letterSpacing: "0.03em" }}>
                         {match.period} · {match.minute}
                       </strong>
+                      <span style={{ background: "#dcfce7", color: "#166534", fontSize: "0.74rem", fontWeight: "800", padding: "0.15rem 0.5rem", borderRadius: "4px" }}>
+                        ⏱️ {match.elapsedMinutes || 38} mins elapsed ({60 - (match.elapsedMinutes || 38)}' remaining)
+                      </span>
                     </div>
-                    <span style={{ background: "#e0f2fe", color: "#0369a1", fontWeight: "800", fontSize: "0.72rem", padding: "0.2rem 0.55rem", borderRadius: "4px" }}>
-                      {match.gender}
-                    </span>
+
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.4rem" }}>
+                      <span style={{ background: "#e0f2fe", color: "#0369a1", fontWeight: "800", fontSize: "0.72rem", padding: "0.2rem 0.55rem", borderRadius: "4px" }}>
+                        {match.gender}
+                      </span>
+                      <span style={{ background: "#f1f5f9", color: "#334155", fontWeight: "800", fontSize: "0.72rem", padding: "0.2rem 0.55rem", borderRadius: "4px" }}>
+                        Pushback: {match.timeCET}
+                      </span>
+                    </div>
                   </div>
 
                   {/* 3-Column Scoreboard Grid */}
@@ -434,7 +466,7 @@ export default function LiveScoresClient() {
                     gap: "1rem",
                     width: "100%",
                     background: "#ffffff",
-                    padding: "1rem",
+                    padding: "1.1rem",
                     borderRadius: "12px",
                     border: "1px solid #e2e8f0"
                   }}>
@@ -449,21 +481,22 @@ export default function LiveScoresClient() {
                       </div>
                     </div>
 
-                    {/* Live Score Display */}
+                    {/* Live Score Display with Live Clock Ticker */}
                     <div style={{
                       textAlign: "center",
-                      padding: "0.4rem 1.1rem",
+                      padding: "0.5rem 1.25rem",
                       background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
-                      borderRadius: "10px",
+                      borderRadius: "12px",
                       color: "#ffffff",
-                      minWidth: "100px",
-                      flexShrink: 0
+                      minWidth: "120px",
+                      flexShrink: 0,
+                      boxShadow: "0 4px 12px rgba(0,0,0,0.15)"
                     }}>
-                      <span style={{ fontSize: "1.5rem", fontWeight: "900", letterSpacing: "0.08em", whiteSpace: "nowrap", display: "block" }}>
+                      <span style={{ fontSize: "1.65rem", fontWeight: "900", letterSpacing: "0.08em", whiteSpace: "nowrap", display: "block" }}>
                         {match.scoreA} - {match.scoreB}
                       </span>
-                      <span style={{ display: "block", fontSize: "0.62rem", color: "#4ade80", fontWeight: "800", textTransform: "uppercase" }}>
-                        ● LIVE CLOCK
+                      <span style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontSize: "0.68rem", color: "#4ade80", fontWeight: "800", textTransform: "uppercase", background: "rgba(255,255,255,0.08)", padding: "0.15rem 0.5rem", borderRadius: "4px", marginTop: "0.2rem" }}>
+                        ● {match.minute.replace("'", "")}:{formatSeconds(runningSeconds)} CLOCK
                       </span>
                     </div>
 
@@ -495,27 +528,46 @@ export default function LiveScoresClient() {
                     </div>
                   )}
 
-                  {/* Realtime Stats */}
-                  {match.stats && (
-                    <div style={{ marginTop: "0.85rem", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "0.6rem", background: "#ffffff", padding: "0.6rem 0.85rem", borderRadius: "10px", border: "1px solid #e2e8f0" }}>
-                      <div style={{ textAlign: "center" }}>
-                        <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block" }}>Possession</span>
-                        <strong style={{ fontSize: "0.85rem", color: "#0f172a" }}>{match.stats.possession}</strong>
-                      </div>
-                      <div style={{ textAlign: "center" }}>
-                        <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block" }}>Penalty Corners</span>
-                        <strong style={{ fontSize: "0.85rem", color: "var(--primary)" }}>{match.stats.penaltyCorners}</strong>
-                      </div>
-                      <div style={{ textAlign: "center" }}>
-                        <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block" }}>Shots on Target</span>
-                        <strong style={{ fontSize: "0.85rem", color: "#0f172a" }}>{match.stats.shotsOnTarget}</strong>
-                      </div>
-                      <div style={{ textAlign: "center" }}>
-                        <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block" }}>Venue</span>
-                        <strong style={{ fontSize: "0.75rem", color: "#0f172a", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", display: "block" }}>📍 {match.venue}</strong>
-                      </div>
+                  {/* Comprehensive Timing & Realtime Match Stats Bar */}
+                  <div style={{ marginTop: "0.85rem", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "0.6rem", background: "#ffffff", padding: "0.75rem 0.9rem", borderRadius: "10px", border: "1px solid #e2e8f0" }}>
+                    {/* Time Stat 1: Match Duration */}
+                    <div style={{ textAlign: "center", borderRight: "1px solid #f1f5f9" }}>
+                      <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block", fontWeight: "600" }}>⏱️ Current Time</span>
+                      <strong style={{ fontSize: "0.85rem", color: "#16a34a" }}>
+                        {match.elapsedMinutes || 38}' ({match.period})
+                      </strong>
                     </div>
-                  )}
+
+                    {/* Time Stat 2: Pushback */}
+                    <div style={{ textAlign: "center", borderRight: "1px solid #f1f5f9" }}>
+                      <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block", fontWeight: "600" }}>⏰ Pushback Start</span>
+                      <strong style={{ fontSize: "0.82rem", color: "#0f172a" }}>{match.timeCET}</strong>
+                    </div>
+
+                    {/* Stat 3: Possession */}
+                    <div style={{ textAlign: "center", borderRight: "1px solid #f1f5f9" }}>
+                      <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block", fontWeight: "600" }}>📊 Possession</span>
+                      <strong style={{ fontSize: "0.85rem", color: "#0f172a" }}>{match.stats ? match.stats.possession : "50% - 50%"}</strong>
+                    </div>
+
+                    {/* Stat 4: Penalty Corners */}
+                    <div style={{ textAlign: "center", borderRight: "1px solid #f1f5f9" }}>
+                      <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block", fontWeight: "600" }}>🏑 Penalty Corners</span>
+                      <strong style={{ fontSize: "0.85rem", color: "var(--primary)" }}>{match.stats ? match.stats.penaltyCorners : "0 - 0"}</strong>
+                    </div>
+
+                    {/* Stat 5: Shots on Target */}
+                    <div style={{ textAlign: "center", borderRight: "1px solid #f1f5f9" }}>
+                      <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block", fontWeight: "600" }}>🎯 Shots on Goal</span>
+                      <strong style={{ fontSize: "0.85rem", color: "#0f172a" }}>{match.stats ? match.stats.shotsOnTarget : "0 - 0"}</strong>
+                    </div>
+
+                    {/* Stat 6: Venue */}
+                    <div style={{ textAlign: "center" }}>
+                      <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block", fontWeight: "600" }}>📍 Stadium</span>
+                      <strong style={{ fontSize: "0.75rem", color: "#0f172a", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", display: "block" }}>{match.venue.split(",")[0]}</strong>
+                    </div>
+                  </div>
                 </div>
               ))}
             </div>
@@ -554,7 +606,7 @@ export default function LiveScoresClient() {
                   {/* Card Sub-Header */}
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.6rem" }}>
                     <span style={{ background: "#fef3c7", color: "#92400e", fontWeight: "800", fontSize: "0.72rem", padding: "0.2rem 0.55rem", borderRadius: "4px" }}>
-                      ⏳ {match.timeCET}
+                      ⏳ Pushback: {match.timeCET}
                     </span>
                     <span style={{ background: "#e2e8f0", color: "#334155", fontSize: "0.72rem", fontWeight: "800", padding: "0.2rem 0.55rem", borderRadius: "4px" }}>
                       {match.gender}
@@ -562,7 +614,7 @@ export default function LiveScoresClient() {
                   </div>
 
                   <div style={{ fontSize: "0.74rem", color: "#64748b", marginBottom: "0.85rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                    📍 {match.venue}
+                    📍 {match.venue} {match.localTimes && `· (${match.localTimes})`}
                   </div>
 
                   {/* 3-Column Match Teams Box */}
