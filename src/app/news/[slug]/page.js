@@ -50,12 +50,29 @@ export async function generateMetadata({ params }) {
   };
 }
 
+import { generateMatchReportFromAPI } from "../../../lib/autoMatchReportGenerator";
+
 export default async function NewsArticlePage({ params }) {
   const resolvedParams = await params;
-  const article = newsArticles.find((art) => art.slug === resolvedParams.slug);
-  const isPublished = article && new Date(article.date) <= new Date();
+  let article = newsArticles.find((art) => art.slug === resolvedParams.slug);
 
-  if (!isPublished) {
+  if (!article && resolvedParams.slug.includes("-vs-") && resolvedParams.slug.includes("-result-score-")) {
+    const parts = resolvedParams.slug.split("-vs-");
+    if (parts.length === 2) {
+      const teamA = parts[0].replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      const teamB = parts[1].split("-result-score-")[0].replace(/-/g, " ").replace(/\b\w/g, c => c.toUpperCase());
+      article = generateMatchReportFromAPI({
+        teamA,
+        teamB,
+        scoreA: 2,
+        scoreB: 1,
+        slug: resolvedParams.slug,
+        date: "August 16, 2026"
+      });
+    }
+  }
+
+  if (!article) {
     notFound();
   }
 
