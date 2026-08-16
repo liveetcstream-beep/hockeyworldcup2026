@@ -4,23 +4,6 @@ import React, { useState, useEffect } from "react";
 
 const INITIAL_COMPLETED_RESULTS = [
   {
-    id: 205,
-    status: "FINAL",
-    match: "Belgium vs New Zealand",
-    gender: "Women's Pool C (W7)",
-    scoreA: 2,
-    scoreB: 1,
-    teamA: "Belgium",
-    flagA: "be",
-    teamB: "New Zealand",
-    flagB: "nz",
-    venue: "Belfius Hockey Arena, Wavre (BEL)",
-    timeCET: "17:30 CET (Local Time)",
-    date: "Aug 16 · FT",
-    scorers: "Charlotte Englebert (19'), Ambre Ballenghien (41' PC) | Olivia Merry (28' PC)",
-    recapUrl: "/womens-tournament"
-  },
-  {
     id: 204,
     status: "FINAL",
     match: "Netherlands vs New Zealand",
@@ -245,9 +228,24 @@ const INITIAL_COMPLETED_RESULTS = [
 
 const INITIAL_UPCOMING_TODAY = [
   {
-    id: 206,
+    id: 205,
     status: "UPCOMING",
     isNext: true,
+    timeCET: "17:30 CET",
+    localTimes: "20:30 PKT / 21:00 IST / 16:30 BST",
+    match: "Belgium vs New Zealand",
+    gender: "Women's Pool C (W7)",
+    teamA: "Belgium",
+    flagA: "be",
+    teamB: "New Zealand",
+    flagB: "nz",
+    venue: "Belfius Hockey Arena, Wavre (Belgium)",
+    previewUrl: "/womens-tournament"
+  },
+  {
+    id: 206,
+    status: "UPCOMING",
+    isNext: false,
     timeCET: "19:00 CET",
     localTimes: "22:00 PKT / 22:30 IST / 02:00 JST",
     match: "Argentina vs Japan",

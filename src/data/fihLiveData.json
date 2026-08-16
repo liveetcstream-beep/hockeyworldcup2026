@@ -147,12 +147,13 @@
     {
       "id": 205,
       "slug": "belgium-vs-new-zealand-women",
-      "status": "FINAL",
+      "status": "UPCOMING",
+      "isNext": true,
       "match": "Belgium vs New Zealand",
       "gender": "Women",
       "pool": "Pool C (Women - W7)",
-      "scoreA": 2,
-      "scoreB": 1,
+      "scoreA": 0,
+      "scoreB": 0,
       "teamA": "Belgium",
       "flagA": "be",
       "teamB": "New Zealand",
@@ -161,11 +162,11 @@
       "timePKT": "20:30 PKT",
       "timeIST": "21:00 IST",
       "venue": "Belfius Hockey Arena, Wavre (BEL)",
-      "scorers": "Charlotte Englebert (19'), Ambre Ballenghien (41' PC) | Olivia Merry (28' PC)",
+      "scorers": "",
       "stats": {
-        "possession": "55% - 45%",
-        "penaltyCorners": "5 (1) - 3 (1)",
-        "shotsOnTarget": "7 - 4"
+        "possession": "0% - 0%",
+        "penaltyCorners": "0 - 0",
+        "shotsOnTarget": "0 - 0"
       },
       "recapUrl": "/womens-tournament"
     },
