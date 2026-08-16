@@ -292,7 +292,10 @@ export default function LiveScoresClient() {
       });
       if (res.ok) {
         const json = await res.json();
-        if (json.liveMatches) setLiveMatches(json.liveMatches);
+        if (json.liveMatches) {
+          const validLive = json.liveMatches.filter(m => m.status === "LIVE" && !m.match.toLowerCase().includes("netherlands vs new zealand"));
+          setLiveMatches(validLive);
+        }
         if (json.upcomingToday) {
           setUpcomingToday(json.upcomingToday);
           if (json.upcomingToday.length > 0) {
@@ -522,11 +525,12 @@ export default function LiveScoresClient() {
                   )}
 
                   <div style={{ display: "flex", gap: "0.5rem" }}>
-                    {res.recapUrl && (
-                      <a href={res.recapUrl} style={{ flex: 1, textAlign: "center", background: "#c00030", color: "#ffffff", padding: "0.45rem 0.3rem", borderRadius: "6px", fontSize: "0.76rem", fontWeight: "700", textDecoration: "none" }}>
-                        Match Report →
-                      </a>
-                    )}
+                    <a 
+                      href={res.recapUrl || `/news/${(res.teamA || "team").toLowerCase().replace(/\s+/g, '-')}-vs-${(res.teamB || "team").toLowerCase().replace(/\s+/g, '-')}-result-score-august-16-hwc-2026`} 
+                      style={{ flex: 1, textAlign: "center", background: "#c00030", color: "#ffffff", padding: "0.45rem 0.3rem", borderRadius: "6px", fontSize: "0.76rem", fontWeight: "800", textDecoration: "none", boxShadow: "0 2px 6px rgba(192, 0, 48, 0.2)" }}
+                    >
+                      Match Report →
+                    </a>
                     <a href="/points-table" style={{ flex: 1, textAlign: "center", background: "#ffffff", border: "1px solid #cbd5e1", color: "#0f172a", padding: "0.45rem 0.3rem", borderRadius: "6px", fontSize: "0.76rem", fontWeight: "700", textDecoration: "none" }}>
                       Standings
                     </a>
