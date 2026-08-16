@@ -18,7 +18,7 @@ const INITIAL_COMPLETED_RESULTS = [
     timeCET: "16:00 CET (Local Time)",
     date: "Aug 16 · FT",
     scorers: "Thierry Brinkman (08'), Jip Janssen (24' PC), Koen Bijen (51') | Sam Lane (39' PC)",
-    recapUrl: "/schedule"
+    recapUrl: "/news/netherlands-vs-new-zealand-result-score-august-16-hwc-2026"
   },
   {
     id: 203,

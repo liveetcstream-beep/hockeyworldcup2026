@@ -118,7 +118,7 @@ export async function GET(request) {
         timeCET: "16:00 CET (Local Time)",
         scorers: "Felice Albers (19'), Yibbi Jansen (44' PC)",
         stats: { possession: "68% - 32%", penaltyCorners: "8 (1) - 1 (0)", shotsOnTarget: "14 - 2" },
-        recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+        recapUrl: "/news/netherlands-vs-chile-women-result-score-august-15-hwc-2026"
       },
       {
         id: 106,
@@ -135,7 +135,7 @@ export async function GET(request) {
         timeCET: "11:30 CET (Local Time)",
         scorers: "Charlotte Stapenhorst (06', 29'), Nike Lorenz (48' PC)",
         stats: { possession: "64% - 36%", penaltyCorners: "6 (1) - 2 (0)", shotsOnTarget: "11 - 2" },
-        recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+        recapUrl: "/news/germany-vs-scotland-women-result-score-august-15-hwc-2026"
       },
       {
         id: 107,
@@ -152,7 +152,7 @@ export async function GET(request) {
         timeCET: "17:30 CET (Local Time)",
         scorers: "Agustina Gorzelany (14' PC) | Ashley Sessa (44')",
         stats: { possession: "55% - 45%", penaltyCorners: "5 (1) - 4 (0)", shotsOnTarget: "7 - 5" },
-        recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+        recapUrl: "/news/argentina-vs-usa-women-result-score-august-15-hwc-2026"
       },
       {
         id: 108,
@@ -169,7 +169,7 @@ export async function GET(request) {
         timeCET: "10:00 CET (Local Time)",
         scorers: "Claire Colwill (27' PC, 50' PC)",
         stats: { possession: "54% - 46%", penaltyCorners: "5 (2) - 3 (0)", shotsOnTarget: "7 - 4" },
-        recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+        recapUrl: "/news/australia-vs-japan-women-result-score-august-15-hwc-2026"
       }
     ];
 
