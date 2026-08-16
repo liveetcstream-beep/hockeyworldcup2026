@@ -4,6 +4,23 @@ import React, { useState, useEffect } from "react";
 
 const INITIAL_COMPLETED_RESULTS = [
   {
+    id: 205,
+    status: "FINAL",
+    match: "Belgium vs New Zealand",
+    gender: "Women's Pool C (W7)",
+    scoreA: 5,
+    scoreB: 2,
+    teamA: "Belgium",
+    flagA: "be",
+    teamB: "New Zealand",
+    flagB: "nz",
+    venue: "Belfius Hockey Arena, Wavre (BEL)",
+    timeCET: "17:30 CET (Local Time)",
+    date: "Aug 16 · FT",
+    scorers: "Charlotte Englebert (08' FG, 41' PC), Stephanie Vanden Borre (19' PC, 54' PC), Michelle Struijk (33') | Hope Ralph (24' PC), Olivia Shannon (50' FG)",
+    recapUrl: "/news/belgium-vs-new-zealand-result-score-august-16-hwc-2026"
+  },
+  {
     id: 204,
     status: "FINAL",
     match: "Netherlands vs New Zealand",

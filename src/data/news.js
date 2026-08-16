@@ -5,7 +5,7 @@ export const newsArticles = [
   // ============================================================
 
   {
-    title: "Belgium vs New Zealand Women Result & Score: Red Panthers Defeat Black Sticks 2-1 in Pool C Opener at Belfius Arena",
+    title: "Belgium vs New Zealand Women Result & Score: Red Panthers Thrash Black Sticks 5-2 in Pool C Opener at Belfius Arena",
     slug: "belgium-vs-new-zealand-result-score-august-16-hwc-2026",
     category: "Match Result",
     author: "Marc Devos",
@@ -15,9 +15,9 @@ export const newsArticles = [
     lastModified: "August 16, 2026",
     readTime: "7 min read",
     image: "/news/belgium-squad-news.webp",
-    excerpt: "Co-host nation Belgium Women (Red Panthers) earned a hard-fought 2-1 victory over New Zealand (Vantage Black Sticks) in Women's Pool C at Belfius Hockey Arena in Wavre. Penalty corner strikes from Charlotte Englebert and Stephanie Vanden Borre secured three vital points.",
+    excerpt: "Co-host nation Belgium Women (Red Panthers) delivered a sensational 5-2 goal fest victory over New Zealand (Vantage Black Sticks) in Women's Pool C at Belfius Hockey Arena in Wavre. Braces from Charlotte Englebert and Stephanie Vanden Borre along with a Michelle Struijk strike sealed top spot.",
     content: `
-      <p>Co-hosts <strong>Belgium Women (Red Panthers)</strong> claimed a thrilling <strong>2–1 win</strong> over <strong>New Zealand (Vantage Black Sticks)</strong> in their opening <strong>FIH Hockey World Cup 2026 Pool C</strong> match at <strong>Belfius Hockey Arena in Wavre (Boulevard de l'Europe 50, 1300 Wavre, Walloon Brabant, Belgium)</strong> on Sunday evening, August 16, 2026.</p>
+      <p>Co-hosts <strong>Belgium Women (Red Panthers)</strong> put on a Masterclass attacking display to defeat <strong>New Zealand (Vantage Black Sticks) 5–2</strong> in their high-scoring <strong>FIH Hockey World Cup 2026 Pool C</strong> opener at <strong>Belfius Hockey Arena in Wavre (Boulevard de l'Europe 50, 1300 Wavre, Walloon Brabant, Belgium)</strong> on Sunday evening, August 16, 2026.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 8px;">
         <strong>✅ Verified by Marc Devos, Senior Belgian Hockey Journalist</strong><br/>
@@ -25,18 +25,22 @@ export const newsArticles = [
       </div>
 
       <h2>What was the final score in Belgium vs New Zealand Women?</h2>
-      <p><strong>Final Score:</strong> Belgium 2 – 1 New Zealand (Full Time: 60 minutes)</p>
+      <p><strong>Final Score:</strong> Belgium 5 – 2 New Zealand (Full Time: 60 minutes)</p>
       <ul>
-        <li><strong>12' ⚽ Goal (Belgium):</strong> Charlotte Englebert — Precision drag-flick off a penalty corner set piece.</li>
-        <li><strong>31' ⚽ Goal (New Zealand):</strong> Olivia Shannon — Field goal finish past Belgian goalkeeper Aisling D'Hooghe.</li>
-        <li><strong>48' ⚽ Goal (Belgium):</strong> Stephanie Vanden Borre — Powerful drag-flick into the top left corner off a penalty corner.</li>
+        <li><strong>08' ⚽ Goal (Belgium):</strong> Charlotte Englebert — Forehand strike into top netting off a rapid circle entry.</li>
+        <li><strong>19' ⚽ Goal (Belgium):</strong> Stephanie Vanden Borre — Drag-flick penalty corner low into bottom right corner.</li>
+        <li><strong>24' ⚽ Goal (New Zealand):</strong> Hope Ralph — Rebound goal off penalty corner flick.</li>
+        <li><strong>33' ⚽ Goal (Belgium):</strong> Michelle Struijk — Deflection inside the 5-meter mark.</li>
+        <li><strong>41' ⚽ Goal (Belgium):</strong> Charlotte Englebert — Reverse-stick tomhawk strike into upper netting.</li>
+        <li><strong>50' ⚽ Goal (New Zealand):</strong> Olivia Shannon — Field goal finish past Belgian goalkeeper Aisling D'Hooghe.</li>
+        <li><strong>54' ⚽ Goal (Belgium):</strong> Stephanie Vanden Borre — Rocket drag-flick penalty corner sealing the 5-2 scoreline.</li>
       </ul>
 
       <h2>Key Tactical Breakdown &amp; Pool C Standings Impact</h2>
-      <p>Raoul Ehren's side commanded <strong>57% ball possession</strong>, creating 9 shots on target and 6 penalty corners, converting 2 (33.3%). New Zealand pressed vigorously in Q4 but Belgian defense held firm. Track updated standings on our <a href="/points-table">Points Table Page</a>.</p>
+      <p>Raoul Ehren's side commanded <strong>58% ball possession</strong>, firing 12 shots on target and generating 7 penalty corners with a 42.8% conversion rate. Belgium claim provisional top spot in Women's Pool C. Track updated standings on our <a href="/points-table">Points Table Page</a>.</p>
 
       <h2>Spectator Transit Notice for Belfius Arena (1300 Wavre)</h2>
-      <p>Spectators attending matches in Wavre (postal code 1300) are advised to board official TEC shuttle buses operating every 10 minutes from Wavre railway station. On-street residential parking is restricted.</p>
+      <p>Spectators attending matches in Wavre (postal code 1300) are advised to board official TEC shuttle buses operating every 10 minutes from Wavre railway station. On-street residential parking is strictly regulated.</p>
 
       <h2>When is the next match?</h2>
       <p>Check complete upcoming match schedules and pushback times on our <a href="/schedule">Official Tournament Schedule</a>.</p>
@@ -44,11 +48,11 @@ export const newsArticles = [
     faqs: [
       {
         question: "What was the final score of Belgium vs New Zealand Women?",
-        answer: "Belgium defeated New Zealand 2-1 in Women's Pool C at Belfius Hockey Arena in Wavre."
+        answer: "Belgium defeated New Zealand 5-2 in Women's Pool C at Belfius Hockey Arena in Wavre."
       },
       {
         question: "Who scored for Belgium against New Zealand?",
-        answer: "Charlotte Englebert (12' PC) and Stephanie Vanden Borre (48' PC) scored for Belgium, while Olivia Shannon (31' FG) scored for New Zealand."
+        answer: "Charlotte Englebert (08', 41'), Stephanie Vanden Borre (19' PC, 54' PC), and Michelle Struijk (33') scored for Belgium."
       }
     ],
     tags: ["Belgium vs New Zealand", "HWC 2026", "Pool C", "Belfius Arena", "Match Result"]
