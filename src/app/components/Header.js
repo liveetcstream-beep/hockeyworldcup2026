@@ -1,12 +1,162 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+
+const INITIAL_STATIC_TICKER = [
+  {
+    badge: "FINAL (W7)",
+    type: "women",
+    match: "BEL 5 - 2 NZL",
+    flags: "🇧🇪 🇳🇿",
+    link: "/news/belgium-vs-new-zealand-result-score-august-16-hwc-2026"
+  },
+  {
+    badge: "FINAL (M7)",
+    type: "final",
+    match: "NED 3 - 1 NZL",
+    flags: "🇳🇱 🇳🇿",
+    link: "/news/netherlands-vs-new-zealand-result-score-august-16-hwc-2026"
+  },
+  {
+    badge: "FINAL (M6)",
+    type: "final",
+    match: "ESP 2 - 0 RSA",
+    flags: "🇪🇸 🇿🇦",
+    link: "/news/spain-vs-south-africa-result-score-august-16-hwc-2026"
+  },
+  {
+    badge: "FINAL (M5)",
+    type: "final",
+    match: "AUS 3 - 1 IRL",
+    flags: "🇦🇺 🇮🇪",
+    link: "/news/australia-vs-ireland-result-score-august-16-hwc-2026"
+  },
+  {
+    badge: "FINAL (W5)",
+    type: "women",
+    match: "ENG 4 - 0 RSA",
+    flags: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇿🇦",
+    link: "/news/england-vs-south-africa-result-score-august-16-hwc-2026"
+  },
+  {
+    badge: "FINAL (W6)",
+    type: "women",
+    match: "CHN 2 - 2 IND",
+    flags: "🇨🇳 🇮🇳",
+    link: "/news/china-vs-india-result-score-august-16-hwc-2026"
+  },
+  {
+    badge: "FINAL (M3)",
+    type: "final",
+    match: "ENG 4 - 1 PAK",
+    flags: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇵🇰",
+    link: "/news/england-vs-pakistan-result-score-august-15-hwc-2026"
+  },
+  {
+    badge: "FINAL (M1)",
+    type: "final",
+    match: "IND 3 - 1 WAL",
+    flags: "🇮🇳 🏴󠁧󠁢󠁷󠁬󠁳󠁿",
+    link: "/news/india-vs-wales-result-score-august-15-hwc-2026"
+  },
+  {
+    badge: "UPCOMING (W8)",
+    type: "upcoming",
+    match: "ESP vs IRL (20:30 CET · 1h from now)",
+    flags: "🇪🇸 🇮🇪",
+    link: "/pool-c"
+  },
+  {
+    badge: "UPCOMING (M8)",
+    type: "upcoming",
+    match: "ARG vs JPN (21:00 CET · 1.5h from now)",
+    flags: "🇦🇷 🇯🇵",
+    link: "/matches/australia-vs-argentina"
+  }
+];
+
+const FLAG_MAP = {
+  "Belgium": "🇧🇪", "New Zealand": "🇳🇿", "Netherlands": "🇳🇱", "Spain": "🇪🇸",
+  "South Africa": "🇿🇦", "Australia": "🇦🇺", "Ireland": "🇮🇪", "England": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+  "China": "🇨🇳", "India": "🇮🇳", "Germany": "🇩🇪", "France": "🇫🇷", "Malaysia": "🇲🇾",
+  "Pakistan": "🇵🇰", "Wales": "🏴󠁧󠁢󠁷󠁬󠁳󠁿", "Argentina": "🇦🇷", "Japan": "🇯🇵", "USA": "🇺🇸",
+  "Chile": "🇨🇱", "Scotland": "🏴󠁧󠁢󠁳󠁣󠁴󠁿"
+};
 
 export default function Header() {
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [isTeamsMobileOpen, setIsTeamsMobileOpen] = useState(false);
+  const [liveStatsTicker, setLiveStatsTicker] = useState(INITIAL_STATIC_TICKER);
+
+  useEffect(() => {
+    const fetchLiveTickerData = async () => {
+      try {
+        const res = await fetch(`/api/live-scores?t=${Date.now()}`, { cache: "no-store" });
+        if (res.ok) {
+          const json = await res.json();
+          const items = [];
+
+          // 1. Add active live matches if any
+          if (json.liveMatches && json.liveMatches.length > 0) {
+            json.liveMatches.forEach(m => {
+              const flagA = FLAG_MAP[m.teamA] || "🏑";
+              const flagB = FLAG_MAP[m.teamB] || "🏑";
+              items.push({
+                badge: "🔴 LIVE IN PROGRESS",
+                type: "live",
+                match: `${m.teamA} ${m.scoreA} - ${m.scoreB} ${m.teamB}`,
+                flags: `${flagA} ${flagB}`,
+                link: "/live-scores"
+              });
+            });
+          }
+
+          // 2. Add completed matches (recency sorted)
+          if (json.completedMatches && json.completedMatches.length > 0) {
+            json.completedMatches.slice(0, 10).forEach(m => {
+              const flagA = FLAG_MAP[m.teamA] || "🏑";
+              const flagB = FLAG_MAP[m.teamB] || "🏑";
+              const isWomen = (m.gender || "").toLowerCase().includes("women");
+              items.push({
+                badge: `FINAL (${isWomen ? "W" : "M"})`,
+                type: isWomen ? "women" : "final",
+                match: `${m.teamA} ${m.scoreA} - ${m.scoreB} ${m.teamB}`,
+                flags: `${flagA} ${flagB}`,
+                link: m.recapUrl || "/past-results"
+              });
+            });
+          }
+
+          // 3. Add upcoming matches
+          if (json.upcomingToday && json.upcomingToday.length > 0) {
+            json.upcomingToday.forEach(m => {
+              const flagA = FLAG_MAP[m.teamA] || "🏑";
+              const flagB = FLAG_MAP[m.teamB] || "🏑";
+              items.push({
+                badge: "UPCOMING",
+                type: "upcoming",
+                match: `${m.teamA} vs ${m.teamB} (${m.timeCET || "Scheduled"})`,
+                flags: `${flagA} ${flagB}`,
+                link: "/live-scores"
+              });
+            });
+          }
+
+          if (items.length > 0) {
+            setLiveStatsTicker(items);
+          }
+        }
+      } catch (e) {
+        console.error("Failed to update top ticker:", e);
+      }
+    };
+
+    fetchLiveTickerData();
+    const interval = setInterval(fetchLiveTickerData, 20000);
+    return () => clearInterval(interval);
+  }, []);
 
   const teamsList = [
     { name: "India", slug: "india", flag: "🇮🇳" },
@@ -29,133 +179,6 @@ export default function Header() {
     { name: "USA", slug: "usa", flag: "🇺🇸" },
     { name: "Japan", slug: "japan", flag: "🇯🇵" },
     { name: "Scotland", slug: "scotland", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿" },
-  ];
-
-  const liveStatsTicker = [
-    {
-      badge: "FINAL (W6)",
-      type: "women",
-      match: "CHN 2 - 2 IND",
-      flags: "🇨🇳 🇮🇳",
-      stat: "Gu Bingfeng 18', 48' (PC) | Deepika 12', Udita 41' (PC)",
-      link: "/news/china-vs-india-women-result-score-august-16-hwc-2026"
-    },
-    {
-      badge: "FINAL (M6)",
-      type: "final",
-      match: "ESP 2 - 0 RSA",
-      flags: "🇪🇸 🇿🇦",
-      stat: "Marc Miralles 14' (PC), Pere Amat 52'",
-      link: "/news/spain-vs-south-africa-result-score-august-16-hwc-2026"
-    },
-    {
-      badge: "FINAL (M5)",
-      type: "final",
-      match: "AUS 3 - 1 IRL",
-      flags: "🇦🇺 🇮🇪",
-      stat: "Blake Govers 11' (PC), Jeremy Hayward 35', Tim Brand 52' | Lee Cole 24' (PC)",
-      link: "/news/australia-vs-ireland-result-score-august-16-hwc-2026"
-    },
-    {
-      badge: "FINAL (W5)",
-      type: "women",
-      match: "ENG 4 - 0 RSA",
-      flags: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇿🇦",
-      stat: "Ansley 14' (PC), Martin 28', Owsley 41', Howard 52'",
-      link: "/news/england-vs-south-africa-women-result-score-august-16-hwc-2026"
-    },
-    {
-      badge: "FINAL (M3)",
-      type: "final",
-      match: "ENG 4 - 1 PAK",
-      flags: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇵🇰",
-      stat: "Rushmere 14', Ward 29' (PC), Hooper 41' (PC), Albery 56' | Afraz 33'",
-      link: "/news/england-vs-pakistan-result-score-august-15-hwc-2026"
-    },
-    {
-      badge: "FINAL (M1)",
-      type: "final",
-      match: "IND 3 - 1 WAL",
-      flags: "🇮🇳 🏴󠁧󠁢󠁷󠁬󠁳󠁿",
-      stat: "Sanjay 08' (PC), Harmanpreet 11' (PC), 43' (PC) | Welsh 56'",
-      link: "/news/india-vs-wales-result-score-august-15-hwc-2026"
-    },
-    {
-      badge: "FINAL (M4)",
-      type: "final",
-      match: "BEL 3 - 2 FRA",
-      flags: "🇧🇪 🇫🇷",
-      stat: "Onana 17', Duvekot 44', Hendrickx 56' (PC) | Curty 03', Clément 18'",
-      link: "/news/belgium-vs-france-result-score-august-15-hwc-2026"
-    },
-    {
-      badge: "FINAL (M2)",
-      type: "final",
-      match: "GER 5 - 1 MAS",
-      flags: "🇩🇪 🇲🇾",
-      stat: "Brilla 04', Rühr 07', Weigand 10', Warweg 34' (PC), Kaufmann 51' | Azrai 40'",
-      link: "/news/germany-vs-malaysia-result-score-august-15-hwc-2026"
-    },
-    {
-      badge: "FINAL (W3)",
-      type: "women",
-      match: "NED 2 - 0 CHI",
-      flags: "🇳🇱 🇨🇱",
-      stat: "Albers 19', Jansen 44' (PC)",
-      link: "/news/womens-hwc-2026-august-15-results-scores"
-    },
-    {
-      badge: "FINAL (W2)",
-      type: "women",
-      match: "GER 3 - 0 SCO",
-      flags: "🇩🇪 🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-      stat: "Stapenhorst 06', 29', Lorenz 48' (PC)",
-      link: "/news/womens-hwc-2026-august-15-results-scores"
-    },
-    {
-      badge: "FINAL (W1)",
-      type: "women",
-      match: "AUS 2 - 0 JPN",
-      flags: "🇦🇺 🇯🇵",
-      stat: "Claire Colwill 27' (PC), 50' (PC)",
-      link: "/news/womens-hwc-2026-august-15-results-scores"
-    },
-    {
-      badge: "FINAL (W4)",
-      type: "women",
-      match: "ARG 1 - 1 USA",
-      flags: "🇦🇷 🇺🇸",
-      stat: "Gorzelany 14' (PC) | Ashley Sessa 44'",
-      link: "/news/womens-hwc-2026-august-15-results-scores"
-    },
-    {
-      badge: "UPCOMING (M9)",
-      type: "upcoming",
-      match: "IND vs ENG (Aug 17 · 15:00 CET)",
-      flags: "🇮🇳 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      link: "/matches/india-vs-england"
-    },
-    {
-      badge: "UPCOMING (M11)",
-      type: "upcoming",
-      match: "GER vs BEL (Aug 17 · 20:30 CET)",
-      flags: "🇩🇪 🇧🇪",
-      link: "/matches/germany-vs-belgium"
-    },
-    {
-      badge: "UPCOMING (W11)",
-      type: "upcoming",
-      match: "NED vs AUS (Aug 17 · 18:00 CET)",
-      flags: "🇳🇱 🇦🇺",
-      link: "/matches/netherlands-vs-australia-women"
-    },
-    {
-      badge: "UPCOMING (M15)",
-      type: "upcoming",
-      match: "PAK vs IND (Aug 19 · 15:00 CET)",
-      flags: "🇵🇰 🇮🇳",
-      link: "/matches/india-vs-pakistan"
-    }
   ];
 
   const filteredSuggestions = searchQuery
