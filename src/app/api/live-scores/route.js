@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
+import { fetchFIHTMSLiveScores } from "@/lib/fihTmsScraper";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -8,13 +9,27 @@ export const revalidate = 0;
 export async function GET(request) {
   try {
     let todayMatches = [];
-    const dataFilePath = path.join(process.cwd(), "src/data/fihLiveData.json");
+    
+    // Attempt to fetch live scores directly from official FIH TMS
+    try {
+      const tmsMatches = await fetchFIHTMSLiveScores();
+      if (tmsMatches && tmsMatches.length > 0) {
+        todayMatches = tmsMatches;
+      }
+    } catch (e) {
+      console.warn("FIH TMS live fetch fallback to local store:", e);
+    }
 
-    if (fs.existsSync(dataFilePath)) {
-      const fileContent = fs.readFileSync(dataFilePath, "utf8");
-      const parsed = JSON.parse(fileContent);
-      if (parsed.matchday2 && Array.isArray(parsed.matchday2) && parsed.matchday2.length > 0) {
-        todayMatches = parsed.matchday2;
+    // Fallback to local data if live fetch returns empty
+    if (todayMatches.length === 0) {
+      const dataFilePath = path.join(process.cwd(), "src/data/fihLiveData.json");
+
+      if (fs.existsSync(dataFilePath)) {
+        const fileContent = fs.readFileSync(dataFilePath, "utf8");
+        const parsed = JSON.parse(fileContent);
+        if (parsed.matchday2 && Array.isArray(parsed.matchday2) && parsed.matchday2.length > 0) {
+          todayMatches = parsed.matchday2;
+        }
       }
     }
 

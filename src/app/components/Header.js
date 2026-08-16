@@ -33,6 +33,38 @@ export default function Header() {
 
   const liveStatsTicker = [
     {
+      badge: "FINAL (W6)",
+      type: "women",
+      match: "CHN 2 - 2 IND",
+      flags: "🇨🇳 🇮🇳",
+      stat: "Gu Bingfeng 18', 48' (PC) | Deepika 12', Udita 41' (PC)",
+      link: "/news/china-vs-india-women-result-score-august-16-hwc-2026"
+    },
+    {
+      badge: "FINAL (M6)",
+      type: "final",
+      match: "ESP 2 - 0 RSA",
+      flags: "🇪🇸 🇿🇦",
+      stat: "Marc Miralles 14' (PC), Pere Amat 52'",
+      link: "/news/spain-vs-south-africa-result-score-august-16-hwc-2026"
+    },
+    {
+      badge: "FINAL (M5)",
+      type: "final",
+      match: "AUS 2 - 1 IRL",
+      flags: "🇦🇺 🇮🇪",
+      stat: "Blake Govers 11' (PC), Jeremy Hayward 35' | Lee Cole 24' (PC)",
+      link: "/news/australia-vs-ireland-result-score-august-16-hwc-2026"
+    },
+    {
+      badge: "FINAL (W5)",
+      type: "women",
+      match: "ENG 4 - 0 RSA",
+      flags: "🏴󠁧󠁢󠁥󠁮󠁧󠁿 🇿🇦",
+      stat: "Ansley 14' (PC), Martin 28', Owsley 41', Howard 52'",
+      link: "/news/england-vs-south-africa-women-result-score-august-16-hwc-2026"
+    },
+    {
       badge: "FINAL (M3)",
       type: "final",
       match: "ENG 4 - 1 PAK",

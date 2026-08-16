@@ -255,27 +255,27 @@ export default function LiveScoresPage() {
       <LiveScoresClient />
 
       {/* STATIC SSR TEXT & TOURNAMENT HUBS SECTION (FOR GOOGLEBOT INDEXING & SPECTATORS) */}
-      <div className="sports-container pb-16">
+      <div className="live-scores-container pb-12">
         {/* UPCOMING BLOCKBUSTER MATCHES PREVIEW LINKS */}
-        <section style={{ background: "#ffffff", borderRadius: "16px", padding: "2rem", border: "1px solid #e2e8f0", marginBottom: "3.5rem", boxShadow: "0 4px 20px rgba(0,0,0,0.03)" }}>
-          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", flexWrap: "wrap", gap: "0.5rem", borderBottom: "2px solid #0f172a", paddingBottom: "0.75rem" }}>
-            <h2 style={{ fontSize: "1.3rem", fontWeight: "900", color: "#0f172a", margin: 0 }}>
-              🔥 Featured Blockbuster Match Centers & Tactical Guides
+        <section className="live-section-card" style={{ border: "1px solid #e2e8f0" }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem", flexWrap: "wrap", gap: "0.5rem", borderBottom: "2px solid #0f172a", paddingBottom: "0.75rem" }}>
+            <h2 style={{ fontSize: "clamp(1.1rem, 3vw, 1.3rem)", fontWeight: "900", color: "#0f172a", margin: 0, fontStyle: "normal" }}>
+              🔥 Featured Blockbuster Match Centers &amp; Tactical Guides
             </h2>
-            <a href="/schedule" style={{ color: "var(--primary)", fontWeight: "800", fontSize: "0.85rem", textDecoration: "none" }}>
+            <a href="/schedule" style={{ color: "var(--primary)", fontWeight: "800", fontSize: "0.82rem", textDecoration: "none" }}>
               View Complete 100-Match Schedule →
             </a>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))", gap: "1.2rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: "1rem" }}>
             {UPCOMING_BLOCKBUSTER_MATCHES.map((m) => (
-              <div key={m.slug} style={{ background: "#ffffff", borderRadius: "12px", padding: "1.2rem", border: "1px solid #e2e8f0" }}>
-                <span style={{ fontSize: "0.75rem", color: "var(--primary)", fontWeight: "800", textTransform: "uppercase" }}>{m.teams}</span>
-                <h3 style={{ fontSize: "1rem", fontWeight: "800", margin: "0.3rem 0 0.5rem 0", color: "#0f172a" }}>{m.title}</h3>
-                <p style={{ fontSize: "0.82rem", color: "#64748b", margin: "0 0 0.4rem 0" }}>🕒 {m.time}</p>
-                <p style={{ fontSize: "0.82rem", color: "#64748b", margin: "0 0 0.8rem 0" }}>📍 {m.venue}</p>
-                <a href={m.slug} style={{ display: "inline-block", background: "var(--primary)", color: "#ffffff", padding: "0.4rem 0.8rem", borderRadius: "6px", fontSize: "0.8rem", fontWeight: "700", textDecoration: "none" }}>
-                  Match Preview & Tactical Guide →
+              <div key={m.slug} style={{ background: "#ffffff", borderRadius: "12px", padding: "1.1rem", border: "1px solid #e2e8f0" }}>
+                <span style={{ fontSize: "0.72rem", color: "var(--primary)", fontWeight: "800", textTransform: "uppercase" }}>{m.teams}</span>
+                <h3 style={{ fontSize: "0.98rem", fontWeight: "800", margin: "0.3rem 0 0.5rem 0", color: "#0f172a", fontStyle: "normal" }}>{m.title}</h3>
+                <p style={{ fontSize: "0.8rem", color: "#64748b", margin: "0 0 0.35rem 0" }}>🕒 {m.time}</p>
+                <p style={{ fontSize: "0.8rem", color: "#64748b", margin: "0 0 0.75rem 0", overflow: "hidden", textOverflow: "ellipsis" }}>📍 {m.venue}</p>
+                <a href={m.slug} style={{ display: "inline-block", background: "var(--primary)", color: "#ffffff", padding: "0.45rem 0.8rem", borderRadius: "6px", fontSize: "0.78rem", fontWeight: "700", textDecoration: "none" }}>
+                  Match Preview &amp; Tactical Guide →
                 </a>
               </div>
             ))}
@@ -283,37 +283,37 @@ export default function LiveScoresPage() {
         </section>
 
         {/* TOURNAMENT NAVIGATION HUB */}
-        <section className="my-12" style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)", borderRadius: "16px", padding: "2rem", color: "#ffffff" }}>
-          <h3 style={{ fontSize: "1.2rem", fontWeight: "800", marginBottom: "0.8rem" }}>
-            🏆 Essential Tournament Hubs & Quick Links
+        <section className="live-section-card" style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)", color: "#ffffff" }}>
+          <h3 style={{ fontSize: "clamp(1.1rem, 3vw, 1.25rem)", fontWeight: "800", marginBottom: "0.75rem", fontStyle: "normal" }}>
+            🏆 Essential Tournament Hubs &amp; Quick Links
           </h3>
-          <p style={{ fontSize: "0.88rem", color: "#94a3b8", marginBottom: "1.5rem" }}>
+          <p style={{ fontSize: "0.86rem", color: "#94a3b8", marginBottom: "1.25rem" }}>
             Navigate all official Hockey World Cup 2026 data centers, pool rankings, team schedules, and streaming channels:
           </p>
-          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.8rem" }}>
-            <a href="/schedule" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "0.6rem 1.1rem", borderRadius: "8px", textDecoration: "none", fontSize: "0.85rem", fontWeight: "700" }}>
-              📅 100-Match Fixtures & PDF
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.6rem" }}>
+            <a href="/schedule" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "0.5rem 0.9rem", borderRadius: "8px", textDecoration: "none", fontSize: "0.82rem", fontWeight: "700" }}>
+              📅 100-Match Fixtures &amp; PDF
             </a>
-            <a href="/points-table" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "0.6rem 1.1rem", borderRadius: "8px", textDecoration: "none", fontSize: "0.85rem", fontWeight: "700" }}>
-              📊 Points Table & Standings
+            <a href="/points-table" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "0.5rem 0.9rem", borderRadius: "8px", textDecoration: "none", fontSize: "0.82rem", fontWeight: "700" }}>
+              📊 Points Table &amp; Standings
             </a>
-            <a href="/hockey-world-cup-2026-groups" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "0.6rem 1.1rem", borderRadius: "8px", textDecoration: "none", fontSize: "0.85rem", fontWeight: "700" }}>
+            <a href="/hockey-world-cup-2026-groups" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "0.5rem 0.9rem", borderRadius: "8px", textDecoration: "none", fontSize: "0.82rem", fontWeight: "700" }}>
               🏆 All 16 Pool Groups
             </a>
-            <a href="/past-results" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "0.6rem 1.1rem", borderRadius: "8px", textDecoration: "none", fontSize: "0.85rem", fontWeight: "700" }}>
-              📜 Historical Results & Champions
+            <a href="/past-results" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "0.5rem 0.9rem", borderRadius: "8px", textDecoration: "none", fontSize: "0.82rem", fontWeight: "700" }}>
+              📜 Historical Results &amp; Champions
             </a>
-            <a href="/hockey-live-streaming" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "0.6rem 1.1rem", borderRadius: "8px", textDecoration: "none", fontSize: "0.85rem", fontWeight: "700" }}>
-              📺 TV & Live Streaming Guide
+            <a href="/hockey-live-streaming" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.2)", color: "#fff", padding: "0.5rem 0.9rem", borderRadius: "8px", textDecoration: "none", fontSize: "0.82rem", fontWeight: "700" }}>
+              📺 TV &amp; Live Streaming Guide
             </a>
           </div>
         </section>
 
         {/* FAQs Section */}
-        <section className="my-16">
+        <section style={{ margin: "2.5rem 0 1rem 0" }}>
           <div className="section-title-wrap">
-            <h2>Frequently Asked Questions (Live Scores & Results)</h2>
-            <p>Direct answers regarding matchday timelines, goal logs, and scoreboard synchronization.</p>
+            <h2 style={{ fontSize: "clamp(1.4rem, 4vw, 2.2rem)", fontStyle: "normal" }}>Frequently Asked Questions (Live Scores &amp; Results)</h2>
+            <p style={{ fontSize: "clamp(0.85rem, 2.5vw, 1.05rem)" }}>Direct answers regarding matchday timelines, goal logs, and scoreboard synchronization.</p>
           </div>
           <FaqAccordion items={faqItems} />
         </section>

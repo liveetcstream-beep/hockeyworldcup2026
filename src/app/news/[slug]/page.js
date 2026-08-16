@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import FaqAccordion from "../../components/FaqAccordion";
+import MatchHeaderBanner from "../../components/MatchHeaderBanner";
 import { newsArticles } from "../../../data/news";
 import { getPublishedNews } from "../../../data/newsUtils";
 import { notFound } from "next/navigation";
@@ -209,14 +210,8 @@ export default async function NewsArticlePage({ params }) {
             </div>
           </div>
 
-          {/* Featured Image */}
-          <div style={{ position: "relative", width: "100%", height: "auto", overflow: "hidden", borderRadius: "20px", marginBottom: "2.5rem", border: "1px solid var(--border-color)" }}>
-            <img 
-              src={article.image} 
-              alt={article.title} 
-              style={{ width: "100%", height: "auto", display: "block" }} 
-            />
-          </div>
+          {/* Dynamic Match Score & Editorial Header Banner */}
+          <MatchHeaderBanner article={article} />
 
           {/* Article Body Content */}
           <div 
