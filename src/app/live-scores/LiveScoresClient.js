@@ -341,13 +341,16 @@ export default function LiveScoresClient() {
         {/* ==================================================================== */}
         {/* SPOTLIGHT BANNER: CURRENT LIVE MATCH OR UPCOMING NEXT MATCH */}
         {/* ==================================================================== */}
+        {/* ==================================================================== */}
+        {/* SPOTLIGHT BANNER: CURRENT LIVE MATCH OR UPCOMING NEXT MATCH */}
+        {/* ==================================================================== */}
         {liveMatches.length > 0 ? (
           <section className="spotlight-banner" style={{ background: "linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.85rem", flexWrap: "wrap", gap: "0.5rem", borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "0.75rem" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                 <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#ef4444", boxShadow: "0 0 10px #ef4444" }}></span>
                 <span style={{ fontSize: "0.85rem", fontWeight: "900", color: "#f87171", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                  🔴 LIVE IN PROGRESS · {liveMatches[0].period || "Live"}
+                  🔴 LIVE IN PROGRESS · {liveMatches[0].period || "Active Match"}
                 </span>
               </div>
               <span style={{ fontSize: "0.78rem", background: "rgba(255,255,255,0.1)", padding: "0.25rem 0.65rem", borderRadius: "6px", color: "#e2e8f0" }}>
@@ -362,7 +365,9 @@ export default function LiveScoresClient() {
               </div>
               <div className="spotlight-score-box">
                 <span className="spotlight-score-text">{liveMatches[0].scoreA} - {liveMatches[0].scoreB}</span>
-                <span style={{ display: "block", fontSize: "0.75rem", color: "#4ade80", fontWeight: "800", marginTop: "0.2rem" }}>{liveMatches[0].minute || "Active"}</span>
+                <span style={{ display: "block", fontSize: "0.78rem", color: "#4ade80", fontWeight: "800", marginTop: "0.25rem" }}>
+                  ⏱️ {liveMatches[0].minute || "In Progress"}
+                </span>
               </div>
               <div className="spotlight-team">
                 <img src={`https://flagcdn.com/w80/${liveMatches[0].flagB}.png`} className="spotlight-team-flag" alt={liveMatches[0].teamB} />
@@ -370,10 +375,17 @@ export default function LiveScoresClient() {
               </div>
             </div>
 
+            {/* LIVE GOALS & SCORERS summary */}
+            {liveMatches[0].scorers && (
+              <div style={{ background: "rgba(255, 255, 255, 0.08)", padding: "0.6rem 0.9rem", borderRadius: "8px", marginTop: "0.85rem", fontSize: "0.82rem", color: "#e2e8f0", border: "1px solid rgba(255, 255, 255, 0.1)" }}>
+                ⚽ <strong>Live Goals &amp; Scorers:</strong> {liveMatches[0].scorers}
+              </div>
+            )}
+
             {nextMatch && (
               <div style={{ background: "rgba(255,255,255,0.06)", padding: "0.75rem 1rem", borderRadius: "10px", marginTop: "1rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem", fontSize: "0.82rem" }}>
                 <span>⏭️ <strong>UPCOMING NEXT:</strong> {nextMatch.match} ({nextMatch.gender})</span>
-                <span style={{ color: "#38bdf8", fontWeight: "800" }}>⏰ Pushback: {nextMatch.timeCET} (Local Time)</span>
+                <span style={{ color: "#38bdf8", fontWeight: "800" }}>⏰ Pushback: {nextMatch.timeCET}</span>
               </div>
             )}
           </section>
@@ -387,7 +399,7 @@ export default function LiveScoresClient() {
                 </span>
               </div>
               <span style={{ fontSize: "0.78rem", background: "rgba(56, 189, 248, 0.15)", color: "#38bdf8", padding: "0.25rem 0.65rem", borderRadius: "6px", fontWeight: "800" }}>
-                Pushback: {nextMatch.timeCET} (Local Venue Time)
+                Pushback: {nextMatch.timeCET}
               </span>
             </div>
 

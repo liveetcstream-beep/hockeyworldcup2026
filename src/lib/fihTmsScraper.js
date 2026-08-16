@@ -63,10 +63,16 @@ export async function fetchFIHTMSLiveScores() {
         const teamBInfo = TEAM_MAP[teamCodeB] || { name: teamCodeB, flag: teamCodeB.toLowerCase() };
 
         let status = "FINAL";
-        if (extraClasses.includes("panel-live")) {
+        const hasLiveClass = extraClasses.includes("panel-live");
+        const hasFutureClass = extraClasses.includes("panel-future") || bodyHtml.includes("from now") || bodyHtml.includes("mins:");
+        const isFinalText = bodyHtml.includes("FT") || bodyHtml.includes("Final");
+
+        if (hasLiveClass && !isFinalText) {
           status = "LIVE";
-        } else if (extraClasses.includes("panel-future")) {
+        } else if (hasFutureClass) {
           status = "UPCOMING";
+        } else {
+          status = "FINAL";
         }
 
         // Extract score e.g. <b>2 - 0</b>
