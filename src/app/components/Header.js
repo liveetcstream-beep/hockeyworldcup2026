@@ -131,33 +131,29 @@ export default function Header() {
     {
       badge: "UPCOMING (M9)",
       type: "upcoming",
-      match: "IND vs ENG",
+      match: "IND vs ENG (Aug 17 · 15:00 CET)",
       flags: "🇮🇳 🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-      stat: "Aug 17 · 15:00 CEST (18:30 IST)",
       link: "/matches/india-vs-england"
     },
     {
       badge: "UPCOMING (M11)",
       type: "upcoming",
-      match: "GER vs BEL",
+      match: "GER vs BEL (Aug 17 · 20:30 CET)",
       flags: "🇩🇪 🇧🇪",
-      stat: "Aug 17 · 20:30 CEST (00:00 IST)",
       link: "/matches/germany-vs-belgium"
     },
     {
       badge: "UPCOMING (W11)",
       type: "upcoming",
-      match: "NED vs AUS (W)",
+      match: "NED vs AUS (Aug 17 · 18:00 CET)",
       flags: "🇳🇱 🇦🇺",
-      stat: "Aug 17 · 18:00 CEST (21:30 IST)",
       link: "/matches/netherlands-vs-australia-women"
     },
     {
       badge: "UPCOMING (M15)",
       type: "upcoming",
-      match: "PAK vs IND",
+      match: "PAK vs IND (Aug 19 · 15:00 CET)",
       flags: "🇵🇰 🇮🇳",
-      stat: "Aug 19 · 15:00 CEST (18:00 PKT / 18:30 IST)",
       link: "/matches/india-vs-pakistan"
     }
   ];
@@ -219,9 +215,6 @@ export default function Header() {
                 <span className="ticker-match-name">
                   {item.flags} {item.match}
                 </span>
-                <span className="ticker-match-detail">
-                  {item.stat}
-                </span>
               </a>
             ))}
             {/* Duplicated Set for Seamless Continuous Infinite Scrolling Loop */}
@@ -232,9 +225,6 @@ export default function Header() {
                 </span>
                 <span className="ticker-match-name">
                   {item.flags} {item.match}
-                </span>
-                <span className="ticker-match-detail">
-                  {item.stat}
                 </span>
               </a>
             ))}
