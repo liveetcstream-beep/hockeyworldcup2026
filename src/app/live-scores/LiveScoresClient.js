@@ -171,7 +171,7 @@ const INITIAL_COMPLETED_RESULTS = [
     timeCET: "16:00 CET (Local Time)",
     date: "Aug 15 · FT",
     scorers: "Felice Albers (19'), Yibbi Jansen (44' PC)",
-    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+    recapUrl: "/news/netherlands-vs-chile-women-result-score-august-15-hwc-2026"
   },
   {
     id: 106,
@@ -188,7 +188,7 @@ const INITIAL_COMPLETED_RESULTS = [
     timeCET: "11:30 CET (Local Time)",
     date: "Aug 15 · FT",
     scorers: "Charlotte Stapenhorst (06', 29'), Nike Lorenz (48' PC)",
-    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+    recapUrl: "/news/germany-vs-scotland-women-result-score-august-15-hwc-2026"
   },
   {
     id: 107,
@@ -205,7 +205,7 @@ const INITIAL_COMPLETED_RESULTS = [
     timeCET: "17:30 CET (Local Time)",
     date: "Aug 15 · FT",
     scorers: "Agustina Gorzelany (14' PC) | Ashley Sessa (44') — Draw 1–1",
-    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+    recapUrl: "/news/argentina-vs-usa-women-result-score-august-15-hwc-2026"
   },
   {
     id: 108,
@@ -222,7 +222,7 @@ const INITIAL_COMPLETED_RESULTS = [
     timeCET: "10:00 CET (Local Time)",
     date: "Aug 15 · FT",
     scorers: "Claire Colwill (27' PC, 50' PC)",
-    recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
+    recapUrl: "/news/australia-vs-japan-women-result-score-august-15-hwc-2026"
   }
 ];
 
