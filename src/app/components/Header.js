@@ -273,10 +273,10 @@ export default function Header() {
                 </div>
               </li>
 
-              {/* Category 3: Standings & Pools (Merged Points Table + All 16 Groups + World Rankings) */}
+              {/* Category 3: Standings */}
               <li className="mega-menu-trigger">
                 <a href="/points-table" className="mega-trigger-label flex items-center gap-1">
-                  Standings & Pools <span style={{ fontSize: "0.6rem", marginLeft: "2px" }}>▼</span>
+                  Standings <span style={{ fontSize: "0.6rem", marginLeft: "2px" }}>▼</span>
                 </a>
                 <div className="mega-dropdown width-md">
                   <div className="mega-grid cols-2">
@@ -302,10 +302,10 @@ export default function Header() {
                 </div>
               </li>
 
-              {/* Category 4: Teams & Players (Merged Teams + 80+ Player Profiles + Head-to-Head) */}
+              {/* Category 4: Teams */}
               <li className="mega-menu-trigger">
                 <a href="/teams" className="mega-trigger-label flex items-center gap-1">
-                  Teams & Players <span style={{ fontSize: "0.6rem", marginLeft: "2px" }}>▼</span>
+                  Teams <span style={{ fontSize: "0.6rem", marginLeft: "2px" }}>▼</span>
                 </a>
                 <div className="mega-dropdown width-md">
                   <div className="mega-grid cols-2">
@@ -330,10 +330,10 @@ export default function Header() {
                 </div>
               </li>
 
-              {/* Category 5: Tournament Guide (Merged Venues + Tickets + History + Format) */}
+              {/* Category 5: Guide */}
               <li className="mega-menu-trigger">
                 <a href="/venues" className="mega-trigger-label flex items-center gap-1">
-                  Guide & History <span style={{ fontSize: "0.6rem", marginLeft: "2px" }}>▼</span>
+                  Guide <span style={{ fontSize: "0.6rem", marginLeft: "2px" }}>▼</span>
                 </a>
                 <div className="mega-dropdown width-md">
                   <div className="mega-grid cols-2">
@@ -379,7 +379,7 @@ export default function Header() {
             </ul>
           </nav>
 
-          {/* Right Header Widgets: Compact Search & Live Match CTA */}
+          {/* Right Header Widgets: Search Form & Mobile Trigger */}
           <div className="header-right-widgets">
             {/* Compact Search Bar */}
             <form onSubmit={handleSearchSubmit} className="search-form desktop-only">
@@ -416,12 +416,6 @@ export default function Header() {
                 </div>
               )}
             </form>
-
-            {/* Glowing Live CTA Button */}
-            <a href="/live-scores" className="live-match-cta">
-              <span className="ping-dot-animation"></span>
-              <span>LIVE MATCHES</span>
-            </a>
 
             {/* Mobile Menu Hamburger */}
             <button
