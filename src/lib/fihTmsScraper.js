@@ -98,6 +98,14 @@ export async function fetchFIHTMSLiveScores() {
           pool = `Pool ${poolMatch[1].toUpperCase()} (${item.gender})`;
         }
 
+        // Extract quarter e.g. Half Time 30'+ or 2nd Quarter 25'
+        let quarter = "";
+        const quarterRegex = /(Half Time[^<]*|\d+(?:st|nd|rd|th)\s+Quarter[^<]*|Q[1-4][^<]*)/i;
+        const quarterMatch = quarterRegex.exec(bodyHtml);
+        if (quarterMatch) {
+          quarter = quarterMatch[1].trim();
+        }
+
         // Extract relative time e.g. <b>40 minutes from now</b> or <b>3 hours from now</b>
         let relativeTime = "";
         const relTimeRegex = /<b>([^<]+from now|mins:\s*\d+[^<]*)<\/b>/i;
@@ -110,6 +118,7 @@ export async function fetchFIHTMSLiveScores() {
           id: parseInt(matchId, 10),
           tmsId: matchId,
           status,
+          quarter: quarter || "In Progress",
           match: `${teamAInfo.name} vs ${teamBInfo.name}`,
           gender: `${item.gender}'s World Cup`,
           pool: pool || `${item.gender}'s Tournament`,
@@ -119,7 +128,7 @@ export async function fetchFIHTMSLiveScores() {
           flagA: teamAInfo.flag,
           teamB: teamBInfo.name,
           flagB: teamBInfo.flag,
-          timeCET: relativeTime ? `Local Time · ${relativeTime}` : "Local Venue Time",
+          timeCET: relativeTime ? `Local Time · ${relativeTime}` : (quarter ? `Live · ${quarter}` : "Local Venue Time"),
           relativeTime,
           tmsUrl: `https://tms.fih.ch/matches/${matchId}`,
           source: "FIH TMS Official Stream"

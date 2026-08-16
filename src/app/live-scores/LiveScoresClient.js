@@ -411,7 +411,7 @@ export default function LiveScoresClient() {
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                 <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#ef4444", boxShadow: "0 0 10px #ef4444" }}></span>
                 <span style={{ fontSize: "0.85rem", fontWeight: "900", color: "#f87171", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                  🔴 LIVE IN PROGRESS · {liveMatches[0].period || "Active Match"}
+                  🔴 LIVE IN PROGRESS · {liveMatches[0].quarter || "Active Match"}
                 </span>
               </div>
               <span style={{ fontSize: "0.78rem", background: "rgba(255,255,255,0.1)", padding: "0.25rem 0.65rem", borderRadius: "6px", color: "#e2e8f0" }}>
@@ -426,8 +426,8 @@ export default function LiveScoresClient() {
               </div>
               <div className="spotlight-score-box">
                 <span className="spotlight-score-text">{liveMatches[0].scoreA} - {liveMatches[0].scoreB}</span>
-                <span style={{ display: "block", fontSize: "0.78rem", color: "#4ade80", fontWeight: "800", marginTop: "0.25rem" }}>
-                  ⏱️ {liveMatches[0].minute || "In Progress"}
+                <span style={{ display: "block", fontSize: "0.85rem", color: "#4ade80", fontWeight: "900", marginTop: "0.3rem", background: "rgba(34, 197, 94, 0.15)", padding: "0.2rem 0.6rem", borderRadius: "6px" }}>
+                  ⏱️ {liveMatches[0].quarter || "In Progress"}
                 </span>
               </div>
               <div className="spotlight-team">
@@ -445,8 +445,8 @@ export default function LiveScoresClient() {
 
             {nextMatch && (
               <div style={{ background: "rgba(255,255,255,0.06)", padding: "0.75rem 1rem", borderRadius: "10px", marginTop: "1rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem", fontSize: "0.82rem" }}>
-                <span>⏭️ <strong>UPCOMING NEXT:</strong> {nextMatch.match} ({nextMatch.gender})</span>
-                <span style={{ color: "#38bdf8", fontWeight: "800" }}>⏰ Pushback: {nextMatch.timeCET}</span>
+                <span>⏭️ <strong>NEXT UPCOMING FIXTURE:</strong> {nextMatch.match} ({nextMatch.gender})</span>
+                <span style={{ color: "#38bdf8", fontWeight: "800" }}>⏰ Next Pushback: {nextMatch.timeCET}</span>
               </div>
             )}
           </section>
