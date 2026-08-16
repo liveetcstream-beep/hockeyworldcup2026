@@ -64,18 +64,18 @@ export async function fetchFIHTMSLiveScores() {
 
         let status = "FINAL";
         const hasLiveClass = extraClasses.includes("panel-live");
-        const hasFutureClass = extraClasses.includes("panel-future") || bodyHtml.includes("from now") || bodyHtml.includes("mins:");
+        const hasFutureClass = extraClasses.includes("panel-future") || bodyHtml.includes("from now") || bodyHtml.includes("mins:") || bodyHtml.includes("hour from now") || bodyHtml.includes("hours from now");
         const isFinalText = bodyHtml.includes("FT") || bodyHtml.includes("Final");
+        const hasActiveQuarter = /\b(Q1|Q2|Q3|Q4|Quarter|Active|Min)\b/i.test(bodyHtml);
 
-        // Hard override for confirmed finished matches from today to prevent stale FIH TMS test panels
-        const isNedNzl = (teamCodeA === "NED" && teamCodeB === "NZL") || (teamCodeA === "NZL" && teamCodeB === "NED");
-        
-        if (isNedNzl) {
-          status = "FINAL";
-        } else if (hasLiveClass && !isFinalText && !hasFutureClass && (bodyHtml.includes("Live") || bodyHtml.includes("Quarter") || bodyHtml.includes("Q1") || bodyHtml.includes("Q2") || bodyHtml.includes("Q3") || bodyHtml.includes("Q4") || bodyHtml.includes("Active"))) {
-          status = "LIVE";
-        } else if (hasFutureClass) {
+        // Strict priority order:
+        // 1. If it contains "from now" or "panel-future" -> ALWAYS UPCOMING
+        // 2. If it has live class AND active quarter indicator AND NO "from now" AND NOT final -> LIVE
+        // 3. Otherwise -> FINAL
+        if (hasFutureClass) {
           status = "UPCOMING";
+        } else if (hasLiveClass && !isFinalText && hasActiveQuarter) {
+          status = "LIVE";
         } else {
           status = "FINAL";
         }
