@@ -33,10 +33,24 @@ const DEFAULT_LIVE_MATCHES = [
 
 const DEFAULT_UPCOMING_TODAY = [
   {
+    id: 202,
+    status: "UPCOMING",
+    timeCET: "13:00 CET",
+    localTimes: "16:00 PKT / 16:30 IST",
+    match: "China vs India",
+    gender: "Women's Pool D",
+    teamA: "China",
+    flagA: "cn",
+    teamB: "India",
+    flagB: "in",
+    venue: "Wagener Stadium, Amstelveen (NED)",
+    previewUrl: "/news/china-vs-india-women-result-score-august-16-hwc-2026"
+  },
+  {
     id: 204,
     status: "UPCOMING",
     timeCET: "13:00 CET",
-    localTimes: "16:30 IST / 16:00 PST / 23:00 NZST",
+    localTimes: "16:00 PKT / 16:30 IST / 23:00 NZST",
     match: "Netherlands vs New Zealand",
     gender: "Men's Pool A",
     teamA: "Netherlands",
@@ -50,7 +64,7 @@ const DEFAULT_UPCOMING_TODAY = [
     id: 205,
     status: "UPCOMING",
     timeCET: "14:30 CET",
-    localTimes: "18:00 IST / 17:30 PST",
+    localTimes: "17:30 PKT / 18:00 IST",
     match: "Belgium vs New Zealand",
     gender: "Women's Pool C",
     teamA: "Belgium",
@@ -64,7 +78,7 @@ const DEFAULT_UPCOMING_TODAY = [
     id: 206,
     status: "UPCOMING",
     timeCET: "16:00 CET",
-    localTimes: "19:30 IST / 19:00 PST / 23:00 JST",
+    localTimes: "19:00 PKT / 19:30 IST / 23:00 JST",
     match: "Argentina vs Japan",
     gender: "Men's Pool A",
     teamA: "Argentina",
@@ -92,22 +106,6 @@ const DEFAULT_COMPLETED_RESULTS = [
     date: "Aug 16 · FT",
     scorers: "Blake Govers (11' PC), Jeremy Hayward (35') | Lee Cole (24' PC)",
     recapUrl: "/news/australia-vs-ireland-result-score-august-16-hwc-2026"
-  },
-  {
-    id: 202,
-    status: "FINAL",
-    match: "China vs India",
-    gender: "Women's Pool D",
-    scoreA: 1,
-    scoreB: 0,
-    teamA: "China",
-    flagA: "cn",
-    teamB: "India",
-    flagB: "in",
-    venue: "Wagener Stadium, Amstelveen",
-    date: "Aug 16 · FT",
-    scorers: "Gu Bingfeng (08' PC)",
-    recapUrl: "/news/china-vs-india-women-result-score-august-16-hwc-2026"
   },
   {
     id: 101,

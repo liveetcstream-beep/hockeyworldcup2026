@@ -171,26 +171,8 @@ const ALL_TOURNAMENT_MATCHDAYS = {
       stats: { possession: "59% - 41%", penaltyCorners: "5 (1) - 2 (1)", shotsOnTarget: "9 - 3", yellowCards: 0, redCards: 0 },
       recapUrl: "/news/australia-vs-ireland-result-score-august-16-hwc-2026"
     },
-    {
-      id: 202,
-      status: "FINAL",
-      match: "China vs India",
-      gender: "Women",
-      pool: "Pool D",
-      scoreA: 1,
-      scoreB: 0,
-      teamA: "China",
-      flagA: "cn",
-      teamB: "India",
-      flagB: "in",
-      venue: "Wagener Stadium, Amstelveen (NED)",
-      timeCET: "10:00",
-      scorers: "Gu Bingfeng (08' PC)",
-      stats: { possession: "52% - 48%", penaltyCorners: "2 (1) - 1 (0)", shotsOnTarget: "4 - 2", yellowCards: 0, redCards: 0 },
-      recapUrl: "/news/china-vs-india-women-result-score-august-16-hwc-2026"
-    },
 
-    // 2. Currently Active Live Match
+    // 2. Currently Active Live Match (02:30 PM PKT / 11:30 CET)
     {
       id: 203,
       status: "LIVE",
@@ -226,12 +208,32 @@ const ALL_TOURNAMENT_MATCHDAYS = {
       }
     },
 
-    // 3. Upcoming Today Afternoon Matches
+    // 3. Upcoming Today Afternoon Matches (Starting at 4:00 PM PKT / 13:00 CET onwards)
+    {
+      id: 202,
+      status: "UPCOMING",
+      period: "Pushback 13:00 CET",
+      minute: "Starts 4:00 PM PKT (16:30 IST)",
+      gender: "Women",
+      pool: "Pool D (Women)",
+      teamA: "China",
+      flagA: "cn",
+      scoreA: 0,
+      teamB: "India",
+      flagB: "in",
+      scoreB: 0,
+      venue: "Wagener Stadium, Amstelveen (NED)",
+      timeCET: "13:00",
+      localTimes: "16:00 PKT / 16:30 IST",
+      stats: { possession: "0% - 0%", penaltyCorners: "0 - 0", shotsOnTarget: "0 - 0", yellowCards: 0, redCards: 0 },
+      events: [],
+      previewUrl: "/matches/india-vs-england-women"
+    },
     {
       id: 204,
       status: "UPCOMING",
       period: "Pushback 13:00 CET",
-      minute: "Starts 13:00 CET",
+      minute: "Starts 4:00 PM PKT",
       gender: "Men",
       pool: "Pool A (Men)",
       teamA: "Netherlands",

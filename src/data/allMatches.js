@@ -6,7 +6,7 @@ export const ALL_MATCHES = [
   { id: 4, date: "August 15, 2026", timeCET: "14:30", teamA: "Argentina", flagA: "ar", teamB: "United States", flagB: "us", gender: "Women", pool: "Pool B", venue: "Belfius Hockey Arena, Wavre (BEL)" },
 
   { id: 5, date: "August 16, 2026", timeCET: "07:00", teamA: "England", flagA: "gb-eng", teamB: "South Africa", flagB: "za", gender: "Women", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
-  { id: 6, date: "August 16, 2026", timeCET: "10:00", teamA: "China", flagA: "cn", teamB: "India", flagB: "in", gender: "Women", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
+  { id: 6, date: "August 16, 2026", timeCET: "13:00", teamA: "China", flagA: "cn", teamB: "India", flagB: "in", gender: "Women", pool: "Pool D", venue: "Wagener Hockey Stadium, Amstelveen (NED)" },
   { id: 7, date: "August 16, 2026", timeCET: "14:30", teamA: "Belgium", flagA: "be", teamB: "New Zealand", flagB: "nz", gender: "Women", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BEL)" },
   { id: 8, date: "August 16, 2026", timeCET: "17:30", teamA: "Spain", flagA: "es", teamB: "Ireland", flagB: "ie", gender: "Women", pool: "Pool C", venue: "Belfius Hockey Arena, Wavre (BEL)" },
 
