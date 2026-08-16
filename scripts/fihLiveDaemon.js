@@ -28,12 +28,33 @@ const FIH_TOURNAMENT_DATABASE = {
   ],
   matchday2: [
     {
-      id: 55,
+      id: 200,
+      slug: "england-vs-south-africa-women",
+      status: "FINAL",
+      match: "England vs South Africa",
+      gender: "Women",
+      pool: "Pool D (Women)",
+      scoreA: 2,
+      scoreB: 1,
+      teamA: "England",
+      flagA: "gb-eng",
+      teamB: "South Africa",
+      flagB: "za",
+      timeCET: "07:00",
+      timePKT: "10:00",
+      timeIST: "10:30",
+      venue: "Wagener Hockey Stadium, Amstelveen (NED)",
+      scorers: "Tess Howard (14'), Giselle Ansley (38' PC) | Quanita Bobbs (49' PC)",
+      stats: { possession: "58% - 42%", penaltyCorners: "6 (1) - 3 (1)", shotsOnTarget: "8 - 3" },
+      recapUrl: "/news/england-vs-south-africa-women-result-score-august-16-hwc-2026"
+    },
+    {
+      id: 201,
       slug: "australia-vs-ireland",
       status: "FINAL",
       match: "Australia vs Ireland",
       gender: "Men",
-      pool: "Pool C",
+      pool: "Pool C (Men)",
       scoreA: 2,
       scoreB: 1,
       teamA: "Australia",
@@ -46,16 +67,16 @@ const FIH_TOURNAMENT_DATABASE = {
       venue: "Belfius Hockey Arena, Wavre (BEL)",
       scorers: "Blake Govers (11' PC), Jeremy Hayward (35' FG) | Lee Cole (24' PC)",
       stats: { possession: "59% - 41%", penaltyCorners: "5 (1) - 2 (1)", shotsOnTarget: "9 - 3" },
-      recapSlug: "australia-vs-ireland-result-score-august-16-hwc-2026"
+      recapUrl: "/news/australia-vs-ireland-result-score-august-16-hwc-2026"
     },
     {
-      id: 56,
+      id: 203,
       slug: "spain-vs-south-africa",
       status: "LIVE",
       period: "2nd Quarter",
       match: "Spain vs South Africa",
       gender: "Men",
-      pool: "Pool C",
+      pool: "Pool C (Men)",
       scoreA: 1,
       scoreB: 0,
       teamA: "Spain",
@@ -68,17 +89,20 @@ const FIH_TOURNAMENT_DATABASE = {
       venue: "Belfius Hockey Arena, Wavre (BEL)",
       scorers: "Marc Miralles (14' PC)",
       stats: { possession: "56% - 44%", penaltyCorners: "3 (1) - 1 (0)", shotsOnTarget: "5 - 2" },
+      events: [
+        { minute: "14'", player: "Marc Miralles", type: "Penalty Corner Goal ⚽", team: "Spain" }
+      ],
       previewUrl: "/matches/australia-vs-spain"
     },
     {
-      id: 6,
+      id: 202,
       slug: "china-vs-india-women",
       status: "UPCOMING",
       period: "Pushback 13:00 CET",
       minute: "Starts 4:00 PM PKT (16:30 IST)",
       match: "China vs India",
       gender: "Women",
-      pool: "Pool D",
+      pool: "Pool D (Women)",
       scoreA: 0,
       scoreB: 0,
       teamA: "China",
@@ -92,14 +116,14 @@ const FIH_TOURNAMENT_DATABASE = {
       previewUrl: "/news/china-vs-india-women-result-score-august-16-hwc-2026"
     },
     {
-      id: 57,
+      id: 204,
       slug: "netherlands-vs-new-zealand",
       status: "UPCOMING",
       period: "Pushback 13:00 CET",
       minute: "Starts 4:00 PM PKT (16:30 IST)",
       match: "Netherlands vs New Zealand",
       gender: "Men",
-      pool: "Pool A",
+      pool: "Pool A (Men)",
       scoreA: 0,
       scoreB: 0,
       teamA: "Netherlands",
@@ -113,14 +137,14 @@ const FIH_TOURNAMENT_DATABASE = {
       previewUrl: "/matches/germany-vs-netherlands"
     },
     {
-      id: 7,
+      id: 205,
       slug: "belgium-vs-new-zealand-women",
       status: "UPCOMING",
       period: "Pushback 14:30 CET",
       minute: "Starts 5:30 PM PKT (18:00 IST)",
       match: "Belgium vs New Zealand",
       gender: "Women",
-      pool: "Pool C",
+      pool: "Pool C (Women)",
       scoreA: 0,
       scoreB: 0,
       teamA: "Belgium",
@@ -134,14 +158,14 @@ const FIH_TOURNAMENT_DATABASE = {
       previewUrl: "/womens-tournament"
     },
     {
-      id: 58,
+      id: 206,
       slug: "argentina-vs-japan",
       status: "UPCOMING",
       period: "Pushback 16:00 CET",
       minute: "Starts 7:00 PM PKT (19:30 IST)",
       match: "Argentina vs Japan",
       gender: "Men",
-      pool: "Pool A",
+      pool: "Pool A (Men)",
       scoreA: 0,
       scoreB: 0,
       teamA: "Argentina",
@@ -153,6 +177,27 @@ const FIH_TOURNAMENT_DATABASE = {
       timeIST: "19:30",
       venue: "Wagener Hockey Stadium, Amstelveen (NED)",
       previewUrl: "/matches/australia-vs-argentina"
+    },
+    {
+      id: 207,
+      slug: "spain-vs-ireland-women",
+      status: "UPCOMING",
+      period: "Pushback 17:30 CET",
+      minute: "Starts 8:30 PM PKT (21:00 IST)",
+      match: "Spain vs Ireland",
+      gender: "Women",
+      pool: "Pool C (Women)",
+      scoreA: 0,
+      scoreB: 0,
+      teamA: "Spain",
+      flagA: "es",
+      teamB: "Ireland",
+      flagB: "ie",
+      timeCET: "17:30",
+      timePKT: "20:30",
+      timeIST: "21:00",
+      venue: "Belfius Hockey Arena, Wavre (BEL)",
+      previewUrl: "/pool-c"
     }
   ]
 };
@@ -220,8 +265,10 @@ function runRealtimeSyncCycle() {
     `https://${HOST}/live-scores`,
     `https://${HOST}/points-table`,
     `https://${HOST}/schedule`,
+    `https://${HOST}/rankings`,
     `https://${HOST}/news/australia-vs-ireland-result-score-august-16-hwc-2026`,
-    `https://${HOST}/news/china-vs-india-women-result-score-august-16-hwc-2026`
+    `https://${HOST}/news/china-vs-india-women-result-score-august-16-hwc-2026`,
+    `https://${HOST}/news/england-vs-south-africa-women-result-score-august-16-hwc-2026`
   ];
 
   pingIndexNow(urlsToPush);

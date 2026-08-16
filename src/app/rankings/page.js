@@ -39,55 +39,55 @@ export const metadata = {
 };
 
 const mensRankings = [
-  { rank: 1, country: "Netherlands", flag: "🇳🇱", flagCode: "nl", points: "3140", pool: "Pool A", change: "—" },
-  { rank: 2, country: "Belgium", flag: "🇧🇪", flagCode: "be", points: "3058", pool: "Pool B", change: "—" },
-  { rank: 3, country: "Germany", flag: "🇩🇪", flagCode: "de", points: "2980", pool: "Pool B", change: "+1" },
-  { rank: 4, country: "Australia", flag: "🇦🇺", flagCode: "au", points: "2910", pool: "Pool C", change: "-1" },
-  { rank: 5, country: "India", flag: "🇮🇳", flagCode: "in", points: "2765", pool: "Pool D", change: "—" },
-  { rank: 6, country: "England", flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", flagCode: "gb-eng", points: "2640", pool: "Pool D", change: "+1" },
-  { rank: 7, country: "Argentina", flag: "🇦🇷", flagCode: "ar", points: "2580", pool: "Pool A", change: "-1" },
-  { rank: 8, country: "Spain", flag: "🇪🇸", flagCode: "es", points: "2410", pool: "Pool C", change: "—" },
-  { rank: 9, country: "New Zealand", flag: "🇳🇿", flagCode: "nz", points: "2290", pool: "Pool A", change: "+1" },
-  { rank: 10, country: "Malaysia", flag: "🇲🇾", flagCode: "my", points: "2180", pool: "Pool B", change: "-1" },
-  { rank: 11, country: "France", flag: "🇫🇷", flagCode: "fr", points: "2090", pool: "Pool B", change: "—" },
-  { rank: 12, country: "Japan", flag: "🇯🇵", flagCode: "jp", points: "1980", pool: "Pool A", change: "+2" },
-  { rank: 13, country: "Ireland", flag: "🇮🇪", flagCode: "ie", points: "1920", pool: "Pool C", change: "—" },
-  { rank: 14, country: "Wales", flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿", flagCode: "gb-wls", points: "1850", pool: "Pool D", change: "-1" },
-  { rank: 15, country: "South Africa", flag: "🇿🇦", flagCode: "za", points: "1790", pool: "Pool C", change: "—" },
-  { rank: 16, country: "Pakistan", flag: "🇵🇰", flagCode: "pk", points: "1720", pool: "Pool D", change: "+2" },
+  { rank: 1, country: "Belgium", flag: "🇧🇪", flagCode: "be", points: "3838.25", pool: "Pool B", change: "—" },
+  { rank: 2, country: "Netherlands", flag: "🇳🇱", flagCode: "nl", points: "3613.06", pool: "Pool A", change: "—" },
+  { rank: 3, country: "England", flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", flagCode: "gb-eng", points: "3599.34", pool: "Pool D", change: "+1" },
+  { rank: 4, country: "Australia", flag: "🇦🇺", flagCode: "au", points: "3494.67", pool: "Pool C", change: "-1" },
+  { rank: 5, country: "Germany", flag: "🇩🇪", flagCode: "de", points: "3406.20", pool: "Pool B", change: "—" },
+  { rank: 6, country: "Spain", flag: "🇪🇸", flagCode: "es", points: "3296.83", pool: "Pool C", change: "—" },
+  { rank: 7, country: "Argentina", flag: "🇦🇷", flagCode: "ar", points: "3264.51", pool: "Pool A", change: "—" },
+  { rank: 8, country: "India", flag: "🇮🇳", flagCode: "in", points: "3233.64", pool: "Pool D", change: "—" },
+  { rank: 9, country: "France", flag: "🇫🇷", flagCode: "fr", points: "2795.56", pool: "Pool B", change: "—" },
+  { rank: 10, country: "Ireland", flag: "🇮🇪", flagCode: "ie", points: "2795.27", pool: "Pool C", change: "—" },
+  { rank: 11, country: "New Zealand", flag: "🇳🇿", flagCode: "nz", points: "2610.12", pool: "Pool A", change: "—" },
+  { rank: 12, country: "Malaysia", flag: "🇲🇾", flagCode: "my", points: "2340.50", pool: "Pool B", change: "—" },
+  { rank: 13, country: "South Africa", flag: "🇿🇦", flagCode: "za", points: "2150.80", pool: "Pool C", change: "—" },
+  { rank: 14, country: "Japan", flag: "🇯🇵", flagCode: "jp", points: "2090.40", pool: "Pool A", change: "—" },
+  { rank: 15, country: "Pakistan", flag: "🇵🇰", flagCode: "pk", points: "1980.25", pool: "Pool D", change: "—" },
+  { rank: 16, country: "Wales", flag: "🏴󠁧󠁢󠁷󠁬󠁳󠁿", flagCode: "gb-wls", points: "1850.10", pool: "Pool D", change: "—" },
 ];
 
 const womensRankings = [
-  { rank: 1, country: "Netherlands", flag: "🇳🇱", flagCode: "nl", points: "3420", pool: "Pool A", change: "—" },
-  { rank: 2, country: "Argentina", flag: "🇦🇷", flagCode: "ar", points: "2950", pool: "Pool B", change: "—" },
-  { rank: 3, country: "Australia", flag: "🇦🇺", flagCode: "au", points: "2870", pool: "Pool A", change: "—" },
-  { rank: 4, country: "Germany", flag: "🇩🇪", flagCode: "de", points: "2760", pool: "Pool B", change: "+1" },
-  { rank: 5, country: "Belgium", flag: "🇧🇪", flagCode: "be", points: "2680", pool: "Pool C", change: "+1" },
-  { rank: 6, country: "China", flag: "🇨🇳", flagCode: "cn", points: "2540", pool: "Pool D", change: "+2" },
-  { rank: 7, country: "England", flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", flagCode: "gb-eng", points: "2490", pool: "Pool D", change: "-2" },
-  { rank: 8, country: "Spain", flag: "🇪🇸", flagCode: "es", points: "2380", pool: "Pool C", change: "—" },
-  { rank: 9, country: "India", flag: "🇮🇳", flagCode: "in", points: "2290", pool: "Pool D", change: "—" },
-  { rank: 10, country: "Japan", flag: "🇯🇵", flagCode: "jp", points: "2150", pool: "Pool A", change: "+1" },
-  { rank: 11, country: "United States", flag: "🇺🇸", flagCode: "us", points: "2080", pool: "Pool B", change: "-1" },
-  { rank: 12, country: "New Zealand", flag: "🇳🇿", flagCode: "nz", points: "1990", pool: "Pool C", change: "—" },
-  { rank: 13, country: "Ireland", flag: "🇮🇪", flagCode: "ie", points: "1910", pool: "Pool C", change: "+1" },
-  { rank: 14, country: "Chile", flag: "🇨🇱", flagCode: "cl", points: "1820", pool: "Pool A", change: "—" },
-  { rank: 15, country: "Scotland", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿", flagCode: "gb-sct", points: "1740", pool: "Pool B", change: "—" },
-  { rank: 16, country: "South Africa", flag: "🇿🇦", flagCode: "za", points: "1680", pool: "Pool D", change: "—" },
+  { rank: 1, country: "Netherlands", flag: "🇳🇱", flagCode: "nl", points: "3640.50", pool: "Pool A", change: "—" },
+  { rank: 2, country: "Argentina", flag: "🇦🇷", flagCode: "ar", points: "3120.25", pool: "Pool B", change: "—" },
+  { rank: 3, country: "Belgium", flag: "🇧🇪", flagCode: "be", points: "2980.40", pool: "Pool C", change: "+1" },
+  { rank: 4, country: "Germany", flag: "🇩🇪", flagCode: "de", points: "2890.65", pool: "Pool B", change: "-1" },
+  { rank: 5, country: "Australia", flag: "🇦🇺", flagCode: "au", points: "2870.15", pool: "Pool A", change: "—" },
+  { rank: 6, country: "China", flag: "🇨🇳", flagCode: "cn", points: "2740.30", pool: "Pool D", change: "+2" },
+  { rank: 7, country: "England", flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿", flagCode: "gb-eng", points: "2690.80", pool: "Pool D", change: "-1" },
+  { rank: 8, country: "Spain", flag: "🇪🇸", flagCode: "es", points: "2580.45", pool: "Pool C", change: "—" },
+  { rank: 9, country: "India", flag: "🇮🇳", flagCode: "in", points: "2490.20", pool: "Pool D", change: "—" },
+  { rank: 10, country: "Japan", flag: "🇯🇵", flagCode: "jp", points: "2250.60", pool: "Pool A", change: "+1" },
+  { rank: 11, country: "United States", flag: "🇺🇸", flagCode: "us", points: "2180.35", pool: "Pool B", change: "-1" },
+  { rank: 12, country: "New Zealand", flag: "🇳🇿", flagCode: "nz", points: "2090.10", pool: "Pool C", change: "—" },
+  { rank: 13, country: "Ireland", flag: "🇮🇪", flagCode: "ie", points: "2010.50", pool: "Pool C", change: "—" },
+  { rank: 14, country: "Chile", flag: "🇨🇱", flagCode: "cl", points: "1820.75", pool: "Pool A", change: "—" },
+  { rank: 15, country: "Scotland", flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿", flagCode: "gb-sct", points: "1740.20", pool: "Pool B", change: "—" },
+  { rank: 16, country: "South Africa", flag: "🇿🇦", flagCode: "za", points: "1680.10", pool: "Pool D", change: "—" },
 ];
 
 const faqItems = [
   {
     question: "What is India's current FIH World Ranking in hockey?",
-    answer: "As of 2026, the Indian Men's Hockey Team is ranked World No. 5 with 2,765 FIH ranking points. The Indian Women's Hockey Team is ranked World No. 9 with 2,290 points."
+    answer: "As of 2026, the Indian Men's Hockey Team is ranked World No. 8 with 3,233.64 FIH ranking points. The Indian Women's Hockey Team is ranked World No. 9 with 2,490.20 points."
   },
   {
     question: "What is Pakistan's current hockey world ranking?",
-    answer: "The Pakistan Men's Hockey Team is ranked World No. 16 with 1,720 FIH points following their qualification for the FIH Hockey World Cup 2026."
+    answer: "The Pakistan Men's Hockey Team is ranked World No. 15 with 1,980.25 FIH points following their qualification for the FIH Hockey World Cup 2026."
   },
   {
     question: "Which team holds the No. 1 ranking in world hockey?",
-    answer: "The Netherlands holds the World No. 1 ranking in both Men's (3,140 points) and Women's (3,420 points) field hockey."
+    answer: "Belgium holds the Men's World No. 1 ranking with 3,838.25 points, while the Netherlands holds the Women's World No. 1 ranking with 3,640.50 points."
   },
   {
     question: "How are FIH World Ranking points calculated?",

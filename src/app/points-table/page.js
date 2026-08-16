@@ -40,16 +40,16 @@ const STANDINGS_DATA = {
       { name: "Pakistan", code: "PAK", flag: "pk", slug: "pakistan", p: 1, w: 0, d: 0, l: 1, gf: 1, ga: 4, gd: -3, pts: 0, recentRes: "L 1-4 vs ENG" }
     ],
     "Pool B": [
-      { name: "Germany", code: "GER", flag: "de", slug: "germany", p: 1, w: 1, d: 0, l: 0, gf: 3, ga: 1, gd: 2, pts: 3, recentRes: "W 3-1 vs MAS" },
-      { name: "Belgium", code: "BEL", flag: "be", slug: "belgium", p: 1, w: 1, d: 0, l: 0, gf: 3, ga: 1, gd: 2, pts: 3, recentRes: "W 3-1 vs FRA" },
-      { name: "France", code: "FRA", flag: "fr", slug: "france", p: 1, w: 0, d: 0, l: 1, gf: 1, ga: 3, gd: -2, pts: 0, recentRes: "L 1-3 vs BEL" },
-      { name: "Malaysia", code: "MAS", flag: "my", slug: "malaysia", p: 1, w: 0, d: 0, l: 1, gf: 1, ga: 3, gd: -2, pts: 0, recentRes: "L 1-3 vs GER" }
+      { name: "Germany", code: "GER", flag: "de", slug: "germany", p: 1, w: 1, d: 0, l: 0, gf: 5, ga: 1, gd: 4, pts: 3, recentRes: "W 5-1 vs MAS" },
+      { name: "Belgium", code: "BEL", flag: "be", slug: "belgium", p: 1, w: 1, d: 0, l: 0, gf: 3, ga: 2, gd: 1, pts: 3, recentRes: "W 3-2 vs FRA" },
+      { name: "France", code: "FRA", flag: "fr", slug: "france", p: 1, w: 0, d: 0, l: 1, gf: 2, ga: 3, gd: -1, pts: 0, recentRes: "L 2-3 vs BEL" },
+      { name: "Malaysia", code: "MAS", flag: "my", slug: "malaysia", p: 1, w: 0, d: 0, l: 1, gf: 1, ga: 5, gd: -4, pts: 0, recentRes: "L 1-5 vs GER" }
     ],
     "Pool A": [
-      { name: "Netherlands", code: "NED", flag: "nl", slug: "netherlands", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "" },
-      { name: "Argentina", code: "ARG", flag: "ar", slug: "argentina", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "" },
-      { name: "New Zealand", code: "NZL", flag: "nz", slug: "new-zealand", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "" },
-      { name: "Chile", code: "CHI", flag: "cl", slug: "chile", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "" }
+      { name: "Netherlands", code: "NED", flag: "nl", slug: "netherlands", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
+      { name: "Argentina", code: "ARG", flag: "ar", slug: "argentina", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
+      { name: "New Zealand", code: "NZL", flag: "nz", slug: "new-zealand", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
+      { name: "Japan", code: "JPN", flag: "jp", slug: "japan", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" }
     ],
     "Pool C": [
       { name: "Australia", code: "AUS", flag: "au", slug: "australia", p: 1, w: 1, d: 0, l: 0, gf: 2, ga: 1, gd: 1, pts: 3, recentRes: "W 2-1 vs IRL" },
@@ -60,28 +60,28 @@ const STANDINGS_DATA = {
   },
   Women: {
     "Pool A": [
-      { name: "Netherlands", code: "NED", flag: "nl", slug: "netherlands", p: 1, w: 1, d: 0, l: 0, gf: 5, ga: 0, gd: 5, pts: 3, recentRes: "W 5-0 vs CHI" },
+      { name: "Netherlands", code: "NED", flag: "nl", slug: "netherlands", p: 1, w: 1, d: 0, l: 0, gf: 2, ga: 0, gd: 2, pts: 3, recentRes: "W 2-0 vs CHI" },
       { name: "Australia", code: "AUS", flag: "au", slug: "australia", p: 1, w: 1, d: 0, l: 0, gf: 2, ga: 0, gd: 2, pts: 3, recentRes: "W 2-0 vs JPN" },
       { name: "Japan", code: "JPN", flag: "jp", slug: "japan", p: 1, w: 0, d: 0, l: 1, gf: 0, ga: 2, gd: -2, pts: 0, recentRes: "L 0-2 vs AUS" },
-      { name: "Chile", code: "CHI", flag: "cl", slug: "chile", p: 1, w: 0, d: 0, l: 1, gf: 0, ga: 5, gd: -5, pts: 0, recentRes: "L 0-5 vs NED" }
+      { name: "Chile", code: "CHI", flag: "cl", slug: "chile", p: 1, w: 0, d: 0, l: 1, gf: 0, ga: 2, gd: -2, pts: 0, recentRes: "L 0-2 vs NED" }
     ],
     "Pool B": [
-      { name: "Germany", code: "GER", flag: "de", slug: "germany", p: 1, w: 1, d: 0, l: 0, gf: 4, ga: 0, gd: 4, pts: 3, recentRes: "W 4-0 vs SCO" },
-      { name: "Argentina", code: "ARG", flag: "ar", slug: "argentina", p: 1, w: 1, d: 0, l: 0, gf: 3, ga: 1, gd: 2, pts: 3, recentRes: "W 3-1 vs USA" },
-      { name: "United States", code: "USA", flag: "us", slug: "usa", p: 1, w: 0, d: 0, l: 1, gf: 1, ga: 3, gd: -2, pts: 0, recentRes: "L 1-3 vs ARG" },
-      { name: "Scotland", code: "SCO", flag: "gb-sct", slug: "scotland", p: 1, w: 0, d: 0, l: 1, gf: 0, ga: 4, gd: -4, pts: 0, recentRes: "L 0-4 vs GER" }
+      { name: "Germany", code: "GER", flag: "de", slug: "germany", p: 1, w: 1, d: 0, l: 0, gf: 3, ga: 0, gd: 3, pts: 3, recentRes: "W 3-0 vs SCO" },
+      { name: "Argentina", code: "ARG", flag: "ar", slug: "argentina", p: 1, w: 0, d: 1, l: 0, gf: 1, ga: 1, gd: 0, pts: 1, recentRes: "D 1-1 vs USA" },
+      { name: "United States", code: "USA", flag: "us", slug: "usa", p: 1, w: 0, d: 1, l: 0, gf: 1, ga: 1, gd: 0, pts: 1, recentRes: "D 1-1 vs ARG" },
+      { name: "Scotland", code: "SCO", flag: "gb-sct", slug: "scotland", p: 1, w: 0, d: 0, l: 1, gf: 0, ga: 3, gd: -3, pts: 0, recentRes: "L 0-3 vs GER" }
     ],
     "Pool C": [
       { name: "Belgium", code: "BEL", flag: "be", slug: "belgium", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
       { name: "Spain", code: "ESP", flag: "es", slug: "spain", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
       { name: "New Zealand", code: "NZL", flag: "nz", slug: "new-zealand", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
-      { name: "France", code: "FRA", flag: "fr", slug: "france", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" }
+      { name: "Ireland", code: "IRL", flag: "ie", slug: "ireland", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" }
     ],
     "Pool D": [
       { name: "China", code: "CHN", flag: "cn", slug: "china", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Today vs IND (4 PM PKT)" },
       { name: "India", code: "IND", flag: "in", slug: "india", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Today vs CHN (4 PM PKT)" },
-      { name: "England", code: "ENG", flag: "gb-eng", slug: "england", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Aug 18 vs CHN" },
-      { name: "South Africa", code: "RSA", flag: "za", slug: "south-africa", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Aug 18 vs IND" }
+      { name: "England", code: "ENG", flag: "gb-eng", slug: "england", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Aug 16 vs RSA" },
+      { name: "South Africa", code: "RSA", flag: "za", slug: "south-africa", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Aug 16 vs ENG" }
     ]
   }
 };
