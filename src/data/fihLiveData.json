@@ -251,26 +251,27 @@
     {
       "id": 207,
       "slug": "spain-vs-ireland-women",
-      "status": "UPCOMING",
-      "isNext": false,
+      "status": "LIVE",
+      "isNext": true,
       "match": "Spain vs Ireland",
       "gender": "Women",
       "pool": "Pool C (Women - W8)",
-      "scoreA": 0,
+      "scoreA": 1,
       "scoreB": 0,
+      "quarter": "2nd Quarter 25'",
       "teamA": "Spain",
       "flagA": "es",
       "teamB": "Ireland",
       "flagB": "ie",
-      "timeCET": "20:30 CET (Local Time)",
+      "timeCET": "20:30 CEST (Local Time)",
       "timePKT": "23:30 PKT",
       "timeIST": "00:00 IST (Aug 17)",
       "venue": "Belfius Hockey Arena, Wavre (BEL)",
-      "scorers": "",
+      "scorers": "Begoña García (18' FG)",
       "stats": {
-        "possession": "0% - 0%",
-        "penaltyCorners": "0 - 0",
-        "shotsOnTarget": "0 - 0"
+        "possession": "55% - 45%",
+        "penaltyCorners": "3 (0) - 1 (0)",
+        "shotsOnTarget": "4 - 2"
       },
       "previewUrl": "/pool-c"
     }

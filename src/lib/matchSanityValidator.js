@@ -41,13 +41,15 @@ export function sanitizeAndValidateMatches(scrapedMatches = []) {
       m.status = "FINAL";
     }
 
-    // Counter-Check 2: Prevent upcoming matches (e.g. Spain vs Ireland at 20:30 CET or Argentina vs Japan) from being marked LIVE
-    const isFuturePushback = (m.timeCET && (m.timeCET.includes("from now") || m.timeCET.includes("mins:"))) ||
-      matchNameLower.includes("spain vs ireland") ||
-      matchNameLower.includes("argentina vs japan");
-
-    if (isFuturePushback && m.status !== "FINAL") {
-      m.status = "UPCOMING";
+    // Counter-Check 2: Check if match is actively LIVE or UPCOMING
+    const hasLiveQuarter = m.quarter || (m.timeCET && (m.timeCET.includes("Quarter") || m.timeCET.includes("Q1") || m.timeCET.includes("Q2") || m.timeCET.includes("Q3") || m.timeCET.includes("Q4")));
+    
+    if (m.status === "LIVE" || hasLiveQuarter) {
+      m.status = "LIVE";
+    } else if (m.timeCET && (m.timeCET.includes("from now") || m.timeCET.includes("mins:"))) {
+      if (m.status !== "FINAL") {
+        m.status = "UPCOMING";
+      }
     }
 
     // Sort into verified arrays
