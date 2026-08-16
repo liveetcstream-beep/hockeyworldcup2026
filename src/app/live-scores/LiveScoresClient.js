@@ -319,19 +319,25 @@ export default function LiveScoresClient() {
     return () => clearInterval(interval);
   }, []);
 
+  const isWomenMatch = (m) => {
+    const text = `${m.gender || ""} ${m.match || ""}`;
+    return /\bwomen\b/i.test(text);
+  };
+
+  const isMenMatch = (m) => {
+    const text = `${m.gender || ""} ${m.match || ""}`;
+    return /\bmen\b/i.test(text) && !/\bwomen\b/i.test(text);
+  };
+
   // Sort completed matches strictly by recency (highest ID / Matchday 2 first)
   const sortedCompleted = [...completedMatches].sort((a, b) => (b.id || 0) - (a.id || 0));
 
-  const menCount = sortedCompleted.filter(m => (m.gender && m.gender.toLowerCase().includes("men")) || (m.match && m.match.toLowerCase().includes("men"))).length;
-  const womenCount = sortedCompleted.filter(m => (m.gender && m.gender.toLowerCase().includes("women")) || (m.match && m.match.toLowerCase().includes("women"))).length;
+  const menCount = sortedCompleted.filter(isMenMatch).length;
+  const womenCount = sortedCompleted.filter(isWomenMatch).length;
 
   const filteredCompleted = sortedCompleted.filter((match) => {
-    if (resultsGender === "men") {
-      return (match.gender && match.gender.toLowerCase().includes("men")) || (match.match && match.match.toLowerCase().includes("men"));
-    }
-    if (resultsGender === "women") {
-      return (match.gender && match.gender.toLowerCase().includes("women")) || (match.match && match.match.toLowerCase().includes("women"));
-    }
+    if (resultsGender === "men") return isMenMatch(match);
+    if (resultsGender === "women") return isWomenMatch(match);
     return true;
   });
 
