@@ -306,6 +306,16 @@ const INITIAL_UPCOMING_TODAY = [
   }
 ];
 
+const cleanText = (str) => {
+  if (!str) return "";
+  return String(str)
+    .replace(/&#039;/g, "'")
+    .replace(/&#39;/g, "'")
+    .replace(/&apos;/g, "'")
+    .replace(/&quot;/g, '"')
+    .replace(/&amp;/g, '&');
+};
+
 export default function LiveScoresClient({ initialCompleted }) {
   const [liveMatches, setLiveMatches] = useState([]);
   const [upcomingToday, setUpcomingToday] = useState(INITIAL_UPCOMING_TODAY);
@@ -391,8 +401,8 @@ export default function LiveScoresClient({ initialCompleted }) {
 
           {/* Timezone Indicator Banner */}
           <div style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: "0.4rem", background: "rgba(15, 23, 42, 0.06)", border: "1px solid #cbd5e1", padding: "0.45rem 0.9rem", borderRadius: "999px", fontSize: "clamp(0.75rem, 2vw, 0.84rem)", color: "#0f172a", fontWeight: "700", maxWidth: "100%", flexWrap: "wrap", textAlign: "center" }}>
-            <span>🌍 <strong>Match Timings: CET</strong></span>
-            <span>(Central European Time / Local Venue Time in BEL &amp; NED)</span>
+            <span>🌍 <strong>Match Timings: CEST</strong></span>
+            <span>(Central European Summer Time / Local Venue Time in BEL &amp; NED)</span>
           </div>
         </div>
       </section>
@@ -402,16 +412,13 @@ export default function LiveScoresClient({ initialCompleted }) {
         {/* ==================================================================== */}
         {/* SPOTLIGHT BANNER: CURRENT LIVE MATCH OR UPCOMING NEXT MATCH */}
         {/* ==================================================================== */}
-        {/* ==================================================================== */}
-        {/* SPOTLIGHT BANNER: CURRENT LIVE MATCH OR UPCOMING NEXT MATCH */}
-        {/* ==================================================================== */}
         {liveMatches.length > 0 ? (
           <section className="spotlight-banner" style={{ background: "linear-gradient(135deg, #1e1b4b 0%, #0f172a 100%)" }}>
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.85rem", flexWrap: "wrap", gap: "0.5rem", borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "0.75rem" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                 <span style={{ width: "10px", height: "10px", borderRadius: "50%", background: "#ef4444", boxShadow: "0 0 10px #ef4444" }}></span>
                 <span style={{ fontSize: "0.85rem", fontWeight: "900", color: "#f87171", textTransform: "uppercase", letterSpacing: "0.05em" }}>
-                  🔴 LIVE IN PROGRESS · {liveMatches[0].quarter || "Active Match"}
+                  🔴 LIVE IN PROGRESS · {cleanText(liveMatches[0].quarter) || "Active Match"}
                 </span>
               </div>
               <span style={{ fontSize: "0.78rem", background: "rgba(255,255,255,0.1)", padding: "0.25rem 0.65rem", borderRadius: "6px", color: "#e2e8f0" }}>
@@ -427,7 +434,7 @@ export default function LiveScoresClient({ initialCompleted }) {
               <div className="spotlight-score-box">
                 <span className="spotlight-score-text">{liveMatches[0].scoreA} - {liveMatches[0].scoreB}</span>
                 <span style={{ display: "block", fontSize: "0.85rem", color: "#4ade80", fontWeight: "900", marginTop: "0.3rem", background: "rgba(34, 197, 94, 0.15)", padding: "0.2rem 0.6rem", borderRadius: "6px" }}>
-                  ⏱️ {liveMatches[0].quarter || "In Progress"}
+                  ⏱️ {cleanText(liveMatches[0].quarter) || "In Progress"}
                 </span>
               </div>
               <div className="spotlight-team">

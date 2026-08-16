@@ -103,7 +103,12 @@ export async function fetchFIHTMSLiveScores() {
         const quarterRegex = /(Half Time[^<]*|\d+(?:st|nd|rd|th)\s+Quarter[^<]*|Q[1-4][^<]*)/i;
         const quarterMatch = quarterRegex.exec(bodyHtml);
         if (quarterMatch) {
-          quarter = quarterMatch[1].trim();
+          quarter = quarterMatch[1].trim()
+            .replace(/&#039;/g, "'")
+            .replace(/&#39;/g, "'")
+            .replace(/&apos;/g, "'")
+            .replace(/&quot;/g, '"')
+            .replace(/&amp;/g, '&');
         }
 
         // Extract relative time e.g. <b>40 minutes from now</b> or <b>3 hours from now</b>
@@ -111,7 +116,10 @@ export async function fetchFIHTMSLiveScores() {
         const relTimeRegex = /<b>([^<]+from now|mins:\s*\d+[^<]*)<\/b>/i;
         const relTimeMatch = relTimeRegex.exec(bodyHtml);
         if (relTimeMatch) {
-          relativeTime = relTimeMatch[1].trim();
+          relativeTime = relTimeMatch[1].trim()
+            .replace(/&#039;/g, "'")
+            .replace(/&#39;/g, "'")
+            .replace(/&apos;/g, "'");
         }
 
         matches.push({
