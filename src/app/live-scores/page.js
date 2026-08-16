@@ -181,6 +181,8 @@ export default function LiveScoresPage() {
 
   return (
     <>
+      <Header />
+
       {/* JSON-LD Schema */}
       <script
         type="application/ld+json"
