@@ -63,11 +63,6 @@ export default function Home() {
       {/* HEADER SECTION */}
       <Header />
 
-      {/* TOP INDEPENDENT NOTICE BANNER */}
-      <div style={{ background: "rgba(2, 132, 199, 0.12)", borderBottom: "1px solid rgba(2, 132, 199, 0.3)", padding: "0.5rem 1rem", textAlign: "center", fontSize: "0.82rem", color: "#94a3b8" }}>
-        ℹ️ <strong>Independent Tournament Portal:</strong> This is an independent fan schedule and analytics guide. Not affiliated with or endorsed by the International Hockey Federation (FIH). Official source: <a href="https://www.fih.hockey" target="_blank" rel="noopener noreferrer" style={{ color: "#38bdf8", textDecoration: "underline" }}>fih.hockey</a>.
-      </div>
-
       {/* HERO SECTION */}
       <section className="hero-section">
         <div className="sports-container hero-content">
