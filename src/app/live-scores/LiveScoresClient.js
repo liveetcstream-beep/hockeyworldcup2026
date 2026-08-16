@@ -280,6 +280,8 @@ export default function LiveScoresClient() {
   const [completedMatches, setCompletedMatches] = useState(INITIAL_COMPLETED_RESULTS);
   const [nextMatch, setNextMatch] = useState(INITIAL_UPCOMING_TODAY[0] || null);
   const [activeFilter, setActiveFilter] = useState("all");
+  const [resultsGender, setResultsGender] = useState("all"); // "all", "men", "women"
+  const [showAllCompleted, setShowAllCompleted] = useState(false);
 
   const fetchScores = async () => {
     try {
@@ -316,6 +318,24 @@ export default function LiveScoresClient() {
     const interval = setInterval(fetchScores, 20000);
     return () => clearInterval(interval);
   }, []);
+
+  // Sort completed matches strictly by recency (highest ID / Matchday 2 first)
+  const sortedCompleted = [...completedMatches].sort((a, b) => (b.id || 0) - (a.id || 0));
+
+  const menCount = sortedCompleted.filter(m => (m.gender && m.gender.toLowerCase().includes("men")) || (m.match && m.match.toLowerCase().includes("men"))).length;
+  const womenCount = sortedCompleted.filter(m => (m.gender && m.gender.toLowerCase().includes("women")) || (m.match && m.match.toLowerCase().includes("women"))).length;
+
+  const filteredCompleted = sortedCompleted.filter((match) => {
+    if (resultsGender === "men") {
+      return (match.gender && match.gender.toLowerCase().includes("men")) || (match.match && match.match.toLowerCase().includes("men"));
+    }
+    if (resultsGender === "women") {
+      return (match.gender && match.gender.toLowerCase().includes("women")) || (match.match && match.match.toLowerCase().includes("women"));
+    }
+    return true;
+  });
+
+  const displayCompleted = showAllCompleted ? filteredCompleted : filteredCompleted.slice(0, 12);
 
   const latestCompleted = completedMatches && completedMatches.length > 0 ? completedMatches[0] : null;
 
@@ -474,23 +494,72 @@ export default function LiveScoresClient() {
         {/* ==================================================================== */}
         {(activeFilter === "all" || activeFilter === "results") && completedMatches.length > 0 && (
           <section className="live-section-card" style={{ border: "1px solid #dcfce7", borderTop: "4px solid #16a34a" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid #dcfce7", paddingBottom: "0.85rem", marginBottom: "1.25rem", flexWrap: "wrap", gap: "0.5rem" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid #dcfce7", paddingBottom: "0.85rem", marginBottom: "1.25rem", flexWrap: "wrap", gap: "0.75rem" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                 <span style={{ fontSize: "1.2rem" }}>✅</span>
                 <h2 style={{ fontSize: "clamp(1.1rem, 3vw, 1.35rem)", fontWeight: "900", color: "#0f172a", margin: 0, fontStyle: "normal" }}>
-                  RECENTLY FINISHED MATCH RESULTS ({completedMatches.length} Matches Final)
+                  RECENTLY FINISHED MATCH RESULTS ({filteredCompleted.length} Matches)
                 </h2>
               </div>
-              <span style={{ fontSize: "0.75rem", color: "#166534", background: "#dcfce7", padding: "0.3rem 0.65rem", borderRadius: "6px", fontWeight: "800" }}>
-                Official FIH Match Scores
-              </span>
+
+              {/* Men's / Women's Selection Filter Buttons */}
+              <div style={{ display: "flex", gap: "0.35rem", flexWrap: "wrap" }}>
+                <button
+                  onClick={() => { setResultsGender("all"); setShowAllCompleted(false); }}
+                  style={{
+                    padding: "0.35rem 0.75rem",
+                    borderRadius: "6px",
+                    fontSize: "0.78rem",
+                    fontWeight: "800",
+                    border: "none",
+                    cursor: "pointer",
+                    background: resultsGender === "all" ? "#16a34a" : "#e2e8f0",
+                    color: resultsGender === "all" ? "#ffffff" : "#334155",
+                    boxShadow: resultsGender === "all" ? "0 2px 5px rgba(22, 163, 74, 0.2)" : "none"
+                  }}
+                >
+                  ⚡ All ({completedMatches.length})
+                </button>
+                <button
+                  onClick={() => { setResultsGender("men"); setShowAllCompleted(false); }}
+                  style={{
+                    padding: "0.35rem 0.75rem",
+                    borderRadius: "6px",
+                    fontSize: "0.78rem",
+                    fontWeight: "800",
+                    border: "none",
+                    cursor: "pointer",
+                    background: resultsGender === "men" ? "#0284c7" : "#e2e8f0",
+                    color: resultsGender === "men" ? "#ffffff" : "#334155",
+                    boxShadow: resultsGender === "men" ? "0 2px 5px rgba(2, 132, 199, 0.2)" : "none"
+                  }}
+                >
+                  🏑 Men's ({menCount})
+                </button>
+                <button
+                  onClick={() => { setResultsGender("women"); setShowAllCompleted(false); }}
+                  style={{
+                    padding: "0.35rem 0.75rem",
+                    borderRadius: "6px",
+                    fontSize: "0.78rem",
+                    fontWeight: "800",
+                    border: "none",
+                    cursor: "pointer",
+                    background: resultsGender === "women" ? "#9333ea" : "#e2e8f0",
+                    color: resultsGender === "women" ? "#ffffff" : "#334155",
+                    boxShadow: resultsGender === "women" ? "0 2px 5px rgba(147, 51, 234, 0.2)" : "none"
+                  }}
+                >
+                  🏑 Women's ({womenCount})
+                </button>
+              </div>
             </div>
 
             <div className="match-cards-grid">
-              {completedMatches.map((res) => (
+              {displayCompleted.map((res) => (
                 <div key={res.id} style={{ background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "12px", padding: "1rem" }}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.6rem", flexWrap: "wrap", gap: "0.35rem" }}>
-                    <span style={{ background: "#e2e8f0", color: "#0f172a", fontSize: "0.7rem", fontWeight: "800", padding: "0.2rem 0.5rem", borderRadius: "4px" }}>
+                    <span style={{ background: res.gender && res.gender.includes("Women") ? "#f3e8ff" : "#e2e8f0", color: res.gender && res.gender.includes("Women") ? "#6b21a8" : "#0f172a", fontSize: "0.7rem", fontWeight: "800", padding: "0.2rem 0.5rem", borderRadius: "4px" }}>
                       {res.gender}
                     </span>
                     <span style={{ background: "#dcfce7", color: "#166534", fontSize: "0.7rem", fontWeight: "800", padding: "0.2rem 0.5rem", borderRadius: "4px" }}>
@@ -538,6 +607,48 @@ export default function LiveScoresClient() {
                 </div>
               ))}
             </div>
+
+            {/* Load All Completed Matches CTA Button */}
+            {filteredCompleted.length > 12 && !showAllCompleted && (
+              <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
+                <button
+                  onClick={() => setShowAllCompleted(true)}
+                  style={{
+                    background: "#ffffff",
+                    border: "2px solid #16a34a",
+                    color: "#166534",
+                    padding: "0.75rem 1.6rem",
+                    borderRadius: "10px",
+                    fontWeight: "800",
+                    fontSize: "0.88rem",
+                    cursor: "pointer",
+                    boxShadow: "0 3px 10px rgba(22, 163, 74, 0.15)",
+                    transition: "all 0.2s ease"
+                  }}
+                >
+                  📜 View All {filteredCompleted.length} Completed Match Results →
+                </button>
+              </div>
+            )}
+            {showAllCompleted && (
+              <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
+                <button
+                  onClick={() => setShowAllCompleted(false)}
+                  style={{
+                    background: "#f8fafc",
+                    border: "1px solid #cbd5e1",
+                    color: "#475569",
+                    padding: "0.5rem 1.2rem",
+                    borderRadius: "8px",
+                    fontWeight: "700",
+                    fontSize: "0.82rem",
+                    cursor: "pointer"
+                  }}
+                >
+                  ▲ Show Top 12 Matches
+                </button>
+              </div>
+            )}
           </section>
         )}
 
