@@ -97,12 +97,12 @@ export default function PointsTablePage() {
       answer: "If two or more teams finish equal on points in a pool, rankings are resolved in order: 1. Total Matches Won → 2. Goal Difference (GD) → 3. Goals For (GF) → 4. Head-to-Head Result → 5. Penalty Shootout."
     },
     {
-      question: "Which teams qualify directly for the Quarter-Finals?",
-      answer: "The top-ranked team (1st place) in each pool (Pools A, B, C, and D) advances directly to the Quarter-Finals. The 2nd and 3rd placed teams contest the Crossover playoff rounds to earn the remaining 4 quarter-final spots."
+      question: "Which teams advance from the 2026 Hockey World Cup group stage?",
+      answer: "Under the official 2026 FIH format, the top two teams (1st & 2nd place) from Pools A, B, C, and D advance to Championship Pools E & F (Second Stage). The bottom two teams (3rd & 4th place) advance to Classification Pools G & H. There are no traditional quarter-finals or crossover playoff rounds."
     },
     {
       question: "Does goal difference take priority over total wins?",
-      answer: "No. Under the official FIH Tournament Regulations, total matches won is the primary tie-breaker. Goal difference is only evaluated if both teams have the exact same number of wins."
+      answer: "No. Under official FIH Tournament Regulations, total matches won is the primary tie-breaker. Goal difference is only evaluated if both teams have the exact same number of wins."
     }
   ];
 
@@ -122,7 +122,7 @@ export default function PointsTablePage() {
           {/* Points Rules Summary Alert */}
           <div style={{ background: "rgba(0, 153, 0, 0.08)", border: "1px solid rgba(0, 153, 0, 0.2)", borderRadius: "12px", padding: "1.2rem 1.5rem", margin: "1rem 0 1.5rem 0", textAlign: "left" }}>
             <p style={{ margin: 0, fontSize: "0.95rem", color: "var(--text-main)", fontWeight: "500", lineHeight: "1.7" }}>
-              <strong>Point System:</strong> Win = <strong>3 Pts</strong> | Draw = <strong>1 Pt</strong> | Loss = <strong>0 Pts</strong>. The #1 team in each pool gains direct Quarter-Final entry; #2 and #3 contest crossover playoffs.
+              <strong>Point System:</strong> Win = <strong>3 Pts</strong> | Draw = <strong>1 Pt</strong> | Loss = <strong>0 Pts</strong>. The top 2 teams in each pool (1st &amp; 2nd place) advance to Championship Pools E &amp; F (Second Stage); 3rd and 4th place teams advance to Classification Pools G &amp; H.
             </p>
           </div>
 

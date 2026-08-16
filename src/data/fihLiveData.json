@@ -20,6 +20,58 @@
   ],
   "matchday2": [
     {
+      "id": 102,
+      "slug": "germany-vs-malaysia",
+      "status": "FINAL",
+      "isNext": false,
+      "match": "Germany vs Malaysia",
+      "gender": "Men",
+      "pool": "Pool B (Men - M2)",
+      "scoreA": 5,
+      "scoreB": 1,
+      "teamA": "Germany",
+      "flagA": "de",
+      "teamB": "Malaysia",
+      "flagB": "my",
+      "timeCET": "12:00 CET (Local Time)",
+      "timePKT": "15:00 PKT",
+      "timeIST": "15:30 IST",
+      "venue": "Wagener Hockey Stadium, Amstelveen (NED)",
+      "scorers": "Jakob Brilla (03' PC), Christopher Rühr (04' FG), Justus Weigand (07' FG), Abu Kamal Azrai (39' PC), Justus Warweg (44' FG), Paul-Philipp Kaufmann (52' FG)",
+      "stats": {
+        "possession": "62% - 38%",
+        "penaltyCorners": "8 (1) - 4 (1)",
+        "shotsOnTarget": "14 - 3"
+      },
+      "recapUrl": "/news/germany-vs-malaysia-result-score-august-15-hwc-2026"
+    },
+    {
+      "id": 104,
+      "slug": "belgium-vs-france",
+      "status": "FINAL",
+      "isNext": false,
+      "match": "Belgium vs France",
+      "gender": "Men",
+      "pool": "Pool B (Men - M4)",
+      "scoreA": 3,
+      "scoreB": 2,
+      "teamA": "Belgium",
+      "flagA": "be",
+      "teamB": "France",
+      "flagB": "fr",
+      "timeCET": "17:30 CET (Local Time)",
+      "timePKT": "20:30 PKT",
+      "timeIST": "21:00 IST",
+      "venue": "Belfius Hockey Arena, Wavre (BEL)",
+      "scorers": "Timothée Clément (03' FG), Nicolas de Kerpel (17' FG), François Curty (18' FG), Arno van Dessel (44' FG), Roman Duvekot (56' FG)",
+      "stats": {
+        "possession": "58% - 42%",
+        "penaltyCorners": "6 (0) - 4 (0)",
+        "shotsOnTarget": "10 - 5"
+      },
+      "recapUrl": "/news/belgium-vs-france-result-score-august-15-hwc-2026"
+    },
+    {
       "id": 200,
       "slug": "england-vs-south-africa-women",
       "status": "FINAL",

@@ -25,16 +25,16 @@ const INITIAL_COMPLETED_RESULTS = [
     status: "FINAL",
     match: "Netherlands vs New Zealand",
     gender: "Men's Pool A (M7)",
-    scoreA: 3,
+    scoreA: 5,
     scoreB: 1,
     teamA: "Netherlands",
     flagA: "nl",
     teamB: "New Zealand",
     flagB: "nz",
     venue: "Wagener Stadium, Amstelveen (NED)",
-    timeCET: "16:00 CET (Local Time)",
+    timeCET: "16:00 CEST (Local Time)",
     date: "Aug 16 · FT",
-    scorers: "Thierry Brinkman (08'), Jip Janssen (24' PC), Koen Bijen (51') | Sam Lane (39' PC)",
+    scorers: "Thierry Brinkman (08', 48'), Jip Janssen (24' PC), Koen Bijen (33', 51') | Sam Lane (39' PC)",
     recapUrl: "/news/netherlands-vs-new-zealand-result-score-august-16-hwc-2026"
   },
   {
@@ -42,16 +42,16 @@ const INITIAL_COMPLETED_RESULTS = [
     status: "FINAL",
     match: "Spain vs South Africa",
     gender: "Men's Pool C (M6)",
-    scoreA: 2,
-    scoreB: 0,
+    scoreA: 3,
+    scoreB: 1,
     teamA: "Spain",
     flagA: "es",
     teamB: "South Africa",
     flagB: "za",
     venue: "Belfius Hockey Arena, Wavre (BEL)",
-    timeCET: "14:30 CET (Local Time)",
+    timeCET: "14:30 CEST (Local Time)",
     date: "Aug 16 · FT",
-    scorers: "Marc Miralles (14' PC), Pere Amat (52')",
+    scorers: "Marc Miralles (14' PC), Pere Amat (41'), Xavier Gispert (52') | Bradley Sherwood (28' PC)",
     recapUrl: "/news/spain-vs-south-africa-result-score-august-16-hwc-2026"
   },
   {
@@ -83,9 +83,9 @@ const INITIAL_COMPLETED_RESULTS = [
     teamB: "Ireland",
     flagB: "ie",
     venue: "Belfius Hockey Arena, Wavre (BEL)",
-    timeCET: "11:30 CET (Local Time)",
+    timeCET: "11:30 CEST (Local Time)",
     date: "Aug 16 · FT",
-    scorers: "Blake Govers (11' PC), Jeremy Hayward (35' FG), Tim Brand (52') | Lee Cole (24' PC)",
+    scorers: "Joel Rintala (11' PC), Blake Govers (35' PC), Tim Brand (52') | Lee Cole (24' PC)",
     recapUrl: "/news/australia-vs-ireland-result-score-august-16-hwc-2026"
   },
   {
@@ -100,10 +100,10 @@ const INITIAL_COMPLETED_RESULTS = [
     teamB: "South Africa",
     flagB: "za",
     venue: "Wagener Stadium, Amstelveen (NED)",
-    timeCET: "10:00 CET (Local Time)",
+    timeCET: "10:00 CEST (Local Time)",
     date: "Aug 16 · FT",
-    scorers: "Giselle Ansley (14' PC), Hannah Martin (28'), Lily Owsley (41'), Tess Howard (52')",
-    recapUrl: "/news/england-vs-south-africa-women-result-score-august-16-hwc-2026"
+    scorers: "Darcy Bourne (10' PC), Tessa Howard (14'), Elizabeth Neal (30' PC), Sophie Hamilton (41')",
+    recapUrl: "/news/england-vs-south-africa-result-score-august-16-hwc-2026"
   },
   {
     id: 101,

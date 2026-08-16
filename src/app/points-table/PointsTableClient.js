@@ -193,9 +193,8 @@ export default function PointsTableClient({ standingsData }) {
           </tbody>
         </table>
         <div style={{ padding: "0.75rem 1.5rem", background: "#f8fafc", borderTop: "1px solid #e2e8f0", fontSize: "0.8rem", color: "#64748b", display: "flex", gap: "1.5rem", flexWrap: "wrap" }}>
-          <span>🟢 1st Place: Direct Quarter-Final Qualification</span>
-          <span>🔵 2nd & 3rd: Crossover Playoffs</span>
-          <span>⚪ 4th: Elimination</span>
+          <span>🟢 1st &amp; 2nd Place: Championship Pools E &amp; F Advance</span>
+          <span>🟡 3rd &amp; 4th Place: Classification Pools G &amp; H</span>
         </div>
       </div>
     </div>

@@ -9,8 +9,8 @@ const MASTER_MATCHDAY_2_SCHEDULE = [
   { id: 200, teamA: "England", teamB: "South Africa", gender: "Women", timeCET: "10:00", status: "FINAL", scoreA: 4, scoreB: 0, venue: "Wagener Stadium, Amstelveen (NED)" },
   { id: 201, teamA: "Australia", teamB: "Ireland", gender: "Men", timeCET: "11:30", status: "FINAL", scoreA: 3, scoreB: 1, venue: "Belfius Hockey Arena, Wavre (BEL)" },
   { id: 202, teamA: "China", teamB: "India", gender: "Women", timeCET: "13:00", status: "FINAL", scoreA: 2, scoreB: 2, venue: "Wagener Stadium, Amstelveen (NED)" },
-  { id: 203, teamA: "Spain", teamB: "South Africa", gender: "Men", timeCET: "14:30", status: "FINAL", scoreA: 2, scoreB: 0, venue: "Belfius Hockey Arena, Wavre (BEL)" },
-  { id: 204, teamA: "Netherlands", teamB: "New Zealand", gender: "Men", timeCET: "16:00", status: "FINAL", scoreA: 3, scoreB: 1, venue: "Wagener Stadium, Amstelveen (NED)" },
+  { id: 203, teamA: "Spain", teamB: "South Africa", gender: "Men", timeCET: "14:30", status: "FINAL", scoreA: 3, scoreB: 1, venue: "Belfius Hockey Arena, Wavre (BEL)" },
+  { id: 204, teamA: "Netherlands", teamB: "New Zealand", gender: "Men", timeCET: "16:00", status: "FINAL", scoreA: 5, scoreB: 1, venue: "Wagener Stadium, Amstelveen (NED)" },
   { id: 205, teamA: "Belgium", teamB: "New Zealand", gender: "Women", timeCET: "17:30", status: "FINAL", scoreA: 5, scoreB: 2, venue: "Belfius Hockey Arena, Wavre (BEL)" },
   { id: 207, teamA: "Spain", teamB: "Ireland", gender: "Women", timeCET: "20:30", status: "UPCOMING", scoreA: 0, scoreB: 0, venue: "Belfius Hockey Arena, Wavre (BEL)", relativeTime: "1 hour from now" },
   { id: 206, teamA: "Argentina", teamB: "Japan", gender: "Men", timeCET: "21:00", status: "UPCOMING", scoreA: 0, scoreB: 0, venue: "Wagener Stadium, Amstelveen (NED)", relativeTime: "1.5 hours from now" }
