@@ -4,76 +4,34 @@ import React, { useState, useEffect } from "react";
 
 const DEFAULT_LIVE_MATCHES = [
   {
-    id: 201,
+    id: 203,
     status: "LIVE",
-    period: "3rd Quarter",
-    minute: "38'",
-    quarterNumber: 3,
-    elapsedMinutes: 38,
-    timeCET: "08:30 CET",
-    localTimes: "12:00 IST / 11:30 PST / 16:30 AEST",
+    period: "2nd Quarter",
+    minute: "24'",
+    quarterNumber: 2,
+    elapsedMinutes: 24,
+    timeCET: "11:30 CET",
+    localTimes: "15:00 IST / 14:30 PST",
     gender: "Men's Pool C",
-    teamA: "Australia",
-    flagA: "au",
-    scoreA: 2,
-    teamB: "Ireland",
-    flagB: "ie",
-    scoreB: 1,
+    teamA: "Spain",
+    flagA: "es",
+    scoreA: 1,
+    teamB: "South Africa",
+    flagB: "za",
+    scoreB: 0,
     venue: "Belfius Hockey Arena, Wavre (BEL)",
     stats: {
-      possession: "59% - 41%",
-      penaltyCorners: "5 (1) - 2 (1)",
-      shotsOnTarget: "9 - 3"
+      possession: "56% - 44%",
+      penaltyCorners: "3 (1) - 1 (0)",
+      shotsOnTarget: "5 - 2"
     },
     events: [
-      { minute: "11'", player: "Blake Govers", type: "Penalty Corner Goal ⚽", team: "Australia" },
-      { minute: "24'", player: "Lee Cole", type: "Penalty Corner Goal ⚽", team: "Ireland" },
-      { minute: "35'", player: "Jeremy Hayward", type: "Field Goal ⚽", team: "Australia" }
-    ]
-  },
-  {
-    id: 202,
-    status: "LIVE",
-    period: "1st Quarter",
-    minute: "12'",
-    quarterNumber: 1,
-    elapsedMinutes: 12,
-    timeCET: "10:00 CET",
-    localTimes: "13:30 IST / 13:00 PST / 16:00 CST",
-    gender: "Women's Pool D",
-    teamA: "China",
-    flagA: "cn",
-    scoreA: 1,
-    teamB: "India",
-    flagB: "in",
-    scoreB: 0,
-    venue: "Wagener Stadium, Amstelveen (NED)",
-    stats: {
-      possession: "52% - 48%",
-      penaltyCorners: "2 (1) - 1 (0)",
-      shotsOnTarget: "4 - 2"
-    },
-    events: [
-      { minute: "08'", player: "Gu Bingfeng", type: "Penalty Corner Goal ⚽", team: "China" }
+      { minute: "14'", player: "Marc Miralles", type: "Penalty Corner Goal ⚽", team: "Spain" }
     ]
   }
 ];
 
 const DEFAULT_UPCOMING_TODAY = [
-  {
-    id: 203,
-    status: "UPCOMING",
-    timeCET: "11:30 CET",
-    localTimes: "15:00 IST / 14:30 PST",
-    match: "Spain vs South Africa",
-    gender: "Men's Pool C",
-    teamA: "Spain",
-    flagA: "es",
-    teamB: "South Africa",
-    flagB: "za",
-    venue: "Belfius Hockey Arena, Wavre (BEL)",
-    previewUrl: "/matches/australia-vs-spain"
-  },
   {
     id: 204,
     status: "UPCOMING",
@@ -120,6 +78,38 @@ const DEFAULT_UPCOMING_TODAY = [
 
 const DEFAULT_COMPLETED_RESULTS = [
   {
+    id: 201,
+    status: "FINAL",
+    match: "Australia vs Ireland",
+    gender: "Men's Pool C",
+    scoreA: 2,
+    scoreB: 1,
+    teamA: "Australia",
+    flagA: "au",
+    teamB: "Ireland",
+    flagB: "ie",
+    venue: "Belfius Hockey Arena, Wavre",
+    date: "Aug 16 · FT",
+    scorers: "Blake Govers (11' PC), Jeremy Hayward (35') | Lee Cole (24' PC)",
+    recapUrl: "/news/australia-vs-spain-result-score-hwc-2026"
+  },
+  {
+    id: 202,
+    status: "FINAL",
+    match: "China vs India",
+    gender: "Women's Pool D",
+    scoreA: 1,
+    scoreB: 0,
+    teamA: "China",
+    flagA: "cn",
+    teamB: "India",
+    flagB: "in",
+    venue: "Wagener Stadium, Amstelveen",
+    date: "Aug 16 · FT",
+    scorers: "Gu Bingfeng (08' PC)",
+    recapUrl: "/news/india-vs-england-result-score-hwc-2026"
+  },
+  {
     id: 101,
     status: "FINAL",
     match: "England vs Pakistan",
@@ -131,7 +121,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     teamB: "Pakistan",
     flagB: "pk",
     venue: "Wagener Stadium, Amstelveen",
-    date: "Aug 15",
+    date: "Aug 15 · FT",
     scorers: "Liam Ansell (14' PC), Phil Roper (39'), Sam Ward (47' PC), Nicholas Bandurak (54') | Muhammad Shahbaz Jr. (28')",
     recapUrl: "/news/england-vs-pakistan-result-score-august-15-hwc-2026"
   },

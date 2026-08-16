@@ -152,92 +152,81 @@ const ALL_TOURNAMENT_MATCHDAYS = {
     }
   ],
   "2026-08-16": [
-    // Today's Live Active Matches & Upcoming Schedule (Aug 16)
+    // 1. Completed Matchday 2 Morning Fixtures
     {
       id: 201,
-      status: "LIVE",
-      period: "3rd Quarter",
-      minute: "38'",
+      status: "FINAL",
+      match: "Australia vs Ireland",
       gender: "Men",
-      pool: "Pool C (Men)",
+      pool: "Pool C",
+      scoreA: 2,
+      scoreB: 1,
       teamA: "Australia",
       flagA: "au",
-      scoreA: 2,
       teamB: "Ireland",
       flagB: "ie",
-      scoreB: 1,
       venue: "Belfius Hockey Arena, Wavre (BEL)",
       timeCET: "08:30",
-      stats: {
-        possession: "59% - 41%",
-        penaltyCorners: "5 (1) - 2 (1)",
-        shotsOnTarget: "9 - 3",
-        yellowCards: 0,
-        redCards: 0
-      },
-      events: [
-        { minute: "11'", player: "Blake Govers", type: "Penalty Corner Goal ⚽", team: "Australia" },
-        { minute: "24'", player: "Lee Cole", type: "Penalty Corner Goal ⚽", team: "Ireland" },
-        { minute: "35'", player: "Jeremy Hayward", type: "Field Goal ⚽", team: "Australia" }
-      ],
-      postMatchSetup: {
-        recapSlug: "/matches/australia-vs-spain",
-        highlightsUrl: "https://www.youtube.com/@FIHockey",
-        nextMatchA: "Australia vs Spain — Aug 18 (11:00 CET)",
-        nextMatchB: "Ireland vs South Africa — Aug 18 (14:00 CET)"
-      }
+      scorers: "Blake Govers (11' PC), Jeremy Hayward (35') | Lee Cole (24' PC)",
+      stats: { possession: "59% - 41%", penaltyCorners: "5 (1) - 2 (1)", shotsOnTarget: "9 - 3", yellowCards: 0, redCards: 0 },
+      recapUrl: "/news/australia-vs-spain-result-score-hwc-2026"
     },
     {
       id: 202,
-      status: "LIVE",
-      period: "1st Quarter",
-      minute: "12'",
+      status: "FINAL",
+      match: "China vs India",
       gender: "Women",
-      pool: "Pool D (Women)",
+      pool: "Pool D",
+      scoreA: 1,
+      scoreB: 0,
       teamA: "China",
       flagA: "cn",
-      scoreA: 1,
       teamB: "India",
       flagB: "in",
-      scoreB: 0,
       venue: "Wagener Stadium, Amstelveen (NED)",
       timeCET: "10:00",
-      stats: {
-        possession: "52% - 48%",
-        penaltyCorners: "2 (1) - 1 (0)",
-        shotsOnTarget: "4 - 2",
-        yellowCards: 0,
-        redCards: 0
-      },
-      events: [
-        { minute: "08'", player: "Gu Bingfeng", type: "Penalty Corner Goal ⚽", team: "China" }
-      ],
-      postMatchSetup: {
-        recapSlug: "/matches/india-vs-england-women",
-        highlightsUrl: "https://www.youtube.com/@FIHockey",
-        nextMatchA: "China vs England — Aug 18 (09:30 CET)",
-        nextMatchB: "India vs South Africa — Aug 18 (12:00 CET)"
-      }
+      scorers: "Gu Bingfeng (08' PC)",
+      stats: { possession: "52% - 48%", penaltyCorners: "2 (1) - 1 (0)", shotsOnTarget: "4 - 2", yellowCards: 0, redCards: 0 },
+      recapUrl: "/news/india-vs-england-result-score-hwc-2026"
     },
+
+    // 2. Currently Active Live Match
     {
       id: 203,
-      status: "UPCOMING",
-      period: "Pushback 11:30 CET",
-      minute: "Starts 11:30 CET",
+      status: "LIVE",
+      period: "2nd Quarter",
+      minute: "24'",
+      quarterNumber: 2,
+      elapsedMinutes: 24,
       gender: "Men",
       pool: "Pool C (Men)",
       teamA: "Spain",
       flagA: "es",
-      scoreA: 0,
+      scoreA: 1,
       teamB: "South Africa",
       flagB: "za",
       scoreB: 0,
       venue: "Belfius Hockey Arena, Wavre (BEL)",
       timeCET: "11:30",
-      stats: { possession: "0% - 0%", penaltyCorners: "0 - 0", shotsOnTarget: "0 - 0", yellowCards: 0, redCards: 0 },
-      events: [],
-      previewUrl: "/matches/australia-vs-spain"
+      stats: {
+        possession: "56% - 44%",
+        penaltyCorners: "3 (1) - 1 (0)",
+        shotsOnTarget: "5 - 2",
+        yellowCards: 0,
+        redCards: 0
+      },
+      events: [
+        { minute: "14'", player: "Marc Miralles", type: "Penalty Corner Goal ⚽", team: "Spain" }
+      ],
+      postMatchSetup: {
+        recapSlug: "/matches/australia-vs-spain",
+        highlightsUrl: "https://www.youtube.com/@FIHockey",
+        nextMatchA: "Spain vs Australia — Aug 18 (16:00 CET)",
+        nextMatchB: "South Africa vs Ireland — Aug 18 (14:00 CET)"
+      }
     },
+
+    // 3. Upcoming Today Afternoon Matches
     {
       id: 204,
       status: "UPCOMING",
