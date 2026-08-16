@@ -213,8 +213,42 @@ export default function SchedulePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {getPublishedNews().slice(0, 3).map((article) => (
               <div key={article.slug} className="local-card" style={{ display: 'flex', flexDirection: 'column', height: '100%' }}>
-                <div style={{ position: 'relative', height: '160px', width: '100%', marginBottom: '1rem', overflow: 'hidden', borderRadius: '12px' }}>
-                  <img src={article.image} alt={article.title} style={{ objectFit: 'cover', width: '100%', height: '100%' }} />
+                {/* Dynamic SVG / Scorecard Header Container */}
+                <div style={{ position: 'relative', height: '160px', width: '100%', marginBottom: '1rem', overflow: 'hidden', borderRadius: '12px', background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                  <a href={`/news/${article.slug}`} style={{ textDecoration: "none", width: "100%", height: "100%", display: "flex", flexDirection: "column", justifyContent: "center", padding: "1rem" }}>
+                    {article.title.toLowerCase().includes(" vs ") || article.slug.includes("-vs-") ? (
+                      <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }}>
+                        <div style={{ textAlign: "center", flex: 1 }}>
+                          <span style={{ fontSize: "1.8rem", display: "block" }}>🏑</span>
+                          <span style={{ color: "#e2e8f0", fontSize: "0.8rem", fontWeight: "800", marginTop: "0.2rem" }}>
+                            {article.title.split(" vs ")[0] || "Team A"}
+                          </span>
+                        </div>
+                        <div style={{ textAlign: "center", padding: "0 0.4rem" }}>
+                          <span style={{ background: "linear-gradient(135deg, #c00030 0%, #a00028 100%)", color: "white", padding: "0.25rem 0.6rem", borderRadius: "10px", fontSize: "0.75rem", fontWeight: "900" }}>
+                            {article.category === "Match Report" ? "FINAL" : "PREVIEW"}
+                          </span>
+                        </div>
+                        <div style={{ textAlign: "center", flex: 1 }}>
+                          <span style={{ fontSize: "1.8rem", display: "block" }}>🏆</span>
+                          <span style={{ color: "#e2e8f0", fontSize: "0.8rem", fontWeight: "800", marginTop: "0.2rem" }}>
+                            {article.title.split(" vs ")[1]?.split(" ")[0] || "Team B"}
+                          </span>
+                        </div>
+                      </div>
+                    ) : (
+                      <div style={{ textAlign: "center", padding: "0.5rem" }}>
+                        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#c00030" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ margin: "0 auto 0.4rem auto", display: "block" }}>
+                          <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10l5 5v11a2 2 0 0 1-2 2z"></path>
+                          <polyline points="14 2 14 8 20 8"></polyline>
+                          <line x1="16" y1="13" x2="8" y2="13"></line>
+                        </svg>
+                        <span style={{ color: "#94a3b8", fontSize: "0.75rem", fontWeight: "700", textTransform: "uppercase" }}>
+                          HWC 2026 News
+                        </span>
+                      </div>
+                    )}
+                  </a>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'column', flexGrow: 1 }}>
                   <span style={{ color: 'var(--primary)', fontWeight: '700', fontSize: '0.75rem', textTransform: 'uppercase', marginBottom: '0.4rem', display: 'block' }}>{article.category}</span>
