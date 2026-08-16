@@ -1,13 +1,36 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { calculateTournamentStandings } from "@/lib/calculateStandings";
 
 export default function PointsTableClient({ standingsData }) {
   const [selectedGender, setSelectedGender] = useState("Men");
   const [selectedPool, setSelectedPool] = useState("Pool D");
+  const [liveStandings, setLiveStandings] = useState(standingsData);
+
+  useEffect(() => {
+    const fetchScoresAndRecalculate = async () => {
+      try {
+        const res = await fetch(`/api/live-scores?t=${Date.now()}`, { cache: "no-store" });
+        if (res.ok) {
+          const json = await res.json();
+          if (json.completedMatches && json.completedMatches.length > 0) {
+            const updated = calculateTournamentStandings(json.completedMatches);
+            setLiveStandings(updated);
+          }
+        }
+      } catch (e) {
+        console.error("Failed to update points table in real time:", e);
+      }
+    };
+
+    fetchScoresAndRecalculate();
+    const interval = setInterval(fetchScoresAndRecalculate, 20000);
+    return () => clearInterval(interval);
+  }, []);
 
   const pools = ["Pool A", "Pool B", "Pool C", "Pool D"];
-  const currentPoolData = standingsData[selectedGender]?.[selectedPool] || [];
+  const currentPoolData = liveStandings[selectedGender]?.[selectedPool] || standingsData[selectedGender]?.[selectedPool] || [];
 
   return (
     <div style={{ marginTop: "1rem" }}>

@@ -46,15 +46,15 @@ const STANDINGS_DATA = {
       { name: "Malaysia", code: "MAS", flag: "my", slug: "malaysia", p: 1, w: 0, d: 0, l: 1, gf: 1, ga: 5, gd: -4, pts: 0, recentRes: "L 1-5 vs GER" }
     ],
     "Pool A": [
-      { name: "Netherlands", code: "NED", flag: "nl", slug: "netherlands", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
-      { name: "Argentina", code: "ARG", flag: "ar", slug: "argentina", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
-      { name: "New Zealand", code: "NZL", flag: "nz", slug: "new-zealand", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
-      { name: "Japan", code: "JPN", flag: "jp", slug: "japan", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" }
+      { name: "Netherlands", code: "NED", flag: "nl", slug: "netherlands", p: 1, w: 1, d: 0, l: 0, gf: 3, ga: 1, gd: 2, pts: 3, recentRes: "W 3-1 vs NZL" },
+      { name: "Argentina", code: "ARG", flag: "ar", slug: "argentina", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Tonight" },
+      { name: "Japan", code: "JPN", flag: "jp", slug: "japan", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Tonight" },
+      { name: "New Zealand", code: "NZL", flag: "nz", slug: "new-zealand", p: 1, w: 0, d: 0, l: 1, gf: 1, ga: 3, gd: -2, pts: 0, recentRes: "L 1-3 vs NED" }
     ],
     "Pool C": [
       { name: "Spain", code: "ESP", flag: "es", slug: "spain", p: 1, w: 1, d: 0, l: 0, gf: 2, ga: 0, gd: 2, pts: 3, recentRes: "W 2-0 vs RSA" },
-      { name: "Australia", code: "AUS", flag: "au", slug: "australia", p: 1, w: 1, d: 0, l: 0, gf: 2, ga: 1, gd: 1, pts: 3, recentRes: "W 2-1 vs IRL" },
-      { name: "Ireland", code: "IRL", flag: "ie", slug: "ireland", p: 1, w: 0, d: 0, l: 1, gf: 1, ga: 2, gd: -1, pts: 0, recentRes: "L 1-2 vs AUS" },
+      { name: "Australia", code: "AUS", flag: "au", slug: "australia", p: 1, w: 1, d: 0, l: 0, gf: 3, ga: 1, gd: 2, pts: 3, recentRes: "W 3-1 vs IRL" },
+      { name: "Ireland", code: "IRL", flag: "ie", slug: "ireland", p: 1, w: 0, d: 0, l: 1, gf: 1, ga: 3, gd: -2, pts: 0, recentRes: "L 1-3 vs AUS" },
       { name: "South Africa", code: "RSA", flag: "za", slug: "south-africa", p: 1, w: 0, d: 0, l: 1, gf: 0, ga: 2, gd: -2, pts: 0, recentRes: "L 0-2 vs ESP" }
     ]
   },
@@ -72,16 +72,16 @@ const STANDINGS_DATA = {
       { name: "Scotland", code: "SCO", flag: "gb-sct", slug: "scotland", p: 1, w: 0, d: 0, l: 1, gf: 0, ga: 3, gd: -3, pts: 0, recentRes: "L 0-3 vs GER" }
     ],
     "Pool C": [
-      { name: "Belgium", code: "BEL", flag: "be", slug: "belgium", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
-      { name: "Spain", code: "ESP", flag: "es", slug: "spain", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
-      { name: "New Zealand", code: "NZL", flag: "nz", slug: "new-zealand", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" },
-      { name: "Ireland", code: "IRL", flag: "ie", slug: "ireland", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" }
+      { name: "Belgium", code: "BEL", flag: "be", slug: "belgium", p: 1, w: 1, d: 0, l: 0, gf: 5, ga: 2, gd: 3, pts: 3, recentRes: "W 5-2 vs NZL" },
+      { name: "Spain", code: "ESP", flag: "es", slug: "spain", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Tonight" },
+      { name: "Ireland", code: "IRL", flag: "ie", slug: "ireland", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Tonight" },
+      { name: "New Zealand", code: "NZL", flag: "nz", slug: "new-zealand", p: 1, w: 0, d: 0, l: 1, gf: 2, ga: 5, gd: -3, pts: 0, recentRes: "L 2-5 vs BEL" }
     ],
     "Pool D": [
-      { name: "China", code: "CHN", flag: "cn", slug: "china", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Today vs IND (4 PM PKT)" },
-      { name: "India", code: "IND", flag: "in", slug: "india", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Today vs CHN (4 PM PKT)" },
-      { name: "England", code: "ENG", flag: "gb-eng", slug: "england", p: 1, w: 1, d: 0, l: 0, gf: 2, ga: 1, gd: 1, pts: 3, recentRes: "W 2-1 vs RSA" },
-      { name: "South Africa", code: "RSA", flag: "za", slug: "south-africa", p: 1, w: 0, d: 0, l: 1, gf: 1, ga: 2, gd: -1, pts: 0, recentRes: "L 1-2 vs ENG" }
+      { name: "England", code: "ENG", flag: "gb-eng", slug: "england", p: 1, w: 1, d: 0, l: 0, gf: 4, ga: 0, gd: 4, pts: 3, recentRes: "W 4-0 vs RSA" },
+      { name: "China", code: "CHN", flag: "cn", slug: "china", p: 1, w: 0, d: 1, l: 0, gf: 2, ga: 2, gd: 0, pts: 1, recentRes: "D 2-2 vs IND" },
+      { name: "India", code: "IND", flag: "in", slug: "india", p: 1, w: 0, d: 1, l: 0, gf: 2, ga: 2, gd: 0, pts: 1, recentRes: "D 2-2 vs CHN" },
+      { name: "South Africa", code: "RSA", flag: "za", slug: "south-africa", p: 1, w: 0, d: 0, l: 1, gf: 0, ga: 4, gd: -4, pts: 0, recentRes: "L 0-4 vs ENG" }
     ]
   }
 };
