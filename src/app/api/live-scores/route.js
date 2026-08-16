@@ -18,7 +18,8 @@ export async function GET(request) {
         todayMatches = tmsMatches;
       }
     } catch (e) {
-      console.warn("FIH TMS live fetch fallback to local store:", e);
+      console.warn("FIH TMS live fetch fallback to local store:", e.message);
+      console.error("🚨 TMS Scraper Error - Falling back to JSON:", { url: "https://tms.fih.ch/competitions", error: e.message });
     }
 
     // Fallback to local data if live fetch returns empty

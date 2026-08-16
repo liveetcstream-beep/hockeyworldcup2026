@@ -15,7 +15,7 @@ const INITIAL_COMPLETED_RESULTS = [
     teamB: "New Zealand",
     flagB: "nz",
     venue: "Belfius Hockey Arena, Wavre (BEL)",
-    timeCET: "17:30 CET (Local Time)",
+    timeCET: "17:30 CEST (Local Time)",
     date: "Aug 16 · FT",
     scorers: "Charlotte Englebert (08' FG, 41' PC), Stephanie Vanden Borre (19' PC, 54' PC), Michelle Struijk (33') | Hope Ralph (24' PC), Olivia Shannon (50' FG)",
     recapUrl: "/news/belgium-vs-new-zealand-result-score-august-16-hwc-2026"
@@ -117,7 +117,7 @@ const INITIAL_COMPLETED_RESULTS = [
     teamB: "Pakistan",
     flagB: "pk",
     venue: "Wagener Stadium, Amstelveen (NED)",
-    timeCET: "19:00 CET (Local Time)",
+    timeCET: "19:00 CEST (Local Time)",
     date: "Aug 15 · FT",
     scorers: "Stuart Rushmere (14'), Sam Ward (29' PC), Samuel Hooper (41' PC), James Albery (56') | Rehman Abdul Afraz (33')",
     recapUrl: "/news/england-vs-pakistan-result-score-august-15-hwc-2026"
@@ -151,7 +151,7 @@ const INITIAL_COMPLETED_RESULTS = [
     teamB: "France",
     flagB: "fr",
     venue: "Belfius Hockey Arena, Wavre (BEL)",
-    timeCET: "21:00 CET (Local Time)",
+    timeCET: "21:00 CEST (Local Time)",
     date: "Aug 15 · FT",
     scorers: "Nelson Onana (17'), Roman Duvekot (44'), Alexander Hendrickx (56' PC) | Eliot Curty (03'), Timothée Clément (18')",
     recapUrl: "/news/belgium-vs-france-result-score-august-15-hwc-2026"
@@ -202,7 +202,7 @@ const INITIAL_COMPLETED_RESULTS = [
     teamB: "Scotland",
     flagB: "gb-sct",
     venue: "Belfius Hockey Arena, Wavre (BEL)",
-    timeCET: "11:30 CET (Local Time)",
+    timeCET: "11:30 CEST (Local Time)",
     date: "Aug 15 · FT",
     scorers: "Charlotte Stapenhorst (06', 29'), Nike Lorenz (48' PC)",
     recapUrl: "/news/germany-vs-scotland-women-result-score-august-15-hwc-2026"
@@ -219,7 +219,7 @@ const INITIAL_COMPLETED_RESULTS = [
     teamB: "USA",
     flagB: "us",
     venue: "Belfius Hockey Arena, Wavre (BEL)",
-    timeCET: "17:30 CET (Local Time)",
+    timeCET: "17:30 CEST (Local Time)",
     date: "Aug 15 · FT",
     scorers: "Agustina Gorzelany (14' PC) | Ashley Sessa (44') — Draw 1–1",
     recapUrl: "/news/argentina-vs-usa-women-result-score-august-15-hwc-2026"
@@ -248,7 +248,7 @@ const INITIAL_UPCOMING_TODAY = [
     id: 207,
     status: "UPCOMING",
     isNext: true,
-    timeCET: "20:30 CET · 1 hour from now",
+    timeCET: "20:30 CEST · 1 hour from now",
     localTimes: "23:30 PKT / 00:00 IST / 19:30 BST",
     match: "Spain vs Ireland",
     gender: "Women's Pool C (W8)",
@@ -263,7 +263,7 @@ const INITIAL_UPCOMING_TODAY = [
     id: 206,
     status: "UPCOMING",
     isNext: false,
-    timeCET: "21:00 CET · 1.5 hours from now",
+    timeCET: "21:00 CEST · 1.5 hours from now",
     localTimes: "00:00 PKT / 00:30 IST / 20:00 BST",
     match: "Argentina vs Japan",
     gender: "Men's Pool A (M8)",
@@ -324,6 +324,8 @@ export default function LiveScoresClient({ initialCompleted }) {
   const [activeFilter, setActiveFilter] = useState("all");
   const [resultsGender, setResultsGender] = useState("all"); // "all", "men", "women"
   const [showAllCompleted, setShowAllCompleted] = useState(false);
+  const [lastUpdated, setLastUpdated] = useState(new Date());
+  const [updateError, setUpdateError] = useState(null);
 
   const fetchScores = async () => {
     try {
@@ -349,15 +351,29 @@ export default function LiveScoresClient({ initialCompleted }) {
           }
         }
         if (json.completedMatches) setCompletedMatches(json.completedMatches);
+        if (json.lastUpdated) setLastUpdated(new Date(json.lastUpdated));
+        setUpdateError(null);
       }
     } catch (e) {
       console.error("Failed to sync live scores:", e);
+      setUpdateError(true);
     }
+  };
+
+  const getTimeAgo = (date) => {
+    if (!date) return "now";
+    const seconds = Math.floor((new Date() - new Date(date)) / 1000);
+    if (seconds < 5) return "just now";
+    if (seconds < 60) return `${seconds}s ago`;
+    const minutes = Math.floor(seconds / 60);
+    if (minutes < 60) return `${minutes}m ago`;
+    const hours = Math.floor(minutes / 60);
+    return `${hours}h ago`;
   };
 
   useEffect(() => {
     fetchScores();
-    const interval = setInterval(fetchScores, 20000);
+    const interval = setInterval(fetchScores, 10000);
     return () => clearInterval(interval);
   }, []);
 
@@ -389,6 +405,13 @@ export default function LiveScoresClient({ initialCompleted }) {
 
   return (
     <div>
+      {/* ⚠️ WARNING BANNER - Static Data Mode */}
+      {updateError && (
+        <div style={{ background: "#fef2f2", border: "1px solid #fca5a5", color: "#991b1b", padding: "0.75rem 1rem", textAlign: "center", fontSize: "0.85rem", marginBottom: "1rem", borderRadius: "6px" }}>
+          ⚠️ <strong>Warning:</strong> Live scores unavailable - Showing last successful update from {getTimeAgo(lastUpdated)}
+        </div>
+      )}
+
       {/* Hero Live Header */}
       <section className="hero-section" style={{ padding: "2rem 0 1.5rem 0", background: "linear-gradient(180deg, rgba(2, 132, 199, 0.04) 0%, rgba(255, 255, 255, 0) 100%)" }}>
         <div className="sports-container hero-content" style={{ textAlign: "center" }}>
@@ -456,6 +479,10 @@ export default function LiveScoresClient({ initialCompleted }) {
                 <span style={{ color: "#38bdf8", fontWeight: "800" }}>⏰ Next Pushback: {nextMatch.timeCET}</span>
               </div>
             )}
+
+            <div style={{ marginTop: "0.75rem", fontSize: "0.75rem", color: "#10b981", fontWeight: "600" }}>
+              ✓ Data synchronizing every 10 seconds
+            </div>
           </section>
         ) : nextMatch ? (
           <section className="spotlight-banner" style={{ background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)", border: "1px solid rgba(56, 189, 248, 0.3)" }}>
@@ -542,9 +569,14 @@ export default function LiveScoresClient({ initialCompleted }) {
             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid #dcfce7", paddingBottom: "0.85rem", marginBottom: "1.25rem", flexWrap: "wrap", gap: "0.75rem" }}>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                 <span style={{ fontSize: "1.2rem" }}>✅</span>
-                <h2 style={{ fontSize: "clamp(1.1rem, 3vw, 1.35rem)", fontWeight: "900", color: "#0f172a", margin: 0, fontStyle: "normal" }}>
-                  RECENTLY FINISHED MATCH RESULTS ({filteredCompleted.length} Matches)
-                </h2>
+                <div>
+                  <h2 style={{ fontSize: "clamp(1.1rem, 3vw, 1.35rem)", fontWeight: "900", color: "#0f172a", margin: 0, fontStyle: "normal" }}>
+                    RECENTLY FINISHED MATCH RESULTS ({filteredCompleted.length} Matches)
+                  </h2>
+                  <span style={{ fontSize: "0.75rem", color: "#10b981", fontWeight: "600", marginTop: "0.25rem", display: "block" }}>
+                    🟢 Live · Updated {getTimeAgo(lastUpdated)}
+                  </span>
+                </div>
               </div>
 
               {/* Men's / Women's Selection Filter Buttons */}
