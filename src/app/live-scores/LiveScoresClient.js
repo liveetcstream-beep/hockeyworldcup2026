@@ -243,15 +243,6 @@ export default function LiveScoresClient() {
   const [completedMatches, setCompletedMatches] = useState(DEFAULT_COMPLETED_RESULTS);
   const [activeFilter, setActiveFilter] = useState("all");
   const [lastSyncTime, setLastSyncTime] = useState("");
-  const [runningSeconds, setRunningSeconds] = useState(28);
-
-  // Live seconds ticker effect
-  useEffect(() => {
-    const secTimer = setInterval(() => {
-      setRunningSeconds((prev) => (prev >= 59 ? 0 : prev + 1));
-    }, 1000);
-    return () => clearInterval(secTimer);
-  }, []);
 
   const fetchScores = async () => {
     try {
@@ -424,15 +415,15 @@ export default function LiveScoresClient() {
                   padding: "1.5rem",
                   position: "relative"
                 }}>
-                  {/* Card Header with Elapsed Match Time */}
+                  {/* Card Header */}
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem", borderBottom: "1px solid #e2e8f0", paddingBottom: "0.75rem", flexWrap: "wrap", gap: "0.5rem" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                       <span style={{ width: "9px", height: "9px", borderRadius: "50%", background: "#22c55e", boxShadow: "0 0 8px #22c55e" }}></span>
                       <strong style={{ color: "#15803d", fontSize: "0.88rem", textTransform: "uppercase", fontWeight: "900", letterSpacing: "0.03em" }}>
-                        {match.period} · {match.minute}
+                        {match.period}
                       </strong>
-                      <span style={{ background: "#dcfce7", color: "#166534", fontSize: "0.74rem", fontWeight: "800", padding: "0.15rem 0.5rem", borderRadius: "4px" }}>
-                        ⏱️ {match.elapsedMinutes || 38} mins elapsed ({60 - (match.elapsedMinutes || 38)}' remaining)
+                      <span style={{ background: "rgba(239, 68, 68, 0.12)", color: "#b91c1c", fontSize: "0.74rem", fontWeight: "800", padding: "0.15rem 0.5rem", borderRadius: "4px" }}>
+                        🔴 LIVE IN PROGRESS
                       </span>
                     </div>
 
@@ -469,22 +460,22 @@ export default function LiveScoresClient() {
                       </div>
                     </div>
 
-                    {/* Live Score Display with Live Clock Ticker */}
+                    {/* Live Score Display */}
                     <div style={{
                       textAlign: "center",
-                      padding: "0.5rem 1.25rem",
+                      padding: "0.6rem 1.4rem",
                       background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
                       borderRadius: "12px",
                       color: "#ffffff",
-                      minWidth: "120px",
+                      minWidth: "110px",
                       flexShrink: 0,
                       boxShadow: "0 4px 12px rgba(0,0,0,0.15)"
                     }}>
-                      <span style={{ fontSize: "1.65rem", fontWeight: "900", letterSpacing: "0.08em", whiteSpace: "nowrap", display: "block" }}>
+                      <span style={{ fontSize: "1.75rem", fontWeight: "900", letterSpacing: "0.08em", whiteSpace: "nowrap", display: "block" }}>
                         {match.scoreA} - {match.scoreB}
                       </span>
-                      <span style={{ display: "inline-flex", alignItems: "center", gap: "0.3rem", fontSize: "0.68rem", color: "#4ade80", fontWeight: "800", textTransform: "uppercase", background: "rgba(255,255,255,0.08)", padding: "0.15rem 0.5rem", borderRadius: "4px", marginTop: "0.2rem" }}>
-                        ● {match.minute.replace("'", "")}:{formatSeconds(runningSeconds)} CLOCK
+                      <span style={{ display: "inline-block", fontSize: "0.7rem", color: "#4ade80", fontWeight: "800", textTransform: "uppercase", background: "rgba(255,255,255,0.08)", padding: "0.15rem 0.5rem", borderRadius: "4px", marginTop: "0.2rem" }}>
+                        {match.period}
                       </span>
                     </div>
 
@@ -516,13 +507,13 @@ export default function LiveScoresClient() {
                     </div>
                   )}
 
-                  {/* Comprehensive Timing & Realtime Match Stats Bar */}
+                  {/* Comprehensive Realtime Match Stats Bar */}
                   <div style={{ marginTop: "0.85rem", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "0.6rem", background: "#ffffff", padding: "0.75rem 0.9rem", borderRadius: "10px", border: "1px solid #e2e8f0" }}>
-                    {/* Time Stat 1: Match Duration */}
+                    {/* Time Stat 1: Match Period */}
                     <div style={{ textAlign: "center", borderRight: "1px solid #f1f5f9" }}>
-                      <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block", fontWeight: "600" }}>⏱️ Current Time</span>
+                      <span style={{ fontSize: "0.7rem", color: "#64748b", display: "block", fontWeight: "600" }}>⏱️ Match Status</span>
                       <strong style={{ fontSize: "0.85rem", color: "#16a34a" }}>
-                        {match.elapsedMinutes || 38}' ({match.period})
+                        {match.period}
                       </strong>
                     </div>
 
