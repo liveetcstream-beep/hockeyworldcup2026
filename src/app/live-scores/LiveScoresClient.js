@@ -237,14 +237,14 @@ const DEFAULT_COMPLETED_RESULTS = [
   {
     id: 107,
     status: "FINAL",
-    match: "Argentina vs USA",
+    match: "Argentina vs United States",
     gender: "Women",
     pool: "Pool B",
     scoreA: 3,
     scoreB: 1,
     teamA: "Argentina",
     flagA: "ar",
-    teamB: "United States",
+    teamB: "USA",
     flagB: "us",
     venue: "Belfius Arena, Wavre",
     date: "Aug 15",
@@ -422,63 +422,81 @@ export default function LiveScoresClient() {
                   background: "#ffffff",
                   border: "2px solid var(--primary)",
                   borderRadius: "16px",
-                  padding: "2rem",
+                  padding: "1.75rem 2rem",
                   position: "relative",
                   boxShadow: "0 10px 30px rgba(192, 0, 48, 0.08)"
                 }}>
                   {/* Card Header */}
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", borderBottom: "1px solid #e2e8f0", paddingBottom: "1rem", flexWrap: "wrap", gap: "0.5rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.5rem", borderBottom: "1px solid #e2e8f0", paddingBottom: "0.75rem", flexWrap: "wrap", gap: "0.5rem" }}>
                     <div style={{ display: "flex", alignItems: "center", gap: "0.6rem" }}>
                       <span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#22c55e" }}></span>
-                      <strong style={{ color: "#16a34a", fontSize: "0.9rem", textTransform: "uppercase", fontWeight: "900", letterSpacing: "0.05em" }}>
+                      <strong style={{ color: "#16a34a", fontSize: "0.85rem", textTransform: "uppercase", fontWeight: "900", letterSpacing: "0.05em" }}>
                         {match.period} · {match.minute}
                       </strong>
                     </div>
-                    <span style={{ background: "#e0f2fe", color: "#0369a1", fontWeight: "800", fontSize: "0.75rem", padding: "0.3rem 0.7rem", borderRadius: "6px" }}>
+                    <span style={{ background: "#e0f2fe", color: "#0369a1", fontWeight: "800", fontSize: "0.75rem", padding: "0.25rem 0.6rem", borderRadius: "6px" }}>
                       {match.pool}
                     </span>
                   </div>
 
-                  {/* Scoreboard */}
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem" }}>
+                  {/* 3-Column Scoreboard Grid */}
+                  <div style={{
+                    display: "grid",
+                    gridTemplateColumns: "1fr auto 1fr",
+                    alignItems: "center",
+                    gap: "1rem",
+                    width: "100%"
+                  }}>
                     {/* Team A */}
-                    <div style={{ flex: "1 1 180px", display: "flex", alignItems: "center", gap: "1rem" }}>
-                      <img src={`https://flagcdn.com/w40/${match.flagA}.png`} width="36" height="24" alt={match.teamA} style={{ borderRadius: "3px", border: "1px solid #e2e8f0" }} />
-                      <div>
-                        <h3 style={{ fontSize: "1.25rem", fontWeight: "900", margin: 0, color: "#0f172a" }}>{match.teamA}</h3>
-                        <span style={{ fontSize: "0.75rem", color: "#64748b" }}>Home / Country</span>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", minWidth: 0 }}>
+                      <img src={`https://flagcdn.com/w40/${match.flagA}.png`} width="36" height="24" alt={match.teamA} style={{ borderRadius: "3px", border: "1px solid #e2e8f0", flexShrink: 0 }} />
+                      <div style={{ minWidth: 0 }}>
+                        <h3 style={{ fontSize: "1.15rem", fontWeight: "900", margin: 0, color: "#0f172a", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                          {match.teamA}
+                        </h3>
+                        <span style={{ fontSize: "0.75rem", color: "#64748b" }}>Home</span>
                       </div>
                     </div>
 
-                    {/* Live Score Display */}
-                    <div style={{ textAlign: "center", padding: "0.5rem 1.5rem", background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)", borderRadius: "12px", color: "#ffffff", minWidth: "130px" }}>
-                      <span style={{ fontSize: "2rem", fontWeight: "900", letterSpacing: "0.1em" }}>
+                    {/* Live Score Display (Never breaks) */}
+                    <div style={{
+                      textAlign: "center",
+                      padding: "0.5rem 1.25rem",
+                      background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+                      borderRadius: "12px",
+                      color: "#ffffff",
+                      minWidth: "110px",
+                      flexShrink: 0
+                    }}>
+                      <span style={{ fontSize: "1.75rem", fontWeight: "900", letterSpacing: "0.08em", whiteSpace: "nowrap", display: "block" }}>
                         {match.scoreA} - {match.scoreB}
                       </span>
-                      <span style={{ display: "block", fontSize: "0.7rem", color: "#4ade80", fontWeight: "800", textTransform: "uppercase", marginTop: "0.2rem" }}>
-                        ● Live Match Clock
+                      <span style={{ display: "block", fontSize: "0.65rem", color: "#4ade80", fontWeight: "800", textTransform: "uppercase" }}>
+                        ● LIVE CLOCK
                       </span>
                     </div>
 
                     {/* Team B */}
-                    <div style={{ flex: "1 1 180px", display: "flex", alignItems: "center", justifyContent: "flex-end", gap: "1rem", textAlign: "right" }}>
-                      <div>
-                        <h3 style={{ fontSize: "1.25rem", fontWeight: "900", margin: 0, color: "#0f172a" }}>{match.teamB}</h3>
-                        <span style={{ fontSize: "0.75rem", color: "#64748b" }}>Away / Country</span>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: "0.75rem", minWidth: 0, textAlign: "right" }}>
+                      <div style={{ minWidth: 0 }}>
+                        <h3 style={{ fontSize: "1.15rem", fontWeight: "900", margin: 0, color: "#0f172a", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                          {match.teamB}
+                        </h3>
+                        <span style={{ fontSize: "0.75rem", color: "#64748b" }}>Away</span>
                       </div>
-                      <img src={`https://flagcdn.com/w40/${match.flagB}.png`} width="36" height="24" alt={match.teamB} style={{ borderRadius: "3px", border: "1px solid #e2e8f0" }} />
+                      <img src={`https://flagcdn.com/w40/${match.flagB}.png`} width="36" height="24" alt={match.teamB} style={{ borderRadius: "3px", border: "1px solid #e2e8f0", flexShrink: 0 }} />
                     </div>
                   </div>
 
                   {/* Goal Events Timeline */}
                   {match.events && match.events.length > 0 && (
-                    <div style={{ marginTop: "1.5rem", padding: "1rem", background: "#f8fafc", borderRadius: "10px", border: "1px solid #e2e8f0" }}>
-                      <strong style={{ fontSize: "0.8rem", color: "#475569", textTransform: "uppercase", letterSpacing: "0.05em", display: "block", marginBottom: "0.5rem" }}>
+                    <div style={{ marginTop: "1.5rem", padding: "0.85rem 1rem", background: "#f8fafc", borderRadius: "10px", border: "1px solid #e2e8f0" }}>
+                      <strong style={{ fontSize: "0.75rem", color: "#475569", textTransform: "uppercase", letterSpacing: "0.05em", display: "block", marginBottom: "0.4rem" }}>
                         ⚽ Live Goal Timeline:
                       </strong>
-                      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.8rem" }}>
+                      <div style={{ display: "flex", flexWrap: "wrap", gap: "0.6rem" }}>
                         {match.events.map((ev, i) => (
-                          <span key={i} style={{ fontSize: "0.82rem", background: "#ffffff", padding: "0.3rem 0.6rem", borderRadius: "6px", border: "1px solid #cbd5e1", color: "#0f172a", fontWeight: "600" }}>
+                          <span key={i} style={{ fontSize: "0.8rem", background: "#ffffff", padding: "0.25rem 0.55rem", borderRadius: "6px", border: "1px solid #cbd5e1", color: "#0f172a", fontWeight: "600" }}>
                             <strong>{ev.minute}</strong> {ev.player} ({ev.team}) - {ev.type}
                           </span>
                         ))}
@@ -488,7 +506,7 @@ export default function LiveScoresClient() {
 
                   {/* Realtime Stats Bar */}
                   {match.stats && (
-                    <div style={{ marginTop: "1.2rem", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "0.75rem", background: "#ffffff", padding: "0.8rem 1rem", borderRadius: "10px", border: "1px solid #e2e8f0" }}>
+                    <div style={{ marginTop: "1rem", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(130px, 1fr))", gap: "0.75rem", background: "#ffffff", padding: "0.75rem 1rem", borderRadius: "10px", border: "1px solid #e2e8f0" }}>
                       <div style={{ textAlign: "center" }}>
                         <span style={{ fontSize: "0.72rem", color: "#64748b", display: "block" }}>Possession</span>
                         <strong style={{ fontSize: "0.88rem", color: "#0f172a" }}>{match.stats.possession}</strong>
@@ -503,7 +521,7 @@ export default function LiveScoresClient() {
                       </div>
                       <div style={{ textAlign: "center" }}>
                         <span style={{ fontSize: "0.72rem", color: "#64748b", display: "block" }}>Venue</span>
-                        <strong style={{ fontSize: "0.8rem", color: "#0f172a" }}>📍 {match.venue}</strong>
+                        <strong style={{ fontSize: "0.78rem", color: "#0f172a", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", display: "block" }}>📍 {match.venue}</strong>
                       </div>
                     </div>
                   )}
@@ -528,29 +546,34 @@ export default function LiveScoresClient() {
               </span>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "1.2rem" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(330px, 1fr))", gap: "1.25rem" }}>
               {upcomingToday.map((match) => (
-                <div key={match.id} style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "14px", padding: "1.5rem", boxShadow: "0 4px 15px rgba(0,0,0,0.03)" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem", borderBottom: "1px solid #f1f5f9", paddingBottom: "0.75rem" }}>
-                    <span style={{ background: "#fef3c7", color: "#92400e", fontWeight: "800", fontSize: "0.75rem", padding: "0.2rem 0.6rem", borderRadius: "4px" }}>
+                <div key={match.id} style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "14px", padding: "1.25rem", boxShadow: "0 4px 15px rgba(0,0,0,0.03)" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.85rem", borderBottom: "1px solid #f1f5f9", paddingBottom: "0.6rem" }}>
+                    <span style={{ background: "#fef3c7", color: "#92400e", fontWeight: "800", fontSize: "0.72rem", padding: "0.2rem 0.55rem", borderRadius: "4px" }}>
                       ⏳ {match.timeCET}
                     </span>
-                    <span style={{ fontSize: "0.75rem", color: "#64748b", fontWeight: "700" }}>{match.pool}</span>
+                    <span style={{ fontSize: "0.72rem", color: "#64748b", fontWeight: "800" }}>{match.gender}'s {match.pool}</span>
                   </div>
 
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1rem" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontWeight: "800", fontSize: "1.05rem" }}>
-                      <img src={`https://flagcdn.com/w40/${match.flagA}.png`} width="24" height="16" alt={match.teamA} style={{ borderRadius: "2px" }} />
-                      <span>{match.teamA}</span>
+                  {/* 3-Column Match Teams */}
+                  <div style={{ display: "grid", gridTemplateColumns: "1fr auto 1fr", alignItems: "center", gap: "0.5rem", marginBottom: "0.85rem" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", minWidth: 0 }}>
+                      <img src={`https://flagcdn.com/w40/${match.flagA}.png`} width="22" height="15" alt={match.teamA} style={{ borderRadius: "2px", flexShrink: 0 }} />
+                      <span style={{ fontSize: "0.92rem", fontWeight: "800", color: "#0f172a", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                        {match.teamA}
+                      </span>
                     </div>
-                    <span style={{ color: "#94a3b8", fontWeight: "800", fontSize: "0.9rem" }}>VS</span>
-                    <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontWeight: "800", fontSize: "1.05rem" }}>
-                      <span>{match.teamB}</span>
-                      <img src={`https://flagcdn.com/w40/${match.flagB}.png`} width="24" height="16" alt={match.teamB} style={{ borderRadius: "2px" }} />
+                    <span style={{ color: "#94a3b8", fontWeight: "900", fontSize: "0.8rem", padding: "0 0.2rem", flexShrink: 0 }}>VS</span>
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: "0.5rem", minWidth: 0, textAlign: "right" }}>
+                      <span style={{ fontSize: "0.92rem", fontWeight: "800", color: "#0f172a", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                        {match.teamB}
+                      </span>
+                      <img src={`https://flagcdn.com/w40/${match.flagB}.png`} width="22" height="15" alt={match.teamB} style={{ borderRadius: "2px", flexShrink: 0 }} />
                     </div>
                   </div>
 
-                  <p style={{ fontSize: "0.78rem", color: "#64748b", margin: "0 0 1rem 0" }}>📍 {match.venue}</p>
+                  <p style={{ fontSize: "0.74rem", color: "#64748b", margin: "0 0 0.85rem 0", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>📍 {match.venue}</p>
 
                   <div style={{ display: "flex", gap: "0.5rem" }}>
                     {match.previewUrl && (
@@ -583,42 +606,79 @@ export default function LiveScoresClient() {
               </span>
             </div>
 
-            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.2rem" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(330px, 1fr))", gap: "1.25rem" }}>
               {completedMatches.map((res) => (
-                <div key={res.id} style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "12px", padding: "1.25rem", boxShadow: "0 2px 8px rgba(0,0,0,0.02)" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.78rem", color: "#64748b", marginBottom: "0.6rem", fontWeight: "700" }}>
-                    <span>{res.gender}'s {res.pool}</span>
-                    <span>{res.date || "Completed"} · 📍 {res.venue}</span>
+                <div key={res.id} style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "14px", padding: "1.25rem", boxShadow: "0 2px 10px rgba(0,0,0,0.03)" }}>
+                  {/* Card Sub-Header */}
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
+                    <span style={{ background: "#f1f5f9", color: "#334155", fontSize: "0.72rem", fontWeight: "800", padding: "0.2rem 0.55rem", borderRadius: "4px" }}>
+                      {res.gender}'s {res.pool}
+                    </span>
+                    <span style={{ background: "#dcfce7", color: "#166534", fontSize: "0.72rem", fontWeight: "800", padding: "0.2rem 0.55rem", borderRadius: "4px" }}>
+                      FINAL
+                    </span>
                   </div>
 
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.6rem" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontWeight: "800", fontSize: "1.05rem" }}>
-                      <img src={`https://flagcdn.com/w40/${res.flagA}.png`} width="22" height="15" alt={res.teamA} style={{ borderRadius: "2px" }} />
-                      <span>{res.teamA}</span>
+                  <span style={{ fontSize: "0.74rem", color: "#64748b", display: "block", marginBottom: "0.75rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                    📍 {res.venue}
+                  </span>
+
+                  {/* 3-Column Scoreboard (Guaranteed Never to break onto 2 lines) */}
+                  <div style={{
+                    display: "grid",
+                    gridTemplateColumns: "1fr auto 1fr",
+                    alignItems: "center",
+                    gap: "0.5rem",
+                    marginBottom: "0.85rem"
+                  }}>
+                    {/* Team A */}
+                    <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", minWidth: 0 }}>
+                      <img src={`https://flagcdn.com/w40/${res.flagA}.png`} width="22" height="15" alt={res.teamA} style={{ borderRadius: "2px", flexShrink: 0, border: "1px solid #e2e8f0" }} />
+                      <span style={{ fontSize: "0.92rem", fontWeight: "800", color: "#0f172a", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                        {res.teamA}
+                      </span>
                     </div>
-                    <strong style={{ fontSize: "1.25rem", color: "#0f172a", background: "#f1f5f9", padding: "0.2rem 0.6rem", borderRadius: "6px", letterSpacing: "0.05em" }}>
+
+                    {/* Score Badge */}
+                    <div style={{
+                      background: "#0f172a",
+                      color: "#ffffff",
+                      padding: "0.3rem 0.7rem",
+                      borderRadius: "8px",
+                      fontWeight: "900",
+                      fontSize: "1.15rem",
+                      letterSpacing: "0.08em",
+                      whiteSpace: "nowrap",
+                      textAlign: "center",
+                      flexShrink: 0,
+                      minWidth: "62px"
+                    }}>
                       {res.scoreA} - {res.scoreB}
-                    </strong>
-                    <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontWeight: "800", fontSize: "1.05rem" }}>
-                      <span>{res.teamB}</span>
-                      <img src={`https://flagcdn.com/w40/${res.flagB}.png`} width="22" height="15" alt={res.teamB} style={{ borderRadius: "2px" }} />
+                    </div>
+
+                    {/* Team B */}
+                    <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: "0.5rem", minWidth: 0, textAlign: "right" }}>
+                      <span style={{ fontSize: "0.92rem", fontWeight: "800", color: "#0f172a", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                        {res.teamB}
+                      </span>
+                      <img src={`https://flagcdn.com/w40/${res.flagB}.png`} width="22" height="15" alt={res.teamB} style={{ borderRadius: "2px", flexShrink: 0, border: "1px solid #e2e8f0" }} />
                     </div>
                   </div>
 
                   {res.scorers && (
-                    <p style={{ fontSize: "0.78rem", color: "#475569", margin: "0.4rem 0 0.8rem 0", lineHeight: "1.45", background: "#f8fafc", padding: "0.5rem 0.7rem", borderRadius: "6px" }}>
+                    <div style={{ fontSize: "0.76rem", color: "#475569", margin: "0.5rem 0 0.85rem 0", lineHeight: "1.45", background: "#f8fafc", padding: "0.5rem 0.7rem", borderRadius: "8px", border: "1px solid #f1f5f9" }}>
                       ⚽ <strong>Goals:</strong> {res.scorers}
-                    </p>
+                    </div>
                   )}
 
                   <div style={{ display: "flex", gap: "0.5rem" }}>
                     {res.recapUrl && (
-                      <a href={res.recapUrl} style={{ background: "#c00030", color: "#ffffff", padding: "0.35rem 0.75rem", borderRadius: "6px", fontSize: "0.75rem", fontWeight: "700", textDecoration: "none" }}>
-                        Full Match Report →
+                      <a href={res.recapUrl} style={{ flex: 1, textAlign: "center", background: "#c00030", color: "#ffffff", padding: "0.4rem", borderRadius: "6px", fontSize: "0.76rem", fontWeight: "700", textDecoration: "none" }}>
+                        Match Report →
                       </a>
                     )}
-                    <a href="/points-table" style={{ background: "#f1f5f9", color: "#0f172a", padding: "0.35rem 0.75rem", borderRadius: "6px", fontSize: "0.75rem", fontWeight: "700", textDecoration: "none" }}>
-                      Impact on Standings
+                    <a href="/points-table" style={{ flex: 1, textAlign: "center", background: "#f1f5f9", color: "#0f172a", padding: "0.4rem", borderRadius: "6px", fontSize: "0.76rem", fontWeight: "700", textDecoration: "none", border: "1px solid #e2e8f0" }}>
+                      Standings
                     </a>
                   </div>
                 </div>

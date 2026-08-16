@@ -227,38 +227,77 @@ export default function LiveScoresPage() {
             </span>
           </div>
 
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "1.5rem" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(330px, 1fr))", gap: "1.25rem" }}>
             {COMPLETED_MATCH_RESULTS.map((res) => (
-              <div key={res.id} style={{ border: "1px solid #e2e8f0", borderRadius: "12px", padding: "1.25rem", background: "#f8fafc" }}>
-                <div style={{ display: "flex", justifyContent: "space-between", fontSize: "0.8rem", color: "#64748b", marginBottom: "0.75rem", fontWeight: "700" }}>
-                  <span>{res.gender}</span>
-                  <span>📍 {res.venue}</span>
-                </div>
-
+              <div key={res.id} style={{ border: "1px solid #e2e8f0", borderRadius: "14px", padding: "1.25rem", background: "#f8fafc", boxShadow: "0 2px 10px rgba(0,0,0,0.02)" }}>
+                {/* Header row */}
                 <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontWeight: "800", fontSize: "1.05rem" }}>
-                    <img src={`https://flagcdn.com/w40/${res.flagA}.png`} width="24" height="16" alt={res.teamA} />
-                    <span>{res.teamA}</span>
+                  <span style={{ background: "#f1f5f9", color: "#334155", fontSize: "0.72rem", fontWeight: "800", padding: "0.2rem 0.55rem", borderRadius: "4px" }}>
+                    {res.gender}
+                  </span>
+                  <span style={{ background: "#dcfce7", color: "#166534", fontSize: "0.72rem", fontWeight: "800", padding: "0.2rem 0.55rem", borderRadius: "4px" }}>
+                    FINAL
+                  </span>
+                </div>
+
+                <span style={{ fontSize: "0.74rem", color: "#64748b", display: "block", marginBottom: "0.75rem", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                  📍 {res.venue}
+                </span>
+
+                {/* 3-Column Scoreboard Grid */}
+                <div style={{
+                  display: "grid",
+                  gridTemplateColumns: "1fr auto 1fr",
+                  alignItems: "center",
+                  gap: "0.5rem",
+                  marginBottom: "0.85rem"
+                }}>
+                  {/* Team A */}
+                  <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", minWidth: 0 }}>
+                    <img src={`https://flagcdn.com/w40/${res.flagA}.png`} width="22" height="15" alt={res.teamA} style={{ borderRadius: "2px", flexShrink: 0, border: "1px solid #e2e8f0" }} />
+                    <span style={{ fontSize: "0.92rem", fontWeight: "800", color: "#0f172a", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                      {res.teamA}
+                    </span>
                   </div>
-                  <strong style={{ fontSize: "1.3rem", color: "#0f172a", background: "#e2e8f0", padding: "0.2rem 0.6rem", borderRadius: "6px" }}>
+
+                  {/* Score Badge */}
+                  <div style={{
+                    background: "#0f172a",
+                    color: "#ffffff",
+                    padding: "0.3rem 0.7rem",
+                    borderRadius: "8px",
+                    fontWeight: "900",
+                    fontSize: "1.15rem",
+                    letterSpacing: "0.08em",
+                    whiteSpace: "nowrap",
+                    textAlign: "center",
+                    flexShrink: 0,
+                    minWidth: "62px"
+                  }}>
                     {res.scoreA} - {res.scoreB}
-                  </strong>
-                  <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", fontWeight: "800", fontSize: "1.05rem" }}>
-                    <span>{res.teamB}</span>
-                    <img src={`https://flagcdn.com/w40/${res.flagB}.png`} width="24" height="16" alt={res.teamB} />
+                  </div>
+
+                  {/* Team B */}
+                  <div style={{ display: "flex", alignItems: "center", justifyContent: "flex-end", gap: "0.5rem", minWidth: 0, textAlign: "right" }}>
+                    <span style={{ fontSize: "0.92rem", fontWeight: "800", color: "#0f172a", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
+                      {res.teamB}
+                    </span>
+                    <img src={`https://flagcdn.com/w40/${res.flagB}.png`} width="22" height="15" alt={res.teamB} style={{ borderRadius: "2px", flexShrink: 0, border: "1px solid #e2e8f0" }} />
                   </div>
                 </div>
 
-                <p style={{ fontSize: "0.8rem", color: "#475569", margin: "0.5rem 0 1rem 0", lineHeight: "1.5", background: "#ffffff", padding: "0.6rem 0.8rem", borderRadius: "8px", border: "1px solid #e2e8f0" }}>
-                  ⚽ <strong>Goals:</strong> {res.scorers}
-                </p>
+                {res.scorers && (
+                  <div style={{ fontSize: "0.76rem", color: "#475569", margin: "0.5rem 0 0.85rem 0", lineHeight: "1.45", background: "#ffffff", padding: "0.5rem 0.7rem", borderRadius: "8px", border: "1px solid #e2e8f0" }}>
+                    ⚽ <strong>Goals:</strong> {res.scorers}
+                  </div>
+                )}
 
-                <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap" }}>
-                  <a href={res.recapUrl} style={{ background: "#c00030", color: "#ffffff", padding: "0.4rem 0.8rem", borderRadius: "6px", fontSize: "0.78rem", fontWeight: "700", textDecoration: "none" }}>
+                <div style={{ display: "flex", gap: "0.5rem" }}>
+                  <a href={res.recapUrl} style={{ flex: 1, textAlign: "center", background: "#c00030", color: "#ffffff", padding: "0.4rem", borderRadius: "6px", fontSize: "0.76rem", fontWeight: "700", textDecoration: "none" }}>
                     Match Report →
                   </a>
-                  <a href={res.previewUrl} style={{ background: "#ffffff", border: "1px solid #cbd5e1", color: "#0f172a", padding: "0.4rem 0.8rem", borderRadius: "6px", fontSize: "0.78rem", fontWeight: "700", textDecoration: "none" }}>
-                    Head to Head Stats
+                  <a href={res.previewUrl} style={{ flex: 1, textAlign: "center", background: "#ffffff", border: "1px solid #cbd5e1", color: "#0f172a", padding: "0.4rem", borderRadius: "6px", fontSize: "0.76rem", fontWeight: "700", textDecoration: "none" }}>
+                    Head to Head
                   </a>
                 </div>
               </div>
