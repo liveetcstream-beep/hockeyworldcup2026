@@ -457,68 +457,7 @@ export default function LiveScoresClient() {
         </div>
 
         {/* ==================================================================== */}
-        {/* BLOCK 1: TODAY'S UPCOMING MATCHES LIST */}
-        {/* ==================================================================== */}
-        {(activeFilter === "all" || activeFilter === "today") && upcomingToday.length > 0 && (
-          <section className="live-section-card" style={{ border: "1px solid #e0f2fe", borderTop: "4px solid #0284c7" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid #e0f2fe", paddingBottom: "0.85rem", marginBottom: "1.25rem", flexWrap: "wrap", gap: "0.5rem" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-                <span style={{ fontSize: "1.2rem" }}>⏰</span>
-                <h2 style={{ fontSize: "clamp(1.1rem, 3vw, 1.35rem)", fontWeight: "900", color: "#0f172a", margin: 0, fontStyle: "normal" }}>
-                  TODAY'S UPCOMING FIXTURES (August 16, 2026)
-                </h2>
-              </div>
-              <span style={{ fontSize: "0.75rem", color: "#0369a1", background: "#e0f2fe", padding: "0.3rem 0.65rem", borderRadius: "6px", fontWeight: "800" }}>
-                All Times CET (Belgium / Netherlands Local)
-              </span>
-            </div>
-
-            <div className="match-cards-grid">
-              {upcomingToday.map((match) => (
-                <div key={match.id} style={{ background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "12px", padding: "1rem" }}>
-                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.6rem", flexWrap: "wrap", gap: "0.35rem" }}>
-                    <span style={{ background: "#fef3c7", color: "#92400e", fontWeight: "800", fontSize: "0.72rem", padding: "0.2rem 0.55rem", borderRadius: "4px" }}>
-                      ⏰ Pushback: {match.timeCET}
-                    </span>
-                    <span style={{ background: "#e2e8f0", color: "#334155", fontSize: "0.7rem", fontWeight: "800", padding: "0.2rem 0.5rem", borderRadius: "4px" }}>
-                      {match.gender}
-                    </span>
-                  </div>
-
-                  <div style={{ fontSize: "0.74rem", color: "#64748b", marginBottom: "0.75rem", overflow: "hidden", textOverflow: "ellipsis" }}>
-                    📍 {match.venue} {match.localTimes && `· (${match.localTimes})`}
-                  </div>
-
-                  <div className="card-teams-layout">
-                    <div className="card-team-side left">
-                      <img src={`https://flagcdn.com/w40/${match.flagA}.png`} className="card-team-flag" alt={match.teamA} />
-                      <span className="card-team-name">{match.teamA}</span>
-                    </div>
-                    <span style={{ color: "#94a3b8", fontWeight: "900", fontSize: "0.78rem", padding: "0 0.15rem", flexShrink: 0 }}>VS</span>
-                    <div className="card-team-side right">
-                      <span className="card-team-name">{match.teamB}</span>
-                      <img src={`https://flagcdn.com/w40/${match.flagB}.png`} className="card-team-flag" alt={match.teamB} />
-                    </div>
-                  </div>
-
-                  <div style={{ display: "flex", gap: "0.5rem" }}>
-                    {match.previewUrl && (
-                      <a href={match.previewUrl} style={{ flex: 1, textAlign: "center", background: "var(--primary)", color: "#ffffff", padding: "0.45rem 0.3rem", borderRadius: "6px", fontSize: "0.76rem", fontWeight: "700", textDecoration: "none" }}>
-                        Tactical Preview →
-                      </a>
-                    )}
-                    <a href="/schedule" style={{ flex: 1, textAlign: "center", background: "#ffffff", border: "1px solid #cbd5e1", color: "#0f172a", padding: "0.45rem 0.3rem", borderRadius: "6px", fontSize: "0.76rem", fontWeight: "700", textDecoration: "none" }}>
-                      Full Schedule
-                    </a>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {/* ==================================================================== */}
-        {/* BLOCK 2: CONFIRMED TOURNAMENT MATCH RESULTS */}
+        {/* BLOCK 1: CONFIRMED TOURNAMENT MATCH RESULTS (RECENTLY FINISHED) */}
         {/* ==================================================================== */}
         {(activeFilter === "all" || activeFilter === "results") && completedMatches.length > 0 && (
           <section className="live-section-card" style={{ border: "1px solid #dcfce7", borderTop: "4px solid #16a34a" }}>
@@ -526,7 +465,7 @@ export default function LiveScoresClient() {
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                 <span style={{ fontSize: "1.2rem" }}>✅</span>
                 <h2 style={{ fontSize: "clamp(1.1rem, 3vw, 1.35rem)", fontWeight: "900", color: "#0f172a", margin: 0, fontStyle: "normal" }}>
-                  CONFIRMED TOURNAMENT MATCH RESULTS ({completedMatches.length} Matches Final)
+                  RECENTLY FINISHED MATCH RESULTS ({completedMatches.length} Matches Final)
                 </h2>
               </div>
               <span style={{ fontSize: "0.75rem", color: "#166534", background: "#dcfce7", padding: "0.3rem 0.65rem", borderRadius: "6px", fontWeight: "800" }}>
@@ -584,6 +523,74 @@ export default function LiveScoresClient() {
                   </div>
                 </div>
               ))}
+            </div>
+          </section>
+        )}
+
+        {/* ==================================================================== */}
+        {/* BLOCK 2: UPCOMING FIXTURES (LIMITED TO 4 MATCHES) */}
+        {/* ==================================================================== */}
+        {(activeFilter === "all" || activeFilter === "today") && upcomingToday.length > 0 && (
+          <section className="live-section-card" style={{ border: "1px solid #e0f2fe", borderTop: "4px solid #0284c7" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", borderBottom: "1px solid #e0f2fe", paddingBottom: "0.85rem", marginBottom: "1.25rem", flexWrap: "wrap", gap: "0.5rem" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                <span style={{ fontSize: "1.2rem" }}>⏰</span>
+                <h2 style={{ fontSize: "clamp(1.1rem, 3vw, 1.35rem)", fontWeight: "900", color: "#0f172a", margin: 0, fontStyle: "normal" }}>
+                  UPCOMING FIXTURES
+                </h2>
+              </div>
+              <span style={{ fontSize: "0.75rem", color: "#0369a1", background: "#e0f2fe", padding: "0.3rem 0.65rem", borderRadius: "6px", fontWeight: "800" }}>
+                Next 4 Matches (CET Local)
+              </span>
+            </div>
+
+            <div className="match-cards-grid">
+              {upcomingToday.slice(0, 4).map((match) => (
+                <div key={match.id} style={{ background: "#f8fafc", border: "1px solid #e2e8f0", borderRadius: "12px", padding: "1rem" }}>
+                  <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.6rem", flexWrap: "wrap", gap: "0.35rem" }}>
+                    <span style={{ background: "#fef3c7", color: "#92400e", fontWeight: "800", fontSize: "0.72rem", padding: "0.2rem 0.55rem", borderRadius: "4px" }}>
+                      ⏰ Pushback: {match.timeCET}
+                    </span>
+                    <span style={{ background: "#e2e8f0", color: "#334155", fontSize: "0.7rem", fontWeight: "800", padding: "0.2rem 0.5rem", borderRadius: "4px" }}>
+                      {match.gender}
+                    </span>
+                  </div>
+
+                  <div style={{ fontSize: "0.74rem", color: "#64748b", marginBottom: "0.75rem", overflow: "hidden", textOverflow: "ellipsis" }}>
+                    📍 {match.venue} {match.localTimes && `· (${match.localTimes})`}
+                  </div>
+
+                  <div className="card-teams-layout">
+                    <div className="card-team-side left">
+                      <img src={`https://flagcdn.com/w40/${match.flagA}.png`} className="card-team-flag" alt={match.teamA} />
+                      <span className="card-team-name">{match.teamA}</span>
+                    </div>
+                    <span style={{ color: "#94a3b8", fontWeight: "900", fontSize: "0.78rem", padding: "0 0.15rem", flexShrink: 0 }}>VS</span>
+                    <div className="card-team-side right">
+                      <span className="card-team-name">{match.teamB}</span>
+                      <img src={`https://flagcdn.com/w40/${match.flagB}.png`} className="card-team-flag" alt={match.teamB} />
+                    </div>
+                  </div>
+
+                  <div style={{ display: "flex", gap: "0.5rem" }}>
+                    {match.previewUrl && (
+                      <a href={match.previewUrl} style={{ flex: 1, textAlign: "center", background: "var(--primary)", color: "#ffffff", padding: "0.45rem 0.3rem", borderRadius: "6px", fontSize: "0.76rem", fontWeight: "700", textDecoration: "none" }}>
+                        Tactical Preview →
+                      </a>
+                    )}
+                    <a href="/schedule" style={{ flex: 1, textAlign: "center", background: "#ffffff", border: "1px solid #cbd5e1", color: "#0f172a", padding: "0.45rem 0.3rem", borderRadius: "6px", fontSize: "0.76rem", fontWeight: "700", textDecoration: "none" }}>
+                      Full Schedule
+                    </a>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* FULL SCHEDULE BUTTON CTA */}
+            <div style={{ textAlign: "center", marginTop: "1.5rem" }}>
+              <a href="/schedule" style={{ display: "inline-block", background: "linear-gradient(135deg, #c00030 0%, #a00028 100%)", color: "#ffffff", padding: "0.75rem 1.6rem", borderRadius: "10px", fontWeight: "800", fontSize: "0.9rem", textDecoration: "none", boxShadow: "0 4px 14px rgba(192, 0, 48, 0.3)" }}>
+                📅 View Full 100-Match Schedule &amp; Timings →
+              </a>
             </div>
           </section>
         )}
