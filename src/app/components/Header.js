@@ -51,9 +51,9 @@ export default function Header() {
     {
       badge: "FINAL (M5)",
       type: "final",
-      match: "AUS 2 - 1 IRL",
+      match: "AUS 3 - 1 IRL",
       flags: "🇦🇺 🇮🇪",
-      stat: "Blake Govers 11' (PC), Jeremy Hayward 35' | Lee Cole 24' (PC)",
+      stat: "Blake Govers 11' (PC), Jeremy Hayward 35', Tim Brand 52' | Lee Cole 24' (PC)",
       link: "/news/australia-vs-ireland-result-score-august-16-hwc-2026"
     },
     {

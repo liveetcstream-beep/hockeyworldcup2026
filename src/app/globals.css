@@ -2235,7 +2235,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 2rem;
   white-space: nowrap;
-  animation: tickerMarquee 42s linear infinite;
+  animation: tickerMarquee 65s linear infinite;
 }
 
 .ticker-track:hover {

@@ -42,19 +42,22 @@ export async function fetchFIHTMSLiveScores() {
       if (!res.ok) continue;
       const html = await res.text();
 
-      // Extract match panels using regex parsing (fast & dependency-free)
-      const panelRegex = /<div class="panel panel-default\s*([^">]*)"[\s\S]*?<a href="https:\/\/tms\.fih\.ch\/matches\/(\d+)"><b>([A-Z]{3})\s*-\s*([A-Z]{3})<\/a><\/b>[\s\S]*?<b>(\d+\s*-\s*\d+)<\/b>([\s\S]*?)<\/div>\s*<\/div>/gi;
+      // Extract all match panels from FIH TMS HTML
+      const panelChunkRegex = /<div class="panel panel-default\s*([^">]*)">[\s\S]*?<div class="panel-body"[^>]*>([\s\S]*?)<\/div>\s*<\/div>/gi;
 
-      let match;
-      while ((match = panelRegex.exec(html)) !== null) {
-        const extraClasses = match[1] || "";
-        const matchId = match[2];
-        const teamCodeA = match[3];
-        const teamCodeB = match[4];
-        const scoreStr = match[5];
-        const detailsBlock = match[6] || "";
+      let chunkMatch;
+      while ((chunkMatch = panelChunkRegex.exec(html)) !== null) {
+        const extraClasses = chunkMatch[1] || "";
+        const bodyHtml = chunkMatch[2] || "";
 
-        const [scoreA, scoreB] = scoreStr.split("-").map((s) => parseInt(s.trim(), 10));
+        // Extract match link and team codes
+        const matchInfoRegex = /<a href="https:\/\/tms\.fih\.ch\/matches\/(\d+)"><b>([A-Z]{3})\s*-\s*([A-Z]{3})<\/a><\/b>/i;
+        const infoMatch = matchInfoRegex.exec(bodyHtml);
+        if (!infoMatch) continue;
+
+        const matchId = infoMatch[1];
+        const teamCodeA = infoMatch[2];
+        const teamCodeB = infoMatch[3];
 
         const teamAInfo = TEAM_MAP[teamCodeA] || { name: teamCodeA, flag: teamCodeA.toLowerCase() };
         const teamBInfo = TEAM_MAP[teamCodeB] || { name: teamCodeB, flag: teamCodeB.toLowerCase() };
@@ -66,12 +69,31 @@ export async function fetchFIHTMSLiveScores() {
           status = "UPCOMING";
         }
 
+        // Extract score e.g. <b>2 - 0</b>
+        let scoreA = 0;
+        let scoreB = 0;
+        const scoreRegex = /<b>(\d+)\s*-\s*(\d+)<\/b>/i;
+        const scoreMatch = scoreRegex.exec(bodyHtml);
+        if (scoreMatch) {
+          scoreA = parseInt(scoreMatch[1], 10);
+          scoreB = parseInt(scoreMatch[2], 10);
+        }
+
+        // Extract pool designation e.g. <BR>\s*A\s*<BR>
+        let pool = "";
+        const poolRegex = /<BR>\s*([ABCD])\s*<BR>/i;
+        const poolMatch = poolRegex.exec(bodyHtml);
+        if (poolMatch) {
+          pool = `Pool ${poolMatch[1].toUpperCase()} (${item.gender})`;
+        }
+
         matches.push({
           id: parseInt(matchId, 10),
           tmsId: matchId,
           status,
           match: `${teamAInfo.name} vs ${teamBInfo.name}`,
           gender: `${item.gender}'s World Cup`,
+          pool: pool || `${item.gender}'s Tournament`,
           scoreA,
           scoreB,
           teamA: teamAInfo.name,

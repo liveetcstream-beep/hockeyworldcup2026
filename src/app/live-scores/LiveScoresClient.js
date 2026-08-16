@@ -76,7 +76,7 @@ const INITIAL_COMPLETED_RESULTS = [
     status: "FINAL",
     match: "Australia vs Ireland",
     gender: "Men's Pool C (M5)",
-    scoreA: 2,
+    scoreA: 3,
     scoreB: 1,
     teamA: "Australia",
     flagA: "au",
@@ -85,7 +85,7 @@ const INITIAL_COMPLETED_RESULTS = [
     venue: "Belfius Hockey Arena, Wavre (BEL)",
     timeCET: "11:30 CET (Local Time)",
     date: "Aug 16 · FT",
-    scorers: "Blake Govers (11' PC), Jeremy Hayward (35' FG) | Lee Cole (24' PC)",
+    scorers: "Blake Govers (11' PC), Jeremy Hayward (35' FG), Tim Brand (52') | Lee Cole (24' PC)",
     recapUrl: "/news/australia-vs-ireland-result-score-august-16-hwc-2026"
   },
   {

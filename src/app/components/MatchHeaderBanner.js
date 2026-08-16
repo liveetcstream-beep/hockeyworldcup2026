@@ -61,12 +61,12 @@ const KNOWN_MATCHES = [
     flagA: "au",
     teamB: "Ireland",
     flagB: "ie",
-    scoreA: 2,
+    scoreA: 3,
     scoreB: 1,
     status: "FINAL · FT",
     venue: "Belfius Hockey Arena, Wavre (BEL)",
     gender: "Men's Pool C (M5)",
-    scorers: "Blake Govers (11' PC), Jeremy Hayward (35' FG) | Lee Cole (24' PC)",
+    scorers: "Blake Govers (11' PC), Jeremy Hayward (35' FG), Tim Brand (52') | Lee Cole (24' PC)",
     time: "11:30 CET"
   },
   {

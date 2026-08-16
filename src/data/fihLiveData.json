@@ -51,7 +51,7 @@
       "match": "Australia vs Ireland",
       "gender": "Men",
       "pool": "Pool C (Men - M5)",
-      "scoreA": 2,
+      "scoreA": 3,
       "scoreB": 1,
       "teamA": "Australia",
       "flagA": "au",
@@ -61,7 +61,7 @@
       "timePKT": "14:30 PKT",
       "timeIST": "15:00 IST",
       "venue": "Belfius Hockey Arena, Wavre (BEL)",
-      "scorers": "Blake Govers (11' PC), Jeremy Hayward (35' FG) | Lee Cole (24' PC)",
+      "scorers": "Blake Govers (11' PC), Jeremy Hayward (35' FG), Tim Brand (52') | Lee Cole (24' PC)",
       "stats": {
         "possession": "59% - 41%",
         "penaltyCorners": "5 (1) - 2 (1)",
