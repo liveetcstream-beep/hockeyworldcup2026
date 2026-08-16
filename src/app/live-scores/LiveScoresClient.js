@@ -120,7 +120,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     flagB: "pk",
     venue: "Wagener Stadium, Amstelveen",
     date: "Aug 15 · FT",
-    scorers: "Liam Ansell (14' PC), Phil Roper (39'), Sam Ward (47' PC), Nicholas Bandurak (54') | Muhammad Shahbaz Jr. (28')",
+    scorers: "Stuart Rushmere (12'), Sam Ward (34'), Samuel Hooper (49'), James Albery (57') | Rehman Abdul Afraz (50')",
     recapUrl: "/news/england-vs-pakistan-result-score-august-15-hwc-2026"
   },
   {
@@ -136,7 +136,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     flagB: "gb-wls",
     venue: "Wagener Stadium, Amstelveen",
     date: "Aug 15",
-    scorers: "Harmanpreet Singh (12' PC, 34' PC), Abhishek (22') | Gareth Furlong (28' PC)",
+    scorers: "Sanjay (8'), Harmanpreet Singh (11' PC, 43' PC) | Sam Welsh (56')",
     recapUrl: "/news/india-vs-wales-result-score-august-15-hwc-2026"
   },
   {
@@ -145,14 +145,14 @@ const DEFAULT_COMPLETED_RESULTS = [
     match: "Belgium vs France",
     gender: "Men's Pool B",
     scoreA: 3,
-    scoreB: 1,
+    scoreB: 2,
     teamA: "Belgium",
     flagA: "be",
     teamB: "France",
     flagB: "fr",
     venue: "Belfius Hockey Arena, Wavre",
     date: "Aug 15",
-    scorers: "Alexander Hendrickx (09' PC), Florent van Aubel (16'), Tom Boon (53' PC) | Timothée Clément (44' PC)",
+    scorers: "Nelson Onana (17'), Roman Duvekot (44'), Alexander Hendrickx (56' PC) | Eliot Curty (3'), Timothée Clément (18')",
     recapUrl: "/news/belgium-vs-france-result-score-august-15-hwc-2026"
   },
   {
@@ -160,7 +160,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     status: "FINAL",
     match: "Germany vs Malaysia",
     gender: "Men's Pool B",
-    scoreA: 3,
+    scoreA: 5,
     scoreB: 1,
     teamA: "Germany",
     flagA: "de",
@@ -168,7 +168,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     flagB: "my",
     venue: "Belfius Hockey Arena, Wavre",
     date: "Aug 15",
-    scorers: "Gonzalo Peillat (08' PC, 41' PC), Mats Grambusch (29') | Faizal Saari (38')",
+    scorers: "Gonzalo Peillat (08' PC, 22' PC, 41' PC), Mats Grambusch (29'), Christopher Rühr (52') | Faizal Saari (38')",
     recapUrl: "/news/germany-vs-malaysia-result-score-august-15-hwc-2026"
   },
   {
@@ -176,7 +176,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     status: "FINAL",
     match: "Netherlands vs Chile",
     gender: "Women's Pool A",
-    scoreA: 5,
+    scoreA: 2,
     scoreB: 0,
     teamA: "Netherlands",
     flagA: "nl",
@@ -184,7 +184,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     flagB: "cl",
     venue: "Wagener Stadium, Amstelveen",
     date: "Aug 15",
-    scorers: "Felice Albers (04', 19'), Yibbi Jansen (11' PC), Frederique Matla (33', 48')",
+    scorers: "Yibbi Jansen (18' PC), Frederique Matla (44')",
     recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
   },
   {
@@ -192,7 +192,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     status: "FINAL",
     match: "Germany vs Scotland",
     gender: "Women's Pool B",
-    scoreA: 4,
+    scoreA: 3,
     scoreB: 0,
     teamA: "Germany",
     flagA: "de",
@@ -200,7 +200,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     flagB: "gb-sct",
     venue: "Belfius Hockey Arena, Wavre",
     date: "Aug 15",
-    scorers: "Charlotte Stapenhorst (06', 29'), Nike Lorenz (15' PC), Sonja Zimmermann (48')",
+    scorers: "Charlotte Stapenhorst (11', 33'), Nike Lorenz (22' PC)",
     recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
   },
   {
@@ -208,7 +208,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     status: "FINAL",
     match: "Argentina vs USA",
     gender: "Women's Pool B",
-    scoreA: 3,
+    scoreA: 1,
     scoreB: 1,
     teamA: "Argentina",
     flagA: "ar",
@@ -216,7 +216,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     flagB: "us",
     venue: "Belfius Hockey Arena, Wavre",
     date: "Aug 15",
-    scorers: "Agustina Gorzelany (14' PC, 52' PC), Julieta Jankunas (27') | Ashley Sessa (44')",
+    scorers: "Julieta Jankunas (27') | Ashley Sessa (44') — Draw 1–1",
     recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
   },
   {
@@ -232,7 +232,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     flagB: "jp",
     venue: "Wagener Stadium, Amstelveen",
     date: "Aug 15",
-    scorers: "Amy Lawton (18'), Stephanie Kershaw (42')",
+    scorers: "Claire Colwill (18', 42')",
     recapUrl: "/news/womens-hwc-2026-august-15-results-scores"
   }
 ];

@@ -40,7 +40,7 @@ const ALL_TOURNAMENT_MATCHDAYS = {
       flagB: "gb-wls",
       venue: "Wagener Stadium, Amstelveen (NED)",
       timeCET: "10:00",
-      scorers: "Harmanpreet Singh (12' PC, 34' PC), Abhishek (22') | Gareth Furlong (28' PC)",
+      scorers: "Sanjay (8'), Harmanpreet Singh (11' PC, 43' PC) | Sam Welsh (56')",
       stats: { possession: "64% - 36%", penaltyCorners: "8 (2) - 2 (1)", shotsOnTarget: "14 - 3", yellowCards: 0, redCards: 0 },
       recapUrl: "/news/india-vs-wales-result-score-august-15-hwc-2026"
     },
@@ -58,7 +58,7 @@ const ALL_TOURNAMENT_MATCHDAYS = {
       flagB: "fr",
       venue: "Belfius Hockey Arena, Wavre (BEL)",
       timeCET: "18:00",
-      scorers: "Alexander Hendrickx (09' PC), Florent van Aubel (16'), Tom Boon (53' PC) | Timothée Clément (44' PC), Victor Charlet (58' PC)",
+      scorers: "Nelson Onana (17'), Roman Duvekot (44'), Alexander Hendrickx (56' PC) | Eliot Curty (3'), Timothée Clément (18')",
       stats: { possession: "61% - 39%", penaltyCorners: "6 (2) - 3 (2)", shotsOnTarget: "9 - 5", yellowCards: 0, redCards: 0 },
       recapUrl: "/news/belgium-vs-france-result-score-august-15-hwc-2026"
     },
@@ -196,7 +196,7 @@ const ALL_TOURNAMENT_MATCHDAYS = {
     {
       id: 203,
       status: "LIVE",
-      period: "2nd Quarter",
+      period: "4th Quarter",
       gender: "Men",
       pool: "Pool C (Men)",
       teamA: "Spain",

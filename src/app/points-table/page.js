@@ -80,8 +80,8 @@ const STANDINGS_DATA = {
     "Pool D": [
       { name: "China", code: "CHN", flag: "cn", slug: "china", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Today vs IND (4 PM PKT)" },
       { name: "India", code: "IND", flag: "in", slug: "india", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Today vs CHN (4 PM PKT)" },
-      { name: "England", code: "ENG", flag: "gb-eng", slug: "england", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Aug 16 vs RSA" },
-      { name: "South Africa", code: "RSA", flag: "za", slug: "south-africa", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Aug 16 vs ENG" }
+      { name: "England", code: "ENG", flag: "gb-eng", slug: "england", p: 1, w: 1, d: 0, l: 0, gf: 2, ga: 1, gd: 1, pts: 3, recentRes: "W 2-1 vs RSA" },
+      { name: "South Africa", code: "RSA", flag: "za", slug: "south-africa", p: 1, w: 0, d: 0, l: 1, gf: 1, ga: 2, gd: -1, pts: 0, recentRes: "L 1-2 vs ENG" }
     ]
   }
 };
@@ -184,7 +184,7 @@ export default function PointsTablePage() {
               🏆 All 16 Groups Hub
             </a>
             <a href="/pool-a" style={{ background: "rgba(2, 132, 199, 0.1)", color: "#0284c7", border: "1px solid rgba(2, 132, 199, 0.2)", padding: "0.55rem 1.1rem", borderRadius: "8px", fontWeight: "700", textDecoration: "none", fontSize: "0.88rem" }}>
-              🅰️ Pool A (NED, ARG, NZL, CHI)
+              🅰️ Pool A (NED, ARG, NZL, JPN)
             </a>
             <a href="/pool-b" style={{ background: "rgba(16, 185, 129, 0.1)", color: "#10b981", border: "1px solid rgba(16, 185, 129, 0.2)", padding: "0.55rem 1.1rem", borderRadius: "8px", fontWeight: "700", textDecoration: "none", fontSize: "0.88rem" }}>
               🇧 Pool B (GER, BEL, MAS, FRA)

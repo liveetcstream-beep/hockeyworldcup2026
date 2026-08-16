@@ -45,7 +45,7 @@ export default function SchedulePage() {
     },
     {
       question: "What is the USA (USWNT) match schedule and kick-off times?",
-      answer: "The United States Women's National Team (USWNT) begins in Pool C. Key highlights include: Argentina vs USA on August 15 at 12:30 PM ET, USA vs Scotland on August 17 at 6:00 AM ET, and USA vs Germany on August 19 at 9:00 AM ET."
+      answer: "The United States Women's National Team (USWNT) competes in Pool B alongside Germany, Argentina, and Scotland. Key pushback times: Argentina vs USA on August 15 at 14:30 CET (08:30 AM ET), USA vs Scotland on August 17 at 08:00 CET (02:00 AM ET), USA vs Germany on August 19 at 11:00 CET (05:00 AM ET)."
     },
     {
       question: "How can I purchase official tickets for the 2026 matches?",
