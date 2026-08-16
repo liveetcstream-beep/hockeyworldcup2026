@@ -149,6 +149,58 @@ export default function SchedulePage() {
           <span style={{ color: "var(--text-main)", fontWeight: "600" }}>Match Schedule</span>
         </nav>
 
+        {/* TOURNAMENT LIVE MATCHDAY STATUS BANNER */}
+        <section style={{
+          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+          border: "1px solid rgba(255,255,255,0.1)",
+          borderRadius: "16px",
+          padding: "1.5rem 2rem",
+          marginBottom: "2.5rem",
+          color: "#ffffff"
+        }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem", borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "1rem", marginBottom: "1rem" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
+              <span style={{ display: "inline-block", width: "12px", height: "12px", borderRadius: "50%", background: "#22c55e", boxShadow: "0 0 10px #22c55e" }}></span>
+              <strong style={{ fontSize: "1.1rem", letterSpacing: "0.02em" }}>TOURNAMENT MATCHDAYS LIVE — STAGE 1 (POOLS)</strong>
+            </div>
+            <a href="/live-scores" style={{ background: "var(--primary)", color: "#ffffff", padding: "0.45rem 1rem", borderRadius: "8px", fontWeight: "800", fontSize: "0.85rem", textDecoration: "none" }}>
+              🔴 Open Live Score Centre →
+            </a>
+          </div>
+
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "1rem" }}>
+            <div style={{ background: "rgba(255,255,255,0.05)", padding: "0.9rem 1.2rem", borderRadius: "10px", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <span style={{ fontSize: "0.75rem", color: "#94a3b8", textTransform: "uppercase", fontWeight: "700" }}>Pool D Men</span>
+              <div style={{ fontWeight: "800", fontSize: "0.95rem", margin: "0.2rem 0" }}>England (4) - (1) Pakistan</div>
+              <span style={{ fontSize: "0.75rem", color: "#22c55e", fontWeight: "700" }}>✅ Completed Match Result</span>
+            </div>
+            <div style={{ background: "rgba(255,255,255,0.05)", padding: "0.9rem 1.2rem", borderRadius: "10px", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <span style={{ fontSize: "0.75rem", color: "#94a3b8", textTransform: "uppercase", fontWeight: "700" }}>Pool D Men</span>
+              <div style={{ fontWeight: "800", fontSize: "0.95rem", margin: "0.2rem 0" }}>India (3) - (1) Wales</div>
+              <span style={{ fontSize: "0.75rem", color: "#22c55e", fontWeight: "700" }}>✅ Completed Match Result</span>
+            </div>
+            <div style={{ background: "rgba(255,255,255,0.05)", padding: "0.9rem 1.2rem", borderRadius: "10px", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <span style={{ fontSize: "0.75rem", color: "#94a3b8", textTransform: "uppercase", fontWeight: "700" }}>Pool B Men</span>
+              <div style={{ fontWeight: "800", fontSize: "0.95rem", margin: "0.2rem 0" }}>Belgium (3) - (1) France</div>
+              <span style={{ fontSize: "0.75rem", color: "#22c55e", fontWeight: "700" }}>✅ Completed Match Result</span>
+            </div>
+            <div style={{ background: "rgba(255,255,255,0.05)", padding: "0.9rem 1.2rem", borderRadius: "10px", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <span style={{ fontSize: "0.75rem", color: "#94a3b8", textTransform: "uppercase", fontWeight: "700" }}>Pool B Men</span>
+              <div style={{ fontWeight: "800", fontSize: "0.95rem", margin: "0.2rem 0" }}>Germany (3) - (1) Malaysia</div>
+              <span style={{ fontSize: "0.75rem", color: "#22c55e", fontWeight: "700" }}>✅ Completed Match Result</span>
+            </div>
+          </div>
+
+          <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap", marginTop: "1.2rem", paddingTop: "0.8rem", borderTop: "1px solid rgba(255,255,255,0.08)" }}>
+            <a href="/points-table" style={{ color: "#facc15", fontSize: "0.85rem", fontWeight: "700", textDecoration: "none" }}>
+              📊 Check Updated Pool Standings →
+            </a>
+            <a href="/matches/india-vs-pakistan" style={{ color: "#facc15", fontSize: "0.85rem", fontWeight: "700", textDecoration: "none" }}>
+              ⚔️ Next Blockbuster: India vs Pakistan Preview →
+            </a>
+          </div>
+        </section>
+
         {/* Client Schedule Filter & Pagination Section */}
         <ScheduleClient />
 

@@ -146,6 +146,71 @@ export default function Home() {
       />
 
       <main className="sports-container py-12">
+        {/* TOURNAMENT QUICK ACCESS & INTERNAL LINKING HUB */}
+        <section style={{
+          background: "linear-gradient(135deg, #0f172a 0%, #1e293b 100%)",
+          border: "1px solid rgba(255,255,255,0.12)",
+          borderRadius: "18px",
+          padding: "2rem",
+          marginBottom: "3rem",
+          color: "#ffffff",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.15)"
+        }}>
+          <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1rem", borderBottom: "1px solid rgba(255,255,255,0.12)", paddingBottom: "1.2rem", marginBottom: "1.5rem" }}>
+            <div>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.6rem", marginBottom: "0.3rem" }}>
+                <span style={{ display: "inline-block", width: "10px", height: "10px", borderRadius: "50%", background: "#22c55e", boxShadow: "0 0 8px #22c55e" }}></span>
+                <span style={{ fontSize: "0.8rem", color: "#4ade80", fontWeight: "800", textTransform: "uppercase", letterSpacing: "0.05em" }}>FIH Tournament Hub Live</span>
+              </div>
+              <h2 style={{ fontSize: "1.4rem", fontWeight: "900", margin: 0, color: "#ffffff" }}>
+                ⚡ Quick Access: Match Centres, Scores & Standings
+              </h2>
+            </div>
+            <div style={{ display: "flex", gap: "0.6rem", flexWrap: "wrap" }}>
+              <a href="/live-scores" style={{ background: "var(--primary)", color: "#ffffff", padding: "0.6rem 1.2rem", borderRadius: "8px", fontWeight: "800", fontSize: "0.88rem", textDecoration: "none" }}>
+                🔴 Live Scores Hub →
+              </a>
+              <a href="/points-table" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.25)", color: "#ffffff", padding: "0.6rem 1.2rem", borderRadius: "8px", fontWeight: "800", fontSize: "0.88rem", textDecoration: "none" }}>
+                📊 Points Table →
+              </a>
+              <a href="/schedule" style={{ background: "rgba(255,255,255,0.1)", border: "1px solid rgba(255,255,255,0.25)", color: "#ffffff", padding: "0.6rem 1.2rem", borderRadius: "8px", fontWeight: "800", fontSize: "0.88rem", textDecoration: "none" }}>
+                📅 100-Match Schedule →
+              </a>
+            </div>
+          </div>
+
+          <p style={{ fontSize: "0.9rem", color: "#cbd5e1", marginBottom: "1.2rem", lineHeight: "1.6" }}>
+            Direct access to confirmed match reports, upcoming blockbuster match previews, pool standings, and official team schedules:
+          </p>
+
+          <div style={{ display: "flex", flexWrap: "wrap", gap: "0.6rem" }}>
+            <a href="/matches/india-vs-pakistan" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#ffffff", padding: "0.45rem 0.9rem", borderRadius: "8px", fontSize: "0.82rem", fontWeight: "700", textDecoration: "none" }}>
+              ⚔️ India vs Pakistan (Aug 19)
+            </a>
+            <a href="/matches/germany-vs-belgium" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#ffffff", padding: "0.45rem 0.9rem", borderRadius: "8px", fontSize: "0.82rem", fontWeight: "700", textDecoration: "none" }}>
+              🇩🇪 Germany vs Belgium (Aug 17)
+            </a>
+            <a href="/matches/india-vs-england" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#ffffff", padding: "0.45rem 0.9rem", borderRadius: "8px", fontSize: "0.82rem", fontWeight: "700", textDecoration: "none" }}>
+              🇮🇳 India vs England (Aug 17)
+            </a>
+            <a href="/matches/netherlands-vs-australia-women" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#ffffff", padding: "0.45rem 0.9rem", borderRadius: "8px", fontSize: "0.82rem", fontWeight: "700", textDecoration: "none" }}>
+              🇳🇱 Netherlands vs Australia (Women)
+            </a>
+            <a href="/matches/england-vs-pakistan" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#ffffff", padding: "0.45rem 0.9rem", borderRadius: "8px", fontSize: "0.82rem", fontWeight: "700", textDecoration: "none" }}>
+              🏴󠁧󠁢󠁥󠁮󠁧󠁿 England vs Pakistan Result (4-1)
+            </a>
+            <a href="/matches/belgium-vs-france" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#ffffff", padding: "0.45rem 0.9rem", borderRadius: "8px", fontSize: "0.82rem", fontWeight: "700", textDecoration: "none" }}>
+              🇧🇪 Belgium vs France Result (3-1)
+            </a>
+            <a href="/hockey-world-cup-2026-groups" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#ffffff", padding: "0.45rem 0.9rem", borderRadius: "8px", fontSize: "0.82rem", fontWeight: "700", textDecoration: "none" }}>
+              🏆 All 16 Pools & Standings
+            </a>
+            <a href="/past-results" style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.12)", color: "#ffffff", padding: "0.45rem 0.9rem", borderRadius: "8px", fontSize: "0.82rem", fontWeight: "700", textDecoration: "none" }}>
+              📜 Historical Results & Scores
+            </a>
+          </div>
+        </section>
+
         {/* INTERACTIVE SCHEDULE AND TIMEZONE CONVERTER CLIENT CONTAINER */}
         <ScheduleAndConverter />
 
