@@ -59,7 +59,7 @@ export default function PoolDPage() {
 
   const womenFixtures = [
     { date: "August 16, 2026", time: "07:00 CET", match: "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs South Africa 🇿🇦", venue: "Wagener Stadium, Amstelveen" },
-    { date: "August 16, 2026", time: "10:00 CET", match: "China 🇨🇳 vs India 🇮🇳", venue: "Wagener Stadium, Amstelveen" },
+    { date: "August 16, 2026", time: "13:00 CET (4:00 PM PKT / 16:30 IST)", match: "China 🇨🇳 vs India 🇮🇳", venue: "Wagener Stadium, Amstelveen" },
     { date: "August 18, 2026", time: "09:30 CET", match: "England 🏴󠁧󠁢󠁥󠁮󠁧󠁿 vs China 🇨🇳", venue: "Wagener Stadium, Amstelveen" },
     { date: "August 18, 2026", time: "12:00 CET", match: "India 🇮🇳 vs South Africa 🇿🇦", venue: "Wagener Stadium, Amstelveen" },
     { date: "August 20, 2026", time: "06:30 CET", match: "China 🇨🇳 vs South Africa 🇿🇦", venue: "Wagener Stadium, Amstelveen" },

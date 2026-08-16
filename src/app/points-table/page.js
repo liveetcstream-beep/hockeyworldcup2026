@@ -78,10 +78,10 @@ const STANDINGS_DATA = {
       { name: "France", code: "FRA", flag: "fr", slug: "france", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Plays Today" }
     ],
     "Pool D": [
-      { name: "China", code: "CHN", flag: "cn", slug: "china", p: 1, w: 1, d: 0, l: 0, gf: 1, ga: 0, gd: 1, pts: 3, recentRes: "W 1-0 vs IND" },
+      { name: "China", code: "CHN", flag: "cn", slug: "china", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Today vs IND (4 PM PKT)" },
+      { name: "India", code: "IND", flag: "in", slug: "india", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Today vs CHN (4 PM PKT)" },
       { name: "England", code: "ENG", flag: "gb-eng", slug: "england", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Aug 18 vs CHN" },
-      { name: "South Africa", code: "RSA", flag: "za", slug: "south-africa", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Aug 18 vs IND" },
-      { name: "India", code: "IND", flag: "in", slug: "india", p: 1, w: 0, d: 0, l: 1, gf: 0, ga: 1, gd: -1, pts: 0, recentRes: "L 0-1 vs CHN" }
+      { name: "South Africa", code: "RSA", flag: "za", slug: "south-africa", p: 0, w: 0, d: 0, l: 0, gf: 0, ga: 0, gd: 0, pts: 0, recentRes: "Aug 18 vs IND" }
     ]
   }
 };
