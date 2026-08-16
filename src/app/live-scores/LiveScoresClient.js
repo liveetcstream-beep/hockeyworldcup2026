@@ -91,7 +91,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     venue: "Belfius Hockey Arena, Wavre",
     date: "Aug 16 · FT",
     scorers: "Blake Govers (11' PC), Jeremy Hayward (35') | Lee Cole (24' PC)",
-    recapUrl: "/news/australia-vs-spain-result-score-hwc-2026"
+    recapUrl: "/news/australia-vs-ireland-result-score-august-16-hwc-2026"
   },
   {
     id: 202,
@@ -107,7 +107,7 @@ const DEFAULT_COMPLETED_RESULTS = [
     venue: "Wagener Stadium, Amstelveen",
     date: "Aug 16 · FT",
     scorers: "Gu Bingfeng (08' PC)",
-    recapUrl: "/news/india-vs-england-result-score-hwc-2026"
+    recapUrl: "/news/china-vs-india-women-result-score-august-16-hwc-2026"
   },
   {
     id: 101,

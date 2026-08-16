@@ -169,7 +169,7 @@ const ALL_TOURNAMENT_MATCHDAYS = {
       timeCET: "08:30",
       scorers: "Blake Govers (11' PC), Jeremy Hayward (35') | Lee Cole (24' PC)",
       stats: { possession: "59% - 41%", penaltyCorners: "5 (1) - 2 (1)", shotsOnTarget: "9 - 3", yellowCards: 0, redCards: 0 },
-      recapUrl: "/news/australia-vs-spain-result-score-hwc-2026"
+      recapUrl: "/news/australia-vs-ireland-result-score-august-16-hwc-2026"
     },
     {
       id: 202,
@@ -187,7 +187,7 @@ const ALL_TOURNAMENT_MATCHDAYS = {
       timeCET: "10:00",
       scorers: "Gu Bingfeng (08' PC)",
       stats: { possession: "52% - 48%", penaltyCorners: "2 (1) - 1 (0)", shotsOnTarget: "4 - 2", yellowCards: 0, redCards: 0 },
-      recapUrl: "/news/india-vs-england-result-score-hwc-2026"
+      recapUrl: "/news/china-vs-india-women-result-score-august-16-hwc-2026"
     },
 
     // 2. Currently Active Live Match
