@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Pool C: Standings & Matches",
@@ -260,6 +261,19 @@ export default function PoolCPage() {
                 <p style={{ color: "var(--text-muted)", margin: 0, fontSize: "0.95rem", lineHeight: "1.6" }}>{item.answer}</p>
               </div>
             ))}
+          </div>
+        </section>
+      
+        {/* Pool C Pitchside Info */}
+        <section style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem 2rem", margin: "2rem 0" }}>
+          <h3 style={{ color: "var(--text-main)", fontSize: "1.2rem", fontWeight: "800", marginBottom: "0.8rem" }}>
+            📍 Belfius Arena Matchday & Postal Codes
+          </h3>
+          <p style={{ color: "var(--text-muted)", fontSize: "0.9rem", lineHeight: "1.7", marginBottom: "1rem" }}>
+            Pool C fixtures are staged at Belfius Hockey Arena (Avenue de la Toison d'Or, 1300 Wavre, Belgium). Goal scorers and standings are updated after each pushback.
+          </p>
+          <div style={{ fontSize: "0.85rem", color: "var(--primary)", fontWeight: "700" }}>
+            ✍️ Verified by: Marc Devos, Senior Hockey Journalist
           </div>
         </section>
       </main>
