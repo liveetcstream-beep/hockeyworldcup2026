@@ -4,6 +4,10 @@ import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Authors & Editorial Team | Hockey World Cup 2026 Hub",
   description: "Meet the editorial team behind Hockey World Cup 2026 Hub — veteran journalists and technical analysts who verify every schedule, player stat, and match...",
   alternates: {

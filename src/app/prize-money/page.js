@@ -4,6 +4,10 @@ import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "FIH Hockey World Cup 2026 Prize Money: Team & Award Payouts",
   description: "Get the complete breakdown of the FIH Hockey World Cup 2026 prize money. View verified team payouts for winners, runners-up, and individual player...",
   alternates: {

@@ -3,6 +3,10 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Wagener Stadium Guide: Tickets, Seating & Parking 2026",
   description: "Wagener Stadium Amstelveen 2026 Hockey World Cup guide: seating map, ticket prices from €20, nearest hotels, parking, and public transport directions.",
   alternates: {

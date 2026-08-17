@@ -4,6 +4,10 @@ import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Wagener & Belfius Stadium Visitor Guide 2026",
   description: "Visitor guide for the 2026 FIH Hockey World Cup stadiums. Includes transit maps, local landmark guides, and Amstelveen/Wavre travel tips.",
   alternates: {

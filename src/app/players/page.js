@@ -20,6 +20,10 @@ const faqItems = [
 ];
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Hockey World Cup 2026 Player Profiles & Complete Squad Lists",
   description: "Explore player profiles and squad lists for all 16 qualified teams at the FIH Hockey World Cup 2026. View career goals, caps, drag-flick stats, and...",
   alternates: {

@@ -6,6 +6,10 @@ import FaqAccordion from "../components/FaqAccordion";
 const BASE_URL = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "FIH Hockey World Rankings 2026: Official Men's & Women's Standings",
   description: "Check official FIH World Rankings 2026 for Men's & Women's national field hockey teams. See top ranked teams, points, India & Pakistan rankings, and Pro League standings.",
   alternates: {

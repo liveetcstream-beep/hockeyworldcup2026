@@ -6,6 +6,10 @@ import FaqAccordion from "../../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Hockey World Cup 2026 Finals — Dates, Venues, Tickets & Global Schedule",
   description: "Complete guide to the FIH Hockey World Cup 2026 Finals: Women's Grand Final (Aug 29, Amstelveen) and Men's Grand Final (Aug 30, Wavre). Kickoff times in CEST, IST & PKT, tickets, and broadcaster channels.",
   alternates: { canonical: `${BASE}/knockout/final` },

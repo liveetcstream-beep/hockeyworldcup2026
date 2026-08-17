@@ -7,6 +7,11 @@ const nextConfig = {
         destination: '/hockey-live-streaming',
         permanent: true,
       },
+      {
+        source: '/tickets',
+        destination: '/schedule',
+        permanent: true,
+      },
     ];
   },
 };

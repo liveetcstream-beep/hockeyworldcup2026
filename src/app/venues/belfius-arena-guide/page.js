@@ -3,6 +3,10 @@ import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Belfius Hockey Arena Wavre Visitor Guide: Tickets, Parking & Hotels",
   description: "Heading to Belfius Hockey Arena in Wavre, Belgium for HWC 2026? Read our expert visitor guide on parking, train routes from Brussels, and hotels nearby.",
   alternates: {

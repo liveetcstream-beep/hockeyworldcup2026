@@ -17,7 +17,8 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }) {
   const resolvedParams = await params;
   const p = getPlayerBySlug(resolvedParams.slug);
-  if (!p) return { title: "Player Not Found" };
+  if (!p) return {
+    robots: { index: false, follow: true }, title: "Player Not Found" };
   return {
     title: p.metaTitle,
     description: p.metaDesc,

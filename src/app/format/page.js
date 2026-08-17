@@ -4,6 +4,10 @@ import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Hockey World Cup 2026 Format: Second Group Phase & Rules",
   description: "Complete guide to the FIH Hockey World Cup 2026 tournament format. Discover how Pools A-D progress into Second Stage Pools E-H, leading to the Semi-Finals.",
   alternates: {

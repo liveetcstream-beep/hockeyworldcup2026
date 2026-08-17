@@ -6,6 +6,10 @@ import FaqAccordion from "../../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Hockey World Cup 2026 Semi-Finals — Dates, Matchups & Expert Preview",
   description: "Complete guide to the FIH Hockey World Cup 2026 Semi-Finals: Women's Semis on August 27 and Men's Semis on August 28. Official match codes (W47/W48, M47/M48), timings, venues, and streaming.",
   alternates: { canonical: `${BASE}/knockout/semi-finals` },

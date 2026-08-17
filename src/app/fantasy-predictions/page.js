@@ -4,6 +4,10 @@ import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Hockey World Cup 2026 Fantasy & Match Predictions: Expert Tips",
   description: "Join the official Hockey World Cup 2026 fantasy league. Get professional team selection tips, lineup predictions, and tournament match forecasts.",
   alternates: {

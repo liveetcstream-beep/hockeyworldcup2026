@@ -6,6 +6,10 @@ import FaqAccordion from "../../components/FaqAccordion";
 const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
   title: "Hockey World Cup 2026 Second Stage (Pools E–H) — Format & Schedule",
   description: "Official guide to the Hockey World Cup 2026 Second Group Stage (Pools E, F, G, H). Discover how top pool finishers qualify directly for the Semi-Finals.",
   alternates: { canonical: `${BASE}/knockout/quarter-finals` },

@@ -5,7 +5,10 @@ import Footer from "../components/Footer";
 export const metadata = {
   title: "Terms of Use - Hockey World Cup 2026",
   description: "Read the terms of use for our independent Hockey World Cup 2026 schedule portal, detailing trademarks, disclaimers, and user conditions.",
-  robots: { index: false, follow: false },
+  robots: {
+    index: false,
+    follow: true,
+  },
 };
 
 export default function TermsOfUsePage() {
