@@ -20,7 +20,7 @@ const faqItems = [
 
 export const metadata = {
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
   title: "Hockey World Cup 2026 Results: All Match Scores & Group Standings",

@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import FaqAccordion from "../../components/FaqAccordion";
+import TeamResultsClient from "./TeamResultsClient";
 
 const BASE = "https://hockeyworldcup2026schedule.com";
 
