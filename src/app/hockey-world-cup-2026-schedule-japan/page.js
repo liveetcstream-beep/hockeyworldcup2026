@@ -307,6 +307,18 @@ export default function JapanHockeyPage() {
           </div>
         </section>
 
+      
+        {/* Local Spectator & Broadcast Information */}
+        <section style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem 2rem", margin: "2rem 0" }}>
+          <h3 style={{ color: "var(--text-main)", fontSize: "1.2rem", fontWeight: "800", marginBottom: "1rem" }}>
+            📺 Official Broadcast Rights & Venue Postal Codes — Japan
+          </h3>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "1.5rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>
+            <div><strong>📺 Broadcast Channel:</strong> NHK & TV Asahi</div>
+            <div><strong>⏰ Local Timezone:</strong> JST (Japan Standard Time)</div>
+            <div><strong>📍 Venue Address:</strong> Wagener Stadium (1182 AM) & Belfius Arena (1300 Wavre)</div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>
