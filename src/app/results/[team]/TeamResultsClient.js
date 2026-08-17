@@ -37,9 +37,13 @@ export default function TeamResultsClient({ teamData, teamSlug }) {
             });
 
             if (liveMatch) {
+              const isTeamA = liveMatch.teamA?.toLowerCase().includes(teamLower);
+              const teamScore = isTeamA ? liveMatch.scoreA : liveMatch.scoreB;
+              const oppScore = isTeamA ? liveMatch.scoreB : liveMatch.scoreA;
+
               return {
                 ...staticMatch,
-                score: `${liveMatch.scoreA} – ${liveMatch.scoreB}`,
+                score: `${teamScore} – ${oppScore}`,
                 status: liveMatch.status === "LIVE" ? "LIVE" : "FT",
                 scorers: liveMatch.scorers ? [liveMatch.scorers] : staticMatch.scorers,
                 venue: liveMatch.venue || staticMatch.venue,
