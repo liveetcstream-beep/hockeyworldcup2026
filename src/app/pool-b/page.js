@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import PoolClient from "../components/PoolClient";
 import Footer from "../components/Footer";
 import FaqAccordion from "../components/FaqAccordion";
 
@@ -47,6 +48,61 @@ const getFixtureLink = (matchText) => {
   if (text.includes("netherlands") && text.includes("germany") && text.includes("women")) return "/matches/netherlands-vs-germany-women";
   return null;
 };
+
+const initialTeamsData = [
+  {
+    "name": "Germany",
+    "slug": "germany",
+    "flag": "🇩🇪",
+    "played": 1,
+    "won": 1,
+    "drawn": 0,
+    "lost": 0,
+    "gf": 5,
+    "ga": 1,
+    "gd": 4,
+    "pts": 3
+  },
+  {
+    "name": "Belgium",
+    "slug": "belgium",
+    "flag": "🇧🇪",
+    "played": 1,
+    "won": 1,
+    "drawn": 0,
+    "lost": 0,
+    "gf": 3,
+    "ga": 2,
+    "gd": 1,
+    "pts": 3
+  },
+  {
+    "name": "France",
+    "slug": "france",
+    "flag": "🇫🇷",
+    "played": 1,
+    "won": 0,
+    "drawn": 0,
+    "lost": 1,
+    "gf": 2,
+    "ga": 3,
+    "gd": -1,
+    "pts": 0
+  },
+  {
+    "name": "Malaysia",
+    "slug": "malaysia",
+    "flag": "🇲🇾",
+    "played": 1,
+    "won": 0,
+    "drawn": 0,
+    "lost": 1,
+    "gf": 1,
+    "ga": 5,
+    "gd": -4,
+    "pts": 0
+  }
+];
 
 export default function PoolBPage() {
   const menFixtures = [
