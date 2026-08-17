@@ -3,6 +3,7 @@ import { notFound } from "next/navigation";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 import FaqAccordion from "../../components/FaqAccordion";
+import PlayerProfileClient from "./PlayerProfileClient";
 import { players, getPlayerBySlug, allPlayerSlugs } from "../../../data/players";
 
 const BASE = "https://hockeyworldcup2026schedule.com";
@@ -220,6 +221,9 @@ export default async function PlayerProfilePage({ params }) {
 
       {/* ── MAIN CONTENT ── */}
       <main className="sports-container" style={{ paddingTop: "3rem", paddingBottom: "4rem" }}>
+        {/* Real-time FIH TMS Squad Roster & Live Performance Tracker */}
+        <PlayerProfileClient player={p} teamName={p.team} />
+
         <div className="p-seo-layout" style={{ gap: "3rem" }}>
 
           {/* ── ARTICLE BODY ── */}
