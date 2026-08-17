@@ -346,6 +346,14 @@ export default function LiveScoresPage() {
 
       {/* STATIC SSR TEXT & TOURNAMENT HUBS SECTION (FOR GOOGLEBOT INDEXING & SPECTATORS) */}
       <div className="live-scores-container pb-12">
+        <div style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "12px", padding: "0.75rem 1.25rem", marginBottom: "1.5rem", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "0.5rem" }}>
+          <div style={{ fontSize: "0.85rem", color: "var(--text-main)", fontWeight: "600" }}>
+            ✍️ Verified by: <strong>Marc Devos, Senior Hockey Journalist</strong> | ⚡ Data: FIH TMS Real-Time Feed
+          </div>
+          <div style={{ fontSize: "0.8rem", color: "var(--text-muted)" }}>
+            📍 Wagener Stadium (1182 AM Amstelveen) &amp; Belfius Arena (1300 Wavre)
+          </div>
+        </div>
         {/* UPCOMING BLOCKBUSTER MATCHES PREVIEW LINKS */}
         <section className="live-section-card" style={{ border: "1px solid #e2e8f0" }}>
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "1.25rem", flexWrap: "wrap", gap: "0.5rem", borderBottom: "2px solid #0f172a", paddingBottom: "0.75rem" }}>

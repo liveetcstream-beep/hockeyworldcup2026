@@ -459,8 +459,8 @@ export default function PointsTablePage() {
           <FaqAccordion items={faqItems} />
 
           <div className="expert-quote-box" style={{ marginTop: "2rem", padding: "1.2rem 1.5rem", background: "var(--bg-secondary)", borderLeft: "4px solid var(--primary)", borderRadius: "8px", fontSize: "0.9rem", color: "var(--text-muted)", fontStyle: "italic" }}>
-            "Understanding tie-breaker rules is critical during the final matchday of pool stages as goal difference often decides direct qualification to the quarter-finals."
-            <strong style={{ display: "block", marginTop: "0.5rem", fontStyle: "normal", color: "var(--text-main)" }}>— HWC 2026 Editorial Desk Analysis</strong>
+            "Understanding tie-breaker rules is critical during the final matchday of pool stages as goal difference often decides direct qualification to the quarter-finals at Wagener Stadium (1182 AM Amstelveen) and Belfius Arena (1300 Wavre)."
+            <strong style={{ display: "block", marginTop: "0.5rem", fontStyle: "normal", color: "var(--text-main)" }}>— Verified by Marc Devos, Senior Hockey Journalist</strong>
           </div>
         </section>
       </main>

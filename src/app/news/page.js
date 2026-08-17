@@ -60,7 +60,7 @@ export default function NewsHubPage() {
                     "name": "Are the injury reports and squad updates officially sourced?",
                     "acceptedAnswer": {
                       "@type": "Answer",
-                      "text": "Yes, our editorial director HWC 2026 Editorial Team accredit-checks and monitors official press releases, national hockey federation bulletins, and team doctor statements for accuracy."
+                      "text": "Yes, our editorial team led by Senior Hockey Journalist Marc Devos monitors official press releases from Wagener Stadium (1182 AM Amstelveen) and Belfius Arena (1300 Wavre) for accuracy."
                     }
                   }
                 ]
