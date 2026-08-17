@@ -7,7 +7,7 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule Malaysia: Fixtures, Timings & Squad",
-  description: "Hockey World Cup 2026 Schedule Malaysia: Pool B fixtures vs Germany (Aug 17), USA (Aug 19) & Argentina (Aug 21). MYT timings, squad & streaming guide.",
+  description: "Hockey World Cup 2026 Schedule Malaysia: Speedy Tigers Men's Pool A fixtures vs Netherlands (Aug 15), New Zealand (Aug 17) & China (Aug 19) at Wagener Stadium (1182 AM). MYT timings & squad.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-malaysia`,
   },

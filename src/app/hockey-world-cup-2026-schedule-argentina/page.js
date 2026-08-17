@@ -7,7 +7,7 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule Argentina: Fixtures, Timings & Squad",
-  description: "Hockey World Cup 2026 Schedule Argentina: Pool B fixtures vs USA (Aug 15), Japan (Aug 17) & Germany (Aug 19). ART/EST timings, squad list & streaming guide.",
+  description: "Hockey World Cup 2026 Schedule Argentina: Los Leones Men's Pool A vs China (Aug 15) & Las Leonas Women's Pool B vs USA (Aug 15), Germany (Aug 17) & Scotland (Aug 19). ART timings & squad.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-argentina`,
   },
@@ -500,6 +500,24 @@ export default function ArgentinaHockeyPage() {
           </div>
         </section>
 
+      
+        {/* Local Spectator & Broadcast Information */}
+        <section style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem 2rem", margin: "2rem 0" }}>
+          <h3 style={{ color: "var(--text-main)", fontSize: "1.2rem", fontWeight: "800", marginBottom: "1rem" }}>
+            📺 Official Broadcast Rights & Venue Postal Codes — Argentina
+          </h3>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "1.5rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>
+            <div>
+              <strong>📺 Broadcast Channel:</strong> ESPN & Disney+ Argentina
+            </div>
+            <div>
+              <strong>⏰ Local Timezone:</strong> ART (Argentina Time)
+            </div>
+            <div>
+              <strong>📍 Venue Addresses:</strong> Wagener Stadium (Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen) & Belfius Hockey Arena (Avenue de la Toison d'Or, 1300 Wavre).
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

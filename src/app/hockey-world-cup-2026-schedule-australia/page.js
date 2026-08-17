@@ -7,7 +7,7 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule Australia: Fixtures, Timings & Squad",
-  description: "Hockey World Cup 2026 Schedule Australia: Pool A fixtures vs Netherlands (Aug 15), Spain (Aug 17) & New Zealand (Aug 20). AEST/local timings & squad.",
+  description: "Hockey World Cup 2026 Schedule Australia: Kookaburras (Pool C) vs Ireland (Aug 16), Spain (Aug 18) & South Africa (Aug 20) and Hockeyroos (Pool A) vs Japan (Aug 15), Netherlands (Aug 17) & Chile (Aug 19). AEST/AWST timings, squad & TV guide.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-australia`,
   },
@@ -527,6 +527,24 @@ export default function AustraliaHockeyPage() {
           </div>
         </section>
 
+      
+        {/* Local Spectator & Broadcast Information */}
+        <section style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem 2rem", margin: "2rem 0" }}>
+          <h3 style={{ color: "var(--text-main)", fontSize: "1.2rem", fontWeight: "800", marginBottom: "1rem" }}>
+            📺 Official Broadcast Rights & Venue Postal Codes — Australia
+          </h3>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "1.5rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>
+            <div>
+              <strong>📺 Broadcast Channel:</strong> Fox Sports & Kayo Sports
+            </div>
+            <div>
+              <strong>⏰ Local Timezone:</strong> AEST / AWST
+            </div>
+            <div>
+              <strong>📍 Venue Addresses:</strong> Wagener Stadium (Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen) & Belfius Hockey Arena (Avenue de la Toison d'Or, 1300 Wavre).
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

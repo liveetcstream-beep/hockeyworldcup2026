@@ -7,7 +7,7 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule Chile: Fixtures, Timings & Squad",
-  description: "Hockey World Cup 2026 Schedule Chile: Pool A fixtures vs Netherlands (Aug 15), New Zealand (Aug 17) & South Africa (Aug 19). CLT timings, squad & guide.",
+  description: "Hockey World Cup 2026 Schedule Chile: Diablas Women's Pool A fixtures vs Australia (Aug 15), Netherlands (Aug 17) & Japan (Aug 19) at Wagener Stadium (1182 AM Amstelveen). CLT timings & squad.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-chile`,
   },

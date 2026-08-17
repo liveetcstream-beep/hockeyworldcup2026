@@ -8,7 +8,7 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule Belgium: Fixtures, Timings & Squad",
-  description: "Hockey World Cup 2026 Schedule Belgium: Home nation in Pool B vs Spain (Aug 16), France (Aug 18) & Netherlands (Aug 20). CET timings, squad & streaming guide.",
+  description: "Hockey World Cup 2026 Schedule Belgium: Host nation Red Lions (Pool B) & Red Panthers (Pool B) match dates at Belfius Arena (1300 Wavre). CEST timings, RTBF/VRT broadcast & squad list.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-belgium`,
   },

@@ -7,7 +7,7 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule Germany: Fixtures, Timings & Squad",
-  description: "Hockey World Cup 2026 Schedule Germany: Defending champions in Pool B vs Argentina (Aug 15), Malaysia (Aug 17) & Scotland (Aug 19). CET timings & squad.",
+  description: "Hockey World Cup 2026 Schedule Germany: World Champions Honamas (Pool B) vs France (Aug 15), Belgium (Aug 17) & Japan (Aug 19) and Danas (Pool B) at Belfius Arena (1300 Wavre). CEST timings & squad.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-germany`,
   },

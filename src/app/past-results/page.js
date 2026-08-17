@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "Hockey World Cup Past Winners & 2023 Results (All Time)",
@@ -30,6 +31,22 @@ export const metadata = {
 };
 
 
+
+  const pastResultsFaqs = [
+    {
+      question: "Who won the previous Men's Hockey World Cup in 2023?",
+      answer: "Germany won the 2023 Men's Hockey World Cup in Bhubaneswar & Rourkela, India, defeating Belgium 5–4 in a shootout after a 3–3 draw."
+    },
+    {
+      question: "Where will the 2026 Hockey World Cup matches take place?",
+      answer: "The 2026 FIH Hockey World Cup matches are co-hosted at Wagener Stadium (Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, Netherlands) and Belfius Hockey Arena (Avenue de la Toison d'Or, 1300 Wavre, Belgium)."
+    },
+    {
+      question: "Who won the top scorer award at the 2023 Men's Hockey World Cup?",
+      answer: "Australian drag-flicker Jeremy Hayward scored 9 goals during the 2023 tournament to claim the Top Scorer award."
+    }
+  ];
+
 export default function PastResultsPage() {
   return (
     <>
@@ -45,7 +62,7 @@ export default function PastResultsPage() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Verified: <strong>HWC 2026 Editorial Desk</strong>
+              ✍️ Verified by: <strong>Marc Devos, Senior Hockey Journalist</strong> | Venues: Wagener Stadium (1182 AM Amstelveen) & Belfius Arena (1300 Wavre)
             </div>
           </div>
         </div>
@@ -227,6 +244,15 @@ export default function PastResultsPage() {
             </div>
           </div>
         </section>
+      
+        {/* Structured FAQ Block */}
+        <section className="my-16">
+          <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-sky-400 pl-4 italic">
+            Frequently Asked Questions — Past World Cup Champions & Records
+          </h2>
+          <FaqAccordion items={pastResultsFaqs} />
+        </section>
+
       </main>
 
       <Footer />

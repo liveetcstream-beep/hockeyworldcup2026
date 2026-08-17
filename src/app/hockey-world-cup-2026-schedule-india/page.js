@@ -7,7 +7,7 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule India: Fixtures, Timings & Squad",
-  description: "Hockey World Cup 2026 Schedule India: Pool D match dates vs Wales (Aug 15), England (Aug 17) & Pakistan (Aug 19), local IST timings, Wagener Stadium details & squad list.",
+  description: "Hockey World Cup 2026 Schedule India: Pool D fixtures vs Wales (Aug 15), England (Aug 17) & Pakistan (Aug 19), local IST timings, Wagener Stadium (1182 AM) details, broadcast rights & squad list.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-india`,
   },

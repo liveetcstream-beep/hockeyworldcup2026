@@ -74,10 +74,10 @@ export default function SchedulePage() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Expert Verified by: <strong>HWC 2026 Editorial Desk</strong>
+              ✍️ Verified by: <strong>Marc Devos, Senior Hockey Journalist</strong>
             </div>
             <div className="eeat-badge">
-              ⚡ Status: <strong>All 100 Fixtures Confirmed</strong>
+              ⚡ Venues: <strong>Wagener Stadium (1182 AM Amstelveen) & Belfius Arena (1300 Wavre)</strong>
             </div>
           </div>
         </div>

@@ -7,7 +7,7 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule France: Fixtures, Timings & Squad",
-  description: "Hockey World Cup 2026 Schedule France: Pool B fixtures vs Belgium (Aug 18) & Argentina (Aug 20). CET match timings, squad list & live streaming channels.",
+  description: "Hockey World Cup 2026 Schedule France: Les Bleus Men's Pool B fixtures vs Germany (Aug 15), Belgium (Aug 16) & Japan (Aug 18) at Belfius Arena (1300 Wavre). CEST timings & squad list.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-france`,
   },

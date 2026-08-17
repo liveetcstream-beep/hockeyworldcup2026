@@ -7,7 +7,7 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule Wales: Fixtures, Timings & Squad",
-  description: "Hockey World Cup 2026 Schedule Wales: Pool D fixtures vs India (Aug 15), Pakistan (Aug 17) & England (Aug 20). BST timings, squad list & streaming channels.",
+  description: "Hockey World Cup 2026 Schedule Wales: Pool D fixtures vs India (Aug 15), England (Aug 17) & Pakistan (Aug 19). Local UK BST timings, Wagener Stadium (1182 AM) guide & squad analysis.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-wales`,
   },

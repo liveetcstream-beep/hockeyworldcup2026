@@ -7,7 +7,7 @@ const BASE = "https://hockeyworldcup2026schedule.com";
 
 export const metadata = {
   title: "Hockey World Cup 2026 Schedule Spain: Fixtures, Timings & Squad",
-  description: "Hockey World Cup 2026 Schedule Spain: Pool C fixtures vs Belgium (Aug 16), Australia (Aug 17) & Ireland (Aug 19). CET timings, squad & live streaming guide.",
+  description: "Hockey World Cup 2026 Schedule Spain: Red Sticks Men's Pool C vs South Africa (Aug 16), Australia (Aug 18) & Ireland (Aug 20) and Women's Pool C. Local CEST timings, Teledeporte broadcast & squad.",
   alternates: {
     canonical: `${BASE}/hockey-world-cup-2026-schedule-spain`,
   },
@@ -479,6 +479,24 @@ export default function SpainHockeyPage() {
           </div>
         </section>
 
+      
+        {/* Local Spectator & Broadcast Information */}
+        <section style={{ background: "var(--bg-secondary)", border: "1px solid var(--border-color)", borderRadius: "16px", padding: "1.5rem 2rem", margin: "2rem 0" }}>
+          <h3 style={{ color: "var(--text-main)", fontSize: "1.2rem", fontWeight: "800", marginBottom: "1rem" }}>
+            📺 Official Broadcast Rights & Venue Postal Codes — Spain
+          </h3>
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))", gap: "1.5rem", fontSize: "0.9rem", color: "var(--text-muted)" }}>
+            <div>
+              <strong>📺 Broadcast Channel:</strong> RTVE Teledeporte & RTVE Play
+            </div>
+            <div>
+              <strong>⏰ Local Timezone:</strong> CEST (Spanish Time)
+            </div>
+            <div>
+              <strong>📍 Venue Addresses:</strong> Wagener Stadium (Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen) & Belfius Hockey Arena (Avenue de la Toison d'Or, 1300 Wavre).
+            </div>
+          </div>
+        </section>
       </main>
       <Footer />
     </>

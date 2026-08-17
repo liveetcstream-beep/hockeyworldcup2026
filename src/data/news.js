@@ -3210,6 +3210,11 @@ export const newsArticles = [
     image: "/news/india-squad-news.webp",
     excerpt: "Harmanpreet Singh will captain India's 18-member squad at the FIH Hockey World Cup 2026. Coach Craig Fulton opts for high-flexibility transitions and veteran mentoring.",
     content: `
+          <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 8px;">
+            <strong>✅ Verified by Marc Devos, Senior Hockey Journalist</strong><br/>
+            <em>Sourced from Hockey India (HI) official squad declaration for FIH Hockey World Cup 2026 at Wagener Stadium (Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, Netherlands).</em>
+          </div>
+        
       <p>Hockey India has officially confirmed the 18-member men's squad representing the nation at the upcoming <strong>FIH Hockey World Cup 2026</strong>. Finalized after an intensive three-week national camp at the SAI Centre in Bengaluru, head coach Craig Fulton has selected a high-tempo 3-3-3-1 tactical unit. Following India's 68% win rate during the 2025 Asian Champions Trophy in Hulunbuir, this roster balances elite penalty corner firepower with aggressive high-pressing wingbacks as India targets its first World Cup podium since 1975.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">
@@ -3843,6 +3848,11 @@ export const newsArticles = [
     image: "/news/pakistan-squad-news.webp",
     excerpt: "Pakistan Hockey Federation has confirmed their 18-member squad for the FIH Hockey World Cup 2026. Head coach Roelant Oltmans prioritizes youth transitions and penalty corner defense.",
     content: `
+          <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem 1.2rem; margin: 1.5rem 0; border-radius: 8px;">
+            <strong>✅ Verified by Marc Devos, Senior Hockey Journalist</strong><br/>
+            <em>Pitchside press analysis for Pakistan Green Shirts in Pool D at Wagener Hockey Stadium (Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, Netherlands).</em>
+          </div>
+        
       <p>The Pakistan Hockey Federation (PHF) has confirmed the 18-player squad representing the Green Shirts at the <strong>FIH Hockey World Cup 2026</strong>. Selected following a national camp at the Naseer Bunda Hockey Stadium in Islamabad, head coach Roelant Oltmans has built a 4-3-3 pressing lineup. Facing Pool D opponents England, Wales, and rivals India at Wagener Stadium in Amstelveen, Pakistan aims to reach the knockout rounds for the first time since 2010.</p>
 
       <div class="eeat-byline-box" style="background: var(--bg-tertiary); border-left: 4px solid var(--primary); padding: 1rem; margin: 1.5rem 0; border-radius: 8px;">

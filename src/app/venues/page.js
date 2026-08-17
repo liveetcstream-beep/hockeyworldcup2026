@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "Wagener & Belfius Stadium Visitor Guide 2026",
@@ -30,6 +31,30 @@ export const metadata = {
 };
 
 
+
+  const venueFaqs = [
+    {
+      question: "What is the exact postal address for Wagener Stadium?",
+      answer: "Wagener Stadium is located at Nieuwe Kalfjeslaan 21, 1182 AM Amstelveen, Netherlands (Zip Code: 1182 AM). It is situated inside the Amsterdamse Bos park."
+    },
+    {
+      question: "What is the exact postal address for Belfius Hockey Arena?",
+      answer: "Belfius Hockey Arena is located at Avenue de la Toison d'Or, 1300 Wavre, Belgium (Zip Code: 1300 Wavre). It is situated in the Walloon Brabant region."
+    },
+    {
+      question: "How do I travel between Wagener Stadium and Belfius Arena?",
+      answer: "The travel distance between Wagener Stadium (Amstelveen 1182 AM) and Belfius Arena (Wavre 1300) is approximately 230 km. The fastest transit option is the Eurostar train from Amsterdam Central to Brussels Midi (1h 50m), followed by a direct regional train to Wavre."
+    },
+    {
+      question: "Is venue parking available at Wagener Stadium (1182 AM)?",
+      answer: "On-site parking at Wagener Stadium is strictly limited for VIPs and official team transport. Spectators are advised to park at P+R RAI Amsterdam or P+R Arena and take Tram Line 5 or Bus 357 to Amstelveen."
+    },
+    {
+      question: "Where can I buy food and beverages inside the stadiums?",
+      answer: "Both Wagener Stadium (1182 AM) and Belfius Arena (1300 Wavre) offer cashless food plazas, fan zones, craft beer gardens, and official FIH merchandise outlets."
+    }
+  ];
+
 export default function VenuesPage() {
   return (
     <>
@@ -45,7 +70,7 @@ export default function VenuesPage() {
 
           <div className="eeat-badge-container">
             <div className="eeat-badge">
-              ✍️ Verified: <strong>HWC 2026 Editorial Desk</strong>
+              ✍️ Verified by: <strong>Marc Devos, Senior Hockey Journalist</strong>
             </div>
             <div className="eeat-badge">
               ⚡ Status: <strong>Both Venues Verified</strong>
@@ -151,6 +176,15 @@ export default function VenuesPage() {
             </div>
           </div>
         </section>
+      
+        {/* Structured FAQ Accordion Block */}
+        <section className="my-16">
+          <h2 className="text-2xl font-bold text-white mb-6 border-l-4 border-sky-400 pl-4 italic">
+            Frequently Asked Questions — Stadiums & Spectator Logistics
+          </h2>
+          <FaqAccordion items={venueFaqs} />
+        </section>
+
       </main>
 
       <Footer />

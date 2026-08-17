@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import FaqAccordion from "../components/FaqAccordion";
 
 export const metadata = {
   title: "Authors & Editorial Team | Hockey World Cup 2026 Hub",
@@ -43,6 +44,22 @@ const authors = [
     gradient: "linear-gradient(135deg, #1a2a4a 0%, #0e1c34 100%)",
   },
 ];
+
+
+  const authorFaqs = [
+    {
+      question: "Who writes and verifies the content on Hockey World Cup 2026 Hub?",
+      answer: "All match schedules, tactical previews, and statistics are authored and verified by Marc Devos (Senior Hockey Journalist) and Bram van de Meer (Data Analyst), cross-referencing FIH Tournament Management System (TMS) sheets."
+    },
+    {
+      question: "How often are schedules and live score updates verified?",
+      answer: "Match schedules and scores are audited continuously during matchdays and synchronized against official FIH pitch statistics every 10 seconds."
+    },
+    {
+      question: "How can I report a statistical discrepancy or contact the editorial team?",
+      answer: "You can reach out directly to Marc Devos at editor@hockeyworldcup2026schedule.com. All reported data corrections are audited within 24 hours."
+    }
+  ];
 
 export default function AuthorsIndexPage() {
   return (
@@ -201,6 +218,15 @@ export default function AuthorsIndexPage() {
               editor@hockeyworldcup2026schedule.com
             </a>. Marc personally reviews all correction submissions within 24 hours.
           </p>
+        </section>
+
+      
+        {/* Structured FAQ Section */}
+        <section style={{ marginBottom: "3rem" }}>
+          <h2 style={{ fontSize: "1.5rem", fontWeight: 800, color: "var(--text-main)", marginBottom: "1.5rem" }}>
+            Frequently Asked Questions — Editorial Transparency & EEAT
+          </h2>
+          <FaqAccordion items={authorFaqs} />
         </section>
 
       </main>
