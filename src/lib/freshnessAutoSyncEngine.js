@@ -1,4 +1,4 @@
-import { fetchFIHTMSLiveScores } from "./fihTmsScraper";
+import { fetchFIHTMSLiveScores } from "./fihTmsScraper.js";
 
 /**
  * Real-Time Freshness & Indexing Auto-Sync Engine

@@ -1,4 +1,4 @@
-import { executeFreshnessSync } from "../../../lib/freshnessAutoSyncEngine";
+import { executeFreshnessSync } from "../../../lib/freshnessAutoSyncEngine.js";
 
 export async function GET(request) {
   try {

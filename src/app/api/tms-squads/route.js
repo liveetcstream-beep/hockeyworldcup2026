@@ -1,4 +1,4 @@
-import { getOfficialTMSSquad } from "../../../lib/fihTmsSquadScraper";
+import { getOfficialTMSSquad } from "../../../lib/fihTmsSquadScraper.js";
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
