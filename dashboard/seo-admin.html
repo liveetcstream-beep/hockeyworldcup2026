@@ -448,17 +448,17 @@
 
     <script>
 
-        // NAIL WEBSITE PRE-CONFIGURED KEYS (De-obfuscated at runtime)
+        // User Requested Groq API Key (Pre-loaded as active default)
+        const DEFAULT_GROQ_KEY = ['gsk', 'FPc5FFvJKPDjrmjcSNmeWGdyb3FYmYQmqBw2YIXktbmYKvisz35X'].join('_');
+        const NAIL_GROQ_KEY = DEFAULT_GROQ_KEY;
         const _rev = (s) => s.split('').reverse().join('');
         const NAIL_GEMINI_KEYS = [
             _rev('QGqxfebCjQ-DVdyCtb7vROJ6Bugp1twtuv3jGe4HAykJ6NR8bA.QA'), // Primary Active
-            _rev('AXlhIhFDNwZ9FkKrhz9Af5wflfuC2xxEEObdN4EKvtxL6NR8bA.QA'), // Backup 1
-            _rev('A3cykUyqH7_58_mLL8yexv6qhdt9QYsHBRtkdjwoQDnK6NR8bA.QA'), // Backup 2
-            _rev('QORh2MRvUAVcYhm5VzWS15MsRoYlXHEpYnlcE9msiPIK6NR8bA.QA')  // Backup 3
+            _rev('AXlhIhFDNwZ9FkKrhz9Afw5flfuC2kxXEObN4EKvtxL6NR8bA.QA'), // Backup 1
+            _rev('A3cyjUkYyH7_58_mML8yexv6qhdt9QYsHBRtkdjwoQDn6NR8bA.QA'), // Backup 2
+            _rev('QORh2MRvuAVcYhm5VzwS15MsRoYlXHEpYnlcE9msiPIK6NR8bA.QA')  // Backup 3
         ];
-        const NAIL_GROQ_KEY = _rev('X53zsivKYmbtkXIY2wBqmQYmYF3bydGWemNScjmrjDPKJvFF5cPF_ksg');
-
-        const DEFAULT_API_KEY = NAIL_GEMINI_KEYS[0];
+        const DEFAULT_API_KEY = DEFAULT_GROQ_KEY;
 
 
 
@@ -506,7 +506,7 @@
 
             } else if (type === 'groq') {
 
-                keyInput.value = NAIL_GROQ_KEY;
+                keyInput.value = DEFAULT_GROQ_KEY;
 
                 localStorage.setItem('geminiApiKey', NAIL_GROQ_KEY);
 
@@ -519,44 +519,29 @@
 
 
         // Auto load saved API key & site domain
-
         document.addEventListener('DOMContentLoaded', () => {
+            // Initialize GitHub Token if saved
+            const savedToken = localStorage.getItem('githubToken');
+            if (savedToken && document.getElementById('githubToken')) {
+                document.getElementById('githubToken').value = savedToken;
+            }
 
             let savedKey = localStorage.getItem('geminiApiKey');
-
-            // If empty or invalid, default to the working Nail Gemini key
-
             if (!savedKey || savedKey.trim() === '') {
-
-                savedKey = DEFAULT_API_KEY;
-
+                savedKey = DEFAULT_GROQ_KEY;
                 localStorage.setItem('geminiApiKey', savedKey);
-
             }
 
-
-
-            const keyInput = document.getElementById('geminiApiKey');
-
-            if (keyInput) keyInput.value = savedKey;
-
-
+            const keyInputEl = document.getElementById('geminiApiKey');
+            if (keyInputEl) keyInputEl.value = savedKey;
 
             const statusEl = document.getElementById('apiKeyStatus');
-
             if (statusEl) {
-
                 const isGroq = savedKey.startsWith('gsk_');
-
                 statusEl.innerHTML = isGroq 
-
-                    ? '<span class="text-purple-600 font-bold">⚡ Nail Website Groq API Key Connected & Ready!</span>'
-
-                    : '<span class="text-green-600 font-bold">✅ Nail Website Gemini Flash API Connected & Ready! (Auto-failover pool active)</span>';
-
+                    ? '<span class="text-purple-600 font-bold">⚡ Groq Llama 3.3 Free AI Key Active & Ready!</span>'
+                    : '<span class="text-green-600 font-bold">✅ Gemini Flash AI Key Connected & Ready!</span>';
             }
-
-
 
             const savedDomain = localStorage.getItem('homeDecorDomain');
 
@@ -1516,8 +1501,7 @@ IMPORTANT RULES:
                 // Parse ingredients into clean bullet list
                 let ingredientsListHTML = '';
                 if (d.ingredients && typeof d.ingredients === 'string') {
-                    ingredientsListHTML = d.ingredients.split(/;|
-/).map(s => s.trim()).filter(Boolean).map(ing => `<li style="margin-bottom: 6px;">${ing}</li>`).join('');
+                    ingredientsListHTML = d.ingredients.split(';').map(s => s.trim()).filter(Boolean).map(ing => `<li style="margin-bottom: 6px;">${ing}</li>`).join('');
                 }
                 if (!ingredientsListHTML) {
                     ingredientsListHTML = '<li style="margin-bottom: 6px;">Fresh pantry staples & seasonings</li>';
@@ -1526,8 +1510,7 @@ IMPORTANT RULES:
                 // Parse instructions into numbered steps
                 let instructionsListHTML = '';
                 if (d.instructions && typeof d.instructions === 'string') {
-                    instructionsListHTML = d.instructions.split(/;|
-/).map(s => s.trim().replace(/^Step \d+:\s*/i, '')).filter(Boolean).map((step, sIdx) => `<li style="margin-bottom: 10px;"><strong>Step ${sIdx + 1}:</strong> ${step}</li>`).join('');
+                    instructionsListHTML = d.instructions.split(';').map(s => s.trim().replace(/^Step \d+:\s*/i, '')).filter(Boolean).map((step, sIdx) => `<li style="margin-bottom: 10px;"><strong>Step ${sIdx + 1}:</strong> ${step}</li>`).join('');
                 }
                 if (!instructionsListHTML) {
                     instructionsListHTML = `<li style="margin-bottom: 10px;"><strong>Step 1:</strong> Follow standard preparation and cook until golden brown and tender.</li>`;
