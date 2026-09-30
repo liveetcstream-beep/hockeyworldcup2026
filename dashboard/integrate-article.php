@@ -29,7 +29,7 @@ $title = isset($data['title']) ? trim($data['title']) : '';
 $slug = isset($data['urlSlug']) ? trim($data['urlSlug']) : '';
 $html = isset($data['htmlContent']) ? $data['htmlContent'] : '';
 $metaDesc = isset($data['metaDescription']) ? trim($data['metaDescription']) : '';
-$category = isset($data['category']) ? trim($data['category']) : 'fall-halloween';
+$category = isset($data['category']) ? trim($data['category']) : 'fall-recipes';
 $featuredImage = isset($data['featuredImage']) ? trim($data['featuredImage']) : '';
 
 if (empty($title) || empty($slug) || empty($html)) {
@@ -74,21 +74,16 @@ if (file_exists($sitemapPath)) {
 
 // 2. Prepare card HTML for posts.html & index.html
 $catMap = [
-    'fall-halloween'       => ['name' => 'Fall & Halloween Recipes',        'slug' => 'fall-halloween'],
-    'quick-dinners'        => ['name' => 'Quick & Easy Dinners',           'slug' => 'quick-dinners'],
-    'budget-meals'         => ['name' => 'Budget-Friendly Meals',          'slug' => 'budget-meals'],
-    'appetizers'           => ['name' => 'Party Appetizers & Finger Foods', 'slug' => 'appetizers'],
-    'desserts'             => ['name' => 'Holiday Desserts & Baking',       'slug' => 'desserts'],
-    'crockpot'             => ['name' => 'Slow Cooker & Comfort Soups',     'slug' => 'crockpot'],
-    'air-fryer'            => ['name' => 'Crispy Air Fryer Favorites',     'slug' => 'air-fryer'],
-    'chicken-recipes'      => ['name' => 'Easy Chicken Dinners',            'slug' => 'chicken-recipes'],
-    'breakfast-brunch'     => ['name' => 'Breakfast & Brunch',             'slug' => 'breakfast-brunch'],
-    'pasta-noodles'        => ['name' => 'Cozy Pasta & Casseroles',         'slug' => 'pasta-noodles'],
-    'healthy-eating'       => ['name' => 'Healthy & Fresh Meals',          'slug' => 'healthy-eating'],
-    'drinks-cocktails'     => ['name' => 'Festive Drinks & Mocktails',     'slug' => 'drinks-cocktails'],
+    'fall-recipes'     => ['name' => 'Fall Recipes',     'slug' => 'fall-recipes'],
+    'holiday-recipes'  => ['name' => 'Holiday Feasts',    'slug' => 'holiday-recipes'],
+    'budget-meals'     => ['name' => 'Budget Meals',      'slug' => 'budget-meals'],
+    'quick-dinners'    => ['name' => 'Quick Dinners',     'slug' => 'quick-dinners'],
+    'crockpot-recipes' => ['name' => 'Crockpot Meals',    'slug' => 'crockpot-recipes'],
+    'air-fryer'        => ['name' => 'Air Fryer',         'slug' => 'air-fryer'],
+    'desserts'         => ['name' => 'Easy Desserts',     'slug' => 'desserts'],
 ];
 
-$rawCat = isset($data['category']) ? trim($data['category']) : 'fall-halloween';
+$rawCat = isset($data['category']) ? trim($data['category']) : 'fall-recipes';
 $categoryBadge = isset($catMap[$rawCat]) ? $catMap[$rawCat]['name'] : ucwords(str_replace(['-', '_'], ' ', $rawCat));
 $categorySlug = isset($catMap[$rawCat]) ? $catMap[$rawCat]['slug'] : $rawCat;
 
