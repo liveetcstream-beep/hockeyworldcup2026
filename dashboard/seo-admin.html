@@ -2247,7 +2247,7 @@ ${tocItemsHTML}
                 pubBtn.textContent = '🚀 Publishing to GitHub...';
             }
 
-            const token = (document.getElementById('githubToken')?.value || '').trim() || localStorage.getItem('githubToken');
+            const token = ((document.getElementById('githubToken')?.value || '').trim() || localStorage.getItem('githubToken') || '').trim();
             const slug = generatedArticle.slug || 'recipe-post';
             const title = generatedArticle.title || 'Cozy Recipe Post';
             const owner = 'liveetcstream-beep';
@@ -2295,7 +2295,11 @@ ${tocItemsHTML}
                     return;
                 } catch (err) {
                     console.error('GitHub publish error:', err);
-                    alert('GitHub Publish failed: ' + err.message + '\n\nFalling back to download...');
+                    alert('⚠️ GitHub Publish failed: ' + err.message + '\n\nReason: Your GitHub Personal Access Token is invalid or expired.\n\nFalling back to direct download...');
+                    if (pubBtn) {
+                        pubBtn.disabled = false;
+                        pubBtn.textContent = '🚀 Publish to Vercel (1-Click)';
+                    }
                 }
             }
 
