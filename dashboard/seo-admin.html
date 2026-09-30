@@ -344,7 +344,7 @@
 
                         </div>
 
-                        <div id="uploadArea" onclick="document.getElementById('imageUpload').click()" class="border-2 border-dashed border-stone-300 rounded-xl p-8 text-center hover:border-orange-500 transition-all cursor-pointer bg-stone-50 hover:bg-orange-50" 
+                        <div id="uploadArea" class="border-2 border-dashed border-stone-300 rounded-xl p-8 text-center hover:border-orange-500 transition-all cursor-pointer bg-stone-50 hover:bg-orange-50" 
 
                              ondrop="handleDrop(event)" 
 
@@ -352,7 +352,7 @@
 
                              ondragleave="handleDragLeave(event)">
 
-                            <input type="file" id="imageUpload" multiple accept="image/*" class="hidden" onchange="if(this.files && this.files.length) processImageFiles(this.files)">
+                            <input type="file" id="imageUpload" multiple accept="image/*" class="hidden">
 
                             <div id="uploadIcon" class="text-4xl mb-3">📸</div>
 
@@ -849,88 +849,94 @@
 
 
 
-        // Upload handlers
+        // Upload handlers (Protected against double triggers and duplicate uploads)
+        let isProcessingImages = false;
 
         document.addEventListener('DOMContentLoaded', () => {
-
             const uploadArea = document.getElementById('uploadArea');
-
             const fileInput = document.getElementById('imageUpload');
-
             if (uploadArea && fileInput) {
-
                 uploadArea.addEventListener('click', (e) => {
-
-                    if (e.target !== fileInput && !isUploading) fileInput.click();
-
+                    if (e.target !== fileInput && !e.target.closest('button') && !isProcessingImages) {
+                        fileInput.click();
+                    }
                 });
-
                 fileInput.addEventListener('change', (e) => {
-
-                    if (e.target.files?.length) processImageFiles(Array.from(e.target.files));
-
+                    const files = e.target.files;
+                    if (files && files.length) {
+                        const fileArray = Array.from(files);
+                        e.target.value = '';
+                        processImageFiles(fileArray);
+                    }
                 });
-
             }
-
         });
 
-
-
         window.handleDragOver = (e) => { e.preventDefault(); e.stopPropagation(); document.getElementById('uploadArea')?.classList.add('border-orange-500', 'bg-orange-50'); };
-
         window.handleDragLeave = (e) => { e.preventDefault(); e.stopPropagation(); document.getElementById('uploadArea')?.classList.remove('border-orange-500', 'bg-orange-50'); };
-
         window.handleDrop = (e) => {
-
             e.preventDefault(); e.stopPropagation();
-
             window.handleDragLeave(e);
-
             if (e.dataTransfer?.files?.length) processImageFiles(Array.from(e.dataTransfer.files));
-
         };
 
-
-
         async function processImageFiles(files) {
-            if (!files || !files.length) return;
-            const fileList = Array.from(files);
-            const imageFiles = fileList.filter(f => f.type.startsWith('image/') || /\.(jpg|jpeg|png|webp|gif|avif)$/i.test(f.name));
-            if (!imageFiles.length) {
-                alert('Please select valid image files (JPG, PNG, WebP).');
-                return;
+            if (!files || !files.length || isProcessingImages) return;
+            isProcessingImages = true;
+
+            try {
+                const fileList = Array.from(files);
+                const imageFiles = fileList.filter(f => f.type.startsWith('image/') || /\.(jpg|jpeg|png|webp|gif|avif)$/i.test(f.name));
+                if (!imageFiles.length) {
+                    alert('Please select valid image files (JPG, PNG, WebP).');
+                    return;
+                }
+
+                // Strict deduplication: ensure no duplicate images within batch or already loaded
+                const uniqueFiles = [];
+                const seenNames = new Set(uploadedImages.map(img => img.name.toLowerCase()));
+                for (const f of imageFiles) {
+                    const lower = f.name.toLowerCase();
+                    if (!seenNames.has(lower)) {
+                        seenNames.add(lower);
+                        uniqueFiles.push(f);
+                    }
+                }
+
+                if (!uniqueFiles.length) {
+                    return;
+                }
+
+                const newImages = [];
+                for (let i = 0; i < uniqueFiles.length; i++) {
+                    const file = uniqueFiles[i];
+
+                    // Fast local FileReader - zero network lag, works 100% offline & on Vercel
+                    const dataUrl = await new Promise((res) => {
+                        const reader = new FileReader();
+                        reader.onload = (e) => res(e.target.result);
+                        reader.onerror = () => res('');
+                        reader.readAsDataURL(file);
+                    });
+
+                    const cleanBaseName = file.name.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ').trim();
+                    const altText = cleanBaseName.replace(/\b\w/g, l => l.toUpperCase());
+
+                    newImages.push({
+                        url: '/assets/images/' + file.name,
+                        previewUrl: dataUrl,
+                        name: file.name,
+                        alt: altText
+                    });
+                }
+
+                uploadedImages = [...uploadedImages, ...newImages];
+                displayImages();
+            } finally {
+                isProcessingImages = false;
+                const fileInput = document.getElementById('imageUpload');
+                if (fileInput) fileInput.value = '';
             }
-
-            const newImages = [];
-            for (let i = 0; i < imageFiles.length; i++) {
-                const file = imageFiles[i];
-
-                // Fast local FileReader - zero network lag, works 100% offline & on Vercel
-                const dataUrl = await new Promise((res) => {
-                    const reader = new FileReader();
-                    reader.onload = (e) => res(e.target.result);
-                    reader.onerror = () => res('');
-                    reader.readAsDataURL(file);
-                });
-
-                const cleanBaseName = file.name.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ').trim();
-                const altText = cleanBaseName.replace(/\b\w/g, l => l.toUpperCase());
-
-                newImages.push({
-                    url: '/assets/images/' + file.name,
-                    previewUrl: dataUrl,
-                    name: file.name,
-                    alt: altText
-                });
-            }
-
-            uploadedImages = [...uploadedImages, ...newImages];
-            displayImages();
-
-            // Clear the file input so user can re-upload or add more files anytime
-            const fileInput = document.getElementById('imageUpload');
-            if (fileInput) fileInput.value = '';
         }
 
         function displayImages() {
