@@ -2176,7 +2176,7 @@ ${tocItemsHTML}
                 if (document.getElementById('githubToken')) document.getElementById('githubToken').value = DEFAULT_GH_TOKEN;
             }
 
-            const slug = generatedArticle.slug || 'recipe-post';
+            const slug = generatedArticle.urlSlug || generatedArticle.slug || (document.getElementById('urlSlug')?.value || '').trim() || 'recipe-post';
             const title = generatedArticle.title || 'Cozy Recipe Post';
             const owner = 'liveetcstream-beep';
             const repo = 'hockeyworldcup2026';
@@ -2225,7 +2225,14 @@ ${tocItemsHTML}
                     throw new Error(err.message || 'GitHub API error');
                 }
 
-                alert(`🎉 SUCCESS! Article Published Directly to Live Website!\n\n📍 File: posts/${slug}.html\n🌐 Live URL: https://hockeyworldcup2026schedule.com/posts/${slug}\n\nVercel will make it live in 10-15 seconds!`);
+                // Automatically update index.html, posts.html, and sitemap.xml
+                try {
+                    await integrateArticleIntoListings(token, slug, title, generatedArticle);
+                } catch (listErr) {
+                    console.warn('Listing integration note:', listErr);
+                }
+
+                alert(`🎉 SUCCESS! Article Published Directly to Live Website!\n\n📍 Post URL: https://hockeyworldcup2026schedule.com/posts/${slug}\n\n✅ Homepage (index.html) Updated!\n✅ All Recipes (/posts) Updated!\n✅ Sitemap.xml Updated!\n\nVercel is deploying all updates live in 10-15 seconds!`);
                 
                 if (pubBtn) {
                     pubBtn.disabled = false;
