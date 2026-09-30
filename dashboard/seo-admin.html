@@ -250,7 +250,7 @@
 
                         <label class="block text-sm font-semibold text-stone-800 mb-2">Article Title</label>
 
-                        <input type="text" id="articleTitle" oninput="handleTitleInput(this.value)" class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-lg font-medium" placeholder="e.g., 20+ Halloween Party Food Ideas for Adults 2026">
+                        <input type="text" id="articleTitle" oninput="handleTitleInput(this.value)" onkeyup="handleTitleInput(this.value)" onchange="handleTitleInput(this.value)" class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-lg font-medium" placeholder="Type or paste article title here...">
 
                     </div>
 
@@ -355,7 +355,7 @@
 
                              ondragleave="handleDragLeave(event)">
 
-                            <input type="file" id="imageUpload" multiple accept="image/*" class="hidden" onchange="if(this.files?.length) processImageFiles(Array.from(this.files))">
+                            <input type="file" id="imageUpload" multiple accept="image/*" class="hidden" onchange="if(this.files && this.files.length) processImageFiles(this.files)">
 
                             <div id="uploadIcon" class="text-4xl mb-3">📸</div>
 
@@ -585,9 +585,18 @@
 
                 // Auto URL Slug & Keyword Generator
         window.handleTitleInput = function(title) {
-            if (!title) return;
+            const cleanTitle = (title || '').trim();
+            const slugField = document.getElementById('urlSlug');
+            const kwField = document.getElementById('focusKeyword');
+
+            if (!cleanTitle) {
+                if (slugField && !slugField.dataset.custom) slugField.value = '';
+                if (kwField && !kwField.dataset.userEdited) kwField.value = '';
+                return;
+            }
+
             // Generate clean kebab-case slug
-            const slug = title
+            const slug = cleanTitle
                 .toLowerCase()
                 .replace(/[^a-z0-9\s-]/g, '')
                 .trim()
@@ -595,15 +604,12 @@
                 .replace(/-+/g, '-')
                 .replace(/^-+|-+$/g, '');
 
-            const slugField = document.getElementById('urlSlug');
-            if (slugField && !slugField.dataset.custom) {
+            if (slugField) {
                 slugField.value = slug;
             }
 
-            const kwField = document.getElementById('focusKeyword');
             if (kwField && !kwField.dataset.userEdited) {
-                // Strip numbers and filler words to extract focus keyword
-                const cleanKw = title.toLowerCase()
+                const cleanKw = cleanTitle.toLowerCase()
                     .replace(/\b(2026|2025|2024|\d+\+?|the|a|an|and|for|in|on|at|of|with|ideas|that|actually)\b/gi, ' ')
                     .replace(/[^a-z\s]/g, '')
                     .replace(/\s+/g, ' ')
@@ -891,120 +897,44 @@
 
 
         async function processImageFiles(files) {
-
-            const imageFiles = files.filter(f => f.type.startsWith('image/'));
-
-            if (!imageFiles.length) { alert('Please select image files only.'); return; }
-
-
-
-            isUploading = true;
-
-            const uploadProgress = document.getElementById('uploadProgress');
-
-            const progressBar = document.getElementById('progressBar');
-
-            const progressText = document.getElementById('progressText');
-
-            if (uploadProgress) uploadProgress.classList.remove('hidden');
-
-
-
-            const newImages = [];
-
-            const isLocal = window.location.protocol === 'file:' || !window.location.origin || window.location.origin === 'null';
-
-            const uploadEndpoint = isLocal ? null : (window.location.origin + '/dashboard/upload-image.php');
-
-
-
-            for (let i = 0; i < imageFiles.length; i++) {
-
-                const file = imageFiles[i];
-
-                if (progressBar) progressBar.style.width = Math.round(((i + 1) / imageFiles.length) * 100) + '%';
-
-                if (progressText) progressText.textContent = `Processing image ${i + 1} of ${imageFiles.length}: ${file.name}`;
-
-
-
-                // Read Data URL for instantaneous local preview
-
-                const dataUrl = await new Promise((res) => {
-
-                    const reader = new FileReader();
-
-                    reader.onload = (e) => res(e.target.result);
-
-                    reader.readAsDataURL(file);
-
-                });
-
-
-
-                let finalServerUrl = '';
-
-                if (uploadEndpoint) {
-
-                    try {
-
-                        const fd = new FormData();
-
-                        fd.append('image', file);
-
-                        const r = await fetch(uploadEndpoint, { method: 'POST', body: fd });
-
-                        const res = await r.json();
-
-                        if (res.success && res.url) finalServerUrl = res.url;
-
-                    } catch (err) {
-
-                        console.warn('Server upload failed, using relative fallback:', err);
-
-                    }
-
-                }
-
-
-
-                const cleanBaseName = file.name.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ').trim();
-
-                const altText = cleanBaseName.replace(/\b\w/g, l => l.toUpperCase());
-
-
-
-                newImages.push({
-
-                    url: finalServerUrl || ('../assets/images/' + file.name),
-
-                    previewUrl: dataUrl,
-
-                    name: file.name,
-
-                    alt: altText
-
-                });
-
+            if (!files || !files.length) return;
+            const fileList = Array.from(files);
+            const imageFiles = fileList.filter(f => f.type.startsWith('image/') || /\.(jpg|jpeg|png|webp|gif|avif)$/i.test(f.name));
+            if (!imageFiles.length) {
+                alert('Please select valid image files (JPG, PNG, WebP).');
+                return;
             }
 
+            const newImages = [];
+            for (let i = 0; i < imageFiles.length; i++) {
+                const file = imageFiles[i];
 
+                // Fast local FileReader - zero network lag, works 100% offline & on Vercel
+                const dataUrl = await new Promise((res) => {
+                    const reader = new FileReader();
+                    reader.onload = (e) => res(e.target.result);
+                    reader.onerror = () => res('');
+                    reader.readAsDataURL(file);
+                });
+
+                const cleanBaseName = file.name.replace(/\.[^/.]+$/, '').replace(/[-_]/g, ' ').trim();
+                const altText = cleanBaseName.replace(/\b\w/g, l => l.toUpperCase());
+
+                newImages.push({
+                    url: '/assets/images/' + file.name,
+                    previewUrl: dataUrl,
+                    name: file.name,
+                    alt: altText
+                });
+            }
 
             uploadedImages = [...uploadedImages, ...newImages];
-
             displayImages();
 
-
-
-            if (uploadProgress) uploadProgress.classList.add('hidden');
-
-            if (progressBar) progressBar.style.width = '0%';
-
-            isUploading = false;
-
+            // Clear the file input so user can re-upload or add more files anytime
+            const fileInput = document.getElementById('imageUpload');
+            if (fileInput) fileInput.value = '';
         }
-
-
 
         function displayImages() {
 
