@@ -223,6 +223,9 @@
 
                         <p class="text-xs text-stone-600">🔒 Same keys as <code class="bg-stone-200 px-1 py-0.5 rounded text-stone-700">nails.bilalmania.com</code>. Supports Gemini Flash (Auto-failover pool) & Groq.</p>
 
+                        <button id="saveKeyBtn" type="button" onclick="saveApiKeyManually()" class="text-xs bg-stone-800 hover:bg-stone-900 text-white px-3.5 py-1.5 rounded-lg transition font-semibold flex items-center gap-1 shadow-sm">
+                            <span>💾</span> Save Key
+                        </button>
                         <button id="testKeyBtn" type="button" onclick="testGeminiKey()" class="text-xs bg-orange-600 hover:bg-orange-700 text-white px-3.5 py-1.5 rounded-lg transition font-semibold flex items-center gap-1 shadow-sm">
 
                             <span>⚡</span> Test Active Key
@@ -247,7 +250,7 @@
 
                         <label class="block text-sm font-semibold text-stone-800 mb-2">Article Title</label>
 
-                        <input type="text" id="articleTitle" class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-lg font-medium" placeholder="e.g., 25 Cheap Meals When You're Broke That Actually Taste Delicious">
+                        <input type="text" id="articleTitle" oninput="handleTitleInput(this.value)" class="w-full px-4 py-3 border border-stone-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent text-lg font-medium" placeholder="e.g., 20+ Halloween Party Food Ideas for Adults 2026">
 
                     </div>
 
@@ -300,7 +303,7 @@
 
                             <label class="block text-sm font-semibold text-stone-800 mb-2">URL Slug (Optional)</label>
 
-                            <input type="text" id="urlSlug" class="w-full px-4 py-2.5 border border-stone-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Auto: cozy-fall-living-room-decor">
+                            <input type="text" id="urlSlug" oninput="this.dataset.custom = 'true'" class="w-full px-4 py-2.5 border border-stone-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent" placeholder="Auto: 20-halloween-party-food-ideas-for-adults">
 
                         </div>
 
@@ -344,7 +347,7 @@
 
                         </div>
 
-                        <div id="uploadArea" class="border-2 border-dashed border-stone-300 rounded-xl p-8 text-center hover:border-orange-500 transition-all cursor-pointer bg-stone-50 hover:bg-orange-50" 
+                        <div id="uploadArea" onclick="document.getElementById('imageUpload').click()" class="border-2 border-dashed border-stone-300 rounded-xl p-8 text-center hover:border-orange-500 transition-all cursor-pointer bg-stone-50 hover:bg-orange-50" 
 
                              ondrop="handleDrop(event)" 
 
@@ -352,13 +355,16 @@
 
                              ondragleave="handleDragLeave(event)">
 
-                            <input type="file" id="imageUpload" multiple accept="image/*" class="hidden">
+                            <input type="file" id="imageUpload" multiple accept="image/*" class="hidden" onchange="if(this.files?.length) processImageFiles(Array.from(this.files))">
 
                             <div id="uploadIcon" class="text-4xl mb-3">📸</div>
 
                             <p id="uploadText" class="text-stone-700 font-medium">Click to select images or drag & drop</p>
 
                             <p class="text-xs text-stone-500 mt-1">Select all JPG, PNG, or WebP food photos from your recipe folders</p>
+                            <button type="button" onclick="event.stopPropagation(); document.getElementById('imageUpload').click()" class="mt-3 px-5 py-2.5 bg-orange-600 hover:bg-orange-700 text-white rounded-xl text-xs font-bold shadow-md transition inline-flex items-center gap-2">
+                                <span>📁</span> Browse & Upload Food Images
+                            </button>
 
                             <div id="uploadProgress" class="mt-4 hidden">
 
@@ -577,6 +583,35 @@
 
 
 
+                // Auto URL Slug & Keyword Generator
+        window.handleTitleInput = function(title) {
+            if (!title) return;
+            // Generate clean kebab-case slug
+            const slug = title
+                .toLowerCase()
+                .replace(/[^a-z0-9\s-]/g, '')
+                .trim()
+                .replace(/\s+/g, '-')
+                .replace(/-+/g, '-')
+                .replace(/^-+|-+$/g, '');
+
+            const slugField = document.getElementById('urlSlug');
+            if (slugField && !slugField.dataset.custom) {
+                slugField.value = slug;
+            }
+
+            const kwField = document.getElementById('focusKeyword');
+            if (kwField && !kwField.dataset.userEdited) {
+                // Strip numbers and filler words to extract focus keyword
+                const cleanKw = title.toLowerCase()
+                    .replace(/\b(2026|2025|2024|\d+\+?|the|a|an|and|for|in|on|at|of|with|ideas|that|actually)\b/gi, ' ')
+                    .replace(/[^a-z\s]/g, '')
+                    .replace(/\s+/g, ' ')
+                    .trim();
+                kwField.value = cleanKw || slug.replace(/-/g, ' ');
+            }
+        };
+
         // Keyword & Slug extraction
 
         function extractKeyword(title) {
@@ -616,6 +651,21 @@
         });
 
 
+
+                // Save API Key Manually
+        window.saveApiKeyManually = function() {
+            const keyInput = document.getElementById('geminiApiKey');
+            const key = keyInput ? keyInput.value.trim() : '';
+            const statusEl = document.getElementById('apiKeyStatus');
+            if (!key) {
+                alert('⚠️ Please enter or paste an API Key first.');
+                return;
+            }
+            localStorage.setItem('geminiApiKey', key);
+            const provider = key.startsWith('gsk_') ? 'Groq Llama 3.3 Free AI' : 'Google Gemini Flash AI';
+            if (statusEl) statusEl.innerHTML = `<span class="text-green-600 font-bold">💾 ${provider} Key Saved in Browser Memory!</span>`;
+            alert(`✅ Success! ${provider} API key has been saved permanently in your browser.`);
+        };
 
         // Test API Key (Gemini or Groq)
 
