@@ -1116,131 +1116,61 @@
 
 
 
-                const prompt = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance.
+                const prompt = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance on 'Cozy Plate Recipes' (https://hockeyworldcup2026schedule.com).
 Write a comprehensive, top-notch, 100% topic-tailored 2026 Recipe master article.
 
-
-
 ARTICLE DETAILS:
-
 - Title: ${title}
-
 - Focus Keyword: ${keyword}
-
 - Category: ${category}
+- Context: ${seoDescriptionInput || 'Delicious home-cooked recipe roundup and culinary guide'}
+- Total Dishes: ${uploadedImages.length} (Write one numbered recipe section per image)
 
-- Context: ${seoDescriptionInput || 'Comprehensive home decor gallery'}
-
-- Total Images: ${uploadedImages.length} (Write one numbered section per image)
-
-
-
-IMAGES TO INCLUDE (in order, one section per image):
-
+DISHES / RECIPES TO INCLUDE (in order, one section per image):
 ${imageList}
 
-
-
 WRITING INSTRUCTIONS:
+1. Write an engaging, mouth-watering INTRO PARAGRAPH (3-4 sentences). Naturally include focus keyword "${keyword}", LSI semantic entities (fresh pantry ingredients, budget grocery tips, prep-ahead hacks, crowd-pleaser flavors), and an INLINE ENGAGEMENT QUESTION asking readers what their favorite dish is to make for parties or busy dinners.
 
-1. Write an engaging INTRO PARAGRAPH (3-4 sentences). Naturally include focus keyword "${keyword}", LSI semantic entities (fresh ingredients, cooking techniques, flavor balance, budget grocery tips), and an INLINE ENGAGEMENT QUESTION asking readers what their favorite go-to comfort dinner is on busy weeknights.
+2. For EACH of the ${uploadedImages.length} dishes above, write a recipe card block in this EXACT format:
 
-
-
-2. For EACH of the ${uploadedImages.length} images above, write a numbered room styling section in this EXACT format:
-
-
-
-[DESIGN_START]
-
+[RECIPE_START]
 NUMBER: (number)
+SLUG_ID: (unique-kebab-case-id based on dish name)
+H2_TITLE: (NUMBER. Catchy Mouth-Watering Recipe Name)
+TIME: (e.g. 25 Mins (10m prep, 15m cook))
+COST: (e.g. Budget-Friendly (~$2.50/serving))
+SERVINGS: (e.g. Serves 6-8)
+ALT_TEXT: (Mouth-watering descriptive alt text mentioning dish name, golden crust, sauce, garnishes, serving platter - 10-15 words)
+FIGCAPTION: (1 appetizing sentence describing the dish and flavor presentation)
+FLAVOR_INTRO: (3-4 sentences: exact flavor profile, savory/sweet notes, textures, aroma, and why this recipe is an absolute hit with guests)
+INGREDIENTS: (4-7 key ingredients separated by semicolons, e.g. 1 lb puff pastry; 8 oz cream cheese, softened; 1 tsp smoked paprika; 1 cup shredded cheddar; fresh parsley for garnish)
+INSTRUCTIONS: (3-4 concise step-by-step cooking steps separated by semicolons, e.g. Preheat oven to 375°F (190°C) and line baking sheet with parchment paper; Mix cream cheese, cheddar, and seasonings in a bowl; Roll out dough and spread filling evenly before slicing; Bake for 18-20 minutes until golden brown and bubbly)
+CHEF_TIP: (1 high-value culinary secret: prep-ahead tip, reheating advice, or easy substitution)
+SERVING_NOTES: (2 sentences: serving suggestions, dip pairings, or freezer storage guidance)
+[RECIPE_END]
 
-SLUG_ID: (unique-kebab-case-id based on design name)
+3. SECTION 5: 5 CULINARY SECRETS & PARTY HOSTING TAKEAWAYS:
+[TAKEAWAYS_START]
+Provide 5 actionable food prep secrets tailored specifically to ${keyword} (Make-Ahead Assembly, Temperature Management for Hot & Cold Trays, Garnish Power for Pinterest-Worthy Photos, Smart Grocery Budget Swaps, Crowd-Pleasing Dipping Sauces). Format as 5 bullet points with strong titles.
+[TAKEAWAYS_END]
 
-H2_TITLE: (NUMBER. Catchy Creative Home Decor Design Name)
-
-ALT_TEXT: (Descriptive alt text mentioning: room type, key furniture, materials, colors, lighting - 10-15 words)
-
-FIGCAPTION: (1 vivid sentence interior styling summary)
-
-PARAGRAPH_1: (3-4 sentences: exact flavor profile, key ingredients, textures, cooking aroma, and why this dish is an instant crowd pleaser)
-PARAGRAPH_2: (2-3 sentences: chef tips, quick prep hacks, money-saving ingredient substitutions, make-ahead / freezer storage guidance)
-
-[DESIGN_END]
-
-
-
-3. SECTION 5: COLOR PALETTES & AESTHETIC MOODS GUIDE:
-
-[COLOR_GUIDE_START]
-
-Write 4 trending interior color palettes specific to ${keyword} in 2026 (e.g. Warm Terracotta & Cream, Moody Forest & Brass, Organic Japandi Oat, Vintage Autumn Amber). For each, give a catchy title and 2 sentences explaining wall/furniture pairing and mood vibe.
-
-[COLOR_GUIDE_END]
-
-
-
-4. SECTION 6: ROOM LAYOUT & SPACE COMPATIBILITY MATRIX:
-
-[MATRIX_START]
-
-Provide recommendations for Small Studio/Apartment, Open Concept Living, Cozy Sitting Room, and Dining Nook specifically for ${keyword}. Format as 4 lines: ROOM_TYPE|BEST_ACCENTS|LIGHTING_TEMP|OVERALL_VIBE
-
-[MATRIX_END]
-
-
-
-5. SECTION 7: BUDGET DIY VS HIGH-END DESIGNER DECOR COMPARISON:
-
-[BUDGET_VS_LUXURY_START]
-
-Provide realistic cost ($50-$150 thrifted/DIY vs $800-$2,500+ luxury custom), styling time (Weekend DIY vs 4-6 Weeks Custom), longevity, and key advantages for both DIY styling and Designer Furnishings for ${keyword}.
-
-[BUDGET_VS_LUXURY_END]
-
-
-
-6. SECTION 8: 5 PROFESSIONAL INTERIOR STYLIST HACKS:
-
-[STYLIST_HACKS_START]
-
-Provide 5 actionable designer hacks (The Rule of Threes, Layered 2700K Ambient Lighting, Texture Contrast Boucle & Wood, Front-Legs Rug Anchor Rule, Seasonal Centerpiece Swaps) tailored specifically to ${keyword}.
-
-[STYLIST_HACKS_END]
-
-
-
-7. SECTION 9: 7-DAY ROOM REFRESH & MAINTENANCE CHECKLIST:
-
-[MAINTENANCE_START]
-
-Provide 5 upkeep tips (daily fluffing pillows, scented soy candles, clutter-free tray storage, natural light maximization, seasonal foliage refresh) tailored to ${keyword}.
-
-[MAINTENANCE_END]
-
-
-
-8. SECTION 10: FREQUENTLY ASKED QUESTIONS (FAQs):
-
+4. SECTION 6: FREQUENTLY ASKED QUESTIONS (FAQs):
 [FAQS_START]
-
-Write 4 high-intent Q&A blocks tailored specifically to ${keyword} answering budget styling, small space visual enlargement, warm lighting selection, and pet/family friendly textures. Format: Q: (question) | A: (answer)
-
+Write 4 high-intent recipe FAQs tailored specifically to ${keyword} answering:
+- Can I make these recipes ahead of time?
+- What are the best budget grocery substitutions?
+- How should leftovers be stored and reheated?
+- What are great vegetarian or allergy-friendly options?
+Format: Q: (question) | A: (answer)
 [FAQS_END]
 
-
-
-9. Write a CONCLUSION paragraph (3-4 sentences encouraging readers to pin their favorite ideas to Pinterest boards and transform their home).
-
-
+5. Write a delicious CONCLUSION paragraph (3-4 sentences encouraging home cooks to save their favorite recipe pins to Pinterest and explore more comforting meals).
 
 IMPORTANT RULES:
-
-- Everything MUST be 100% specific to ${keyword} and home interior design.
-
-- No generic filler. Do NOT include markdown (** or ##) or HTML tags inside raw text fields.`;
-
-
+- Everything MUST be 100% specific to ${keyword} and food/cooking recipes.
+- NO home decor, NO furniture, NO interior design filler!
+- No markdown (** or ##) inside the tag fields. Clean raw text only.`;
 
                 const aiText = await callAIProvider(apiKey, prompt);
 
@@ -1362,7 +1292,7 @@ IMPORTANT RULES:
 
             } else {
 
-                conclusionText = `Transforming your living space into a warm, aesthetically pleasing haven is an ongoing creative joy. Whether you implement subtle textural layers, warm 2700K lighting, or statement furniture pieces, these ${data.keyword} ideas give you the ultimate blueprint to create a home that feels magazine-worthy yet effortlessly lived-in. Don't forget to save your favorite decor ideas to Pinterest to build your dream mood board!`;
+                conclusionText = `Cooking delicious, memorable food for friends and family brings warmth and comfort to every gathering. Whether you're hosting a festive party or looking for quick weeknight inspiration, these ${data.keyword} recipes give you the perfect culinary blueprint. Be sure to save your favorite recipe ideas to Pinterest to build your dream party menu!`;
 
             }
 
@@ -1372,13 +1302,13 @@ IMPORTANT RULES:
 
                 ...data,
 
-                intro: introText || `Creating a warm, stylish home is an art that blends texture, lighting, and thoughtful curation. ${data.title} offers timeless inspiration for anyone looking to refresh their interiors with modern warmth and welcoming charm. How do you make your living spaces feel cozy without overcrowding? In this complete 2026 design guide, we break down top styling ideas, color palettes, and professional decorator tips.`,
+                intro: introText || `Finding easy, crowd-pleasing food that satisfies everyone doesn't have to be complicated or expensive. ${data.title} brings together foolproof recipes, budget-friendly pantry staples, and time-saving chef secrets. In this complete 2026 recipe guide, we break down mouth-watering dish ideas, step-by-step directions, and expert party hosting tips.`,
 
                 designs: designBlocks,
 
                 conclusion: conclusionText,
 
-                metaDescription: data.seoDescription || `Discover the ultimate ${data.keyword} guide with stunning room ideas, warm color palettes, space styling tips, and professional designer hacks.`
+                metaDescription: data.seoDescription || `Discover the ultimate ${data.keyword} recipe guide with mouth-watering dishes, step-by-step cooking steps, key ingredients, and budget kitchen hacks.`
 
             });
 
@@ -1693,7 +1623,7 @@ IMPORTANT RULES:
 
         <div class="header-container">
 
-            <a href="/" class="logo"><div class="logo-icon">✨</div>Decor <span>Canvas</span></a>
+            <a href="/" class="logo"><div class="logo-icon">🍲</div>Cozy Plate <span>Recipes</span></a>
 
             <nav>
 
@@ -1701,7 +1631,7 @@ IMPORTANT RULES:
 
                     <li><a href="/" class="nav-link">Home</a></li>
 
-                    <li><a href="/posts" class="nav-link active">Decor Ideas</a></li>
+                    <li><a href="/posts" class="nav-link active">All Recipes</a></li>
 
                     <li><a href="/about-us" class="nav-link">About Us</a></li>
 
@@ -1733,7 +1663,7 @@ IMPORTANT RULES:
 
             <div class="breadcrumb">
 
-                <a href="/">Home</a> &rsaquo; <a href="/posts">Decor Ideas</a> &rsaquo; <span>${data.title}</span>
+                <a href="/">Home</a> &rsaquo; <a href="/posts">Recipes</a> &rsaquo; <a href="/posts">${catDisplay}</a> &rsaquo; <span>${data.title}</span>
 
             </div>
 
@@ -1869,7 +1799,7 @@ ${tocItemsHTML}
 
             <div class="conclusion-content" style="font-size: 1.08rem; line-height: 1.85; margin-top: 35px; padding-top: 30px; border-top: 1px solid var(--border-color);">
 
-                <p style="margin-bottom: 18px; line-height: 1.8;">Transforming your home with curated decor ideas brings daily joy, comfort, and personal expression. Save your favorite designs to your <a href="https://www.pinterest.com/IndoorDecorHub/" target="_blank">Pinterest boards</a> and explore more styling guides on <a href="https://hockeyworldcup2026schedule.com" rel="internal">Cozy Plate Recipes</a>!</p>
+                <p style="margin-bottom: 18px; line-height: 1.8;">Cooking comforting, delicious meals at home brings friends and families closer together. Save your favorite recipes to your <a href="https://www.pinterest.com/" target="_blank">Pinterest boards</a> and discover more easy dinner ideas on <a href="https://hockeyworldcup2026schedule.com" rel="internal">Cozy Plate Recipes</a>!</p>
 
             </div>
 
@@ -1883,7 +1813,7 @@ ${tocItemsHTML}
 
                 <h3>About Cozy Plate Recipes</h3>
 
-                <p>Curated interior styling guides, warm color palettes, space-saving layout tips, and Pinterest aesthetic decor inspiration.</p>
+                <p>Simple, comforting, budget-friendly recipes, party finger foods, and viral dinner ideas crafted for everyday home cooks.</p>
 
             </div>
 
@@ -1951,13 +1881,13 @@ ${tocItemsHTML}
 
                     <a href="/" class="logo" style="display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-heading); font-size: 1.5rem; color: #ffffff; text-decoration: none; margin-bottom: 15px;">
 
-                        <span style="color: #e65b3c;">✨</span> Decor <span style="color: #e65b3c;">Canvas</span>
+                        <span style="font-size: 1.5rem;">🍲</span> Cozy Plate <span style="color: #ea580c;">Recipes</span>
 
                     </a>
 
                     <p style="color: #a0aec0; font-size: 0.95rem; line-height: 1.7; max-width: 340px; margin-bottom: 20px;">
 
-                        Cozy Plate Recipes is your premier lookbook for aesthetic home decor ideas, warm room layouts, color palettes, and Pinterest interior design trends.
+                        Cozy Plate Recipes is your premier kitchen companion for easy weeknight dinners, budget meal prep, party appetizers, and comforting family favorites.
 
                     </p>
 
@@ -1971,19 +1901,19 @@ ${tocItemsHTML}
 
                 <div class="footer-section">
 
-                    <h4 style="color: #ffffff; font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 20px;">Decor Categories</h4>
+                    <h4 style="color: #ffffff; font-family: var(--font-heading); font-size: 1.15rem; margin-bottom: 20px;">Recipe Categories</h4>
 
                     <ul class="footer-links" style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px;">
 
-                        <li><a href="/posts" style="color: #cbd5e0; text-decoration: none; font-size: 0.95rem;">🛋️ Living Room Decor</a></li>
+                        <li><a href="/posts" style="color: #cbd5e0; text-decoration: none; font-size: 0.95rem;">🍲 Quick Dinners</a></li>
 
-                        <li><a href="/posts" style="color: #cbd5e0; text-decoration: none; font-size: 0.95rem;">🛏️ Boho Bedroom</a></li>
+                        <li><a href="/posts" style="color: #cbd5e0; text-decoration: none; font-size: 0.95rem;">🍕 Budget Meals</a></li>
 
                         <li><a href="/posts" style="color: #cbd5e0; text-decoration: none; font-size: 0.95rem;">🍳 Kitchen & Dining</a></li>
 
-                        <li><a href="/posts" style="color: #cbd5e0; text-decoration: none; font-size: 0.95rem;">🏢 Small Space Hacks</a></li>
+                        <li><a href="/posts" style="color: #cbd5e0; text-decoration: none; font-size: 0.95rem;">🍟 Crispy Air Fryer</a></li>
 
-                        <li><a href="/posts" style="color: #cbd5e0; text-decoration: none; font-size: 0.95rem;">🪴 Indoor Plants</a></li>
+                        <li><a href="/posts" style="color: #cbd5e0; text-decoration: none; font-size: 0.95rem;">🍰 Sweet Treats</a></li>
 
                     </ul>
 
@@ -1997,7 +1927,7 @@ ${tocItemsHTML}
 
                         <li><a href="/" style="color: #cbd5e0; text-decoration: none; font-size: 0.95rem;">Home</a></li>
 
-                        <li><a href="/posts" style="color: #cbd5e0; text-decoration: none; font-size: 0.95rem;">Decor Ideas Catalog</a></li>
+                        <li><a href="/posts" style="color: #cbd5e0; text-decoration: none; font-size: 0.95rem;">All Recipes Catalog</a></li>
 
                         <li><a href="/about-us" style="color: #cbd5e0; text-decoration: none; font-size: 0.95rem;">About Us</a></li>
 
@@ -2029,7 +1959,7 @@ ${tocItemsHTML}
 
             <div style="padding: 25px 0; text-align: center; color: #a0aec0; font-size: 0.9rem;">
 
-                &copy; 2026 Cozy Plate Recipes. All rights reserved. Premium Home Decor & Interior Styling Guides.
+                &copy; 2026 Cozy Plate Recipes. All rights reserved. Comforting Family Recipes & Budget Meal Ideas.
 
             </div>
 
@@ -2134,7 +2064,7 @@ ${tocItemsHTML}
 
             if (!title) { alert('Please enter article title'); return; }
 
-            if (!uploadedImages.length) { alert('Please upload or select room images first'); return; }
+            if (!uploadedImages.length) { alert('Please upload or select food recipe images first'); return; }
 
 
 
@@ -2152,7 +2082,7 @@ ${tocItemsHTML}
 
                     number: i + 1,
 
-                    slugId: `decor-idea-${i + 1}`,
+                    slugId: `recipe-${i + 1}`,
 
                     h2Title: `${i + 1}. ${name.replace(/\b\w/g, l => l.toUpperCase())}`,
 
@@ -2162,7 +2092,13 @@ ${tocItemsHTML}
 
                     paragraph1: `This captivating setup features ${name.toLowerCase()} harmonized with balanced warm tones, natural textures, and cozy ambient light. Layering tactile materials brings effortless elegance.`,
 
-                    paragraph2: `For practical living, ensure traffic pathways remain clear and position your lighting to illuminate cozy corners during evening hours.`,
+                    paragraph2: `Serve warm immediately while fresh and garnish with freshly cracked black pepper and chopped herbs for peak visual appeal.`,
+                    ingredients: 'Fresh pantry staples; seasonings; olive oil; shredded cheese; herbs',
+                    instructions: 'Prep ingredients and preheat oven or pan; Combine ingredients and cook until golden brown; Garnish and serve warm.',
+                    time: '25 Mins (10m prep, 15m cook)',
+                    cost: 'Budget-Friendly (~$2.50/serving)',
+                    servings: 'Serves 4-6',
+                    proTip: 'Prep ahead and keep refrigerated until ready to cook.',
 
                     image: img
 
@@ -2182,7 +2118,7 @@ ${tocItemsHTML}
 
                 focusKeyword: keyword,
 
-                metaDescription: `Explore ${title} with ${uploadedImages.length} curated design ideas, room palettes, space layouts, and pro styling tips.`,
+                metaDescription: `Discover ${title} with ${uploadedImages.length} mouth-watering recipes, step-by-step directions, ingredients, and budget cooking tips.`,
 
                 featuredImage: uploadedImages[0]?.url || '',
 
@@ -2198,7 +2134,7 @@ ${tocItemsHTML}
 
                 siteDomain,
 
-                intro: `${title} offers the ultimate inspiration for anyone seeking to create an inviting, aesthetic interior in 2026. From warm layered textiles to strategic atmospheric lighting, each design choice here helps turn an everyday space into a comforting sanctuary.`,
+                intro: `${title} brings together mouth-watering flavors, easy-to-find grocery staples, and time-saving cooking hacks. Whether you're hosting party guests or cooking a quick family dinner, these recipes are guaranteed crowd-pleasers.`,
 
                 conclusion: `Bringing your dream home decor vision to life is about celebrating comfort, visual warmth, and thoughtful styling. Pin your favorite ${keyword} ideas to Pinterest to build your mood board!`
 
