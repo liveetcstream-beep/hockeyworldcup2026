@@ -1112,7 +1112,7 @@ DISHES / RECIPES TO INCLUDE (in order, one section per image):
 ${imageList}
 
 WRITING INSTRUCTIONS:
-1. Write an engaging, mouth-watering INTRO PARAGRAPH (3-4 sentences). Naturally include focus keyword "${keyword}", LSI semantic entities (fresh pantry ingredients, budget grocery tips, prep-ahead hacks, crowd-pleaser flavors), and an INLINE ENGAGEMENT QUESTION asking readers what their favorite dish is to make for parties or busy dinners.
+1. Write an engaging, mouth-watering INTRO PARAGRAPH (3-4 sentences). Naturally incorporate the topic and focus keyword in an organic, grammatically correct sentence (NEVER force awkward syntax like "our curated list of [keyword]"). Mention LSI entities like easy appetizers, party finger foods, savory bites, and festive desserts, and end with an engaging question for readers asking about their favorite party dishes.
 
 2. For EACH of the ${uploadedImages.length} dishes above, write a recipe card block in this EXACT format:
 
@@ -1418,7 +1418,7 @@ IMPORTANT RULES:
                     ingredientsListHTML = d.ingredients.split(';').map(s => s.trim()).filter(Boolean).map(ing => `<li style="margin-bottom: 6px;">${ing}</li>`).join('');
                 }
                 if (!ingredientsListHTML) {
-                    ingredientsListHTML = '<li style="margin-bottom: 6px;">Fresh pantry staples & seasonings</li>';
+                    ingredientsListHTML = '<li style="margin-bottom: 6px;">Fresh pantry ingredients, herbs & seasonings</li>';
                 }
 
                 // Parse instructions into numbered steps
@@ -1427,7 +1427,7 @@ IMPORTANT RULES:
                     instructionsListHTML = d.instructions.split(';').map(s => s.trim().replace(/^Step \d+:\s*/i, '')).filter(Boolean).map((step, sIdx) => `<li style="margin-bottom: 10px;"><strong>Step ${sIdx + 1}:</strong> ${step}</li>`).join('');
                 }
                 if (!instructionsListHTML) {
-                    instructionsListHTML = `<li style="margin-bottom: 10px;"><strong>Step 1:</strong> Follow standard preparation and cook until golden brown and tender.</li>`;
+                    instructionsListHTML = `<li style="margin-bottom: 10px;"><strong>Step 1:</strong> Prepare fresh ingredients, assemble carefully according to recipe notes, and serve chilled or warm.</li>`;
                 }
 
                 designsHTML += `
@@ -1625,7 +1625,7 @@ IMPORTANT RULES:
 
             <div class="nav-actions">
 
-                <a href="https://www.pinterest.com/IndoorDecorHub/" target="_blank" class="pinterest-follow-button">
+                <a href="https://www.pinterest.com/" target="_blank" class="pinterest-follow-button">
 
                     <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg> Follow on Pinterest
 
@@ -1734,49 +1734,29 @@ ${tocItemsHTML}
 
 
 
-            <!-- Takeaways -->
-
-            <div id="takeaways" class="content-section" style="margin-bottom: 40px;">
-
-                <h2 style="font-family: var(--font-heading); font-size: 1.85rem; margin-bottom: 15px; color: var(--dark-text);">Essential Weeknight Cooking & Grocery Takeaways</h2>
-
-                <div class="section-text" style="font-size: 1.08rem; line-height: 1.85; color: var(--dark-text);">
-
+                        <!-- Takeaways -->
+            <div id="takeaways" class="content-section" style="margin: 45px 0; padding: 28px; background: #fffaf5; border-radius: 16px; border: 1px solid #fed7aa;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.85rem; margin-bottom: 15px; color: var(--dark-text);">Essential Party Food Prep & Hosting Secrets</h2>
+                <div class="section-text" style="font-size: 1.05rem; line-height: 1.85; color: var(--dark-text);">
                     <ul style="padding-left: 20px;">
-
-                        <li style="margin-bottom: 8px;"><strong>Layer Warm Ambient Lighting:</strong> Incorporate 2400K–2700K fairy lights or hidden puck lights to create cozy depth.</li>
-
-                        <li style="margin-bottom: 8px;"><strong>Balance Tactile Textures:</strong> Combine raw natural timber, stoneware pottery, and woven runners for rich sensory interest.</li>
-
-                        <li style="margin-bottom: 8px;"><strong>Corral with Trays & Pedestals:</strong> Group daily essentials onto distinct risers to prevent countertop clutter.</li>
-
-                        <li style="margin-bottom: 8px;">Save your favorite setups directly to your <a href="https://www.pinterest.com/IndoorDecorHub/" target="_blank">Pinterest boards</a>!</li>
-
+                        <li style="margin-bottom: 12px;"><strong>Prep Cold Platters in Advance:</strong> Assemble charcuterie boards, dips, and desserts earlier in the day, cover with cling wrap, and chill so you can relax with guests.</li>
+                        <li style="margin-bottom: 12px;"><strong>Stagger Hot Oven Appetizers:</strong> Keep baking sheets with pre-assembled finger foods in the fridge and bake in waves so fresh, warm snacks flow continuously.</li>
+                        <li style="margin-bottom: 12px;"><strong>Smart Grocery Budget Swaps:</strong> Purchase block cheese to shred or cube at home for superior melting and 30% savings compared to pre-shredded bags.</li>
+                        <li style="margin-bottom: 12px;"><strong>Strategic Grazing Stations:</strong> Separate savory finger foods, dips, and desserts onto different tables to prevent kitchen bottlenecks.</li>
+                        <li style="margin-bottom: 12px;"><strong>Effortless Edible Garnishes:</strong> Fresh herbs, colorful drizzles, and festive toppings turn simple recipes into viral Pinterest-worthy centerpieces!</li>
                     </ul>
-
                 </div>
-
             </div>
 
-
-
-            <!-- FAQs -->
-
-            <div id="faqs" class="content-section" style="margin-bottom: 40px;">
-
-                <h2 style="font-family: var(--font-heading); font-size: 1.85rem; margin-bottom: 15px; color: var(--dark-text);">Frequently Asked Questions</h2>
-
-                <div class="section-text" style="font-size: 1.08rem; line-height: 1.85; color: var(--dark-text);">
-
-                    <p style="margin-bottom: 15px; line-height: 1.8;"><strong>Q: How do I style seasonal decor in small spaces?</strong><br>A: Focus on vertical footprint using wall cubbies, floating ledges, or tiered rolling carts to keep prep surfaces free.</p>
-
-                    <p style="margin-bottom: 15px; line-height: 1.8;"><strong>Q: How can I make seasonal styling look upscale?</strong><br>A: Choose muted earth tones, stoneware pottery, and antiqued brass instead of bright plastics.</p>
-
+                        <!-- FAQs -->
+            <div id="faqs" class="content-section" style="margin: 45px 0; padding: 28px; background: #ffffff; border-radius: 16px; border: 1px solid #f0e6dc;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.85rem; margin-bottom: 15px; color: var(--dark-text);">Frequently Asked Questions (FAQs)</h2>
+                <div class="section-text" style="font-size: 1.05rem; line-height: 1.85; color: var(--dark-text);">
+                    <p style="margin-bottom: 16px; line-height: 1.8;"><strong>Q: What foods should I prepare ahead of time?</strong><br>A: Cold dips, truffle balls, snack mixes, and chocolate treats can easily be prepared 1-2 days in advance. Hot appetizers like wrapped sausages can be assembled ahead and baked fresh right as guests arrive.</p>
+                    <p style="margin-bottom: 16px; line-height: 1.8;"><strong>Q: How much food should I plan per adult guest?</strong><br>A: For a 2-3 hour cocktail party where a sit-down dinner is not served, plan on 6 to 8 appetizer bites per adult. If hosting during a traditional dinner hour, increase to 10 to 12 pieces per person.</p>
+                    <p style="margin-bottom: 16px; line-height: 1.8;"><strong>Q: What foods can safely stay at room temperature?</strong><br>A: Dry snack mixes, pretzel bites, bar cookies, and cured charcuterie boards can safely stay on the buffet table for 2-3 hours without compromising flavor or quality.</p>
                 </div>
-
             </div>
-
-
 
             <div class="conclusion-content" style="font-size: 1.08rem; line-height: 1.85; margin-top: 35px; padding-top: 30px; border-top: 1px solid var(--border-color);">
 
@@ -1802,7 +1782,7 @@ ${tocItemsHTML}
 
                 <h3>Follow Us</h3>
 
-                <a href="https://www.pinterest.com/IndoorDecorHub/" target="_blank" class="btn btn-primary" style="width:100%; text-align:center; background:#e60023; color:#fff;">📌 Save Ideas on Pinterest</a>
+                <a href="https://www.pinterest.com/" target="_blank" class="btn btn-primary" style="width:100%; text-align:center; background:#e60023; color:#fff;">📌 Save Ideas on Pinterest</a>
 
             </div>
 
@@ -1872,7 +1852,7 @@ ${tocItemsHTML}
 
                     </p>
 
-                    <a href="https://www.pinterest.com/IndoorDecorHub/" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; background: #e60023; color: #fff; padding: 10px 22px; border-radius: 50px; font-weight: 600; text-decoration: none;">
+                    <a href="https://www.pinterest.com/" target="_blank" class="btn btn-primary" style="display: inline-flex; align-items: center; gap: 8px; background: #e60023; color: #fff; padding: 10px 22px; border-radius: 50px; font-weight: 600; text-decoration: none;">
 
                         📌 Follow on Pinterest
 
