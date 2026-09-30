@@ -846,3 +846,19 @@ img {
     width: 52px !important;
     height: 52px !important;
 }
+
+/* Global Pinterest Button and SVG safety rules */
+.pin-this-btn svg, .pin-save-overlay-btn svg, .pinterest-follow-button svg {
+    width: 16px !important;
+    height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+}
+.pin-this-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    line-height: 1 !important;
+}

@@ -1,0 +1,382 @@
+/* Cozy Plate Recipes - Blog Posts & Article Pages Styling */
+
+/* Global SVG Safety Constraint to prevent huge unstyled SVGs */
+svg {
+    max-width: 100%;
+}
+
+.post-hero {
+    padding: 120px 1.5rem 35px;
+    background: #fdfaf7;
+    border-bottom: 1px solid var(--border-color, #f0e6dc);
+}
+
+.post-hero-container {
+    max-width: 920px;
+    margin: 0 auto;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    font-size: 0.88rem;
+    color: var(--dark-muted, #78716c);
+    margin-bottom: 1.25rem;
+}
+
+.breadcrumb a {
+    color: var(--dark-muted, #78716c);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.breadcrumb a:hover {
+    color: var(--primary, #ea580c);
+}
+
+.breadcrumb span {
+    color: var(--dark, #1c1917);
+    font-weight: 500;
+}
+
+.post-title {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 2.6rem;
+    line-height: 1.25;
+    color: var(--dark, #1c1917);
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+}
+
+.post-meta-bar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-size: 0.92rem;
+    color: var(--dark-muted, #78716c);
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid var(--border-color, #f0e6dc);
+}
+
+.post-author {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-weight: 600;
+    color: var(--dark, #1c1917);
+}
+
+.author-avatar-md {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ea580c, #c2410c);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.88rem;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(234, 88, 12, 0.3);
+}
+
+/* Post Content & Sidebar Layout */
+.post-layout {
+    max-width: 1200px;
+    margin: 2.5rem auto 4rem;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    gap: 3.5rem;
+}
+
+.post-main-content {
+    min-width: 0;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #332d29;
+}
+
+.post-main-content h2 {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 1.95rem;
+    color: var(--dark, #1c1917);
+    margin: 2.8rem 0 1.2rem;
+    padding-top: 1rem;
+    border-top: 2px solid #f3ede7;
+}
+
+.post-main-content h3 {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 1.5rem;
+    color: var(--dark, #1c1917);
+    margin: 1.8rem 0 0.8rem;
+}
+
+.post-main-content p {
+    margin-bottom: 1.4rem;
+    line-height: 1.8;
+}
+
+/* Image Container with Pinterest Save Pin Overlay */
+.post-img-container {
+    position: relative !important;
+    margin: 2rem 0;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fdfaf7;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f3ede7;
+}
+
+.post-img-container img {
+    width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-radius: 14px 14px 0 0;
+}
+
+.post-img-container:hover img {
+    transform: scale(1.02);
+}
+
+.post-img-caption {
+    padding: 0.85rem 1.2rem;
+    background: white;
+    font-size: 0.88rem;
+    color: #78716c;
+    text-align: center;
+    font-style: italic;
+    border-top: 1px solid #f3ede7;
+}
+
+/* Pinterest Pin Button */
+.pin-this-btn {
+    position: absolute !important;
+    top: 16px !important;
+    left: 16px !important;
+    background: #e60023 !important;
+    color: #ffffff !important;
+    padding: 8px 18px !important;
+    border-radius: 25px !important;
+    font-weight: 600 !important;
+    font-size: 0.85rem !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    text-decoration: none !important;
+    box-shadow: 0 4px 15px rgba(230, 0, 35, 0.45) !important;
+    transition: all 0.25s ease !important;
+    z-index: 20 !important;
+    border: none !important;
+    cursor: pointer !important;
+    width: auto !important;
+    height: auto !important;
+    line-height: 1 !important;
+}
+
+.pin-this-btn:hover {
+    background: #ad081b !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(230, 0, 35, 0.6) !important;
+}
+
+.pin-this-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
+    fill: #ffffff !important;
+    flex-shrink: 0 !important;
+    display: inline-block !important;
+    margin: 0 !important;
+}
+
+/* Also ensure pin-save-overlay-btn has proper size */
+.pin-save-overlay-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+    max-width: 16px !important;
+    max-height: 16px !important;
+    fill: currentColor !important;
+    flex-shrink: 0 !important;
+}
+
+/* Recipe Card Box in Articles */
+.recipe-card {
+    margin: 40px 0;
+    padding: 28px;
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #fed7aa;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.recipe-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+/* Social Share Bar */
+.share-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    margin: 2.5rem 0;
+    border-top: 1px solid #f0e6dc;
+    border-bottom: 1px solid #f0e6dc;
+}
+
+.share-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    color: var(--dark, #1c1917);
+}
+
+.share-buttons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+    border: none;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+}
+
+.share-btn:hover {
+    transform: translateY(-2px);
+}
+
+.share-btn-pinterest {
+    background: #e60023;
+}
+
+.share-btn-facebook {
+    background: #1877f2;
+}
+
+.share-btn-twitter {
+    background: #1da1f2;
+}
+
+/* Sidebar Widgets */
+.sidebar-widget {
+    background: white;
+    border-radius: 16px;
+    padding: 1.8rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f0e6dc;
+}
+
+.sidebar-widget-title {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 1.3rem;
+    color: var(--dark, #1c1917);
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid #ffedd5;
+}
+
+/* Author Profile Card */
+.author-profile-card {
+    text-align: center;
+}
+
+.author-profile-avatar {
+    width: 84px;
+    height: 84px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #ea580c, #c2410c);
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    box-shadow: 0 6px 16px rgba(234, 88, 12, 0.25);
+}
+
+.author-profile-name {
+    font-family: var(--font-heading, 'Playfair Display', serif);
+    font-size: 1.25rem;
+    color: var(--dark, #1c1917);
+    margin-bottom: 0.4rem;
+}
+
+.author-profile-bio {
+    font-size: 0.88rem;
+    color: #78716c;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+/* Table of Contents */
+.toc-widget ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.toc-widget li {
+    margin-bottom: 0.75rem;
+    font-size: 0.92rem;
+}
+
+.toc-widget a {
+    color: #57534e;
+    text-decoration: none;
+    display: block;
+    padding-left: 0.8rem;
+    border-left: 2px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.toc-widget a:hover {
+    color: var(--primary, #ea580c);
+    border-left-color: var(--primary, #ea580c);
+}
+
+/* Sticky Sidebar */
+.sticky-sidebar {
+    position: sticky;
+    top: 100px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 992px) {
+    .post-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    .post-title {
+        font-size: 2.1rem;
+    }
+    .post-hero {
+        padding-top: 100px;
+    }
+}
