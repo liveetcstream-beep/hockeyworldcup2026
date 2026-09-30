@@ -265,18 +265,18 @@
                             <label class="block text-sm font-semibold text-stone-800 mb-2">Category</label>
 
                             <select id="articleCategory" class="w-full px-4 py-2.5 border border-stone-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white">
-                                <option value="fall-halloween" selected>Fall & Halloween Decor</option>
-                                <option value="living-room">Living Room Decor</option>
-                                <option value="bedroom">Boho Bedroom</option>
-                                <option value="kitchen">Kitchen & Dining</option>
-                                <option value="small-spaces">Small Space Hacks</option>
-                                <option value="outdoor-patio">Outdoor Patio</option>
-                                <option value="farmhouse-rustic">Modern Farmhouse</option>
-                                <option value="table-dining">Table Decor</option>
-                                <option value="diy-wall-art">DIY Wall Art</option>
-                                <option value="bathroom">Spa Bathroom</option>
-                                <option value="home-lighting">Home Lighting</option>
-                                <option value="indoor-plants">Indoor Plants</option>
+                                <option value="fall-halloween" selected>🎃 Fall & Halloween Recipes</option>
+                                <option value="quick-dinners">⏱️ Quick & Easy Dinners</option>
+                                <option value="budget-meals">💰 Budget-Friendly Meals</option>
+                                <option value="appetizers">🥨 Party Appetizers & Finger Foods</option>
+                                <option value="desserts">🍰 Holiday Desserts & Baking</option>
+                                <option value="crockpot">🍲 Slow Cooker & Comfort Soups</option>
+                                <option value="air-fryer">🍟 Crispy Air Fryer Favorites</option>
+                                <option value="chicken-recipes">🍗 Easy Chicken Dinners</option>
+                                <option value="breakfast-brunch">🥞 Breakfast & Brunch</option>
+                                <option value="pasta-noodles">🍝 Cozy Pasta & Casseroles</option>
+                                <option value="healthy-eating">🥗 Healthy & Fresh Meals</option>
+                                <option value="drinks-cocktails">🍹 Festive Drinks & Mocktails</option>
                             </select>
 
                         </div>
@@ -1058,7 +1058,7 @@
 
             if (!apiKey) { alert('Please enter your Gemini or Groq API key first in the top field.'); return; }
 
-            if (!uploadedImages.length) { alert('Please upload at least one image of your decor ideas.'); return; }
+            if (!uploadedImages.length) { alert('Please upload at least one image of your food recipe ideas.'); return; }
 
 
 
@@ -1280,7 +1280,7 @@ IMPORTANT RULES:
 
 
 
-            const htmlContent = buildCompleteHomeDecorArticleHTML({
+            const htmlContent = buildCompleteFoodArticleHTML({
 
                 ...data,
 
@@ -1322,7 +1322,7 @@ IMPORTANT RULES:
 
         // Build Complete Standalone HTML Article
 
-        function buildCompleteHomeDecorArticleHTML(data) {
+        function buildCompleteFoodArticleHTML(data) {
 
             const dateStr = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
@@ -1335,16 +1335,18 @@ IMPORTANT RULES:
 
 
             const categoryLabels = {
+                'fall-halloween': 'Fall & Halloween Recipes',
                 'quick-dinners': 'Quick & Easy Dinners',
                 'budget-meals': 'Budget-Friendly Meals',
-                'crockpot-slow-cooker': 'Crockpot & Slow Cooker',
+                'appetizers': 'Party Appetizers & Finger Foods',
+                'desserts': 'Holiday Desserts & Baking',
+                'crockpot': 'Slow Cooker & Comfort Soups',
                 'air-fryer': 'Crispy Air Fryer Favorites',
-                'desserts-sweets': 'Desserts & Sweet Treats',
-                'healthy-low-carb': 'Healthy & Low-Carb Meals',
-                'holiday-seasonal': 'Holiday & Seasonal Recipes',
-                'breakfast-brunch': 'Cozy Breakfast & Brunch',
-                'comfort-soups': 'Hearty Soups & Stews',
-                'chicken-recipes': 'Viral Chicken Dinners'
+                'chicken-recipes': 'Viral Chicken Dinners',
+                'breakfast-brunch': 'Breakfast & Brunch',
+                'pasta-noodles': 'Cozy Pasta & Casseroles',
+                'healthy-eating': 'Healthy & Fresh Meals',
+                'drinks-cocktails': 'Festive Drinks & Mocktails'
             };
             const catDisplay = categoryLabels[data.category] || 'Quick & Easy Dinners';
 
@@ -2089,7 +2091,7 @@ ${tocItemsHTML}
 
 
 
-            generatedArticle.htmlContent = buildCompleteHomeDecorArticleHTML({
+            generatedArticle.htmlContent = buildCompleteFoodArticleHTML({
 
                 ...generatedArticle,
 

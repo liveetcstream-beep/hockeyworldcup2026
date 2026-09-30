@@ -29,7 +29,7 @@ $title = isset($data['title']) ? trim($data['title']) : '';
 $slug = isset($data['urlSlug']) ? trim($data['urlSlug']) : '';
 $html = isset($data['htmlContent']) ? $data['htmlContent'] : '';
 $metaDesc = isset($data['metaDescription']) ? trim($data['metaDescription']) : '';
-$category = isset($data['category']) ? trim($data['category']) : 'Kitchen & Dining';
+$category = isset($data['category']) ? trim($data['category']) : 'fall-halloween';
 $featuredImage = isset($data['featuredImage']) ? trim($data['featuredImage']) : '';
 
 if (empty($title) || empty($slug) || empty($html)) {
@@ -74,28 +74,21 @@ if (file_exists($sitemapPath)) {
 
 // 2. Prepare card HTML for posts.html & index.html
 $catMap = [
-    'fall-halloween'       => ['name' => 'Fall & Halloween Decor',  'slug' => 'fall-halloween'],
-    'fall-halloween-decor' => ['name' => 'Fall & Halloween Decor',  'slug' => 'fall-halloween'],
-    'living-room'          => ['name' => 'Living Room Decor',       'slug' => 'living-room'],
-    'living-room-decor'    => ['name' => 'Living Room Decor',       'slug' => 'living-room'],
-    'bedroom'              => ['name' => 'Boho Bedroom',            'slug' => 'bedroom'],
-    'bedroom-decor'        => ['name' => 'Boho Bedroom',            'slug' => 'bedroom'],
-    'kitchen'              => ['name' => 'Kitchen & Dining',        'slug' => 'kitchen'],
-    'kitchen-styling'      => ['name' => 'Kitchen & Dining',        'slug' => 'kitchen'],
-    'small-spaces'         => ['name' => 'Small Space Hacks',       'slug' => 'small-spaces'],
-    'apartment-decor'      => ['name' => 'Small Space Hacks',       'slug' => 'small-spaces'],
-    'outdoor-patio'        => ['name' => 'Outdoor Patio',           'slug' => 'outdoor-patio'],
-    'farmhouse-rustic'     => ['name' => 'Modern Farmhouse',        'slug' => 'farmhouse-rustic'],
-    'table-dining'         => ['name' => 'Table & Dining Decor',    'slug' => 'table-dining'],
-    'table-decor'          => ['name' => 'Table & Dining Decor',    'slug' => 'table-dining'],
-    'diy-wall-art'         => ['name' => 'DIY Wall Art',            'slug' => 'diy-wall-art'],
-    'budget-diy'           => ['name' => 'DIY Wall Art',            'slug' => 'diy-wall-art'],
-    'bathroom'             => ['name' => 'Spa Bathroom',            'slug' => 'bathroom'],
-    'home-lighting'        => ['name' => 'Home Lighting',           'slug' => 'home-lighting'],
-    'indoor-plants'        => ['name' => 'Indoor Plants',           'slug' => 'indoor-plants'],
+    'fall-halloween'       => ['name' => 'Fall & Halloween Recipes',        'slug' => 'fall-halloween'],
+    'quick-dinners'        => ['name' => 'Quick & Easy Dinners',           'slug' => 'quick-dinners'],
+    'budget-meals'         => ['name' => 'Budget-Friendly Meals',          'slug' => 'budget-meals'],
+    'appetizers'           => ['name' => 'Party Appetizers & Finger Foods', 'slug' => 'appetizers'],
+    'desserts'             => ['name' => 'Holiday Desserts & Baking',       'slug' => 'desserts'],
+    'crockpot'             => ['name' => 'Slow Cooker & Comfort Soups',     'slug' => 'crockpot'],
+    'air-fryer'            => ['name' => 'Crispy Air Fryer Favorites',     'slug' => 'air-fryer'],
+    'chicken-recipes'      => ['name' => 'Easy Chicken Dinners',            'slug' => 'chicken-recipes'],
+    'breakfast-brunch'     => ['name' => 'Breakfast & Brunch',             'slug' => 'breakfast-brunch'],
+    'pasta-noodles'        => ['name' => 'Cozy Pasta & Casseroles',         'slug' => 'pasta-noodles'],
+    'healthy-eating'       => ['name' => 'Healthy & Fresh Meals',          'slug' => 'healthy-eating'],
+    'drinks-cocktails'     => ['name' => 'Festive Drinks & Mocktails',     'slug' => 'drinks-cocktails'],
 ];
 
-$rawCat = isset($data['category']) ? trim($data['category']) : 'living-room';
+$rawCat = isset($data['category']) ? trim($data['category']) : 'fall-halloween';
 $categoryBadge = isset($catMap[$rawCat]) ? $catMap[$rawCat]['name'] : ucwords(str_replace(['-', '_'], ' ', $rawCat));
 $categorySlug = isset($catMap[$rawCat]) ? $catMap[$rawCat]['slug'] : $rawCat;
 
@@ -109,7 +102,7 @@ $fullImgUrl = $protocol . $host . $safeImg;
 $dateFormatted = date('M Y');
 
 $cardHtml = "                <!-- Post: " . $slug . " -->\n";
-$cardHtml .= "                <article class=\"decor-card\" data-category=\"" . htmlspecialchars($categorySlug) . "\">\n";
+$cardHtml .= "                <article class=\"recipe-card\" data-category=\"" . htmlspecialchars($categorySlug) . "\">\n";
 $cardHtml .= "                    <div class=\"card-img-wrapper\">\n";
 $cardHtml .= "                        <span class=\"card-category-badge\">" . htmlspecialchars($categoryBadge) . "</span>\n";
 $cardHtml .= "                        <button class=\"pin-save-overlay-btn\" data-title=\"" . $safeTitle . "\" data-image=\"" . $fullImgUrl . "\">\n";
@@ -121,7 +114,7 @@ $cardHtml .= "                    <div class=\"card-content\">\n";
 $cardHtml .= "                        <div class=\"card-meta\"><span>📅 " . $dateFormatted . "</span><span>⏱️ 8 min read</span></div>\n";
 $cardHtml .= "                        <h3 class=\"card-title\"><a href=\"/posts/" . $slug . "\">" . $safeTitle . "</a></h3>\n";
 $cardHtml .= "                        <p class=\"card-excerpt\">" . $cleanDesc . "</p>\n";
-$cardHtml .= "                        <div class=\"card-footer\"><span>Decor Canvas Editor</span><a href=\"/posts/" . $slug . "\">Read Article ➔</a></div>\n";
+$cardHtml .= "                        <div class=\"card-footer\"><span>Cozy Plate Kitchen</span><a href=\"/posts/" . $slug . "\">Read Article ➔</a></div>\n";
 $cardHtml .= "                    </div>\n";
 $cardHtml .= "                </article>\n";
 
