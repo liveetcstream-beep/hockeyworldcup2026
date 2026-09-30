@@ -92,32 +92,58 @@ img {
     padding: 0 24px;
 }
 
-.logo {
+
+.header-container {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-family: var(--font-heading);
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: var(--text-primary);
+    justify-content: space-between;
+    height: 80px;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 24px;
+    gap: 20px;
 }
 
-.logo-icon {
-    display: flex;
+.logo {
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: linear-gradient(135deg, #ea580c, #c2410c);
-    color: #fff;
-    border-radius: var(--radius-sm);
-    font-size: 1.3rem;
-    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.3);
+    gap: 12px;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.logo img, .logo-img {
+    width: 48px !important;
+    height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+    min-width: 48px !important;
+    min-height: 48px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 2px solid #ea580c !important;
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25) !important;
+    display: block !important;
+    flex-shrink: 0 !important;
+}
+
+.footer-brand .logo img, .footer-brand .logo-img {
+    border-color: #fff !important;
+    width: 52px !important;
+    height: 52px !important;
+    max-width: 52px !important;
+    max-height: 52px !important;
 }
 
 .logo span {
     color: var(--primary);
 }
+
 
 .nav-menu {
     display: flex;
@@ -804,18 +830,19 @@ img {
 
 
 /* Brand Logo Image */
-.logo-img {
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    object-fit: cover;
-    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
-    border: 2px solid #ea580c;
-    flex-shrink: 0;
+.logo-img, .logo img {
+    width: 48px !important;
+    height: 48px !important;
+    max-width: 48px !important;
+    max-height: 48px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 2px solid #ea580c !important;
+    flex-shrink: 0 !important;
+    display: block !important;
 }
-
-.footer-brand .logo-img {
-    border-color: #fff;
-    width: 48px;
-    height: 48px;
+.footer-brand .logo-img, .footer-brand .logo img {
+    border-color: #fff !important;
+    width: 52px !important;
+    height: 52px !important;
 }
