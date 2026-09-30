@@ -2156,6 +2156,119 @@ ${tocItemsHTML}
             document.getElementById('githubToken').value = savedGhToken;
         }
 
+                // INTEGRATE ARTICLE INTO LISTINGS (INDEX.HTML, POSTS.HTML, SITEMAP.XML)
+        async function integrateArticleIntoListings(token, slug, title, articleData) {
+            const owner = 'liveetcstream-beep';
+            const repo = 'hockeyworldcup2026';
+            const siteUrl = 'https://hockeyworldcup2026schedule.com';
+            
+            const categorySlug = (articleData.category || 'holiday-seasonal').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+            const categoryBadge = articleData.category || 'Holiday & Seasonal';
+            
+            let featuredImgSrc = articleData.featuredImage || (articleData.images && articleData.images[0] ? articleData.images[0].url : '') || '';
+            if (!featuredImgSrc.startsWith('http') && !featuredImgSrc.startsWith('/')) {
+                featuredImgSrc = '/assets/images/' + featuredImgSrc;
+            } else if (featuredImgSrc.startsWith('/') && !featuredImgSrc.startsWith('/assets/images/')) {
+                featuredImgSrc = '/assets/images/' + featuredImgSrc.replace(/^\//, '');
+            }
+            const fullImgUrl = featuredImgSrc.startsWith('http') ? featuredImgSrc : (siteUrl + featuredImgSrc);
+            
+            const safeTitle = (title || 'Delicious Recipe').replace(/"/g, '&quot;');
+            const rawExcerpt = articleData.seoDescription || articleData.metaDescription || (articleData.htmlContent ? articleData.htmlContent.replace(/<[^>]*>/g, ' ').substring(0, 150) : '');
+            const cleanExcerpt = rawExcerpt.replace(/"/g, '&quot;').trim() + '...';
+            
+            const dateFormatted = new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' }).format(new Date());
+
+            const cardHtml = `
+                <!-- Post: ${slug} -->
+                <article class="recipe-card" data-category="${categorySlug}">
+                    <div class="card-img-wrapper">
+                        <span class="card-category-badge">${categoryBadge}</span>
+                        <button class="pin-save-overlay-btn" data-title="${safeTitle}" data-image="${fullImgUrl}">
+                            <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg> Save Pin
+                        </button>
+                        <img src="${featuredImgSrc}" alt="${safeTitle}" loading="lazy" class="card-img" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta"><span>📅 ${dateFormatted}</span><span>⏱️ 20-30 Min</span></div>
+                        <h3 class="card-title"><a href="/posts/${slug}">${safeTitle}</a></h3>
+                        <p class="card-excerpt">${cleanExcerpt}</p>
+                        <div class="card-footer"><span class="card-author">Cozy Plate Kitchen</span><a href="/posts/${slug}" class="card-read-link">Get Recipes ➔</a></div>
+                    </div>
+                </article>`;
+
+            const gridNeedle = '<div class="grid-3" id="allPostsGrid">';
+
+            async function updateHtmlFile(fileName) {
+                try {
+                    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${fileName}`, {
+                        headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' }
+                    });
+                    if (!res.ok) return;
+                    const fileData = await res.json();
+                    const originalContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s+/g, ''))));
+                    
+                    if (originalContent.includes(`/posts/${slug}`)) {
+                        return;
+                    }
+                    if (!originalContent.includes(gridNeedle)) {
+                        return;
+                    }
+                    
+                    const newContent = originalContent.replace(gridNeedle, gridNeedle + '\n' + cardHtml);
+                    await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${fileName}`, {
+                        method: 'PUT',
+                        headers: {
+                            'Authorization': `Bearer ${token}`,
+                            'Content-Type': 'application/json',
+                            'Accept': 'application/vnd.github+json'
+                        },
+                        body: JSON.stringify({
+                            message: `Add ${slug} to ${fileName}`,
+                            content: btoa(unescape(encodeURIComponent(newContent))),
+                            sha: fileData.sha
+                        })
+                    });
+                } catch (e) {
+                    console.warn(`Error updating ${fileName}:`, e);
+                }
+            }
+
+            await updateHtmlFile('index.html');
+            await updateHtmlFile('posts.html');
+
+            // Update sitemap.xml
+            try {
+                const sRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/sitemap.xml`, {
+                    headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' }
+                });
+                if (sRes.ok) {
+                    const sData = await sRes.json();
+                    const sContent = decodeURIComponent(escape(atob(sData.content.replace(/\s+/g, ''))));
+                    if (!sContent.includes(`/posts/${slug}`)) {
+                        const today = new Date().toISOString().split('T')[0];
+                        const newEntry = `  <url>\n    <loc>${siteUrl}/posts/${slug}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>\n</urlset>`;
+                        const newSitemap = sContent.replace('</urlset>', newEntry);
+                        await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/sitemap.xml`, {
+                            method: 'PUT',
+                            headers: {
+                                'Authorization': `Bearer ${token}`,
+                                'Content-Type': 'application/json',
+                                'Accept': 'application/vnd.github+json'
+                            },
+                            body: JSON.stringify({
+                                message: `Add ${slug} to sitemap.xml`,
+                                content: btoa(unescape(encodeURIComponent(newSitemap))),
+                                sha: sData.sha
+                            })
+                        });
+                    }
+                }
+            } catch (sErr) {
+                console.warn('Error updating sitemap.xml:', sErr);
+            }
+        }
+
         // PUBLISH TO GITHUB / VERCEL & DOWNLOAD
         window.publishArticle = async function() {
             if (!generatedArticle?.htmlContent) {
@@ -2225,7 +2338,43 @@ ${tocItemsHTML}
                     throw new Error(err.message || 'GitHub API error');
                 }
 
-                // Automatically update index.html, posts.html, and sitemap.xml
+                // Upload all post images (preview image + recipe photos) to GitHub
+                const allImgsToUpload = (generatedArticle.images && generatedArticle.images.length ? generatedArticle.images : uploadedImages) || [];
+                for (const img of allImgsToUpload) {
+                    if (img.previewUrl && img.previewUrl.startsWith('data:') && img.name) {
+                        const base64Data = img.previewUrl.split(',')[1];
+                        if (base64Data) {
+                            try {
+                                const imgPath = `assets/images/${img.name}`;
+                                let imgSha = null;
+                                const chk = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${encodeURIComponent(imgPath)}`, {
+                                    headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' }
+                                });
+                                if (chk.ok) {
+                                    const d = await chk.json();
+                                    imgSha = d.sha;
+                                }
+                                await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${encodeURIComponent(imgPath)}`, {
+                                    method: 'PUT',
+                                    headers: {
+                                        'Authorization': `Bearer ${token}`,
+                                        'Content-Type': 'application/json',
+                                        'Accept': 'application/vnd.github+json'
+                                    },
+                                    body: JSON.stringify({
+                                        message: `Upload image: ${img.name}`,
+                                        content: base64Data,
+                                        sha: imgSha || undefined
+                                    })
+                                });
+                            } catch (e) {
+                                console.warn('Image upload note:', img.name, e);
+                            }
+                        }
+                    }
+                }
+
+                // Automatically update index.html, posts.html, and sitemap.xml with real card image
                 try {
                     await integrateArticleIntoListings(token, slug, title, generatedArticle);
                 } catch (listErr) {
