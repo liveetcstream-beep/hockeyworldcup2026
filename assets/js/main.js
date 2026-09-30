@@ -29,8 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const category = chip.getAttribute('data-category');
             recipeCards.forEach(card => {
-                const cardCat = card.getAttribute('data-category');
-                if (category === 'all' || cardCat === category) {
+                const cardCat = card.getAttribute('data-category') || '';
+                if (category === 'all' || cardCat === category || cardCat.includes(category) || (category === 'fall-halloween' && (cardCat.includes('halloween') || cardCat.includes('fall')))) {
                     card.style.display = 'flex';
                 } else {
                     card.style.display = 'none';

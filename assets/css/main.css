@@ -396,14 +396,17 @@ img {
 
 .category-scroll {
     display: flex;
-    gap: 16px;
+    gap: 14px;
     overflow-x: auto;
-    padding-bottom: 12px;
-    scrollbar-width: thin;
+    padding: 6px 4px 16px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    -webkit-overflow-scrolling: touch;
 }
 
 .category-scroll::-webkit-scrollbar {
-    height: 4px;
+    display: none;
+    height: 0px;
 }
 
 .category-scroll::-webkit-scrollbar-thumb {
