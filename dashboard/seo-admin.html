@@ -453,14 +453,14 @@
 
 
     <script>
+        function _rev(s) { return s.split('').reverse().join(''); }
 
         // User Requested Groq API Key (Pre-loaded as active default)
         const DEFAULT_GROQ_KEY = ['gsk', 'FPc5FFvJKPDjrmjcSNmeWGdyb3FYmYQmqBw2YIXktbmYKvisz35X'].join('_');
         // System Pre-Configured 1-Click Publishing GitHub Token
         const DEFAULT_GH_TOKEN = _rev('VNAL81wEXX9624w05uCBzmJ5u2eC6UIcCgXM_ohg');
         const NAIL_GROQ_KEY = DEFAULT_GROQ_KEY;
-        const _rev = (s) => s.split('').reverse().join('');
-        const NAIL_GEMINI_KEYS = [
+                const NAIL_GEMINI_KEYS = [
             _rev('QGqxfebCjQ-DVdyCtb7vROJ6Bugp1twtuv3jGe4HAykJ6NR8bA.QA'), // Primary Active
             _rev('AXlhIhFDNwZ9FkKrhz9Afw5flfuC2kxXEObN4EKvtxL6NR8bA.QA'), // Backup 1
             _rev('A3cyjUkYyH7_58_mML8yexv6qhdt9QYsHBRtkdjwoQDn6NR8bA.QA'), // Backup 2
