@@ -508,7 +508,7 @@
 
                 keyInput.value = DEFAULT_GROQ_KEY;
 
-                localStorage.setItem('geminiApiKey', NAIL_GROQ_KEY);
+                localStorage.setItem('geminiApiKey', DEFAULT_GROQ_KEY);
 
                 if (statusEl) statusEl.innerHTML = '<span class="text-purple-600 font-bold">⚡ Nail Groq Llama 3.3 Key Activated</span>';
 
@@ -657,7 +657,7 @@
 
                     if (statusEl) statusEl.innerHTML = `<span class="text-green-600 font-bold">✅ Key is 100% Valid & Working! Provider: ${provider}</span>`;
 
-                    alert(`✅ Success! ${provider} key from Nail website is working 100% perfectly.`);
+                    alert(`✅ Success! ${provider} is 100% VALID & Working perfectly! You can now generate recipe posts.`);
 
                 }
 
@@ -686,7 +686,7 @@
 
 
             if (activeKey.startsWith('gsk_')) {
-                const groqModels = ['qwen/qwen3.8-27b', 'llama-3.3-70b-versatile', 'openai/gpt-oss-120b'];
+                const groqModels = ['qwen/qwen3.8-27b', 'openai/gpt-oss-120b', 'openai/gpt-oss-20b'];
                 for (const model of groqModels) {
                     try {
                         const resp = await fetch('https://api.groq.com/openai/v1/chat/completions', {
@@ -709,7 +709,7 @@
                 }
                 // Automatic fallback to working Gemini key if Groq fails
                 console.warn('All Groq models failed, attempting automatic fallback to Nail Gemini key...');
-                return await callGeminiWithFailover(DEFAULT_API_KEY, prompt);
+                return await callGeminiWithFailover(NAIL_GEMINI_KEYS[0], prompt);
             } else {
 
                 return await callGeminiWithFailover(activeKey, prompt);
@@ -2218,10 +2218,13 @@ ${tocItemsHTML}
 
         // Save GitHub Token
         window.saveGithubToken = function() {
-            const token = document.getElementById('githubToken').value.trim();
+            const input = document.getElementById('githubToken');
+            const token = input ? input.value.trim() : '';
             if (token) {
                 localStorage.setItem('githubToken', token);
-                alert('✅ GitHub Token saved securely in browser!');
+                alert('✅ GitHub Token saved securely in browser! 1-Click Publishing enabled.');
+            } else {
+                alert('⚠️ Please enter your GitHub Personal Access Token (e.g. ghp_...) in the box first.');
             }
         };
 
