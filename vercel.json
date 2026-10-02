@@ -32,5 +32,17 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/posts/halloween-snacks-ideas-for-kids",
+      "destination": "/posts/halloween-snack-ideas-for-kids",
+      "permanent": true
+    },
+    {
+      "source": "/posts/25-halloween-snack-ideas-for-kids-that-are-spooky-fun",
+      "destination": "/posts/halloween-snack-ideas-for-kids",
+      "permanent": true
+    }
   ]
 }
