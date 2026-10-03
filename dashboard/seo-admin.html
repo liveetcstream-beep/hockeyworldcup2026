@@ -2178,14 +2178,12 @@ ${tocItemsHTML}
             });
         }
 
-        // Resilient Fetch with Timeout and Anti-Cache
-        async function safeFetchGithub(url, options = {}, activeToken, timeoutMs = 25000) {
+        // Resilient Fetch with Timeout (CORS-compliant)
+        async function safeFetchGithub(url, options = {}, activeToken, timeoutMs = 35000) {
             const controller = new AbortController();
             const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
             const headers = {
                 'Accept': 'application/vnd.github+json',
-                'Cache-Control': 'no-cache',
-                'Pragma': 'no-cache',
                 ...(options.headers || {})
             };
             if (activeToken) {
@@ -2453,7 +2451,18 @@ ${tocItemsHTML}
 
                         uploadedCount++;
                         setPublishButtonState(true, `📸 Uploading image (${uploadedCount}/${validImages.length})...`);
-                        await commitFileToGitHub(imgPath, `Upload image: ${img.name} [skip ci]`, base64Data, token);
+                        try {
+                            await commitFileToGitHub(imgPath, `Upload image: ${img.name} [skip ci]`, base64Data, token);
+                        } catch (imgErr) {
+                            console.warn(`Image ${img.name} upload note:`, imgErr.message);
+                            // Retry once after 1s
+                            await new Promise(r => setTimeout(r, 1000));
+                            try {
+                                await commitFileToGitHub(imgPath, `Upload image: ${img.name} [skip ci]`, base64Data, token);
+                            } catch (retryErr) {
+                                console.warn(`Image ${img.name} upload skipped:`, retryErr.message);
+                            }
+                        }
                         await new Promise(r => setTimeout(r, 150));
                     }
                 }
