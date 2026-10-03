@@ -1178,8 +1178,9 @@ IMPORTANT RULES:
 
 
                 const pubBtn = document.getElementById('publishBtn');
-
                 if (pubBtn) pubBtn.style.display = 'inline-block';
+                const pubBtnPreview = document.getElementById('publishBtnPreview');
+                if (pubBtnPreview) pubBtnPreview.style.display = 'inline-block';
 
                 if (aiStatusBox) aiStatusBox.classList.add('hidden');
 
@@ -1973,7 +1974,7 @@ ${tocItemsHTML}
 
                     </div>
 
-                    <button onclick="publishArticle()" class="btn-success text-white px-5 py-2.5 rounded-xl text-sm font-semibold shadow">
+                    <button id="publishBtnPreview" onclick="publishArticle()" class="btn-success text-white px-5 py-2.5 rounded-xl text-sm font-semibold shadow" style="display: none;">
 
                         🚀 Publish to Website
 
@@ -2104,8 +2105,9 @@ ${tocItemsHTML}
             renderPreview(generatedArticle);
 
             const pubBtn = document.getElementById('publishBtn');
-
             if (pubBtn) pubBtn.style.display = 'inline-block';
+            const pubBtnPreview = document.getElementById('publishBtnPreview');
+            if (pubBtnPreview) pubBtnPreview.style.display = 'inline-block';
 
             alert(`✅ Template generated with ${uploadedImages.length} designs! You can preview and publish now.`);
 
@@ -2125,6 +2127,154 @@ ${tocItemsHTML}
             }
         };
 
+        // Safe UTF-8 Base64 Encoder/Decoder
+        function utf8ToBase64(str) {
+            try {
+                const bytes = new TextEncoder().encode(str || '');
+                let binary = '';
+                const len = bytes.byteLength;
+                const chunkSize = 8192;
+                for (let i = 0; i < len; i += chunkSize) {
+                    binary += String.fromCharCode.apply(null, bytes.subarray(i, Math.min(i + chunkSize, len)));
+                }
+                return btoa(binary);
+            } catch (e) {
+                const safeStr = (str || '').replace(/[\uD800-\uDBFF](?![\uDC00-\uDFFF])|(?:[^\uD800-\uDBFF]|^)[\uDC00-\uDFFF]/g, '');
+                return btoa(unescape(encodeURIComponent(safeStr)));
+            }
+        }
+
+        function base64ToUtf8(base64) {
+            try {
+                const binString = atob((base64 || '').replace(/\s+/g, ''));
+                const len = binString.length;
+                const bytes = new Uint8Array(len);
+                for (let i = 0; i < len; i++) {
+                    bytes[i] = binString.charCodeAt(i);
+                }
+                return new TextDecoder('utf-8').decode(bytes);
+            } catch (e) {
+                return decodeURIComponent(escape(atob((base64 || '').replace(/\s+/g, ''))));
+            }
+        }
+
+        // Synchronize State for All Publish Buttons
+        function setPublishButtonState(disabled, text, isSuccess = null) {
+            const btns = [
+                document.getElementById('publishBtn'),
+                document.getElementById('publishBtnPreview')
+            ].filter(Boolean);
+
+            btns.forEach(btn => {
+                btn.disabled = !!disabled;
+                if (text) btn.textContent = text;
+                if (isSuccess === true) {
+                    btn.classList.remove('btn-success');
+                    btn.classList.add('bg-stone-800');
+                } else if (isSuccess === false) {
+                    btn.classList.add('btn-success');
+                    btn.classList.remove('bg-stone-800');
+                }
+            });
+        }
+
+        // Resilient Fetch with Timeout and Anti-Cache
+        async function safeFetchGithub(url, options = {}, activeToken, timeoutMs = 25000) {
+            const controller = new AbortController();
+            const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+            const headers = {
+                'Accept': 'application/vnd.github+json',
+                'Cache-Control': 'no-cache',
+                'Pragma': 'no-cache',
+                ...(options.headers || {})
+            };
+            if (activeToken) {
+                headers['Authorization'] = `Bearer ${activeToken}`;
+            }
+
+            try {
+                const res = await fetch(url, { ...options, headers, signal: controller.signal });
+                clearTimeout(timeoutId);
+                return res;
+            } catch (err) {
+                clearTimeout(timeoutId);
+                if (err.name === 'AbortError') {
+                    throw new Error(`GitHub request timed out after ${Math.round(timeoutMs / 1000)}s`);
+                }
+                throw err;
+            }
+        }
+
+        // Get Active Token with System Pre-Configured Fallback
+        function getActiveGhToken() {
+            let token = ((document.getElementById('githubToken')?.value || '').trim() || localStorage.getItem('githubToken') || '').trim();
+            if (!token || !token.startsWith('gh') || token.length < 30) {
+                token = DEFAULT_GH_TOKEN;
+                localStorage.setItem('githubToken', DEFAULT_GH_TOKEN);
+                if (document.getElementById('githubToken')) document.getElementById('githubToken').value = DEFAULT_GH_TOKEN;
+            }
+            return token;
+        }
+
+        // Robust Commit Helper with Conflict/Rate-Limit Auto-Retry
+        async function commitFileToGitHub(filePath, commitMessage, contentBase64, currentToken) {
+            const owner = 'liveetcstream-beep';
+            const repo = 'hockeyworldcup2026';
+            let token = currentToken || getActiveGhToken();
+
+            async function attemptCommit(tok) {
+                let sha = null;
+                try {
+                    const checkUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}?_t=${Date.now()}`;
+                    const getRes = await safeFetchGithub(checkUrl, { method: 'GET' }, tok, 15000);
+                    if (getRes.ok) {
+                        const existing = await getRes.json();
+                        sha = existing.sha;
+                    }
+                } catch (getErr) {
+                    console.warn('Check SHA note for ' + filePath + ':', getErr.message);
+                }
+
+                const putUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
+                return await safeFetchGithub(putUrl, {
+                    method: 'PUT',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        message: commitMessage,
+                        content: contentBase64,
+                        sha: sha || undefined
+                    })
+                }, tok, 30000);
+            }
+
+            let putRes = await attemptCommit(token);
+
+            // If token unauthorized/forbidden and user had a custom token, auto-recover to system DEFAULT_GH_TOKEN
+            if (!putRes.ok && (putRes.status === 401 || putRes.status === 403) && token !== DEFAULT_GH_TOKEN) {
+                console.warn('Switching to pre-configured DEFAULT_GH_TOKEN...');
+                token = DEFAULT_GH_TOKEN;
+                localStorage.setItem('githubToken', DEFAULT_GH_TOKEN);
+                if (document.getElementById('githubToken')) document.getElementById('githubToken').value = DEFAULT_GH_TOKEN;
+                putRes = await attemptCommit(DEFAULT_GH_TOKEN);
+            }
+
+            // If 409 Conflict (SHA mismatch), retry once with fresh timestamped SHA
+            if (putRes.status === 409) {
+                console.warn('409 Conflict encountered, retrying with fresh SHA...');
+                await new Promise(r => setTimeout(r, 600));
+                putRes = await attemptCommit(token);
+            }
+
+            // If rate-limited, wait and retry
+            if (putRes.status === 429 || (putRes.status === 403 && putRes.headers.get('x-ratelimit-remaining') === '0')) {
+                console.warn('Rate limited, backing off 2 seconds...');
+                await new Promise(r => setTimeout(r, 2000));
+                putRes = await attemptCommit(token);
+            }
+
+            return { res: putRes, activeToken: token };
+        }
+
         // Load GitHub Token on page load (Auto-connects system token)
         let savedGhToken = localStorage.getItem('githubToken');
         if (!savedGhToken || !savedGhToken.startsWith('gh') || savedGhToken.length < 30) {
@@ -2135,7 +2285,7 @@ ${tocItemsHTML}
             document.getElementById('githubToken').value = savedGhToken;
         }
 
-                // INTEGRATE ARTICLE INTO LISTINGS (INDEX.HTML, POSTS.HTML, SITEMAP.XML)
+        // INTEGRATE ARTICLE INTO LISTINGS (INDEX.HTML, POSTS.HTML, SITEMAP.XML)
         async function integrateArticleIntoListings(token, slug, title, articleData) {
             const owner = 'liveetcstream-beep';
             const repo = 'hockeyworldcup2026';
@@ -2180,67 +2330,43 @@ ${tocItemsHTML}
 
             async function updateHtmlFile(fileName) {
                 try {
-                    const res = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${fileName}`, {
-                        headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' }
-                    });
+                    const checkUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${fileName}?_t=${Date.now()}`;
+                    const res = await safeFetchGithub(checkUrl, { method: 'GET' }, token);
                     if (!res.ok) return;
                     const fileData = await res.json();
-                    const originalContent = decodeURIComponent(escape(atob(fileData.content.replace(/\s+/g, ''))));
+                    const originalContent = base64ToUtf8(fileData.content);
                     
                     if (originalContent.includes(`/posts/${slug}`)) {
-                        return;
+                        return; // Already added
                     }
                     if (!originalContent.includes(gridNeedle)) {
                         return;
                     }
                     
                     const newContent = originalContent.replace(gridNeedle, gridNeedle + '\n' + cardHtml);
-                    await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${fileName}`, {
-                        method: 'PUT',
-                        headers: {
-                            'Authorization': `Bearer ${token}`,
-                            'Content-Type': 'application/json',
-                            'Accept': 'application/vnd.github+json'
-                        },
-                        body: JSON.stringify({
-                            message: `Add ${slug} to ${fileName}`,
-                            content: btoa(unescape(encodeURIComponent(newContent))),
-                            sha: fileData.sha
-                        })
-                    });
+                    await commitFileToGitHub(fileName, `Add ${slug} to ${fileName}`, utf8ToBase64(newContent), token);
                 } catch (e) {
                     console.warn(`Error updating ${fileName}:`, e);
                 }
             }
 
+            setPublishButtonState(true, '📑 Updating Homepage & Recipe Grid...');
             await updateHtmlFile('index.html');
             await updateHtmlFile('posts.html');
 
             // Update sitemap.xml
             try {
-                const sRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/sitemap.xml`, {
-                    headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' }
-                });
+                setPublishButtonState(true, '🗺️ Updating sitemap.xml...');
+                const sUrl = `https://api.github.com/repos/${owner}/${repo}/contents/sitemap.xml?_t=${Date.now()}`;
+                const sRes = await safeFetchGithub(sUrl, { method: 'GET' }, token);
                 if (sRes.ok) {
                     const sData = await sRes.json();
-                    const sContent = decodeURIComponent(escape(atob(sData.content.replace(/\s+/g, ''))));
+                    const sContent = base64ToUtf8(sData.content);
                     if (!sContent.includes(`/posts/${slug}`)) {
                         const today = new Date().toISOString().split('T')[0];
                         const newEntry = `  <url>\n    <loc>${siteUrl}/posts/${slug}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>\n</urlset>`;
                         const newSitemap = sContent.replace('</urlset>', newEntry);
-                        await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/sitemap.xml`, {
-                            method: 'PUT',
-                            headers: {
-                                'Authorization': `Bearer ${token}`,
-                                'Content-Type': 'application/json',
-                                'Accept': 'application/vnd.github+json'
-                            },
-                            body: JSON.stringify({
-                                message: `Add ${slug} to sitemap.xml`,
-                                content: btoa(unescape(encodeURIComponent(newSitemap))),
-                                sha: sData.sha
-                            })
-                        });
+                        await commitFileToGitHub('sitemap.xml', `Add ${slug} to sitemap.xml`, utf8ToBase64(newSitemap), token);
                     }
                 }
             } catch (sErr) {
@@ -2250,139 +2376,95 @@ ${tocItemsHTML}
 
         // PUBLISH TO GITHUB / VERCEL & DOWNLOAD
         window.publishArticle = async function() {
+            // Check if article is generated
             if (!generatedArticle?.htmlContent) {
-                alert('Please generate an article first!');
-                return;
+                const titleVal = (document.getElementById('articleTitle')?.value || '').trim();
+                if (titleVal && (uploadedImages.length > 0)) {
+                    const doGen = confirm('Article has not been generated yet.\n\nWould you like to generate the complete recipe post now and publish it directly to GitHub & Vercel?');
+                    if (doGen) {
+                        generateArticleTemplate();
+                    } else {
+                        return;
+                    }
+                } else {
+                    alert('⚠️ Please enter an Article Title, upload recipes/images, and generate the article first before publishing!');
+                    return;
+                }
             }
 
-            const pubBtn = document.getElementById('publishBtn');
-            if (pubBtn) {
-                pubBtn.disabled = true;
-                pubBtn.textContent = '🚀 Publishing to Live Website...';
-            }
+            setPublishButtonState(true, '🚀 Initializing GitHub Publish...', false);
 
-            let token = ((document.getElementById('githubToken')?.value || '').trim() || localStorage.getItem('githubToken') || '').trim();
-            if (!token || !token.startsWith('gh') || token.length < 30) {
-                token = DEFAULT_GH_TOKEN;
-                localStorage.setItem('githubToken', DEFAULT_GH_TOKEN);
-                if (document.getElementById('githubToken')) document.getElementById('githubToken').value = DEFAULT_GH_TOKEN;
-            }
+            let token = getActiveGhToken();
+            const rawSlug = (document.getElementById('urlSlug')?.value || '').trim() || generatedArticle?.urlSlug || generatedArticle?.slug || (document.getElementById('articleTitle')?.value || '').trim() || 'recipe-post';
+            const slug = rawSlug
+                .toLowerCase()
+                .replace(/\.html$/i, '')
+                .replace(/[^a-z0-9]+/g, '-')
+                .replace(/^-+|-+$/g, '') || 'recipe-post';
 
-            const slug = generatedArticle.urlSlug || generatedArticle.slug || (document.getElementById('urlSlug')?.value || '').trim() || 'recipe-post';
-            const title = generatedArticle.title || 'Cozy Recipe Post';
+            const title = (document.getElementById('articleTitle')?.value || '').trim() || generatedArticle?.title || 'Cozy Recipe Post';
             const owner = 'liveetcstream-beep';
             const repo = 'hockeyworldcup2026';
             const filePath = `posts/${slug}.html`;
 
-            // Helper to commit file to GitHub
-            async function commitToGitHub(activeToken) {
-                let sha = null;
-                const getRes = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
-                    headers: { 'Authorization': `Bearer ${activeToken}`, 'Accept': 'application/vnd.github+json' }
-                });
-                if (getRes.ok) {
-                    const existing = await getRes.json();
-                    sha = existing.sha;
-                }
-
-                return await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`, {
-                    method: 'PUT',
-                    headers: {
-                        'Authorization': `Bearer ${activeToken}`,
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/vnd.github+json'
-                    },
-                    body: JSON.stringify({
-                        message: `Publish recipe: ${title}`,
-                        content: btoa(unescape(encodeURIComponent(generatedArticle.htmlContent))),
-                        sha: sha || undefined
-                    })
-                });
-            }
-
             try {
-                let putRes = await commitToGitHub(token);
-
-                // If user's stored token had bad credentials, automatically retry with system DEFAULT_GH_TOKEN
-                if (!putRes.ok && (putRes.status === 401 || putRes.status === 403) && token !== DEFAULT_GH_TOKEN) {
-                    console.warn('Stored token failed auth, switching to pre-configured system token...');
-                    token = DEFAULT_GH_TOKEN;
-                    localStorage.setItem('githubToken', DEFAULT_GH_TOKEN);
-                    if (document.getElementById('githubToken')) document.getElementById('githubToken').value = DEFAULT_GH_TOKEN;
-                    putRes = await commitToGitHub(DEFAULT_GH_TOKEN);
-                }
+                setPublishButtonState(true, '🚀 Committing post HTML to GitHub...');
+                const postBase64 = utf8ToBase64(generatedArticle.htmlContent);
+                const { res: putRes, activeToken: refreshedToken } = await commitFileToGitHub(filePath, `Publish recipe: ${title}`, postBase64, token);
+                token = refreshedToken;
 
                 if (!putRes.ok) {
-                    const err = await putRes.json();
-                    throw new Error(err.message || 'GitHub API error');
+                    const err = await putRes.json().catch(() => ({}));
+                    throw new Error(err.message || `GitHub error: HTTP ${putRes.status}`);
                 }
 
-                // Upload all post images (preview image + recipe photos) to GitHub
+                // Verify & upload images (Fast: skips images that already exist on GitHub)
                 const allImgsToUpload = (generatedArticle.images && generatedArticle.images.length ? generatedArticle.images : uploadedImages) || [];
-                for (const img of allImgsToUpload) {
-                    if (img.previewUrl && img.previewUrl.startsWith('data:') && img.name) {
+                const validImages = allImgsToUpload.filter(img => img && img.name && img.previewUrl && img.previewUrl.startsWith('data:'));
+                
+                if (validImages.length > 0) {
+                    setPublishButtonState(true, `📸 Checking ${validImages.length} images...`);
+                    let uploadedCount = 0;
+                    for (let i = 0; i < validImages.length; i++) {
+                        const img = validImages[i];
                         const base64Data = img.previewUrl.split(',')[1];
-                        if (base64Data) {
-                            try {
-                                const imgPath = `assets/images/${img.name}`;
-                                let imgSha = null;
-                                const chk = await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${encodeURIComponent(imgPath)}`, {
-                                    headers: { 'Authorization': `Bearer ${token}`, 'Accept': 'application/vnd.github+json' }
-                                });
-                                if (chk.ok) {
-                                    const d = await chk.json();
-                                    imgSha = d.sha;
-                                }
-                                await fetch(`https://api.github.com/repos/${owner}/${repo}/contents/${encodeURIComponent(imgPath)}`, {
-                                    method: 'PUT',
-                                    headers: {
-                                        'Authorization': `Bearer ${token}`,
-                                        'Content-Type': 'application/json',
-                                        'Accept': 'application/vnd.github+json'
-                                    },
-                                    body: JSON.stringify({
-                                        message: `Upload image: ${img.name}`,
-                                        content: base64Data,
-                                        sha: imgSha || undefined
-                                    })
-                                });
-                            } catch (e) {
-                                console.warn('Image upload note:', img.name, e);
+                        if (!base64Data) continue;
+                        
+                        const imgPath = `assets/images/${img.name}`;
+                        try {
+                            const chkUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${imgPath}?_t=${Date.now()}`;
+                            const chk = await safeFetchGithub(chkUrl, { method: 'GET' }, token, 8000);
+                            if (chk.ok) {
+                                continue; // Image already exists on GitHub, skip re-upload!
                             }
-                        }
+                        } catch (e) {}
+
+                        uploadedCount++;
+                        setPublishButtonState(true, `📸 Uploading image (${uploadedCount}/${validImages.length})...`);
+                        await commitFileToGitHub(imgPath, `Upload image: ${img.name}`, base64Data, token);
+                        await new Promise(r => setTimeout(r, 200));
                     }
                 }
 
-                // Automatically update index.html, posts.html, and sitemap.xml with real card image
+                // Automatically update index.html, posts.html, and sitemap.xml
                 try {
                     await integrateArticleIntoListings(token, slug, title, generatedArticle);
                 } catch (listErr) {
                     console.warn('Listing integration note:', listErr);
                 }
 
-                alert(`🎉 SUCCESS! Article Published Directly to Live Website!\n\n📍 Post URL: https://hockeyworldcup2026schedule.com/posts/${slug}\n\n✅ Homepage (index.html) Updated!\n✅ All Recipes (/posts) Updated!\n✅ Sitemap.xml Updated!\n\nVercel is deploying all updates live in 10-15 seconds!`);
-                
-                if (pubBtn) {
-                    pubBtn.disabled = false;
-                    pubBtn.textContent = '✅ Published to Live Site!';
-                    pubBtn.classList.remove('btn-success');
-                    pubBtn.classList.add('bg-stone-800');
-                }
+                setPublishButtonState(false, '✅ Published to Live Site!', true);
+
+                alert(`🎉 SUCCESS! Article Published Directly to Live Website!\n\n📍 Post URL: https://hockeyworldcup2026schedule.com/posts/${slug}\n\n✅ Live Post: posts/${slug}.html\n✅ Homepage (index.html) Updated!\n✅ All Recipes (/posts) Updated!\n✅ Sitemap.xml Updated!\n\nVercel is deploying all updates live in 10-15 seconds!`);
+
                 return;
             } catch (err) {
                 console.error('Publish error:', err);
-                alert('⚠️ Publish error: ' + err.message + '\n\nFalling back to direct download...');
-                if (pubBtn) {
-                    pubBtn.disabled = false;
-                    pubBtn.textContent = '🚀 Publish to Vercel (1-Click)';
+                setPublishButtonState(false, '🚀 Retry Publish to Website', false);
+                const retryChoice = confirm(`⚠️ Publish Error: ${err.message}\n\nWould you like to download the "${slug}.html" file directly as a backup?`);
+                if (retryChoice) {
+                    downloadHtmlPost(slug, generatedArticle.htmlContent);
                 }
-            }
-
-            // Fallback: Download HTML file directly
-            downloadHtmlPost(slug, generatedArticle.htmlContent);
-            if (pubBtn) {
-                pubBtn.disabled = false;
-                pubBtn.textContent = '✅ Downloaded!';
             }
         };
 
