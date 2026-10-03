@@ -1995,6 +1995,24 @@ ${tocItemsHTML}
             const iframe = document.getElementById('previewIframe');
             if (iframe) {
                 let previewHtml = article.htmlContent || '';
+                // Swap production image paths with local previewUrls so images render instantly in the preview before publishing
+                const imgList = (Array.isArray(uploadedImages) && uploadedImages.length > 0) 
+                    ? uploadedImages 
+                    : (article.designs ? article.designs.map(d => d.image).filter(Boolean) : []);
+                
+                imgList.forEach(img => {
+                    if (img && img.name && img.previewUrl) {
+                        const rawName = img.name;
+                        const encName = encodeURIComponent(rawName);
+                        previewHtml = previewHtml.split('/assets/images/' + rawName).join(img.previewUrl);
+                        previewHtml = previewHtml.split('assets/images/' + rawName).join(img.previewUrl);
+                        if (encName !== rawName) {
+                            previewHtml = previewHtml.split('/assets/images/' + encName).join(img.previewUrl);
+                            previewHtml = previewHtml.split('assets/images/' + encName).join(img.previewUrl);
+                        }
+                    }
+                });
+
                 if (!previewHtml.includes('<base ') && previewHtml.includes('<head>')) {
                     previewHtml = previewHtml.replace('<head>', '<head><base href="https://hockeyworldcup2026schedule.com/">');
                 }
