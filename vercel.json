@@ -43,6 +43,11 @@
       "source": "/posts/25-halloween-snack-ideas-for-kids-that-are-spooky-fun",
       "destination": "/posts/halloween-snack-ideas-for-kids",
       "permanent": true
+    },
+    {
+      "source": "/posts/35-thanksgiving-appetizer-ideas-everyone-will-love",
+      "destination": "/posts/thanksgiving-appetizer-ideas",
+      "permanent": true
     }
   ]
 }
