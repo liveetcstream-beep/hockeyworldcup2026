@@ -1993,11 +1993,12 @@ ${tocItemsHTML}
 
 
             const iframe = document.getElementById('previewIframe');
-
             if (iframe) {
-
-                iframe.srcdoc = article.htmlContent;
-
+                let previewHtml = article.htmlContent || '';
+                if (!previewHtml.includes('<base ') && previewHtml.includes('<head>')) {
+                    previewHtml = previewHtml.replace('<head>', '<head><base href="https://hockeyworldcup2026schedule.com/">');
+                }
+                iframe.srcdoc = previewHtml;
             }
 
 
