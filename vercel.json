@@ -48,6 +48,11 @@
       "source": "/posts/35-thanksgiving-appetizer-ideas-everyone-will-love",
       "destination": "/posts/thanksgiving-appetizer-ideas",
       "permanent": true
+    },
+    {
+      "source": "/posts/christmas-appetizer-ideas",
+      "destination": "/posts/34-christmas-appetizer-ideas-everyone-will-love",
+      "permanent": true
     }
   ]
 }
