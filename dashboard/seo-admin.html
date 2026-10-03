@@ -2328,50 +2328,72 @@ ${tocItemsHTML}
 
             const gridNeedle = '<div class="grid-3" id="allPostsGrid">';
 
-            async function updateHtmlFile(fileName) {
-                try {
-                    const checkUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${fileName}?_t=${Date.now()}`;
-                    const res = await safeFetchGithub(checkUrl, { method: 'GET' }, token);
-                    if (!res.ok) return;
-                    const fileData = await res.json();
-                    const originalContent = base64ToUtf8(fileData.content);
-                    
-                    if (originalContent.includes(`/posts/${slug}`)) {
-                        return; // Already added
+            async function updateHtmlFileWithRetry(fileName, skipCi = true) {
+                for (let attempt = 1; attempt <= 3; attempt++) {
+                    try {
+                        const checkUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${fileName}?_t=${Date.now()}`;
+                        const res = await safeFetchGithub(checkUrl, { method: 'GET' }, token, 15000);
+                        if (!res.ok) throw new Error(`Could not fetch ${fileName} (HTTP ${res.status})`);
+                        const fileData = await res.json();
+                        const originalContent = base64ToUtf8(fileData.content);
+                        
+                        if (originalContent.includes(`/posts/${slug}`)) {
+                            return true; // Already added!
+                        }
+                        if (!originalContent.includes(gridNeedle)) {
+                            throw new Error(`Grid needle not found in ${fileName}`);
+                        }
+                        
+                        const newContent = originalContent.replace(gridNeedle, gridNeedle + '\n' + cardHtml);
+                        const commitMsg = `Add ${slug} to ${fileName}${skipCi ? ' [skip ci]' : ''}`;
+                        const { res: putRes } = await commitFileToGitHub(fileName, commitMsg, utf8ToBase64(newContent), token);
+                        if (putRes.ok) return true;
+                        if (putRes.status === 409) {
+                            console.warn(`409 conflict updating ${fileName}, attempt ${attempt}/3. Retrying...`);
+                            await new Promise(r => setTimeout(r, 1000 * attempt));
+                            continue;
+                        }
+                        throw new Error(`Failed to commit ${fileName}: HTTP ${putRes.status}`);
+                    } catch (err) {
+                        if (attempt === 3) throw err;
+                        await new Promise(r => setTimeout(r, 1000 * attempt));
                     }
-                    if (!originalContent.includes(gridNeedle)) {
-                        return;
-                    }
-                    
-                    const newContent = originalContent.replace(gridNeedle, gridNeedle + '\n' + cardHtml);
-                    await commitFileToGitHub(fileName, `Add ${slug} to ${fileName}`, utf8ToBase64(newContent), token);
-                } catch (e) {
-                    console.warn(`Error updating ${fileName}:`, e);
                 }
+                return false;
             }
 
-            setPublishButtonState(true, '📑 Updating Homepage & Recipe Grid...');
-            await updateHtmlFile('index.html');
-            await updateHtmlFile('posts.html');
+            // Update posts.html first (with [skip ci])
+            setPublishButtonState(true, '📑 Updating Recipe Grid (/posts)...');
+            await updateHtmlFileWithRetry('posts.html', true);
 
-            // Update sitemap.xml
+            // Update sitemap.xml next (with [skip ci])
             try {
                 setPublishButtonState(true, '🗺️ Updating sitemap.xml...');
-                const sUrl = `https://api.github.com/repos/${owner}/${repo}/contents/sitemap.xml?_t=${Date.now()}`;
-                const sRes = await safeFetchGithub(sUrl, { method: 'GET' }, token);
-                if (sRes.ok) {
-                    const sData = await sRes.json();
-                    const sContent = base64ToUtf8(sData.content);
-                    if (!sContent.includes(`/posts/${slug}`)) {
+                for (let sAttempt = 1; sAttempt <= 3; sAttempt++) {
+                    const sUrl = `https://api.github.com/repos/${owner}/${repo}/contents/sitemap.xml?_t=${Date.now()}`;
+                    const sRes = await safeFetchGithub(sUrl, { method: 'GET' }, token, 15000);
+                    if (sRes.ok) {
+                        const sData = await sRes.json();
+                        const sContent = base64ToUtf8(sData.content);
+                        if (sContent.includes(`/posts/${slug}`)) break;
                         const today = new Date().toISOString().split('T')[0];
                         const newEntry = `  <url>\n    <loc>${siteUrl}/posts/${slug}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>\n</urlset>`;
                         const newSitemap = sContent.replace('</urlset>', newEntry);
-                        await commitFileToGitHub('sitemap.xml', `Add ${slug} to sitemap.xml`, utf8ToBase64(newSitemap), token);
+                        const { res: sPutRes } = await commitFileToGitHub('sitemap.xml', `Add ${slug} to sitemap.xml [skip ci]`, utf8ToBase64(newSitemap), token);
+                        if (sPutRes.ok) break;
+                        if (sPutRes.status === 409) {
+                            await new Promise(r => setTimeout(r, 1000 * sAttempt));
+                            continue;
+                        }
                     }
                 }
             } catch (sErr) {
                 console.warn('Error updating sitemap.xml:', sErr);
             }
+
+            // Update index.html LAST - WITHOUT [skip ci] so Vercel triggers EXACTLY ONE build for the entire publish!
+            setPublishButtonState(true, '🏠 Updating Homepage (index.html)...');
+            await updateHtmlFileWithRetry('index.html', false);
         }
 
         // PUBLISH TO GITHUB / VERCEL & DOWNLOAD
@@ -2408,17 +2430,7 @@ ${tocItemsHTML}
             const filePath = `posts/${slug}.html`;
 
             try {
-                setPublishButtonState(true, '🚀 Committing post HTML to GitHub...');
-                const postBase64 = utf8ToBase64(generatedArticle.htmlContent);
-                const { res: putRes, activeToken: refreshedToken } = await commitFileToGitHub(filePath, `Publish recipe: ${title}`, postBase64, token);
-                token = refreshedToken;
-
-                if (!putRes.ok) {
-                    const err = await putRes.json().catch(() => ({}));
-                    throw new Error(err.message || `GitHub error: HTTP ${putRes.status}`);
-                }
-
-                // Verify & upload images (Fast: skips images that already exist on GitHub)
+                // Upload images FIRST (with [skip ci] to prevent burning Vercel deployment limit)
                 const allImgsToUpload = (generatedArticle.images && generatedArticle.images.length ? generatedArticle.images : uploadedImages) || [];
                 const validImages = allImgsToUpload.filter(img => img && img.name && img.previewUrl && img.previewUrl.startsWith('data:'));
                 
@@ -2441,21 +2453,28 @@ ${tocItemsHTML}
 
                         uploadedCount++;
                         setPublishButtonState(true, `📸 Uploading image (${uploadedCount}/${validImages.length})...`);
-                        await commitFileToGitHub(imgPath, `Upload image: ${img.name}`, base64Data, token);
-                        await new Promise(r => setTimeout(r, 200));
+                        await commitFileToGitHub(imgPath, `Upload image: ${img.name} [skip ci]`, base64Data, token);
+                        await new Promise(r => setTimeout(r, 150));
                     }
                 }
 
-                // Automatically update index.html, posts.html, and sitemap.xml
-                try {
-                    await integrateArticleIntoListings(token, slug, title, generatedArticle);
-                } catch (listErr) {
-                    console.warn('Listing integration note:', listErr);
+                // Post HTML commit (with [skip ci])
+                setPublishButtonState(true, '🚀 Committing post HTML to GitHub...');
+                const postBase64 = utf8ToBase64(generatedArticle.htmlContent);
+                const { res: putRes, activeToken: refreshedToken } = await commitFileToGitHub(filePath, `Publish recipe: ${title} [skip ci]`, postBase64, token);
+                token = refreshedToken;
+
+                if (!putRes.ok) {
+                    const err = await putRes.json().catch(() => ({}));
+                    throw new Error(err.message || `GitHub error: HTTP ${putRes.status}`);
                 }
+
+                // Automatically update posts.html, sitemap.xml, and index.html (index.html triggers ONE single Vercel build!)
+                await integrateArticleIntoListings(token, slug, title, generatedArticle);
 
                 setPublishButtonState(false, '✅ Published to Live Site!', true);
 
-                alert(`🎉 SUCCESS! Article Published Directly to Live Website!\n\n📍 Post URL: https://hockeyworldcup2026schedule.com/posts/${slug}\n\n✅ Live Post: posts/${slug}.html\n✅ Homepage (index.html) Updated!\n✅ All Recipes (/posts) Updated!\n✅ Sitemap.xml Updated!\n\nVercel is deploying all updates live in 10-15 seconds!`);
+                alert(`🎉 SUCCESS! Article Published Directly to Live Website!\n\n📍 Post URL: https://hockeyworldcup2026schedule.com/posts/${slug}\n\n✅ Live Post: posts/${slug}.html\n✅ All Recipes (/posts) Updated!\n✅ Sitemap.xml Updated!\n✅ Homepage (index.html) Updated!\n\nVercel is deploying all updates live in 10-15 seconds!`);
 
                 return;
             } catch (err) {
