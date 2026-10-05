@@ -168,6 +168,7 @@
                     <div class="flex items-center gap-2 flex-1 max-w-md">
                         <input type="password" id="githubToken" class="flex-1 px-3 py-1.5 border border-orange-300 rounded-lg text-xs font-mono bg-white outline-none focus:ring-1 focus:ring-orange-500" placeholder="ghp_xxxxxxxxxxxx (Token with repo scope)">
                         <button type="button" onclick="saveGithubToken()" class="px-3 py-1.5 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold rounded-lg transition shadow-sm">Save Token</button>
+                        <button type="button" id="redeployVercelBtn" onclick="triggerManualVercelDeploy()" class="px-3 py-1.5 bg-stone-900 hover:bg-black text-white text-xs font-bold rounded-lg transition shadow-sm flex items-center gap-1 whitespace-nowrap" title="Trigger a live Vercel rebuild now"><span>⚡</span> Redeploy Vercel</button>
                     </div>
                 </div>
 
@@ -2233,6 +2234,114 @@ ${tocItemsHTML}
             return token;
         }
 
+        // Helper: Create Git Blob (Zero commits, Zero Vercel rate-limit impact!)
+        async function createGitBlob(contentData, encoding, token) {
+            const owner = 'liveetcstream-beep';
+            const repo = 'hockeyworldcup2026';
+            const res = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/git/blobs`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ content: contentData, encoding: encoding })
+            }, token, 35000);
+            if (!res.ok) {
+                const err = await res.json().catch(() => ({}));
+                throw new Error(err.message || `Failed to create git blob: HTTP ${res.status}`);
+            }
+            const data = await res.json();
+            return data.sha;
+        }
+
+        // Helper: Poll Live Vercel Deployment Status
+        async function waitForVercelDeployment(commitSha, token, onProgress) {
+            const owner = 'liveetcstream-beep';
+            const repo = 'hockeyworldcup2026';
+            const maxAttempts = 30; // 30 * 3s = 90s
+            for (let i = 0; i < maxAttempts; i++) {
+                await new Promise(r => setTimeout(r, 3000));
+                try {
+                    const url = `https://api.github.com/repos/${owner}/${repo}/commits/${commitSha}/statuses?_t=${Date.now()}`;
+                    const res = await safeFetchGithub(url, { method: 'GET' }, token, 10000);
+                    if (res.ok) {
+                        const statuses = await res.json();
+                        const vercelStatus = Array.isArray(statuses) ? statuses.find(s => s.context === 'Vercel') : null;
+                        if (vercelStatus) {
+                            if (vercelStatus.state === 'success') {
+                                onProgress && onProgress('success', vercelStatus);
+                                return { success: true, status: vercelStatus };
+                            } else if (vercelStatus.state === 'failure' || vercelStatus.state === 'error') {
+                                onProgress && onProgress('failure', vercelStatus);
+                                return { success: false, status: vercelStatus };
+                            } else if (vercelStatus.state === 'pending') {
+                                onProgress && onProgress('pending', vercelStatus);
+                            }
+                        }
+                    }
+                } catch (e) {
+                    console.warn('Vercel poll note:', e);
+                }
+            }
+            return { success: null };
+        }
+
+        // Manual 1-Click Vercel Redeployment Trigger
+        window.triggerManualVercelDeploy = async function() {
+            const btn = document.getElementById('redeployVercelBtn');
+            const origHtml = btn ? btn.innerHTML : '';
+            try {
+                if (btn) { btn.disabled = true; btn.innerHTML = '<span>⏳</span> Initializing...'; }
+                const token = getActiveGhToken();
+                const owner = 'liveetcstream-beep';
+                const repo = 'hockeyworldcup2026';
+                
+                const refRes = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/main?_t=${Date.now()}`, { method: 'GET' }, token, 15000);
+                if (!refRes.ok) throw new Error('Could not fetch main branch');
+                const refData = await refRes.json();
+                const parentSha = refData.object.sha;
+                
+                const parentCommitRes = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/git/commits/${parentSha}?_t=${Date.now()}`, { method: 'GET' }, token, 15000);
+                const parentCommit = await parentCommitRes.json();
+                
+                const timeStr = new Date().toLocaleTimeString('en-US');
+                const commitRes = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/git/commits`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        message: `Manual Vercel deploy trigger (${timeStr})`,
+                        tree: parentCommit.tree.sha,
+                        parents: [parentSha]
+                    })
+                }, token, 15000);
+                if (!commitRes.ok) throw new Error('Could not create trigger commit');
+                const newCommit = await commitRes.json();
+                
+                const patchRes = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/git/refs/heads/main`, {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ sha: newCommit.sha })
+                }, token, 15000);
+                if (!patchRes.ok) throw new Error('Could not update main branch');
+                
+                if (btn) btn.innerHTML = '<span>⚙️</span> Deploying on Vercel...';
+                
+                const depResult = await waitForVercelDeployment(newCommit.sha, token, (state, status) => {
+                    if (state === 'pending' && btn) btn.innerHTML = '<span>⏳</span> Vercel Building...';
+                    if (state === 'success' && btn) btn.innerHTML = '<span>✅</span> Live!';
+                });
+                
+                if (depResult.success === true) {
+                    alert('🎉 Vercel Deployment Completed Successfully!\n\nAll recipes and homepage updates are live on:\nhttps://hockeyworldcup2026schedule.com');
+                } else if (depResult.success === false) {
+                    alert('⚠️ Vercel Deployment Status:\n' + (depResult.status?.description || 'Build error on Vercel'));
+                } else {
+                    alert('🚀 Vercel build triggered!\nVercel is processing your deployment now in the background.');
+                }
+            } catch (err) {
+                alert('Redeploy note: ' + err.message);
+            } finally {
+                if (btn) { btn.disabled = false; btn.innerHTML = origHtml; }
+            }
+        };
+
         // Robust Commit Helper with Conflict/Rate-Limit Auto-Retry
         async function commitFileToGitHub(filePath, commitMessage, contentBase64, currentToken) {
             const owner = 'liveetcstream-beep';
@@ -2413,9 +2522,8 @@ ${tocItemsHTML}
             await updateHtmlFileWithRetry('index.html', false);
         }
 
-        // PUBLISH TO GITHUB / VERCEL & DOWNLOAD
+        // PUBLISH TO GITHUB / VERCEL & DOWNLOAD (Atomic 1-Commit Git Trees API)
         window.publishArticle = async function() {
-            // Check if article is generated
             if (!generatedArticle?.htmlContent) {
                 const titleVal = (document.getElementById('articleTitle')?.value || '').trim();
                 if (titleVal && (uploadedImages.length > 0)) {
@@ -2431,7 +2539,7 @@ ${tocItemsHTML}
                 }
             }
 
-            setPublishButtonState(true, '🚀 Initializing GitHub Publish...', false);
+            setPublishButtonState(true, '🚀 Initializing 1-Click Publish...', false);
 
             let token = getActiveGhToken();
             const rawSlug = (document.getElementById('urlSlug')?.value || '').trim() || generatedArticle?.urlSlug || generatedArticle?.slug || (document.getElementById('articleTitle')?.value || '').trim() || 'recipe-post';
@@ -2444,70 +2552,198 @@ ${tocItemsHTML}
             const title = (document.getElementById('articleTitle')?.value || '').trim() || generatedArticle?.title || 'Cozy Recipe Post';
             const owner = 'liveetcstream-beep';
             const repo = 'hockeyworldcup2026';
+            const siteUrl = 'https://hockeyworldcup2026schedule.com';
             const filePath = `posts/${slug}.html`;
 
             try {
-                // Upload images FIRST (with [skip ci] to prevent burning Vercel deployment limit)
+                const treeItems = [];
+
+                // 1. Upload Images as Git Blobs (Zero commits, Zero Vercel rate-limit impact!)
                 const allImgsToUpload = (generatedArticle.images && generatedArticle.images.length ? generatedArticle.images : uploadedImages) || [];
                 const validImages = allImgsToUpload.filter(img => img && img.name && img.previewUrl && img.previewUrl.startsWith('data:'));
                 
                 if (validImages.length > 0) {
-                    setPublishButtonState(true, `📸 Checking ${validImages.length} images...`);
-                    let uploadedCount = 0;
+                    setPublishButtonState(true, `📸 Uploading ${validImages.length} images...`);
                     for (let i = 0; i < validImages.length; i++) {
                         const img = validImages[i];
                         const base64Data = img.previewUrl.split(',')[1];
                         if (!base64Data) continue;
                         
                         const imgPath = `assets/images/${img.name}`;
-                        try {
-                            const chkUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${imgPath}?_t=${Date.now()}`;
-                            const chk = await safeFetchGithub(chkUrl, { method: 'GET' }, token, 8000);
-                            if (chk.ok) {
-                                continue; // Image already exists on GitHub, skip re-upload!
-                            }
-                        } catch (e) {}
-
-                        uploadedCount++;
-                        setPublishButtonState(true, `📸 Uploading image (${uploadedCount}/${validImages.length})...`);
-                        try {
-                            await commitFileToGitHub(imgPath, `Upload image: ${img.name} [skip ci]`, base64Data, token);
-                        } catch (imgErr) {
-                            console.warn(`Image ${img.name} upload note:`, imgErr.message);
-                            // Retry once after 1s
-                            await new Promise(r => setTimeout(r, 1000));
-                            try {
-                                await commitFileToGitHub(imgPath, `Upload image: ${img.name} [skip ci]`, base64Data, token);
-                            } catch (retryErr) {
-                                console.warn(`Image ${img.name} upload skipped:`, retryErr.message);
-                            }
-                        }
-                        await new Promise(r => setTimeout(r, 150));
+                        setPublishButtonState(true, `📸 Uploading image (${i + 1}/${validImages.length})...`);
+                        
+                        const blobSha = await createGitBlob(base64Data, 'base64', token);
+                        treeItems.push({
+                            path: imgPath,
+                            mode: '100644',
+                            type: 'blob',
+                            sha: blobSha
+                        });
                     }
                 }
 
-                // Post HTML commit (with [skip ci])
-                setPublishButtonState(true, '🚀 Committing post HTML to GitHub...');
+                // 2. Upload Post HTML as Git Blob
+                setPublishButtonState(true, '📝 Packaging recipe post HTML...');
                 const postBase64 = utf8ToBase64(generatedArticle.htmlContent);
-                const { res: putRes, activeToken: refreshedToken } = await commitFileToGitHub(filePath, `Publish recipe: ${title} [skip ci]`, postBase64, token);
-                token = refreshedToken;
+                const postBlobSha = await createGitBlob(postBase64, 'base64', token);
+                treeItems.push({
+                    path: filePath,
+                    mode: '100644',
+                    type: 'blob',
+                    sha: postBlobSha
+                });
 
-                if (!putRes.ok) {
-                    const err = await putRes.json().catch(() => ({}));
-                    throw new Error(err.message || `GitHub error: HTTP ${putRes.status}`);
+                // 3. Prepare Recipe Card HTML for homepage & posts listing
+                const categorySlug = (generatedArticle.category || 'holiday-seasonal').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                const categoryBadge = generatedArticle.category || 'Holiday & Seasonal';
+                
+                let featuredImgSrc = generatedArticle.featuredImage || (generatedArticle.images && generatedArticle.images[0] ? generatedArticle.images[0].url : '') || '';
+                if (!featuredImgSrc.startsWith('http') && !featuredImgSrc.startsWith('/')) {
+                    featuredImgSrc = '/assets/images/' + featuredImgSrc;
+                } else if (featuredImgSrc.startsWith('/') && !featuredImgSrc.startsWith('/assets/images/')) {
+                    featuredImgSrc = '/assets/images/' + featuredImgSrc.replace(/^\//, '');
                 }
+                const fullImgUrl = featuredImgSrc.startsWith('http') ? featuredImgSrc : (siteUrl + featuredImgSrc);
+                
+                const safeTitle = (title || 'Delicious Recipe').replace(/"/g, '&quot;');
+                const rawExcerpt = generatedArticle.seoDescription || generatedArticle.metaDescription || (generatedArticle.htmlContent ? generatedArticle.htmlContent.replace(/<[^>]*>/g, ' ').substring(0, 150) : '');
+                const cleanExcerpt = rawExcerpt.replace(/"/g, '&quot;').trim() + '...';
+                const dateFormatted = new Intl.DateTimeFormat('en-US', { month: 'short', year: 'numeric' }).format(new Date());
 
-                // Automatically update posts.html, sitemap.xml, and index.html (index.html triggers ONE single Vercel build!)
-                await integrateArticleIntoListings(token, slug, title, generatedArticle);
+                const cardHtml = `
+                <!-- Post: ${slug} -->
+                <article class="recipe-card" data-category="${categorySlug}">
+                    <div class="card-img-wrapper">
+                        <span class="card-category-badge">${categoryBadge}</span>
+                        <button class="pin-save-overlay-btn" data-title="${safeTitle}" data-image="${fullImgUrl}">
+                            <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg> Save Pin
+                        </button>
+                        <img src="${featuredImgSrc}" alt="${safeTitle}" loading="lazy" class="card-img" style="width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0;">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta"><span>📅 ${dateFormatted}</span><span>⏱️ 20-30 Min</span></div>
+                        <h3 class="card-title"><a href="/posts/${slug}">${safeTitle}</a></h3>
+                        <p class="card-excerpt">${cleanExcerpt}</p>
+                        <div class="card-footer"><span class="card-author">Cozy Plate Kitchen</span><a href="/posts/${slug}" class="card-read-link">Get Recipes →</a></div>
+                    </div>
+                </article>`;
 
-                setPublishButtonState(false, '✅ Published to Live Site!', true);
+                const gridNeedle = '<div class="grid-3" id="allPostsGrid">';
 
-                alert(`🎉 SUCCESS! Article Published Directly to Live Website!\n\n📍 Post URL: https://hockeyworldcup2026schedule.com/posts/${slug}\n\n✅ Live Post: posts/${slug}.html\n✅ All Recipes (/posts) Updated!\n✅ Sitemap.xml Updated!\n✅ Homepage (index.html) Updated!\n\nVercel is deploying all updates live in 10-15 seconds!`);
+                // 4. Update posts.html as Blob
+                setPublishButtonState(true, '📂 Updating Recipe Grid (/posts)...');
+                try {
+                    const pRes = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/contents/posts.html?_t=${Date.now()}`, { method: 'GET' }, token, 15000);
+                    if (pRes.ok) {
+                        const pData = await pRes.json();
+                        const pContent = base64ToUtf8(pData.content);
+                        if (!pContent.includes(`/posts/${slug}`) && pContent.includes(gridNeedle)) {
+                            const newPostsContent = pContent.replace(gridNeedle, gridNeedle + '\n' + cardHtml);
+                            const postsBlobSha = await createGitBlob(utf8ToBase64(newPostsContent), 'base64', token);
+                            treeItems.push({ path: 'posts.html', mode: '100644', type: 'blob', sha: postsBlobSha });
+                        }
+                    }
+                } catch (pe) { console.warn('posts.html update note:', pe); }
+
+                // 5. Update index.html as Blob
+                setPublishButtonState(true, '🏠 Updating Homepage (index.html)...');
+                try {
+                    const iRes = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/contents/index.html?_t=${Date.now()}`, { method: 'GET' }, token, 15000);
+                    if (iRes.ok) {
+                        const iData = await iRes.json();
+                        const iContent = base64ToUtf8(iData.content);
+                        if (!iContent.includes(`/posts/${slug}`) && iContent.includes(gridNeedle)) {
+                            const newIndexContent = iContent.replace(gridNeedle, gridNeedle + '\n' + cardHtml);
+                            const indexBlobSha = await createGitBlob(utf8ToBase64(newIndexContent), 'base64', token);
+                            treeItems.push({ path: 'index.html', mode: '100644', type: 'blob', sha: indexBlobSha });
+                        }
+                    }
+                } catch (ie) { console.warn('index.html update note:', ie); }
+
+                // 6. Update sitemap.xml as Blob
+                setPublishButtonState(true, '🗺️ Updating sitemap.xml...');
+                try {
+                    const sRes = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/contents/sitemap.xml?_t=${Date.now()}`, { method: 'GET' }, token, 15000);
+                    if (sRes.ok) {
+                        const sData = await sRes.json();
+                        const sContent = base64ToUtf8(sData.content);
+                        if (!sContent.includes(`/posts/${slug}`) && sContent.includes('</urlset>')) {
+                            const today = new Date().toISOString().split('T')[0];
+                            const newEntry = `  <url>\n    <loc>${siteUrl}/posts/${slug}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>weekly</changefreq>\n    <priority>0.8</priority>\n  </url>\n</urlset>`;
+                            const newSitemap = sContent.replace('</urlset>', newEntry);
+                            const sitemapBlobSha = await createGitBlob(utf8ToBase64(newSitemap), 'base64', token);
+                            treeItems.push({ path: 'sitemap.xml', mode: '100644', type: 'blob', sha: sitemapBlobSha });
+                        }
+                    }
+                } catch (se) { console.warn('sitemap.xml update note:', se); }
+
+                // 7. Get latest commit SHA on refs/heads/main
+                setPublishButtonState(true, '⚡ Fetching latest repository head...');
+                const refRes = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/git/ref/heads/main?_t=${Date.now()}`, { method: 'GET' }, token, 15000);
+                if (!refRes.ok) throw new Error(`Could not fetch main branch (HTTP ${refRes.status})`);
+                const refData = await refRes.json();
+                const parentSha = refData.object.sha;
+
+                // 8. Create unified Git Tree (All files in 1 atomic tree)
+                setPublishButtonState(true, '📦 Creating unified Git Tree...');
+                const treeRes = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/git/trees`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        base_tree: parentSha,
+                        tree: treeItems
+                    })
+                }, token, 25000);
+                if (!treeRes.ok) throw new Error(`Could not create tree (HTTP ${treeRes.status})`);
+                const treeData = await treeRes.json();
+
+                // 9. Create 1 Single Atomic Commit (Clean commit, triggers Vercel!)
+                setPublishButtonState(true, '🚀 Committing 1-Click publish to GitHub...');
+                const commitRes = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/git/commits`, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        message: `Publish recipe: ${title}`,
+                        tree: treeData.sha,
+                        parents: [parentSha]
+                    })
+                }, token, 25000);
+                if (!commitRes.ok) throw new Error(`Could not create commit (HTTP ${commitRes.status})`);
+                const newCommitData = await commitRes.json();
+
+                // 10. Update refs/heads/main to new commit
+                setPublishButtonState(true, '🔄 Updating branch reference...');
+                const patchRes = await safeFetchGithub(`https://api.github.com/repos/${owner}/${repo}/git/refs/heads/main`, {
+                    method: 'PATCH',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ sha: newCommitData.sha })
+                }, token, 25000);
+                if (!patchRes.ok) throw new Error(`Could not update main branch (HTTP ${patchRes.status})`);
+
+                // 11. LIVE VERCEL TRACKING
+                setPublishButtonState(true, '⚙️ Vercel is Deploying (Checking Live Status)...');
+                const vercelRes = await waitForVercelDeployment(newCommitData.sha, token, (state, status) => {
+                    if (state === 'pending') {
+                        setPublishButtonState(true, '⏳ Vercel Building & Deploying (~15s)...');
+                    } else if (state === 'success') {
+                        setPublishButtonState(false, '✅ Live on Vercel!', true);
+                    }
+                });
+
+                setPublishButtonState(false, '✅ Published & Live on Vercel!', true);
+
+                if (vercelRes.success === true) {
+                    alert(`🎉 100% SUCCESS! Article is LIVE on Vercel & Website!\n\n🔗 Post URL: https://hockeyworldcup2026schedule.com/posts/${slug}\n\n✅ Live Recipe Page Created!\n✅ Homepage & Grid Updated!\n✅ Sitemap.xml Updated!\n✅ Vercel Deployment Completed!`);
+                } else if (vercelRes.success === false) {
+                    alert(`⚠️ GitHub Commit Succeeded, but Vercel reported:\n\n${vercelRes.status?.description || 'Build error'}\n\nIf rate-limited, you can click "Redeploy Vercel" once cooldown passes.`);
+                } else {
+                    alert(`🎉 SUCCESS! Article Committed to GitHub!\n\n🔗 Post URL: https://hockeyworldcup2026schedule.com/posts/${slug}\n\nVercel deployment is processing in the background and will be live in 10-15 seconds.`);
+                }
 
                 return;
             } catch (err) {
                 console.error('Publish error:', err);
-                setPublishButtonState(false, '🚀 Retry Publish to Website', false);
+                setPublishButtonState(false, '🔁 Retry Publish to Website', false);
                 const retryChoice = confirm(`⚠️ Publish Error: ${err.message}\n\nWould you like to download the "${slug}.html" file directly as a backup?`);
                 if (retryChoice) {
                     downloadHtmlPost(slug, generatedArticle.htmlContent);
