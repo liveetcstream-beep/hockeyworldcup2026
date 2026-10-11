@@ -21,7 +21,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // Category Filtering & Pagination System
     const filterChips = document.querySelectorAll('.category-chip');
     const recipeCards = Array.from(document.querySelectorAll('.recipe-card'));
-    const paginationContainer = document.getElementById('paginationControls');
+    // Ensure pagination container exists (either in HTML or created dynamically)
+    let paginationContainer = document.getElementById('paginationControls');
+    if (!paginationContainer) {
+        const grid = document.getElementById('allPostsGrid');
+        if (grid && grid.parentNode) {
+            paginationContainer = document.createElement('div');
+            paginationContainer.id = 'paginationControls';
+            paginationContainer.className = 'pagination-container';
+            grid.parentNode.appendChild(paginationContainer);
+        }
+    }
 
     const POSTS_PER_PAGE = 15;
     let currentPage = 1;
