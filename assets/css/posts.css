@@ -159,8 +159,12 @@ svg {
 
 .post-main-content p {
     margin-bottom: 1.4rem;
-    line-height: 1.8;
+    line-height: 1.85;
     word-break: break-word;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
 }
 
 /* Post Image Container & Pinterest Button */
@@ -563,5 +567,16 @@ svg {
     .nav-menu.open {
         display: flex !important;
     }
+}
+
+
+
+/* Text Justification for Article Content */
+.recipe-content p,
+.recipe-description,
+.post-intro,
+.post-main-content article p {
+    text-align: justify !important;
+    text-justify: inter-word !important;
 }
 
