@@ -1,20 +1,20 @@
 // Main Website JavaScript
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle
+    // Mobile Menu Toggle (Clean Class Toggle)
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-menu');
     if (mobileToggle && navMenu) {
-        mobileToggle.addEventListener('click', () => {
-            const isVisible = navMenu.style.display === 'flex';
-            navMenu.style.display = isVisible ? 'none' : 'flex';
-            navMenu.style.flexDirection = 'column';
-            navMenu.style.position = 'absolute';
-            navMenu.style.top = '80px';
-            navMenu.style.left = '0';
-            navMenu.style.width = '100%';
-            navMenu.style.background = '#fff';
-            navMenu.style.padding = '20px';
-            navMenu.style.boxShadow = '0 10px 20px rgba(0,0,0,0.1)';
+        mobileToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            navMenu.classList.toggle('open');
+            mobileToggle.setAttribute('aria-expanded', navMenu.classList.contains('open'));
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && e.target !== mobileToggle) {
+                navMenu.classList.remove('open');
+            }
         });
     }
 

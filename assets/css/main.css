@@ -69,170 +69,266 @@ img {
 }
 
 /* ==========================================================================
-   Header & Navigation
+   Header & Navigation (Ultra-Clean, Aesthetic & Fully Responsive)
    ========================================================================== */
 .header {
     position: sticky;
     top: 0;
-    z-index: 100;
-    background: rgba(252, 251, 249, 0.95);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-light);
-    transition: var(--transition);
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid #f1ece7;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
 }
 
 .header-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 80px;
+    height: 76px;
     max-width: 1240px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 28px;
+    gap: 24px;
 }
 
-
-.header-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    max-width: 1240px;
-    margin: 0 auto;
-    padding: 0 24px;
-    gap: 20px;
-}
-
+/* Brand Logo */
 .logo {
     display: inline-flex;
     align-items: center;
     gap: 12px;
     font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.45rem;
     font-weight: 700;
-    color: var(--text-primary);
+    color: #1c1917;
     text-decoration: none;
     white-space: nowrap;
     flex-shrink: 0;
+    letter-spacing: -0.3px;
+    transition: transform 0.2s ease;
+}
+
+.logo:hover {
+    transform: scale(1.02);
 }
 
 .logo img, .logo-img {
-    width: 48px !important;
-    height: 48px !important;
-    max-width: 48px !important;
-    max-height: 48px !important;
-    min-width: 48px !important;
-    min-height: 48px !important;
+    width: 44px !important;
+    height: 44px !important;
+    max-width: 44px !important;
+    max-height: 44px !important;
+    min-width: 44px !important;
+    min-height: 44px !important;
     border-radius: 50% !important;
     object-fit: cover !important;
     border: 2px solid #ea580c !important;
-    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25) !important;
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.22) !important;
     display: block !important;
     flex-shrink: 0 !important;
 }
 
-.footer-brand .logo img, .footer-brand .logo-img {
-    border-color: #fff !important;
-    width: 52px !important;
-    height: 52px !important;
-    max-width: 52px !important;
-    max-height: 52px !important;
-}
-
 .logo span {
-    color: var(--primary);
+    color: #ea580c;
+    font-style: italic;
+    font-weight: 800;
 }
 
-
+/* Desktop Navigation Menu */
 .nav-menu {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 10px;
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-link {
+    display: inline-flex;
+    align-items: center;
+    font-family: var(--font-body);
     font-weight: 600;
-    font-size: 0.95rem;
-    color: var(--text-secondary);
+    font-size: 0.92rem;
+    color: #44403c;
+    padding: 8px 14px;
+    border-radius: 8px;
+    text-decoration: none;
+    white-space: nowrap;
     position: relative;
-    padding: 6px 0;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-link:hover, .nav-link.active {
-    color: var(--primary);
+.nav-link:hover {
+    color: #ea580c;
+    background: #fff7ed;
+    transform: translateY(-1px);
+}
+
+.nav-link.active {
+    color: #ea580c;
+    background: #ffedd5;
+    font-weight: 700;
 }
 
 .nav-link.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: var(--primary);
-    border-radius: 2px;
+    display: none; /* remove awkward thick line */
 }
 
+/* Navigation Actions (Search + Pinterest Button) */
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: 14px;
+    flex-shrink: 0;
 }
 
 .search-toggle-btn {
-    background: #fff;
-    border: 1px solid var(--border-light);
-    width: 42px;
-    height: 42px;
-    border-radius: var(--radius-full);
+    background: #fbfaf8;
+    border: 1.5px solid #e7e5e4;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1rem;
     cursor: pointer;
-    transition: var(--transition);
+    color: #57534e;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
 }
 
 .search-toggle-btn:hover {
-    background: var(--bg-surface);
-    transform: scale(1.05);
+    background: #fff;
+    border-color: #ea580c;
+    color: #ea580c;
+    transform: scale(1.06);
+    box-shadow: 0 4px 12px rgba(234, 88, 12, 0.15);
 }
 
+/* Aesthetic Pinterest Follow Button */
 .pinterest-follow-button {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    background: var(--pinterest);
-    color: #fff !important;
-    padding: 10px 20px;
-    border-radius: var(--radius-full);
-    font-weight: 600;
-    font-size: 0.9rem;
-    box-shadow: 0 4px 14px rgba(230, 0, 35, 0.3);
-    transition: var(--transition);
+    background: linear-gradient(135deg, #e60023 0%, #ad081b 100%);
+    color: #ffffff !important;
+    padding: 9px 18px;
+    border-radius: 9999px;
+    font-weight: 700;
+    font-size: 0.88rem;
+    letter-spacing: 0.2px;
+    white-space: nowrap;
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(230, 0, 35, 0.28);
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .pinterest-follow-button:hover {
-    background: var(--pinterest-dark);
+    background: linear-gradient(135deg, #bd001c 0%, #8c0515 100%);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(230, 0, 35, 0.4);
+    box-shadow: 0 6px 20px rgba(230, 0, 35, 0.38);
+    color: #ffffff !important;
+}
+
+.pinterest-follow-button:active {
+    transform: translateY(0);
 }
 
 .pinterest-follow-button svg {
-    width: 18px;
-    height: 18px;
-    fill: currentColor;
+    width: 17px;
+    height: 17px;
+    fill: #ffffff !important;
+    flex-shrink: 0;
 }
 
+/* Mobile Toggle Hamburger */
 .mobile-toggle {
     display: none;
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    line-height: 1;
     cursor: pointer;
-    color: var(--text-primary);
+    color: #292524;
+    padding: 6px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.mobile-toggle:hover {
+    background: #f5f5f4;
+    color: #ea580c;
+}
+
+/* Medium Screens (Laptops & Tablets 769px - 1120px): Keep menu clean and perfectly spaced */
+@media (max-width: 1120px) and (min-width: 769px) {
+    .header-container {
+        padding: 0 16px;
+        gap: 12px;
+    }
+    .logo {
+        font-size: 1.25rem;
+    }
+    .nav-menu {
+        gap: 4px;
+    }
+    .nav-link {
+        font-size: 0.84rem;
+        padding: 6px 10px;
+    }
+    .pinterest-follow-button {
+        padding: 8px 14px;
+        font-size: 0.82rem;
+    }
+}
+
+/* Mobile Overlay Menu Styling */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+        position: absolute;
+        top: 68px;
+        left: 0;
+        width: 100%;
+        background: #ffffff;
+        flex-direction: column;
+        padding: 16px 20px 24px;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+        border-bottom: 2px solid #ea580c;
+        gap: 8px;
+        z-index: 999;
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: 1rem;
+        border-radius: 8px;
+        background: #fafaf9;
+    }
+
+    .nav-link:hover, .nav-link.active {
+        background: #fff7ed;
+        color: #ea580c;
+    }
+
+    .mobile-toggle {
+        display: block !important;
+    }
+
+    .pinterest-follow-button {
+        padding: 7px 12px !important;
+        font-size: 0.8rem !important;
+    }
 }
 
 /* ==========================================================================
