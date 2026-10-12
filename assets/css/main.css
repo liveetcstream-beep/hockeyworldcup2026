@@ -1199,3 +1199,213 @@ img, video, iframe, table, pre {
     margin-top: 8px;
     font-weight: 500;
 }
+
+
+/* ==========================================================================
+   Mobile Navigation Menu & Responsive Header Overrides
+   ========================================================================== */
+@media (max-width: 768px) {
+    .header-container {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        height: 64px !important;
+        padding: 0 16px !important;
+        gap: 12px !important;
+        position: relative !important;
+    }
+
+    .logo {
+        display: flex !important;
+        align-items: center !important;
+        gap: 8px !important;
+        font-size: 1.15rem !important;
+        flex: 0 0 auto !important;
+    }
+
+    .logo-img, .logo img {
+        width: 38px !important;
+        height: 38px !important;
+        max-width: 38px !important;
+        max-height: 38px !important;
+        min-width: 38px !important;
+        min-height: 38px !important;
+    }
+
+    /* Hide desktop nav-actions on mobile completely */
+    .nav-actions {
+        display: none !important;
+    }
+
+    /* Mobile Toggle Hamburger on top right */
+    .mobile-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 40px !important;
+        height: 40px !important;
+        background: #fbfaf8 !important;
+        border: 1.5px solid #e7e5e4 !important;
+        border-radius: 10px !important;
+        color: #292524 !important;
+        font-size: 1.5rem !important;
+        cursor: pointer !important;
+        transition: all 0.25s ease !important;
+        margin-left: auto !important;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .mobile-toggle:hover, .mobile-toggle:active, .mobile-toggle.active {
+        background: #ffedd5 !important;
+        border-color: #ea580c !important;
+        color: #ea580c !important;
+        transform: scale(1.04) !important;
+    }
+
+    /* Mobile Dropdown Navigation Menu */
+    .nav-menu {
+        display: none !important;
+        position: absolute !important;
+        top: 64px !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+        background: #ffffff !important;
+        flex-direction: column !important;
+        padding: 16px 18px 24px !important;
+        box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12) !important;
+        border-bottom: 3px solid #ea580c !important;
+        border-top: 1px solid #f1ece7 !important;
+        gap: 10px !important;
+        z-index: 1001 !important;
+        box-sizing: border-box !important;
+        animation: mobileMenuSlideDown 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards !important;
+    }
+
+    .nav-menu.open {
+        display: flex !important;
+    }
+
+    @keyframes mobileMenuSlideDown {
+        from {
+            opacity: 0;
+            transform: translateY(-8px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Search inside Mobile Menu */
+    .mobile-nav-search-item {
+        display: block !important;
+        width: 100% !important;
+        margin-bottom: 4px !important;
+    }
+
+    .mobile-nav-search-item form,
+    .mobile-nav-search-item .mobile-search-box {
+        display: flex !important;
+        align-items: center !important;
+        background: #fbfaf8 !important;
+        border: 1.5px solid #e7e5e4 !important;
+        border-radius: 9999px !important;
+        padding: 6px 14px !important;
+        gap: 10px !important;
+        transition: border-color 0.2s ease !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    .mobile-nav-search-item form:focus-within,
+    .mobile-nav-search-item .mobile-search-box:focus-within {
+        border-color: #ea580c !important;
+        background: #ffffff !important;
+        box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.12) !important;
+    }
+
+    .mobile-nav-search-icon {
+        font-size: 1rem !important;
+        color: #78716c !important;
+        flex-shrink: 0 !important;
+    }
+
+    .mobile-menu-search-input {
+        width: 100% !important;
+        border: none !important;
+        outline: none !important;
+        background: transparent !important;
+        font-size: 0.95rem !important;
+        font-family: inherit !important;
+        color: #1c1917 !important;
+    }
+
+    /* Nav Links inside Mobile Menu */
+    .nav-menu > li:not(.mobile-nav-search-item):not(.mobile-nav-pinterest-item) {
+        width: 100% !important;
+    }
+
+    .nav-link {
+        width: 100% !important;
+        box-sizing: border-box !important;
+        padding: 11px 16px !important;
+        font-size: 0.98rem !important;
+        font-weight: 600 !important;
+        border-radius: 10px !important;
+        background: #fafaf9 !important;
+        color: #44403c !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-start !important;
+        text-decoration: none !important;
+        transition: all 0.2s ease !important;
+    }
+
+    .nav-link:hover, .nav-link:active, .nav-link.active {
+        background: #fff7ed !important;
+        color: #ea580c !important;
+        font-weight: 700 !important;
+        padding-left: 20px !important;
+    }
+
+    /* Pinterest Button inside Mobile Menu */
+    .mobile-nav-pinterest-item {
+        display: block !important;
+        width: 100% !important;
+        margin-top: 6px !important;
+        padding-top: 6px !important;
+        border-top: 1px dashed #e7e5e4 !important;
+    }
+
+    .mobile-nav-pinterest-item .pinterest-follow-button {
+        width: 100% !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 12px 18px !important;
+        font-size: 0.96rem !important;
+        border-radius: 9999px !important;
+        background: linear-gradient(135deg, #e60023 0%, #ad081b 100%) !important;
+        color: #ffffff !important;
+        box-shadow: 0 4px 14px rgba(230, 0, 35, 0.28) !important;
+        box-sizing: border-box !important;
+        text-decoration: none !important;
+    }
+
+    .mobile-nav-pinterest-item .pinterest-follow-button svg {
+        width: 18px !important;
+        height: 18px !important;
+        margin-right: 8px !important;
+    }
+}
+
+/* Hide mobile-specific items on desktop screens (> 768px) */
+@media (min-width: 769px) {
+    .mobile-nav-search-item,
+    .mobile-nav-pinterest-item {
+        display: none !important;
+    }
+}
+

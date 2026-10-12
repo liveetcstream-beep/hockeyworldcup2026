@@ -1,19 +1,34 @@
 // Main Website JavaScript
 document.addEventListener('DOMContentLoaded', () => {
-    // Mobile Menu Toggle (Clean Class Toggle)
+    // Mobile Menu Toggle & Search Integration
     const mobileToggle = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-menu');
     if (mobileToggle && navMenu) {
         mobileToggle.addEventListener('click', (e) => {
             e.stopPropagation();
-            navMenu.classList.toggle('open');
-            mobileToggle.setAttribute('aria-expanded', navMenu.classList.contains('open'));
+            const isOpen = navMenu.classList.toggle('open');
+            mobileToggle.classList.toggle('active', isOpen);
+            mobileToggle.setAttribute('aria-expanded', isOpen);
+            mobileToggle.innerHTML = isOpen ? '&times;' : '&#9776;';
         });
 
         // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (navMenu.classList.contains('open') && !navMenu.contains(e.target) && e.target !== mobileToggle) {
                 navMenu.classList.remove('open');
+                mobileToggle.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileToggle.innerHTML = '&#9776;';
+            }
+        });
+
+        // Close menu on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && navMenu.classList.contains('open')) {
+                navMenu.classList.remove('open');
+                mobileToggle.classList.remove('active');
+                mobileToggle.setAttribute('aria-expanded', 'false');
+                mobileToggle.innerHTML = '&#9776;';
             }
         });
     }
@@ -186,4 +201,32 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial render of pagination
     renderPagination();
+
+    // Mobile Search Input inside Navigation Menu
+    const mobileSearchInput = document.querySelector('.mobile-menu-search-input');
+    if (mobileSearchInput) {
+        mobileSearchInput.addEventListener('input', (e) => {
+            searchQuery = e.target.value.toLowerCase().trim();
+            currentPage = 1;
+            renderPagination();
+        });
+        mobileSearchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                // If not on homepage or /posts, redirect to /posts with search
+                if (!document.getElementById('allPostsGrid')) {
+                    window.location.href = '/posts?q=' + encodeURIComponent(e.target.value);
+                } else {
+                    if (navMenu) {
+                        navMenu.classList.remove('open');
+                        if (mobileToggle) {
+                            mobileToggle.classList.remove('active');
+                            mobileToggle.innerHTML = '&#9776;';
+                        }
+                    }
+                }
+            }
+        });
+    }
+
 });
