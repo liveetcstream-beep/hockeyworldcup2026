@@ -255,6 +255,38 @@
                 <!-- Minimal Form -->
 
                 <div class="form-section p-8 space-y-6">
+                    <!-- Article Mode Selector (Roundup vs Single Recipe) -->
+                    <div>
+                        <label class="block text-sm font-bold text-stone-900 mb-2.5 flex items-center justify-between">
+                            <span class="flex items-center gap-2"><span>🎯</span> Select Article Format</span>
+                            <span id="modeBadge" class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-800 border border-orange-200">Mode: 30+ Recipe Roundup</span>
+                        </label>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
+                            <label id="modeCardListicle" class="relative flex items-start gap-3.5 p-4 rounded-2xl border-2 border-orange-500 bg-orange-50/60 cursor-pointer transition hover:shadow-md">
+                                <input type="radio" name="articleMode" value="listicle" checked onchange="switchArticleMode('listicle')" class="mt-1 text-orange-600 focus:ring-orange-500">
+                                <div>
+                                    <div class="font-bold text-stone-900 text-sm flex items-center gap-1.5">
+                                        <span>📌</span> Mode 1: Viral Roundup / Listicle
+                                    </div>
+                                    <p class="text-xs text-stone-600 mt-1 leading-relaxed">
+                                        Best for massive <strong>Pinterest repins & viral traffic</strong>. 15–38 distinct dish variations on one page, each with its own photo, ingredients, and method.
+                                    </p>
+                                </div>
+                            </label>
+                            
+                            <label id="modeCardSingle" class="relative flex items-start gap-3.5 p-4 rounded-2xl border-2 border-stone-200 bg-white cursor-pointer transition hover:border-orange-300 hover:shadow-md">
+                                <input type="radio" name="articleMode" value="single" onchange="switchArticleMode('single')" class="mt-1 text-orange-600 focus:ring-orange-500">
+                                <div>
+                                    <div class="font-bold text-stone-900 text-sm flex items-center gap-1.5">
+                                        <span>🍳</span> Mode 2: In-Depth Single Recipe
+                                    </div>
+                                    <p class="text-xs text-stone-600 mt-1 leading-relaxed">
+                                        Best for <strong>Google Search SEO & Food Authority</strong>. Focuses on 1 single dish with step-by-step process photos, ingredients table, and a <strong>Printable Recipe Card</strong>.
+                                    </p>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
 
                     <!-- Title -->
 
@@ -1051,6 +1083,29 @@
 
         // GEMINI AI GENERATION
 
+                window.currentArticleMode = 'listicle';
+        window.switchArticleMode = function(mode) {
+            window.currentArticleMode = mode;
+            const cardListicle = document.getElementById('modeCardListicle');
+            const cardSingle = document.getElementById('modeCardSingle');
+            const badge = document.getElementById('modeBadge');
+            if (mode === 'single') {
+                if (cardListicle) cardListicle.className = 'relative flex items-start gap-3.5 p-4 rounded-2xl border-2 border-stone-200 bg-white cursor-pointer transition hover:border-orange-300 hover:shadow-md';
+                if (cardSingle) cardSingle.className = 'relative flex items-start gap-3.5 p-4 rounded-2xl border-2 border-orange-500 bg-orange-50/60 cursor-pointer transition hover:shadow-md';
+                if (badge) {
+                    badge.textContent = 'Mode: In-Depth Single Recipe';
+                    badge.className = 'text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 border border-emerald-200';
+                }
+            } else {
+                if (cardListicle) cardListicle.className = 'relative flex items-start gap-3.5 p-4 rounded-2xl border-2 border-orange-500 bg-orange-50/60 cursor-pointer transition hover:shadow-md';
+                if (cardSingle) cardSingle.className = 'relative flex items-start gap-3.5 p-4 rounded-2xl border-2 border-stone-200 bg-white cursor-pointer transition hover:border-orange-300 hover:shadow-md';
+                if (badge) {
+                    badge.textContent = 'Mode: 30+ Recipe Roundup';
+                    badge.className = 'text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-800 border border-orange-200';
+                }
+            }
+        };
+
         window.generateWithGemini = async function() {
 
             const title = document.getElementById('articleTitle').value.trim();
@@ -1111,7 +1166,90 @@
 
 
 
-                const prompt = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance on 'Cozy Plate Recipes' (https://hockeyworldcup2026schedule.com).
+                const currentMode = window.currentArticleMode || 'listicle';
+                let prompt = '';
+
+                if (currentMode === 'single') {
+                    // MODE 2: In-Depth Single Recipe Prompt
+                    prompt = `You are a world-class professional Executive Chef, Recipe Developer, and Food Blogger writing for 'Cozy Plate Recipes' (https://hockeyworldcup2026schedule.com).
+Write a definitive, in-depth, master recipe guide for: '${title}'.
+Target Audience: Home cooks and passionate foodies seeking a foolproof, restaurant-quality meal.
+
+ARTICLE DETAILS:
+- Recipe Title: ${title}
+- Focus Keyword: ${keyword}
+- Category: ${category}
+- Context: ${seoDescriptionInput || 'Comprehensive culinary walkthrough with process photos and printable recipe card'}
+- Total Process Images / Steps: ${uploadedImages.length}
+
+CHRONOLOGICAL PROCESS STEPS / IMAGES PROVIDED:
+${imageList}
+
+WRITING INSTRUCTIONS (Follow EXACT Format & Tags):
+
+[RECIPE_META_START]
+PREP_TIME: (e.g. 15 Mins)
+COOK_TIME: (e.g. 25 Mins)
+TOTAL_TIME: (e.g. 40 Mins)
+SERVINGS: (e.g. 4-6 Servings)
+CALORIES: (e.g. 390 kcal per serving)
+CUISINE: (e.g. American Comfort Food / Italian)
+DIFFICULTY: (e.g. Easy / Moderate)
+[RECIPE_META_END]
+
+[INTRO_START]
+(Write 3 engaging, mouth-watering paragraphs (total 150-200 words). Naturally incorporate ${keyword}. Describe aroma, textural contrast, savoriness, and why this recipe stands out above standard versions. Mention how easy it is to pull together on busy weeknights or weekend dinner parties.)
+[INTRO_END]
+
+[WHY_LOVE_START]
+(Provide 4 distinct reasons why readers will adore this recipe, separated by semicolons. E.g. Ready in under 40 minutes: effortless weeknight cooking; Budget-friendly staples: simple pantry ingredients; Crispy golden texture: foolproof pan-searing method; Crowd-pleasing versatility: pairs with almost any side dish)
+[WHY_LOVE_END]
+
+[INGREDIENTS_START]
+(List 8-12 comprehensive ingredients with precise quantities, units, and prep instructions separated by semicolons. E.g. 1.5 lbs boneless skinless chicken breasts, sliced into cutlets; 2 tbsp extra virgin olive oil; 3 cloves fresh garlic, finely minced; 1 cup heavy cream; 1/2 cup low-sodium chicken broth; 1/2 cup grated Parmesan cheese; 1 tsp kosher salt; 1/2 tsp freshly cracked black pepper; 2 tbsp fresh parsley, chopped)
+[INGREDIENTS_END]
+
+[EQUIPMENT_START]
+(List 4 essential kitchen tools separated by semicolons, e.g. 12-inch heavy-bottomed skillet or cast iron pan; Chef's knife & wooden cutting board; Silicone tongs; Instant-read meat thermometer)
+[EQUIPMENT_END]
+
+For EACH of the ${uploadedImages.length} images/process steps above, write a detailed step card:
+[STEP_START]
+STEP_NUM: (1, 2, 3...)
+STEP_TITLE: (Catchy descriptive title, e.g. Step 1: Prep & Season the Protein)
+ALT_TEXT: (Descriptive alt text for photo - 10-15 words)
+FIGCAPTION: (1 enticing sentence describing what is happening in the pan/bowl)
+ACTION_TEXT: (Write 3-4 comprehensive sentences detailing EXACTLY what the cook must do: burner heat level (medium-high), exact minutes (3-4 mins per side), visual doneness cues ('until golden brown fond develops'), aroma indicators, and technique advice. Thorough walkthrough—never 1-line brevity!)
+STEP_TIP: (1 actionable chef technique secret for this specific step to guarantee perfection)
+[STEP_END]
+
+[CHEF_SECRETS_START]
+(Provide 4 master chef secrets for success separated by semicolons. E.g. Pat Dry for Maximum Sear: Always blot protein dry with paper towels before hitting the hot pan to ensure golden caramelization; Don't Crowd the Pan: Cook in batches if needed so moisture evaporates instead of steaming; Simmer Low for Silky Sauces: Lower heat before stirring in dairy to prevent separation; Rest Before Slicing: Let rest for 5 minutes so juices reabsorb.)
+[CHEF_SECRETS_END]
+
+[STORAGE_START]
+**Refrigerator:** Store cooled leftovers in an airtight glass container for up to 4 days. Reheat gently in a skillet over low heat with a splash of broth.
+**Freezer:** Freeze in a sealed freezer-safe container for up to 3 months. Thaw overnight in the fridge.
+[STORAGE_END]
+
+[FAQS_START]
+Q: Can I prepare this recipe ahead of time? | A: Yes, you can prep and season ingredients up to 24 hours in advance and keep them chilled in the refrigerator.
+Q: What can I substitute for the dairy or heavy cream? | A: Full-fat canned coconut milk or unsweetened cashew cream works wonderfully without sacrificing rich velvety texture.
+Q: How do I ensure maximum tenderness? | A: Avoid overcooking by verifying doneness with an instant-read thermometer (165°F / 74°C for poultry) and always allow 5 minutes resting time.
+Q: What side dishes pair best with this meal? | A: Serve alongside garlic butter pasta, fluffy mashed potatoes, roasted asparagus, or a crisp Caesar salad.
+[FAQS_END]
+
+[CONCLUSION_START]
+(Write 2-3 warm, inviting closing paragraphs encouraging home cooks to bookmark the recipe, share it on Pinterest, and leave a comment.)
+[CONCLUSION_END]
+
+IMPORTANT:
+- Everything MUST be 100% focused on cooking, food science, and flavor.
+- No markdown inside field values (keep clean plain text).
+- Do not mention home decor or unrelated topics.`;
+                } else {
+                    // MODE 1: Viral Roundup / Listicle Prompt (Existing)
+                    prompt = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance on 'Cozy Plate Recipes' (https://hockeyworldcup2026schedule.com).
 Write a comprehensive, top-notch, 100% topic-tailored 2026 Recipe master article.
 
 ARTICLE DETAILS:
@@ -1166,22 +1304,25 @@ IMPORTANT RULES:
 - Everything MUST be 100% specific to ${keyword} and food/cooking recipes.
 - NO home decor, NO furniture, NO interior design filler!
 - No markdown (** or ##) inside the tag fields. Clean raw text only.`;
+                }
 
                 const aiText = await callAIProvider(apiKey, prompt);
 
-
-
-                generatedArticle = parseAiOutput(aiText, {
-
-                    title, keyword, slug, category, siteDomain,
-
-                    images: uploadedImages,
-
-                    seoDescription: seoDescriptionInput,
-
-                    featuredImage: uploadedImages[0]?.url || ''
-
-                });
+                if (currentMode === 'single') {
+                    generatedArticle = parseAiOutputSingle(aiText, {
+                        title, keyword, slug, category, siteDomain,
+                        images: uploadedImages,
+                        seoDescription: seoDescriptionInput,
+                        featuredImage: uploadedImages[0]?.url || ''
+                    });
+                } else {
+                    generatedArticle = parseAiOutput(aiText, {
+                        title, keyword, slug, category, siteDomain,
+                        images: uploadedImages,
+                        seoDescription: seoDescriptionInput,
+                        featuredImage: uploadedImages[0]?.url || ''
+                    });
+                }
 
 
 
@@ -1200,7 +1341,10 @@ IMPORTANT RULES:
 
                 const wordCount = (generatedArticle.htmlContent || '').replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length;
 
-                alert(`✅ Cozy Plate Recipe Article Generated Successfully!\n\n📊 Est. Words: ~${wordCount}\n🖼️ Recipes: ${uploadedImages.length} complete recipe cards with ingredients & methods\n\nPreview the full article below! You can now click "Publish to Website" or download the HTML file.`);
+                const alertMsg = (window.currentArticleMode === 'single')
+                    ? `✅ In-Depth Single Recipe Generated Successfully!\n\n📊 Est. Words: ~${wordCount}\n📸 Process Steps: ${uploadedImages.length} visual cooking steps with photos\n🍳 Features: Full Schema.org Recipe Card, Jump to Recipe & Print Buttons!\n\nPreview below, then click "Publish to Website"!`
+                    : `✅ 30+ Recipe Roundup Generated Successfully!\n\n📊 Est. Words: ~${wordCount}\n🖼️ Recipes: ${uploadedImages.length} complete recipe cards with ingredients & methods\n\nPreview below, then click "Publish to Website"!`;
+                alert(alertMsg);
 
 
 
@@ -1229,6 +1373,773 @@ IMPORTANT RULES:
 
 
         // Parse AI Output
+
+        
+        // Parse AI Output for Single In-Depth Recipe
+        function parseAiOutputSingle(text, data) {
+            const getField = (label) => {
+                const m = text.match(new RegExp(label + ':\\s*(.+)', 'i'));
+                return m ? m[1].trim() : '';
+            };
+
+            const getBlock = (startTag, endTag) => {
+                const sIdx = text.indexOf(startTag);
+                const eIdx = text.indexOf(endTag);
+                if (sIdx > -1 && eIdx > -1) {
+                    return text.substring(sIdx + startTag.length, eIdx).trim();
+                }
+                return '';
+            };
+
+            const prepTime = getField('PREP_TIME') || '15 mins';
+            const cookTime = getField('COOK_TIME') || '25 mins';
+            const totalTime = getField('TOTAL_TIME') || '40 mins';
+            const servings = getField('SERVINGS') || '4-6 servings';
+            const calories = getField('CALORIES') || '380 kcal';
+            const cuisine = getField('CUISINE') || 'American Comfort Food';
+            const difficulty = getField('DIFFICULTY') || 'Easy';
+
+            const introText = getBlock('[INTRO_START]', '[INTRO_END]') || ('There is nothing quite as comforting and satisfying as preparing ' + data.title + ' from scratch in your own kitchen. Whether you\'re cooking for family dinner or hosting friends for the weekend, this recipe guarantees mouth-watering flavor, tender textures, and foolproof results every single time.');
+
+            const whyLoveRaw = getBlock('[WHY_LOVE_START]', '[WHY_LOVE_END]');
+            const whyLove = whyLoveRaw ? whyLoveRaw.split(';').map(s => s.trim().replace(/^[-*•\d.]+\s*/, '')).filter(Boolean) : [
+                'Quick & Foolproof: Ready in under an hour with simple kitchen steps',
+                'Pantry-Friendly: Made with accessible, affordable grocery ingredients',
+                'Incredible Depth of Flavor: Perfectly balanced seasonings and textures',
+                'Meal-Prep Friendly: Stores and reheats beautifully for busy weeknights'
+            ];
+
+            const ingredientsRaw = getBlock('[INGREDIENTS_START]', '[INGREDIENTS_END]');
+            const ingredients = ingredientsRaw ? ingredientsRaw.split(';').map(s => s.trim().replace(/^[-*•\d.]+\s*/, '')).filter(Boolean) : [
+                '1.5 lbs main protein or fresh seasonal vegetables, prepped',
+                '2 tbsp extra virgin olive oil or unsalted butter',
+                '3 cloves fresh garlic, finely minced',
+                '1 medium onion or shallot, diced',
+                '1 tsp kosher salt and freshly cracked black pepper (to taste)',
+                '1/2 cup savory cooking broth or stock',
+                'Fresh herbs (parsley, thyme, or rosemary) for garnish'
+            ];
+
+            const equipmentRaw = getBlock('[EQUIPMENT_START]', '[EQUIPMENT_END]');
+            const equipment = equipmentRaw ? equipmentRaw.split(';').map(s => s.trim().replace(/^[-*•\d.]+\s*/, '')).filter(Boolean) : [
+                'Heavy-bottomed skillet or cast iron pan',
+                'Sharp chef\'s knife & cutting board',
+                'Measuring spoons and cups',
+                'Tongs or heat-resistant spatula'
+            ];
+
+            // Parse steps (one per image or extracted)
+            const steps = [];
+            const stepBlocks = text.split('[STEP_START]');
+            stepBlocks.shift();
+
+            if (stepBlocks.length > 0) {
+                stepBlocks.forEach((bStr, idx) => {
+                    const endIdx = bStr.indexOf('[STEP_END]');
+                    const b = endIdx > -1 ? bStr.substring(0, endIdx).trim() : bStr.trim();
+                    const getStepField = (label) => {
+                        const m = b.match(new RegExp(label + ':\\s*(.+)', 'i'));
+                        return m ? m[1].trim() : '';
+                    };
+                    const img = data.images[idx] || data.images[0];
+                    steps.push({
+                        stepNum: idx + 1,
+                        title: getStepField('STEP_TITLE') || ('Step ' + (idx + 1) + ': Cooking Technique & Preparation'),
+                        altText: getStepField('ALT_TEXT') || img?.alt || (data.title + ' - Step ' + (idx + 1)),
+                        figcaption: getStepField('FIGCAPTION') || '',
+                        action: getStepField('ACTION_TEXT') || b.replace(/STEP_\w+:[^\n]+/g, '').trim(),
+                        tip: getStepField('STEP_TIP') || 'Keep heat controlled to prevent burning and preserve aromatic juices.',
+                        image: img
+                    });
+                });
+            } else {
+                data.images.forEach((img, idx) => {
+                    steps.push({
+                        stepNum: idx + 1,
+                        title: 'Step ' + (idx + 1) + ': ' + img.name.replace(/[-_]/g, ' ').replace(/\.[^/.]+$/, '').trim(),
+                        altText: img.alt || (data.title + ' process step ' + (idx + 1)),
+                        figcaption: 'Carefully execute step ' + (idx + 1) + ' for optimal browning and flavor depth.',
+                        action: 'Heat your cooking pan over medium heat. Add the prepared ingredients in a single even layer, allowing them to sear undisturbed for 3-4 minutes until aromatic and lightly golden.',
+                        tip: 'Do not overcrowd the pan; cooking in batches ensures superior texture and caramelization.',
+                        image: img
+                    });
+                });
+            }
+
+            const chefSecretsRaw = getBlock('[CHEF_SECRETS_START]', '[CHEF_SECRETS_END]');
+            const chefSecrets = chefSecretsRaw ? chefSecretsRaw.split(';').map(s => s.trim().replace(/^[-*•\d.]+\s*/, '')).filter(Boolean) : [
+                'Room Temperature Prep: Allow cold proteins or dairy to sit at room temperature for 15 minutes before cooking for even heat distribution.',
+                'Layer Your Seasoning: Season lightly at each stage of cooking rather than dumping all salt at the very end.',
+                'Deglaze the Pan: Pour a splash of broth or wine into the hot pan to scrape up the golden caramelized fond from the bottom.',
+                'Rest Before Serving: Let the dish rest for 5 minutes off the heat so juices redistribute throughout every bite.'
+            ];
+
+            const storageText = getBlock('[STORAGE_START]', '[STORAGE_END]') || '**Refrigerator:** Store leftovers in an airtight container in the fridge for up to 4 days. Reheat gently in a skillet over medium-low heat with a splash of broth or water to restore moisture.\n\n**Freezer:** Cool completely, transfer to a freezer-safe bag or container, and freeze for up to 3 months. Thaw overnight in the refrigerator before reheating.';
+
+            // Parse FAQs
+            const faqsRaw = getBlock('[FAQS_START]', '[FAQS_END]');
+            const faqs = [];
+            if (faqsRaw) {
+                const qaPairs = faqsRaw.split(/(?:Q:|Question:)/i).filter(Boolean);
+                qaPairs.forEach(pair => {
+                    const parts = pair.split(/(?:A:|Answer:)/i);
+                    if (parts.length >= 2) {
+                        faqs.push({
+                            q: parts[0].trim().replace(/^\d+[.:\s]+/, ''),
+                            a: parts[1].trim()
+                        });
+                    }
+                });
+            }
+            if (faqs.length === 0) {
+                faqs.push(
+                    { q: 'Can I prepare this ' + data.keyword + ' ahead of time?', a: 'Yes! You can prep all ingredients, chop vegetables, and mix sauces up to 24 hours in advance. Store tightly wrapped in the refrigerator until ready to cook.' },
+                    { q: 'What are the best dairy-free or gluten-free substitutions?', a: 'For dairy-free, replace heavy cream with full-fat canned coconut milk or unsweetened cashew cream, and use olive oil or vegan butter. For gluten-free, use tamari or certified GF flour.' },
+                    { q: 'How do I know when it is fully cooked?', a: 'Look for deep golden browning, an internal temperature of 165°F (74°C) for poultry on an instant-read thermometer, and juices that run completely clear.' },
+                    { q: 'Can I scale this recipe for a party or large crowd?', a: 'Absolutely. You can easily double or triple the ingredients. Use a larger Dutch oven or two separate skillets so the ingredients brown rather than steam.' }
+                );
+            }
+
+            const conclusionText = getBlock('[CONCLUSION_START]', '[CONCLUSION_END]') || ('Mastering this ' + data.title + ' gives you a dependable, restaurant-worthy meal right from your home kitchen. Save this pin to your Pinterest recipe boards, share it with family and friends, and check back on Cozy Plate Recipes for more cozy home cooking inspiration!');
+
+            const fullData = {
+                ...data,
+                mode: 'single',
+                prepTime, cookTime, totalTime, servings, calories, cuisine, difficulty,
+                intro: introText,
+                whyLove,
+                ingredients,
+                equipment,
+                steps,
+                chefSecrets,
+                storage: storageText,
+                faqs,
+                conclusion: conclusionText,
+                metaDescription: data.seoDescription || ('The absolute best ' + data.title + ' recipe with detailed step-by-step photos, foolproof cooking instructions, ingredients table, and printable recipe card.')
+            };
+
+            const htmlContent = buildSingleDeepRecipeHTML(fullData);
+
+            return {
+                title: data.title,
+                urlSlug: data.slug,
+                category: data.category,
+                focusKeyword: data.keyword,
+                metaDescription: fullData.metaDescription,
+                featuredImage: data.featuredImage,
+                htmlContent,
+                singleData: fullData,
+                mode: 'single'
+            };
+        }
+
+        // Build Standalone HTML for Single Deep Dive Recipe
+        function buildSingleDeepRecipeHTML(data) {
+            const dateStr = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+            const dateISO = new Date().toISOString();
+            const siteUrl = data.siteDomain.replace(/\/$/, '');
+            const postUrl = siteUrl + '/posts/' + data.slug;
+
+            const categoryLabels = {
+                'fall-recipes': 'Fall Recipes',
+                'holiday-recipes': 'Holiday Feasts',
+                'budget-meals': 'Budget Meals',
+                'quick-dinners': 'Quick Dinners',
+                'crockpot-recipes': 'Crockpot Meals',
+                'air-fryer': 'Air Fryer',
+                'desserts': 'Easy Desserts'
+            };
+            const catDisplay = categoryLabels[data.category] || 'Quick & Easy Dinners';
+
+            let featuredImgSrc = data.featuredImage || '';
+            if (featuredImgSrc && !featuredImgSrc.startsWith('http') && !featuredImgSrc.startsWith('/')) {
+                featuredImgSrc = '/' + featuredImgSrc;
+            }
+            if (featuredImgSrc && !featuredImgSrc.startsWith('http') && !featuredImgSrc.startsWith('/assets/images/')) {
+                featuredImgSrc = '/assets/images/' + featuredImgSrc.replace(/^\//, '');
+            }
+            const featuredFullImg = featuredImgSrc.startsWith('http') ? featuredImgSrc : (siteUrl + featuredImgSrc);
+
+            const ingredientsListHTML = (data.ingredients || []).map(ing => `
+                <li style="margin-bottom: 8px; line-height: 1.7; color: #44403c;">${ing}</li>`).join('');
+
+            const ingredientsChecklistHTML = (data.ingredients || []).map((ing, idx) => `
+                <label style="display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; cursor: pointer; font-size: 0.98rem; color: #292524; line-height: 1.6;">
+                    <input type="checkbox" style="margin-top: 5px; width: 17px; height: 17px; accent-color: #ea580c; cursor: pointer;">
+                    <span>${ing}</span>
+                </label>`).join('');
+
+            const equipmentHTML = (data.equipment || []).map(eq => `
+                <li style="margin-bottom: 6px; color: #44403c;">${eq}</li>`).join('');
+
+            const whyLoveIcons = ['⭐', '⏱️', '💰', '🌿', '✨'];
+            const whyLoveHTML = (data.whyLove || []).map((item, i) => `
+                <div style="background: #ffffff; padding: 16px 18px; border-radius: 12px; border: 1px solid #ffedd5; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+                    <div style="font-weight: 700; color: #9a3412; font-size: 0.95rem; display: flex; align-items: center; gap: 8px;">
+                        <span>${whyLoveIcons[i % whyLoveIcons.length]}</span>
+                        <span>${item.split(':')[0]}</span>
+                    </div>
+                    ${item.includes(':') ? `<p style="margin-top: 6px; font-size: 0.9rem; color: #57534e; line-height: 1.6;">${item.split(':').slice(1).join(':').trim()}</p>` : ''}
+                </div>`).join('');
+
+            let stepsHTML = '';
+            (data.steps || []).forEach((step, idx) => {
+                let sImgSrc = step.image?.url || step.image?.previewUrl || '';
+                if (sImgSrc && !sImgSrc.startsWith('http') && !sImgSrc.startsWith('/')) {
+                    sImgSrc = '/' + sImgSrc;
+                }
+                if (sImgSrc && !sImgSrc.startsWith('http') && !sImgSrc.startsWith('/assets/images/')) {
+                    sImgSrc = '/assets/images/' + sImgSrc.replace(/^\//, '');
+                }
+                const sFullImg = sImgSrc.startsWith('http') ? sImgSrc : (siteUrl + sImgSrc);
+
+                stepsHTML += `
+                <div class="cooking-step-card" id="step-${step.stepNum}" style="margin: 40px 0; padding: 26px; background: #ffffff; border-radius: 16px; border: 1px solid #fed7aa; box-shadow: 0 4px 18px rgba(0,0,0,0.04);">
+                    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; flex-wrap: wrap; gap: 10px;">
+                        <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #1c1917; font-weight: 700; margin: 0;">${step.title}</h3>
+                        <span style="background: #ffedd5; color: #9a3412; font-size: 0.8rem; font-weight: 700; padding: 4px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px;">Step ${step.stepNum} of ${data.steps.length}</span>
+                    </div>
+
+                    ${sImgSrc ? `
+                    <div class="post-img-container" style="margin: 18px 0; position: relative;">
+                        <a href="#" class="pin-this-btn" data-title="${step.title} - ${data.title}" data-image="${sFullImg}">
+                            <svg viewBox="0 0 24 24" width="16" height="16" style="width:16px;height:16px;fill:white;flex-shrink:0;"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg> Save Pin
+                        </a>
+                        <img loading="lazy" src="${sImgSrc}" alt="${step.altText || step.title}" style="border-radius: 12px; width: 100%; aspect-ratio: 16/10; object-fit: cover;">
+                        ${step.figcaption ? `<div class="post-img-caption" style="font-size: 0.85rem; color: #78716c; margin-top: 8px; text-align: center; font-style: italic;">${step.figcaption}</div>` : ''}
+                    </div>` : ''}
+
+                    <div style="font-size: 1.05rem; line-height: 1.85; color: #332f2c; margin: 16px 0; text-align: justify;">
+                        ${step.action}
+                    </div>
+
+                    ${step.tip ? `
+                    <div style="background: #eff6ff; border-left: 4px solid #3b82f6; padding: 12px 16px; border-radius: 0 10px 10px 0; font-size: 0.92rem; color: #1e40af; margin-top: 14px;">
+                        💡 <strong>Chef's Technique Tip:</strong> ${step.tip}
+                    </div>` : ''}
+                </div>`;
+
+                if (idx === 1 || idx === 3) {
+                    stepsHTML += `
+                    <!-- In-Article Recipe Ad -->
+                    <div class="ad-section in-article-ad" style="margin: 35px 0; text-align: center; clear: both;">
+                        <div class="ad-wrapper" style="display: inline-block; width: 100%; min-height: 250px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 20px;">
+                            <div style="color: #6c757d; font-size: 11px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</div>
+                            <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article" data-ad-format="fluid" data-ad-client="ca-pub-5314498336592071" data-ad-slot="7410110443"></ins>
+                            <script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script>
+                        </div>
+                    </div>`;
+                }
+            });
+
+            const recipeCardInstructionsHTML = (data.steps || []).map((step, idx) => `
+                <li style="margin-bottom: 14px; line-height: 1.75; color: #292524;">
+                    <strong style="color: #9a3412;">${step.title.replace(/^Step \d+[:\s-]*/i, '')}:</strong> ${step.action}
+                </li>`).join('');
+
+            const chefSecretsHTML = (data.chefSecrets || []).map(sec => `
+                <li style="margin-bottom: 12px; line-height: 1.8; color: #332f2c;">${sec}</li>`).join('');
+
+            const faqsHTML = (data.faqs || []).map(faq => `
+                <div style="margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #f5ede4;">
+                    <h3 style="font-size: 1.12rem; font-weight: 700; color: #1c1917; margin-bottom: 6px;">Q: ${faq.q}</h3>
+                    <p style="font-size: 1rem; line-height: 1.8; color: #44403c; margin: 0; text-align: justify;"><strong>A:</strong> ${faq.a}</p>
+                </div>`).join('');
+
+            const schemaInstructions = (data.steps || []).map(s => ({
+                "@type": "HowToStep",
+                "name": s.title,
+                "text": s.action,
+                "url": postUrl + '#step-' + s.stepNum
+            }));
+
+            const parseDuration = (tStr) => {
+                const m = (tStr || '').match(/(\d+)\s*m/i);
+                return m ? ('PT' + m[1] + 'M') : 'PT20M';
+            };
+
+            return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="google-adsense-account" content="ca-pub-5314498336592071">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1SEPBKM7MR"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1SEPBKM7MR');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${data.title} - Cozy Plate Recipes</title>
+    <meta name="description" content="${data.metaDescription}">
+    <link rel="canonical" href="${postUrl}">
+
+    <!-- Open Graph & Pinterest Rich Pin -->
+    <meta property="og:title" content="${data.title}">
+    <meta property="og:description" content="${data.metaDescription}">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="${postUrl}">
+    <meta property="og:image" content="${featuredFullImg}">
+    <meta property="og:site_name" content="Cozy Plate Recipes">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${data.title}">
+    <meta name="twitter:description" content="${data.metaDescription}">
+    <meta name="twitter:image" content="${featuredFullImg}">
+
+    <!-- Fonts & AdSense -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://pagead2.googlesyndication.com">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5314498336592071" crossorigin="anonymous"><\/script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="/assets/css/main.css?v=7">
+    <link rel="stylesheet" href="/assets/css/animations.css">
+    <link rel="stylesheet" href="/assets/css/posts.css?v=7">
+
+    <style>
+        .post-main-content p { text-align: justify; }
+        .jump-btn-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 22px 0 30px;
+        }
+        .jump-recipe-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #ea580c, #c2410c);
+            color: #ffffff !important;
+            padding: 11px 22px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            box-shadow: 0 4px 14px rgba(234, 88, 12, 0.35);
+            transition: all 0.2s ease;
+        }
+        .jump-recipe-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(234, 88, 12, 0.45);
+        }
+        .print-btn-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #f5f5f4;
+            color: #292524 !important;
+            border: 1px solid #d6d3d1;
+            padding: 11px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 0.92rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+        .print-btn-pill:hover {
+            background: #e7e5e4;
+        }
+        @media print {
+            header, nav, .sidebar, .ad-section, .pin-this-btn, .nav-actions, .mobile-drawer, footer, .jump-btn-bar, #faqs, .post-hero-container {
+                display: none !important;
+            }
+            body, .post-main-content, #recipe-card {
+                background: #fff !important;
+                color: #000 !important;
+                box-shadow: none !important;
+                border: none !important;
+                width: 100% !important;
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+            #recipe-card {
+                display: block !important;
+                border: 2px solid #000 !important;
+                padding: 20px !important;
+            }
+        }
+    </style>
+
+    <!-- Schema.org Recipe JSON-LD Rich Snippet -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Recipe",
+        "name": "${data.title.replace(/"/g, '\\"')}",
+        "image": ["${featuredFullImg}"],
+        "description": "${data.metaDescription.replace(/"/g, '\\"')}",
+        "keywords": "${data.keyword}",
+        "author": { "@type": "Organization", "name": "Cozy Plate Recipes", "url": "${siteUrl}" },
+        "publisher": { "@type": "Organization", "name": "Cozy Plate Recipes", "url": "${siteUrl}" },
+        "datePublished": "${dateISO}",
+        "dateModified": "${dateISO}",
+        "prepTime": "${parseDuration(data.prepTime)}",
+        "cookTime": "${parseDuration(data.cookTime)}",
+        "totalTime": "${parseDuration(data.totalTime)}",
+        "recipeYield": "${data.servings}",
+        "recipeCategory": "${catDisplay}",
+        "recipeCuisine": "${data.cuisine}",
+        "nutrition": {
+            "@type": "NutritionInformation",
+            "calories": "${data.calories}"
+        },
+        "recipeIngredient": ${JSON.stringify(data.ingredients || [])},
+        "recipeInstructions": ${JSON.stringify(schemaInstructions)},
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "89"
+        }
+    }
+    <\/script>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="/" class="logo"><div class="logo-icon">🍲</div>Cozy Plate <span>Recipes</span></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li class="mobile-nav-search-item">
+                        <form action="/posts" method="GET" class="mobile-search-box">
+                            <span class="mobile-nav-search-icon">🔍</span>
+                            <input type="text" name="q" class="mobile-menu-search-input" placeholder="Search delicious recipes..." aria-label="Search recipes">
+                        </form>
+                    </li>
+                    <li><a href="/" class="nav-link">Home</a></li>
+                    <li><a href="/posts" class="nav-link active">All Recipes</a></li>
+                    <li><a href="/contact-us" class="nav-link">Contact</a></li>
+                    <li class="mobile-nav-pinterest-item">
+                        <a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank" rel="noopener" class="pinterest-follow-button">
+                            <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg> Follow on Pinterest
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank" class="pinterest-follow-button">
+                    <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg> Follow on Pinterest
+                </a>
+                <div class="search-box">
+                    <form action="/posts" method="GET">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" name="q" placeholder="Search recipes..." aria-label="Search recipes">
+                    </form>
+                </div>
+                <button class="mobile-menu-btn" aria-label="Toggle navigation">
+                    <svg viewBox="0 0 24 24"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="mobile-drawer-overlay"></div>
+    <div class="mobile-drawer">
+        <div class="drawer-header">
+            <a href="/" class="logo"><div class="logo-icon">🍲</div>Cozy Plate <span>Recipes</span></a>
+            <button class="drawer-close" aria-label="Close menu">&times;</button>
+        </div>
+        <div class="drawer-search">
+            <form action="/posts" method="GET">
+                <input type="text" name="q" placeholder="Search recipes..." aria-label="Search recipes">
+                <button type="submit">🔍</button>
+            </form>
+        </div>
+        <ul class="drawer-menu">
+            <li><a href="/" class="drawer-link">Home</a></li>
+            <li><a href="/posts" class="drawer-link active">All Recipes</a></li>
+            <li><a href="/contact-us" class="drawer-link">Contact</a></li>
+        </ul>
+        <div class="drawer-social">
+            <a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank" class="drawer-pinterest-btn">
+                <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg> Follow on Pinterest
+            </a>
+        </div>
+    </div>
+
+    <!-- Post Hero -->
+    <div class="post-hero">
+        <div class="post-hero-container">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="/">Home</a> &gt; <a href="/posts">Recipes</a> &gt; <span>${catDisplay}</span>
+            </nav>
+            <h1 class="post-title">${data.title}</h1>
+            <div class="post-meta">
+                <span class="meta-item"><span class="meta-icon">👤</span> Cozy Plate Chef Team</span>
+                <span class="meta-item"><span class="meta-icon">📅</span> ${dateStr}</span>
+                <span class="meta-item"><span class="meta-icon">🏷️</span> ${catDisplay}</span>
+                <span class="meta-item"><span class="meta-icon">⏱️</span> ${data.totalTime}</span>
+            </div>
+            
+            <!-- Quick Action Bar -->
+            <div class="jump-btn-bar">
+                <a href="#recipe-card" class="jump-recipe-btn">⬇ Jump to Recipe</a>
+                <button onclick="window.print()" class="print-btn-pill">🖨️ Print Recipe</button>
+                <a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank" class="print-btn-pill" style="color: #e60023 !important;">📌 Save to Pinterest</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="post-container">
+        <main class="post-main-content">
+            <!-- Featured Image -->
+            <div class="post-img-container" style="margin-bottom: 30px; position: relative;">
+                <a href="#" class="pin-this-btn" data-title="${data.title}" data-image="${featuredFullImg}">
+                    <svg viewBox="0 0 24 24" width="16" height="16" style="width:16px;height:16px;fill:white;flex-shrink:0;"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg> Save Pin
+                </a>
+                <img src="${featuredImgSrc}" alt="${data.title}" style="border-radius: 12px; width: 100%; aspect-ratio: 16/9; object-fit: cover;">
+                <div class="post-img-caption" style="font-size: 0.85rem; color: #78716c; margin-top: 8px; text-align: center; font-style: italic;">Freshly prepared ${data.title} ready to serve.</div>
+            </div>
+
+            <!-- Intro Story -->
+            <div class="post-intro-content" style="font-size: 1.1rem; line-height: 1.85; margin-bottom: 30px; text-align: justify; color: #332f2c;">
+                ${data.intro}
+            </div>
+
+            <!-- Why You'll Love This Recipe -->
+            <div style="margin: 35px 0; padding: 24px; background: #fffaf5; border: 1px solid #fed7aa; border-radius: 16px;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1c1917; margin-bottom: 16px;">❤️ Why You'll Love This Recipe</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px;">
+                    ${whyLoveHTML}
+                </div>
+            </div>
+
+            <!-- Key Ingredients & Substitutions -->
+            <div style="margin: 35px 0; padding: 24px; background: #fafaf9; border-radius: 16px; border: 1px solid #e7e5e4;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.6rem; color: #1c1917; margin-bottom: 12px;">🛒 Key Ingredients & Pantry Swaps</h2>
+                <p style="font-size: 0.95rem; color: #57534e; margin-bottom: 16px;">Here are the core ingredients you'll need. Exact measurements are in the recipe card below:</p>
+                <ul style="padding-left: 20px; font-size: 1rem;">
+                    ${ingredientsListHTML}
+                </ul>
+            </div>
+
+            <!-- Equipment Needed -->
+            ${data.equipment && data.equipment.length ? `
+            <div style="margin: 25px 0; padding: 18px 22px; background: #ffffff; border: 1px dashed #d6d3d1; border-radius: 12px;">
+                <h3 style="font-size: 1.1rem; font-weight: 700; color: #292524; margin-bottom: 8px;">🔪 Equipment You'll Need:</h3>
+                <ul style="padding-left: 20px; font-size: 0.95rem; margin: 0;">
+                    ${equipmentHTML}
+                </ul>
+            </div>` : ''}
+
+            <!-- Step by Step Walkthrough Header -->
+            <div style="margin-top: 45px; margin-bottom: 20px; border-bottom: 2px solid #f5ede4; padding-bottom: 10px;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.85rem; color: #1c1917; margin: 0;">📸 Step-by-Step Visual Cooking Guide</h2>
+                <p style="font-size: 0.95rem; color: #78716c; margin-top: 6px;">Follow these step-by-step photos and sensory cues to make sure your dish turns out restaurant-perfect.</p>
+            </div>
+
+            ${stepsHTML}
+
+            <!-- Chef Secrets for Success -->
+            <div style="margin: 45px 0; padding: 26px; background: #fffaf5; border: 1px solid #fed7aa; border-radius: 16px;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.65rem; color: #9a3412; margin-bottom: 14px;">👨‍🍳 Pro Chef Tips for Flawless Results</h2>
+                <ul style="padding-left: 20px; font-size: 1rem;">
+                    ${chefSecretsHTML}
+                </ul>
+            </div>
+
+            <!-- Storage & Reheating -->
+            <div style="margin: 35px 0; padding: 22px 26px; background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 14px;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.5rem; color: #166534; margin-bottom: 10px;">❄️ Make-Ahead, Storage & Reheating</h2>
+                <div style="font-size: 0.98rem; line-height: 1.8; color: #14532d; text-align: justify;">
+                    ${data.storage.replace(/\*\*([^\*]+)\*\*:/g, '<strong>$1:</strong>').replace(/\n/g, '<br>')}
+                </div>
+            </div>
+
+            <!-- FULL PRINTABLE RECIPE CARD -->
+            <div id="recipe-card" style="margin: 50px 0; background: #ffffff; border: 2px solid #ea580c; border-radius: 18px; padding: 32px; box-shadow: 0 10px 30px rgba(234,88,12,0.08);">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 15px; border-bottom: 2px solid #ffedd5; padding-bottom: 20px; margin-bottom: 22px;">
+                    <div>
+                        <span style="background: #ea580c; color: #fff; font-size: 0.75rem; font-weight: 700; padding: 4px 10px; border-radius: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Printable Recipe Card</span>
+                        <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #1c1917; margin: 8px 0 6px;">${data.title}</h2>
+                        <div style="color: #ea580c; font-size: 0.95rem; font-weight: 600;">
+                            ★★★★★ <span>4.9 from 89 reviews</span>
+                        </div>
+                    </div>
+                    <div style="display: flex; gap: 10px;">
+                        <button onclick="window.print()" class="print-btn-pill" style="background: #ea580c; color: #fff !important; border: none; box-shadow: 0 2px 8px rgba(234,88,12,0.3);">
+                            🖨️ Print Recipe
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Recipe Overview Grid -->
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 12px; background: #fff7ed; padding: 16px; border-radius: 12px; margin-bottom: 26px; text-align: center;">
+                    <div>
+                        <div style="font-size: 0.75rem; color: #9a3412; font-weight: 700; text-transform: uppercase;">Prep Time</div>
+                        <div style="font-size: 1.1rem; font-weight: 700; color: #1c1917; margin-top: 2px;">${data.prepTime}</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.75rem; color: #9a3412; font-weight: 700; text-transform: uppercase;">Cook Time</div>
+                        <div style="font-size: 1.1rem; font-weight: 700; color: #1c1917; margin-top: 2px;">${data.cookTime}</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.75rem; color: #9a3412; font-weight: 700; text-transform: uppercase;">Total Time</div>
+                        <div style="font-size: 1.1rem; font-weight: 700; color: #1c1917; margin-top: 2px;">${data.totalTime}</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.75rem; color: #9a3412; font-weight: 700; text-transform: uppercase;">Servings</div>
+                        <div style="font-size: 1.1rem; font-weight: 700; color: #1c1917; margin-top: 2px;">${data.servings}</div>
+                    </div>
+                    <div>
+                        <div style="font-size: 0.75rem; color: #9a3412; font-weight: 700; text-transform: uppercase;">Calories</div>
+                        <div style="font-size: 1.1rem; font-weight: 700; color: #1c1917; margin-top: 2px;">${data.calories}</div>
+                    </div>
+                </div>
+
+                <!-- Ingredients Checklist -->
+                <div style="margin-bottom: 28px;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #1c1917; margin-bottom: 14px; border-left: 4px solid #ea580c; padding-left: 10px;">Ingredients (Check off as you cook)</h3>
+                    <div style="background: #fafaf9; padding: 18px 22px; border-radius: 12px;">
+                        ${ingredientsChecklistHTML}
+                    </div>
+                </div>
+
+                <!-- Instructions List -->
+                <div style="margin-bottom: 26px;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.35rem; color: #1c1917; margin-bottom: 14px; border-left: 4px solid #ea580c; padding-left: 10px;">Step-by-Step Directions</h3>
+                    <ol style="padding-left: 22px; font-size: 1rem;">
+                        ${recipeCardInstructionsHTML}
+                    </ol>
+                </div>
+
+                <!-- Recipe Notes -->
+                <div style="background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px; padding: 14px 18px; font-size: 0.92rem; color: #1e3a8a;">
+                    📌 <strong>Cook's Notes:</strong> Store any leftovers in an airtight glass container in the refrigerator for up to 4 days. If reheating sauces, add 1-2 tablespoons of water or chicken broth to maintain the silky texture.
+                </div>
+            </div>
+
+            <!-- FAQs -->
+            <div id="faqs" style="margin: 45px 0; padding: 28px; background: #ffffff; border-radius: 16px; border: 1px solid #f0e6dc;">
+                <h2 style="font-family: var(--font-heading); font-size: 1.85rem; margin-bottom: 18px; color: var(--dark-text);">Frequently Asked Questions (FAQs)</h2>
+                ${faqsHTML}
+            </div>
+
+            <!-- Conclusion -->
+            <div class="conclusion-content" style="font-size: 1.08rem; line-height: 1.85; margin-top: 35px; padding-top: 30px; border-top: 1px solid var(--border-color); text-align: justify;">
+                <p style="margin-bottom: 18px; line-height: 1.8;">${data.conclusion}</p>
+                <p style="line-height: 1.8;">Be sure to save this recipe to your <a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank">Pinterest boards</a> so you can easily whip it up whenever cravings strike!</p>
+            </div>
+        </main>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-card">
+                <h3>About Cozy Plate Recipes</h3>
+                <p>Simple, comforting, budget-friendly recipes, party finger foods, and viral dinner ideas crafted for everyday home cooks.</p>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>Follow Us</h3>
+                <a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank" class="btn btn-primary" style="width:100%; text-align:center; background:#e60023; color:#fff;">📌 Save Ideas on Pinterest</a>
+            </div>
+
+            <!-- Sidebar Sticky Ad Unit -->
+            <div class="sidebar-widget sidebar-ad" style="position: sticky; top: 80px; margin-top: 25px;">
+                <div class="ad-wrapper" style="background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 8px; padding: 15px; text-align: center; min-height: 280px;">
+                    <div style="color: #6c757d; font-size: 11px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">Advertisement</div>
+                    <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-5314498336592071" data-ad-slot="7410110443" data-ad-format="auto" data-full-width-responsive="true"></ins>
+                    <script>(adsbygoogle = window.adsbygoogle || []).push({});<\/script>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="footer-logo"><div class="logo-icon">🍲</div>Cozy Plate <span>Recipes</span></a>
+                    <p>Mouth-watering, budget-friendly home cooking recipes and viral dinner ideas crafted for busy families.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Categories</h4>
+                    <ul>
+                        <li><a href="/category/quick-dinners">Quick Dinners</a></li>
+                        <li><a href="/category/crockpot-recipes">Crockpot Meals</a></li>
+                        <li><a href="/category/air-fryer">Air Fryer</a></li>
+                        <li><a href="/category/desserts">Easy Desserts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Follow Cozy Plate</h4>
+                    <ul>
+                        <li><a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank">Pinterest</a></li>
+                        <li><a href="/contact-us">Contact Team</a></li>
+                        <li><a href="/privacy-policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Cozy Plate Recipes. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox-modal">
+        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" class="lightbox-content" src="" alt="">
+        <div id="lightbox-caption" class="lightbox-caption"></div>
+    </div>
+
+    <script>
+        function openLightbox(src, caption) {
+            const lb = document.getElementById('lightbox');
+            const img = document.getElementById('lightbox-img');
+            const cap = document.getElementById('lightbox-caption');
+            if (lb && img) {
+                img.src = src;
+                if (cap) cap.textContent = caption || '';
+                lb.classList.add('active');
+            }
+        }
+        function closeLightbox() {
+            document.getElementById('lightbox')?.classList.remove('active');
+        }
+        document.getElementById('lightbox')?.addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        // Mobile Drawer
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const drawer = document.querySelector('.mobile-drawer');
+        const overlay = document.querySelector('.mobile-drawer-overlay');
+        const closeBtn = document.querySelector('.drawer-close');
+        function toggleDrawer() {
+            if (drawer) drawer.classList.toggle('active');
+            if (overlay) overlay.classList.toggle('active');
+        }
+        if (menuBtn) menuBtn.addEventListener('click', toggleDrawer);
+        if (closeBtn) closeBtn.addEventListener('click', toggleDrawer);
+        if (overlay) overlay.addEventListener('click', toggleDrawer);
+
+        // Pinterest Save Pin delegation
+        document.addEventListener('click', function(e) {
+            const btn = e.target.closest('.pin-this-btn');
+            if (!btn) return;
+            e.preventDefault();
+            const pageUrl = encodeURIComponent(window.location.href);
+            const mediaUrl = encodeURIComponent(btn.getAttribute('data-image') || '');
+            const description = encodeURIComponent(btn.getAttribute('data-title') || document.title);
+            const pinUrl = 'https://www.pinterest.com/pin/create/button/?url=' + pageUrl + '&media=' + mediaUrl + '&description=' + description;
+            window.open(pinUrl, 'pinterest_pin', 'width=750,height=500,toolbar=0,menubar=0,location=0');
+        });
+    <\/script>
+</body>
+</html>`;
+        }
+
 
         function parseAiOutput(text, data) {
 
@@ -2101,7 +3012,7 @@ ${tocItemsHTML}
 
                     figcaption: `${name} aesthetic styling for ${keyword}.`,
 
-                    paragraph1: `This captivating setup features ${name.toLowerCase()} harmonized with balanced warm tones, natural textures, and cozy ambient light. Layering tactile materials brings effortless elegance.`,
+                    paragraph1: `This mouth-watering recipe features tender, flavorful ${name.toLowerCase()} cooked to perfection with aromatic herbs and savory seasonings.`,
 
                     paragraph2: `Serve warm immediately while fresh and garnish with freshly cracked black pepper and chopped herbs for peak visual appeal.`,
                     ingredients: 'Fresh pantry staples; seasonings; olive oil; shredded cheese; herbs',
@@ -2139,17 +3050,21 @@ ${tocItemsHTML}
 
 
 
-            generatedArticle.htmlContent = buildCompleteFoodArticleHTML({
-
-                ...generatedArticle,
-
-                siteDomain,
-
-                intro: `${title} brings together mouth-watering flavors, easy-to-find grocery staples, and time-saving cooking hacks. Whether you're hosting party guests or cooking a quick family dinner, these recipes are guaranteed crowd-pleasers.`,
-
-                conclusion: `Bringing your dream home decor vision to life is about celebrating comfort, visual warmth, and thoughtful styling. Pin your favorite ${keyword} ideas to Pinterest to build your mood board!`
-
-            });
+            if (window.currentArticleMode === 'single') {
+                generatedArticle = parseAiOutputSingle('', {
+                    title, keyword, slug, category, siteDomain,
+                    images: uploadedImages,
+                    seoDescription: `The absolute best ${title} recipe with detailed step-by-step photos, foolproof cooking instructions, ingredients table, and printable recipe card.`,
+                    featuredImage: uploadedImages[0]?.url || ''
+                });
+            } else {
+                generatedArticle.htmlContent = buildCompleteFoodArticleHTML({
+                    ...generatedArticle,
+                    siteDomain,
+                    intro: `${title} brings together mouth-watering flavors, easy-to-find grocery staples, and time-saving cooking hacks. Whether you're hosting party guests or cooking a quick family dinner, these recipes are guaranteed crowd-pleasers.`,
+                    conclusion: `Cooking comforting, delicious meals at home brings friends and families closer together. Save your favorite ${keyword} recipes to Pinterest to build your dream meal plan!`
+                });
+            }
 
 
 
