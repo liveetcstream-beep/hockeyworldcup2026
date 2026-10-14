@@ -809,13 +809,13 @@
 
         // Call Gemini or Groq with automatic fallback
 
-        async function callAIProvider(apiKey, prompt) {
+        async function callAIProvider(apiKey, prompt, maxTokensOverride = null) {
             const activeKey = apiKey || localStorage.getItem('geminiApiKey') || DEFAULT_API_KEY;
 
             if (activeKey.startsWith('gsk_')) {
                 const groqModels = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b'];
                 const isShortTest = (!prompt || prompt.length < 80);
-                const maxTokens = isShortTest ? 50 : 3800;
+                const maxTokens = maxTokensOverride || (isShortTest ? 50 : 8000);
 
                 let lastGroqError = null;
                 for (const model of groqModels) {
@@ -1345,16 +1345,166 @@ IMPORTANT RULES:
 - No markdown (** or ##) inside the tag fields. Clean raw text only.`;
                 }
 
-                const aiText = await callAIProvider(apiKey, prompt);
+                let aiText = '';
 
                 if (currentMode === 'single') {
+                    aiText = await callAIProvider(apiKey, prompt, 8000);
                     generatedArticle = parseAiOutputSingle(aiText, {
                         title, keyword, slug, category, siteDomain,
                         images: uploadedImages,
                         seoDescription: seoDescriptionInput,
                         featuredImage: uploadedImages[0]?.url || ''
                     });
+                } else if (uploadedImages.length <= 8) {
+                    aiText = await callAIProvider(apiKey, prompt, 8000);
+                    generatedArticle = parseAiOutput(aiText, {
+                        title, keyword, slug, category, siteDomain,
+                        images: uploadedImages,
+                        seoDescription: seoDescriptionInput,
+                        featuredImage: uploadedImages[0]?.url || ''
+                    });
                 } else {
+                    // Multi-batch generation for large listicles (25-38 recipes)
+                    const BATCH_SIZE = 8;
+                    const totalBatches = Math.ceil(uploadedImages.length / BATCH_SIZE);
+
+                    const batch1Images = uploadedImages.slice(0, BATCH_SIZE);
+                    const batch1List = batch1Images.map((img, i) => {
+                        const cleanName = img.name.replace(/[-_]/g, ' ').replace(/\.[^/.]+$/, '').trim();
+                        return (i + 1) + '. ' + cleanName + ' (Filename: ' + img.name + ')';
+                    }).join('\n');
+
+                    const promptBatch1 = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance on 'Cozy Plate Recipes' (https://hockeyworldcup2026schedule.com).
+Write a comprehensive, top-notch, 100% topic-tailored 2026 Recipe master article.
+
+ARTICLE DETAILS:
+- Title: ${title}
+- Focus Keyword: ${keyword}
+- Category: ${category}
+- Context: ${seoDescriptionInput || 'Delicious home-cooked recipe roundup and culinary guide'}
+- Total Dishes in this article: ${uploadedImages.length} (In this first pass, write full recipe cards for dishes 1 to ${batch1Images.length})
+
+DISHES FOR PART 1:
+${batch1List}
+
+WRITING INSTRUCTIONS:
+1. Write an engaging, mouth-watering INTRO PARAGRAPH (3-4 sentences). Naturally incorporate the topic and focus keyword in an organic, grammatically correct sentence. Mention LSI entities like easy appetizers, party finger foods, savory bites, and festive desserts, and end with an engaging question for readers asking about their favorite party dishes.
+
+2. For EACH of the ${batch1Images.length} dishes above, write a recipe card block in this EXACT format:
+
+[RECIPE_START]
+NUMBER: (number)
+SLUG_ID: (unique-kebab-case-id based on dish name)
+H2_TITLE: (NUMBER. Catchy Mouth-Watering Recipe Name)
+TIME: (e.g. 25 Mins (10m prep, 15m cook))
+COST: (e.g. Budget-Friendly (~$2.50/serving))
+SERVINGS: (e.g. Serves 6-8)
+ALT_TEXT: (Mouth-watering descriptive alt text mentioning dish name, golden crust, sauce, garnishes, serving platter - 10-15 words)
+FIGCAPTION: (1 appetizing sentence describing the dish and flavor presentation)
+FLAVOR_INTRO: (3-4 sentences: exact flavor profile, savory/sweet notes, textures, aroma, and why this recipe is an absolute hit with guests)
+INGREDIENTS: (4-7 key ingredients separated by semicolons, e.g. 1 lb puff pastry; 8 oz cream cheese, softened; 1 tsp smoked paprika; 1 cup shredded cheddar; fresh parsley for garnish)
+INSTRUCTIONS: (Write 4-6 IN-DEPTH, crystal-clear, step-by-step cooking directions separated by semicolons. Each step MUST explain EXACTLY WHAT TO DO in comprehensive detail: include exact oven temperatures, burner heat levels like medium-high, precise minutes, visual doneness cues like 'until golden brown and fragrant', texture signs, and proper technique so ANY reader or beginner can easily recreate the dish flawlessly at home. Never write brief 1-line steps—provide rich, thorough cooking walkthroughs)
+CHEF_TIP: (1 high-value culinary secret: prep-ahead tip, reheating advice, or easy substitution)
+SERVING_NOTES: (2 sentences: serving suggestions, dip pairings, or freezer storage guidance)
+[RECIPE_END]
+
+3. SECTION 5: 5 CULINARY SECRETS & PARTY HOSTING TAKEAWAYS:
+[TAKEAWAYS_START]
+Provide 5 actionable food prep secrets tailored specifically to ${keyword} (Make-Ahead Assembly, Temperature Management for Hot & Cold Trays, Garnish Power for Pinterest-Worthy Photos, Smart Grocery Budget Swaps, Crowd-Pleasing Dipping Sauces). Format as 5 bullet points with strong titles.
+[TAKEAWAYS_END]
+
+4. SECTION 6: FREQUENTLY ASKED QUESTIONS (FAQs):
+[FAQS_START]
+Write 4 high-intent recipe FAQs tailored specifically to ${keyword} answering:
+- Can I make these recipes ahead of time?
+- What are the best budget grocery substitutions?
+- How should leftovers be stored and reheated?
+- What are great vegetarian or allergy-friendly options?
+Format: Q: (question) | A: (answer)
+[FAQS_END]
+
+5. Write a delicious CONCLUSION paragraph (3-4 sentences encouraging home cooks to save their favorite recipe pins to Pinterest and explore more comforting meals).
+
+IMPORTANT RULES:
+- Everything MUST be 100% specific to ${keyword} and food/cooking recipes.
+- NO home decor, NO furniture, NO interior design filler!
+- No markdown (** or ##) inside the tag fields. Clean raw text only.`;
+
+                    if (aiStatusBox) {
+                        aiStatusBox.innerHTML = '<div class="p-3 bg-amber-50 rounded-lg border border-amber-200 text-sm text-amber-800 flex items-center gap-2"><div class="loading-spinner inline-block" style="width:16px;height:16px;border-width:2px;"></div> Generating Part 1 (Recipes 1–' + batch1Images.length + ' of ' + uploadedImages.length + ')...</div>';
+                    }
+                    aiText = await callAIProvider(apiKey, promptBatch1, 8000);
+
+                    // Subsequent batches for remaining dishes
+                    let additionalRecipeBlocks = '';
+                    for (let b = 1; b < totalBatches; b++) {
+                        const start = b * BATCH_SIZE;
+                        const end = Math.min(start + BATCH_SIZE, uploadedImages.length);
+                        const batchImages = uploadedImages.slice(start, end);
+                        const batchList = batchImages.map((img, i) => {
+                            const actualNum = start + i + 1;
+                            const cleanName = img.name.replace(/[-_]/g, ' ').replace(/\.[^/.]+$/, '').trim();
+                            return actualNum + '. ' + cleanName + ' (Filename: ' + img.name + ')';
+                        }).join('\n');
+
+                        if (aiStatusBox) {
+                            aiStatusBox.innerHTML = '<div class="p-3 bg-amber-50 rounded-lg border border-amber-200 text-sm text-amber-800 flex items-center gap-2"><div class="loading-spinner inline-block" style="width:16px;height:16px;border-width:2px;"></div> Generating Part ' + (b + 1) + '/' + totalBatches + ' (Recipes ' + (start + 1) + '–' + end + ' of ' + uploadedImages.length + ')...</div>';
+                        }
+
+                        const continuationPrompt = `You are a world-class professional Chef and Recipe Developer writing for 'Cozy Plate Recipes'.
+This is CONTINUATION PART ${b + 1} of the recipe roundup article: '${title}' (${keyword}).
+
+DISHES TO INCLUDE (Generate full recipe cards for these exact dishes in order):
+${batchList}
+
+For EACH dish above, output a recipe card block in this EXACT format:
+
+[RECIPE_START]
+NUMBER: (number)
+SLUG_ID: (unique-kebab-case-id based on dish name)
+H2_TITLE: (NUMBER. Catchy Mouth-Watering Recipe Name)
+TIME: (e.g. 25 Mins (10m prep, 15m cook))
+COST: (e.g. Budget-Friendly (~$2.50/serving))
+SERVINGS: (e.g. Serves 6-8)
+ALT_TEXT: (Mouth-watering descriptive alt text mentioning dish name, golden crust, sauce, garnishes, serving platter - 10-15 words)
+FIGCAPTION: (1 appetizing sentence describing the dish and flavor presentation)
+FLAVOR_INTRO: (3-4 sentences: exact flavor profile, savory/sweet notes, textures, aroma, and why this recipe is an absolute hit with guests)
+INGREDIENTS: (4-7 key ingredients separated by semicolons, e.g. 1 lb protein; 2 tbsp olive oil; 3 cloves garlic; fresh parsley for garnish)
+INSTRUCTIONS: (Write 4-6 IN-DEPTH, crystal-clear, step-by-step cooking directions separated by semicolons. Include exact oven temperatures, burner heat levels like medium-high, precise minutes, visual doneness cues, texture signs, and proper technique)
+CHEF_TIP: (1 high-value culinary secret: prep-ahead tip, reheating advice, or easy substitution)
+SERVING_NOTES: (2 sentences: serving suggestions, dip pairings, or freezer storage guidance)
+[RECIPE_END]
+
+IMPORTANT:
+- Output ONLY the [RECIPE_START]...[RECIPE_END] blocks for dishes ${start + 1} to ${end}.
+- Do NOT output any intro, takeaways, FAQs, or conclusion.
+- Clean raw text only.`;
+
+                        try {
+                            const continuationText = await callAIProvider(apiKey, continuationPrompt, 8000);
+                            if (continuationText && continuationText.includes('[RECIPE_START]')) {
+                                additionalRecipeBlocks += '\n\n' + continuationText.trim();
+                            }
+                        } catch (err) {
+                            console.warn('Batch ' + (b + 1) + ' error:', err);
+                        }
+                    }
+
+                    // Stitch all recipe blocks into aiText right before [TAKEAWAYS_START]
+                    if (additionalRecipeBlocks) {
+                        const takeawayIdx = aiText.indexOf('[TAKEAWAYS_START]');
+                        if (takeawayIdx !== -1) {
+                            aiText = aiText.substring(0, takeawayIdx) + '\n\n' + additionalRecipeBlocks + '\n\n' + aiText.substring(takeawayIdx);
+                        } else {
+                            const faqIdx = aiText.indexOf('[FAQS_START]');
+                            if (faqIdx !== -1) {
+                                aiText = aiText.substring(0, faqIdx) + '\n\n' + additionalRecipeBlocks + '\n\n' + aiText.substring(faqIdx);
+                            } else {
+                                aiText += '\n\n' + additionalRecipeBlocks;
+                            }
+                        }
+                    }
+
                     generatedArticle = parseAiOutput(aiText, {
                         title, keyword, slug, category, siteDomain,
                         images: uploadedImages,
@@ -1362,8 +1512,6 @@ IMPORTANT RULES:
                         featuredImage: uploadedImages[0]?.url || ''
                     });
                 }
-
-
 
                 renderPreview(generatedArticle);
 
@@ -2229,6 +2377,36 @@ IMPORTANT RULES:
             }
 
 
+
+                        // Safety check: ensure EVERY uploaded image has a full recipe card block
+            if (data.images && data.images.length > designBlocks.length) {
+                const missingStart = designBlocks.length;
+                for (let i = missingStart; i < data.images.length; i++) {
+                    const img = data.images[i];
+                    const rawName = (img?.name || ('Recipe ' + (i + 1)))
+                        .replace(/\.[^/.]+$/, '')
+                        .replace(/^[0-9]+[-_\s]*/, '')
+                        .replace(/[-_]/g, ' ')
+                        .trim();
+                    const cleanTitle = rawName ? (rawName.charAt(0).toUpperCase() + rawName.slice(1)) : ('Chef\'s Special Dish ' + (i + 1));
+                    designBlocks.push({
+                        number: i + 1,
+                        slugId: 'recipe-' + (i + 1) + '-' + cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
+                        h2Title: (i + 1) + '. ' + cleanTitle,
+                        time: '25 Mins (10m prep, 15m cook)',
+                        cost: 'Budget-Friendly (~$2.75/serving)',
+                        servings: 'Serves 4-6',
+                        altText: cleanTitle + ' presented on a rustic platter with fresh herbs and homemade sauce - recipe ' + (i + 1),
+                        figcaption: 'Freshly prepared ' + cleanTitle.toLowerCase() + ' served warm and fragrant straight from the kitchen.',
+                        paragraph1: 'This mouth-watering ' + cleanTitle.toLowerCase() + ' delivers exceptional flavor and comforting warmth in every bite. With tender textures and a rich savory aroma, it has quickly become a standout crowd favorite for both busy weeknights and festive gatherings.',
+                        ingredients: '1.5 lbs main protein or fresh veggies; 2 tbsp olive oil or unsalted butter; 3 cloves fresh garlic, minced; 1 cup savory broth or rich cream; 1 tsp kosher salt; 1/2 tsp cracked black pepper; 2 tbsp fresh herbs for garnish',
+                        instructions: 'Prep and season ingredients thoroughly with kosher salt, cracked black pepper, and herbs; Heat a large skillet over medium-high heat with olive oil or butter until shimmering; Sear protein or aromatics for 4-5 minutes per side until rich golden brown fond develops; Pour in broth or cream, lower heat to a gentle simmer, and cook for 6-8 minutes until tender and sauce thickens; Garnish with fresh herbs and serve piping hot straight from the pan.',
+                        proTip: 'For deeper flavor, allow ingredients to rest for 5 minutes after cooking so the savory juices redistribute throughout.',
+                        paragraph2: 'Serve warm alongside roasted seasonal vegetables, garlic butter potatoes, or warm crusty artisan bread. Store leftovers in an airtight container in the refrigerator for up to 4 days.',
+                        image: img
+                    });
+                }
+            }
 
             // Extract Conclusion
 
