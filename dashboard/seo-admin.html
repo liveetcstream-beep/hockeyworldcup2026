@@ -282,7 +282,7 @@
                     <div>
                         <label class="block text-sm font-bold text-stone-900 mb-2.5 flex items-center justify-between">
                             <span class="flex items-center gap-2"><span>🎯</span> Select Article Format</span>
-                            <span id="modeBadge" class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-800 border border-orange-200">Mode: 30+ Recipe Roundup</span>
+                            <span id="modeBadge" class="text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-800 border border-orange-200">Mode 1: Recipe Roundup (Up to 40)</span>
                         </label>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-3.5">
                             <label id="modeCardListicle" class="relative flex items-start gap-3.5 p-4 rounded-2xl border-2 border-orange-500 bg-orange-50/60 cursor-pointer transition hover:shadow-md">
@@ -292,7 +292,7 @@
                                         <span>📌</span> Mode 1: Viral Roundup / Listicle
                                     </div>
                                     <p class="text-xs text-stone-600 mt-1 leading-relaxed">
-                                        Best for massive <strong>Pinterest repins & viral traffic</strong>. 15–38 distinct dish variations on one page, each with its own photo, ingredients, and method.
+                                        Best for massive <strong>Pinterest repins & viral traffic</strong>. Up to 40 distinct recipe ideas on one page, each with its own photo, ingredients, and method. Title number matches exact image count automatically.
                                     </p>
                                 </div>
                             </label>
@@ -1139,7 +1139,7 @@
                 if (cardListicle) cardListicle.className = 'relative flex items-start gap-3.5 p-4 rounded-2xl border-2 border-orange-500 bg-orange-50/60 cursor-pointer transition hover:shadow-md';
                 if (cardSingle) cardSingle.className = 'relative flex items-start gap-3.5 p-4 rounded-2xl border-2 border-stone-200 bg-white cursor-pointer transition hover:border-orange-300 hover:shadow-md';
                 if (badge) {
-                    badge.textContent = 'Mode: 30+ Recipe Roundup';
+                    badge.textContent = (uploadedImages.length > 0 ? ('Mode 1: ' + uploadedImages.length + ' Recipe Roundup') : 'Mode 1: Recipe Roundup (Up to 40)');
                     badge.className = 'text-[11px] font-bold px-2.5 py-0.5 rounded-full bg-orange-100 text-orange-800 border border-orange-200';
                 }
             }
@@ -1147,7 +1147,28 @@
 
         window.generateWithGemini = async function() {
 
-            const title = document.getElementById('articleTitle').value.trim();
+            let title = document.getElementById('articleTitle').value.trim();
+            const currentMode = window.currentArticleMode || 'listicle';
+
+            // Smart Title Count Rule: Ensure title count matches uploaded images exactly (up to 40)
+            if (currentMode === 'listicle' && uploadedImages.length > 0) {
+                const numMatch = title.match(/^(\d+)\s*(.*)/);
+                if (numMatch) {
+                    const titleNum = parseInt(numMatch[1], 10);
+                    if (titleNum !== uploadedImages.length) {
+                        console.warn(`Smart Sync: Title had ${titleNum} but ${uploadedImages.length} images uploaded. Auto-syncing title.`);
+                        title = `${uploadedImages.length} ${numMatch[2]}`.trim();
+                        document.getElementById('articleTitle').value = title;
+                    }
+                } else {
+                    title = `${uploadedImages.length} ${title}`.trim();
+                    document.getElementById('articleTitle').value = title;
+                }
+                const slugInput = document.getElementById('urlSlug');
+                if (slugInput && !slugInput.dataset.custom) {
+                    slugInput.value = title.toLowerCase().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-+|-+$/g, '');
+                }
+            }
 
             const category = document.getElementById('articleCategory').value;
 
@@ -1530,7 +1551,7 @@ IMPORTANT:
 
                 const alertMsg = (window.currentArticleMode === 'single')
                     ? `✅ In-Depth Single Recipe Generated Successfully!\n\n📊 Est. Words: ~${wordCount}\n📸 Process Steps: ${uploadedImages.length} visual cooking steps with photos\n🍳 Features: Full Schema.org Recipe Card, Jump to Recipe & Print Buttons!\n\nPreview below, then click "Publish to Website"!`
-                    : `✅ 30+ Recipe Roundup Generated Successfully!\n\n📊 Est. Words: ~${wordCount}\n🖼️ Recipes: ${uploadedImages.length} complete recipe cards with ingredients & methods\n\nPreview below, then click "Publish to Website"!`;
+                    : `✅ ${uploadedImages.length} Recipe Roundup Generated Successfully!\n\n📊 Est. Words: ~${wordCount}\n🖼️ Recipes: ${uploadedImages.length} complete recipe cards with ingredients & methods (Title & Body in 100% Sync)\n\nPreview below, then click "Publish to Website"!`;
                 alert(alertMsg);
 
 
