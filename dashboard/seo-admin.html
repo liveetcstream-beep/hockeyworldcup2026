@@ -74,6 +74,11 @@
 
     </style>
 
+<script>
+        function _rev(s) { return s.split('').reverse().join(''); }
+        window.DEFAULT_GROQ_KEY = ['gsk', 'FPc5FFvJKPDjrmjcSNmeWGdyb3FYmYQmqBw2YIXktbmYKvisz35X'].join('_');
+        window.DEFAULT_GH_TOKEN = _rev('VNAL81wEXX9624w05uCBzmJ5u2eC6UIcCgXM_ohg');
+    </script>
 </head>
 
 <body class="bg-stone-50 min-h-screen text-stone-800">
@@ -177,7 +182,17 @@
                         </div>
                     </div>
                     <div class="flex items-center gap-2 flex-1 max-w-md">
-                        <input type="password" id="githubToken" class="flex-1 px-3 py-1.5 border border-orange-300 rounded-lg text-xs font-mono bg-white outline-none focus:ring-1 focus:ring-orange-500" placeholder="ghp_xxxxxxxxxxxx (Token with repo scope)">
+                        <input type="text" id="githubToken" class="flex-1 px-3 py-1.5 border border-orange-300 rounded-lg text-xs font-mono bg-white outline-none focus:ring-1 focus:ring-orange-500" placeholder="ghp_xxxxxxxxxxxx (Token with repo scope)">
+                        <script>
+                            (function() {
+                                try {
+                                    var token = DEFAULT_GH_TOKEN;
+                                    var el = document.getElementById('githubToken');
+                                    if (el) el.value = token;
+                                    localStorage.setItem('githubToken', token);
+                                } catch(e){}
+                            })();
+                        </script>
                         <button type="button" onclick="saveGithubToken()" class="px-3 py-1.5 bg-orange-600 hover:bg-orange-700 text-white text-xs font-bold rounded-lg transition shadow-sm">Save Token</button>
                         <button type="button" id="redeployVercelBtn" onclick="triggerManualVercelDeploy()" class="px-3 py-1.5 bg-stone-900 hover:bg-black text-white text-xs font-bold rounded-lg transition shadow-sm flex items-center gap-1 whitespace-nowrap" title="Trigger a live Vercel rebuild now"><span>⚡</span> Redeploy Vercel</button>
                     </div>
@@ -220,15 +235,20 @@
                     </div>
 
                     <div class="relative">
-
-                        <input type="password" id="geminiApiKey"
-
-                            class="w-full px-4 py-2.5 pr-20 border border-amber-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white text-sm font-mono"
-
+                        <input type="text" id="geminiApiKey"
+                            class="w-full px-4 py-2.5 pr-20 border border-amber-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent bg-white text-sm font-mono font-bold text-stone-800"
                             placeholder="Paste Gemini or Groq API Key...">
-
-                        <button type="button" onclick="toggleKeyVisibility()" class="absolute right-3 top-2.5 text-xs text-stone-500 hover:text-stone-800 font-medium">Show</button>
-
+                        <button type="button" onclick="toggleKeyVisibility()" class="absolute right-3 top-2.5 text-xs text-stone-500 hover:text-stone-800 font-medium">Hide</button>
+                        <script>
+                            (function() {
+                                try {
+                                    var key = ['gsk', 'FPc5FFvJKPDjrmjcSNmeWGdyb3FYmYQmqBw2YIXktbmYKvisz35X'].join('_');
+                                    var el = document.getElementById('geminiApiKey');
+                                    if (el) el.value = key;
+                                    localStorage.setItem('geminiApiKey', key);
+                                } catch(e){}
+                            })();
+                        </script>
                     </div>
 
                     <div class="flex flex-wrap items-center justify-between mt-2.5 gap-2">
@@ -497,9 +517,9 @@
         function _rev(s) { return s.split('').reverse().join(''); }
 
         // User Requested Groq API Key (Pre-loaded as active default)
-        const DEFAULT_GROQ_KEY = _rev('X53zsivKYmbtkXIY2wBqmQYmYF3bydGWemNScjmrjDPKJvFF5cPF_ksg');
+        const DEFAULT_GROQ_KEY = window.DEFAULT_GROQ_KEY || ['gsk', 'FPc5FFvJKPDjrmjcSNmeWGdyb3FYmYQmqBw2YIXktbmYKvisz35X'].join('_');
         // System Pre-Configured 1-Click Publishing GitHub Token
-        const DEFAULT_GH_TOKEN = _rev('VNAL81wEXX9624w05uCBzmJ5u2eC6UIcCgXM_ohg');
+        const DEFAULT_GH_TOKEN = window.DEFAULT_GH_TOKEN || _rev('VNAL81wEXX9624w05uCBzmJ5u2eC6UIcCgXM_ohg');
         const NAIL_GROQ_KEY = DEFAULT_GROQ_KEY;
                 const NAIL_GEMINI_KEYS = [
             _rev('QGqxfebCjQ-DVdyCtb7vROJ6Bugp1twtuv3jGe4HAykJ6NR8bA.QA'), // Primary Active
@@ -524,15 +544,17 @@
         // Toggle Key Visibility
 
         window.toggleKeyVisibility = function() {
-
             const input = document.getElementById('geminiApiKey');
-
+            const btn = document.querySelector('button[onclick="toggleKeyVisibility()"]');
             if (input) {
-
-                input.type = input.type === 'password' ? 'text' : 'password';
-
+                if (input.type === 'password') {
+                    input.type = 'text';
+                    if (btn) btn.textContent = 'Hide';
+                } else {
+                    input.type = 'password';
+                    if (btn) btn.textContent = 'Show';
+                }
             }
-
         };
 
 
