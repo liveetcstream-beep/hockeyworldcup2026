@@ -53,6 +53,11 @@
       "source": "/posts/christmas-appetizer-ideas",
       "destination": "/posts/34-christmas-appetizer-ideas-everyone-will-love",
       "permanent": true
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms-and-conditions",
+      "permanent": true
     }
   ]
 }
