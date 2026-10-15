@@ -74,11 +74,6 @@
       "source": "/terms",
       "destination": "/terms-and-conditions",
       "permanent": true
-    },
-    {
-      "source": "/posts/recipe-post",
-      "destination": "/posts/halloween-party-food-ideas-for-adults",
-      "permanent": true
     }
   ]
 }
