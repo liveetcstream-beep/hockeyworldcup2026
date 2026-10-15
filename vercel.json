@@ -1,6 +1,6 @@
 {
   "framework": null,
-  "buildCommand": null,
+  "buildCommand": "node build.js",
   "installCommand": null,
   "outputDirectory": ".",
   "cleanUrls": true,
@@ -34,6 +34,22 @@
     }
   ],
   "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.hockeyworldcup2026schedule.com"
+        }
+      ],
+      "destination": "https://hockeyworldcup2026schedule.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/posts/recipe-post",
+      "destination": "/posts/halloween-party-food-ideas-for-adults",
+      "permanent": true
+    },
     {
       "source": "/posts/halloween-snacks-ideas-for-kids",
       "destination": "/posts/halloween-snack-ideas-for-kids",
