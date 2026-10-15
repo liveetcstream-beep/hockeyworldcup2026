@@ -1,4 +1,5 @@
-﻿User-agent: *
+User-agent: *
+Disallow: /dashboard/
 Allow: /
 
 Sitemap: https://hockeyworldcup2026schedule.com/sitemap.xml

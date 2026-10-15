@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+    <meta name="robots" content="noindex, nofollow, noarchive">
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
     <meta http-equiv="Pragma" content="no-cache">
     <meta http-equiv="Expires" content="0">
@@ -2765,6 +2766,34 @@ IMPORTANT:
 
     }
 
+    ${'<'}/script>
+
+    <!-- Schema.org BreadcrumbList -->
+    ${'<'}script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "${siteUrl}/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "${catDisplay}",
+                "item": "${siteUrl}/posts"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "${data.title.replace(/"/g, '\\"')}",
+                "item": "${postUrl}"
+            }
+        ]
+    }
     ${'<'}/script>
 
 </head>

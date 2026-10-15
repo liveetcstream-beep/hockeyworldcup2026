@@ -1,4 +1,4 @@
-﻿// Pinterest Social Share & Pin Handler
+// Pinterest Social Share & Pin Handler
 document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('click', (e) => {
         // Support both .pin-save-overlay-btn (cards) and .pin-this-btn (article images)
@@ -21,7 +21,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 img = window.location.origin + img;
             }
 
-            const pageUrl = window.location.href;
+            // Always use clean canonical URL for Pinterest attribution
+            const canonicalEl = document.querySelector('link[rel="canonical"]');
+            const pageUrl = (canonicalEl && canonicalEl.href) ? canonicalEl.href : (window.location.origin + window.location.pathname);
             const pinUrl = `https://www.pinterest.com/pin/create/button/?url=${encodeURIComponent(pageUrl)}&media=${encodeURIComponent(img)}&description=${encodeURIComponent(title)}`;
             
             // Try window.open first, or direct fallback on mobile
