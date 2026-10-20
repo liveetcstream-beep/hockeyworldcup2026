@@ -13,8 +13,8 @@ for (const f of fs.readdirSync(postsDir)) {
   let h = fs.readFileSync(p, 'utf8');
   const orig = h;
   // JSON-LD: generic Organization author -> real Person author
-  h = h.split('"author": { "@type": "Organization", "name": "Cozy Plate Recipes", "url": "https://hockeyworldcup2026schedule.com" }')
-       .join('"author": { "@type": "Person", "name": "Muhammad Bilal", "url": "https://hockeyworldcup2026schedule.com/about-us" }');
+  h = h.split('"author": { "@type": "Organization", "name": "Cozy Plate Recipes", "url": "https://recipes.bilalmania.com" }')
+       .join('"author": { "@type": "Person", "name": "Muhammad Bilal", "url": "https://recipes.bilalmania.com/about-us" }');
   // Visible byline: editorial team -> real person
   h = h.split('<div class="author-avatar-md">CP</div>')
        .join('<div class="author-avatar-md">MB</div>');
