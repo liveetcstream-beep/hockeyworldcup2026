@@ -2,4 +2,4 @@ User-agent: *
 Disallow: /dashboard/
 Allow: /
 
-Sitemap: https://hockeyworldcup2026schedule.com/sitemap.xml
+Sitemap: https://recipes.bilalmania.com/sitemap.xml
