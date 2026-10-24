@@ -39,10 +39,10 @@
       "has": [
         {
           "type": "host",
-          "value": "www.hockeyworldcup2026schedule.com"
+          "value": "www.recipes.bilalmania.com"
         }
       ],
-      "destination": "https://hockeyworldcup2026schedule.com/$1",
+      "destination": "https://recipes.bilalmania.com/$1",
       "permanent": true
     },
     {

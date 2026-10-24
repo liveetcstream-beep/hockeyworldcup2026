@@ -102,7 +102,7 @@
                     <a href="#" class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-orange-600 text-white font-medium">
                         <span>🍳</span> Create Recipe Article
                     </a>
-                    <a href="https://hockeyworldcup2026schedule.com" target="_blank" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-stone-800 transition">
+                    <a href="https://recipes.bilalmania.com" target="_blank" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-stone-800 transition">
                         <span>🌐</span> View Live Website
                     </a>
                     <a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank" class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-stone-800 transition">
@@ -380,7 +380,7 @@
 
                             <label class="block text-sm font-semibold text-stone-800 mb-2">Website Domain / Base URL</label>
 
-                            <input type="text" id="siteDomain" class="w-full px-4 py-2.5 border border-stone-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent" value="https://hockeyworldcup2026schedule.com" placeholder="https://hockeyworldcup2026schedule.com">
+                            <input type="text" id="siteDomain" class="w-full px-4 py-2.5 border border-stone-300 rounded-xl focus:ring-2 focus:ring-orange-500 focus:border-transparent" value="https://recipes.bilalmania.com" placeholder="https://recipes.bilalmania.com">
 
                         </div>
 
@@ -1177,7 +1177,7 @@
 
             const seoDescriptionInput = document.getElementById('seoDescription').value.trim();
 
-            const siteDomain = document.getElementById('siteDomain').value.trim() || 'https://hockeyworldcup2026schedule.com';
+            const siteDomain = document.getElementById('siteDomain').value.trim() || 'https://recipes.bilalmania.com';
 
             const apiKey = (document.getElementById('geminiApiKey')?.value || '').trim() || localStorage.getItem('geminiApiKey') || DEFAULT_API_KEY;
 
@@ -1232,7 +1232,7 @@
 
                 if (currentMode === 'single') {
                     // MODE 2: In-Depth Single Recipe Prompt
-                    prompt = `You are a world-class professional Executive Chef, Recipe Developer, and Food Blogger writing for 'Cozy Plate Recipes' (https://hockeyworldcup2026schedule.com).
+                    prompt = `You are a world-class professional Executive Chef, Recipe Developer, and Food Blogger writing for 'Cozy Plate Recipes' (https://recipes.bilalmania.com).
 Write a definitive, in-depth, master recipe guide for: '${title}'.
 Target Audience: Home cooks and passionate foodies seeking a foolproof, restaurant-quality meal.
 
@@ -1310,7 +1310,7 @@ IMPORTANT:
 - Do not mention home decor or unrelated topics.`;
                 } else {
                     // MODE 1: Viral Roundup / Listicle Prompt (Existing)
-                    prompt = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance on 'Cozy Plate Recipes' (https://hockeyworldcup2026schedule.com).
+                    prompt = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance on 'Cozy Plate Recipes' (https://recipes.bilalmania.com).
 Write a comprehensive, top-notch, 100% topic-tailored 2026 Recipe master article.
 
 ARTICLE DETAILS:
@@ -1396,7 +1396,7 @@ IMPORTANT RULES:
                         return (i + 1) + '. ' + cleanName + ' (Filename: ' + img.name + ')';
                     }).join('\n');
 
-                    const promptBatch1 = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance on 'Cozy Plate Recipes' (https://hockeyworldcup2026schedule.com).
+                    const promptBatch1 = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance on 'Cozy Plate Recipes' (https://recipes.bilalmania.com).
 Write a comprehensive, top-notch, 100% topic-tailored 2026 Recipe master article.
 
 ARTICLE DETAILS:
@@ -2969,7 +2969,7 @@ ${tocItemsHTML}
 
             <div class="conclusion-content" style="font-size: 1.08rem; line-height: 1.85; margin-top: 35px; padding-top: 30px; border-top: 1px solid var(--border-color);">
 
-                <p style="margin-bottom: 18px; line-height: 1.8;">Cooking comforting, delicious meals at home brings friends and families closer together. Save your favorite recipes to your <a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank">Pinterest boards</a> and discover more easy dinner ideas on <a href="https://hockeyworldcup2026schedule.com" rel="internal">Cozy Plate Recipes</a>!</p>
+                <p style="margin-bottom: 18px; line-height: 1.8;">Cooking comforting, delicious meals at home brings friends and families closer together. Save your favorite recipes to your <a href="https://www.pinterest.com/CozyPlateRecipes/" target="_blank">Pinterest boards</a> and discover more easy dinner ideas on <a href="https://recipes.bilalmania.com" rel="internal">Cozy Plate Recipes</a>!</p>
 
             </div>
 
@@ -3224,7 +3224,7 @@ ${tocItemsHTML}
                 });
 
                 if (!previewHtml.includes('<base ') && previewHtml.includes('<head>')) {
-                    previewHtml = previewHtml.replace('<head>', '<head><base href="https://hockeyworldcup2026schedule.com/">');
+                    previewHtml = previewHtml.replace('<head>', '<head><base href="https://recipes.bilalmania.com/">');
                 }
                 iframe.srcdoc = previewHtml;
             }
@@ -3247,7 +3247,7 @@ ${tocItemsHTML}
 
             const focusKeywordInput = document.getElementById('focusKeyword').value.trim();
 
-            const siteDomain = document.getElementById('siteDomain').value.trim() || 'https://hockeyworldcup2026schedule.com';
+            const siteDomain = document.getElementById('siteDomain').value.trim() || 'https://recipes.bilalmania.com';
 
 
 
@@ -3554,7 +3554,7 @@ ${tocItemsHTML}
                 });
                 
                 if (depResult.success === true) {
-                    alert('🎉 Vercel Deployment Completed Successfully!\n\nAll recipes and homepage updates are live on:\nhttps://hockeyworldcup2026schedule.com');
+                    alert('🎉 Vercel Deployment Completed Successfully!\n\nAll recipes and homepage updates are live on:\nhttps://recipes.bilalmania.com');
                 } else if (depResult.success === false) {
                     alert('⚠️ Vercel Deployment Status:\n' + (depResult.status?.description || 'Build error on Vercel'));
                 } else {
@@ -3640,7 +3640,7 @@ ${tocItemsHTML}
         async function integrateArticleIntoListings(token, slug, title, articleData) {
             const owner = 'liveetcstream-beep';
             const repo = 'hockeyworldcup2026';
-            const siteUrl = 'https://hockeyworldcup2026schedule.com';
+            const siteUrl = 'https://recipes.bilalmania.com';
             
             const categorySlug = (articleData.category || 'holiday-seasonal').toLowerCase().replace(/[^a-z0-9]+/g, '-');
             const categoryBadge = articleData.category || 'Holiday & Seasonal';
@@ -3777,7 +3777,7 @@ ${tocItemsHTML}
             const title = (document.getElementById('articleTitle')?.value || '').trim() || generatedArticle?.title || 'Cozy Recipe Post';
             const owner = 'liveetcstream-beep';
             const repo = 'hockeyworldcup2026';
-            const siteUrl = 'https://hockeyworldcup2026schedule.com';
+            const siteUrl = 'https://recipes.bilalmania.com';
             const filePath = `posts/${slug}.html`;
 
             try {
@@ -3958,11 +3958,11 @@ ${tocItemsHTML}
                 setPublishButtonState(false, '✅ Published & Live on Vercel!', true);
 
                 if (vercelRes.success === true) {
-                    alert(`🎉 100% SUCCESS! Article is LIVE on Vercel & Website!\n\n🔗 Post URL: https://hockeyworldcup2026schedule.com/posts/${slug}\n\n✅ Live Recipe Page Created!\n✅ Homepage & Grid Updated!\n✅ Sitemap.xml Updated!\n✅ Vercel Deployment Completed!`);
+                    alert(`🎉 100% SUCCESS! Article is LIVE on Vercel & Website!\n\n🔗 Post URL: https://recipes.bilalmania.com/posts/${slug}\n\n✅ Live Recipe Page Created!\n✅ Homepage & Grid Updated!\n✅ Sitemap.xml Updated!\n✅ Vercel Deployment Completed!`);
                 } else if (vercelRes.success === false) {
                     alert(`⚠️ GitHub Commit Succeeded, but Vercel reported:\n\n${vercelRes.status?.description || 'Build error'}\n\nIf rate-limited, you can click "Redeploy Vercel" once cooldown passes.`);
                 } else {
-                    alert(`🎉 SUCCESS! Article Committed to GitHub!\n\n🔗 Post URL: https://hockeyworldcup2026schedule.com/posts/${slug}\n\nVercel deployment is processing in the background and will be live in 10-15 seconds.`);
+                    alert(`🎉 SUCCESS! Article Committed to GitHub!\n\n🔗 Post URL: https://recipes.bilalmania.com/posts/${slug}\n\nVercel deployment is processing in the background and will be live in 10-15 seconds.`);
                 }
 
                 return;
