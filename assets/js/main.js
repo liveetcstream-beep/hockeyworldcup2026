@@ -77,17 +77,33 @@ document.addEventListener('DOMContentLoaded', () => {
             currentPage = 1;
         }
 
-        // 1. Hide all cards, then show current page slice
-        recipeCards.forEach(card => {
-            card.style.display = 'none';
-        });
-
+        // 1. Only toggle display for cards that need to change & force eager image load
         const startIndex = (currentPage - 1) * POSTS_PER_PAGE;
         const endIndex = startIndex + POSTS_PER_PAGE;
         const currentSlice = filtered.slice(startIndex, endIndex);
 
-        currentSlice.forEach(card => {
-            card.style.display = 'flex';
+        recipeCards.forEach(card => {
+            const shouldShow = currentSlice.includes(card);
+            if (shouldShow) {
+                if (card.style.display !== 'flex') {
+                    card.style.display = 'flex';
+                }
+                const img = card.querySelector('img');
+                if (img) {
+                    if (img.getAttribute('loading') === 'lazy') {
+                        img.removeAttribute('loading');
+                        img.setAttribute('loading', 'eager');
+                    }
+                    if (!img.complete || img.naturalWidth === 0) {
+                        const originalSrc = img.getAttribute('src');
+                        if (originalSrc) {
+                            img.src = originalSrc;
+                        }
+                    }
+                }
+            } else {
+                card.style.display = 'none';
+            }
         });
 
         // 2. Build pagination UI
