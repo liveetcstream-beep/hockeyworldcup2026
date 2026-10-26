@@ -39,6 +39,28 @@
       "has": [
         {
           "type": "host",
+          "value": "hockeyworldcup2026schedule.com"
+        }
+      ],
+      "destination": "https://recipes.bilalmania.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.hockeyworldcup2026schedule.com"
+        }
+      ],
+      "destination": "https://recipes.bilalmania.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
           "value": "www.recipes.bilalmania.com"
         }
       ],
