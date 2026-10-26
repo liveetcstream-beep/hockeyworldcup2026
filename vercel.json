@@ -35,6 +35,94 @@
   ],
   "redirects": [
     {
+      "source": "/posts/halloween-party-food-ideas-for-adults",
+      "has": [
+        {
+          "type": "host",
+          "value": "hockeyworldcup2026schedule.com"
+        }
+      ],
+      "destination": "https://recipes.bilalmania.com/posts/halloween-party-food-ideas-for-adults",
+      "permanent": true
+    },
+    {
+      "source": "/posts/30-halloween-party-appetizer-ideas-for-a-spooky-party",
+      "has": [
+        {
+          "type": "host",
+          "value": "hockeyworldcup2026schedule.com"
+        }
+      ],
+      "destination": "https://recipes.bilalmania.com/posts/30-halloween-party-appetizer-ideas-for-a-spooky-party",
+      "permanent": true
+    },
+    {
+      "source": "/posts/halloween-party-food-ideas-for-kids",
+      "has": [
+        {
+          "type": "host",
+          "value": "hockeyworldcup2026schedule.com"
+        }
+      ],
+      "destination": "https://recipes.bilalmania.com/posts/halloween-party-food-ideas-for-kids",
+      "permanent": true
+    },
+    {
+      "source": "/posts/easy-halloween-finger-foods",
+      "has": [
+        {
+          "type": "host",
+          "value": "hockeyworldcup2026schedule.com"
+        }
+      ],
+      "destination": "https://recipes.bilalmania.com/posts/easy-halloween-finger-foods",
+      "permanent": true
+    },
+    {
+      "source": "/posts/halloween-dinner-ideas",
+      "has": [
+        {
+          "type": "host",
+          "value": "hockeyworldcup2026schedule.com"
+        }
+      ],
+      "destination": "https://recipes.bilalmania.com/posts/halloween-dinner-ideas",
+      "permanent": true
+    },
+    {
+      "source": "/posts/halloween-tea-party-ideas",
+      "has": [
+        {
+          "type": "host",
+          "value": "hockeyworldcup2026schedule.com"
+        }
+      ],
+      "destination": "https://recipes.bilalmania.com/posts/halloween-tea-party-ideas",
+      "permanent": true
+    },
+    {
+      "source": "/posts/halloween-party-snack-ideas",
+      "has": [
+        {
+          "type": "host",
+          "value": "hockeyworldcup2026schedule.com"
+        }
+      ],
+      "destination": "https://recipes.bilalmania.com/posts/halloween-party-snack-ideas",
+      "permanent": true
+    },
+    {
+      "source": "/posts/halloween-snack-ideas-for-kids",
+      "has": [
+        {
+          "type": "host",
+          "value": "hockeyworldcup2026schedule.com"
+        }
+      ],
+      "destination": "https://recipes.bilalmania.com/posts/halloween-snack-ideas-for-kids",
+      "permanent": true
+    },
+    {
       "source": "/(.*)",
       "has": [
         {
