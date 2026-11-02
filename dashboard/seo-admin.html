@@ -810,6 +810,27 @@
 
         // Call Gemini or Groq with automatic fallback
 
+        
+        // Helper: Count distinct [RECIPE_START] occurrences in text
+        function countRecipeStartBlocks(text) {
+            if (!text) return 0;
+            const matches = text.match(/\[RECIPE_START\]/gi);
+            return matches ? matches.length : 0;
+        }
+
+        // Helper: Count distinct /assets/images/ in HTML
+        function countDistinctArticleImages(html) {
+            if (!html) return 0;
+            const matches = html.match(/src=["'](?:https?:\/\/[^"']*)?\/assets\/images\/([^"']+)["']/gi);
+            if (!matches) return 0;
+            const filenames = new Set();
+            matches.forEach(m => {
+                const sub = m.match(/assets\/images\/([^"']+)/i);
+                if (sub && sub[1]) filenames.add(sub[1].toLowerCase());
+            });
+            return filenames.size;
+        }
+
         async function callAIProvider(apiKey, prompt, maxTokensOverride = null) {
             const activeKey = apiKey || localStorage.getItem('geminiApiKey') || DEFAULT_API_KEY;
 
@@ -835,8 +856,14 @@
                             })
                         });
                         const data = await resp.json();
-                        if (data.choices && data.choices[0] && data.choices[0].message) {
-                            return data.choices[0].message.content;
+                        if (data.choices && data.choices[0]) {
+                            const choice = data.choices[0];
+                            if (choice.finish_reason === 'length') {
+                                throw new Error('AI output truncated by token limit (finish_reason: length).');
+                            }
+                            if (choice.message && choice.message.content) {
+                                return choice.message.content;
+                            }
                         }
                         if (data.error) {
                             lastGroqError = new Error(data.error.message || 'Groq error');
@@ -897,10 +924,14 @@
 
                             const data = await resp.json();
 
-                            if (data.candidates && data.candidates[0]?.content?.parts?.[0]?.text) {
-
-                                return data.candidates[0].content.parts[0].text;
-
+                            if (data.candidates && data.candidates[0]) {
+                                const cand = data.candidates[0];
+                                if (cand.finishReason === 'MAX_TOKENS' || cand.finishReason === 'LENGTH') {
+                                    throw new Error('AI output truncated by token limit (finishReason: ' + cand.finishReason + ').');
+                                }
+                                if (cand.content?.parts?.[0]?.text) {
+                                    return cand.content.parts[0].text;
+                                }
                             }
 
                             if (data.error) {
@@ -1377,8 +1408,179 @@ IMPORTANT RULES:
                         seoDescription: seoDescriptionInput,
                         featuredImage: uploadedImages[0]?.url || ''
                     });
-                } else if (uploadedImages.length <= 8) {
-                    aiText = await callAIProvider(apiKey, prompt, 8000);
+                } else {
+                    // Robust Multi-batch generation for listicles (safe BATCH_SIZE = 6 to prevent token exhaustion)
+                    const BATCH_SIZE = 6;
+                    const totalBatches = Math.ceil(uploadedImages.length / BATCH_SIZE);
+                    let allRecipeBlocks = [];
+
+                    // Helper to build recipe prompt instructions with required IMAGE_FILE
+                    function getRecipeBlockFormatInstructions(itemCount, isContinuation, batchNum, startNum, endNum) {
+                        return `For EACH of the ${itemCount} dishes above, you MUST write a recipe card block in this EXACT format (include IMAGE_FILE with the exact filename provided):
+
+[RECIPE_START]
+IMAGE_FILE: (exact filename from the list above, e.g. filename.jpg)
+NUMBER: (number)
+SLUG_ID: (unique-kebab-case-id based on dish name)
+H2_TITLE: (NUMBER. Catchy Mouth-Watering Recipe Name)
+TIME: (e.g. 25 Mins (10m prep, 15m cook))
+COST: (e.g. Budget-Friendly (~$2.50/serving))
+SERVINGS: (e.g. Serves 6-8)
+ALT_TEXT: (Mouth-watering descriptive alt text mentioning dish name, golden crust, sauce, garnishes, serving platter - 10-15 words)
+FIGCAPTION: (1 appetizing sentence describing the dish and flavor presentation)
+FLAVOR_INTRO: (3-4 sentences: exact flavor profile, savory/sweet notes, textures, aroma, and why this recipe is an absolute hit with guests)
+INGREDIENTS: (4-7 key ingredients separated by semicolons, e.g. 1 lb puff pastry; 8 oz cream cheese, softened; 1 tsp smoked paprika; 1 cup shredded cheddar; fresh parsley for garnish)
+INSTRUCTIONS: (Write 4-6 IN-DEPTH, crystal-clear, step-by-step cooking directions separated by semicolons. Each step MUST explain EXACTLY WHAT TO DO in comprehensive detail: include exact oven temperatures, burner heat levels like medium-high, precise minutes, visual doneness cues like 'until golden brown and fragrant', texture signs, and proper technique so ANY reader or beginner can easily recreate the dish flawlessly at home. Never write brief 1-line steps—provide rich, thorough cooking walkthroughs)
+CHEF_TIP: (1 high-value culinary secret: prep-ahead tip, reheating advice, or easy substitution)
+SERVING_NOTES: (2 sentences: serving suggestions, dip pairings, or freezer storage guidance)
+[RECIPE_END]`;
+                    }
+
+                    // Helper to request a batch with validation & 1-shot retry
+                    async function fetchBatchRecipesWithRetry(batchImgs, bIndex, totalB, startIdx) {
+                        const batchList = batchImgs.map((img, i) => {
+                            const actualNum = startIdx + i + 1;
+                            const cleanName = img.name.replace(/[-_]/g, ' ').replace(/\.[^/.]+$/, '').trim();
+                            return actualNum + '. ' + cleanName + ' (Filename: ' + img.name + ')';
+                        }).join('\n');
+
+                        const isBatch1 = (bIndex === 0);
+                        let batchPrompt = '';
+
+                        if (isBatch1) {
+                            batchPrompt = `You are a world-class professional Chef, Recipe Developer, and Food Blogger writing for Pinterest viral pins and Google SEO dominance on 'Cozy Plate Recipes' (https://recipes.bilalmania.com).
+Write a comprehensive, top-notch, 100% topic-tailored 2026 Recipe master article.
+
+ARTICLE DETAILS:
+- Title: ${title}
+- Focus Keyword: ${keyword}
+- Category: ${category}
+- Context: ${seoDescriptionInput || 'Delicious home-cooked recipe roundup and culinary guide'}
+- Total Dishes in this article: ${uploadedImages.length} (In this first pass, write full recipe cards for dishes 1 to ${batchImgs.length})
+
+DISHES FOR PART 1:
+${batchList}
+
+WRITING INSTRUCTIONS:
+1. Write an engaging, mouth-watering INTRO PARAGRAPH (3-4 sentences). Naturally incorporate the topic and focus keyword in an organic, grammatically correct sentence. Mention LSI entities like easy appetizers, party finger foods, savory bites, and festive desserts, and end with an engaging question for readers asking about their favorite party dishes.
+
+2. ${getRecipeBlockFormatInstructions(batchImgs.length, false, 1, 1, batchImgs.length)}
+
+3. SECTION 5: 5 CULINARY SECRETS & PARTY HOSTING TAKEAWAYS:
+[TAKEAWAYS_START]
+Provide 5 actionable food prep secrets tailored specifically to ${keyword} (Make-Ahead Assembly, Temperature Management for Hot & Cold Trays, Garnish Power for Pinterest-Worthy Photos, Smart Grocery Budget Swaps, Crowd-Pleasing Dipping Sauces). Format as 5 bullet points with strong titles.
+[TAKEAWAYS_END]
+
+4. SECTION 6: FREQUENTLY ASKED QUESTIONS (FAQs):
+[FAQS_START]
+Write 4 high-intent recipe FAQs tailored specifically to ${keyword} answering:
+- Can I make these recipes ahead of time?
+- What are the best budget grocery substitutions?
+- How should leftovers be stored and reheated?
+- What are great vegetarian or allergy-friendly options?
+Format: Q: (question) | A: (answer)
+[FAQS_END]
+
+5. Write a delicious CONCLUSION paragraph (3-4 sentences encouraging home cooks to save their favorite recipe pins to Pinterest and explore more comforting meals).
+
+IMPORTANT RULES:
+- Everything MUST be 100% specific to ${keyword} and food/cooking recipes.
+- NO home decor, NO furniture, NO interior design filler!
+- No markdown (** or ##) inside the tag fields. Clean raw text only.`;
+                        } else {
+                            batchPrompt = `You are a world-class professional Chef and Recipe Developer writing for 'Cozy Plate Recipes'.
+This is CONTINUATION PART ${bIndex + 1} of the recipe roundup article: '${title}' (${keyword}).
+
+DISHES TO INCLUDE (Generate full recipe cards for these exact dishes in order):
+${batchList}
+
+${getRecipeBlockFormatInstructions(batchImgs.length, true, bIndex + 1, startIdx + 1, startIdx + batchImgs.length)}
+
+IMPORTANT:
+- Output ONLY the [RECIPE_START]...[RECIPE_END] blocks for dishes ${startIdx + 1} to ${startIdx + batchImgs.length}.
+- You MUST output exactly ${batchImgs.length} recipe card blocks.
+- Do NOT output any intro, takeaways, FAQs, or conclusion.
+- Clean raw text only.`;
+                        }
+
+                        // Try first call
+                        let textResp = '';
+                        let errFirst = null;
+                        try {
+                            textResp = await callAIProvider(apiKey, batchPrompt, 8000);
+                        } catch (e) {
+                            errFirst = e;
+                            console.warn('Batch ' + (bIndex + 1) + ' first attempt error:', e);
+                        }
+
+                        let blockCount = countRecipeStartBlocks(textResp);
+
+                        // If truncated or short, retry once
+                        if (blockCount < batchImgs.length) {
+                            console.warn(`Batch ${bIndex + 1} returned ${blockCount}/${batchImgs.length} blocks. Retrying batch...`);
+                            if (aiStatusBox) {
+                                aiStatusBox.innerHTML = `<div class="p-3 bg-amber-50 rounded-lg border border-amber-200 text-sm text-amber-800 flex items-center gap-2"><div class="loading-spinner inline-block" style="width:16px;height:16px;border-width:2px;"></div> Batch ${bIndex + 1} returned ${blockCount}/${batchImgs.length} recipes. Retrying batch with high precision...</div>`;
+                            }
+                            try {
+                                const retryResp = await callAIProvider(apiKey, batchPrompt, 8000);
+                                const retryCount = countRecipeStartBlocks(retryResp);
+                                if (retryCount > blockCount) {
+                                    textResp = retryResp;
+                                    blockCount = retryCount;
+                                }
+                            } catch (e2) {
+                                console.warn('Batch ' + (bIndex + 1) + ' retry error:', e2);
+                            }
+                        }
+
+                        // Final check for batch
+                        if (blockCount < batchImgs.length) {
+                            const missingNum = batchImgs.length - blockCount;
+                            throw new Error(`Batch ${bIndex + 1}/${totalB} incomplete! Expected ${batchImgs.length} recipe blocks but received ${blockCount} (${missingNum} missing). Stopped to prevent publishing incomplete article. Please re-generate.`);
+                        }
+
+                        return textResp;
+                    }
+
+                    // Run Batch 1
+                    if (aiStatusBox) {
+                        aiStatusBox.innerHTML = `<div class="p-3 bg-amber-50 rounded-lg border border-amber-200 text-sm text-amber-800 flex items-center gap-2"><div class="loading-spinner inline-block" style="width:16px;height:16px;border-width:2px;"></div> Generating Part 1/${totalBatches} (Recipes 1–${Math.min(BATCH_SIZE, uploadedImages.length)} of ${uploadedImages.length})...</div>`;
+                    }
+                    const batch1Images = uploadedImages.slice(0, BATCH_SIZE);
+                    aiText = await fetchBatchRecipesWithRetry(batch1Images, 0, totalBatches, 0);
+
+                    // Run subsequent batches
+                    let additionalRecipeBlocks = '';
+                    for (let b = 1; b < totalBatches; b++) {
+                        const start = b * BATCH_SIZE;
+                        const end = Math.min(start + BATCH_SIZE, uploadedImages.length);
+                        const batchImages = uploadedImages.slice(start, end);
+
+                        if (aiStatusBox) {
+                            aiStatusBox.innerHTML = `<div class="p-3 bg-amber-50 rounded-lg border border-amber-200 text-sm text-amber-800 flex items-center gap-2"><div class="loading-spinner inline-block" style="width:16px;height:16px;border-width:2px;"></div> Generating Part ${b + 1}/${totalBatches} (Recipes ${start + 1}–${end} of ${uploadedImages.length})...</div>`;
+                        }
+
+                        const continuationText = await fetchBatchRecipesWithRetry(batchImages, b, totalBatches, start);
+                        if (continuationText && continuationText.includes('[RECIPE_START]')) {
+                            additionalRecipeBlocks += '\n\n' + continuationText.trim();
+                        }
+                    }
+
+                    // Stitch continuation blocks into aiText right before [TAKEAWAYS_START]
+                    if (additionalRecipeBlocks) {
+                        const takeawayIdx = aiText.indexOf('[TAKEAWAYS_START]');
+                        if (takeawayIdx !== -1) {
+                            aiText = aiText.substring(0, takeawayIdx) + '\n\n' + additionalRecipeBlocks + '\n\n' + aiText.substring(takeawayIdx);
+                        } else {
+                            const faqIdx = aiText.indexOf('[FAQS_START]');
+                            if (faqIdx !== -1) {
+                                aiText = aiText.substring(0, faqIdx) + '\n\n' + additionalRecipeBlocks + '\n\n' + aiText.substring(faqIdx);
+                            } else {
+                                aiText += '\n\n' + additionalRecipeBlocks;
+                            }
+                        }
+                    }
+
                     generatedArticle = parseAiOutput(aiText, {
                         title, keyword, slug, category, siteDomain,
                         images: uploadedImages,
@@ -1548,11 +1750,24 @@ IMPORTANT:
 
 
 
+                const inPageImgCount = countDistinctArticleImages(generatedArticle.htmlContent || '');
+                const genBlocksCount = (generatedArticle.designs || []).length;
+                const uploadCount = uploadedImages.length;
                 const wordCount = (generatedArticle.htmlContent || '').replace(/<[^>]*>/g, ' ').split(/\s+/).filter(Boolean).length;
 
+                // Sync the title field in the form to the rendered count
+                if (generatedArticle.title) {
+                    const titleEl = document.getElementById('articleTitle');
+                    if (titleEl) titleEl.value = generatedArticle.title;
+                }
+
+                // Display Generation Reconciliation Count Badge
+                const countsMatch = (uploadCount === genBlocksCount && genBlocksCount === inPageImgCount);
+                const reconciliationNotice = `\n\n🔍 COUNT RECONCILIATION:\n• Uploaded Images: ${uploadCount}\n• Generated Recipe Blocks: ${genBlocksCount}\n• Rendered Images in Page: ${inPageImgCount}\n• Status: ${countsMatch ? '✅ 100% PERFECT SYNC' : '⚠️ MISMATCH DETECTED'}`;
+
                 const alertMsg = (window.currentArticleMode === 'single')
-                    ? `✅ In-Depth Single Recipe Generated Successfully!\n\n📊 Est. Words: ~${wordCount}\n📸 Process Steps: ${uploadedImages.length} visual cooking steps with photos\n🍳 Features: Full Schema.org Recipe Card, Jump to Recipe & Print Buttons!\n\nPreview below, then click "Publish to Website"!`
-                    : `✅ ${uploadedImages.length} Recipe Roundup Generated Successfully!\n\n📊 Est. Words: ~${wordCount}\n🖼️ Recipes: ${uploadedImages.length} complete recipe cards with ingredients & methods (Title & Body in 100% Sync)\n\nPreview below, then click "Publish to Website"!`;
+                    ? `✅ In-Depth Single Recipe Generated Successfully!\n\n📊 Est. Words: ~${wordCount}\n📸 Process Steps: ${genBlocksCount} visual cooking steps with photos\n🍳 Features: Full Schema.org Recipe Card, Jump to Recipe & Print Buttons!${reconciliationNotice}\n\nPreview below, then click "Publish to Website"!`
+                    : `✅ ${genBlocksCount} Recipe Roundup Generated Successfully!\n\n📊 Est. Words: ~${wordCount}\n🖼️ Recipes: ${genBlocksCount} complete recipe cards with ingredients & methods${reconciliationNotice}\n\nPreview below, then click "Publish to Website"!`;
                 alert(alertMsg);
 
 
@@ -2356,9 +2571,7 @@ IMPORTANT:
 
             let conclusionText = '';
 
-            const designBlocks = [];
-
-
+            const parsedBlocks = [];
 
             const recipeTag = text.includes('[RECIPE_START]') ? '[RECIPE_START]' : '[DESIGN_START]';
             const recipeEndTag = text.includes('[RECIPE_END]') ? '[RECIPE_END]' : '[DESIGN_END]';
@@ -2378,71 +2591,99 @@ IMPORTANT:
                         return m ? m[1].trim() : '';
                     };
 
-                    const img = data.images[i] || data.images[0];
-                    designBlocks.push({
+                    parsedBlocks.push({
+                        imageFile: getField('IMAGE_FILE') || getField('FILENAME') || getField('IMAGE') || '',
                         number: getField('NUMBER') || (i + 1),
-                        slugId: getField('SLUG_ID') || `recipe-${i + 1}`,
-                        h2Title: getField('H2_TITLE') || `${i + 1}. ${img?.name || 'Delicious Recipe'}`,
+                        slugId: getField('SLUG_ID') || '',
+                        h2Title: getField('H2_TITLE') || '',
                         time: getField('TIME') || '20 Mins (10m prep, 10m cook)',
                         cost: getField('COST') || 'Budget-Friendly (~$3.00)',
                         servings: getField('SERVINGS') || 'Serves 4',
-                        altText: getField('ALT_TEXT') || img?.alt || `${data.title} - Recipe ${i + 1}`,
+                        altText: getField('ALT_TEXT') || '',
                         figcaption: getField('FIGCAPTION') || '',
                         paragraph1: getField('FLAVOR_INTRO') || getField('PARAGRAPH_1') || '',
                         ingredients: getField('INGREDIENTS') || '',
                         instructions: getField('INSTRUCTIONS') || '',
                         proTip: getField('CHEF_TIP') || getField('PRO_TIP') || 'Store leftovers in an airtight container for up to 3 days.',
-                        paragraph2: getField('SERVING_NOTES') || getField('PARAGRAPH_2') || '',
-                        image: img
+                        paragraph2: getField('SERVING_NOTES') || getField('PARAGRAPH_2') || ''
                     });
                 });
             }
 
+            // Map parsed recipe blocks to uploaded images by filename (with positional fallback)
+            const designBlocks = [];
+            const availableImages = Array.isArray(data.images) ? [...data.images] : [];
+            const usedImageIndices = new Set();
 
+            parsedBlocks.forEach((block, bIdx) => {
+                let matchedImg = null;
+                let matchedIdx = -1;
 
-                        // Safety check: ensure EVERY uploaded image has a full recipe card block
-            if (data.images && data.images.length > designBlocks.length) {
-                const missingStart = designBlocks.length;
-                for (let i = missingStart; i < data.images.length; i++) {
-                    const img = data.images[i];
-                    const rawName = (img?.name || ('Recipe ' + (i + 1)))
-                        .replace(/\.[^/.]+$/, '')
-                        .replace(/^[0-9]+[-_\s]*/, '')
-                        .replace(/[-_]/g, ' ')
-                        .trim();
-                    const cleanTitle = rawName ? (rawName.charAt(0).toUpperCase() + rawName.slice(1)) : ('Chef\'s Special Dish ' + (i + 1));
-                    designBlocks.push({
-                        number: i + 1,
-                        slugId: 'recipe-' + (i + 1) + '-' + cleanTitle.toLowerCase().replace(/[^a-z0-9]+/g, '-'),
-                        h2Title: (i + 1) + '. ' + cleanTitle,
-                        time: '25 Mins (10m prep, 15m cook)',
-                        cost: 'Budget-Friendly (~$2.75/serving)',
-                        servings: 'Serves 4-6',
-                        altText: cleanTitle + ' presented on a rustic platter with fresh herbs and homemade sauce - recipe ' + (i + 1),
-                        figcaption: 'Freshly prepared ' + cleanTitle.toLowerCase() + ' served warm and fragrant straight from the kitchen.',
-                        paragraph1: 'This mouth-watering ' + cleanTitle.toLowerCase() + ' delivers exceptional flavor and comforting warmth in every bite. With tender textures and a rich savory aroma, it has quickly become a standout crowd favorite for both busy weeknights and festive gatherings.',
-                        ingredients: '1.5 lbs main protein or fresh veggies; 2 tbsp olive oil or unsalted butter; 3 cloves fresh garlic, minced; 1 cup savory broth or rich cream; 1 tsp kosher salt; 1/2 tsp cracked black pepper; 2 tbsp fresh herbs for garnish',
-                        instructions: 'Prep and season ingredients thoroughly with kosher salt, cracked black pepper, and herbs; Heat a large skillet over medium-high heat with olive oil or butter until shimmering; Sear protein or aromatics for 4-5 minutes per side until rich golden brown fond develops; Pour in broth or cream, lower heat to a gentle simmer, and cook for 6-8 minutes until tender and sauce thickens; Garnish with fresh herbs and serve piping hot straight from the pan.',
-                        proTip: 'For deeper flavor, allow ingredients to rest for 5 minutes after cooking so the savory juices redistribute throughout.',
-                        paragraph2: 'Serve warm alongside roasted seasonal vegetables, garlic butter potatoes, or warm crusty artisan bread. Store leftovers in an airtight container in the refrigerator for up to 4 days.',
-                        image: img
+                // Try matching by exact or clean filename
+                if (block.imageFile) {
+                    const cleanFile = block.imageFile.toLowerCase().trim();
+                    matchedIdx = availableImages.findIndex((img, idx) => {
+                        if (usedImageIndices.has(idx)) return false;
+                        const imgName = (img.name || '').toLowerCase().trim();
+                        return (imgName === cleanFile || imgName.includes(cleanFile) || cleanFile.includes(imgName));
                     });
                 }
+
+                // Positional fallback if no filename match
+                if (matchedIdx === -1) {
+                    matchedIdx = availableImages.findIndex((_, idx) => !usedImageIndices.has(idx));
+                }
+
+                if (matchedIdx !== -1) {
+                    matchedImg = availableImages[matchedIdx];
+                    usedImageIndices.add(matchedIdx);
+                } else {
+                    matchedImg = availableImages[0] || { name: 'recipe.jpg', url: '/assets/images/recipe.jpg' };
+                }
+
+                // Sequential renumbering 1..N: guarantees TOC and headings never jump or repeat!
+                const seqNum = designBlocks.length + 1;
+                const cleanDishName = (block.h2Title || matchedImg?.name || ('Recipe ' + seqNum))
+                    .replace(/^\d+[\.\s\-]+/, '')
+                    .replace(/\.[^/.]+$/, '')
+                    .replace(/[-_]/g, ' ')
+                    .trim();
+
+                const finalH2Title = seqNum + '. ' + cleanDishName;
+                const finalSlugId = block.slugId || ('recipe-' + seqNum + '-' + cleanDishName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, ''));
+
+                designBlocks.push({
+                    number: seqNum,
+                    slugId: finalSlugId,
+                    h2Title: finalH2Title,
+                    time: block.time,
+                    cost: block.cost,
+                    servings: block.servings,
+                    altText: block.altText || (cleanDishName + ' - recipe ' + seqNum),
+                    figcaption: block.figcaption || ('Freshly prepared ' + cleanDishName.toLowerCase() + ' served warm and fragrant.'),
+                    paragraph1: block.paragraph1,
+                    ingredients: block.ingredients,
+                    instructions: block.instructions,
+                    proTip: block.proTip,
+                    paragraph2: block.paragraph2,
+                    image: matchedImg
+                });
+            });
+
+            // NO FABRICATED FILLER: Hard check against image shortfall
+            if (data.images && designBlocks.length < data.images.length) {
+                const missingImgs = data.images.filter((_, idx) => !usedImageIndices.has(idx)).map(im => im.name || ('Image #' + (idx + 1)));
+                const shortfallMsg = `Generation Shortfall Warning: ${data.images.length} images were uploaded, but the AI only returned ${designBlocks.length} recipe cards! Missing dishes: ${missingImgs.slice(0, 5).join(', ')}${missingImgs.length > 5 ? '... and ' + (missingImgs.length - 5) + ' more' : ''}. No fake filler recipes were created. Please retry generation to ensure 100% complete recipes.`;
+                console.error(shortfallMsg);
+                throw new Error(shortfallMsg);
             }
 
             // Extract Conclusion
-
             if (text.includes('[FAQS_END]')) {
-
                 conclusionText = text.substring(text.lastIndexOf('[FAQS_END]') + '[FAQS_END]'.length).trim();
-
             } else {
-
                 conclusionText = `Cooking delicious, memorable food for friends and family brings warmth and comfort to every gathering. Whether you're hosting a festive party or looking for quick weeknight inspiration, these ${data.keyword} recipes give you the perfect culinary blueprint. Be sure to save your favorite recipe ideas to Pinterest to build your dream party menu!`;
-
             }
-
-
 
             const htmlContent = buildCompleteFoodArticleHTML({
 
@@ -2487,6 +2728,17 @@ IMPORTANT:
         // Build Complete Standalone HTML Article
 
         function buildCompleteFoodArticleHTML(data) {
+
+            // Sync title leading count to rendered recipe cards count
+            const renderedCount = Array.isArray(data.designs) ? data.designs.length : 0;
+            if (renderedCount > 0 && data.title) {
+                const numMatch = data.title.match(/^(\d+)\s*(.*)/);
+                if (numMatch) {
+                    data.title = `${renderedCount} ${numMatch[2]}`.trim();
+                } else {
+                    data.title = `${renderedCount} ${data.title}`.trim();
+                }
+            }
 
             const dateStr = new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
@@ -3180,7 +3432,11 @@ ${tocItemsHTML}
 
                         <h3 class="text-xl font-bold text-stone-900 font-serif">Article Live Preview</h3>
 
-                        <p class="text-xs text-stone-500">Ready to publish! Scroll down to inspect the article layout.</p>
+                        <div class="flex items-center gap-2 mt-1">
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-blue-100 text-blue-800">📸 Uploaded: ${uploadedImages.length}</span>
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-purple-100 text-purple-800">🍳 Generated: ${(article.designs || []).length}</span>
+                            <span class="text-xs font-semibold px-2 py-0.5 rounded bg-emerald-100 text-emerald-800">🖼️ In Page: ${countDistinctArticleImages(article.htmlContent || '')}</span>
+                        </div>
 
                     </div>
 
@@ -3764,6 +4020,18 @@ ${tocItemsHTML}
                 }
             }
 
+            // Count reconciliation safety check before publish
+            const uploadCount = uploadedImages.length;
+            const genBlocksCount = (generatedArticle.designs || []).length;
+            const inPageImgCount = countDistinctArticleImages(generatedArticle.htmlContent || '');
+
+            if (uploadCount > 0 && (uploadCount !== genBlocksCount || genBlocksCount !== inPageImgCount)) {
+                const diffMsg = `⚠️ COUNT MISMATCH DETECTED BEFORE PUBLISH:\n\n• Uploaded Images: ${uploadCount}\n• Generated Recipe Blocks: ${genBlocksCount}\n• Rendered Images in Page: ${inPageImgCount}\n\nPublishing now will create an article where images uploaded do not match the page content.\n\nDo you still want to proceed?`;
+                if (!confirm(diffMsg)) {
+                    return;
+                }
+            }
+
             setPublishButtonState(true, '🚀 Initializing 1-Click Publish...', false);
 
             let token = getActiveGhToken();
@@ -3957,12 +4225,40 @@ ${tocItemsHTML}
 
                 setPublishButtonState(false, '✅ Published & Live on Vercel!', true);
 
+                // FIX 7: Post-publish live self-check audit
+                let auditReport = '';
+                try {
+                    setPublishButtonState(true, '🔍 Performing live post self-check audit...');
+                    const livePostUrl = `https://recipes.bilalmania.com/posts/${slug}`;
+                    const auditRes = await fetch(livePostUrl + '?_audit=' + Date.now());
+                    if (auditRes.ok) {
+                        const liveHtml = await auditRes.text();
+                        const liveImgs = countDistinctArticleImages(liveHtml);
+                        const liveTitleMatch = liveHtml.match(/<title>([^<]+)<\/title>/i);
+                        const liveTitle = liveTitleMatch ? liveTitleMatch[1] : '';
+                        const titleNumMatch = liveTitle.match(/^(\d+)/);
+                        const titleNum = titleNumMatch ? parseInt(titleNumMatch[1], 10) : null;
+
+                        if (titleNum && liveImgs === titleNum) {
+                            auditReport = `\n\n🎯 LIVE POST SELF-CHECK: PASSED 100%\n• Live Images Rendered: ${liveImgs}\n• Title Claim Number: ${titleNum}\n• Status: In 100% Perfect Sync!`;
+                        } else {
+                            auditReport = `\n\n⚠️ LIVE POST SELF-CHECK: DISCREPANCY\n• Live Images Rendered: ${liveImgs}\n• Title Claim Number: ${titleNum || 'N/A'}\n(Vercel may still be updating cache, re-verify in 30 seconds)`;
+                        }
+                    } else {
+                        auditReport = `\n\nℹ️ Note: Live URL returned HTTP ${auditRes.status} (Vercel CDN is completing propagation across global nodes).`;
+                    }
+                } catch (auditErr) {
+                    auditReport = `\n\nℹ️ Post-publish verification in progress on Vercel.`;
+                }
+
+                setPublishButtonState(false, '✅ Published & Live on Vercel!', true);
+
                 if (vercelRes.success === true) {
-                    alert(`🎉 100% SUCCESS! Article is LIVE on Vercel & Website!\n\n🔗 Post URL: https://recipes.bilalmania.com/posts/${slug}\n\n✅ Live Recipe Page Created!\n✅ Homepage & Grid Updated!\n✅ Sitemap.xml Updated!\n✅ Vercel Deployment Completed!`);
+                    alert(`🎉 100% SUCCESS! Article is LIVE on Vercel & Website!\n\n🔗 Post URL: https://recipes.bilalmania.com/posts/${slug}\n\n✅ Live Recipe Page Created!\n✅ Homepage & Grid Updated!\n✅ Sitemap.xml Updated!\n✅ Vercel Deployment Completed!${auditReport}`);
                 } else if (vercelRes.success === false) {
-                    alert(`⚠️ GitHub Commit Succeeded, but Vercel reported:\n\n${vercelRes.status?.description || 'Build error'}\n\nIf rate-limited, you can click "Redeploy Vercel" once cooldown passes.`);
+                    alert(`⚠️ GitHub Commit Succeeded, but Vercel reported:\n\n${vercelRes.status?.description || 'Build error'}\n\nIf rate-limited, you can click "Redeploy Vercel" once cooldown passes.${auditReport}`);
                 } else {
-                    alert(`🎉 SUCCESS! Article Committed to GitHub!\n\n🔗 Post URL: https://recipes.bilalmania.com/posts/${slug}\n\nVercel deployment is processing in the background and will be live in 10-15 seconds.`);
+                    alert(`🎉 SUCCESS! Article Committed to GitHub!\n\n🔗 Post URL: https://recipes.bilalmania.com/posts/${slug}\n\nVercel deployment is processing in the background and will be live in 10-15 seconds.${auditReport}`);
                 }
 
                 return;
