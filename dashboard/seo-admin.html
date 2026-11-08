@@ -543,7 +543,13 @@
         ];
         const DEFAULT_API_KEY = NAIL_GEMINI_KEYS[0];
 
-        const GEMINI_MODELS = ['gemini-flash-lite-latest', 'gemini-3-flash-preview', 'gemini-flash-latest'];
+        const GEMINI_MODELS = [
+            'gemini-flash-lite-latest',
+            'gemini-3.5-flash-lite',
+            'gemini-3.1-flash-lite',
+            'gemini-3-flash-preview',
+            'gemini-3.5-flash'
+        ];
 
         let uploadedImages = [];
 
@@ -839,99 +845,130 @@
             return filenames.size;
         }
 
-        async function callAIProvider(apiKey, prompt, maxTokensOverride = null) {
-            const activeKey = apiKey || localStorage.getItem('geminiApiKey') || DEFAULT_API_KEY;
+        // Live UI Status updater with error state handling
+        window.updateAiStatus = function(title, desc = '', isError = false) {
+            const aiStatusBox = document.getElementById('aiStatusBox');
+            if (!aiStatusBox) return;
 
-            if (activeKey.startsWith('gsk_')) {
-                const groqModels = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b'];
-                const isShortTest = (!prompt || prompt.length < 80);
-                const maxTokens = maxTokensOverride || (isShortTest ? 50 : 8000);
+            aiStatusBox.classList.remove('hidden');
 
-                let lastGroqError = null;
-                for (const model of groqModels) {
-                    try {
-                        const resp = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-                            method: 'POST',
-                            headers: { 
-                                'Content-Type': 'application/json', 
-                                'Authorization': 'Bearer ' + activeKey 
-                            },
-                            body: JSON.stringify({
-                                model: model,
-                                messages: [{ role: 'user', content: prompt }],
-                                temperature: 0.7,
-                                max_tokens: maxTokens
-                            })
-                        });
-                        const data = await resp.json();
-                        if (data.choices && data.choices[0]) {
-                            const choice = data.choices[0];
-                            if (choice.finish_reason === 'length') {
-                                throw new Error('AI output truncated by token limit (finish_reason: length).');
-                            }
-                            if (choice.message && choice.message.content) {
-                                return choice.message.content;
-                            }
-                        }
-                        if (data.error) {
-                            lastGroqError = new Error(data.error.message || 'Groq error');
-                            console.warn('Groq model ' + model + ' error:', data.error);
-                        }
-                    } catch (e) {
-                        lastGroqError = e;
-                        console.warn('Groq model ' + model + ' failed, trying next...', e);
-                    }
-                }
-
-                console.warn('Groq models unavailable or blocked, smoothly failing over to Google Gemini Flash AI...', lastGroqError);
-                return await callGeminiWithFailover(NAIL_GEMINI_KEYS[0], prompt);
+            if (isError) {
+                aiStatusBox.className = 'bg-red-50 border-2 border-red-300 rounded-xl p-5 shadow-sm';
+                aiStatusBox.innerHTML = `
+                    <div class="flex items-start gap-3.5">
+                        <span class="text-2xl flex-shrink-0">❌</span>
+                        <div class="flex-1">
+                            <h4 class="font-bold text-base text-red-900 mb-1">${title}</h4>
+                            <div class="text-xs text-red-800 leading-relaxed font-mono bg-red-100/70 p-3 rounded-lg border border-red-200 select-all overflow-x-auto whitespace-pre-wrap">${desc}</div>
+                            <div class="mt-3 flex flex-wrap items-center gap-2">
+                                <button type="button" onclick="generateWithGemini()" class="px-4 py-2 bg-red-600 hover:bg-red-700 text-white rounded-xl text-xs font-bold transition inline-flex items-center gap-1 shadow-sm">
+                                    <span>🔄</span> Retry Generation
+                                </button>
+                                <button type="button" onclick="setPresetKey('groq')" class="px-3 py-2 bg-purple-100 hover:bg-purple-200 text-purple-800 rounded-xl text-xs font-bold transition border border-purple-200">
+                                    <span>⚡</span> Switch to Groq Key
+                                </button>
+                                <button type="button" onclick="setPresetKey('gemini')" class="px-3 py-2 bg-orange-100 hover:bg-orange-200 text-orange-800 rounded-xl text-xs font-bold transition border border-orange-200">
+                                    <span>🌟</span> Switch to Gemini Key
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
             } else {
-                return await callGeminiWithFailover(activeKey, prompt);
+                aiStatusBox.className = 'bg-purple-50 border border-purple-200 rounded-xl p-5';
+                aiStatusBox.innerHTML = `
+                    <div class="flex items-center gap-4">
+                        <div class="loading-spinner" style="border-top-color: #8b5cf6;"></div>
+                        <div>
+                            <p class="text-sm font-bold text-purple-900">${title}</p>
+                            ${desc ? `<p class="text-xs text-purple-700 mt-1">${desc}</p>` : ''}
+                        </div>
+                    </div>
+                `;
             }
+        };
+
+        // Dedicated Groq Caller with timeout & model fallback
+        async function callGroqProvider(apiKey, prompt, maxTokensOverride = null, timeoutMs = 40000) {
+            const activeKey = apiKey || DEFAULT_GROQ_KEY;
+            const groqModels = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b'];
+            const isShortTest = (!prompt || prompt.length < 80);
+            const maxTokens = maxTokensOverride || (isShortTest ? 50 : 8000);
+
+            let lastGroqError = null;
+            for (const model of groqModels) {
+                const controller = new AbortController();
+                const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+                try {
+                    const resp = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+                        method: 'POST',
+                        signal: controller.signal,
+                        headers: { 
+                            'Content-Type': 'application/json', 
+                            'Authorization': 'Bearer ' + activeKey 
+                        },
+                        body: JSON.stringify({
+                            model: model,
+                            messages: [{ role: 'user', content: prompt }],
+                            temperature: 0.7,
+                            max_tokens: maxTokens
+                        })
+                    });
+                    clearTimeout(timeoutId);
+                    const data = await resp.json();
+                    if (data.choices && data.choices[0]) {
+                        const choice = data.choices[0];
+                        if (choice.finish_reason === 'length') {
+                            throw new Error('Groq output truncated by token limit (finish_reason: length).');
+                        }
+                        if (choice.message && choice.message.content) {
+                            return choice.message.content;
+                        }
+                    }
+                    if (data.error) {
+                        lastGroqError = new Error(`Groq (${model}): ${data.error.message || 'API error'}`);
+                        console.warn('Groq model ' + model + ' error:', data.error);
+                    }
+                } catch (e) {
+                    clearTimeout(timeoutId);
+                    const msg = (e.name === 'AbortError') ? `Groq (${model}) request timed out after ${Math.round(timeoutMs/1000)}s` : e.message;
+                    lastGroqError = new Error(msg);
+                    console.warn('Groq model ' + model + ' failed:', msg);
+                }
+            }
+            throw lastGroqError || new Error('All Groq models are currently unavailable.');
         }
 
-        // Robust Gemini caller with multi-key failover
-
-        async function callGeminiWithFailover(primaryKey, prompt) {
-
-            // Pool of keys to try: primary first, then all other Nail keys
-
+        // Robust Gemini caller with fast model prioritization, timeout & multi-key failover
+        async function callGeminiWithFailover(primaryKey, prompt, timeoutMs = 35000) {
             const keyPool = [primaryKey, ...NAIL_GEMINI_KEYS.filter(k => k !== primaryKey)];
-
             let lastError = null;
 
-
-
             for (const keyToTry of keyPool) {
+                if (!keyToTry || typeof keyToTry !== 'string') continue;
 
                 for (const model of GEMINI_MODELS) {
-
                     for (let attempt = 1; attempt <= 2; attempt++) {
-
+                        const controller = new AbortController();
+                        const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
                         try {
-
                             const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${keyToTry}`, {
-
                                 method: 'POST',
-
+                                signal: controller.signal,
                                 headers: { 'Content-Type': 'application/json' },
-
                                 body: JSON.stringify({
-
                                     contents: [{ parts: [{ text: prompt }] }],
-
                                     generationConfig: { temperature: 0.85, maxOutputTokens: 16384 }
-
                                 })
-
                             });
+                            clearTimeout(timeoutId);
 
                             const data = await resp.json();
 
                             if (data.candidates && data.candidates[0]) {
                                 const cand = data.candidates[0];
                                 if (cand.finishReason === 'MAX_TOKENS' || cand.finishReason === 'LENGTH') {
-                                    throw new Error('AI output truncated by token limit (finishReason: ' + cand.finishReason + ').');
+                                    throw new Error('Gemini output truncated by token limit (finishReason: ' + cand.finishReason + ').');
                                 }
                                 if (cand.content?.parts?.[0]?.text) {
                                     return cand.content.parts[0].text;
@@ -939,31 +976,61 @@
                             }
 
                             if (data.error) {
-
-                                lastError = new Error(data.error.message || 'Gemini error');
-
-                                // If 503 or 429, break attempt loop to switch to next key immediately
-
+                                lastError = new Error(`Gemini (${model}): ${data.error.message || 'API error'}`);
+                                // If 401 (Invalid Key), skip to next key immediately
+                                if (data.error.code === 401 || data.error.status === 'UNAUTHENTICATED') {
+                                    break;
+                                }
+                                // If 503 or 429, break attempt loop to switch to next model immediately
                                 if (data.error.code === 503 || data.error.code === 429) break;
-
                             }
-
                         } catch (e) {
-
-                            lastError = e;
-
-                            await new Promise(r => setTimeout(r, 1000));
-
+                            clearTimeout(timeoutId);
+                            const msg = (e.name === 'AbortError') ? `Gemini (${model}) request timed out after ${Math.round(timeoutMs/1000)}s` : e.message;
+                            lastError = new Error(msg);
+                            await new Promise(r => setTimeout(r, 600));
                         }
-
                     }
-
                 }
-
             }
 
-            throw lastError || new Error('All Gemini API keys are currently busy or unavailable. Please try again in a few moments.');
+            throw lastError || new Error('All Gemini API keys and models are currently busy or unavailable.');
+        }
 
+        // Master AI Provider caller with BIDIRECTIONAL auto-failover (Groq <-> Gemini)
+        async function callAIProvider(apiKey, prompt, maxTokensOverride = null) {
+            const activeKey = apiKey || localStorage.getItem('geminiApiKey') || DEFAULT_API_KEY;
+            const isGroq = activeKey.startsWith('gsk_');
+
+            if (isGroq) {
+                // Primary: Groq -> Fallback: Gemini
+                try {
+                    return await callGroqProvider(activeKey, prompt, maxTokensOverride);
+                } catch (groqErr) {
+                    console.warn('Groq models unavailable, smoothly failing over to Google Gemini Flash AI...', groqErr);
+                    if (window.updateAiStatus) {
+                        window.updateAiStatus(
+                            '⚡ Groq busy, failing over to Google Gemini...',
+                            'Groq error: ' + (groqErr.message || 'Busy') + '. Seamlessly generating with Gemini Flash Lite...'
+                        );
+                    }
+                    return await callGeminiWithFailover(NAIL_GEMINI_KEYS[0], prompt);
+                }
+            } else {
+                // Primary: Gemini -> Fallback: Groq
+                try {
+                    return await callGeminiWithFailover(activeKey, prompt);
+                } catch (geminiErr) {
+                    console.warn('Gemini models unavailable, smoothly failing over to Groq AI engine...', geminiErr);
+                    if (window.updateAiStatus) {
+                        window.updateAiStatus(
+                            '🌟 Gemini busy, failing over to Groq AI...',
+                            'Gemini error: ' + (geminiErr.message || 'High Demand') + '. Seamlessly generating with Groq openai/gpt-oss-120b...'
+                        );
+                    }
+                    return await callGroqProvider(DEFAULT_GROQ_KEY, prompt, maxTokensOverride);
+                }
+            }
         }
 
 
@@ -1428,7 +1495,13 @@ IMPORTANT RULES:
                 let aiText = '';
 
                 if (currentMode === 'single') {
+                    if (window.updateAiStatus) {
+                        window.updateAiStatus('✨ AI is crafting your master recipe article...', 'Generating complete culinary walkthrough with photos & schema (~15-30s)...');
+                    }
                     aiText = await callAIProvider(apiKey, prompt, 8000);
+                    if (window.updateAiStatus) {
+                        window.updateAiStatus('🍳 Formatting & building master recipe layout...', 'Assembling step-by-step photos, nutrition data & schema.org recipe card...');
+                    }
                     generatedArticle = parseAiOutputSingle(aiText, {
                         title, keyword, slug, category, siteDomain,
                         images: uploadedImages,
@@ -1651,23 +1724,25 @@ IMPORTANT:
 
 
             } catch (err) {
-
-                console.error(err);
-
-                if (aiStatusBox) aiStatusBox.classList.add('hidden');
-
-                alert(`❌ AI Error: ${err.message}`);
-
-            } finally {
-
-                if (aiBtn) {
-
-                    aiBtn.disabled = false;
-
-                    aiBtn.innerHTML = '<span>✨</span> Generate with AI';
-
+                console.error('Generation Error:', err);
+                if (window.updateAiStatus) {
+                    window.updateAiStatus(
+                        'AI Generation Error',
+                        (err.message || String(err)) + '\n\nPlease review details above. You can switch to Groq or Gemini using the buttons and try again.',
+                        true
+                    );
+                } else if (aiStatusBox) {
+                    aiStatusBox.classList.remove('hidden');
+                    aiStatusBox.innerHTML = `<div class="p-4 bg-red-50 border border-red-300 rounded-xl text-red-800 text-sm">❌ <strong>Error:</strong> ${err.message || err}</div>`;
                 }
-
+                try {
+                    alert(`❌ AI Error: ${err.message || err}`);
+                } catch (dialogErr) {}
+            } finally {
+                if (aiBtn) {
+                    aiBtn.disabled = false;
+                    aiBtn.innerHTML = '<span>✨</span> Generate with AI';
+                }
             }
 
         };
@@ -1771,7 +1846,7 @@ IMPORTANT:
                     const endMatch = bStr.match(/(?:\*{0,2}\[?STEP_END\]?\*{0,2})/i);
                     const b = endMatch ? bStr.substring(0, endMatch.index).trim() : bStr.trim();
                     const getStepField = (label) => {
-                        const m = b.match(new RegExp('(?:\*{0,2}' + label + '\*{0,2}[:\s]+)(.+)', 'i'));
+                        const m = b.match(new RegExp('(?:\\*{0,2}' + label + '\\*{0,2}[:\\s]+)(.+)', 'i'));
                         return m ? m[1].replace(/^\*+|\*+$/g, '').trim() : '';
                     };
                     const img = data.images[idx] || data.images[0];
@@ -1897,6 +1972,9 @@ IMPORTANT:
                 featuredImage: data.featuredImage,
                 htmlContent,
                 singleData: fullData,
+                designs: steps,
+                steps: steps,
+                images: data.images,
                 mode: 'single'
             };
         }
