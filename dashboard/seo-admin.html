@@ -1442,7 +1442,7 @@ DIFFICULTY: (e.g. Easy / Moderate)
 [WHY_LOVE_END]
 
 [INGREDIENTS_START]
-(List 8-12 comprehensive ingredients with precise quantities, units, and prep instructions separated by semicolons. E.g. 1.5 lbs boneless skinless chicken breasts, sliced into cutlets; 2 tbsp extra virgin olive oil; 3 cloves fresh garlic, finely minced; 1 cup heavy cream; 1/2 cup low-sodium chicken broth; 1/2 cup grated Parmesan cheese; 1 tsp kosher salt; 1/2 tsp freshly cracked black pepper; 2 tbsp fresh parsley, chopped)
+(List 8-14 DISH-SPECIFIC ingredients for '${title}' with exact complete quantities, primary cut & weight, units, and prep notes separated by semicolons. DO NOT use generic placeholders or filler. Always write the full number, fraction, and unit, e.g. '2.5 lbs boneless beef chuck roast, cut into 1.5-inch cubes; 3 tbsp all-purpose flour; 2 tbsp olive oil; 1 large yellow onion, chopped; 4 cloves garlic, minced; 4 medium carrots, sliced; 3 stalks celery, sliced; 1.5 lbs baby yellow potatoes, halved; 4 cups low-sodium beef broth; 1 cup dry red wine; 2 tbsp tomato paste; 1 tbsp Worcestershire sauce; 2 sprigs fresh rosemary; 3 sprigs fresh thyme; 2 dried bay leaves; 1 tsp kosher salt; 1/2 tsp freshly ground black pepper'. Include the exact primary protein/vegetable with cut and weight first, followed by exact measurements for oils, aromatics, liquids, herbs, and spices.)
 [INGREDIENTS_END]
 
 [EQUIPMENT_START]
@@ -1848,34 +1848,20 @@ IMPORTANT:
             const ingredientsRaw = getBlock('[INGREDIENTS_START]', '[INGREDIENTS_END]');
             let ingredients = [];
             if (ingredientsRaw) {
-                ingredients = ingredientsRaw.split(/[;\n]+/).map(s => s.trim().replace(/^[-*•\d.]+\s*/, '')).filter(Boolean);
+                // Strip ONLY bullet markers and numbered list markers (e.g. "1. ", "2) ", "- ", "* ", "• ")
+                // PRESERVE ALL QUANTITIES (e.g. "3/4 cup", "1/3 cup", "1 tsp", "2.5 lbs", "6 large eggs")
+                ingredients = ingredientsRaw
+                    .split(/[;\n]+/)
+                    .map(s => s.trim().replace(/^(?:[-*•–—]|\d{1,2}[.)])\s+/, '').trim())
+                    .filter(Boolean);
             }
-            if (ingredients.length === 0) {
-                // Topic-tailored fallback instead of generic chicken/vegetable placeholder!
-                const tLower = (data.title || '').toLowerCase();
-                if (tLower.includes('ham')) {
-                    ingredients = [
-                        '8-10 lbs bone-in smoked ham (spiral cut or whole shank portion)',
-                        '1 cup dark brown sugar, tightly packed',
-                        '1/3 cup pure maple syrup or honey',
-                        '2 tbsp Dijon mustard or whole grain mustard',
-                        '2 tbsp apple cider vinegar',
-                        '2 tbsp unsalted butter',
-                        '1/2 tsp ground cinnamon and 1/4 tsp ground nutmeg',
-                        '25-30 whole cloves for studding diamond crosshatch pattern',
-                        '1/2 cup apple cider or water for the roasting pan'
-                    ];
-                } else {
-                    ingredients = [
-                        'Main recipe cut / protein or fresh produce, prepared and trimmed',
-                        '2 tbsp extra virgin olive oil or unsalted butter',
-                        '3 cloves fresh garlic, finely minced',
-                        '1 medium onion or shallots, diced',
-                        '1 tsp kosher salt and freshly cracked black pepper (to taste)',
-                        '1/2 cup cooking broth or pan liquid',
-                        'Fresh chopped herbs for aromatic garnish'
-                    ];
-                }
+
+            // Strict Validation: Must have at least 4 dish-specific ingredients
+            // NEVER substitute generic filler or fallback templates!
+            if (ingredients.length < 4) {
+                const errMsg = 'Failed to extract dish-specific ingredients for "' + (data.title || '') + '". AI output did not contain valid [INGREDIENTS_START] block with at least 4 ingredients. Generation stopped to prevent generic filler.';
+                console.error(errMsg, { rawOutput: text });
+                throw new Error(errMsg);
             }
 
             const equipmentRaw = getBlock('[EQUIPMENT_START]', '[EQUIPMENT_END]');
