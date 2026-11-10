@@ -885,12 +885,25 @@ ${itemsHtml}
         // Helper: Count distinct /assets/images/ in HTML
         function countDistinctArticleImages(html) {
             if (!html) return 0;
-            const matches = html.match(/src=["'](?:https?:\/\/[^"']*)?\/assets\/images\/([^"']+)["']/gi);
+
+            // Strip out Related Articles widget, sidebar, header, and footer so ONLY the article's own content images are counted
+            let cleanHtml = html
+                .replace(/<!--\s*Related Articles Sidebar Widget\s*-->[\s\S]*?<\/aside>/gi, '')
+                .replace(/<aside\b[\s\S]*?<\/aside>/gi, '')
+                .replace(/<header\b[\s\S]*?<\/header>/gi, '')
+                .replace(/<footer\b[\s\S]*?<\/footer>/gi, '');
+
+            const matches = cleanHtml.match(/src=["'](?:https?:\/\/[^"']*)?\/assets\/images\/([^"']+)["']/gi);
             if (!matches) return 0;
             const filenames = new Set();
             matches.forEach(m => {
                 const sub = m.match(/assets\/images\/([^"']+)/i);
-                if (sub && sub[1]) filenames.add(sub[1].toLowerCase());
+                if (sub && sub[1]) {
+                    const fname = sub[1].toLowerCase().trim();
+                    if (!fname.includes('logo') && !fname.includes('favicon')) {
+                        filenames.add(fname);
+                    }
+                }
             });
             return filenames.size;
         }
@@ -1838,7 +1851,7 @@ IMPORTANT:
             );
 
             const whyLoveRaw = getBlock('[WHY_LOVE_START]', '[WHY_LOVE_END]');
-            const whyLove = whyLoveRaw ? whyLoveRaw.split(';').map(s => s.trim().replace(/^[-*•\d.]+\s*/, '')).filter(Boolean) : [
+            const whyLove = whyLoveRaw ? whyLoveRaw.split(';').map(s => s.trim().replace(/^(?:[-*•–—]|\d{1,2}[.)])\s+/, '').trim()).filter(Boolean) : [
                 'Quick & Foolproof: Streamlined steps ensure perfect tenderness and deep savory flavor',
                 'Pantry-Friendly: Crafted with readily available, budget-friendly kitchen staples',
                 'Incredible Flavor Balance: Harmonious blend of rich seasonings, aromas, and textures',
@@ -1865,7 +1878,7 @@ IMPORTANT:
             }
 
             const equipmentRaw = getBlock('[EQUIPMENT_START]', '[EQUIPMENT_END]');
-            const equipment = equipmentRaw ? equipmentRaw.split(/[;\n]+/).map(s => s.trim().replace(/^[-*•\d.]+\s*/, '')).filter(Boolean) : [
+            const equipment = equipmentRaw ? equipmentRaw.split(/[;\n]+/).map(s => s.trim().replace(/^(?:[-*•–—]|\d{1,2}[.)])\s+/, '').trim()).filter(Boolean) : [
                 'Heavy-duty roasting pan or cast iron skillet',
                 'Sharp chef\'s knife & sturdy cutting board',
                 'Pastry basting brush or silicone spatula',
@@ -1940,7 +1953,7 @@ IMPORTANT:
             }
 
             const chefSecretsRaw = getBlock('[CHEF_SECRETS_START]', '[CHEF_SECRETS_END]');
-            const chefSecrets = chefSecretsRaw ? chefSecretsRaw.split(/[;\n]+/).map(s => s.trim().replace(/^[-*•\d.]+\s*/, '')).filter(Boolean) : [
+            const chefSecrets = chefSecretsRaw ? chefSecretsRaw.split(/[;\n]+/).map(s => s.trim().replace(/^(?:[-*•–—]|\d{1,2}[.)])\s+/, '').trim()).filter(Boolean) : [
                 'Room Temperature Start: Always let large cuts sit on the counter for 45-60 minutes before hitting heat for uniform cooking.',
                 'Layer Seasonings: Season lightly at each stage of the process to build deep, balanced complexity.',
                 'Control Caramelization: High-sugar glazes should be brushed during the final 15-20 minutes of baking to prevent burning.',
@@ -4029,6 +4042,10 @@ ${tocItemsHTML}
             if (uploadCount > 0 && (uploadCount !== genBlocksCount || genBlocksCount !== inPageImgCount)) {
                 const diffMsg = `⚠️ COUNT MISMATCH DETECTED BEFORE PUBLISH:\n\n• Uploaded Images: ${uploadCount}\n• Generated Recipe Blocks: ${genBlocksCount}\n• Rendered Images in Page: ${inPageImgCount}\n\nPublishing now will create an article where images uploaded do not match the page content.\n\nDo you still want to proceed?`;
                 if (!confirm(diffMsg)) {
+                    if (window.updateAiStatus) {
+                        window.updateAiStatus('Publish Cancelled by User', `Count mismatch gate cancelled (Uploaded: ${uploadCount}, Generated: ${genBlocksCount}, In Page: ${inPageImgCount}).`, true);
+                    }
+                    alert('Publish cancelled: count mismatch between uploaded images and in-page content images.');
                     return;
                 }
             }
