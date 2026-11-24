@@ -594,11 +594,10 @@ ${itemsHtml}
         const DEFAULT_API_KEY = NAIL_GEMINI_KEYS[0];
 
         const GEMINI_MODELS = [
-            'gemini-flash-lite-latest',
-            'gemini-3.5-flash-lite',
-            'gemini-3.1-flash-lite',
-            'gemini-3-flash-preview',
-            'gemini-3.5-flash'
+            'gemini-2.5-flash',
+            'gemini-1.5-flash',
+            'gemini-2.0-flash',
+            'gemini-2.0-flash-lite'
         ];
 
         let uploadedImages = [];
@@ -954,7 +953,7 @@ ${itemsHtml}
         // Dedicated Groq Caller with timeout & model fallback
         async function callGroqProvider(apiKey, prompt, maxTokensOverride = null, timeoutMs = 40000) {
             const activeKey = apiKey || DEFAULT_GROQ_KEY;
-            const groqModels = ['openai/gpt-oss-120b', 'openai/gpt-oss-20b', 'qwen/qwen3.8-27b'];
+            const groqModels = ['qwen/qwen3.8-27b', 'openai/gpt-oss-20b', 'openai/gpt-oss-120b'];
             const isShortTest = (!prompt || prompt.length < 80);
             const maxTokens = maxTokensOverride || (isShortTest ? 50 : 8000);
 
