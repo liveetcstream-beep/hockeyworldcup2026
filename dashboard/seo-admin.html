@@ -845,7 +845,7 @@ ${itemsHtml}
                 if (text) {
                     localStorage.setItem('geminiApiKey', apiKey);
                     const isGroq = apiKey.startsWith('gsk_');
-                    const provider = isGroq ? 'Groq High-Speed AI (openai/gpt-oss-120b)' : 'Google Gemini Flash AI';
+                    const provider = isGroq ? 'Groq High-Speed AI (qwen/qwen3.8-27b)' : 'Google Gemini Flash AI';
 
                     if (statusEl) {
                         statusEl.innerHTML = '<span class="text-green-600 font-bold">✅ Key is 100% Active & Connected! (' + provider + ')</span>';
@@ -947,115 +947,79 @@ ${itemsHtml}
         };
 
         // Dedicated Groq Caller with timeout & model fallback
-        async function callGroqProvider(apiKey, prompt, maxTokensOverride = null, timeoutMs = 40000) {
+        async function callGroqProvider(apiKey, prompt, maxTokensOverride = null, timeoutMs = 60000) {
             const activeKey = apiKey || DEFAULT_GROQ_KEY;
             const groqModels = ['qwen/qwen3.8-27b', 'openai/gpt-oss-20b', 'openai/gpt-oss-120b'];
             const isShortTest = (!prompt || prompt.length < 80);
-            const baseMaxTokens = maxTokensOverride || (isShortTest ? 50 : 1000);
+            const baseMaxTokens = maxTokensOverride || (isShortTest ? 50 : 1500);
 
             let lastGroqError = null;
             for (const model of groqModels) {
-                const controller = new AbortController();
-                const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
-                try {
-                    const resp = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-                        method: 'POST',
-                        signal: controller.signal,
-                        headers: { 
-                            'Content-Type': 'application/json', 
-                            'Authorization': 'Bearer ' + activeKey 
-                        },
-                        body: JSON.stringify({
-                            model: model,
-                            messages: [{ role: 'user', content: prompt }],
-                            temperature: 0.7,
-                            max_tokens: (model.includes('qwen') ? Math.min(baseMaxTokens, 950) : baseMaxTokens)
-                        })
-                    });
-                    clearTimeout(timeoutId);
-                    const data = await resp.json();
-                    if (data.choices && data.choices[0]) {
-                        const choice = data.choices[0];
-                        if (choice.finish_reason === 'length') {
-                            throw new Error('Groq output truncated by token limit (finish_reason: length).');
+                for (let attempt = 0; attempt < 2; attempt++) {
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
+                    try {
+                        if (window.updateAiStatus) {
+                            window.updateAiStatus(
+                                `⚡ Generating with Groq (${model})...`,
+                                `Connected to Groq AI engine (${model})...`
+                            );
                         }
-                        if (choice.message && choice.message.content) {
-                            return choice.message.content;
-                        }
-                    }
-                    if (data.error) {
-                        lastGroqError = new Error(`Groq (${model}): ${data.error.message || 'API error'}`);
-                        console.warn('Groq model ' + model + ' error:', data.error);
-                    }
-                } catch (e) {
-                    clearTimeout(timeoutId);
-                    const msg = (e.name === 'AbortError') ? `Groq (${model}) request timed out after ${Math.round(timeoutMs/1000)}s` : e.message;
-                    lastGroqError = new Error(msg);
-                    console.warn('Groq model ' + model + ' failed:', msg);
-                }
-            }
-            throw lastGroqError || new Error('All Groq models are currently unavailable.');
-        }
-
-        // Robust Gemini caller with fast model prioritization, timeout & multi-key failover
-        async function callGeminiWithFailover(primaryKey, prompt, timeoutMs = 35000) {
-            const keyPool = [primaryKey, ...NAIL_GEMINI_KEYS.filter(k => k !== primaryKey)];
-            let lastError = null;
-
-            for (const keyToTry of keyPool) {
-                if (!keyToTry || typeof keyToTry !== 'string') continue;
-
-                for (const model of GEMINI_MODELS) {
-                    for (let attempt = 1; attempt <= 2; attempt++) {
-                        const controller = new AbortController();
-                        const timeoutId = setTimeout(() => controller.abort(), timeoutMs);
-                        try {
-                            const resp = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${keyToTry}`, {
-                                method: 'POST',
-                                signal: controller.signal,
-                                headers: { 'Content-Type': 'application/json' },
-                                body: JSON.stringify({
-                                    contents: [{ parts: [{ text: prompt }] }],
-                                    generationConfig: { temperature: 0.85, maxOutputTokens: 16384 }
-                                })
-                            });
-                            clearTimeout(timeoutId);
-
-                            const data = await resp.json();
-
-                            if (data.candidates && data.candidates[0]) {
-                                const cand = data.candidates[0];
-                                if (cand.finishReason === 'MAX_TOKENS' || cand.finishReason === 'LENGTH') {
-                                    throw new Error('Gemini output truncated by token limit (finishReason: ' + cand.finishReason + ').');
-                                }
-                                if (cand.content?.parts?.[0]?.text) {
-                                    return cand.content.parts[0].text;
-                                }
+                        const resp = await fetch('https://api.groq.com/openai/v1/chat/completions', {
+                            method: 'POST',
+                            signal: controller.signal,
+                            headers: { 
+                                'Content-Type': 'application/json', 
+                                'Authorization': 'Bearer ' + activeKey 
+                            },
+                            body: JSON.stringify({
+                                model: model,
+                                messages: [{ role: 'user', content: prompt }],
+                                temperature: 0.7,
+                                max_tokens: Math.min(baseMaxTokens, 2500)
+                            })
+                        });
+                        clearTimeout(timeoutId);
+                        const data = await resp.json();
+                        if (data.choices && data.choices[0]) {
+                            const choice = data.choices[0];
+                            if (choice.finish_reason === 'length') {
+                                throw new Error('Groq output truncated by token limit (finish_reason: length).');
                             }
-
-                            if (data.error) {
-                                lastError = new Error(`Gemini (${model}): ${data.error.message || 'API error'}`);
-                                // If 401 (Invalid Key), skip to next key immediately
-                                if (data.error.code === 401 || data.error.status === 'UNAUTHENTICATED') {
-                                    break;
-                                }
-                                // If 503 or 429, break attempt loop to switch to next model immediately
-                                if (data.error.code === 503 || data.error.code === 429) break;
+                            if (choice.message && choice.message.content) {
+                                return choice.message.content;
                             }
-                        } catch (e) {
-                            clearTimeout(timeoutId);
-                            const msg = (e.name === 'AbortError') ? `Gemini (${model}) request timed out after ${Math.round(timeoutMs/1000)}s` : e.message;
-                            lastError = new Error(msg);
-                            await new Promise(r => setTimeout(r, 600));
                         }
+                        if (data.error) {
+                            const errMsg = data.error.message || 'API error';
+                            lastGroqError = new Error(`Groq (${model}): ${errMsg}`);
+                            console.warn(`Groq model ${model} error:`, data.error);
+                            const waitMatch = errMsg.match(/try again in ([\d\.]+)s/i);
+                            if (waitMatch && attempt === 0) {
+                                const waitSec = Math.ceil(parseFloat(waitMatch[1])) + 2;
+                                if (window.updateAiStatus) {
+                                    window.updateAiStatus(
+                                        `⏳ Groq rate limit bucket refilling...`,
+                                        `Pausing ${waitSec}s for token bucket reset, then automatically resuming...`
+                                    );
+                                }
+                                await new Promise(r => setTimeout(r, waitSec * 1000));
+                                continue;
+                            }
+                            break;
+                        }
+                    } catch (e) {
+                        clearTimeout(timeoutId);
+                        const msg = (e.name === 'AbortError') ? `Groq (${model}) request timed out after ${Math.round(timeoutMs/1000)}s` : e.message;
+                        lastGroqError = new Error(msg);
+                        console.warn(`Groq model ${model} exception:`, e);
+                        break;
                     }
                 }
             }
-
-            throw lastError || new Error('All Gemini API keys and models are currently busy or unavailable.');
+            throw (lastGroqError || new Error('All Groq models failed to return content.'));
         }
 
-        // Master AI Provider caller with BIDIRECTIONAL auto-failover (Groq <-> Gemini)
         async function callAIProvider(apiKey, prompt, maxTokensOverride = null) {
             const activeKey = apiKey || localStorage.getItem('geminiApiKey') || DEFAULT_API_KEY;
             const isGroq = activeKey.startsWith('gsk_');
@@ -1083,7 +1047,7 @@ ${itemsHtml}
                     if (window.updateAiStatus) {
                         window.updateAiStatus(
                             '🌟 Gemini busy, failing over to Groq AI...',
-                            'Gemini error: ' + (geminiErr.message || 'High Demand') + '. Seamlessly generating with Groq openai/gpt-oss-120b...'
+                            'Gemini error: ' + (geminiErr.message || 'High Demand') + '. Seamlessly generating with Groq (qwen/qwen3.8-27b)...'
                         );
                     }
                     return await callGroqProvider(DEFAULT_GROQ_KEY, prompt, maxTokensOverride);
@@ -1691,61 +1655,15 @@ IMPORTANT:
                             }
                         }
 
-                        // Final check for batch with intelligent recipe generator fallback
+                        // Final check: Fail-stop if incomplete. Zero tolerance for placeholder/generic recipes.
                         if (blockCount < batchImgs.length) {
-                            console.warn(`Batch ${bIndex + 1} shortfall (${blockCount}/${batchImgs.length}). Assembling curated recipe fallback for missing dishes...`);
-                            const existingMatches = textResp ? (textResp.match(/\[RECIPE_START\][\s\S]*?\[RECIPE_END\]/gi) || []) : [];
-                            const completedIndices = new Set();
-                            existingMatches.forEach(b => {
-                                const m = b.match(/IMAGE_FILE:\s*(.+)/i);
-                                if (m && m[1]) completedIndices.add(m[1].trim().toLowerCase());
-                            });
-
-                            const missingFallbackBlocks = batchImgs.filter(im => !completedIndices.has((im.name || '').toLowerCase())).map((img, idx) => {
-                                const num = startIdx + existingMatches.length + idx + 1;
-                                const cleanName = (img.name || ('Recipe ' + num)).replace(/[-_]/g, ' ').replace(/\.[^/.]+$/, '').trim();
-                                const titleCase = cleanName.split(' ').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
-                                const slugId = cleanName.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || ('recipe-' + num);
-                                return `[RECIPE_START]
-IMAGE_FILE: ${img.name}
-NUMBER: ${num}
-SLUG_ID: ${slugId}
-H2_TITLE: ${num}. ${titleCase}
-TIME: 25 Mins (10m prep, 15m cook)
-COST: Budget-Friendly (~$3.00/serving)
-SERVINGS: Serves 4-6
-ALT_TEXT: Delicious freshly prepared ${titleCase.toLowerCase()} served on a plate
-FIGCAPTION: A delicious and satisfying ${titleCase.toLowerCase()} perfect for any meal.
-FLAVOR_INTRO: This mouth-watering ${titleCase.toLowerCase()} delivers a rich, satisfying texture and savory aroma. It is packed with nutritious ingredients, easy to whip up, and guaranteed to impress family and dinner guests.
-INGREDIENTS: 2 cups main ingredient; 2 large eggs; 1 cup pantry staples; 1 tsp baking powder; 1/2 tsp kosher salt; 2 tbsp cooking oil; fresh herbs for garnish
-INSTRUCTIONS: In a mixing bowl or food processor, combine the primary ingredients until smooth and well-incorporated; Heat a skillet or saucepan over medium heat with cooking oil or butter; Add the prepared mixture and cook for 4-5 minutes per side until golden brown and cooked through; Transfer to a serving platter, garnish with fresh herbs, and serve warm immediately
-CHEF_TIP: Cook over balanced medium heat for the richest golden crust and maximum flavor payoff.
-SERVING_NOTES: Serve fresh alongside your favorite dips, a crisp side salad, or toasted artisan bread.
-[RECIPE_END]`;
-                            }).join('\n\n');
-
-                            if (existingMatches.length > 0) {
-                                textResp = existingMatches.join('\n\n') + '\n\n' + missingFallbackBlocks;
-                            } else {
-                                if (isBatch1) {
-                                    textResp = `Discovering wholesome, crowd-pleasing meals that everyone loves is one of cooking's greatest joys. ${title} brings together flavorful ingredients, simple cooking techniques, and chef-approved secrets that make home dining both effortless and rewarding.\n\n` + missingFallbackBlocks + `\n\n[TAKEAWAYS_START]
-• Prep Ingredients Ahead: Chop vegetables and measure sauces in advance to streamline weeknight dinner preparation.
-• Control Cooking Temperature: Cooking on steady medium heat ensures even doneness and delicious caramelized flavor.
-• Garnish with Fresh Herbs: A touch of fresh parsley, chives, or cracked black pepper instantly elevates presentation.
-• Smart Storage & Reheating: Store leftovers in airtight glass containers for up to 3 days to preserve optimal freshness.
-[TAKEAWAYS_END]
-
-[FAQS_START]
-Q: Can I make these recipes ahead of time? | A: Yes! Most components can be prepped up to 24 hours in advance and stored chilled until ready to cook.
-Q: What are great substitution options? | A: You can easily swap dairy options with plant-based alternatives or adjust spices to suit personal preferences.
-Q: How should leftovers be stored? | A: Keep cooled portions in an airtight container in the refrigerator for 3 to 4 days.
-[FAQS_END]
-
-Cooking comforting, homemade dishes brings friends and family together around the table. Save your favorite recipe ideas to Pinterest to build your dream party menu!`;
-                                } else {
-                                    textResp = missingFallbackBlocks;
-                                }
+                            const missing = batchImgs.length - blockCount;
+                            const errMsg = `Batch ${bIndex + 1}/${totalB} incomplete! Expected ${batchImgs.length} recipe blocks but received ${blockCount} (${missing} missing). Generation stopped to prevent publishing incomplete or placeholder recipes. Please re-generate.`;
+                            console.error(errMsg);
+                            if (aiStatusBox) {
+                                aiStatusBox.innerHTML = `<div class="p-3 bg-red-50 rounded-lg border border-red-200 text-sm text-red-800 font-semibold">❌ ${errMsg}</div>`;
                             }
+                            throw new Error(errMsg);
                         }
 
                         return textResp;
